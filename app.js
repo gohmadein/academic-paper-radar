@@ -13,6 +13,7 @@ const $ = id => document.getElementById(id);
 const BOOKMARK_KEY = 'paper-signal-bookmarks-v1';
 const READ_KEY = 'paper-signal-read-v1';
 const RAIL_KEY = 'zero-field-rail-collapsed-v1';
+const PROFILE_MOTTOS = {xun:'我会成为机器人发展史上不可跨过的人物吗',li:'As Always'};
 let railCollapsed = false;
 try { railCollapsed = localStorage.getItem(RAIL_KEY) === 'true'; } catch { /* Layout still works without storage. */ }
 function updateRail() {
@@ -94,6 +95,10 @@ function collection() { return state.demo ? data.demo : data.real; }
 
 function updateViewChrome() {
   const isFeed = state.view === 'feed';
+  const motto=isFeed&&!state.demo ? PROFILE_MOTTOS[state.category]||'' : '';
+  $('profile-motto').textContent=motto;
+  $('profile-motto').hidden=!motto;
+  $('profile-motto').setAttribute('lang',state.category==='li'?'en':'zh-CN');
   $('hero').hidden = !isFeed;
   $('demo-banner').hidden = !isFeed || !state.demo;
   $('page-demo-note').hidden = isFeed || !state.demo || state.view==='sources';

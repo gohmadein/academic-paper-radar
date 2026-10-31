@@ -223,3 +223,22 @@ test('Site copy stays concise without removing functional state or demo warnings
   assert.equal(h.element('demo-banner').hidden,false);
   assert.match(h.element('content').innerHTML,/演示数据，非真实论文/);
 });
+
+test('Exact profile mottos appear only below their real daily feed heading without blank placeholders',async()=>{
+  const h=await appHarness(),html=await read('index.html'),css=await read('styles.css');
+  assert.match(html,/<\/h2><p id="profile-motto" class="profile-motto" hidden><\/p>/);
+  assert.match(css,/\[hidden\]\{display:none!important\}/);
+  const motto=h.element('profile-motto');
+  assert.equal(motto.hidden,true);assert.equal(motto.textContent,'');
+  for(const [category,text] of [['xun','我会成为机器人发展史上不可跨过的人物吗'],['li','As Always'],['lv',''],['all','']]){
+    h.click({category});assert.equal(motto.textContent,text);assert.equal(motto.hidden,!text);
+  }
+  h.click({category:'xun'});h.click({category:'li'});
+  h.back();assert.equal(motto.textContent,'我会成为机器人发展史上不可跨过的人物吗');
+  h.forward();assert.equal(motto.textContent,'As Always');assert.equal(motto.attributes.lang,'en');
+  for(const view of ['archive','bookmarks']){h.click({view});assert.equal(motto.hidden,true);assert.equal(motto.textContent,'');}
+  for(const sourceType of ['conference','journal','lab']){h.click({sourceProfile:'xun',sourceType});assert.equal(motto.hidden,true);assert.equal(motto.textContent,'');}
+  h.click({category:'xun'});assert.equal(motto.hidden,false);
+  h.click({action:'demo'});assert.equal(motto.hidden,true);assert.equal(motto.textContent,'');
+  h.run("go({demo:false,view:'feed',category:'lv'})");assert.equal(motto.hidden,true);assert.equal(motto.textContent,'');
+});
