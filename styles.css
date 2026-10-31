@@ -569,3 +569,9 @@ dialog::backdrop{background:#18263f38}
   .editorial-footer .read-button{min-height:40px}
   .paper-dates{font-size:10px}.guide-toggle{min-height:40px}
 }
+
+/* All profile mottos share one prominent treatment, with their own identity colour. */
+.profile-motto[data-profile]{--motto-color:#175cd3;--motto-bg:#edf4ff;--motto-border:#cedef5;margin-top:16px;padding:16px 20px;background:var(--motto-bg);border:1px solid var(--motto-border);border-left:4px solid var(--motto-color);border-radius:10px;color:var(--motto-color);font-size:clamp(18px,2vw,23px);font-weight:750;line-height:1.7;letter-spacing:.1px;text-wrap:pretty;max-width:100%}
+.profile-motto[data-profile="li"]{--motto-color:#b42318;--motto-bg:#fff1ef;--motto-border:#f3d1cd}
+.profile-motto[data-profile="lv"]{--motto-color:#111827;--motto-bg:#f3f5f8;--motto-border:#dce3ec}
+@media(max-width:560px){.profile-motto[data-profile]{padding:13px 15px;margin-top:13px;font-size:18px;line-height:1.75}}

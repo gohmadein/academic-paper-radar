@@ -13,7 +13,7 @@ const $ = id => document.getElementById(id);
 const BOOKMARK_KEY = 'paper-signal-bookmarks-v1';
 const READ_KEY = 'paper-signal-read-v1';
 const RAIL_KEY = 'zero-field-rail-collapsed-v1';
-const PROFILE_MOTTOS = {xun:'我会成为机器人发展史上不可跨过的人物吗',li:'As Always'};
+const PROFILE_MOTTOS = {xun:'我会成为机器人发展史上不可跨过的人物吗',li:'As Always',lv:'年入百万，迎娶🇨🇦姐姐，我只是想给她一个中国户口'};
 let railCollapsed = false;
 try { railCollapsed = localStorage.getItem(RAIL_KEY) === 'true'; } catch { /* Layout still works without storage. */ }
 function updateRail() {
@@ -100,6 +100,7 @@ function updateViewChrome() {
   const motto=isFeed&&!state.demo ? PROFILE_MOTTOS[state.category]||'' : '';
   $('profile-motto').textContent=motto;
   $('profile-motto').hidden=!motto;
+  $('profile-motto').setAttribute('data-profile',motto?state.category:'');
   $('profile-motto').setAttribute('lang',state.category==='li'?'en':'zh-CN');
   $('hero').hidden = !isFeed;
   $('demo-banner').hidden = !isFeed || !state.demo;

@@ -230,7 +230,7 @@ test('Exact profile mottos appear only below their real daily feed heading witho
   assert.match(css,/\[hidden\]\{display:none!important\}/);
   const motto=h.element('profile-motto');
   assert.equal(motto.hidden,true);assert.equal(motto.textContent,'');
-  for(const [category,text] of [['xun','我会成为机器人发展史上不可跨过的人物吗'],['li','As Always'],['lv',''],['all','']]){
+  for(const [category,text] of [['xun','我会成为机器人发展史上不可跨过的人物吗'],['li','As Always'],['lv','年入百万，迎娶🇨🇦姐姐，我只是想给她一个中国户口'],['all','']]){
     h.click({category});assert.equal(motto.textContent,text);assert.equal(motto.hidden,!text);
   }
   h.click({category:'xun'});h.click({category:'li'});
@@ -240,5 +240,19 @@ test('Exact profile mottos appear only below their real daily feed heading witho
   for(const sourceType of ['conference','journal','lab']){h.click({sourceProfile:'xun',sourceType});assert.equal(motto.hidden,true);assert.equal(motto.textContent,'');}
   h.click({category:'xun'});assert.equal(motto.hidden,false);
   h.click({action:'demo'});assert.equal(motto.hidden,true);assert.equal(motto.textContent,'');
-  h.run("go({demo:false,view:'feed',category:'lv'})");assert.equal(motto.hidden,true);assert.equal(motto.textContent,'');
+  h.run("go({demo:false,view:'feed',category:'lv'})");assert.equal(motto.hidden,false);assert.equal(motto.textContent,'年入百万，迎娶🇨🇦姐姐，我只是想给她一个中国户口');
+  assert.equal(motto.attributes['data-profile'],'lv');assert.equal(motto.attributes.lang,'zh-CN');
+  for(const sourceType of ['conference','journal','lab']){h.click({sourceProfile:'lv',sourceType});assert.equal(motto.hidden,true);assert.equal(motto.attributes['data-profile'],'');}
+  h.click({category:'lv'});assert.equal(motto.attributes['data-profile'],'lv');
+  for(const view of ['archive','bookmarks']){h.click({view});assert.equal(motto.hidden,true);assert.equal(motto.textContent,'');}
+  h.click({view:'feed'});assert.equal(motto.hidden,false);
+  h.click({category:'li'});assert.equal(motto.attributes['data-profile'],'li');assert.equal(motto.textContent,'As Always');
+  h.back();assert.equal(motto.attributes['data-profile'],'lv');assert.equal(motto.hidden,false);
+  h.forward();assert.equal(motto.attributes['data-profile'],'li');
+  assert.match(css,/\.profile-motto\[data-profile\]\{[^}]*font-size:clamp\(18px,2vw,23px\)[^}]*font-weight:750/);
+  assert.match(css,/\.profile-motto\[data-profile\]\{[^}]*--motto-color:#175cd3/);
+  assert.match(css,/\.profile-motto\[data-profile="li"\]\{--motto-color:#b42318/);
+  assert.match(css,/\.profile-motto\[data-profile="lv"\]\{--motto-color:#111827/);
+  for(const category of ['xun','li','lv']){h.click({category});assert.equal(motto.attributes['data-profile'],category);assert.equal(motto.hidden,false);}
+  h.click({category:'all'});assert.equal(motto.hidden,true);assert.equal(motto.attributes['data-profile'],'');
 });
