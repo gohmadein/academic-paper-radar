@@ -8,18 +8,18 @@ import * as institutions from '../lib/institutions.js';
 import * as transfer from '../lib/bookmark-transfer.js';
 const read=p=>readFile(new URL('../'+p,import.meta.url),'utf8');
 
-async function appHarness(){
-  const elements=new Map(),events={},windowEvents={},stored=new Map(),entries=[''],location={hash:''};
+async function appHarness({stored=new Map(),storageBlocked=false}={}){
+  const elements=new Map(),events={},windowEvents={},bodyClasses=new Set(),entries=[''],location={hash:''};
   let position=0;
   const element=id=>{
-    if(!elements.has(id))elements.set(id,{id,hidden:false,value:'',innerHTML:'',textContent:'',dataset:{},childNodes:[{textContent:''}],classList:{toggle(){},add(){},remove(){}},setAttribute(){},removeAttribute(){},addEventListener(type,fn){events[id+':'+type]=fn},open:false,isConnected:true,focus(){},close(){this.open=false},showModal(){this.open=true}});
+    if(!elements.has(id))elements.set(id,{id,hidden:false,value:'',innerHTML:'',textContent:'',dataset:{},childNodes:[{textContent:''}],classList:{toggle(){},add(){},remove(){}},attributes:{},setAttribute(k,v){this.attributes[k]=v},removeAttribute(k){delete this.attributes[k]},addEventListener(type,fn){events[id+':'+type]=fn},open:false,isConnected:true,focus(){context.document.activeElement=this},close(){this.open=false},showModal(){this.open=true}});
     return elements.get(id);
   };
   const context=vm.createContext({...model,...digest,...institutions,...transfer,
     e:model.escapeHTML,updateHUD(){},console,URL,URLSearchParams,CSS:{escape:x=>x},setTimeout,clearTimeout,
-    document:{getElementById:element,querySelectorAll:()=>[],querySelector:()=>null,activeElement:null,body:{classList:{toggle(){}}},addEventListener:(type,fn)=>{events[type]=fn}},
+    document:{getElementById:element,querySelectorAll:()=>[],querySelector:()=>null,activeElement:null,body:{classList:{toggle(name,on){if(on)bodyClasses.add(name);else bodyClasses.delete(name)}}},addEventListener:(type,fn)=>{events[type]=fn}},
     window:{addEventListener:(type,fn)=>{windowEvents[type]=fn}},
-    localStorage:{getItem:k=>stored.get(k),setItem:(k,v)=>stored.set(k,v)},
+    localStorage:{getItem:k=>{if(storageBlocked)throw Error('storage blocked');return stored.get(k)},setItem:(k,v)=>{if(storageBlocked)throw Error('storage blocked');stored.set(k,v)}},
     location,
     history:{pushState(_a,_b,hash){entries.splice(++position);entries.push(hash);location.hash=hash},replaceState(_a,_b,hash){entries[position]=hash;location.hash=hash}},
     fetch:async url=>({ok:true,json:async()=>JSON.parse(await readFile(url,'utf8'))})
@@ -28,7 +28,7 @@ async function appHarness(){
   source=source.replace(/^import .*;\n/gm,'').replaceAll('import.meta.url',JSON.stringify(new URL('../app.js',import.meta.url).href)).replace('\ninit();','\nglobalThis.boot=init();');
   vm.runInContext(source,context);await context.boot;
   const run=code=>vm.runInContext(code,context);
-  return {element,run,events,stored,click:dataset=>events.click({target:{closest:()=>({dataset})}}),
+  return {element,run,events,stored,bodyClasses,click:dataset=>events.click({target:{closest:()=>({dataset})}}),
     back(){location.hash=entries[--position];windowEvents.popstate()},
     forward(){location.hash=entries[++position];windowEvents.popstate()}};
 }
@@ -51,7 +51,7 @@ test('Live app routes all three feeds, repeated switches, Back/Forward and combi
   assert.equal(count(),11);
   for(const [category,n] of [['xun',7],['li',2],['lv',2],['all',11],['li',2]]){
     h.click({category});assert.equal(count(),n);
-    assert.match(h.element('category-tabs').innerHTML,new RegExp('data-category="'+category+'" aria-pressed="true"'));
+    assert.match(h.element('category-tabs').innerHTML,new RegExp('data-category="'+category+'"[^>]*aria-pressed="true"'));
   }
   h.back();assert.equal(h.run('state.category'),'all');assert.equal(count(),11);
   h.forward();assert.equal(h.run('state.category'),'li');assert.equal(count(),2);
@@ -78,4 +78,43 @@ test('Bookmark scope, archive navigation, daily-only hero/gallery and saved stat
   h.click({view:'archive'});h.click({date:'2026-10-31'});
   assert.equal(h.run('state.category'),'lv');assert.equal(h.run('state.date'),'2026-10-31');
   assert.equal((h.element('content').innerHTML.match(/<article /g)||[]).length,2);
+});
+
+test('Collapse repeats safely, persists on reload, preserves focus, routes and history',async()=>{
+  const h=await appHarness(),toggle=h.element('rail-toggle');
+  toggle.focus();
+  const originalHash=h.run('location.hash');
+  for(let i=0;i<6;i++){
+    h.events['rail-toggle:click']();
+    const collapsed=i%2===0;
+    assert.equal(h.bodyClasses.has('rail-collapsed'),collapsed);
+    assert.equal(toggle.attributes['aria-expanded'],String(!collapsed));
+    assert.equal(toggle.attributes['aria-label'],collapsed?'展开侧栏':'收起侧栏');
+    assert.equal(h.run('document.activeElement.id'),'rail-toggle');
+    assert.equal(h.run('location.hash'),originalHash);
+  }
+  h.events['rail-toggle:click']();
+  h.click({category:'li'});h.click({category:'lv'});h.back();h.forward();
+  assert.equal(h.bodyClasses.has('rail-collapsed'),true);
+  assert.equal(h.run('state.category'),'lv');
+  const reloaded=await appHarness({stored:h.stored});
+  assert.equal(reloaded.bodyClasses.has('rail-collapsed'),true);
+  assert.equal(reloaded.element('rail-toggle').attributes['aria-expanded'],'false');
+  reloaded.events['rail-toggle:click']();
+  assert.equal(reloaded.stored.get('zero-field-rail-collapsed-v1'),'false');
+});
+
+test('Unavailable layout storage is harmless; icon destinations retain accessible names',async()=>{
+  const h=await appHarness({storageBlocked:true});
+  assert.equal(h.element('rail-toggle').attributes['aria-expanded'],'true');
+  h.events['rail-toggle:click']();h.click({category:'li'});
+  assert.equal(h.bodyClasses.has('rail-collapsed'),true);
+  assert.equal((h.element('content').innerHTML.match(/<article /g)||[]).length,2);
+  h.events['rail-toggle:click']();assert.equal(h.bodyClasses.has('rail-collapsed'),false);
+  const html=await read('index.html'),css=await read('styles.css');
+  assert.match(html,/aria-controls="profile-navigation rail-utilities"/);
+  for(const label of ['每日精选','日期归档','本机书签','关于本站'])assert.ok(html.includes('aria-label="'+label+'"'));
+  for(const label of ['全部方向','迅的推送','李的推送','驴的推送'])assert.ok(h.element('category-tabs').innerHTML.includes('aria-label="'+label+'"'));
+  assert.ok(css.includes('body.rail-collapsed{grid-template-columns:76px minmax(0,1fr)'));
+  assert.ok(css.includes('.rail-collapsed .profile-link{min-height:44px;justify-content:center}'));
 });

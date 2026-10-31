@@ -377,3 +377,35 @@ main{width:100%;min-width:0;max-width:1360px;padding:0 36px}
   .workspace>.sidebar .local-note{grid-column:1}
 }
 @media(max-width:350px){.navigation-rail .header-inner{padding-inline:14px}.navigation-rail .nav-link{font-size:11px;gap:4px}.hero h1{font-size:32px}main{padding-inline:16px}}
+
+/* A persistent compact rail keeps every destination reachable without a drawer. */
+.rail-brand-row{display:flex;align-items:center;justify-content:space-between;gap:5px;min-width:0}
+.navigation-rail .rail-brand-row .brand{padding:0;gap:8px;font-size:19px;letter-spacing:2px}
+.rail-brand-row .brand-icon{width:32px;height:32px}
+.rail-brand-row .brand small{font-size:8px;letter-spacing:1px}
+.rail-toggle{display:grid;place-items:center;flex-shrink:0;width:44px;height:44px;border-radius:9px;color:var(--muted)}
+.rail-toggle:hover{background:var(--blue-soft);color:var(--blue)}
+.rail-toggle svg,.navigation-rail .about-link svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.navigation-rail .nav-link .utility-label{font:inherit;background:none;color:inherit;padding:0;margin:0;border-radius:0}
+.navigation-rail .about-link{display:flex;align-items:center;gap:8px}
+.navigation-rail .about-link .utility-label{margin:0;color:inherit}
+.rail-collapsed .rail-toggle-chevron{transform:rotate(180deg);transform-origin:15px 12px}
+@media(min-width:801px){
+  body.rail-collapsed{grid-template-columns:76px minmax(0,1fr)}
+  .rail-collapsed .navigation-rail .header-inner{padding:22px 10px;gap:22px}
+  .rail-collapsed .rail-brand-row{flex-direction:column;gap:10px}
+  .rail-collapsed .brand>span,.rail-collapsed .rail-caption,.rail-collapsed .profile-link-copy,.rail-collapsed .profile-selected,.rail-collapsed .utility-label,.rail-collapsed #bookmark-count{display:none}
+  .rail-collapsed .profile-link{justify-content:center;min-height:50px;padding:8px 0}
+  .rail-collapsed .navigation-rail .nav-link{justify-content:center;padding:12px 0}
+  .rail-collapsed .navigation-rail .about-link{justify-content:center;padding:12px 0}
+}
+@media(max-width:800px){
+  .rail-brand-row{grid-column:1;grid-row:1;justify-content:flex-start;gap:8px}
+  .navigation-rail .about-link{font-size:11px}
+  .navigation-rail .about-link svg{width:17px;height:17px}
+  .rail-collapsed .profile-link-copy,.rail-collapsed .rail-caption{display:none}
+  .rail-collapsed .profile-link{min-height:44px;justify-content:center}
+  .rail-collapsed .navigation-rail .header-inner{gap:10px}
+}
+@media(max-width:350px){.rail-brand-row{gap:2px}.navigation-rail .rail-brand-row .brand{font-size:17px;gap:6px}.rail-brand-row .brand-icon{width:28px;height:28px}.navigation-rail .about-link{gap:4px}}
+@media(max-width:800px){.navigation-rail .about-link{width:44px;min-height:44px;justify-content:center;padding:0}.navigation-rail .about-link .utility-label{display:none}}

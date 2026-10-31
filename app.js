@@ -9,6 +9,23 @@ import {makeBookmarkExport,parseBookmarkImport,mergeBookmarkImport,MAX_BOOKMARK_
 const $ = id => document.getElementById(id);
 const BOOKMARK_KEY = 'paper-signal-bookmarks-v1';
 const READ_KEY = 'paper-signal-read-v1';
+const RAIL_KEY = 'zero-field-rail-collapsed-v1';
+let railCollapsed = false;
+try { railCollapsed = localStorage.getItem(RAIL_KEY) === 'true'; } catch { /* Layout still works without storage. */ }
+function updateRail() {
+  document.body.classList.toggle('rail-collapsed', railCollapsed);
+  const toggle = $('rail-toggle');
+  toggle.setAttribute('aria-expanded', String(!railCollapsed));
+  toggle.setAttribute('aria-label', railCollapsed ? '展开侧栏' : '收起侧栏');
+  toggle.title = railCollapsed ? '展开侧栏' : '收起侧栏';
+}
+updateRail();
+$('rail-toggle').addEventListener('click', () => {
+  railCollapsed = !railCollapsed;
+  updateRail();
+  try { localStorage.setItem(RAIL_KEY, String(railCollapsed)); } catch { /* Keep the session choice. */ }
+});
+
 let reads;
 try{reads=parseBookmarks(localStorage.getItem(READ_KEY));}catch{reads=new Set();}
 let state = readRoute(location.hash);
@@ -119,7 +136,7 @@ function render() {
   const active = document.activeElement;
   const focusSelector = active?.dataset?.category ? `[data-category="${CSS.escape(active.dataset.category)}"]` : active?.dataset?.tag ? `${active.closest('#tags')?'#tags ':''}[data-tag="${CSS.escape(active.dataset.tag)}"]` : active?.dataset?.bookmark ? `[data-bookmark="${CSS.escape(active.dataset.bookmark)}"]` : active?.dataset?.date ? `[data-date="${CSS.escape(active.dataset.date)}"]` : null;
   const {days,papers} = collection();
-  $('category-tabs').innerHTML=['all',...Object.keys(PROFILES)].map(k=>`<button class="profile-link ${k!=='all'?'profile-'+k:''} ${state.category===k?'active':''}" data-category="${k}" aria-pressed="${state.category===k}" title="${k==='all'?'浏览全部研究方向':e(PROFILES[k].description)}"><span class="profile-symbol" aria-hidden="true">${k==='all'?'<svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>':PROFILES[k].label}</span><span class="profile-link-copy"><strong>${k==='all'?'全部方向':PROFILES[k].label+'的推送'}</strong><small>${k==='all'?'发现全部研究信号':k==='xun'?'机器人研究':k==='li'?'知识图谱与理论':'机器人学习入门'}</small></span><span class="profile-selected" aria-hidden="true">●</span></button>`).join('');
+  $('category-tabs').innerHTML=['all',...Object.keys(PROFILES)].map(k=>`<button class="profile-link ${k!=='all'?'profile-'+k:''} ${state.category===k?'active':''}" data-category="${k}" aria-label="${k==='all'?'全部方向':PROFILES[k].label+'的推送'}" aria-pressed="${state.category===k}" title="${k==='all'?'浏览全部研究方向':e(PROFILES[k].description)}"><span class="profile-symbol" aria-hidden="true">${k==='all'?'<svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>':PROFILES[k].label}</span><span class="profile-link-copy"><strong>${k==='all'?'全部方向':PROFILES[k].label+'的推送'}</strong><small>${k==='all'?'发现全部研究信号':k==='xun'?'机器人研究':k==='li'?'知识图谱与理论':'机器人学习入门'}</small></span><span class="profile-selected" aria-hidden="true">●</span></button>`).join('');
   $('read-select').value=state.readStatus;
   $('issue-panel').innerHTML=state.view==='feed'?issueReport(days.find(d=>d.date===state.date)||days[0]):'';
   updateViewChrome();
