@@ -10,14 +10,14 @@ test('11篇中英导读同时可见，英文标为中文导读翻译，日期区
 });
 test('无主图/肖像时诚实占位，机构品牌不能被用作个人肖像',()=>{
  const p=structuredClone(first);p.visuals={mainFigure:null,figureNote:'理论论文没有可核实主图。',institutions:[{name:'Restricted Institute',institutionType:'research-institute',markType:'none',logo:null,authorNames:[],evidence:[{url:'https://example.org/paper',claim:'Paper lists the affiliation',checkedAt:'2026-10-31'}],note:'文字展示，未取得标志使用许可。'}],authors:[]};
- assert.deepEqual(validateVisuals(p),[]);const html=editorialCard(p,0);assert.ok(html.includes('暂无可核实主图'));assert.ok(html.includes('文字标识'));assert.ok(html.includes('无已核实肖像'));assert.ok(!html.includes('<img'));
+ assert.deepEqual(validateVisuals(p),[]);const html=editorialCard(p,0);assert.ok(html.includes('暂无可核实主图'));assert.ok(html.includes('文字标识'));assert.ok(html.includes(p.authors[0]));assert.ok(!html.includes('avatar-initial'));assert.ok(!html.includes('<img'));
  p.visuals.authors=[{name:p.authors[0],portrait:{...asset,kind:'institution-logo',displayPolicy:'official-brand'},note:'invalid'}];assert.ok(validateVisuals(p).length);
  assert.equal(assetURL({...asset,path:'../secret.png'}),null);assert.equal(assetURL({...asset,path:'https://external.example/a.png'}),null);
 });
 test('媒体加载失败启用保留尺寸的占位，不留下损坏图标',()=>{
  assert.ok(editorialCard(first,0).includes('已核验主图暂不可用，可查看原始来源。'));
  const fallback={hidden:true},link={hidden:false};const frame={querySelector:()=>fallback};const image={hidden:false,closest:s=>s==='.figure-frame'?frame:link};handleMediaError(image);assert.equal(image.hidden,true);assert.equal(link.hidden,true);assert.equal(fallback.hidden,false);
- const initial={hidden:true};const avatarImage={hidden:false,closest:s=>s==='.media-avatar'?{querySelector:()=>initial,classList:{contains:()=>false}}:null};handleMediaError(avatarImage);assert.equal(initial.hidden,false);
+ const avatar={hidden:false};const avatarImage={hidden:false,closest:s=>s==='.media-avatar'?avatar:null};handleMediaError(avatarImage);assert.equal(avatar.hidden,true);
 });
 test('分享只包含公开论文定位，支持系统分享/复制/取消/手动备用',async()=>{
  const url=publicPaperURL('https://example.org/academic-paper-radar/?private=1#view=bookmarks&read=read&q=private',first);
@@ -38,4 +38,9 @@ test('图像字节、SHA及尺寸必须匹配，SVG禁止脚本与外部依赖',
 
 test('大学仅接受校徽或官方紧凑身份符号，缺失机构标识不生成首字母徽章',()=>{
  const p=structuredClone(first);const inst=p.visuals.institutions[0];assert.equal(inst.institutionType,'university');assert.deepEqual(validateVisuals(p),[]);inst.markType='organization-mark';assert.ok(validateVisuals(p).length);inst.markType='none';inst.logo=null;p.visuals.institutions=[inst];const html=institutionRow(p);assert.ok(html.includes(inst.name));assert.ok(!html.includes('avatar-initial'));assert.deepEqual(validateVisuals(p),[]);
+});
+
+test('PlayPolicy分清机构标识和作者姓名，标识容器无灰色或深色底板',async()=>{
+ const p=day.papers.find(p=>p.id==='arxiv-2610-22340');const html=editorialCard(p,0);assert.equal(p.visuals.institutions.filter(i=>i.logo).length,2);assert.ok(html.includes('Amazon 母公司官方标志，非FAR专属标志'));assert.ok(html.includes('University of Maryland 官方完整非正式校徽'));assert.ok(!html.includes('avatar-initial'));assert.ok(html.includes('Botao He')&&html.includes('Yiming Dou'));
+ const css=await readFile(new URL('../styles.css',import.meta.url),'utf8');assert.match(css,/\.institution-avatar\{[^}]*background:transparent[^}]*box-shadow:none/);assert.ok(!css.includes('.avatar-dark'));assert.match(css,/\.institution-avatar img\{[^}]*background:transparent/);
 });

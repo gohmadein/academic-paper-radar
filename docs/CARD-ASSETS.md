@@ -43,7 +43,7 @@ ASU等有外部许可限制的标志，以及许可未核实且要求保守展�
 
 ## 作者肖像
 
-`authors` 的每项为 `{name,portrait,note}`，`name` 必须精确对应原始作者名单。`portrait` 为真实人像素材或null，来源必须明确把该照片标为这个作者；同校、同组或相似姓名不构成证明。没有官方可靠肖像时，可不填该作者的素材记录，界面自动显示中性姓名首字母与完整姓名。
+`authors` 的每项为 `{name,portrait,note}`，`name` 必须精确对应原始作者名单。`portrait` 为真实人像素材或null，来源必须明确把该照片标为这个作者；同校、同组或相似姓名不构成证明。没有官方可靠肖像时，可不填该作者的素材记录，界面自动显示姓名文字与完整姓名。
 
 完整作者名单始终可访问；卡片先展示部分作者并可展开其余作者。头像不是机构logo，不使用假人脸或AI生成肖像。
 
@@ -64,3 +64,7 @@ ASU等有外部许可限制的标志，以及许可未核实且要求保守展�
 每项机构记录必填 institutionType（university/research-institute/company/chair）及 markType（emblem/compact-symbol/organization-mark/none）。大学可用emblem或compact-symbol，其他机构用organization-mark；none对应logo=null。缺失标识只保留机构名称。
 
 本期紧凑大学标识：Illinois官方Block I；清华章程PDF第15页嵌入JPEG校徽（554×385，原样提取，未重绘/裁切）；Harvard官方Veritas盾徽；Georgia Tech官方GT、Northeastern官方N和UCSD官方主页三叉戟。ICO仅转为PNG保留完整图案。后四者的紧凑身份符号不称为仪式印章。Penn独立盾徽、UMD/ASU及Laval受限展示保持文字名称。精确源地址、类型、权利说明和字节哈希随每篇visuals.institutions保存。
+
+透明标识审计：机构图片容器不设置灰底、深色底板、边框、阴影或滤镜；图片按比例完整显示。实际PNG需有有效透明通道，SVG不得含不必要的实心底板，不能只用CSS掩盖图片自带底色。无可靠肖像时仅列作者姓名，不生成首字母圆圈；已核验的真实头像保留。
+
+当前透明素材例外：清华官方章程JPEG含白底，保持原样在白色卡片上显示，metadata.background=light，不称为alpha透明。任何改变校徽文字、绳纹或几何的抠图候选不得使用。UMD使用官方完整Informal Seal透明原图，Amazon FAR显示官方Amazon母公司透明标志并注明非FAR专属Logo；UCSD旧favicon为蓝底，改为名称展示。其余标识原SVG/PNG透明通道与容器分别核验。

@@ -154,12 +154,17 @@
       "organizationMark": "own-official-mark-no-umbrella-substitution",
       "compactMarkSize": 32,
       "noCroppingWordmarkIntoEmblem": true,
-      "missingPermittedEmblem": "institution-name-only-no-initial-badge"
+      "missingPermittedEmblem": "institution-name-only-no-initial-badge",
+      "transparentMarkBackground": "transparent-container-prefer-genuine-alpha-originals",
+      "noBadgePlateOrDarkBacking": true,
+      "noArtificialInstitutionInitialBadge": true,
+      "neverRegenerateOfficialMarks": true,
+      "opaqueOriginalException": "Record actual background honestly; preserve authentic Tsinghua white-background original on white card rather than altering logo"
     },
     "portraits": {
       "source": "official-page-explicitly-identifies-author",
       "neverUseInstitutionLogoAsFace": true,
-      "missing": "neutral-initials-and-full-name"
+      "missing": "full-name-only-no-fake-avatar"
     },
     "sharing": {
       "onlyPublicPaperURL": true,

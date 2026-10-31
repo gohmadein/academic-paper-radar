@@ -143,7 +143,7 @@
               "credit": "University of Illinois Urbana-Champaign · official mark",
               "rights": "Official institutional mark; trademark/copyright retained by its owner. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve aspect ratio, complete mark and clear space.",
               "displayPolicy": "official-brand",
-              "background": "light",
+              "background": "transparent",
               "altZh": "Illinois 官方 Block I 身份符号",
               "altEn": "Official Illinois Block I identity symbol"
             },
@@ -192,7 +192,7 @@
                 "checkedAt": "2026-10-31"
               }
             ],
-            "note": "论文题名脚注2另列Zhexi Wang在清华。 官方章程PDF第15页首个嵌入JPEG，原样提取554×385；未重绘、裁切或改色，保留图像中的安全空间。",
+            "note": "论文署名依据保持不变。校徽为官方章程PDF第15页原始嵌入JPEG，554×385，未重绘、裁切或改色。文件实际含白底，不声称真透明；在白色卡片上完整显示，外层无灰色或深色底板。已拒绝会改变文字、绳纹或比例的抠图候选。",
             "institutionType": "university",
             "markType": "emblem"
           }
@@ -303,7 +303,22 @@
         "institutions": [
           {
             "name": "University of Maryland, College Park",
-            "logo": null,
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/umd-emblem.webp",
+              "sha256": "d91ba74fdf5f9e0d91cf44ca560c8c7abd84d30c20d78981066bb99e4560fb3a",
+              "width": 1330,
+              "height": 818,
+              "sourceUrl": "https://omc-system.transforms.svdcdn.com/production/images/brand/Logos_InformalSeal.png?w=1920&h=1920&q=80&fm=webp&fit=max&dm=1788296316&s=129dbb4bff91a9e8a73666012aed1ead",
+              "evidenceUrl": "https://brand.umd.edu/visual-identity/logos",
+              "verifiedAt": "2026-10-31",
+              "credit": "University of Maryland 官方完整非正式校徽",
+              "rights": "University of Maryland官方商标；无开放复用许可声明。保留完整标识，不裁出独立地球，不修改颜色或几何；用于描述论文署名，不表示校方背书。",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "altZh": "University of Maryland 官方完整非正式校徽",
+              "altEn": "Official complete University of Maryland informal seal"
+            },
             "authorNames": [
               "Naitri Rajyaguru",
               "Aryan Tajne",
@@ -318,9 +333,9 @@
                 "checkedAt": "2026-10-31"
               }
             ],
-            "note": "论文署名机构已核验。UMD外部标志使用许可未核实，按品牌限制使用文字标识，不下载或发布其标志。 大学标识仅采用官方校徽或紧凑身份符号；本轮未取得适合外部网站展示的独立徽章许可，保留文字名称。",
+            "note": "使用官方完整Informal Seal，不从组合标志裁出独立地球；透明原图仅说明本篇论文署名，不代表背书或取得额外许可。",
             "institutionType": "university",
-            "markType": "none"
+            "markType": "emblem"
           }
         ],
         "authors": []
@@ -441,7 +456,7 @@
               "credit": "Georgia Institute of Technology official compact identity symbol",
               "rights": "官方首页身份符号，商标归原权利人；无开放许可声明。不是受限大学印章，不表示背书。",
               "displayPolicy": "official-brand",
-              "background": "light",
+              "background": "transparent",
               "altZh": "Georgia Tech 官方交织 GT 身份符号",
               "altEn": "Official Georgia Tech interlocking GT identity symbol"
             },
@@ -580,7 +595,7 @@
               "credit": "Harvard University official emblem",
               "rights": "Harvard商标归原权利人，未核实开放复用许可；仅作论文署名身份说明，不表示背书。Gazette内容转载规则另有标志许可要求。",
               "displayPolicy": "official-brand",
-              "background": "light",
+              "background": "transparent",
               "altZh": "Harvard University 官方 Veritas 盾徽",
               "altEn": "Official Harvard University Veritas shield"
             },
@@ -738,7 +753,22 @@
         "institutions": [
           {
             "name": "Amazon Frontier AI & Robotics (FAR)",
-            "logo": null,
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/amazon-parent.png",
+              "sha256": "5d26b516f9cf43e65c114ea65369c6fb209e4528678ad7c1d7d67623cbd3efab",
+              "width": 6110,
+              "height": 2047,
+              "sourceUrl": "https://assets.aboutamazon.com/2e/d7/ac71f1f344c39f8949f48fc89e71/amazon-logo-squid-ink-smile-orange.png",
+              "evidenceUrl": "https://press.aboutamazon.com/logos",
+              "verifiedAt": "2026-10-31",
+              "credit": "Amazon 母公司官方标志，非FAR专属标志",
+              "rights": "Amazon官方母公司商标，保留原色及完整比例；无开放复用许可声明，仅作团队所属关系的描述，不表示背书。",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "altZh": "Amazon 母公司官方标志，非FAR专属标志",
+              "altEn": "Official Amazon parent-company mark, not a FAR-specific logo"
+            },
             "authorNames": [
               "Botao He",
               "Yiming Dou",
@@ -751,15 +781,35 @@
                 "url": "https://arxiv.org/html/2610.22340",
                 "claim": "本篇论文作者栏署名信息",
                 "checkedAt": "2026-10-31"
+              },
+              {
+                "url": "https://www.amazon.jobs/en/jobs/10422560/member-of-technical-staff-science-frontier-ai-robotics-far",
+                "claim": "Amazon官方招聘页确认FAR为其团队；展示母公司标志，不称为FAR专属Logo。",
+                "checkedAt": "2026-10-31"
               }
             ],
-            "note": "论文作者栏列出Amazon FAR。未发现专属FAR官方标志，不用Amazon Science图标替代；Malik的本篇署名未列Berkeley，不据现雇主猜测。",
+            "note": "Amazon FAR是Amazon团队；此处使用官方Amazon母公司透明标志，不声称是FAR专属Logo。具体署名仍以本篇论文为准，不据当前雇主推断。",
             "institutionType": "company",
-            "markType": "none"
+            "markType": "organization-mark"
           },
           {
             "name": "University of Maryland, College Park",
-            "logo": null,
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/umd-emblem.webp",
+              "sha256": "d91ba74fdf5f9e0d91cf44ca560c8c7abd84d30c20d78981066bb99e4560fb3a",
+              "width": 1330,
+              "height": 818,
+              "sourceUrl": "https://omc-system.transforms.svdcdn.com/production/images/brand/Logos_InformalSeal.png?w=1920&h=1920&q=80&fm=webp&fit=max&dm=1788296316&s=129dbb4bff91a9e8a73666012aed1ead",
+              "evidenceUrl": "https://brand.umd.edu/visual-identity/logos",
+              "verifiedAt": "2026-10-31",
+              "credit": "University of Maryland 官方完整非正式校徽",
+              "rights": "University of Maryland官方商标；无开放复用许可声明。保留完整标识，不裁出独立地球，不修改颜色或几何；用于描述论文署名，不表示校方背书。",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "altZh": "University of Maryland 官方完整非正式校徽",
+              "altEn": "Official complete University of Maryland informal seal"
+            },
             "authorNames": [
               "Botao He",
               "Yiannis Aloimonos",
@@ -772,9 +822,9 @@
                 "checkedAt": "2026-10-31"
               }
             ],
-            "note": "论文署名机构已核验。UMD外部标志使用许可未核实，按品牌限制使用文字标识，不下载或发布其标志。 大学标识仅采用官方校徽或紧凑身份符号；本轮未取得适合外部网站展示的独立徽章许可，保留文字名称。",
+            "note": "使用官方完整Informal Seal，不从组合标志裁出独立地球；透明原图仅说明本篇论文署名，不代表背书或取得额外许可。",
             "institutionType": "university",
-            "markType": "none"
+            "markType": "emblem"
           }
         ],
         "authors": []
@@ -912,7 +962,7 @@
               "credit": "Mila – Quebec AI Institute · official mark",
               "rights": "Official institutional mark; trademark/copyright retained by its owner. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve aspect ratio, complete mark and clear space.",
               "displayPolicy": "official-brand",
-              "background": "light",
+              "background": "transparent",
               "altZh": "Mila – Quebec AI Institute 官方标志",
               "altEn": "Official mark of Mila – Quebec AI Institute"
             },
@@ -946,7 +996,7 @@
               "credit": "CIFAR AI Chair · official mark",
               "rights": "Official institutional mark; trademark/copyright retained by its owner. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve aspect ratio, complete mark and clear space.",
               "displayPolicy": "official-brand",
-              "background": "light",
+              "background": "transparent",
               "altZh": "CIFAR AI Chair 官方标志",
               "altEn": "Official mark of CIFAR AI Chair"
             },
@@ -1083,7 +1133,7 @@
               "credit": "Georgia Institute of Technology official compact identity symbol",
               "rights": "官方首页身份符号，商标归原权利人；无开放许可声明。不是受限大学印章，不表示背书。",
               "displayPolicy": "official-brand",
-              "background": "light",
+              "background": "transparent",
               "altZh": "Georgia Tech 官方交织 GT 身份符号",
               "altEn": "Official Georgia Tech interlocking GT identity symbol"
             },
@@ -1240,7 +1290,7 @@
               "credit": "Northeastern University official compact identity symbol",
               "rights": "官方主页紧凑N符号，不是大学印章；保持完整及原色，不表示背书。印章政策另有限制。",
               "displayPolicy": "official-brand",
-              "background": "light",
+              "background": "transparent",
               "altZh": "Northeastern University 官方红色 N 身份符号",
               "altEn": "Official Northeastern University red N identity symbol"
             },
@@ -1557,28 +1607,13 @@
                 "checkedAt": "2026-10-31"
               }
             ],
-            "note": "论文题名脚注2另列Zhexi Wang在清华。 官方章程PDF第15页首个嵌入JPEG，原样提取554×385；未重绘、裁切或改色，保留图像中的安全空间。",
+            "note": "论文署名依据保持不变。校徽为官方章程PDF第15页原始嵌入JPEG，554×385，未重绘、裁切或改色。文件实际含白底，不声称真透明；在白色卡片上完整显示，外层无灰色或深色底板。已拒绝会改变文字、绳纹或比例的抠图候选。",
             "institutionType": "university",
             "markType": "emblem"
           },
           {
             "name": "University of California San Diego",
-            "logo": {
-              "kind": "institution-logo",
-              "path": "assets/institutions/ucsd-symbol.png",
-              "sha256": "09db59d85162cd07a6a745534242a0eababda186c58f73bf4e4f98860e611ef7",
-              "width": 48,
-              "height": 48,
-              "sourceUrl": "https://www.ucsd.edu/favicon.ico",
-              "evidenceUrl": "https://www.ucsd.edu/",
-              "verifiedAt": "2026-10-31",
-              "credit": "University of California San Diego official compact identity symbol",
-              "rights": "官方主页三叉戟紧凑符号，不是禁止用于网站的大学印章；不作为校园主Logo替代，不表示背书，保持完整原色。",
-              "displayPolicy": "official-brand",
-              "background": "light",
-              "altZh": "UC San Diego 官方主页三叉戟身份符号",
-              "altEn": "Official UC San Diego homepage trident identity symbol"
-            },
+            "logo": null,
             "authorNames": [
               "Weikang Wan",
               "Weijun Dong"
@@ -1590,9 +1625,9 @@
                 "checkedAt": "2026-10-31"
               }
             ],
-            "note": "论文作者栏列出的署名机构；标志仅作身份说明，不代表背书。 使用官方主页favicon完整三叉戟符号，ICO转为PNG，未裁切或重绘；不是大学印章。",
+            "note": "论文署名保持不变。旧主页favicon自带实心蓝色底，未找到本轮已核验且适合使用的透明官方替代；不自行删除原图蓝色或改造标志，暂仅列机构名称。",
             "institutionType": "university",
-            "markType": "compact-symbol"
+            "markType": "none"
           }
         ],
         "authors": [
@@ -1838,7 +1873,22 @@
         "institutions": [
           {
             "name": "University of Maryland, College Park",
-            "logo": null,
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/umd-emblem.webp",
+              "sha256": "d91ba74fdf5f9e0d91cf44ca560c8c7abd84d30c20d78981066bb99e4560fb3a",
+              "width": 1330,
+              "height": 818,
+              "sourceUrl": "https://omc-system.transforms.svdcdn.com/production/images/brand/Logos_InformalSeal.png?w=1920&h=1920&q=80&fm=webp&fit=max&dm=1788296316&s=129dbb4bff91a9e8a73666012aed1ead",
+              "evidenceUrl": "https://brand.umd.edu/visual-identity/logos",
+              "verifiedAt": "2026-10-31",
+              "credit": "University of Maryland 官方完整非正式校徽",
+              "rights": "University of Maryland官方商标；无开放复用许可声明。保留完整标识，不裁出独立地球，不修改颜色或几何；用于描述论文署名，不表示校方背书。",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "altZh": "University of Maryland 官方完整非正式校徽",
+              "altEn": "Official complete University of Maryland informal seal"
+            },
             "authorNames": [
               "Anukriti Singh",
               "Pratap Tokekar"
@@ -1850,9 +1900,9 @@
                 "checkedAt": "2026-10-31"
               }
             ],
-            "note": "论文署名机构已核验。UMD外部标志使用许可未核实，按品牌限制使用文字标识，不下载或发布其标志。 大学标识仅采用官方校徽或紧凑身份符号；本轮未取得适合外部网站展示的独立徽章许可，保留文字名称。",
+            "note": "使用官方完整Informal Seal，不从组合标志裁出独立地球；透明原图仅说明本篇论文署名，不代表背书或取得额外许可。",
             "institutionType": "university",
-            "markType": "none"
+            "markType": "emblem"
           },
           {
             "name": "Enchanted Tools",
@@ -1868,7 +1918,7 @@
               "credit": "Enchanted Tools · official mark",
               "rights": "Official institutional mark; trademark/copyright retained by its owner. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve aspect ratio, complete mark and clear space. Exact inline SVG extracted from official homepage; standalone XML namespace added only when absent.",
               "displayPolicy": "official-brand",
-              "background": "light",
+              "background": "transparent",
               "altZh": "Enchanted Tools 官方标志",
               "altEn": "Official mark of Enchanted Tools"
             },
