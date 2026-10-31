@@ -10,7 +10,7 @@ test('11篇中英导读同时可见，英文标为中文导读翻译，日期区
 });
 test('无主图/肖像时诚实占位，机构品牌不能被用作个人肖像',()=>{
  const p=structuredClone(first);p.visuals={mainFigure:null,figureNote:'理论论文没有可核实主图。',institutions:[{name:'Restricted Institute',institutionType:'research-institute',markType:'none',logo:null,authorNames:[],evidence:[{url:'https://example.org/paper',claim:'Paper lists the affiliation',checkedAt:'2026-10-31'}],note:'文字展示，未取得标志使用许可。'}],authors:[]};
- assert.deepEqual(validateVisuals(p),[]);const html=editorialCard(p,0);assert.ok(html.includes('暂无可核实主图'));assert.ok(html.includes('文字标识'));assert.ok(html.includes(p.authors[0]));assert.ok(!html.includes('avatar-initial'));assert.ok(!html.includes('<img'));
+ assert.deepEqual(validateVisuals(p),[]);const html=editorialCard(p,0);assert.ok(html.includes('暂无可核实主图'));assert.ok(html.includes('Restricted Institute'));assert.ok(!html.includes('文字标识'));assert.ok(html.includes(p.authors[0]));assert.ok(!html.includes('avatar-initial'));assert.ok(!html.includes('<img'));
  p.visuals.authors=[{name:p.authors[0],portrait:{...asset,kind:'institution-logo',displayPolicy:'official-brand'},note:'invalid'}];assert.ok(validateVisuals(p).length);
  assert.equal(assetURL({...asset,path:'../secret.png'}),null);assert.equal(assetURL({...asset,path:'https://external.example/a.png'}),null);
 });
@@ -43,4 +43,14 @@ test('大学仅接受校徽或官方紧凑身份符号，缺失机构标识不�
 test('PlayPolicy分清机构标识和作者姓名，标识容器无灰色或深色底板',async()=>{
  const p=day.papers.find(p=>p.id==='arxiv-2610-22340');const html=editorialCard(p,0);assert.equal(p.visuals.institutions.filter(i=>i.logo).length,2);assert.ok(html.includes('Amazon 母公司官方标志，非FAR专属标志'));assert.ok(html.includes('University of Maryland 官方完整非正式校徽'));assert.ok(!html.includes('avatar-initial'));assert.ok(html.includes('Botao He')&&html.includes('Yiming Dou'));
  const css=await readFile(new URL('../styles.css',import.meta.url),'utf8');assert.match(css,/\.institution-avatar\{[^}]*background:transparent[^}]*box-shadow:none/);assert.ok(!css.includes('.avatar-dark'));assert.match(css,/\.institution-avatar img\{[^}]*background:transparent/);
+});
+
+
+test('ASU使用完整透明官方标志，至少48px宽；未核实标志只显示机构名称',async()=>{
+ const p=day.papers.find(p=>p.id==='arxiv-2610-28251');const inst=p.visuals.institutions.find(i=>i.name==='Arizona State University');
+ assert.equal(inst.markType,'compact-symbol');assert.equal(inst.logo.background,'transparent');assert.equal(inst.logo.width,303);assert.equal(inst.logo.height,234);
+ assert.equal(inst.logo.sourceUrl,'https://www.asu.edu/profiles/contrib/webspark/modules/asu_brand/dist/assets/img/arizona-state-university-logo-vertical.png');
+ await readAsset(inst.logo,new URL('../',import.meta.url).pathname);
+ const html=institutionRow(p);assert.match(html,/style="width:48px;height:38px"/);assert.ok(html.includes('asu-vertical.png?v='));assert.ok(html.includes('width="303" height="234"'));
+ for(const paper of day.papers){const row=institutionRow(paper);assert.ok(!row.includes('文字标识'));for(const i of paper.visuals.institutions.filter(i=>!i.logo))assert.ok(row.includes(i.name));}
 });

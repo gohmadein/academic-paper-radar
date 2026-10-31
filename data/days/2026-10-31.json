@@ -617,7 +617,22 @@
           },
           {
             "name": "Arizona State University",
-            "logo": null,
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/asu-vertical.png",
+              "sha256": "eed5fb0279cfad95f2b0b89011cc8646569abf1b098e54563f085b238ba751b4",
+              "width": 303,
+              "height": 234,
+              "sourceUrl": "https://www.asu.edu/profiles/contrib/webspark/modules/asu_brand/dist/assets/img/arizona-state-university-logo-vertical.png",
+              "evidenceUrl": "https://www.asu.edu/",
+              "verifiedAt": "2026-10-31",
+              "credit": "Arizona State University · official vertical mark",
+              "rights": "Official institutional mark; trademark/copyright retained by Arizona State University. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve the complete mark, aspect ratio and clear space. Display at least 48 CSS pixels wide.",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "altZh": "Arizona State University 官方完整竖版标志",
+              "altEn": "Official Arizona State University complete vertical mark"
+            },
             "authorNames": [
               "Angelia Nedić"
             ],
@@ -628,9 +643,9 @@
                 "checkedAt": "2026-10-31"
               }
             ],
-            "note": "作者栏明确列出Angelia Nedić在ASU电气、计算机与能源工程学院。官方政策要求外部Logo使用先获许可，因此仅显示文字标识。 大学标识仅采用官方校徽或紧凑身份符号；本轮未取得适合外部网站展示的独立徽章许可，保留文字名称。",
+            "note": "作者栏明确列出 Angelia Nedić 在 ASU 电气、计算机与能源工程学院。采用 ASU 官网发布的完整竖版官方标志，保留原始透明背景和比例；仅用于识别论文署名机构，不代表背书。",
             "institutionType": "university",
-            "markType": "none"
+            "markType": "compact-symbol"
           }
         ],
         "authors": []
