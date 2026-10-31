@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import vm from 'node:vm';
+import * as topics from '../lib/topics.js';
 import * as model from '../lib/model.js';
 import * as digest from '../lib/digest-view.js';
 import * as institutions from '../lib/institutions.js';
@@ -15,7 +16,7 @@ async function appHarness({stored=new Map(),storageBlocked=false}={}){
     if(!elements.has(id))elements.set(id,{id,hidden:false,value:'',innerHTML:'',textContent:'',dataset:{},childNodes:[{textContent:''}],classList:{toggle(){},add(){},remove(){}},attributes:{},setAttribute(k,v){this.attributes[k]=v},removeAttribute(k){delete this.attributes[k]},addEventListener(type,fn){events[id+':'+type]=fn},open:false,isConnected:true,focus(){context.document.activeElement=this},close(){this.open=false},showModal(){this.open=true}});
     return elements.get(id);
   };
-  const context=vm.createContext({...model,...digest,...institutions,...transfer,
+  const context=vm.createContext({...topics,...model,...digest,...institutions,...transfer,
     e:model.escapeHTML,updateHUD(){},console,URL,URLSearchParams,CSS:{escape:x=>x},setTimeout,clearTimeout,
     document:{getElementById:element,querySelectorAll:()=>[],querySelector:()=>null,activeElement:null,body:{classList:{toggle(name,on){if(on)bodyClasses.add(name);else bodyClasses.delete(name)}}},addEventListener:(type,fn)=>{events[type]=fn}},
     window:{addEventListener:(type,fn)=>{windowEvents[type]=fn}},
@@ -117,4 +118,25 @@ test('Unavailable layout storage is harmless; icon destinations retain accessibl
   for(const label of ['全部方向','迅的推送','李的推送','驴的推送'])assert.ok(h.element('category-tabs').innerHTML.includes('aria-label="'+label+'"'));
   assert.ok(css.includes('body.rail-collapsed{grid-template-columns:76px minmax(0,1fr)'));
   assert.ok(css.includes('.rail-collapsed .profile-link{min-height:44px;justify-content:center}'));
+});
+
+test('Broad theme chips follow profiles, compose in bookmarks, and preserve legacy links/history',async()=>{
+  const h=await appHarness();
+  const count=()=> (h.element('content').innerHTML.match(/<article /g)||[]).length;
+  h.click({category:'xun'});
+  assert.equal((h.element('tags').innerHTML.match(/<button /g)||[]).length,6);
+  assert.ok(!h.element('tags').innerHTML.includes('数据库'));
+  h.click({tag:'topic:robot-control'});assert.ok(count()>1);
+  h.click({category:'li'});assert.equal(h.run('state.tag'),'all');assert.equal(count(),2);
+  h.back();assert.equal(h.run('state.tag'),'topic:robot-control');assert.equal(h.run('state.category'),'xun');
+  h.forward();assert.equal(h.run('state.category'),'li');
+  h.click({category:'xun'});h.click({tag:'力觉'});assert.equal(count(),1);
+  assert.ok(h.element('tags').innerHTML.includes('关键词：力觉'));
+  const id=h.run("data.real.papers.find(p=>p.tags.includes('力觉')).id");
+  h.click({bookmark:id});h.click({view:'bookmarks'});h.click({tag:'topic:robot-control'});
+  assert.equal(h.run('state.view'),'bookmarks');assert.equal(count(),1);
+  h.click({read:id});h.run("go({readStatus:'unread'})");assert.equal(count(),0);
+  h.run("go({readStatus:'read',q:'力觉'})");assert.equal(count(),1);
+  h.click({view:'archive'});assert.equal(h.element('filter-panel').hidden,true);
+  h.click({date:'2026-10-31'});assert.equal(h.run('state.tag'),'all');
 });

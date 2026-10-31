@@ -1,3 +1,4 @@
+import {availableTopics,topicLabel,topicForProfile} from './lib/topics.js';
 import {institutionGallery,scrollInstitutions,institutionKeydown} from './lib/institutions.js';
 import {publicPaperURL,sharePaper} from './lib/paper-share.js';
 import {handleMediaError} from './lib/paper-media.js';
@@ -142,7 +143,7 @@ function render() {
   updateViewChrome();
   if (state.view === 'feed') updateHUD({demo:state.demo,papers,days});
   $('bookmark-transfer').hidden = state.view !== 'bookmarks';
-  const tags = [...new Set(papers.flatMap(p => p.tags))].sort((a,b) => a.localeCompare(b,'zh-CN'));
+  const tags = availableTopics(papers,state.category);
   document.querySelectorAll('nav [data-view]').forEach(b => { b.classList.toggle('active',b.dataset.view === state.view); if(b.dataset.view===state.view) b.setAttribute('aria-current','page'); else b.removeAttribute('aria-current'); });
   $('bookmark-count').textContent = papers.filter(p=>bookmarks.has(p.id)).length;
   $('search').value = state.q;
@@ -150,7 +151,7 @@ function render() {
   $('date-select').innerHTML = '<option value="all">全部日期</option>' + (state.date !== 'all' && !dateValues.includes(state.date) ? `<option value="${state.date}">${state.date}（无档案）</option>` : '') + days.map(d=>`<option value="${d.date}">${d.date}</option>`).join('');
   $('date-select').value = state.date;
   const tagValues = state.tag !== 'all' && !tags.includes(state.tag) ? [...tags,state.tag] : tags;
-  $('tags').innerHTML = ['all',...tagValues].map(t=>`<button class="tag ${state.tag===t?'active':''}" data-tag="${e(t)}" aria-pressed="${state.tag===t}">${t==='all'?'全部':e(t)}</button>`).join('');
+  $('tags').innerHTML = ['all',...tagValues].map(t=>`<button class="tag ${state.tag===t?'active':''}" data-tag="${e(t)}" aria-pressed="${state.tag===t}">${t==='all'?'全部':e(t.startsWith('topic:')?topicLabel(t):'关键词：'+t)}</button>`).join('');
   $('date-list').innerHTML = days.length ? days.slice(0,4).map(d=>`<button class="date-item ${state.date===d.date?'active':''}" data-date="${d.date}" aria-label="查看 ${d.date}，${d.papers.length} 篇${state.demo?'演示条目':'论文'}"><span class="date-number">${d.date.slice(8)}</span><span class="date-meta">${d.date.slice(0,7).replace('-',' / ')}<small>${state.demo?'演示归档':'研究档案'}</small></span><span class="date-count">${String(d.papers.length).padStart(2,'0')} ↗</span></button>`).join('') : '<div class="archive-placeholder">NO ENTRIES YET<span>首期发布后，按日期自动归档。</span></div>';
   const filtered = filterPapers(papers,{...state,read:reads,bookmarks:state.view==='bookmarks'?bookmarks:null});
   $('institution-gallery').innerHTML=state.view==='feed'&&!state.demo?institutionGallery(filtered,data.institutions):'';
@@ -207,13 +208,13 @@ document.addEventListener('click', event => {
   const b = event.target.closest('button');
   if (!b) return;
   if(b.dataset.institutionScroll){scrollInstitutions($('institution-strip'),Number(b.dataset.institutionScroll));return;}
-  if(b.dataset.category)go({category:b.dataset.category,view:state.view==='archive'?'feed':state.view,paper:''});
+  if(b.dataset.category)go({category:b.dataset.category,tag:topicForProfile(collection().papers,state.tag,b.dataset.category),view:state.view==='archive'?'feed':state.view,paper:''});
   else if(b.dataset.read){if(reads.has(b.dataset.read))reads.delete(b.dataset.read);else reads.add(b.dataset.read);try{localStorage.setItem(READ_KEY,JSON.stringify([...reads]));}catch{toast('阅读状态仅在当前会话可用');}render();}
   else if (b.dataset.view) go({view:b.dataset.view,q:'',tag:'all',date:b.dataset.view==='feed'&&!state.demo&&data?.real.days[0]?data.real.days[0].date:'all',paper:''});
   else if(b.dataset.share)requestShare(b.dataset.share);
   else if (b.dataset.paper) { dialogTrigger = b; go({paper:b.dataset.paper}); }
   else if (b.dataset.bookmark) toggleBookmark(b.dataset.bookmark);
-  else if (b.dataset.tag) go({tag:b.dataset.tag,view:'feed',paper:''});
+  else if (b.dataset.tag) go({tag:b.dataset.tag,view:state.view==='archive'?'feed':state.view,paper:''});
   else if (b.dataset.date) go({date:b.dataset.date,view:'feed',q:'',tag:'all',paper:''});
   else if (b.dataset.action === 'demo') go({demo:true,view:'feed',date:'all',tag:'all',q:'',paper:''});
   else if (b.dataset.action === 'clear') go({q:'',tag:'all',date:'all',category:'all',readStatus:'all'});
