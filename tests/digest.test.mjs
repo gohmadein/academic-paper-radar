@@ -1,7 +1,7 @@
 import test from 'node:test';import assert from 'node:assert/strict';
 import {readFile,cp,mkdtemp} from 'node:fs/promises';import {tmpdir}from'node:os';import{join}from'node:path';
 import {validateDay,filterPapers,profileCounts,mergeOccurrences,readRoute,routeHash}from'../lib/model.js';
-import {digestDetails,digestRecommendations,categoryClass}from'../lib/digest-view.js';
+import {issueReport,digestDetails,digestRecommendations,categoryClass}from'../lib/digest-view.js';
 import {normalizePapers,deriveID,aliasesFor}from'../scripts/identity.mjs';
 import {ingest}from'../scripts/ingest.mjs';import{root,validateAll}from'../scripts/validate.mjs';
 const day=JSON.parse(await readFile(new URL('../data/days/2026-10-31.json',import.meta.url),'utf8'));
@@ -64,4 +64,22 @@ test('跨日重复普通推送拒绝，重大更新复用ID并保留历史日期
  assert.equal(filterPapers(combined,{date:day.date}).length,11);assert.equal(filterPapers(combined,{date:next.date}).length,1);
  const monday={...clone(day),date:'2026-11-02',papers:[clone(day.papers[7])]};monday.papers[0].classic=true;monday.papers[0].discoveredDate=monday.date;
  assert.deepEqual(validateDay(monday),[]);assert.deepEqual(profileCounts(monday.papers).li,{papers:0,classics:1});
+});
+
+
+test('Issue overview omits redundant narrative for current and future issues but retains coverage and paper facts',()=>{
+ const before=JSON.stringify(day);
+ for(const issue of [day,{...day,date:'2026-11-01',issueNote:'FUTURE_NARRATIVE_NOT_FOR_FEED'}]){
+  const html=issueReport(issue);
+  assert.ok(!html.includes(issue.issueNote));
+  assert.ok(!html.includes('<p>'));
+  assert.ok(html.includes('实际检索范围与限制'));
+  assert.ok(html.includes('<details>'));
+  assert.ok(!html.includes('<details open'));
+  for(const text of [...issue.coverage.checkedSources,...issue.coverage.limitations])assert.ok(html.includes(text.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;')));
+  assert.ok(html.includes('9 篇近30日 / 2 篇回溯 / 0 篇经典'));
+ }
+ assert.equal(JSON.stringify(day),before);
+ const details=day.papers.map(digestDetails).join('');
+ for(const text of ['预印本','2025','摘要级','正文重点核读'])assert.ok(details.includes(text),text);
 });
