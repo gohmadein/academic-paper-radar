@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {beijingDate,researchMapModel,researchMapHTML} from '../lib/research-map.js';
+import {beijingDate,researchMapModel,researchMapHTML,positionMapMarkers} from '../lib/research-map.js';
 import {mergeOccurrences} from '../lib/digest.js';
 const geography={locations:{a:{city:'A',countryCode:'US',countryLabel:'美国',lat:40,lon:-90},b:{city:'B',countryCode:'CN',countryLabel:'中国',lat:39,lon:116}},papers:{p:{locationIds:['a','b','a']},q:{locationIds:['a']}}};
 const p={id:'p',title:'P',profiles:['xun']},q={id:'q',title:'Q',profiles:['li']};
@@ -42,4 +42,19 @@ test('Atlas occupies only the introduction, stacks below it, and ships a local l
  assert.match(css,/\.reading-intro\.with-map\{display:grid;grid-template-columns:minmax\(0,1fr\) minmax\(330px,\.9fr\)/);
  assert.match(css,/@media\(max-width:1100px\)\{\.reading-intro\.with-map\{grid-template-columns:1fr/);
  assert.match(land,/Natural Earth/);assert.match(researchMapHTML({today:'2026-10-31',mode:'all',total:0,unknown:0,groups:[]}),/fill-rule="evenodd"/);
+});
+
+
+test('Strict CSP markers receive distinct projected positions through individual CSSOM properties',async()=>{
+ const model=researchMapModel([{...p,date:'2026-10-31'}],geography);
+ const markup=researchMapHTML(model);
+ assert.doesNotMatch(markup,/style=/);
+ const markers=[...markup.matchAll(/data-map-x="([^"]+)" data-map-y="([^"]+)"/g)].map(([,mapX,mapY])=>({dataset:{mapX,mapY},style:{}}));
+ assert.equal(markers.length,2);
+ positionMapMarkers({querySelectorAll:selector=>{assert.equal(selector,'.map-marker');return markers;}});
+ assert.deepEqual(markers[0].style,{left:'25%',top:'27.778%'});
+ assert.deepEqual(markers[1].style,{left:'82.222%',top:'28.333%'});
+ const malformed={dataset:{mapX:'bad',mapY:'101'},style:{}};positionMapMarkers({querySelectorAll:()=>[malformed]});assert.deepEqual(malformed.style,{});
+ const html=await readFile(new URL('../index.html',import.meta.url),'utf8');assert.match(html,/style-src 'self';/);assert.ok(!html.includes("'unsafe-inline'"));
+ const app=await readFile(new URL('../app.js',import.meta.url),'utf8');assert.match(app,/innerHTML=markup;\s+positionMapMarkers\(document\)/);
 });

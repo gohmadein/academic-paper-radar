@@ -1,4 +1,4 @@
-import {researchMapModel,researchMapHTML} from './lib/research-map.js';
+import {researchMapModel,researchMapHTML,positionMapMarkers} from './lib/research-map.js';
 import {profileIcon} from './lib/profile-icons.js';
 import {sourceDirectory,sourceViewPatch,SOURCE_NAV} from './lib/source-directory.js';
 import {availableTopics,topicLabel,topicForProfile} from './lib/topics.js';
@@ -169,6 +169,7 @@ function renderMap() {
   lastMapMarkup=markup;
   const expanded=$('map-regions')?.open;
   $('research-map').innerHTML=markup;
+  positionMapMarkers(document);
   if(expanded&&$('map-regions'))$('map-regions').open=true;
 }
 
