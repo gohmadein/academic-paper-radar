@@ -1,0 +1,13 @@
+{
+  "id": "replace-with-stable-unique-id",
+  "title": "填写核实后的论文标题",
+  "titleEn": "Optional original title",
+  "authors": ["填写真实作者"],
+  "year": 2026,
+  "venue": "填写期刊、会议或预印本平台；明确是否未经同行评审",
+  "tags": ["填写研究主题"],
+  "summary": "依据已阅读的原文或摘要撰写中文导读，说明问题、方法、发现与局限，不编造结果。",
+  "whySelected": "说明与已确认筛选规则的关联。",
+  "sources": [{ "label": "论文原文（替换此链接）", "url": "https://example.com/replace-with-verified-paper-url" }],
+  "demo": false
+}

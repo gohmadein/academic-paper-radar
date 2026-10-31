@@ -1,0 +1,15 @@
+{
+  "name": "academic-paper-radar",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "纯前端学术论文每日精选档案，无外部运行时依赖",
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/serve.mjs",
+    "new-day": "node scripts/new-day.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

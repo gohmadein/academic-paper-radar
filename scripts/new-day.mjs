@@ -1,0 +1,20 @@
+import {mkdir,readFile,writeFile,access} from 'node:fs/promises';
+import {join} from 'node:path';
+import {isDate} from '../lib/model.js';
+import {root,validateAll} from './validate.mjs';
+const date=process.argv[2];
+if(!isDate(date)) throw new Error('用法：npm run new-day -- YYYY-MM-DD（必须为有效日期）');
+const check=await validateAll();
+if(check.errors.length) throw new Error(check.errors.join('\n'));
+const file=join(root,'data','days',`${date}.json`);
+const indexPath=join(root,'data','index.json');
+const index=JSON.parse(await readFile(indexPath,'utf8'));
+if(index.days.some(d=>d.date===date)) throw new Error('该日期已存在，请编辑现有文件');
+try{await access(file);throw new Error('目标文件已存在，不覆盖');}catch(error){if(error.code!=='ENOENT')throw error;}
+const title=`${date} 论文精选`;
+await mkdir(join(root,'data','days'),{recursive:true});
+await writeFile(file,JSON.stringify({version:1,date,title,demo:false,papers:[]},null,2)+'\n',{flag:'wx'});
+index.days.push({date,file:`days/${date}.json`,count:0,title});
+index.days.sort((a,b)=>b.date.localeCompare(a.date));
+await writeFile(indexPath,JSON.stringify(index,null,2)+'\n');
+console.log(`已新增 data/days/${date}.json 及索引。请填写核实后的论文，并同步索引 count/title，再校验。`);
