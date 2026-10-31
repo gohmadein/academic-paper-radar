@@ -71,7 +71,7 @@ test('发布页面无远程运行时资源与第三方导入，支持项目子�
   const html=await readFile(join(root,'index.html'),'utf8');
   assert.equal(/(?:src|href)=["']https?:\/\//.test(html),false);
   assert.ok(html.includes('connect-src \'self\''));
-  for(const file of ['app.js','lib/model.js','lib/hud.js','lib/bookmark-transfer.js','lib/rgb-split.js','styles.css','hud.css']){
+  for(const file of ['app.js','lib/model.js','lib/hud.js','lib/bookmark-transfer.js','lib/line-block.js','styles.css','hud.css']){
     const text=await readFile(join(root,file),'utf8');
     assert.equal(/(?:import\s.*from\s*["']https?:|@import|url\(["']?https?:)/.test(text),false);
   }

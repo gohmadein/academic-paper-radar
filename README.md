@@ -146,4 +146,6 @@ dist/                            自动生成的静态发布目录，不提交�
 
 收藏只保存在当前浏览器的本机存储（原有键保持不变），没有登录或自动云端同步。导出/导入 JSON 可手动迁移，现有收藏不会上传公开仓库。
 
-首页双栏 hero 使用 SVG 通道分离适配 [GlitchRGBSplitV4](https://github.com/QianMo/X-PostProcessing-Library/tree/master/Assets/X-PostProcessing/Effects/GlitchRGBSplitV4)：量化时间、伪随机水平 RGB 偏移，强度 0.02、速度 10。不是在网页执行 Unity shader。效果仅作用于 hero；右上角可关闭并在本机记住选择，系统减少动态效果设置会关闭效果，离开首页或隐藏标签页时暂停。完整 MIT 声明见 THIRD_PARTY_NOTICES.txt。标志为原创研究雷达图形，白色主体与青/洋红错位。
+首页双栏 hero 使用 [GlitchLineBlock](https://github.com/QianMo/X-PostProcessing-Library/tree/master/Assets/X-PostProcessing/Effects/GlitchLineBlock) 水平方向的网页适配，替代原 RGB 分离。按纵坐标量化噪声生成宽窄不一的横条，SVG 位移图直接让文字与 HUD 左右错位。最大水平位移约为区域宽度的 2%；纵向通道固定为 0.5，使纵向位移为零。未移植原效果的 YUV 色调修改，也不在网页执行 Unity shader。
+
+效果仅作用于 hero；右上角可关闭并在本机记住选择，系统减少动态效果设置会关闭效果，离开首页或隐藏标签页时暂停。原来的关闭偏好会被保留。位移图由随页面的 SVG 基元生成，无外部图片或运行时依赖。完整 MIT 声明见 THIRD_PARTY_NOTICES.txt。标志为原创研究雷达图形，白色主体与青/洋红错位，保持不变。

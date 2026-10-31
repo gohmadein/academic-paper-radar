@@ -1,5 +1,5 @@
-RGB split effect adaptation
-Source: https://github.com/QianMo/X-PostProcessing-Library/tree/master/Assets/X-PostProcessing/Effects/GlitchRGBSplitV4
+Horizontal line block effect adaptation
+Source: https://github.com/QianMo/X-PostProcessing-Library/tree/master/Assets/X-PostProcessing/Effects/GlitchLineBlock
 Shader header: Copyright (C) 2020 QianMo. All rights reserved.
 
 MIT License

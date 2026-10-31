@@ -1,4 +1,4 @@
-import {createHeroRGBEffect} from './lib/rgb-split.js';
+import {createHeroLineEffect} from './lib/line-block.js';
 import {DEMO_NOTICE, escapeHTML as e, safeUrl, filterPapers, readRoute, routeHash, parseBookmarks, validateIndex, validateDay} from './lib/model.js';
 import {updateHUD} from './lib/hud.js';
 import {makeBookmarkExport,parseBookmarkImport,mergeBookmarkImport,MAX_BOOKMARK_BYTES} from './lib/bookmark-transfer.js';
@@ -105,7 +105,7 @@ function paperCard(p,index) {
 }
 
 function emptyState(kind) {
-  if (kind === 'first') return `<div class="empty-state"><div class="empty-art" aria-hidden="true"><span>⌁</span></div><h3>下一束信号，等待你的研究方向。</h3><p>首期精选尚未发布。确定研究主题和筛选标准后，<br>这里将呈现每天值得读的论文与中文导读。</p><button class="primary-button" data-action="demo">探索演示版 <span aria-hidden="true">↗</span></button><div class="empty-footnote">PREVIEW ONLY / 演示数据，非真实论文</div><div class="empty-steps"><span><b>01</b> 确定方向</span><span><b>02</b> 筛选论文</span><span><b>03</b> 每日归档</span></div></div>`;
+  if (kind === 'first') return `<div class="empty-state"><div class="empty-art" aria-hidden="true"><img class="empty-brand" src="./assets/favicon.svg" width="52" height="52" alt=""></div><h3>下一束信号，等待你的研究方向。</h3><p>首期精选尚未发布。确定研究主题和筛选标准后，<br>这里将呈现每天值得读的论文与中文导读。</p><button class="primary-button" data-action="demo">探索演示版 <span aria-hidden="true">↗</span></button><div class="empty-footnote">PREVIEW ONLY / 演示数据，非真实论文</div><div class="empty-steps"><span><b>01</b> 确定方向</span><span><b>02</b> 筛选论文</span><span><b>03</b> 每日归档</span></div></div>`;
   if (kind === 'bookmarks') return `<div class="empty-state no-results"><div class="empty-art" aria-hidden="true"><span>◇</span></div><h3>给值得再读的论文，留个位置。</h3><p>点击论文卡片上的 ◇，即可加入本机书签。${state.demo?'当前只显示演示模式的书签。':'当前只显示真实论文的书签。'}<br>书签仅保存在当前浏览器，不会跨设备同步。</p><button class="secondary-button" data-action="feed">返回每日精选 →</button></div>`;
   return `<div class="empty-state no-results"><div class="empty-art" aria-hidden="true"><span>⌕</span></div><h3>还没有匹配的研究信号</h3><p>试试更短的关键词，或清除日期、主题筛选。</p><button class="secondary-button" data-action="clear">清除筛选 →</button></div>`;
 }
@@ -248,5 +248,5 @@ window.addEventListener('popstate',syncRoute);
 window.addEventListener('hashchange',syncRoute);
 window.addEventListener('storage',event=>{if(event.key===BOOKMARK_KEY){bookmarks=parseBookmarks(event.newValue);if(data)render();}});
 document.addEventListener('keydown',event=>{if(event.key==='/' && !event.ctrlKey && !event.metaKey && !event.altKey && !$('detail-dialog').open && !['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName) && !$('filter-panel').hidden){event.preventDefault();$('search').focus();}});
-heroEffect = createHeroRGBEffect();
+heroEffect = createHeroLineEffect();
 init();
