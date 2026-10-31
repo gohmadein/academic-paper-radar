@@ -193,6 +193,7 @@ test('Nine sidebar destinations show exactly one section, repeat safely and rest
     h.click({sourceProfile:category,sourceType:type});
     assert.equal(h.run('state.category'),category);assert.equal(h.run('state.sourceType'),type);
     assert.equal((h.element('content').innerHTML.match(/class="watchlist-section"/g)||[]).length,1);
+    assert.equal(h.element('result-count').textContent,'');
     assert.match(h.element('content').innerHTML,new RegExp(' · '+label));
     assert.equal((h.element('category-tabs').innerHTML.match(/data-source-type=/g)||[]).length,9);
     assert.equal((h.element('category-tabs').innerHTML.match(/aria-current="page"/g)||[]).length,1);
@@ -203,4 +204,22 @@ test('Nine sidebar destinations show exactly one section, repeat safely and rest
     h.forward();assert.equal(h.run('state.view'),'feed');
     assert.equal(h.run('state.q'),'robot');assert.equal(h.run('state.date'),'2026-10-31');
   }
+});
+
+test('Site copy stays concise without removing functional state or demo warnings',async()=>{
+  const h=await appHarness(),html=await read('index.html');
+  for(const text of ['同源 JSON','NO BACKEND / NO TRACKING','少一点信息过载','有依据的精选','每一天，都有迹可循','纯前端阅读站','signal-panel'])assert.ok(!html.includes(text),text);
+  assert.ok(html.includes('书签与已读状态仅保存在本机，不会自动同步。'));
+  h.click({sourceProfile:'xun',sourceType:'lab'});assert.equal(h.element('result-bar').hidden,true);
+  h.click({category:'xun'});assert.equal(h.element('result-bar').hidden,false);
+  assert.match(h.element('content').innerHTML,/预印本/);
+  h.click({view:'archive'});assert.match(h.element('content').innerHTML,/2026/);
+  h.click({view:'bookmarks'});assert.equal(h.element('bookmark-transfer').hidden,false);
+  h.events['about-button:click']();
+  assert.ok(!h.element('dialog-content').innerHTML.includes('JSON'));
+  assert.ok(!h.element('dialog-content').innerHTML.includes('纯前端'));
+  assert.ok(h.element('dialog-content').innerHTML.includes('清除浏览器数据会删除记录'));
+  h.element('detail-dialog').close();h.click({category:'all'});h.click({action:'demo'});
+  assert.equal(h.element('demo-banner').hidden,false);
+  assert.match(h.element('content').innerHTML,/演示数据，非真实论文/);
 });

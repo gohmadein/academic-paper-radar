@@ -21,7 +21,7 @@ test('All source records retain safe links, counts, tiers and multi-team registr
 
 test('Source markup escapes text, refuses unsafe links, distinguishes empty sections and scope',()=>{
   const html=['conference','journal','lab'].map(type=>sourceDirectory('li',watchlists,type)).join('');
-  for(const text of ['PACMMOD','PVLDB','Ontop','预印本','不要求每天覆盖所有来源'])assert.ok(html.includes(text));
+  for(const text of ['PACMMOD','PVLDB','Ontop'])assert.ok(html.includes(text));
   assert.equal((sourceDirectory('lv',watchlists).match(/class="watchlist-pending"/g)||[]).length,1);
   const copy=structuredClone(watchlists);copy.profiles.profiles.li.sources.push({type:'conference',tier:'<img>',name:'<script>',details:['<bad>'],links:[{label:'bad',url:'javascript:alert(1)'}]});
   const escaped=sourceDirectory('li',copy);assert.ok(escaped.includes('&lt;script&gt;'));assert.ok(!escaped.includes('javascript:'));assert.ok(!escaped.includes('<bad>'));
@@ -48,7 +48,7 @@ test('Lv reuses seven existing teams with both Berkeley links; Xun gains Robotic
   }
   const html=sourceDirectory('lv',watchlists,'lab');
   assert.ok(!html.includes('9 个研究入口'));
-  assert.ok(html.includes('不表示覆盖两校全部实验室'));
+  assert.ok(watchlists.profiles.profiles.lv.notes.some(note=>note.includes('不表示覆盖两校全部实验室')));
   const broken=structuredClone(watchlists);broken.profiles.profiles.lv.registryRefs.push('missing');
   assert.throws(()=>profileSources('lv',broken),/未知来源引用/);
 });
@@ -63,4 +63,24 @@ test('Section routes validate nine destinations and preserve hidden arXiv and au
   assert.equal(profileSources('li',watchlists).filter(s=>s.type==='author').length,2);
   assert.equal(profileSources('xun',watchlists).filter(s=>s.type==='arxiv').length,6);
   assert.ok(!sourceDirectory('li',watchlists,'author').includes('Diego Calvanese'));
+});
+
+
+test('Directory preambles stay out of every section while data, scholar details and links remain',()=>{
+  const before=JSON.stringify(watchlists);
+  for(const category of ['all','xun','li','lv'])for(const type of ['conference','journal','lab']){
+    const html=sourceDirectory(category,watchlists,type);
+    for(const forbidden of ['watchlist-scope','watchlist-notice','watchlist-notes','source-registry.json','不要求每天覆盖所有来源','每期实际检索范围'])assert.ok(!html.includes(forbidden),category+'/'+type+': '+forbidden);
+    if(category!=='all'){
+      const profile=watchlists.profiles.profiles[category];
+      assert.ok(!html.includes(profile.scope));
+      for(const note of profile.notes)assert.ok(!html.includes(note));
+    }
+  }
+  for(const category of ['xun','lv']){
+    const html=sourceDirectory(category,watchlists,'lab');
+    for(const detail of ['Berkeley RAIL / RLL','Sergey Levine','Pieter Abbeel','Stanford IRIS','Chelsea Finn','https://rail.eecs.berkeley.edu/','https://rll.berkeley.edu/'])assert.ok(html.includes(detail),detail);
+  }
+  assert.match(sourceDirectory('lv',watchlists,'conference'),/<p class="watchlist-pending">待补充<\/p>/);
+  assert.equal(JSON.stringify(watchlists),before);
 });

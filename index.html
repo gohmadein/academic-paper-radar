@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f6f8fc">
-  <meta name="description" content="零域 ZERO FIELD · 每日论文精选：按日期归档的学术论文、中文导读与入选理由。纯前端阅读站。">
+  <meta name="description" content="零域 ZERO FIELD · 每日论文精选：按日期归档的学术论文、中文导读与入选理由。">
   <meta property="og:title" content="零域 / ZERO FIELD · 每日论文精选">
   <meta property="og:description" content="按日期归档的学术论文精选、中文导读与入选理由。">
   <meta property="og:url" content="https://gohmadein.github.io/academic-paper-radar/">
@@ -37,20 +37,20 @@
       <div class="hero-copy">
         <p class="eyebrow"><span class="status-light"></span> DAILY RESEARCH INTELLIGENCE <span class="eyebrow-version">/ VOL. 001</span></p>
         <h1 id="hero-title">在噪声之外，<br>捕获<span class="hero-emphasis">研究信号</span><span class="title-period">。</span></h1>
-        <p class="hero-description">把值得关注的论文，留在你的视野里。<br>每日精选 · 中文导读 · 持续归档</p>
-        <div class="hero-metrics"><span><strong id="real-count">00</strong> 篇真实收录</span><span><strong id="real-days">00</strong> 天研究档案</span><span class="curation-note">少一点信息过载，多一点研究灵感。</span></div>
+        
+        <div class="hero-metrics"><span><strong id="real-count">00</strong> 篇真实收录</span><span><strong id="real-days">00</strong> 天研究档案</span></div>
       </div>
       <section class="monitor-dashboard" aria-label="研究档案监控仪表盘">
         <div class="monitor-heading"><span class="monitor-id">SYS / ZERO_FIELD</span><span class="monitor-build">READ ONLY · 01</span></div>
         <div class="hud-shell"><div class="hud-card monitor-frame"><div class="hud-surface monitor-surface">
           <div class="monitor-title-row"><h2>研究档案概览</h2><span class="monitor-indicator" id="hud-mode">真实档案</span></div>
-          <p class="monitor-subtitle">仓库已发布资料 / 同源静态档案</p>
+          
           <div class="hud-counters">
-            <div class="hud-card metric-card"><div class="hud-surface"><p>当前收录 <small>ENTRIES</small></p><div class="stat-counter" id="hud-entries" aria-label="当前收录，加载中">—</div><span class="metric-foot" id="hud-entry-note">等待资料</span></div></div>
-            <div class="hud-card metric-card metric-red"><div class="hud-surface"><p>归档日期 <small>DAYS</small></p><div class="stat-counter" id="hud-days" aria-label="归档日期，加载中">—</div><span class="metric-foot">同源 JSON 档案</span></div></div>
-            <div class="hud-card metric-card metric-ink"><div class="hud-surface"><p>研究主题 <small>TOPICS</small></p><div class="stat-counter" id="hud-topics" aria-label="研究主题，加载中">—</div><span class="metric-foot">由条目标签统计</span></div></div>
+            <div class="hud-card metric-card"><div class="hud-surface"><p>当前收录 <small>ENTRIES</small></p><div class="stat-counter" id="hud-entries" aria-label="当前收录，加载中">—</div></div></div>
+            <div class="hud-card metric-card metric-red"><div class="hud-surface"><p>归档日期 <small>DAYS</small></p><div class="stat-counter" id="hud-days" aria-label="归档日期，加载中">—</div></div></div>
+            <div class="hud-card metric-card metric-ink"><div class="hud-surface"><p>研究主题 <small>TOPICS</small></p><div class="stat-counter" id="hud-topics" aria-label="研究主题，加载中">—</div></div></div>
           </div>
-          <div class="monitor-footer"><span id="hud-status">◌ 读取档案中</span><span>NO BACKEND / NO TRACKING</span></div>
+          <div class="monitor-footer"><span id="hud-status">◌ 读取档案中</span></div>
         </div></div></div>
       </section>
     </section>
@@ -59,26 +59,25 @@
       <div class="feed-column">
         <div class="section-heading"><div><p class="eyebrow">THE READING DESK</p><h2 id="view-title">每日精选<span class="heading-slash"> / </span><span id="edition-label">等待首期</span></h2></div><span class="small-label" id="edition-status">AWAITING SIGNAL</span></div>
         <p id="page-demo-note" class="page-demo-note" hidden><span>演示档案 · 非真实论文</span><button id="exit-page-demo">查看真实内容 ↗</button></p>
-        <section id="bookmark-transfer" class="transfer-panel" aria-labelledby="transfer-title" hidden><div><p class="eyebrow">MANUAL TRANSFER / 本机书签</p><h3 id="transfer-title">带上你的阅读清单</h3><p>当前收藏只保存在本机。电脑导出 JSON，在手机导入，即可迁移书签；不会自动同步或公开。</p></div><div class="transfer-actions"><button id="export-bookmarks" class="secondary-button">导出 JSON <span aria-hidden="true">↓</span></button><label class="transfer-import secondary-button"><span>导入 JSON <span aria-hidden="true">↑</span></span><input id="import-bookmarks" type="file" accept=".json,application/json" aria-label="导入本机书签 JSON 文件"></label></div><p id="transfer-status" class="transfer-status" role="status" aria-live="polite">导出包含全部本机书签（含演示条目），文件只包含论文 ID。</p><details id="paste-import"><summary>也可粘贴 JSON 导入</summary><label for="import-json">粘贴本站导出的完整 JSON</label><textarea id="import-json" rows="6" maxlength="262144" spellcheck="false" placeholder="粘贴完整的书签 JSON 内容"></textarea><button class="secondary-button" id="import-pasted">合并导入</button></details><details id="export-preview" hidden><summary>下载未出现？查看并复制 JSON</summary><label for="export-json">导出文件内容（只读）</label><textarea id="export-json" readonly rows="7" spellcheck="false"></textarea><p>可选中文本自行复制，并保存为 .json 文件。此内容与下载文件相同。</p></details></section>
+        <section id="bookmark-transfer" class="transfer-panel" aria-labelledby="transfer-title" hidden><div><p class="eyebrow">MANUAL TRANSFER / 本机书签</p><h3 id="transfer-title">书签迁移</h3><p>导出后可在另一设备导入。</p></div><div class="transfer-actions"><button id="export-bookmarks" class="secondary-button">导出 JSON <span aria-hidden="true">↓</span></button><label class="transfer-import secondary-button"><span>导入 JSON <span aria-hidden="true">↑</span></span><input id="import-bookmarks" type="file" accept=".json,application/json" aria-label="导入本机书签 JSON 文件"></label></div><p id="transfer-status" class="transfer-status" role="status" aria-live="polite"></p><details id="paste-import"><summary>也可粘贴 JSON 导入</summary><label for="import-json">粘贴本站导出的完整 JSON</label><textarea id="import-json" rows="6" maxlength="262144" spellcheck="false" placeholder="粘贴完整的书签 JSON 内容"></textarea><button class="secondary-button" id="import-pasted">合并导入</button></details><details id="export-preview" hidden><summary>下载未出现？查看并复制 JSON</summary><label for="export-json">导出文件内容（只读）</label><textarea id="export-json" readonly rows="7" spellcheck="false"></textarea><p>复制并保存为 .json 文件。</p></details></section>
         <div id="issue-panel"></div><div class="filter-panel" id="filter-panel">
           <div class="filter-fields"><label class="search-field"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span class="sr-only">搜索论文标题、作者、出处、摘要和标签</span><input id="search" type="search" placeholder="搜索标题、作者、出处或关键词…" autocomplete="off" maxlength="200"><kbd aria-hidden="true">/</kbd></label><label class="date-field"><span class="sr-only">按日期筛选</span><select id="date-select"><option value="all">全部日期</option></select></label><label class="read-field"><span class="sr-only">按本机阅读状态筛选</span><select id="read-select"><option value="all">全部阅读状态</option><option value="unread">未读</option><option value="read">已读</option></select></label></div>
           <div class="tag-row"><span class="filter-caption">研究主题</span><div id="tags" class="tags" role="group" aria-label="按研究主题筛选"></div></div>
         </div>
-        <div class="result-bar"><p id="result-count" role="status" aria-live="polite">正在读取本地资料…</p><button id="clear-filters" class="text-button" hidden>清除筛选 ×</button></div>
+        <div class="result-bar" id="result-bar"><p id="result-count" role="status" aria-live="polite">正在读取本地资料…</p><button id="clear-filters" class="text-button" hidden>清除筛选 ×</button></div>
         <div id="content" aria-busy="true"><div class="loading-state">正在连接研究档案<span class="loading-dots">…</span></div></div>
       </div>
       <aside class="sidebar" aria-label="档案与站点信息">
-        <section class="side-panel archive-panel"><div class="panel-title"><h2>研究日历</h2><span aria-hidden="true">↙</span></div><p class="side-caption">每一天，都有迹可循。</p><div id="date-list" class="date-list"></div><button class="archive-link" data-view="archive">查看全部归档 <span aria-hidden="true">→</span></button></section>
-        <section class="side-panel signal-panel"><p class="eyebrow magenta">EDITORIAL PROTOCOL</p><h2>有依据的精选，<br>有温度的导读。</h2><ol><li><span>01</span><div><strong>原始来源</strong><p>保留论文出处，方便回到原文。</p></div></li><li><span>02</span><div><strong>中文速览</strong><p>先读核心思路，再决定深读。</p></div></li><li><span>03</span><div><strong>入选理由</strong><p>解释它与你的研究有何关联。</p></div></li></ol><div class="protocol-status"><span class="status-light"></span> 三类方向 · 按质量精选</div></section>
-        <div class="local-note"><span aria-hidden="true">◇</span><p>轻量阅读，纯前端。<br>书签和已读状态仅保存在当前浏览器，不会跨设备同步或反馈给搜集任务。</p></div>
+        <section class="side-panel archive-panel"><div class="panel-title"><h2>研究日历</h2><span aria-hidden="true">↙</span></div><div id="date-list" class="date-list"></div><button class="archive-link" data-view="archive">查看全部归档 <span aria-hidden="true">→</span></button></section>
+        <div class="local-note"><span aria-hidden="true">◇</span><p>书签与已读状态仅保存在本机，不会自动同步。</p></div>
       </aside>
     </section>
     <div id="institution-gallery"></div>
-    <footer><a class="footer-brand" href="#view=feed">ZERO FIELD<span>零域</span></a><p>让好问题，遇见好论文。</p><span>BUILT FOR CURIOSITY <span class="cyan">↗</span></span></footer>
+    <footer><a class="footer-brand" href="#view=feed">ZERO FIELD<span>零域</span></a></footer>
   </main>
   <dialog id="detail-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><span id="dialog-kicker" class="eyebrow">PAPER BRIEF</span><button id="close-dialog" class="icon-button" aria-label="关闭详情">×</button></div><div id="dialog-content"></div></dialog>
   <dialog id="share-dialog" aria-labelledby="share-title"><div class="dialog-top"><h2 id="share-title">分享论文</h2><button id="share-close" class="icon-button" aria-label="关闭分享">×</button></div><label for="share-url">公开论文链接</label><input id="share-url" type="url" readonly><p id="share-status" role="status"></p><button id="share-copy" class="secondary-button">复制链接</button></dialog>
   <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
-  <noscript><div class="noscript">本站需要 JavaScript 展示本地 JSON 资料。所有内容均随站点托管，不连接第三方接口。</div></noscript>
+  <noscript><div class="noscript">请启用 JavaScript 浏览论文。</div></noscript>
 </body>
 </html>

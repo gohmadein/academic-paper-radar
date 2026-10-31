@@ -117,7 +117,7 @@ function toggleBookmark(id) {
   let stored = storageAvailable;
   try { localStorage.setItem(BOOKMARK_KEY,JSON.stringify([...bookmarks])); storageAvailable = true; stored = true; }
   catch { storageAvailable = false; stored = false; }
-  toast(stored ? (bookmarks.has(id) ? '已加入本机书签 · 仅当前浏览器可见' : '已移除本机书签') : '浏览器存储不可用 · 书签仅在本次页面会话有效');
+  toast(stored ? (bookmarks.has(id) ? '已加入本机书签' : '已移除本机书签') : '浏览器存储不可用 · 书签仅在本次页面会话有效');
   render();
 }
 
@@ -130,14 +130,14 @@ function paperCard(p,index) {
     <p class="paper-summary">${e(p.summary)}</p>
     ${p.profiles?'':`<div class="selection-reason"><strong>入选理由</strong>${e(p.whySelected)}</div>`}
     ${digestRecommendations(p,state.category)}<div class="card-bottom"><div class="card-tags">${p.tags.map(t => `<button class="card-tag" data-tag="${e(t)}" aria-label="筛选主题 ${e(t)}">${e(t)}</button>`).join('')}</div><div class="card-actions"><button class="read-button ${reads.has(p.id)?'is-read':''}" data-read="${e(p.id)}" aria-pressed="${reads.has(p.id)}">${reads.has(p.id)?'已读':'标为已读'}</button><button class="bookmark-button ${bookmarks.has(p.id)?'saved':''}" data-bookmark="${e(p.id)}" aria-label="${bookmarks.has(p.id)?'移除':'添加'}本机书签：${e(p.title)}" aria-pressed="${bookmarks.has(p.id)}">${bookmarks.has(p.id)?'◆':'◇'}</button><button class="detail-button" data-paper="${e(p.id)}">阅读导读 <span aria-hidden="true">↗</span></button></div></div>
-    <div class="source-note">${p.demo ? '演示条目不提供真实论文来源。' : p.sources.map(s => `<a href="${e(safeUrl(s.url))}" target="_blank" rel="noopener noreferrer">${e(s.label)} ↗</a>`).join(' · ') + ' · 原始来源 / 外部网站，访问情况取决于来源站点。'}</div>
+    <div class="source-note">${p.demo ? '演示条目不提供真实论文来源。' : p.sources.map(s => `<a href="${e(safeUrl(s.url))}" target="_blank" rel="noopener noreferrer">${e(s.label)} ↗</a>`).join(' · ')}</div>
   </article>`;
 }
 
 function emptyState(kind) {
-  if (kind === 'first') return `<div class="empty-state"><div class="empty-art" aria-hidden="true"><img class="empty-brand" src="./assets/favicon.svg" width="52" height="52" alt=""></div><h3>下一束信号，等待你的研究方向。</h3><p>首期精选尚未发布。确定研究主题和筛选标准后，<br>这里将呈现每天值得读的论文与中文导读。</p><button class="primary-button" data-action="demo">探索演示版 <span aria-hidden="true">↗</span></button><div class="empty-footnote">PREVIEW ONLY / 演示数据，非真实论文</div><div class="empty-steps"><span><b>01</b> 确定方向</span><span><b>02</b> 筛选论文</span><span><b>03</b> 每日归档</span></div></div>`;
-  if (kind === 'bookmarks') return `<div class="empty-state no-results"><div class="empty-art" aria-hidden="true"><span>◇</span></div><h3>给值得再读的论文，留个位置。</h3><p>点击论文卡片上的 ◇，即可加入本机书签。${state.demo?'当前只显示演示模式的书签。':'当前只显示真实论文的书签。'}<br>书签仅保存在当前浏览器，不会跨设备同步。</p><button class="secondary-button" data-action="feed">返回每日精选 →</button></div>`;
-  return `<div class="empty-state no-results"><div class="empty-art" aria-hidden="true"><span>⌕</span></div><h3>还没有匹配的研究信号</h3><p>试试更短的关键词，或清除日期、主题筛选。</p><button class="secondary-button" data-action="clear">清除筛选 →</button></div>`;
+  if (kind === 'first') return `<div class="empty-state"><div class="empty-art" aria-hidden="true"><img class="empty-brand" src="./assets/favicon.svg" width="52" height="52" alt=""></div><h3>暂无论文</h3><p>首期尚未发布。</p><button class="primary-button" data-action="demo">探索演示版 <span aria-hidden="true">↗</span></button><div class="empty-footnote">PREVIEW ONLY / 演示数据，非真实论文</div></div>`;
+  if (kind === 'bookmarks') return `<div class="empty-state no-results"><div class="empty-art" aria-hidden="true"><span>◇</span></div><h3>暂无书签</h3><p>点击论文卡片上的 ◇ 收藏。${state.demo?'当前只显示演示模式的书签。':'当前只显示真实论文的书签。'}</p><button class="secondary-button" data-action="feed">返回每日精选 →</button></div>`;
+  return `<div class="empty-state no-results"><div class="empty-art" aria-hidden="true"><span>⌕</span></div><h3>没有匹配的论文</h3><p>调整关键词或清除筛选。</p><button class="secondary-button" data-action="clear">清除筛选 →</button></div>`;
 }
 
 function render() {
@@ -159,7 +159,7 @@ function render() {
   $('date-select').value = state.date;
   const tagValues = state.tag !== 'all' && !tags.includes(state.tag) ? [...tags,state.tag] : tags;
   $('tags').innerHTML = ['all',...tagValues].map(t=>`<button class="tag ${state.tag===t?'active':''}" data-tag="${e(t)}" aria-pressed="${state.tag===t}">${t==='all'?'全部':e(t.startsWith('topic:')?topicLabel(t):'关键词：'+t)}</button>`).join('');
-  $('date-list').innerHTML = days.length ? days.slice(0,4).map(d=>`<button class="date-item ${state.date===d.date?'active':''}" data-date="${d.date}" aria-label="查看 ${d.date}，${d.papers.length} 篇${state.demo?'演示条目':'论文'}"><span class="date-number">${d.date.slice(8)}</span><span class="date-meta">${d.date.slice(0,7).replace('-',' / ')}<small>${state.demo?'演示归档':'研究档案'}</small></span><span class="date-count">${String(d.papers.length).padStart(2,'0')} ↗</span></button>`).join('') : '<div class="archive-placeholder">NO ENTRIES YET<span>首期发布后，按日期自动归档。</span></div>';
+  $('date-list').innerHTML = days.length ? days.slice(0,4).map(d=>`<button class="date-item ${state.date===d.date?'active':''}" data-date="${d.date}" aria-label="查看 ${d.date}，${d.papers.length} 篇${state.demo?'演示条目':'论文'}"><span class="date-number">${d.date.slice(8)}</span><span class="date-meta">${d.date.slice(0,7).replace('-',' / ')}<small>${state.demo?'演示归档':'研究档案'}</small></span><span class="date-count">${String(d.papers.length).padStart(2,'0')} ↗</span></button>`).join('') : '<div class="archive-placeholder">暂无归档</div>';
   const filtered = filterPapers(papers,{...state,read:reads,bookmarks:state.view==='bookmarks'?bookmarks:null});
   $('institution-gallery').innerHTML=state.view==='feed'&&!state.demo?institutionGallery(filtered,data.institutions):'';
   const isFiltered = state.q || state.tag!=='all' || state.date!=='all' || state.category!=='all' || state.readStatus!=='all';
@@ -167,11 +167,12 @@ function render() {
   $('edition-label').textContent = state.demo ? '演示档案' : !days.length ? '等待首期' : state.date === 'all' ? '全部日期' : state.date;
   $('edition-status').textContent = state.demo ? 'DEMO / NOT REAL PAPERS' : papers.length ? 'CURATED & ARCHIVED' : 'AWAITING SIGNAL';
   const isSources=state.view==='sources';
+  $('result-bar').hidden=isSources;
   if(isSources){$('edition-label').textContent=PROFILES[state.category]?.label || '全部方向';$('edition-status').textContent='SOURCE WATCHLIST';}
   $('filter-panel').hidden = state.view==='archive'||isSources;
   $('clear-filters').hidden = !isFiltered || state.view==='archive'||isSources;
   $('result-count').textContent = state.view==='archive' ? `${days.length} 个${state.demo?'演示':'真实'}日期档案` : papers.length ? `${filtered.length} / ${papers.length} 篇${state.demo?'演示条目 · 非真实论文':'论文'}${state.view==='bookmarks'?' · 仅本机收藏':''}` : '真实论文 0 篇 · 筛选规则待设定';
-  if(isSources){$('result-count').textContent='关注名单 · 不代表每天覆盖所有来源';$('content').innerHTML=sourceDirectory(state.category,watchlists,state.sourceType);}
+  if(isSources){$('result-count').textContent='';$('content').innerHTML=sourceDirectory(state.category,watchlists,state.sourceType);}
   else if (state.view==='archive' && days.length) $('content').innerHTML = `<div class="archive-grid">${days.map(d=>`<button class="archive-card" data-date="${d.date}"><p class="eyebrow">${state.demo?'DEMO ARCHIVE':'DAILY ARCHIVE'}</p><strong>${d.date.replaceAll('-',' / ')}</strong><p>${e(d.title)}</p><span>${d.papers.filter(p=>!p.classic).length} 篇${state.demo?'演示条目':'精选'}${d.papers.some(p=>p.classic)?' + '+d.papers.filter(p=>p.classic).length+' 篇经典':''} <span aria-hidden="true">↗</span></span></button>`).join('')}</div>`;
   else if (!papers.length) $('content').innerHTML = emptyState('first');
   else if (!filtered.length) $('content').innerHTML = emptyState(state.view==='bookmarks' && !isFiltered ? 'bookmarks':'filtered');
@@ -201,7 +202,7 @@ function renderDialog() {
   }
   lastDialogPaper = p.id;
   $('dialog-kicker').textContent = `PAPER BRIEF / ${p.date}`;
-  $('dialog-content').innerHTML = `${p.demo?`<p class="dialog-warning">${DEMO_NOTICE}。本页只展示排版与交互，不代表任何研究成果。</p>`:''}<h2 id="dialog-title">${e(p.title)}</h2>${p.titleEn?`<p>${e(p.titleEn)}</p>`:''}<div class="dialog-meta">${e(p.authors.join(' · '))}<br>${e(p.venue)} / ${p.year} / 收录于 ${p.date}</div><h3>中文导读</h3><p>${e(p.summary)}</p>${bilingualDetail(p)}<h3>为什么入选</h3><p>${e(p.whySelected)}</p><h3>研究主题</h3><div class="card-tags">${p.tags.map(t=>`<span class="card-tag">${e(t)}</span>`).join('')}</div><h3>原始来源</h3>${p.sources.length?`<div class="source-links">${p.sources.map(s=>`<a href="${e(safeUrl(s.url))}" target="_blank" rel="noopener noreferrer">${e(s.label)} ↗</a>`).join('')}</div><p class="source-note">链接将打开外部网站；可用性取决于原始来源。导读不能替代阅读全文。</p>`:'<p>演示条目不提供来源链接，避免与真实论文混淆。</p>'}<button class="secondary-button dialog-bookmark" data-bookmark="${e(p.id)}" aria-pressed="${bookmarks.has(p.id)}">${bookmarks.has(p.id)?'◆ 已加入本机书签':'◇ 加入本机书签'}</button>`;
+  $('dialog-content').innerHTML = `${p.demo?`<p class="dialog-warning">${DEMO_NOTICE}。</p>`:''}<h2 id="dialog-title">${e(p.title)}</h2>${p.titleEn?`<p>${e(p.titleEn)}</p>`:''}<div class="dialog-meta">${e(p.authors.join(' · '))}<br>${e(p.venue)} / ${p.year} / 收录于 ${p.date}</div><h3>中文导读</h3><p>${e(p.summary)}</p>${bilingualDetail(p)}<h3>为什么入选</h3><p>${e(p.whySelected)}</p><h3>研究主题</h3><div class="card-tags">${p.tags.map(t=>`<span class="card-tag">${e(t)}</span>`).join('')}</div><h3>原始来源</h3>${p.sources.length?`<div class="source-links">${p.sources.map(s=>`<a href="${e(safeUrl(s.url))}" target="_blank" rel="noopener noreferrer">${e(s.label)} ↗</a>`).join('')}</div>`:'<p>演示条目无真实论文来源。</p>'}<button class="secondary-button dialog-bookmark" data-bookmark="${e(p.id)}" aria-pressed="${bookmarks.has(p.id)}">${bookmarks.has(p.id)?'◆ 已加入本机书签':'◇ 加入本机书签'}</button>`;
   $('dialog-content').insertAdjacentHTML('beforeend',digestDetails(p));
   if (!dialog.open) dialog.showModal();
 }
@@ -238,12 +239,12 @@ async function requestShare(id){
   const url=publicPaperURL(location.href,paper);
   const result=await sharePaper({url,title:paper.title},{share:navigator.share?.bind(navigator),copy:navigator.clipboard?.writeText?.bind(navigator.clipboard)});
   if(result==='copied')toast('论文链接已复制');
-  else if(result==='manual'){$('share-url').value=url;$('share-status').textContent='请选择并复制下面的公开论文链接；不会包含本机书签或已读状态。';$('share-dialog').showModal();$('share-url').focus();$('share-url').select();}
+  else if(result==='manual'){$('share-url').value=url;$('share-status').textContent='复制论文链接。';$('share-dialog').showModal();$('share-url').focus();$('share-url').select();}
 }
 $('share-close').addEventListener('click',()=>$('share-dialog').close());
 $('share-copy').addEventListener('click',async()=>{
   const result=await sharePaper({url:$('share-url').value,title:document.title},{copy:navigator.clipboard?.writeText?.bind(navigator.clipboard)});
-  $('share-status').textContent=result==='copied'?'链接已复制。':'自动复制不可用，请选中文本手动复制。';
+  $('share-status').textContent=result==='copied'?'链接已复制。':'请手动复制链接。';
   if(result!=='copied'){$('share-url').focus();$('share-url').select();}
 });
 document.addEventListener('error',event=>{if(event.target?.matches?.('img[data-media-image]'))handleMediaError(event.target);},true);
@@ -261,7 +262,7 @@ $('export-bookmarks').addEventListener('click',()=>{
   const anchor=document.createElement('a'); anchor.href=url; anchor.download=`paper-signal-bookmarks-${payload.exportedAt.slice(0,10)}.json`; document.body.append(anchor); anchor.click(); anchor.remove();
   setTimeout(()=>URL.revokeObjectURL(url),30000);
   $('transfer-status').classList.remove('error');
-  $('transfer-status').textContent=`已生成 ${bookmarks.size} 条本机书签的 JSON 文件。请保存在“文件”中，在另一台设备导入；不会自动同步或上传。`;
+  $('transfer-status').textContent=`已导出 ${bookmarks.size} 条书签。`;
 });
 function applyLocalImport(text) {
     const incoming=parseBookmarkImport(text);
@@ -272,7 +273,7 @@ function applyLocalImport(text) {
     const knownIds=new Set(data ? [...data.real.papers,...data.demo.papers].map(p=>p.id) : []);
     const unknown=[...incoming].filter(id=>!knownIds.has(id)).length;
     $('transfer-status').classList.remove('error');
-    $('transfer-status').textContent=`导入成功：新增 ${result.added} 条，已有 ${result.duplicates} 条，总计 ${bookmarks.size} 条。${unknown?`${unknown} 条 ID 暂未在本站收录，已保留。`:''}原有书签已保留；没有上传或公开。`;
+    $('transfer-status').textContent=`导入成功：新增 ${result.added} 条，已有 ${result.duplicates} 条，总计 ${bookmarks.size} 条。${unknown?`${unknown} 条 ID 暂未在本站收录，已保留。`:''}`;
     if(data)render();
 }
 function reportImportError(error) {
@@ -299,7 +300,7 @@ $('about-button').addEventListener('click',()=>{
   if(state.paper) go({paper:''});
   dialogTrigger = $('about-button'); lastDialogPaper = '';
   $('dialog-kicker').textContent = 'ABOUT / ZERO FIELD';
-  $('dialog-content').innerHTML = '<h2 id="dialog-title">让好问题，遇见好论文。</h2><p>零域 / ZERO FIELD 是一个纯前端学术阅读站。论文链接、中文导读和入选理由以日期 JSON 文件保存在同一仓库，发布后即可浏览和检索。</p><ol class="about-steps"><li>每日按迅、李、驴三个方向筛选。正式记录保留核验来源、阅读层级与局限；演示模式条目不对应真实论文。</li><li>网站从仓库读取已发布资料；搜集和筛选由独立流程执行。每期会记录实际覆盖范围与限制，不保证已穷尽全部来源。</li><li>书签和已读状态保存在当前浏览器，不会自动传给搜集流程。没有登录、云端数据库、追踪器或跨设备同步；清除浏览器数据后本机记录会消失。</li><li>页面资源与资料随站点一起托管，不依赖第三方字体或论文 API。原文链接指向外部站点，其访问情况可能不同。</li></ol>';
+  $('dialog-content').innerHTML = '<h2 id="dialog-title">零域 / ZERO FIELD</h2><p>迅、李、驴的每日论文精选。</p><p>书签与已读状态仅保存在本机，不会自动同步；清除浏览器数据会删除记录。</p>';
   $('detail-dialog').showModal();
 });
 function syncRoute(){if(location.hash==='#main')return;state=readRoute(location.hash);updateViewChrome();if(data)render();}

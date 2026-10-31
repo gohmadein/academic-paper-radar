@@ -444,3 +444,8 @@ main{width:100%;min-width:0;max-width:1360px;padding:0 36px}
 .source-profile-card.profile-li .profile-identity{color:#b42318}
 .source-profile-card.profile-lv .profile-identity{color:#111827}
 @media(max-width:800px){.profile-symbol .profile-identity{width:24px;height:24px}}
+
+/* Removed explanatory blocks should not reserve blank space. */
+.transfer-status:empty{display:none}.hud-counters{margin-top:18px}
+.monitor-footer>span:only-child{max-width:none;text-align:left;font:inherit}
+@media(max-width:1000px){.sidebar{grid-template-columns:1fr}}
