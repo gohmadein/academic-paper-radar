@@ -239,8 +239,8 @@ $('detail-dialog').addEventListener('click',event=>{if(event.target===$('detail-
 $('about-button').addEventListener('click',()=>{
   if(state.paper) go({paper:''});
   dialogTrigger = $('about-button'); lastDialogPaper = '';
-  $('dialog-kicker').textContent = 'ABOUT / PAPER SIGNAL';
-  $('dialog-content').innerHTML = '<h2 id="dialog-title">让好问题，遇见好论文。</h2><p>研究信号是一个纯前端学术阅读站。论文链接、中文导读和入选理由以日期 JSON 文件保存在同一仓库，发布后即可浏览和检索。</p><ol class="about-steps"><li>筛选规则尚未设定，当前真实收录为零。演示模式只用于预览界面，条目不对应真实论文。</li><li>网站不会自动搜索论文。未来的搜集与筛选任务需另行设定，并把审核后的资料提交到仓库。</li><li>书签保存在当前浏览器。没有登录、云端数据库、追踪器或跨设备同步；清除浏览器数据后书签会消失。</li><li>页面资源与资料随站点一起托管，不依赖第三方字体或论文 API。原文链接指向外部站点，其访问情况可能不同。</li></ol>';
+  $('dialog-kicker').textContent = 'ABOUT / ZERO FIELD';
+  $('dialog-content').innerHTML = '<h2 id="dialog-title">让好问题，遇见好论文。</h2><p>零域 / ZERO FIELD 是一个纯前端学术阅读站。论文链接、中文导读和入选理由以日期 JSON 文件保存在同一仓库，发布后即可浏览和检索。</p><ol class="about-steps"><li>筛选规则尚未设定，当前真实收录为零。演示模式只用于预览界面，条目不对应真实论文。</li><li>网站不会自动搜索论文。未来的搜集与筛选任务需另行设定，并把审核后的资料提交到仓库。</li><li>书签保存在当前浏览器。没有登录、云端数据库、追踪器或跨设备同步；清除浏览器数据后书签会消失。</li><li>页面资源与资料随站点一起托管，不依赖第三方字体或论文 API。原文链接指向外部站点，其访问情况可能不同。</li></ol>';
   $('detail-dialog').showModal();
 });
 function syncRoute(){if(location.hash==='#main')return;state=readRoute(location.hash);updateViewChrome();if(data)render();}

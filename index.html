@@ -4,10 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0a0a0f">
-  <meta name="description" content="研究信号 PAPER SIGNAL：按日期归档的学术论文精选、中文导读与入选理由。纯前端阅读站。">
+  <meta name="description" content="零域 ZERO FIELD · 每日论文精选：按日期归档的学术论文、中文导读与入选理由。纯前端阅读站。">
+  <meta property="og:title" content="零域 / ZERO FIELD · 每日论文精选">
+  <meta property="og:description" content="按日期归档的学术论文精选、中文导读与入选理由。">
+  <meta property="og:url" content="https://gohmadein.github.io/academic-paper-radar/">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
   <meta name="referrer" content="no-referrer">
-  <title>研究信号 · PAPER SIGNAL</title>
+  <title>零域 / ZERO FIELD · 每日论文精选</title>
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./hud.css">
@@ -19,7 +22,7 @@
   <div class="scanlines" aria-hidden="true"></div>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="#view=feed" aria-label="研究信号首页"><img class="brand-icon" src="./assets/favicon.svg" width="40" height="40" alt=""><span>研究信号<small>PAPER SIGNAL<span class="brand-dot">_</span></small></span></a>
+      <a class="brand" href="#view=feed" aria-label="零域 / ZERO FIELD 首页"><img class="brand-icon" src="./assets/favicon.svg" width="40" height="40" alt=""><span>零域<small>ZERO FIELD<span class="brand-dot">_</span></small><small class="brand-subtitle">每日论文精选</small></span></a>
       <nav aria-label="主导航">
         <button class="nav-link active" data-view="feed">每日精选</button>
         <button class="nav-link" data-view="archive">日期归档</button>
@@ -38,7 +41,7 @@
         <div class="hero-metrics"><span><strong id="real-count">00</strong> 篇真实收录</span><span><strong id="real-days">00</strong> 天研究档案</span><span class="curation-note">少一点信息过载，多一点研究灵感。</span></div>
       </div>
       <section class="monitor-dashboard" aria-label="研究档案监控仪表盘">
-        <div class="monitor-heading"><span class="monitor-id">SYS / PAPER_SIGNAL</span><span class="monitor-build">READ ONLY · 01</span></div>
+        <div class="monitor-heading"><span class="monitor-id">SYS / ZERO_FIELD</span><span class="monitor-build">READ ONLY · 01</span></div>
         <div class="hud-shell"><div class="hud-card monitor-frame"><div class="hud-surface monitor-surface">
           <div class="monitor-title-row"><h2><span class="glitch-title" data-text="SIGNAL_MONITOR" aria-hidden="true">SIGNAL_MONITOR</span><span class="sr-only">研究档案监控</span></h2><span class="monitor-indicator" id="hud-mode">真实档案</span></div>
           <p class="monitor-subtitle">静态档案状态 / 无自动采集任务</p>
@@ -70,7 +73,7 @@
         <div class="local-note"><span aria-hidden="true">◇</span><p>轻量阅读，纯前端。<br>书签仅保存在当前浏览器，不会跨设备同步。</p></div>
       </aside>
     </section>
-    <footer><a class="footer-brand" href="#view=feed">PAPER SIGNAL<span>研究信号</span></a><p>让好问题，遇见好论文。</p><span>BUILT FOR CURIOSITY <span class="cyan">↗</span></span></footer>
+    <footer><a class="footer-brand" href="#view=feed">ZERO FIELD<span>零域</span></a><p>让好问题，遇见好论文。</p><span>BUILT FOR CURIOSITY <span class="cyan">↗</span></span></footer>
   </main>
   <dialog id="detail-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><span id="dialog-kicker" class="eyebrow">PAPER BRIEF</span><button id="close-dialog" class="icon-button" aria-label="关闭详情">×</button></div><div id="dialog-content"></div></dialog>
   <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
