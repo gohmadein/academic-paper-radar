@@ -56,3 +56,11 @@ ASU等有外部许可限制的标志，以及许可未核实且要求保守展�
 图片以带内容版本的同源URL加载，主图object-fit:contain、声明尺寸并保留固定显示框。加载失败回退到同尺寸提示，避免版式跳动。卡片分享仅包含公开论文定位，不含本机收藏或已读列表；优先系统分享，再复制链接，权限不可用时提供可手动复制的文本。没有点赞、浏览量或认证计数。
 
 外部每日调度沿用原计划；搜集流程需为新记录提供英文翻译、真实素材及证据，缺失情况如实说明。此工程不创建第二个调度或后端。
+
+## 大学与机构标识
+
+大学展示官方提供的完整校徽、盾徽或紧凑身份符号（如官方Block I）；不要求只能使用受限仪式印章，也不把字母身份符号称为传统校徽。不使用长字标、自造首字母或从组合标志裁出的图形代替。研究机构和公司使用本机构的官方标识，不用上级组织或相近机构标识替代。标识约32px，object-fit:contain，名称紧邻展示；不可拉伸、重绘或任意改色。缺少可核验且可展示的校徽时只显示机构名称，并保留缺失或使用限制的说明；不显示仿官方首字母徽章。作者头像规则不变。
+
+每项机构记录必填 institutionType（university/research-institute/company/chair）及 markType（emblem/compact-symbol/organization-mark/none）。大学可用emblem或compact-symbol，其他机构用organization-mark；none对应logo=null。缺失标识只保留机构名称。
+
+本期紧凑大学标识：Illinois官方Block I；清华章程PDF第15页嵌入JPEG校徽（554×385，原样提取，未重绘/裁切）；Harvard官方Veritas盾徽；Georgia Tech官方GT、Northeastern官方N和UCSD官方主页三叉戟。ICO仅转为PNG保留完整图案。后四者的紧凑身份符号不称为仪式印章。Penn独立盾徽、UMD/ASU及Laval受限展示保持文字名称。精确源地址、类型、权利说明和字节哈希随每篇visuals.institutions保存。

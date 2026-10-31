@@ -144,8 +144,8 @@
               "rights": "Official institutional mark; trademark/copyright retained by its owner. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve aspect ratio, complete mark and clear space.",
               "displayPolicy": "official-brand",
               "background": "light",
-              "altZh": "University of Illinois Urbana-Champaign 官方标志",
-              "altEn": "Official mark of University of Illinois Urbana-Champaign"
+              "altZh": "Illinois 官方 Block I 身份符号",
+              "altEn": "Official Illinois Block I identity symbol"
             },
             "authorNames": [
               "Xiao Tan",
@@ -160,25 +160,27 @@
                 "checkedAt": "2026-10-31"
               }
             ],
-            "note": "论文题名脚注1列出全部四位作者在UIUC。"
+            "note": "论文题名脚注1列出全部四位作者在UIUC。 使用官方Block I紧凑身份符号，不称为仪式印章或传统校徽。",
+            "institutionType": "university",
+            "markType": "compact-symbol"
           },
           {
             "name": "Tsinghua University",
             "logo": {
               "kind": "institution-logo",
-              "path": "assets/institutions/tsinghua.png",
-              "sha256": "697e4f54fe35dd35e2090b6b1c2585f04bee244a7adff83367057774beb685ae",
-              "width": 159,
-              "height": 50,
-              "sourceUrl": "https://www.tsinghua.edu.cn/en/image/logo159.png",
-              "evidenceUrl": "https://www.tsinghua.edu.cn/en/",
+              "path": "assets/institutions/tsinghua-emblem.jpg",
+              "sha256": "edb1c56f1d4399ef32430f418cb179169e04955e75d95eb57c001e5b2f069ade",
+              "width": 554,
+              "height": 385,
+              "sourceUrl": "https://www.tsinghua.edu.cn/__local/C/B6/1C/5682B1124834BFE4B7BB43744CF_C7C409E3_C2FAA.pdf",
+              "evidenceUrl": "https://www.env.tsinghua.edu.cn/qinghuadaxueerjidanweibiaozhiguifanshouce-shixing.pdf",
               "verifiedAt": "2026-10-31",
-              "credit": "Tsinghua University · official mark",
-              "rights": "Official institutional mark; trademark/copyright retained by its owner. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve aspect ratio, complete mark and clear space.",
+              "credit": "Tsinghua University official emblem",
+              "rights": "官方校徽；无开放复用许可声明，保持原几何、颜色及安全空间。来源为官方章程PDF及二级单位标志规范。",
               "displayPolicy": "official-brand",
-              "background": "dark",
-              "altZh": "Tsinghua University 官方标志",
-              "altEn": "Official mark of Tsinghua University"
+              "background": "light",
+              "altZh": "清华大学官方紫色校徽",
+              "altEn": "Official purple Tsinghua University emblem"
             },
             "authorNames": [
               "Zhexi Wang"
@@ -190,7 +192,9 @@
                 "checkedAt": "2026-10-31"
               }
             ],
-            "note": "论文题名脚注2另列Zhexi Wang在清华。白色官方字标在深色小底板展示，不重新着色。"
+            "note": "论文题名脚注2另列Zhexi Wang在清华。 官方章程PDF第15页首个嵌入JPEG，原样提取554×385；未重绘、裁切或改色，保留图像中的安全空间。",
+            "institutionType": "university",
+            "markType": "emblem"
           }
         ],
         "authors": []
@@ -314,7 +318,9 @@
                 "checkedAt": "2026-10-31"
               }
             ],
-            "note": "论文署名机构已核验。UMD外部标志使用许可未核实，按品牌限制使用文字标识，不下载或发布其标志。"
+            "note": "论文署名机构已核验。UMD外部标志使用许可未核实，按品牌限制使用文字标识，不下载或发布其标志。 大学标识仅采用官方校徽或紧凑身份符号；本轮未取得适合外部网站展示的独立徽章许可，保留文字名称。",
+            "institutionType": "university",
+            "markType": "none"
           }
         ],
         "authors": []
@@ -425,19 +431,19 @@
             "name": "Georgia Institute of Technology",
             "logo": {
               "kind": "institution-logo",
-              "path": "assets/institutions/gatech.png",
-              "sha256": "83b1c80b03c1777708ff0047496bb2f687edac4e310422d78ab436b9a1137f7b",
-              "width": 348,
-              "height": 60,
-              "sourceUrl": "https://www.gatech.edu/themes/custom/gatech/images/gatech-color_logo.png",
-              "evidenceUrl": "https://www.gatech.edu/",
+              "path": "assets/institutions/gatech-symbol.png",
+              "sha256": "33c89bd7e3478f65c2a8f818274c18d0075090f3a10ea733cf9e3c371f626edc",
+              "width": 48,
+              "height": 48,
+              "sourceUrl": "https://www.gatech.edu/themes/custom/gatech/favicon.ico",
+              "evidenceUrl": "https://brand.gatech.edu/our-look/logos",
               "verifiedAt": "2026-10-31",
-              "credit": "Georgia Institute of Technology · official mark",
-              "rights": "Official institutional mark; trademark/copyright retained by its owner. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve aspect ratio, complete mark and clear space.",
+              "credit": "Georgia Institute of Technology official compact identity symbol",
+              "rights": "官方首页身份符号，商标归原权利人；无开放许可声明。不是受限大学印章，不表示背书。",
               "displayPolicy": "official-brand",
               "background": "light",
-              "altZh": "Georgia Institute of Technology 官方标志",
-              "altEn": "Official mark of Georgia Institute of Technology"
+              "altZh": "Georgia Tech 官方交织 GT 身份符号",
+              "altEn": "Official Georgia Tech interlocking GT identity symbol"
             },
             "authorNames": [
               "Anutam Srinivasan",
@@ -451,7 +457,9 @@
                 "checkedAt": "2026-10-31"
               }
             ],
-            "note": "作者栏列出Srinivasan与Panse在Georgia Tech ECE，Chou在其Cybersecurity & Privacy和Aerospace Engineering。"
+            "note": "作者栏列出Srinivasan与Panse在Georgia Tech ECE，Chou在其Cybersecurity & Privacy和Aerospace Engineering。 使用官网favicon中的完整GT紧凑身份符号，ICO原图转为PNG，未裁切或重绘；不是仪式印章。",
+            "institutionType": "university",
+            "markType": "compact-symbol"
           }
         ],
         "authors": []
@@ -562,19 +570,19 @@
             "name": "Harvard University",
             "logo": {
               "kind": "institution-logo",
-              "path": "assets/institutions/harvard.svg",
-              "sha256": "35cf9b91322b7a04c9ab3d17f02958e9d5acebf89fcf89feaf7418b56d32e104",
-              "width": 413,
-              "height": 269,
-              "sourceUrl": "https://www.harvard.edu/wp-content/themes/core/assets/img/theme/branding-assets/footer-logo.svg",
+              "path": "assets/institutions/harvard-shield.png",
+              "sha256": "2cb61f339af6d378bccaba83fe1636151c5d7e421a720f7781305f9171a4eff8",
+              "width": 192,
+              "height": 192,
+              "sourceUrl": "https://www.harvard.edu/wp-content/uploads/2020/10/cropped-logo-branding-compressed.png?w=192",
               "evidenceUrl": "https://www.harvard.edu/",
               "verifiedAt": "2026-10-31",
-              "credit": "Harvard University · official mark",
-              "rights": "Official institutional mark; trademark/copyright retained by its owner. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve aspect ratio, complete mark and clear space.",
+              "credit": "Harvard University official emblem",
+              "rights": "Harvard商标归原权利人，未核实开放复用许可；仅作论文署名身份说明，不表示背书。Gazette内容转载规则另有标志许可要求。",
               "displayPolicy": "official-brand",
-              "background": "dark",
-              "altZh": "Harvard University 官方标志",
-              "altEn": "Official mark of Harvard University"
+              "background": "light",
+              "altZh": "Harvard University 官方 Veritas 盾徽",
+              "altEn": "Official Harvard University Veritas shield"
             },
             "authorNames": [
               "Áron Vékássy",
@@ -588,7 +596,9 @@
                 "checkedAt": "2026-10-31"
               }
             ],
-            "note": "作者栏明确列出Vékássy、Izhar与Gil在Harvard SEAS；对应作者Kaminsky留有Harvard邮箱，但不据此另推断雇佣关系。"
+            "note": "作者栏明确列出Vékássy、Izhar与Gil在Harvard SEAS；对应作者Kaminsky留有Harvard邮箱，但不据此另推断雇佣关系。 官方主页完整Veritas盾徽，与机构名称并列；未裁切或改色。",
+            "institutionType": "university",
+            "markType": "emblem"
           },
           {
             "name": "Arizona State University",
@@ -603,7 +613,9 @@
                 "checkedAt": "2026-10-31"
               }
             ],
-            "note": "作者栏明确列出Angelia Nedić在ASU电气、计算机与能源工程学院。官方政策要求外部Logo使用先获许可，因此仅显示文字标识。"
+            "note": "作者栏明确列出Angelia Nedić在ASU电气、计算机与能源工程学院。官方政策要求外部Logo使用先获许可，因此仅显示文字标识。 大学标识仅采用官方校徽或紧凑身份符号；本轮未取得适合外部网站展示的独立徽章许可，保留文字名称。",
+            "institutionType": "university",
+            "markType": "none"
           }
         ],
         "authors": []
@@ -741,7 +753,9 @@
                 "checkedAt": "2026-10-31"
               }
             ],
-            "note": "论文作者栏列出Amazon FAR。未发现专属FAR官方标志，不用Amazon Science图标替代；Malik的本篇署名未列Berkeley，不据现雇主猜测。"
+            "note": "论文作者栏列出Amazon FAR。未发现专属FAR官方标志，不用Amazon Science图标替代；Malik的本篇署名未列Berkeley，不据现雇主猜测。",
+            "institutionType": "company",
+            "markType": "none"
           },
           {
             "name": "University of Maryland, College Park",
@@ -758,7 +772,9 @@
                 "checkedAt": "2026-10-31"
               }
             ],
-            "note": "论文署名机构已核验。UMD外部标志使用许可未核实，按品牌限制使用文字标识，不下载或发布其标志。"
+            "note": "论文署名机构已核验。UMD外部标志使用许可未核实，按品牌限制使用文字标识，不下载或发布其标志。 大学标识仅采用官方校徽或紧凑身份符号；本轮未取得适合外部网站展示的独立徽章许可，保留文字名称。",
+            "institutionType": "university",
+            "markType": "none"
           }
         ],
         "authors": []
@@ -865,22 +881,7 @@
         "institutions": [
           {
             "name": "Université Laval",
-            "logo": {
-              "kind": "institution-logo",
-              "path": "assets/institutions/laval.svg",
-              "sha256": "d29b13372c6194d10377b5e6a01316717a9605c7db3b10d80253052dfb046949",
-              "width": 315,
-              "height": 130,
-              "sourceUrl": "https://www.ulaval.ca/",
-              "evidenceUrl": "https://www.ulaval.ca/",
-              "verifiedAt": "2026-10-31",
-              "credit": "Université Laval · official mark",
-              "rights": "Official institutional mark; trademark/copyright retained by its owner. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve aspect ratio, complete mark and clear space. Exact inline SVG extracted from official homepage; standalone XML namespace added only when absent.",
-              "displayPolicy": "official-brand",
-              "background": "light",
-              "altZh": "Université Laval 官方标志",
-              "altEn": "Official mark of Université Laval"
-            },
+            "logo": null,
             "authorNames": [
               "Baptiste Bonin",
               "Caro Strickland",
@@ -893,7 +894,9 @@
                 "checkedAt": "2026-10-31"
               }
             ],
-            "note": "论文作者栏列出的署名机构；标志仅作身份说明，不代表背书。"
+            "note": "论文作者栏列出的署名机构；标志仅作身份说明，不代表背书。 大学标识仅采用官方校徽或紧凑身份符号；本轮未取得适合外部网站展示的独立徽章许可，保留文字名称。 官方明确不允许脱离字标单独使用盾徽。",
+            "institutionType": "university",
+            "markType": "none"
           },
           {
             "name": "Mila – Quebec AI Institute",
@@ -925,7 +928,9 @@
                 "checkedAt": "2026-10-31"
               }
             ],
-            "note": "论文作者栏列出的署名机构；标志仅作身份说明，不代表背书。"
+            "note": "论文作者栏列出的署名机构；标志仅作身份说明，不代表背书。",
+            "institutionType": "research-institute",
+            "markType": "organization-mark"
           },
           {
             "name": "CIFAR AI Chair",
@@ -955,7 +960,9 @@
                 "checkedAt": "2026-10-31"
               }
             ],
-            "note": "Audrey Durand另外列出CIFAR AI Chair；这是讲席身份，不推断为雇主。"
+            "note": "Audrey Durand另外列出CIFAR AI Chair；这是讲席身份，不推断为雇主。",
+            "institutionType": "chair",
+            "markType": "organization-mark"
           }
         ],
         "authors": []
@@ -1066,19 +1073,19 @@
             "name": "Georgia Institute of Technology",
             "logo": {
               "kind": "institution-logo",
-              "path": "assets/institutions/gatech.png",
-              "sha256": "83b1c80b03c1777708ff0047496bb2f687edac4e310422d78ab436b9a1137f7b",
-              "width": 348,
-              "height": 60,
-              "sourceUrl": "https://www.gatech.edu/themes/custom/gatech/images/gatech-color_logo.png",
-              "evidenceUrl": "https://www.gatech.edu/",
+              "path": "assets/institutions/gatech-symbol.png",
+              "sha256": "33c89bd7e3478f65c2a8f818274c18d0075090f3a10ea733cf9e3c371f626edc",
+              "width": 48,
+              "height": 48,
+              "sourceUrl": "https://www.gatech.edu/themes/custom/gatech/favicon.ico",
+              "evidenceUrl": "https://brand.gatech.edu/our-look/logos",
               "verifiedAt": "2026-10-31",
-              "credit": "Georgia Institute of Technology · official mark",
-              "rights": "Official institutional mark; trademark/copyright retained by its owner. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve aspect ratio, complete mark and clear space.",
+              "credit": "Georgia Institute of Technology official compact identity symbol",
+              "rights": "官方首页身份符号，商标归原权利人；无开放许可声明。不是受限大学印章，不表示背书。",
               "displayPolicy": "official-brand",
               "background": "light",
-              "altZh": "Georgia Institute of Technology 官方标志",
-              "altEn": "Official mark of Georgia Institute of Technology"
+              "altZh": "Georgia Tech 官方交织 GT 身份符号",
+              "altEn": "Official Georgia Tech interlocking GT identity symbol"
             },
             "authorNames": [
               "Harsh Muriki",
@@ -1093,7 +1100,9 @@
                 "checkedAt": "2026-10-31"
               }
             ],
-            "note": "论文作者栏明确列出Georgia Institute of Technology及gatech.edu通信地址。"
+            "note": "作者栏列出Srinivasan与Panse在Georgia Tech ECE，Chou在其Cybersecurity & Privacy和Aerospace Engineering。 使用官网favicon中的完整GT紧凑身份符号，ICO原图转为PNG，未裁切或重绘；不是仪式印章。",
+            "institutionType": "university",
+            "markType": "compact-symbol"
           }
         ],
         "authors": []
@@ -1221,19 +1230,19 @@
             "name": "Northeastern University",
             "logo": {
               "kind": "institution-logo",
-              "path": "assets/institutions/northeastern.svg",
-              "sha256": "f099bc86216ca1c4c540a73841a0f8cd7ea252ba983aba3052f995ab3ec744bd",
-              "width": 486,
-              "height": 180,
-              "sourceUrl": "https://www.northeastern.edu/",
+              "path": "assets/institutions/northeastern-symbol.png",
+              "sha256": "296b176061c82b017f8718b857d8d90dd0d841e35a287761e8eac5671c39395c",
+              "width": 32,
+              "height": 32,
+              "sourceUrl": "https://brand.northeastern.edu/global/assets/favicon/favicon-32x32.png?v=2",
               "evidenceUrl": "https://www.northeastern.edu/",
               "verifiedAt": "2026-10-31",
-              "credit": "Northeastern University · official mark",
-              "rights": "Official institutional mark; trademark/copyright retained by its owner. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve aspect ratio, complete mark and clear space. Exact inline SVG extracted from official homepage; standalone XML namespace added only when absent.",
+              "credit": "Northeastern University official compact identity symbol",
+              "rights": "官方主页紧凑N符号，不是大学印章；保持完整及原色，不表示背书。印章政策另有限制。",
               "displayPolicy": "official-brand",
-              "background": "dark",
-              "altZh": "Northeastern University 官方标志",
-              "altEn": "Official mark of Northeastern University"
+              "background": "light",
+              "altZh": "Northeastern University 官方红色 N 身份符号",
+              "altEn": "Official Northeastern University red N identity symbol"
             },
             "authorNames": [
               "Neha Makhija",
@@ -1246,7 +1255,9 @@
                 "checkedAt": "2026-10-31"
               }
             ],
-            "note": "原始正式论文第一页作者栏列出两位作者在Northeastern University。官方白色字标保持原色，在深色小底板展示。"
+            "note": "原始正式论文第一页作者栏列出两位作者在Northeastern University。 使用官网声明的32px红色N紧凑身份符号，不使用禁止外部组织使用的仪式印章。",
+            "institutionType": "university",
+            "markType": "compact-symbol"
           }
         ],
         "authors": []
@@ -1354,22 +1365,7 @@
         "institutions": [
           {
             "name": "University of Pennsylvania",
-            "logo": {
-              "kind": "institution-logo",
-              "path": "assets/institutions/penn.svg",
-              "sha256": "5e308eb85b79061a9ab8a8aff977f6aa80131eb6ab95a01469444aea0f9cd9d6",
-              "width": 563,
-              "height": 184,
-              "sourceUrl": "https://www.upenn.edu/themes/custom/penn_starter/assets/img/UPenn-logo.svg",
-              "evidenceUrl": "https://www.upenn.edu/",
-              "verifiedAt": "2026-10-31",
-              "credit": "University of Pennsylvania · official mark",
-              "rights": "Official institutional mark; trademark/copyright retained by its owner. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve aspect ratio, complete mark and clear space.",
-              "displayPolicy": "official-brand",
-              "background": "dark",
-              "altZh": "University of Pennsylvania 官方标志",
-              "altEn": "Official mark of University of Pennsylvania"
-            },
+            "logo": null,
             "authorNames": [
               "Jesse Comer",
               "Val Tannen"
@@ -1381,7 +1377,9 @@
                 "checkedAt": "2026-10-31"
               }
             ],
-            "note": "原始论文第一页作者栏列出University of Pennsylvania。白色官方字标保持完整与比例，在深色小底板展示。"
+            "note": "原始论文第一页作者栏列出University of Pennsylvania。 大学标识仅采用官方校徽或紧凑身份符号；本轮未取得适合外部网站展示的独立徽章许可，保留文字名称。 官方独立及简化盾徽用途或许可尚不满足，未发布相应图片。",
+            "institutionType": "university",
+            "markType": "none"
           }
         ],
         "authors": []
@@ -1514,22 +1512,7 @@
         "institutions": [
           {
             "name": "University of Pennsylvania",
-            "logo": {
-              "kind": "institution-logo",
-              "path": "assets/institutions/penn.svg",
-              "sha256": "5e308eb85b79061a9ab8a8aff977f6aa80131eb6ab95a01469444aea0f9cd9d6",
-              "width": 563,
-              "height": 184,
-              "sourceUrl": "https://www.upenn.edu/themes/custom/penn_starter/assets/img/UPenn-logo.svg",
-              "evidenceUrl": "https://www.upenn.edu/",
-              "verifiedAt": "2026-10-31",
-              "credit": "University of Pennsylvania · official mark",
-              "rights": "Official institutional mark; trademark/copyright retained by its owner. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve aspect ratio, complete mark and clear space.",
-              "displayPolicy": "official-brand",
-              "background": "dark",
-              "altZh": "University of Pennsylvania 官方标志",
-              "altEn": "Official mark of University of Pennsylvania"
-            },
+            "logo": null,
             "authorNames": [
               "Yuchen Zhou",
               "Jiayuan Mao"
@@ -1541,25 +1524,27 @@
                 "checkedAt": "2026-10-31"
               }
             ],
-            "note": "论文作者栏列出的署名机构；标志仅作身份说明，不代表背书。"
+            "note": "原始论文第一页作者栏列出University of Pennsylvania。 大学标识仅采用官方校徽或紧凑身份符号；本轮未取得适合外部网站展示的独立徽章许可，保留文字名称。 官方独立及简化盾徽用途或许可尚不满足，未发布相应图片。",
+            "institutionType": "university",
+            "markType": "none"
           },
           {
             "name": "Tsinghua University",
             "logo": {
               "kind": "institution-logo",
-              "path": "assets/institutions/tsinghua.png",
-              "sha256": "697e4f54fe35dd35e2090b6b1c2585f04bee244a7adff83367057774beb685ae",
-              "width": 159,
-              "height": 50,
-              "sourceUrl": "https://www.tsinghua.edu.cn/en/image/logo159.png",
-              "evidenceUrl": "https://www.tsinghua.edu.cn/en/",
+              "path": "assets/institutions/tsinghua-emblem.jpg",
+              "sha256": "edb1c56f1d4399ef32430f418cb179169e04955e75d95eb57c001e5b2f069ade",
+              "width": 554,
+              "height": 385,
+              "sourceUrl": "https://www.tsinghua.edu.cn/__local/C/B6/1C/5682B1124834BFE4B7BB43744CF_C7C409E3_C2FAA.pdf",
+              "evidenceUrl": "https://www.env.tsinghua.edu.cn/qinghuadaxueerjidanweibiaozhiguifanshouce-shixing.pdf",
               "verifiedAt": "2026-10-31",
-              "credit": "Tsinghua University · official mark",
-              "rights": "Official institutional mark; trademark/copyright retained by its owner. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve aspect ratio, complete mark and clear space.",
+              "credit": "Tsinghua University official emblem",
+              "rights": "官方校徽；无开放复用许可声明，保持原几何、颜色及安全空间。来源为官方章程PDF及二级单位标志规范。",
               "displayPolicy": "official-brand",
-              "background": "dark",
-              "altZh": "Tsinghua University 官方标志",
-              "altEn": "Official mark of Tsinghua University"
+              "background": "light",
+              "altZh": "清华大学官方紫色校徽",
+              "altEn": "Official purple Tsinghua University emblem"
             },
             "authorNames": [
               "Jiacheng You",
@@ -1572,25 +1557,27 @@
                 "checkedAt": "2026-10-31"
               }
             ],
-            "note": "论文作者栏列出的署名机构；标志仅作身份说明，不代表背书。"
+            "note": "论文题名脚注2另列Zhexi Wang在清华。 官方章程PDF第15页首个嵌入JPEG，原样提取554×385；未重绘、裁切或改色，保留图像中的安全空间。",
+            "institutionType": "university",
+            "markType": "emblem"
           },
           {
             "name": "University of California San Diego",
             "logo": {
               "kind": "institution-logo",
-              "path": "assets/institutions/ucsd.png",
-              "sha256": "d3c87d86175908761937f6d6dd177e939d5bf65c3961f3d1ac825fe636197d40",
-              "width": 510,
-              "height": 102,
-              "sourceUrl": "https://www.ucsd.edu/_resources/img/logo_UCSD.png",
-              "evidenceUrl": "https://ucsd.edu/",
+              "path": "assets/institutions/ucsd-symbol.png",
+              "sha256": "09db59d85162cd07a6a745534242a0eababda186c58f73bf4e4f98860e611ef7",
+              "width": 48,
+              "height": 48,
+              "sourceUrl": "https://www.ucsd.edu/favicon.ico",
+              "evidenceUrl": "https://www.ucsd.edu/",
               "verifiedAt": "2026-10-31",
-              "credit": "University of California San Diego · official mark",
-              "rights": "Official institutional mark; trademark/copyright retained by its owner. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve aspect ratio, complete mark and clear space.",
+              "credit": "University of California San Diego official compact identity symbol",
+              "rights": "官方主页三叉戟紧凑符号，不是禁止用于网站的大学印章；不作为校园主Logo替代，不表示背书，保持完整原色。",
               "displayPolicy": "official-brand",
               "background": "light",
-              "altZh": "University of California San Diego 官方标志",
-              "altEn": "Official mark of University of California San Diego"
+              "altZh": "UC San Diego 官方主页三叉戟身份符号",
+              "altEn": "Official UC San Diego homepage trident identity symbol"
             },
             "authorNames": [
               "Weikang Wan",
@@ -1603,7 +1590,9 @@
                 "checkedAt": "2026-10-31"
               }
             ],
-            "note": "论文作者栏列出的署名机构；标志仅作身份说明，不代表背书。"
+            "note": "论文作者栏列出的署名机构；标志仅作身份说明，不代表背书。 使用官方主页favicon完整三叉戟符号，ICO转为PNG，未裁切或重绘；不是大学印章。",
+            "institutionType": "university",
+            "markType": "compact-symbol"
           }
         ],
         "authors": [
@@ -1861,7 +1850,9 @@
                 "checkedAt": "2026-10-31"
               }
             ],
-            "note": "论文署名机构已核验。UMD外部标志使用许可未核实，按品牌限制使用文字标识，不下载或发布其标志。"
+            "note": "论文署名机构已核验。UMD外部标志使用许可未核实，按品牌限制使用文字标识，不下载或发布其标志。 大学标识仅采用官方校徽或紧凑身份符号；本轮未取得适合外部网站展示的独立徽章许可，保留文字名称。",
+            "institutionType": "university",
+            "markType": "none"
           },
           {
             "name": "Enchanted Tools",
@@ -1892,7 +1883,9 @@
                 "checkedAt": "2026-10-31"
               }
             ],
-            "note": "论文作者栏列出Enchanted Tools；脚注明确第一作者的工作在该机构实习期间完成。作者映射依据本篇署名，不用当前雇主推断。"
+            "note": "论文作者栏列出Enchanted Tools；脚注明确第一作者的工作在该机构实习期间完成。作者映射依据本篇署名，不用当前雇主推断。",
+            "institutionType": "company",
+            "markType": "organization-mark"
           }
         ],
         "authors": []

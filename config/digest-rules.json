@@ -149,7 +149,12 @@
       "source": "paper-specific-evidence",
       "noCurrentEmployerInference": true,
       "restrictedLogo": "named-text-label-only",
-      "noEndorsementBadge": true
+      "noEndorsementBadge": true,
+      "universityMark": "official-crest-emblem-or-compact-identity-symbol-not-long-wordmark",
+      "organizationMark": "own-official-mark-no-umbrella-substitution",
+      "compactMarkSize": 32,
+      "noCroppingWordmarkIntoEmblem": true,
+      "missingPermittedEmblem": "institution-name-only-no-initial-badge"
     },
     "portraits": {
       "source": "official-page-explicitly-identifies-author",

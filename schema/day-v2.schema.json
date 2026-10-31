@@ -810,7 +810,9 @@
               "logo",
               "authorNames",
               "evidence",
-              "note"
+              "note",
+              "institutionType",
+              "markType"
             ],
             "properties": {
               "name": {
@@ -886,8 +888,79 @@
               },
               "note": {
                 "type": "string"
+              },
+              "institutionType": {
+                "enum": [
+                  "university",
+                  "research-institute",
+                  "company",
+                  "chair"
+                ]
+              },
+              "markType": {
+                "enum": [
+                  "emblem",
+                  "organization-mark",
+                  "none",
+                  "compact-symbol"
+                ]
               }
-            }
+            },
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "institutionType": {
+                      "const": "university"
+                    }
+                  }
+                },
+                "then": {
+                  "properties": {
+                    "markType": {
+                      "enum": [
+                        "emblem",
+                        "none",
+                        "compact-symbol"
+                      ]
+                    }
+                  }
+                },
+                "else": {
+                  "properties": {
+                    "markType": {
+                      "enum": [
+                        "organization-mark",
+                        "none"
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "if": {
+                  "properties": {
+                    "markType": {
+                      "const": "none"
+                    }
+                  }
+                },
+                "then": {
+                  "properties": {
+                    "logo": {
+                      "type": "null"
+                    }
+                  }
+                },
+                "else": {
+                  "properties": {
+                    "logo": {
+                      "type": "object"
+                    }
+                  }
+                }
+              }
+            ]
           }
         },
         "authors": {
