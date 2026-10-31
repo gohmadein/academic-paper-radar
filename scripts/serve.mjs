@@ -7,7 +7,7 @@ import {root} from './validate.mjs';
 const base=resolve(root,'dist');
 const port=Number(process.env.PORT || 4173);
 await stat(resolve(base,'index.html')).catch(()=>{throw new Error('请先运行 npm run build');});
-const types={'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.json':'application/json; charset=utf-8','.svg':'image/svg+xml','.txt':'text/plain; charset=utf-8'};
+const types={'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.json':'application/json; charset=utf-8','.svg':'image/svg+xml','.txt':'text/plain; charset=utf-8','.woff2':'font/woff2'};
 const server=createServer(async(req,res)=>{
   if(!['GET','HEAD'].includes(req.method)){res.writeHead(405).end();return;}
   let pathname;

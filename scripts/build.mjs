@@ -10,7 +10,7 @@ if (!out.startsWith(resolve(root)+sep) || out !== resolve(root,'dist')) throw ne
 // Only delete the verified generated dist directory inside this project.
 await rm(out,{recursive:true,force:true});
 await mkdir(out,{recursive:true});
-for (const file of ['index.html','styles.css','app.js','assets','lib','data']) await cp(join(root,file),join(out,file),{recursive:true});
+for (const file of ['index.html','styles.css','hud.css','app.js','assets','lib','data']) await cp(join(root,file),join(out,file),{recursive:true});
 await writeFile(join(out,'.nojekyll'),'');
 async function inventory(path,prefix='') {
   const items=[];

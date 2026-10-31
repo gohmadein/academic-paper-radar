@@ -1,4 +1,6 @@
 import {DEMO_NOTICE, escapeHTML as e, safeUrl, filterPapers, readRoute, routeHash, parseBookmarks, validateIndex, validateDay} from './lib/model.js';
+import {updateHUD, startClock} from './lib/hud.js';
+import {makeBookmarkExport,parseBookmarkImport,mergeBookmarkImport,MAX_BOOKMARK_BYTES} from './lib/bookmark-transfer.js';
 
 const $ = id => document.getElementById(id);
 const BOOKMARK_KEY = 'paper-signal-bookmarks-v1';
@@ -47,6 +49,8 @@ async function init() {
     $('real-days').textContent = String(real.days.length).padStart(2,'0');
     render();
   } catch {
+    $('hud-status').textContent = '！档案读取失败 / 可重试';
+    $('hex-json').classList.remove('ready');
     $('content').innerHTML = `<div class="empty-state error-state"><div class="empty-art" aria-hidden="true"><span>!</span></div><h3>暂时无法读取研究档案</h3><p>请确认站点文件已完整上传，或稍后重新加载。若在本机预览，请使用本地 HTTP 服务打开。</p><button class="primary-button" data-action="retry">重新加载 ↻</button></div>`;
     $('result-count').textContent = '资料读取失败';
     $('date-list').textContent = '暂时无法读取日期';
@@ -98,6 +102,8 @@ function render() {
   const active = document.activeElement;
   const focusSelector = active?.dataset?.tag ? `${active.closest('#tags')?'#tags ':''}[data-tag="${CSS.escape(active.dataset.tag)}"]` : active?.dataset?.bookmark ? `[data-bookmark="${CSS.escape(active.dataset.bookmark)}"]` : active?.dataset?.date ? `[data-date="${CSS.escape(active.dataset.date)}"]` : null;
   const {days,papers} = collection();
+  updateHUD({demo:state.demo,papers,days,realCount:data.real.papers.length});
+  $('bookmark-transfer').hidden = state.view !== 'bookmarks';
   const tags = [...new Set(papers.flatMap(p => p.tags))].sort((a,b) => a.localeCompare(b,'zh-CN'));
   $('demo-banner').hidden = !state.demo;
   document.querySelectorAll('nav [data-view]').forEach(b => { b.classList.toggle('active',b.dataset.view === state.view); if(b.dataset.view===state.view) b.setAttribute('aria-current','page'); else b.removeAttribute('aria-current'); });
@@ -174,6 +180,45 @@ document.addEventListener('click', event => {
 $('search').addEventListener('input', event => go({q:event.target.value},{replace:true}));
 $('date-select').addEventListener('change', event => go({date:event.target.value}));
 $('clear-filters').addEventListener('click',()=>go({q:'',tag:'all',date:'all'}));
+$('export-bookmarks').addEventListener('click',()=>{
+  const payload=makeBookmarkExport(bookmarks);
+  const serialized=JSON.stringify(payload,null,2)+'\n';
+  $('export-json').value=serialized;
+  $('export-preview').hidden=false;
+  const blob=new Blob([serialized],{type:'application/json;charset=utf-8'});
+  const url=URL.createObjectURL(blob);
+  const anchor=document.createElement('a'); anchor.href=url; anchor.download=`paper-signal-bookmarks-${payload.exportedAt.slice(0,10)}.json`; document.body.append(anchor); anchor.click(); anchor.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),30000);
+  $('transfer-status').classList.remove('error');
+  $('transfer-status').textContent=`已生成 ${bookmarks.size} 条本机书签的 JSON 文件。请保存在“文件”中，在另一台设备导入；不会自动同步或上传。`;
+});
+function applyLocalImport(text) {
+    const incoming=parseBookmarkImport(text);
+    const result=mergeBookmarkImport(bookmarks,incoming);
+    // Persist before changing the in-memory set. Failed imports preserve all existing bookmarks.
+    localStorage.setItem(BOOKMARK_KEY,JSON.stringify([...result.ids]));
+    bookmarks=result.ids; storageAvailable=true;
+    const knownIds=new Set(data ? [...data.real.papers,...data.demo.papers].map(p=>p.id) : []);
+    const unknown=[...incoming].filter(id=>!knownIds.has(id)).length;
+    $('transfer-status').classList.remove('error');
+    $('transfer-status').textContent=`导入成功：新增 ${result.added} 条，已有 ${result.duplicates} 条，总计 ${bookmarks.size} 条。${unknown?`${unknown} 条 ID 暂未在本站收录，已保留。`:''}原有书签已保留；没有上传或公开。`;
+    if(data)render();
+}
+function reportImportError(error) {
+    $('transfer-status').classList.add('error');
+    $('transfer-status').textContent=`导入失败：${error instanceof Error && !/quota|storage|access/i.test(error.message)?error.message:'浏览器无法保存，请检查存储权限或空间'}。原有书签未改变。`;
+}
+$('import-bookmarks').addEventListener('change',async event=>{
+  const file=event.target.files?.[0]; if(!file)return;
+  try{
+    if(file.size>MAX_BOOKMARK_BYTES)throw new Error('文件过大：最多 256 KB');
+    applyLocalImport(await file.text());
+  }catch(error){reportImportError(error);
+  }finally{event.target.value='';}
+});
+$('import-pasted').addEventListener('click',()=>{
+  try{applyLocalImport($('import-json').value);}catch(error){reportImportError(error);}
+});
 $('exit-demo').addEventListener('click',()=>go({demo:false,view:'feed',date:'all',tag:'all',q:'',paper:''}));
 $('close-dialog').addEventListener('click',closeDialog);
 $('detail-dialog').addEventListener('cancel',event=>{event.preventDefault();closeDialog();});
@@ -190,4 +235,5 @@ window.addEventListener('popstate',syncRoute);
 window.addEventListener('hashchange',syncRoute);
 window.addEventListener('storage',event=>{if(event.key===BOOKMARK_KEY){bookmarks=parseBookmarks(event.newValue);if(data)render();}});
 document.addEventListener('keydown',event=>{if(event.key==='/' && !event.ctrlKey && !event.metaKey && !event.altKey && !$('detail-dialog').open && !['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName) && !$('filter-panel').hidden){event.preventDefault();$('search').focus();}});
+startClock();
 init();
