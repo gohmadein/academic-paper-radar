@@ -51,7 +51,10 @@ body::before {
   animation: scan-sweep 22s linear infinite;
 }
 @keyframes scan-sweep { to { transform: translateY(1100%); } }
-.hero { grid-template-columns: 1.1fr 1fr; gap: 38px; padding-top: 44px; padding-bottom: 40px; }
+.hero { grid-template-columns: 1.1fr 1fr; gap: 38px; padding-top: 44px; padding-bottom: 40px; min-height: 390px; }
+.compact-view .workspace { border-top: 0; padding-top: 32px; }
+.page-demo-note { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: -7px 0 20px; color: #ff91c8; font-size: 11px; }
+.page-demo-note button { color: #ff91c8; font-size: 11px; padding: 3px 0; }
 .hero h1 { font-family: var(--mono); letter-spacing: 0; }
 .neon-text { text-shadow: 0 0 25px #00f0ff19; }
 .hero-metrics { gap: 18px; }
@@ -123,24 +126,6 @@ body::before {
 .digit-bottom { clip-path: inset(50% 0 0); transform-origin: center; transform: rotateX(90deg); animation: flip-bottom .28s .27s ease-out forwards; z-index: 2; }
 @keyframes flip-top { to { transform: rotateX(-90deg); } }
 @keyframes flip-bottom { to { transform: rotateX(0); } }
-.hud-bottom { display: grid; grid-template-columns: 1.05fr 1fr; gap: 12px; }
-.clock-card, .hex-card { --cut: 12px; }
-.clock-card .hud-surface, .hex-card .hud-surface { padding: 13px 12px; }
-.hud-label { margin: 0 0 13px; font-size: 7px; color: #b4c0d1; letter-spacing: .1px; white-space: nowrap; }
-.clock-dot { display: inline-block; width: 4px; height: 4px; background: var(--cyan); margin-right: 3px; vertical-align: middle; }
-.flip-clock { gap: 2px; }
-.flip-clock .flip-digit { --digit-height: 28px; width: 17px; font-size: 18px; }
-.clock-colon { font: 17px var(--mono); color: #7796a4; margin: 0 1px; }
-.clock-zone { color: #8ca5b5; font-size: 7px; margin-top: 13px; overflow-wrap: anywhere; }
-.hex-grid { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3,1fr); gap: 7px 5px; }
-.hex-status { --hex-color: #696c80; display: flex; flex-direction: column; align-items: center; gap: 4px; }
-.hex-cell { display: grid; place-items: center; width: 36px; height: 32px; clip-path: polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%); background: var(--hex-color); position: relative; isolation: isolate; font: 7px var(--mono); color: var(--hex-color); }
-.hex-cell::before { content: ""; position: absolute; inset: 1px; z-index: -1; background: #10131e; clip-path: polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%); }
-.hex-name { font-size: 7px; color: #a8a9bc; white-space: nowrap; }
-.hex-status.ready { --hex-color: var(--cyan); }
-.hex-status.waiting { --hex-color: var(--yellow); }
-.hex-status.idle { --hex-color: #c983aa; }
-.hex-status.local { --hex-color: #ff63b1; }
 .monitor-footer { display: flex; align-items: center; justify-content: space-between; gap: 10px; border-top: 1px solid #2b3342; margin-top: 15px; padding-top: 12px; font-size: 7px; color: #8798ae; }
 .monitor-footer>span:first-child { color: #a8b8cb; }
 .demo-banner { background: #241020; border-color: #ff008075; }
@@ -168,9 +153,9 @@ body::before {
 #export-json, #import-json { width: 100%; resize: vertical; background: #0b1018; color: #c4e1e9; border: 1px solid #345464; padding: 12px; font: 11px/1.7 var(--mono); }
 #import-pasted { margin-top: 9px; }
 #export-preview p { font-size: 10px; }
-@media(min-width:1440px) { .monitor-dashboard { max-width: 560px; }.hero { min-height: 500px; } }
-@media(max-width:1150px) { .hero-metrics .curation-note { display: none; }.monitor-surface { padding: 17px; }.monitor-title-row h2 { font-size: 16px; }.flip-digit { width: 20px; font-size: 24px; }.metric-card .hud-surface { padding: 12px 9px; }.hud-label { font-size: 6px; }.clock-card .hud-surface,.hex-card .hud-surface { padding: 12px 9px; }.flip-clock .flip-digit { width: 15px; font-size: 16px; }.flip-clock { gap: 1px; } }
-@media(max-width:1000px) { .hero { grid-template-columns: 1fr; gap: 30px; padding-top: 38px; }.monitor-dashboard { max-width: 650px; margin-left: 0; }.monitor-surface { padding: 22px; }.monitor-title-row h2 { font-size: 21px; }.flip-digit { width: 26px; font-size: 28px; }.metric-card .hud-surface { padding: 15px; }.hud-label { font-size: 9px; }.clock-card .hud-surface,.hex-card .hud-surface { padding: 16px; }.flip-clock .flip-digit { width: 24px; font-size: 24px; --digit-height: 34px; }.hex-cell { width: 44px; height: 38px; font-size: 8px; }.hex-name { font-size: 9px; }.monitor-footer { font-size: 8px; }.clock-zone { font-size: 9px; } }
-@media(max-width:540px) { .hero { padding-top: 30px; gap: 27px; overflow: visible; }.monitor-dashboard { max-width: none; }.monitor-surface { padding: 16px 13px 14px; }.monitor-title-row h2 { font-size: 16px; }.monitor-indicator { font-size: 8px; padding: 3px 5px; }.monitor-subtitle { font-size: 9px; margin-bottom: 14px; }.monitor-heading { font-size: 7px; letter-spacing: .5px; }.hud-counters { gap: 7px; margin-bottom: 10px; }.metric-card .hud-surface { padding: 12px 8px; }.metric-card p { font-size: 10px; margin-bottom: 10px; }.metric-card p small { font-size: 7px; }.flip-digit { --digit-height: 31px; width: 18px; font-size: 23px; }.flip-counter { gap: 2px; }.metric-foot { font-size: 7px; white-space: normal; min-height: 22px; }.hud-bottom { gap: 8px; grid-template-columns: 1fr 1fr; }.clock-card .hud-surface,.hex-card .hud-surface { padding: 12px 8px; }.hud-label { font-size: 6px; letter-spacing: -.2px; white-space: normal; line-height: 1.7; min-height: 20px; margin-bottom: 10px; }.flip-clock .flip-digit { --digit-height: 27px; width: 15px; font-size: 17px; }.flip-clock { gap: 1px; }.clock-colon { font-size: 12px; margin: 0; }.clock-zone { font-size: 7px; line-height: 1.9; margin-top: 10px; }.hex-cell { width: 30px; height: 27px; font-size: 6px; }.hex-name { font-size: 6px; }.hex-grid { gap: 6px 2px; }.monitor-footer { font-size: 6px; gap: 6px; align-items: flex-start; }.monitor-footer>span:last-child { max-width: 100px; text-align: right; }.transfer-panel { padding: 17px; }.transfer-panel p { font-size: 12px; }.transfer-actions { gap: 8px; }.transfer-actions .secondary-button { font-size: 12px; padding: 9px 13px; } }
-@media(max-width:360px) { .monitor-surface { padding: 15px 10px 13px; }.monitor-title-row h2 { font-size: 13px; }.monitor-indicator { font-size: 7px; }.metric-card .hud-surface { padding: 11px 6px; }.flip-digit { width: 15px; font-size: 20px; }.flip-clock .flip-digit { width: 12px; font-size: 14px; }.clock-card .hud-surface,.hex-card .hud-surface { padding: 11px 6px; }.hex-cell { width: 25px; height: 23px; font-size: 5px; }.hex-name { font-size: 6px; }.hud-label { font-size: 6px; }.hud-bottom { gap: 6px; }.monitor-subtitle { font-size: 8px; } }
+@media(min-width:1440px) { .monitor-dashboard { max-width: 560px; }.hero { min-height: 420px; } }
+@media(max-width:1150px) { .hero-metrics .curation-note { display: none; }.monitor-surface { padding: 17px; }.monitor-title-row h2 { font-size: 16px; }.flip-digit { width: 20px; font-size: 24px; }.metric-card .hud-surface { padding: 12px 9px; } }
+@media(max-width:1000px) { .hero { grid-template-columns: 1fr; gap: 30px; padding-top: 38px; }.monitor-dashboard { max-width: 650px; margin-left: 0; }.monitor-surface { padding: 22px; }.monitor-title-row h2 { font-size: 21px; }.flip-digit { width: 26px; font-size: 28px; }.metric-card .hud-surface { padding: 15px; }.monitor-footer { font-size: 8px; } }
+@media(max-width:540px) { .hero { padding-top: 30px; gap: 27px; overflow: visible; }.monitor-dashboard { max-width: none; }.monitor-surface { padding: 16px 13px 14px; }.monitor-title-row h2 { font-size: 16px; }.monitor-indicator { font-size: 8px; padding: 3px 5px; }.monitor-subtitle { font-size: 9px; margin-bottom: 14px; }.monitor-heading { font-size: 7px; letter-spacing: .5px; }.hud-counters { gap: 7px; margin-bottom: 0; }.metric-card .hud-surface { padding: 12px 8px; }.metric-card p { font-size: 10px; margin-bottom: 10px; }.metric-card p small { font-size: 7px; }.flip-digit { --digit-height: 31px; width: 18px; font-size: 23px; }.flip-counter { gap: 2px; }.metric-foot { font-size: 7px; white-space: normal; min-height: 22px; }.monitor-footer { font-size: 6px; gap: 6px; align-items: flex-start; }.monitor-footer>span:last-child { max-width: 100px; text-align: right; }.transfer-panel { padding: 17px; }.transfer-panel p { font-size: 12px; }.transfer-actions { gap: 8px; }.transfer-actions .secondary-button { font-size: 12px; padding: 9px 13px; } }
+@media(max-width:360px) { .monitor-surface { padding: 15px 10px 13px; }.monitor-title-row h2 { font-size: 13px; }.monitor-indicator { font-size: 7px; }.metric-card .hud-surface { padding: 11px 6px; }.flip-digit { width: 15px; font-size: 20px; }.monitor-subtitle { font-size: 8px; } }
 @media(prefers-reduced-motion:reduce) { .scanlines::after { display: none; }.glitch-title::before,.glitch-title::after { display: none; }.digit-top,.digit-bottom { display: none; } }

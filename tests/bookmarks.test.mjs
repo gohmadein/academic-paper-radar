@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {makeBookmarkExport,parseBookmarkImport,mergeBookmarkImport,MAX_BOOKMARK_BYTES} from '../lib/bookmark-transfer.js';
-import {countText,localClockText} from '../lib/hud.js';
+import {countText} from '../lib/hud.js';
 import {createSupabaseBookmarkAdapter} from '../lib/bookmark-sync.js';
 
 test('可移植书签导出/导入往返且去重，保留已有收藏',()=>{
@@ -22,9 +22,8 @@ test('导入拒绝损坏、超限、错误版本、URL、HTML和额外字段',()
   assert.throws(()=>mergeBookmarkImport(new Set(Array.from({length:5000},(_,i)=>`paper-${i}`)),new Set(['new-paper'])),/超过/);
   assert.deepEqual([...parseBookmarkImport('\uFEFF'+JSON.stringify(valid))],['paper-a']);
 });
-test('HUD 数字与本机时钟来源明确，不生成随机活动',()=>{
+test('HUD 数字来源明确，不生成随机活动',()=>{
   assert.equal(countText(0),'000');assert.equal(countText(4),'004');assert.equal(countText(12345),'12345');
-  assert.equal(localClockText(new Date(2026,9,31,8,9,5)),'08:09:05');
 });
 test('后端适配器拒绝特权密钥、非HTTPS项目和未登录写入',async()=>{
   for(const key of ['sb_secret_test','not-a-key',`e30.${btoa(JSON.stringify({role:'service_role'}))}.x`])assert.throws(()=>createSupabaseBookmarkAdapter({url:'https://example.supabase.co',publishableKey:key}));

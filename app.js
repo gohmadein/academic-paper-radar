@@ -1,5 +1,5 @@
 import {DEMO_NOTICE, escapeHTML as e, safeUrl, filterPapers, readRoute, routeHash, parseBookmarks, validateIndex, validateDay} from './lib/model.js';
-import {updateHUD, startClock} from './lib/hud.js';
+import {updateHUD} from './lib/hud.js';
 import {makeBookmarkExport,parseBookmarkImport,mergeBookmarkImport,MAX_BOOKMARK_BYTES} from './lib/bookmark-transfer.js';
 
 const $ = id => document.getElementById(id);
@@ -41,6 +41,7 @@ async function loadCollection(root, demo) {
 }
 
 async function init() {
+  updateViewChrome();
   $('content').setAttribute('aria-busy','true');
   try {
     const [real,demo] = await Promise.all([loadCollection('data',false),loadCollection('data/demo',true)]);
@@ -50,7 +51,6 @@ async function init() {
     render();
   } catch {
     $('hud-status').textContent = '！档案读取失败 / 可重试';
-    $('hex-json').classList.remove('ready');
     $('content').innerHTML = `<div class="empty-state error-state"><div class="empty-art" aria-hidden="true"><span>!</span></div><h3>暂时无法读取研究档案</h3><p>请确认站点文件已完整上传，或稍后重新加载。若在本机预览，请使用本地 HTTP 服务打开。</p><button class="primary-button" data-action="retry">重新加载 ↻</button></div>`;
     $('result-count').textContent = '资料读取失败';
     $('date-list').textContent = '暂时无法读取日期';
@@ -60,8 +60,17 @@ async function init() {
 
 function collection() { return state.demo ? data.demo : data.real; }
 
+function updateViewChrome() {
+  const isFeed = state.view === 'feed';
+  $('hero').hidden = !isFeed;
+  $('demo-banner').hidden = !isFeed || !state.demo;
+  $('page-demo-note').hidden = isFeed || !state.demo;
+  document.body.classList.toggle('compact-view', !isFeed);
+}
+
 function go(patch, {replace = false} = {}) {
   state = {...state, ...patch};
+  updateViewChrome();
   const hash = routeHash(state);
   if (replace) history.replaceState(null,'',hash);
   else history.pushState(null,'',hash);
@@ -102,10 +111,10 @@ function render() {
   const active = document.activeElement;
   const focusSelector = active?.dataset?.tag ? `${active.closest('#tags')?'#tags ':''}[data-tag="${CSS.escape(active.dataset.tag)}"]` : active?.dataset?.bookmark ? `[data-bookmark="${CSS.escape(active.dataset.bookmark)}"]` : active?.dataset?.date ? `[data-date="${CSS.escape(active.dataset.date)}"]` : null;
   const {days,papers} = collection();
-  updateHUD({demo:state.demo,papers,days,realCount:data.real.papers.length});
+  updateViewChrome();
+  if (state.view === 'feed') updateHUD({demo:state.demo,papers,days});
   $('bookmark-transfer').hidden = state.view !== 'bookmarks';
   const tags = [...new Set(papers.flatMap(p => p.tags))].sort((a,b) => a.localeCompare(b,'zh-CN'));
-  $('demo-banner').hidden = !state.demo;
   document.querySelectorAll('nav [data-view]').forEach(b => { b.classList.toggle('active',b.dataset.view === state.view); if(b.dataset.view===state.view) b.setAttribute('aria-current','page'); else b.removeAttribute('aria-current'); });
   $('bookmark-count').textContent = papers.filter(p=>bookmarks.has(p.id)).length;
   $('search').value = state.q;
@@ -220,6 +229,7 @@ $('import-pasted').addEventListener('click',()=>{
   try{applyLocalImport($('import-json').value);}catch(error){reportImportError(error);}
 });
 $('exit-demo').addEventListener('click',()=>go({demo:false,view:'feed',date:'all',tag:'all',q:'',paper:''}));
+$('exit-page-demo').addEventListener('click',()=>go({demo:false,date:'all',tag:'all',q:'',paper:''}));
 $('close-dialog').addEventListener('click',closeDialog);
 $('detail-dialog').addEventListener('cancel',event=>{event.preventDefault();closeDialog();});
 $('detail-dialog').addEventListener('click',event=>{if(event.target===$('detail-dialog')){const r=$('detail-dialog').getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)closeDialog();}});
@@ -230,10 +240,9 @@ $('about-button').addEventListener('click',()=>{
   $('dialog-content').innerHTML = '<h2 id="dialog-title">让好问题，遇见好论文。</h2><p>研究信号是一个纯前端学术阅读站。论文链接、中文导读和入选理由以日期 JSON 文件保存在同一仓库，发布后即可浏览和检索。</p><ol class="about-steps"><li>筛选规则尚未设定，当前真实收录为零。演示模式只用于预览界面，条目不对应真实论文。</li><li>网站不会自动搜索论文。未来的搜集与筛选任务需另行设定，并把审核后的资料提交到仓库。</li><li>书签保存在当前浏览器。没有登录、云端数据库、追踪器或跨设备同步；清除浏览器数据后书签会消失。</li><li>页面资源与资料随站点一起托管，不依赖第三方字体或论文 API。原文链接指向外部站点，其访问情况可能不同。</li></ol>';
   $('detail-dialog').showModal();
 });
-function syncRoute(){if(location.hash==='#main')return;state=readRoute(location.hash);if(data)render();}
+function syncRoute(){if(location.hash==='#main')return;state=readRoute(location.hash);updateViewChrome();if(data)render();}
 window.addEventListener('popstate',syncRoute);
 window.addEventListener('hashchange',syncRoute);
 window.addEventListener('storage',event=>{if(event.key===BOOKMARK_KEY){bookmarks=parseBookmarks(event.newValue);if(data)render();}});
 document.addEventListener('keydown',event=>{if(event.key==='/' && !event.ctrlKey && !event.metaKey && !event.altKey && !$('detail-dialog').open && !['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName) && !$('filter-panel').hidden){event.preventDefault();$('search').focus();}});
-startClock();
 init();
