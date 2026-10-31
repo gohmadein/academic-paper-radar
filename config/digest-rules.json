@@ -1,0 +1,130 @@
+{
+  "version": 1,
+  "brand": "零域 / ZERO FIELD",
+  "timezone": "Asia/Shanghai",
+  "researchReasoningEffort": "medium",
+  "effortScope": "搜集、筛选与撰写的操作意图；不声称已改变模型/API或全局设置",
+  "scheduleIntent": {
+    "daily": "08:00",
+    "starts": "2026-11-01",
+    "owner": "外部云端调度；仓库不创建第二个定时任务"
+  },
+  "qualityPolicy": {
+    "allowShortfall": true,
+    "allowZero": true,
+    "neverPad": true,
+    "recencyDays": 30,
+    "olderFirstDiscoveryLabel": "较早论文 · 首次发现",
+    "noRepeatedFreshPush": true,
+    "publicationStatusRequiresEvidence": true,
+    "readDepthMustBeHonest": true,
+    "noReplicationClaim": true
+  },
+  "weeklyClassics": {
+    "day": "Monday",
+    "li": 1,
+    "lv": 1,
+    "separateFromDailyQuota": true
+  },
+  "profiles": {
+    "xun": {
+      "label": "迅",
+      "border": "blue",
+      "targetMin": 5,
+      "targetMax": 8,
+      "scope": "全部机器人相关方向，排除纯机械机构设计。来源层级只影响顺序，不限制主题。",
+      "sourceRegistry": "config/source-registry.json",
+      "originalWatchlist": "config/xun-source-watchlist.md"
+    },
+    "li": {
+      "label": "李",
+      "border": "red",
+      "targetMin": 1,
+      "targetMax": 3,
+      "priorities": [
+        "固定本体、映射与schema的VKG/OBDA实例更新",
+        "视图更新、双向关系透镜",
+        "provenance、lineage、causality",
+        "副作用与约束更新、修复、SAT/SMT",
+        "DL-Lite / OWL 2 QL、containment、chase",
+        "可交互、可解释更新"
+      ],
+      "theoryWithoutCodeAllowed": true,
+      "venues": [
+        "SIGMOD",
+        "PACMMOD",
+        "VLDB",
+        "PVLDB",
+        "PODS",
+        "ICDT",
+        "ICDE",
+        "EDBT",
+        "TODS",
+        "VLDB Journal",
+        "TKDE",
+        "ISWC",
+        "ESWC",
+        "KR",
+        "Semantic Web Journal",
+        "Journal of Web Semantics",
+        "AAAI（直接相关）",
+        "IJCAI（直接相关）",
+        "arXiv cs.DB/cs.LO及相关cs.AI/cs.PL",
+        "Ontop"
+      ],
+      "alreadyReadSeeds": [
+        "Minimizing Side-Effects in Virtual Knowledge Graph Updates",
+        "Realizing bidirectional Virtual Knowledge Graphs using Ontop"
+      ]
+    },
+    "lv": {
+      "label": "驴",
+      "border": "black",
+      "targetMin": 1,
+      "targetMax": 3,
+      "priorities": [
+        "机器人学习/操作、RL、IL、BC、Diffusion Policy",
+        "Isaac Lab / MuJoCo、sim2real",
+        "VLA、基础/世界模型、跨形态",
+        "人形机器人"
+      ],
+      "prefer": [
+        "可信实验",
+        "可核验代码与材料",
+        "入门可读性"
+      ],
+      "exclude": [
+        "不相关的纯LLM/CV论文"
+      ],
+      "venues": [
+        "CoRL",
+        "RSS",
+        "ICRA",
+        "IROS",
+        "RA-L",
+        "T-RO",
+        "机器人相关NeurIPS/ICLR/ICML",
+        "arXiv cs.RO及相关cs.LG/cs.CV"
+      ],
+      "teams": [
+        "NVIDIA GEAR",
+        "Physical Intelligence",
+        "Google DeepMind Robotics",
+        "Stanford",
+        "Berkeley"
+      ]
+    }
+  },
+  "publicationRules": {
+    "mergeBy": [
+      "DOI",
+      "arXiv base ID",
+      "other canonical identifier"
+    ],
+    "majorUpdateRequiresNote": true,
+    "noInventedLinks": true,
+    "missingLinks": null,
+    "localReadingFeedbackOnly": true
+  },
+  "coverage": "每日只陈述实际检索入口；70项来源目录不等于当天已全源核验。"
+}

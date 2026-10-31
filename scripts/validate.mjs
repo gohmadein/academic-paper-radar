@@ -1,7 +1,8 @@
 import {readFile, readdir} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 import {resolve, join} from 'node:path';
-import {validateIndex, validateDay} from '../lib/model.js';
+import {validateIndex, validateDay,isDate} from '../lib/model.js';
+import {aliasesFor} from './identity.mjs';
 
 export const root = fileURLToPath(new URL('../', import.meta.url));
 export async function validateAll(base = root) {
@@ -16,18 +17,34 @@ export async function validateAll(base = root) {
     errors.push(...indexErrors.map(e => `${directory}: ${e}`));
     if (indexErrors.length) continue;
     const ids = new Set();
-    for (const entry of index.days) {
+    const realRecords=[];
+    for (const entry of [...index.days].sort((a,b)=>a.date.localeCompare(b.date))) {
       let day;
       try { day = JSON.parse(await readFile(join(path,entry.file),'utf8')); }
       catch { errors.push(`${directory}/${entry.file}: 无法读取 JSON`); continue; }
       errors.push(...validateDay(day,{demo}).map(e => `${directory}/${entry.file}: ${e}`));
       if (day.date !== entry.date || day.title !== entry.title || day.papers?.length !== entry.count) errors.push(`${directory}/${entry.file}: 日期、标题或数量与索引不一致`);
       if (Array.isArray(day.papers)) for (const p of day.papers) {
-        if (ids.has(p.id)) errors.push(`${directory}: 跨日期重复 id ${p.id}`);
+        if (ids.has(p.id) && !(day.version===2&&(p.classic||p.novelty==='major-update'))) errors.push(`${directory}: 跨日期重复 id ${p.id}`);
         ids.add(p.id);
+        if(!demo&&day.version===2)realRecords.push({paper:p,date:day.date});
         if (!demo && JSON.stringify(p).includes('example.com/replace-with')) errors.push(`${p.id}: 仍使用模板来源`);
       }
       count++;
+    }
+    if(!demo){
+      try{
+        const registry=JSON.parse(await readFile(join(path,'registry.json'),'utf8'));
+        if(registry.version!==1||!Array.isArray(registry.papers))throw new Error('注册表根结构无效');
+        const owners=new Map();
+        const registryIDs=new Set();
+        for(const record of registry.papers){
+          if(!/^[a-z0-9][a-z0-9-]{0,99}$/.test(record.id)||registryIDs.has(record.id)||!Array.isArray(record.aliases)||!record.aliases.length||record.aliases.some(a=>typeof a!=='string')||!Array.isArray(record.appearances)||!isDate(record.firstSeen)||!isDate(record.lastSeen))throw new Error('注册表ID或别名结构无效');
+          registryIDs.add(record.id);
+          for(const alias of record.aliases){if(owners.has(alias)&&owners.get(alias)!==record.id)throw new Error('注册表身份别名重复');owners.set(alias,record.id);}
+        }
+        for(const {paper,date} of realRecords){const record=registry.papers.find(r=>r.id===paper.id);if(!record?.appearances.some(a=>a.date===date)||aliasesFor(paper.identity).some(alias=>!record?.aliases.includes(alias)))errors.push(`${paper.id}: 注册表缺少日报记录或身份别名 ${date}`);}
+      }catch(error){if(realRecords.length||error.code!=='ENOENT')errors.push(`data/registry.json: ${error.message}`);}
     }
     const files = await readdir(join(path,'days')).catch(error => error.code==='ENOENT' ? [] : Promise.reject(error));
     for (const file of files) if (!index.days.some(e => e.file===`days/${file}`)) errors.push(`${directory}/days/${file}: 未写入日期索引`);

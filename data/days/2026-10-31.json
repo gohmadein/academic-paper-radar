@@ -1,0 +1,1017 @@
+{
+  "version": 2,
+  "date": "2026-10-31",
+  "title": "2026-10-31 零域首期 · 迅7 / 李2 / 驴2",
+  "demo": false,
+  "timezone": "Asia/Shanghai",
+  "issueNote": "首期共11篇：迅7篇与驴2篇为近30日预印本；李2篇为较早正式论文的首次发现，不是近期新发表，也不是周一经典栏目。迅为摘要级导读，李/驴为正文重点核读；没有独立复现或完整证明复核。",
+  "coverage": {
+    "checkedSources": [
+      "arXiv官方记录（迅7篇、驴2篇及李扩展版）",
+      "作者项目页：FORCA、PlayPolicy、regression-policy、ARC",
+      "作者代码仓库：PlayPolicy、regression-policy、generalized-deletion-propagation",
+      "PVLDB正式全文与Dagstuhl/ICDT正式记录及全文"
+    ],
+    "limitations": [
+      "本轮以官方arXiv页面核验为主，未逐一穷尽14个会议、20本期刊及指定实验室列表；70项目录不等于当日全源覆盖。",
+      "未完成所有会议录用与期刊DOI交叉核查；迅7篇、驴2篇统一标为预印本，未声称同行评审通过。",
+      "迅仅7篇多方向精选，不代表过去30天完整清单；本轮未遇到官方摘要不可读的情况，没有以镜像代替最终证据。",
+      "李定向检索VKG/OBDA实例更新、视图更新、删除传播及arXiv近期条目，未核实近30日足够贴题的新论文，故明确回溯推荐2篇；有限检索不表示该时段没有相关论文，不以外围LLM/本体构建凑数。",
+      "已排除已读种子 Minimizing Side-Effects in Virtual Knowledge Graph Updates 与 Realizing bidirectional Virtual Knowledge Graphs using Ontop。",
+      "驴优先机器人模仿学习与实机残差强化学习，仅选2篇，不为数量填充；没有把第三方索引作为内容依据。",
+      "所有结果均为作者报告，未独立复现；阅读层级和各自局限见论文详情。"
+    ]
+  },
+  "papers": [
+    {
+      "id": "arxiv-2610-31841",
+      "title": "FORCA：面向接触密集机器人操作的力感知代码智能体",
+      "titleEn": "FORCA: A Force-Aware Coding Agent for Contact-Rich Robot Manipulation",
+      "authors": [
+        "Xiao Tan",
+        "Yixuan Wang",
+        "Zhexi Wang",
+        "Wenzhen Yuan"
+      ],
+      "year": 2026,
+      "venue": "arXiv",
+      "tags": [
+        "接触操作",
+        "力觉",
+        "具身智能",
+        "实机"
+      ],
+      "summary": "论文让代码智能体结合视觉与腕部力／力矩记录，生成接触探测和力反馈控制程序，并在多次实机执行之间分析失败、修改程序。作者在五类真实操作任务中报告，相比仅用视觉的同构代理，力觉可改善抓取、适应物体或表面变化，并减少擦拭与削皮时的失去接触。方法不需要任务示范或专门训练，但仍依赖预定义技能与传感配置。",
+      "whySelected": "把高层代码生成与低层闭环力控连接起来，适合思考接触任务为何不能只靠视觉。",
+      "sources": [
+        {
+          "label": "原始论文",
+          "url": "https://arxiv.org/abs/2610.31841"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "把高层代码生成与低层闭环力控连接起来，适合思考接触任务为何不能只靠视觉。",
+          "relation": "把高层代码生成与低层闭环力控连接起来，适合思考接触任务为何不能只靠视觉。",
+          "prerequisites": [
+            "机器人力控",
+            "视觉语言模型",
+            "程序生成"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "skim"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.31841",
+        "other": null
+      },
+      "publicationStatus": "preprint",
+      "publicationDate": "2026-10-22",
+      "discoveredDate": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "readDepth": "abstract",
+      "paperType": "system",
+      "classic": false,
+      "novelty": "recent",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": "https://tanoom.github.io/forca/",
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "仅五项实机任务，不能据此推断开放世界泛化。",
+        "项目页显示采用预定义感知、抓取与规划技能；无任务专门训练不等于无先验。",
+        "未独立复现实验。"
+      ],
+      "assumptions": [],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2610.31841",
+          "claim": "英文标题、完整作者、初次提交日期、摘要、预印本状态",
+          "checkedAt": "2026-10-31"
+        },
+        {
+          "url": "https://tanoom.github.io/forca/",
+          "claim": "作者项目页、补充方法说明",
+          "checkedAt": "2026-10-31"
+        }
+      ],
+      "researchNotes": [
+        "已阅读官方摘要与元数据；部分另核对作者项目页，未通读论文全文。结果均为作者报告，未独立复现。已核对arXiv官方记录，未发现可据以确认正式录用的记录，统一标为预印本。日期为arXiv初次提交（UTC），完整作者已核验。",
+        "原始难度：中高。",
+        "阅读建议：优先速读；关注控制接口和失败修订机制。"
+      ]
+    },
+    {
+      "id": "arxiv-2610-19044",
+      "title": "RingNav：以任务结构塑造圆周记忆的视觉航向估计",
+      "titleEn": "RingNav: Task-Shaped Circular Memory for Visual Heading",
+      "authors": [
+        "Naitri Rajyaguru",
+        "Aryan Tajne",
+        "Stephen Jardim",
+        "Cornelia Fermuller",
+        "Yiannis Aloimonos"
+      ],
+      "year": 2026,
+      "venue": "arXiv",
+      "tags": [
+        "导航",
+        "视觉里程计",
+        "嵌入式",
+        "无人机"
+      ],
+      "summary": "面向算力与内存受限的小型机器人，RingNav不保存通用隐状态，而把航向记忆限制在圆周流形上，仅学习相邻图像之间的转角，再按几何规则累积航向。作者报告该小型模型在视觉基准上降低转角及短时累积误差，并无需微调迁移到真实无人机；在树莓派和低功耗处理器上的运行结果也使其具备嵌入式参考价值。",
+      "whySelected": "展示结构化状态与几何先验如何替代大模型，补足机器人感知的低功耗方向。",
+      "sources": [
+        {
+          "label": "原始论文",
+          "url": "https://arxiv.org/abs/2610.19044"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "展示结构化状态与几何先验如何替代大模型，补足机器人感知的低功耗方向。",
+          "relation": "展示结构化状态与几何先验如何替代大模型，补足机器人感知的低功耗方向。",
+          "prerequisites": [
+            "视觉里程计",
+            "圆周角度表示",
+            "轻量神经网络"
+          ],
+          "difficulty": "intermediate",
+          "readRecommendation": "skim"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.19044",
+        "other": null
+      },
+      "publicationStatus": "preprint",
+      "publicationDate": "2026-10-13",
+      "discoveredDate": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "readDepth": "abstract",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "recent",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "航向估计不是完整六自由度定位或SLAM。",
+        "摘要的累计误差比较仅涉及短时间窗；长期漂移仍需全文核查。",
+        "未独立测量硬件速度或精度。"
+      ],
+      "assumptions": [],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2610.19044",
+          "claim": "英文标题、完整作者、初次提交日期、摘要、预印本状态",
+          "checkedAt": "2026-10-31"
+        }
+      ],
+      "researchNotes": [
+        "已阅读官方摘要与元数据；部分另核对作者项目页，未通读论文全文。结果均为作者报告，未独立复现。已核对arXiv官方记录，未发现可据以确认正式录用的记录，统一标为预印本。日期为arXiv初次提交（UTC），完整作者已核验。",
+        "阅读建议：优先速读；适合感知与端侧部署读者。"
+      ]
+    },
+    {
+      "id": "arxiv-2610-20925",
+      "title": "为学习而规划：计入未来学习保证的GPU实时鲁棒自适应控制",
+      "titleEn": "Planning to Learn: Real-Time Robust Adaptive Control on the GPU with Guaranteed Future Learning",
+      "authors": [
+        "Anutam Srinivasan",
+        "Siddhant Panse",
+        "Glen Chou"
+      ],
+      "year": 2026,
+      "venue": "arXiv",
+      "tags": [
+        "控制",
+        "在线学习",
+        "安全",
+        "四足",
+        "无人机"
+      ],
+      "summary": "A-SLS把未来参数辨识可能带来的不确定性收缩纳入鲁棒自适应模型预测控制，保留扰动、参数误差与估计更新之间的相关性，以减少可达管的保守性。作者利用GPU加速求解，并报告非线性机器人系统、较高维四足全身控制及Crazyflie实机在线辨识案例。亮点是同时考虑安全约束、主动学习与实时计算，而非只追求跟踪误差。",
+      "whySelected": "连接控制理论与在线学习，提供区别于纯强化学习的机器人自适应路线。",
+      "sources": [
+        {
+          "label": "原始论文",
+          "url": "https://arxiv.org/abs/2610.20925"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "连接控制理论与在线学习，提供区别于纯强化学习的机器人自适应路线。",
+          "relation": "连接控制理论与在线学习，提供区别于纯强化学习的机器人自适应路线。",
+          "prerequisites": [
+            "鲁棒MPC",
+            "系统辨识",
+            "系统级综合",
+            "可达集"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "skim"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.20925",
+        "other": null
+      },
+      "publicationStatus": "preprint",
+      "publicationDate": "2026-10-14",
+      "discoveredDate": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "readDepth": "abstract",
+      "paperType": "system",
+      "classic": false,
+      "novelty": "recent",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "理论保证依赖模型与不确定性假设，不能直接解读为无条件实机安全。",
+        "摘要不足以确认所有基准和求解器配置公平性。",
+        "本次未审阅证明或复现实验。"
+      ],
+      "assumptions": [],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2610.20925",
+          "claim": "英文标题、完整作者、初次提交日期、摘要、预印本状态",
+          "checkedAt": "2026-10-31"
+        }
+      ],
+      "researchNotes": [
+        "已阅读官方摘要与元数据；部分另核对作者项目页，未通读论文全文。结果均为作者报告，未独立复现。已核对arXiv官方记录，未发现可据以确认正式录用的记录，统一标为预印本。日期为arXiv初次提交（UTC），完整作者已核验。",
+        "阅读建议：控制方向优先；速读后再核查定理假设。"
+      ]
+    },
+    {
+      "id": "arxiv-2610-28251",
+      "title": "基于信任与一致排除的安全多机器人协作",
+      "titleEn": "Safe Multi-Robot Collaboration With Uniform Exclusion Using Trust",
+      "authors": [
+        "Thomas Kaminsky",
+        "Áron Vékássy",
+        "Hammad Izhar",
+        "Angelia Nedić",
+        "Stephanie Gil"
+      ],
+      "year": 2026,
+      "venue": "arXiv",
+      "tags": [
+        "多机器人",
+        "通信安全",
+        "统计保证",
+        "实机"
+      ],
+      "summary": "针对通信链路可能被攻击的机器人群体，论文在现有协作算法外增加信任筛选层，用异常检测器输出的连续信任值做随时有效的统计推断，在高概率下持续排除受损链路，同时逐渐接纳正常链路。作者以神经隐式建图和航向一致性两类实机任务展示方法，并通过使用硬件采样信任值的仿真考察更大规模群体。",
+      "whySelected": "把多机器人安全从单次检测提升到贯穿运行时间的统计保障，具有跨协作任务价值。",
+      "sources": [
+        {
+          "label": "原始论文",
+          "url": "https://arxiv.org/abs/2610.28251"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "把多机器人安全从单次检测提升到贯穿运行时间的统计保障，具有跨协作任务价值。",
+          "relation": "把多机器人安全从单次检测提升到贯穿运行时间的统计保障，具有跨协作任务价值。",
+          "prerequisites": [
+            "多机器人一致性",
+            "统计假设检验",
+            "异常检测"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "skim"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.28251",
+        "other": null
+      },
+      "publicationStatus": "preprint",
+      "publicationDate": "2026-10-20",
+      "discoveredDate": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "readDepth": "abstract",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "recent",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "依赖异常检测器具有优于随机猜测的有效信号，实际适用条件需全文核对。",
+        "数百机器人规模证据来自仿真，而非同规模实机。",
+        "本次未核查统计证明。"
+      ],
+      "assumptions": [],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2610.28251",
+          "claim": "英文标题、完整作者、初次提交日期、摘要、预印本状态",
+          "checkedAt": "2026-10-31"
+        }
+      ],
+      "researchNotes": [
+        "已阅读官方摘要与元数据；部分另核对作者项目页，未通读论文全文。结果均为作者报告，未独立复现。已核对arXiv官方记录，未发现可据以确认正式录用的记录，统一标为预印本。日期为arXiv初次提交（UTC），完整作者已核验。",
+        "阅读建议：多机器人方向优先；重点读检测假设与可信链路恢复速度。"
+      ]
+    },
+    {
+      "id": "arxiv-2610-22340",
+      "title": "PlayPolicy：从有监督自由交互中学习灵巧操作",
+      "titleEn": "PlayPolicy: Dexterity from Supervised Play",
+      "authors": [
+        "Botao He",
+        "Yiming Dou",
+        "Yiannis Aloimonos",
+        "Jitendra Malik",
+        "Akash Sharma",
+        "Ruoshi Liu"
+      ],
+      "year": 2026,
+      "venue": "arXiv",
+      "tags": [
+        "灵巧操作",
+        "世界模型",
+        "自主数据采集",
+        "实机"
+      ],
+      "summary": "PlayPolicy先从少量人类自由交互学习行为策略，再由机器人自主采集更多接触数据以训练世界模型；执行任务时，该策略提供候选动作，由模型预测控制筛选，并可进一步蒸馏成快速闭环策略。作者在推动和多指手内姿态调整任务中报告数据效率优势。它把数据采集、规划提案与策略学习串联，但能力仍受初始交互覆盖范围限制。",
+      "whySelected": "一套自由交互策略贯穿采数据与规划，适合研究如何降低真实机器人任务示范成本。",
+      "sources": [
+        {
+          "label": "原始论文",
+          "url": "https://arxiv.org/abs/2610.22340"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "一套自由交互策略贯穿采数据与规划，适合研究如何降低真实机器人任务示范成本。",
+          "relation": "一套自由交互策略贯穿采数据与规划，适合研究如何降低真实机器人任务示范成本。",
+          "prerequisites": [
+            "行为克隆",
+            "世界模型",
+            "MPC",
+            "扩散模型"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "skim"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.22340",
+        "other": null
+      },
+      "publicationStatus": "preprint",
+      "publicationDate": "2026-10-15",
+      "discoveredDate": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "readDepth": "abstract",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "recent",
+      "updateNote": "",
+      "links": {
+        "code": "https://github.com/FAR-hands/play_policy",
+        "project": "https://play-policy.github.io/",
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "作者项目页明确指出目前仅展示立方体重定向和Push-T，且需要初始人类交互及在线规划计算。",
+        "代码页面为仿真发布，不等于完整实机复现包。",
+        "仓库许可证仍标注待选定，使用前需确认；本次未运行代码。"
+      ],
+      "assumptions": [],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2610.22340",
+          "claim": "英文标题、完整作者、初次提交日期、摘要、预印本状态",
+          "checkedAt": "2026-10-31"
+        },
+        {
+          "url": "https://play-policy.github.io/",
+          "claim": "作者项目页、补充方法说明",
+          "checkedAt": "2026-10-31"
+        },
+        {
+          "url": "https://github.com/FAR-hands/play_policy",
+          "claim": "作者链接的公开仿真代码仓库、许可尚未明确",
+          "checkedAt": "2026-10-31"
+        }
+      ],
+      "researchNotes": [
+        "已阅读官方摘要与元数据；部分另核对作者项目页，未通读论文全文。结果均为作者报告，未独立复现。已核对arXiv官方记录，未发现可据以确认正式录用的记录，统一标为预印本。日期为arXiv初次提交（UTC），完整作者已核验。",
+        "修订日期：2026-10-26。",
+        "原始难度：中高。",
+        "阅读建议：优先速读；可结合已公开的仿真代码核查可复现性。"
+      ]
+    },
+    {
+      "id": "arxiv-2610-37550",
+      "title": "以运动学约束为参照的铰接物体操作评估",
+      "titleEn": "Kinematic Constraint-Referenced Evaluation for Articulated Object Manipulation",
+      "authors": [
+        "Baptiste Bonin",
+        "Caro Strickland",
+        "Audrey Durand"
+      ],
+      "year": 2026,
+      "venue": "arXiv",
+      "tags": [
+        "机器人评估",
+        "铰接物体",
+        "操作",
+        "仿真"
+      ],
+      "summary": "论文指出二元任务成功率难以揭示操作动作是否符合物体关节约束，提出把末端运动投影到关节轴，分离有效进展与偏离约束的浪费。作者在多种仿真铰接物体上展示，这类指标能够区分成功率掩盖的迁移失效，并分析关节轴估计误差的影响。方法无需学习评判器，但需要关节模型及由其构建的参考控制器。",
+      "whySelected": "提醒机器人评估不能止于成功率；适合给门、抽屉等接触任务设计诊断指标。",
+      "sources": [
+        {
+          "label": "原始论文",
+          "url": "https://arxiv.org/abs/2610.37550"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "提醒机器人评估不能止于成功率；适合给门、抽屉等接触任务设计诊断指标。",
+          "relation": "提醒机器人评估不能止于成功率；适合给门、抽屉等接触任务设计诊断指标。",
+          "prerequisites": [
+            "刚体运动学",
+            "末端速度旋量",
+            "策略评估"
+          ],
+          "difficulty": "intermediate",
+          "readRecommendation": "skim"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.37550",
+        "other": null
+      },
+      "publicationStatus": "preprint",
+      "publicationDate": "2026-10-27",
+      "discoveredDate": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "readDepth": "abstract",
+      "paperType": "benchmark",
+      "classic": false,
+      "novelty": "recent",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "摘要中的主要证据来自74个仿真物体，尚不能推断真实接触环境表现。",
+        "需要关节轴模型与参考控制器，轴估计偏差会影响判定。",
+        "研究对象是策略评估，非纯机械机构设计。"
+      ],
+      "assumptions": [],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2610.37550",
+          "claim": "英文标题、完整作者、初次提交日期、摘要、预印本状态",
+          "checkedAt": "2026-10-31"
+        }
+      ],
+      "researchNotes": [
+        "已阅读官方摘要与元数据；部分另核对作者项目页，未通读论文全文。结果均为作者报告，未独立复现。已核对arXiv官方记录，未发现可据以确认正式录用的记录，统一标为预印本。日期为arXiv初次提交（UTC），完整作者已核验。",
+        "阅读建议：评测设计读者优先；篇幅紧凑，适合快速建立指标意识。"
+      ]
+    },
+    {
+      "id": "arxiv-2610-17326",
+      "title": "不确定条件下的长时程机器人规划评估",
+      "titleEn": "Evaluating Long-Horizon Robot Planning under Uncertainty",
+      "authors": [
+        "Harsh Muriki",
+        "Gayathri Aravindan",
+        "Yuchen Zheng",
+        "Sonia Chernova"
+      ],
+      "year": 2026,
+      "venue": "arXiv",
+      "tags": [
+        "长时程规划",
+        "具身智能",
+        "评测",
+        "不确定性"
+      ],
+      "summary": "作者在Habitat中构建七类长时程家务任务，改变机器人初始记忆与环境配置，在统一执行框架下比较三种规划路线。评估不仅记录任务成功，还分析部分完成率、动作效率和执行轨迹中的放置、前提条件及冗余动作错误。结果提示准确初始记忆并不总能提升所有规划器，值得追问具身代理怎样利用知识、处理执行中的不确定性。",
+      "whySelected": "通过统一环境和轨迹诊断审视规划能力，避免只凭展示视频评价长任务智能体。",
+      "sources": [
+        {
+          "label": "原始论文",
+          "url": "https://arxiv.org/abs/2610.17326"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "通过统一环境和轨迹诊断审视规划能力，避免只凭展示视频评价长任务智能体。",
+          "relation": "通过统一环境和轨迹诊断审视规划能力，避免只凭展示视频评价长任务智能体。",
+          "prerequisites": [
+            "任务规划",
+            "POMDP",
+            "视觉语言模型",
+            "Habitat"
+          ],
+          "difficulty": "intermediate",
+          "readRecommendation": "skim"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.17326",
+        "other": null
+      },
+      "publicationStatus": "preprint",
+      "publicationDate": "2026-10-12",
+      "discoveredDate": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "readDepth": "abstract",
+      "paperType": "benchmark",
+      "classic": false,
+      "novelty": "recent",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "结果来自Habitat模拟及特定规划器适配，不能等同真实家庭机器人的表现。",
+        "统一框架仍不自动消除模型选择和适配实现带来的比较偏差。",
+        "本次仅审阅摘要元数据。"
+      ],
+      "assumptions": [],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2610.17326",
+          "claim": "英文标题、完整作者、初次提交日期、摘要、预印本状态",
+          "checkedAt": "2026-10-31"
+        }
+      ],
+      "researchNotes": [
+        "已阅读官方摘要与元数据；部分另核对作者项目页，未通读论文全文。结果均为作者报告，未独立复现。已核对arXiv官方记录，未发现可据以确认正式录用的记录，统一标为预印本。日期为arXiv初次提交（UTC），完整作者已核验。",
+        "阅读建议：速读对照；适合设计具身规划实验。"
+      ]
+    },
+    {
+      "id": "doi-d0ded22222dc36782e1a",
+      "title": "删除传播只需要整数线性规划吗？广义删除传播的统一实用方法",
+      "titleEn": "Is Integer Linear Programming All You Need for Deletion Propagation? A Unified and Practical Approach for Generalized Deletion Propagation",
+      "authors": [
+        "Neha Makhija",
+        "Wolfgang Gatterbauer"
+      ],
+      "year": 2025,
+      "venue": "PVLDB 18(8):2667–2680",
+      "tags": [
+        "视图更新",
+        "删除传播",
+        "副作用最小化",
+        "见证",
+        "整数线性规划"
+      ],
+      "summary": "视图中删掉一个结果，可能误删共享源数据支持的其他结果。本文把源端代价、视图副作用与最小见证等任务统一成广义删除传播，用整数规划表达必须删除／保留的结果及优化目标，再以平滑约束改善求解。它覆盖已知可解特例，并支持自连接、并与袋语义；但“所有可解情形都只需整数规划”仍是猜想，不能解读为一般问题均为多项式时间。",
+      "whySelected": "可作为固定映射展开后删除分支的求解基线：把用户必须实现的变化、不可碰的结果与允许权衡的副作用分开编码。",
+      "sources": [
+        {
+          "label": "原始论文",
+          "url": "https://www.vldb.org/pvldb/vol18/p2667-makhija.pdf"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "li"
+      ],
+      "recommendations": {
+        "li": {
+          "whyRead": "可作为固定映射展开后删除分支的求解基线：把用户必须实现的变化、不可碰的结果与允许权衡的副作用分开编码。",
+          "relation": "与已读VKG补偿论文互补，但从纯删除扩展到补偿插入、TBox闭包和多候选解释是研究工作，不是本文现成能力。",
+          "prerequisites": [
+            "关系代数与合取查询",
+            "why-provenance/见证",
+            "ILP与LP松弛"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "deep"
+        }
+      },
+      "identity": {
+        "doi": "10.14778/3742728.3742756",
+        "arxiv": "2411.17603",
+        "other": null
+      },
+      "publicationStatus": "published",
+      "publicationDate": null,
+      "discoveredDate": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "readDepth": "fulltext",
+      "paperType": "system",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": "https://github.com/northeastern-datalab/generalized-deletion-propagation",
+        "project": null,
+        "video": null,
+        "data": "https://github.com/northeastern-datalab/generalized-deletion-propagation/tree/main/data"
+      },
+      "limits": [
+        "主要是删除传播；一般难例并未消失。覆盖所有已知PTIME特例不等于证明所有未来PTIME特例。",
+        "公开Python/Gurobi实现已核验存在，未下载运行；未验证Ontop接入、事务生成、并发或用户偏好交互。",
+        "已看问题形式、ILP章节和实验设置；未逐项重做附录证明或复现实验。"
+      ],
+      "assumptions": [],
+      "evidence": [
+        {
+          "url": "https://www.vldb.org/pvldb/vol18/p2667-makhija.pdf",
+          "claim": "正式论文、问题形式、ILP章节、实验设置及重点核读内容",
+          "checkedAt": "2026-10-31"
+        },
+        {
+          "url": "https://arxiv.org/html/2411.17603v2",
+          "claim": "扩展版及首发/修订记录",
+          "checkedAt": "2026-10-31"
+        },
+        {
+          "url": "https://github.com/northeastern-datalab/generalized-deletion-propagation",
+          "claim": "作者实现、Python/Gurobi与实验数据入口",
+          "checkedAt": "2026-10-31"
+        },
+        {
+          "url": "https://github.com/northeastern-datalab/generalized-deletion-propagation/tree/main/data",
+          "claim": "已核验的数据目录",
+          "checkedAt": "2026-10-31"
+        }
+      ],
+      "researchNotes": [
+        "正式出版只核验年份2025，具体日未核实，publicationDate 留 null；预印本首发2024-11-26，修订2025-06-16。",
+        "已核验PVLDB正式论文、arXiv扩展版和作者代码仓库；不是近期新发表。",
+        "阅读建议：优先精读§4–5，先拿一个VKG删除例子手写硬约束与目标函数；§6区分定理与猜想，§7再看可复现基线。",
+        "阅读深度：正文重点核读，非全文证明复核。GDP统一多个目标和约束；ILP平滑化用于恢复已知可解情形。",
+        "系统：输入查询、数据库及删除/保留要求，输出源元组删除方案；Python 3.8.8与Gurobi 10.0.1，实验含合成数据与2019年1月航班实例。",
+        "原始难度：中高。"
+      ]
+    },
+    {
+      "id": "doi-259aaefa9d9fdb4b874f",
+      "title": "寻找缺失答案修复的复杂性",
+      "titleEn": "The Complexity of Finding Missing Answer Repairs",
+      "authors": [
+        "Jesse Comer",
+        "Val Tannen"
+      ],
+      "year": 2026,
+      "venue": "ICDT 2026, LIPIcs 365, Article 12",
+      "tags": [
+        "视图插入",
+        "缺失答案",
+        "数据库修复",
+        "复杂性",
+        "固定查询"
+      ],
+      "summary": "如何最少修改源数据，让一个缺失查询答案出现？本文允许插入与删除，区分修复存在性、大小与构造问题，并系统比较组合复杂度和数据复杂度。查询也作为输入时，投影与连接可带来集合覆盖级困难；但固定查询后，半正Datalog的最小修复可多项式求得。关键提醒是：这里最小化源端修改数，并不保证其他视图答案不变，更不自动满足VKG本体约束。",
+      "whySelected": "适合界定VKG插入/修改分支的理论边界：固定本体和映射后应优先讨论数据复杂度，不能直接用组合复杂度下界否定实现可能性。",
+      "sources": [
+        {
+          "label": "原始论文",
+          "url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICDT.2026.12"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "li"
+      ],
+      "recommendations": {
+        "li": {
+          "whyRead": "适合界定VKG插入/修改分支的理论边界：固定本体和映射后应优先讨论数据复杂度，不能直接用组合复杂度下界否定实现可能性。",
+          "relation": "可进一步研究加入禁止副作用、源完整性约束与用户接受集合后，可解性是否保留。",
+          "prerequisites": [
+            "合取查询/UCQ与否定",
+            "Datalog与数据复杂度",
+            "NP归约、集合覆盖"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "deep"
+        }
+      },
+      "identity": {
+        "doi": "10.4230/lipics.icdt.2026.12",
+        "arxiv": "2601.06764",
+        "other": null
+      },
+      "publicationStatus": "published",
+      "publicationDate": "2026-03-18",
+      "discoveredDate": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "readDepth": "fulltext",
+      "paperType": "theory",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "纯理论贡献；本轮未发现经核验的配套代码/数据，不因无代码降低优先级。",
+        "核读定义、复杂度表、定理4.1–4.6和§5核心思路；未逐行验证扩展版全部证明。"
+      ],
+      "assumptions": [
+        "数据库schema固定；允许修复使用活跃域外的新值。",
+        "目标是令指定元组成为答案并最小化源修改基数，并非保护全部其他答案。",
+        "半正Datalog的PTIME结论是固定查询的数据复杂度。"
+      ],
+      "evidence": [
+        {
+          "url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICDT.2026.12",
+          "claim": "正式发表记录、完整作者、日期与身份",
+          "checkedAt": "2026-10-31"
+        },
+        {
+          "url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol365-icdt2026/LIPIcs.ICDT.2026.12/LIPIcs.ICDT.2026.12.pdf",
+          "claim": "定义、复杂度表、定理4.1–4.6及§5重点核读内容",
+          "checkedAt": "2026-10-31"
+        },
+        {
+          "url": "https://arxiv.org/abs/2601.06764",
+          "claim": "扩展版与预印本日期",
+          "checkedAt": "2026-10-31"
+        }
+      ],
+      "researchNotes": [
+        "已核验Dagstuhl正式发表记录、会议全文与arXiv扩展版；非近30日新发表。",
+        "预印本首发2026-01-11；正式发表日2026-03-18已核验。",
+        "阅读建议：优先读§1–2与§5；再读§4，把“最小源修改”与“最小视图副作用”并列记录。适合作为新算法问题设定的理论对照，而非即用系统。",
+        "阅读深度：正文重点核读，非完整证明复核。",
+        "定义/定理：修复U=(Ins,Del)，使目标元组属于Q(IU)；分别定义存在、界限、最优大小和构造。弱选择/投影使存在性与查询可满足性相互归约；固定查询利用常数大小修复性质得到可枚举搜索空间。"
+      ]
+    },
+    {
+      "id": "arxiv-2610-12231",
+      "title": "残差建模缩小机器人学习中回归策略与生成策略的差距",
+      "titleEn": "Residual Modeling Closes the Regression and Generative Policy Gap in Robot Learning",
+      "authors": [
+        "Yuchen Zhou",
+        "Jiacheng You",
+        "Weikang Wan",
+        "Weijun Dong",
+        "Yang Gao",
+        "Jiayuan Mao"
+      ],
+      "year": 2026,
+      "venue": "arXiv（cs.RO）",
+      "tags": [
+        "机器人学习",
+        "模仿学习",
+        "行为克隆",
+        "Diffusion Policy",
+        "损失函数",
+        "实机操作"
+      ],
+      "summary": "机器人学动作，一定要用扩散模型吗？这篇从最熟悉的均方误差出发：示教中的预测误差大小随状态变化，少数大误差会牵着训练走。作者用能容纳重尾误差的 Student-t 损失，并额外预测误差尺度，让一次前向计算的回归策略接近生成策略表现。建议先看项目页图解，再读第3—4节；重点理解“损失如何分配学习注意力”，不必一开始推完概率公式。",
+      "whySelected": "适合从行为克隆走向 Diffusion Policy 的入门者：先理解训练目标，而不是只背模型结构；官方 HT-Loss 接口和 MSELoss 相近，便于阅读对照。",
+      "sources": [
+        {
+          "label": "原始论文",
+          "url": "https://arxiv.org/abs/2610.12231"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "lv"
+      ],
+      "recommendations": {
+        "lv": {
+          "whyRead": "适合从行为克隆走向 Diffusion Policy 的入门者：先理解训练目标，而不是只背模型结构；官方 HT-Loss 接口和 MSELoss 相近，便于阅读对照。",
+          "relation": "适合从行为克隆走向 Diffusion Policy 的入门者：先理解训练目标，而不是只背模型结构；官方 HT-Loss 接口和 MSELoss 相近，便于阅读对照。",
+          "prerequisites": [
+            "监督学习与均方误差",
+            "行为克隆（BC）",
+            "梯度下降",
+            "选读：高斯分布、Student-t 分布"
+          ],
+          "difficulty": "intermediate",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.12231",
+        "other": null
+      },
+      "publicationStatus": "preprint",
+      "publicationDate": "2026-10-08",
+      "discoveredDate": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "recent",
+      "updateNote": "",
+      "links": {
+        "code": "https://github.com/the-labone/regression-policy",
+        "project": "https://projects.thelabone.org/regression-policy/",
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "不能显式表达多个动作模式，不是扩散策略的普适替代。",
+        "作者尚未把拟合误差分析直接连接到闭环控制失败。",
+        "实机为 PiperX 上3项任务，每方法每任务50次；不能泛化为任意机器人性能结论。",
+        "代码仓库及使用示例可访问，但本次未运行复现，也未核验全部模型权重完整性。"
+      ],
+      "assumptions": [],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2610.12231",
+          "claim": "题名、作者、首发/修订日期、预印本身份",
+          "checkedAt": "2026-10-31"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.12231v2",
+          "claim": "第3—4节残差/损失机制，第6节局限，附录A.4.1实机3任务与50次评估",
+          "checkedAt": "2026-10-31"
+        },
+        {
+          "url": "https://projects.thelabone.org/regression-policy/",
+          "claim": "官方图解与代码链接",
+          "checkedAt": "2026-10-31"
+        },
+        {
+          "url": "https://github.com/the-labone/regression-policy",
+          "claim": "可访问 HT-Loss、训练/评估目录与 README 用法",
+          "checkedAt": "2026-10-31"
+        }
+      ],
+      "researchNotes": [
+        "最新版本日期：2026-10-09。已核验 arXiv v2、作者项目页及官方 GitHub；预印本，未见已录用 venue 信息。",
+        "原始难度：入门进阶（概念易读，概率推导可后读）。阅读建议：现在读。",
+        "建议阅读：20—30分钟：项目图解→第3节动机→第4节损失→第6节局限；代码只读 HT-Loss 示例，不要求先复现大模型。",
+        "项目页有官方演示入口；独立 MP4 抓取失败，未验证播放，不另列已验证视频URL。",
+        "阅读深度：已读摘要、项目页、方法与实验/局限相关全文段落、代码 README；未逐式审稿或运行实验。",
+        "核验限制：仅核验原始论文、作者项目页/代码页面；没有把第三方索引当作内容依据。无独立复现，未声称已通过同行评审。"
+      ]
+    },
+    {
+      "id": "arxiv-2610-37547",
+      "title": "何时、何处、如何纠正：人类引导的机器人策略自适应残差修正",
+      "titleEn": "When, Where, and What to Correct: Human-Guided Adaptive Residual Correction for Robot Policies",
+      "authors": [
+        "Anukriti Singh",
+        "Maxime Caniot",
+        "Pratap Tokekar",
+        "Firas Abi-Farraj"
+      ],
+      "year": 2026,
+      "venue": "arXiv（cs.RO；cs.AI）",
+      "tags": [
+        "机器人学习",
+        "强化学习",
+        "模仿学习",
+        "人类纠正",
+        "残差RL",
+        "精密操作"
+      ],
+      "summary": "如果模仿学习已能完成大半段动作，只在插入或摆放时差一点，是否必须重训整个策略？ARC 保持原策略不变，把少量人工纠正拆成三件事：判断何时介入、限定向哪些方向微调，再用奖励学习具体修正量。三项实机任务的平均成功率从33.3%到75%，但每方法每任务仅12次测试。先看流程图，再读实验设置，学会区分“人给探索线索”和“直接模仿人的动作”。",
+      "whySelected": "把 BC→残差 RL 的衔接讲得直观，适合建立真实机器人后训练的基本图景；同时可练习阅读成功率背后的测试数量。",
+      "sources": [
+        {
+          "label": "原始论文",
+          "url": "https://arxiv.org/abs/2610.37547"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "lv"
+      ],
+      "recommendations": {
+        "lv": {
+          "whyRead": "把 BC→残差 RL 的衔接讲得直观，适合建立真实机器人后训练的基本图景；同时可练习阅读成功率背后的测试数量。",
+          "relation": "把 BC→残差 RL 的衔接讲得直观，适合建立真实机器人后训练的基本图景；同时可练习阅读成功率背后的测试数量。",
+          "prerequisites": [
+            "行为克隆与ACT的基本概念",
+            "强化学习中的状态、动作、奖励",
+            "残差＝在原动作上加小修正",
+            "选读：TD3、主成分/子空间"
+          ],
+          "difficulty": "intermediate",
+          "readRecommendation": "save"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.37547",
+        "other": null
+      },
+      "publicationStatus": "preprint",
+      "publicationDate": "2026-10-27",
+      "discoveredDate": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "recent",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": "https://anonymous.4open.science/w/arc-6DD5/",
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "仅3项实机任务，每方法每任务12次；早期小规模证据。",
+        "依赖任务及操作者相关的纠正时机，门控可能随操作者变化。",
+        "用于已有基本能力策略的局部修正，不代表能从零学习复杂操作。"
+      ],
+      "assumptions": [],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2610.37547",
+          "claim": "作者、日期、摘要",
+          "checkedAt": "2026-10-31"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.37547v1",
+          "claim": "图1及第3节机制，第4.1—4.2节Miroki右臂/3任务/12次测试，第5节局限",
+          "checkedAt": "2026-10-31"
+        },
+        {
+          "url": "https://anonymous.4open.science/w/arc-6DD5/",
+          "claim": "论文直接链接官方匿名项目，双盲审稿描述与实机演示模块",
+          "checkedAt": "2026-10-31"
+        }
+      ],
+      "researchNotes": [
+        "最新版本日期：2026-10-27。已核验 arXiv v1 全文及论文所链接项目页；项目页称双盲审稿中，具体 venue 未核实。",
+        "原始难度：入门进阶（先理解流程，TD3细节可暂跳过）。阅读建议：收藏，读完第一篇后看。",
+        "建议阅读：15—20分钟：图1→第3节 WHEN/WHERE/WHAT→第4.1节测试预算→局限。留意此处残差是动作修正，不同于第一篇的预测误差。",
+        "论文直接链接的匿名项目页有并排实机视频模块；未核验独立视频文件播放。未发现可验证的实现代码入口，代码字段留空。",
+        "阅读深度：已读论文方法、实验设置、结果与局限以及论文直接链接项目页；未运行复现。",
+        "核验限制：仅核验原始论文、作者项目页/代码页面；没有把第三方索引当作内容依据。无独立复现，未声称已通过同行评审。"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "version": 1,
+  "papers": [
+    {
+      "id": "arxiv-2610-12231",
+      "aliases": [
+        "arxiv:2610.12231"
+      ],
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.12231",
+        "other": null
+      },
+      "firstSeen": "2026-10-31",
+      "lastSeen": "2026-10-31",
+      "appearances": [
+        {
+          "date": "2026-10-31",
+          "profiles": [
+            "lv"
+          ],
+          "classic": false,
+          "novelty": "recent"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-17326",
+      "aliases": [
+        "arxiv:2610.17326"
+      ],
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.17326",
+        "other": null
+      },
+      "firstSeen": "2026-10-31",
+      "lastSeen": "2026-10-31",
+      "appearances": [
+        {
+          "date": "2026-10-31",
+          "profiles": [
+            "xun"
+          ],
+          "classic": false,
+          "novelty": "recent"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-19044",
+      "aliases": [
+        "arxiv:2610.19044"
+      ],
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.19044",
+        "other": null
+      },
+      "firstSeen": "2026-10-31",
+      "lastSeen": "2026-10-31",
+      "appearances": [
+        {
+          "date": "2026-10-31",
+          "profiles": [
+            "xun"
+          ],
+          "classic": false,
+          "novelty": "recent"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-20925",
+      "aliases": [
+        "arxiv:2610.20925"
+      ],
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.20925",
+        "other": null
+      },
+      "firstSeen": "2026-10-31",
+      "lastSeen": "2026-10-31",
+      "appearances": [
+        {
+          "date": "2026-10-31",
+          "profiles": [
+            "xun"
+          ],
+          "classic": false,
+          "novelty": "recent"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-22340",
+      "aliases": [
+        "arxiv:2610.22340"
+      ],
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.22340",
+        "other": null
+      },
+      "firstSeen": "2026-10-31",
+      "lastSeen": "2026-10-31",
+      "appearances": [
+        {
+          "date": "2026-10-31",
+          "profiles": [
+            "xun"
+          ],
+          "classic": false,
+          "novelty": "recent"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-28251",
+      "aliases": [
+        "arxiv:2610.28251"
+      ],
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.28251",
+        "other": null
+      },
+      "firstSeen": "2026-10-31",
+      "lastSeen": "2026-10-31",
+      "appearances": [
+        {
+          "date": "2026-10-31",
+          "profiles": [
+            "xun"
+          ],
+          "classic": false,
+          "novelty": "recent"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-31841",
+      "aliases": [
+        "arxiv:2610.31841"
+      ],
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.31841",
+        "other": null
+      },
+      "firstSeen": "2026-10-31",
+      "lastSeen": "2026-10-31",
+      "appearances": [
+        {
+          "date": "2026-10-31",
+          "profiles": [
+            "xun"
+          ],
+          "classic": false,
+          "novelty": "recent"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-37547",
+      "aliases": [
+        "arxiv:2610.37547"
+      ],
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.37547",
+        "other": null
+      },
+      "firstSeen": "2026-10-31",
+      "lastSeen": "2026-10-31",
+      "appearances": [
+        {
+          "date": "2026-10-31",
+          "profiles": [
+            "lv"
+          ],
+          "classic": false,
+          "novelty": "recent"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-37550",
+      "aliases": [
+        "arxiv:2610.37550"
+      ],
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.37550",
+        "other": null
+      },
+      "firstSeen": "2026-10-31",
+      "lastSeen": "2026-10-31",
+      "appearances": [
+        {
+          "date": "2026-10-31",
+          "profiles": [
+            "xun"
+          ],
+          "classic": false,
+          "novelty": "recent"
+        }
+      ]
+    },
+    {
+      "id": "doi-259aaefa9d9fdb4b874f",
+      "aliases": [
+        "arxiv:2601.06764",
+        "doi:10.4230/lipics.icdt.2026.12"
+      ],
+      "identity": {
+        "doi": "10.4230/lipics.icdt.2026.12",
+        "arxiv": "2601.06764",
+        "other": null
+      },
+      "firstSeen": "2026-10-31",
+      "lastSeen": "2026-10-31",
+      "appearances": [
+        {
+          "date": "2026-10-31",
+          "profiles": [
+            "li"
+          ],
+          "classic": false,
+          "novelty": "older-discovery"
+        }
+      ]
+    },
+    {
+      "id": "doi-d0ded22222dc36782e1a",
+      "aliases": [
+        "arxiv:2411.17603",
+        "doi:10.14778/3742728.3742756"
+      ],
+      "identity": {
+        "doi": "10.14778/3742728.3742756",
+        "arxiv": "2411.17603",
+        "other": null
+      },
+      "firstSeen": "2026-10-31",
+      "lastSeen": "2026-10-31",
+      "appearances": [
+        {
+          "date": "2026-10-31",
+          "profiles": [
+            "li"
+          ],
+          "classic": false,
+          "novelty": "older-discovery"
+        }
+      ]
+    }
+  ]
+}

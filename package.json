@@ -9,7 +9,10 @@
     "test": "node --test tests/*.test.mjs",
     "build": "node scripts/build.mjs",
     "preview": "node scripts/serve.mjs",
-    "new-day": "node scripts/new-day.mjs"
+    "ingest": "node scripts/ingest.mjs",
+    "check": "npm test && npm run validate && npm run build"
   },
-  "engines": { "node": ">=20" }
+  "engines": {
+    "node": ">=20"
+  }
 }

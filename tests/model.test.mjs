@@ -34,7 +34,7 @@ test('搜索同时检查标题、摘要、作者与英文，日期/主题/书签
   assert.equal(filterPapers(papers,{q:'不存在的关键词'}).length,0);
 });
 test('分享路由可往返中文与特殊字符，限制非法日期、视图及超长输入',()=>{
-  const state={view:'bookmarks',demo:true,date:'2026-10-31',q:'模型 & <test>',tag:'研究方法',paper:'demo-research-question'};
+  const state={category:'all',readStatus:'all',view:'bookmarks',demo:true,date:'2026-10-31',q:'模型 & <test>',tag:'研究方法',paper:'demo-research-question'};
   assert.deepEqual(readRoute(routeHash(state)),state);
   const invalid=readRoute('#view=admin&date=../../x&q='+ 'a'.repeat(500));
   assert.equal(invalid.view,'feed');assert.equal(invalid.date,'all');assert.equal(invalid.q.length,200);
@@ -54,9 +54,9 @@ test('校验真实与演示身份分离，来源必填，重复编号拒绝',()=
   assert.ok(validateDay({...day,papers:[{...day.papers[0],notice:''}]},{demo:true}).length);
   assert.ok(validateIndex({version:1,days:[{date:'2026-10-31',file:'../../secrets',count:1,title:'x'}]}).length);
 });
-test('仓库完整数据通过一致性检查，真实收录为空',async()=>{
+test('仓库完整数据通过一致性检查，真实与演示保持分离',async()=>{
   const result=await validateAll();assert.deepEqual(result.errors,[]);
-  assert.equal(JSON.parse(await readFile(join(root,'data','index.json'),'utf8')).days.length,0);
+  assert.ok(Array.isArray(JSON.parse(await readFile(join(root,'data','index.json'),'utf8')).days));
 });
 test('仓库验证拒绝索引计数错误和遗失文件',async()=>{
   const temp=await mkdtemp(join(tmpdir(),'paper-signal-test-'));

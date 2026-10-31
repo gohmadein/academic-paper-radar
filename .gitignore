@@ -6,3 +6,7 @@ node_modules/
 .env.*
 *.log
 qa/
+
+.ingest-*/
+commit-plan.json
+draft-*.json

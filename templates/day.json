@@ -1,7 +1,13 @@
 {
-  "version": 1,
+  "version": 2,
   "date": "YYYY-MM-DD",
-  "title": "填写本期标题",
+  "title": "待填写日报标题",
   "demo": false,
+  "timezone": "Asia/Shanghai",
+  "issueNote": "填写实际选择、短缺与阅读层级说明，不声称全源覆盖。",
+  "coverage": {
+    "checkedSources": [],
+    "limitations": []
+  },
   "papers": []
 }

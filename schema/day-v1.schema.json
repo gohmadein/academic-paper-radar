@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "研究信号日报",
+  "type": "object",
+  "required": ["version", "date", "title", "demo", "papers"],
+  "additionalProperties": false,
+  "properties": {
+    "version": { "const": 1 },
+    "date": { "type": "string", "format": "date", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "title": { "type": "string", "minLength": 1, "maxLength": 120 },
+    "demo": { "type": "boolean" },
+    "papers": { "type": "array", "items": { "$ref": "#/$defs/paper" } }
+  },
+  "allOf": [
+    { "if": { "properties": { "demo": { "const": true } } }, "then": { "properties": { "papers": { "items": { "properties": { "demo": { "const": true }, "notice": { "const": "演示数据，非真实论文" } }, "required": ["notice"] } } } }, "else": { "properties": { "papers": { "items": { "properties": { "demo": { "const": false }, "sources": { "minItems": 1 } } } } } } }
+  ],
+  "$defs": {
+    "paper": {
+      "type": "object",
+      "required": ["id", "title", "authors", "year", "venue", "tags", "summary", "whySelected", "sources", "demo"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{0,99}$" },
+        "title": { "type": "string", "minLength": 1, "maxLength": 10000 },
+        "titleEn": { "type": "string", "maxLength": 2000 },
+        "authors": { "type": "array", "minItems": 1, "maxItems": 50, "items": { "type": "string", "minLength": 1, "maxLength": 200 } },
+        "year": { "type": "integer", "minimum": 1800, "maximum": 2200 },
+        "venue": { "type": "string", "minLength": 1, "maxLength": 10000 },
+        "tags": { "type": "array", "minItems": 1, "maxItems": 50, "items": { "type": "string", "minLength": 1, "maxLength": 200 } },
+        "summary": { "type": "string", "minLength": 1, "maxLength": 10000 },
+        "whySelected": { "type": "string", "minLength": 1, "maxLength": 10000 },
+        "sources": { "type": "array", "items": { "type": "object", "required": ["label", "url"], "additionalProperties": false, "properties": { "label": { "type": "string", "minLength": 1 }, "url": { "type": "string", "format": "uri", "pattern": "^https?://" } } } },
+        "demo": { "type": "boolean" },
+        "notice": { "const": "演示数据，非真实论文" }
+      }
+    }
+  }
+}

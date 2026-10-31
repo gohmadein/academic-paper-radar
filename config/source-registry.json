@@ -1,0 +1,1097 @@
+{
+  "version": 1,
+  "title": "迅 · 机器人文献来源目录",
+  "origin": "用户提供的《文献推荐系统_关注清单 (1).md》",
+  "recordedDate": "2026-10-31",
+  "verification": "按原附件完整转录；此目录本身不表示每个来源已在每日检索中检查",
+  "counts": {
+    "conference": 14,
+    "journal": 20,
+    "arxiv": 6,
+    "lab": 30
+  },
+  "sources": [
+    {
+      "type": "conference",
+      "tier": "1.1 核心会议（10 个）",
+      "name": "CoRL",
+      "details": [
+        "Conference on Robot Learning"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://www.robot-learning.org/"
+        },
+        {
+          "label": "论文／参考入口",
+          "url": "https://proceedings.mlr.press/"
+        }
+      ]
+    },
+    {
+      "type": "conference",
+      "tier": "1.1 核心会议（10 个）",
+      "name": "RSS",
+      "details": [
+        "Robotics: Science and Systems"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://roboticsconference.org/"
+        },
+        {
+          "label": "论文／参考入口",
+          "url": "https://roboticsproceedings.org/"
+        }
+      ]
+    },
+    {
+      "type": "conference",
+      "tier": "1.1 核心会议（10 个）",
+      "name": "ICRA",
+      "details": [
+        "IEEE International Conference on Robotics and Automation"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://www.ieee-ras.org/conferences-workshops/fully-sponsored/icra/"
+        },
+        {
+          "label": "论文／参考入口",
+          "url": "https://ieeexplore.ieee.org/"
+        }
+      ]
+    },
+    {
+      "type": "conference",
+      "tier": "1.1 核心会议（10 个）",
+      "name": "IROS",
+      "details": [
+        "IEEE/RSJ International Conference on Intelligent Robots and Systems"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://www.ieee-ras.org/conferences-workshops/financially-co-sponsored/iros/"
+        },
+        {
+          "label": "论文／参考入口",
+          "url": "https://ieeexplore.ieee.org/"
+        }
+      ]
+    },
+    {
+      "type": "conference",
+      "tier": "1.1 核心会议（10 个）",
+      "name": "CVPR",
+      "details": [
+        "IEEE/CVF Conference on Computer Vision and Pattern Recognition"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://openaccess.thecvf.com/"
+        }
+      ]
+    },
+    {
+      "type": "conference",
+      "tier": "1.1 核心会议（10 个）",
+      "name": "ICCV",
+      "details": [
+        "IEEE/CVF International Conference on Computer Vision"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://openaccess.thecvf.com/"
+        }
+      ]
+    },
+    {
+      "type": "conference",
+      "tier": "1.1 核心会议（10 个）",
+      "name": "ECCV",
+      "details": [
+        "European Conference on Computer Vision"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://www.ecva.net/papers.php"
+        }
+      ]
+    },
+    {
+      "type": "conference",
+      "tier": "1.1 核心会议（10 个）",
+      "name": "NeurIPS",
+      "details": [
+        "Conference on Neural Information Processing Systems"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://proceedings.neurips.cc/"
+        }
+      ]
+    },
+    {
+      "type": "conference",
+      "tier": "1.1 核心会议（10 个）",
+      "name": "ICML",
+      "details": [
+        "International Conference on Machine Learning"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://icml.cc/"
+        },
+        {
+          "label": "论文／参考入口",
+          "url": "https://proceedings.mlr.press/"
+        }
+      ]
+    },
+    {
+      "type": "conference",
+      "tier": "1.1 核心会议（10 个）",
+      "name": "ICLR",
+      "details": [
+        "International Conference on Learning Representations"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://iclr.cc/"
+        },
+        {
+          "label": "论文／参考入口",
+          "url": "https://proceedings.iclr.cc/"
+        }
+      ]
+    },
+    {
+      "type": "conference",
+      "tier": "1.2 扩展会议（4 个）",
+      "name": "3DV",
+      "details": [
+        "International Conference on 3D Vision"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://3dv.org/"
+        }
+      ]
+    },
+    {
+      "type": "conference",
+      "tier": "1.2 扩展会议（4 个）",
+      "name": "Humanoids",
+      "details": [
+        "IEEE-RAS International Conference on Humanoid Robots"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://www.ieee-ras.org/conferences-workshops/financially-co-sponsored/humanoids/"
+        },
+        {
+          "label": "论文／参考入口",
+          "url": "https://ieeexplore.ieee.org/"
+        }
+      ]
+    },
+    {
+      "type": "conference",
+      "tier": "1.2 扩展会议（4 个）",
+      "name": "ICAPS",
+      "details": [
+        "International Conference on Automated Planning and Scheduling"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://www.icaps-conference.org/"
+        },
+        {
+          "label": "论文／参考入口",
+          "url": "https://ojs.aaai.org/index.php/ICAPS"
+        }
+      ]
+    },
+    {
+      "type": "conference",
+      "tier": "1.2 扩展会议（4 个）",
+      "name": "SIGGRAPH",
+      "details": [
+        "ACM SIGGRAPH"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://www.siggraph.org/"
+        },
+        {
+          "label": "论文／参考入口",
+          "url": "https://dl.acm.org/"
+        }
+      ]
+    },
+    {
+      "type": "journal",
+      "tier": "1.3 核心期刊（7 个）",
+      "name": "T-RO",
+      "details": [
+        "IEEE Transactions on Robotics"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://www.ieee-ras.org/Publications/T-RO/"
+        },
+        {
+          "label": "论文／参考入口",
+          "url": "https://ieeexplore.ieee.org/"
+        }
+      ]
+    },
+    {
+      "type": "journal",
+      "tier": "1.3 核心期刊（7 个）",
+      "name": "IJRR",
+      "details": [
+        "International Journal of Robotics Research"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://journals.sagepub.com/home/ijr"
+        }
+      ]
+    },
+    {
+      "type": "journal",
+      "tier": "1.3 核心期刊（7 个）",
+      "name": "RA-L",
+      "details": [
+        "IEEE Robotics and Automation Letters"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://www.ieee-ras.org/publications/ra-l/"
+        },
+        {
+          "label": "论文／参考入口",
+          "url": "https://ieeexplore.ieee.org/"
+        }
+      ]
+    },
+    {
+      "type": "journal",
+      "tier": "1.3 核心期刊（7 个）",
+      "name": "Science Robotics",
+      "details": [
+        "Science Robotics"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://www.science.org/journal/scirobotics"
+        }
+      ]
+    },
+    {
+      "type": "journal",
+      "tier": "1.3 核心期刊（7 个）",
+      "name": "TPAMI",
+      "details": [
+        "IEEE Transactions on Pattern Analysis and Machine Intelligence"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://www.computer.org/csdl/journal/tp"
+        },
+        {
+          "label": "论文／参考入口",
+          "url": "https://ieeexplore.ieee.org/"
+        }
+      ]
+    },
+    {
+      "type": "journal",
+      "tier": "1.3 核心期刊（7 个）",
+      "name": "IJCV",
+      "details": [
+        "International Journal of Computer Vision"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://link.springer.com/journal/11263"
+        }
+      ]
+    },
+    {
+      "type": "journal",
+      "tier": "1.3 核心期刊（7 个）",
+      "name": "Nature Machine Intelligence",
+      "details": [
+        "Nature Machine Intelligence"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://www.nature.com/natmachintell/"
+        },
+        {
+          "label": "论文／参考入口",
+          "url": "https://www.nature.com/natmachintell/aims"
+        }
+      ]
+    },
+    {
+      "type": "journal",
+      "tier": "1.4 新刊观察（1 个）",
+      "name": "T-RL",
+      "details": [
+        "IEEE Transactions on Robot Learning"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://www.ieee-ras.org/Publications/T-RL/"
+        },
+        {
+          "label": "论文／参考入口",
+          "url": "https://www.ieee-ras.org/new-journal-launch-ieee-transactions-on-robot-learning-t-rl/"
+        }
+      ]
+    },
+    {
+      "type": "journal",
+      "tier": "1.5 扩展期刊（8 个）",
+      "name": "JMLR",
+      "details": [
+        "Journal of Machine Learning Research"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://jmlr.org/"
+        }
+      ]
+    },
+    {
+      "type": "journal",
+      "tier": "1.5 扩展期刊（8 个）",
+      "name": "TMLR",
+      "details": [
+        "Transactions on Machine Learning Research"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://jmlr.org/tmlr/"
+        }
+      ]
+    },
+    {
+      "type": "journal",
+      "tier": "1.5 扩展期刊（8 个）",
+      "name": "ACM TOG",
+      "details": [
+        "ACM Transactions on Graphics"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://dl.acm.org/journal/tog"
+        }
+      ]
+    },
+    {
+      "type": "journal",
+      "tier": "1.5 扩展期刊（8 个）",
+      "name": "JFR",
+      "details": [
+        "Journal of Field Robotics"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://onlinelibrary.wiley.com/journal/15564967"
+        }
+      ]
+    },
+    {
+      "type": "journal",
+      "tier": "1.5 扩展期刊（8 个）",
+      "name": "T-FR",
+      "details": [
+        "IEEE Transactions on Field Robotics"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://www.ieee-ras.org/Publications/T-FR/"
+        }
+      ]
+    },
+    {
+      "type": "journal",
+      "tier": "1.5 扩展期刊（8 个）",
+      "name": "Autonomous Robots",
+      "details": [
+        "Autonomous Robots"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://link.springer.com/journal/10514"
+        }
+      ]
+    },
+    {
+      "type": "journal",
+      "tier": "1.5 扩展期刊（8 个）",
+      "name": "T-ASE",
+      "details": [
+        "IEEE Transactions on Automation Science and Engineering"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://www.ieee-ras.org/publications/t-ase/"
+        }
+      ]
+    },
+    {
+      "type": "journal",
+      "tier": "1.5 扩展期刊（8 个）",
+      "name": "T-MECH",
+      "details": [
+        "IEEE/ASME Transactions on Mechatronics"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://www.ieee-asme-mechatronics.info/"
+        }
+      ]
+    },
+    {
+      "type": "journal",
+      "tier": "1.6 综合期刊（4 个）",
+      "name": "Nature",
+      "details": [
+        "Nature"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://www.nature.com/nature/"
+        }
+      ]
+    },
+    {
+      "type": "journal",
+      "tier": "1.6 综合期刊（4 个）",
+      "name": "Science",
+      "details": [
+        "Science"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://www.science.org/journal/science"
+        }
+      ]
+    },
+    {
+      "type": "journal",
+      "tier": "1.6 综合期刊（4 个）",
+      "name": "Nature Communications",
+      "details": [
+        "Nature Communications"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://www.nature.com/ncomms/"
+        }
+      ]
+    },
+    {
+      "type": "journal",
+      "tier": "1.6 综合期刊（4 个）",
+      "name": "Science Advances",
+      "details": [
+        "Science Advances"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://www.science.org/journal/sciadv"
+        }
+      ]
+    },
+    {
+      "type": "arxiv",
+      "tier": "2.1 核心分类（3 个）",
+      "name": "cs.RO",
+      "details": [
+        "Robotics"
+      ],
+      "links": [
+        {
+          "label": "近期论文",
+          "url": "https://arxiv.org/list/cs.RO/recent"
+        }
+      ]
+    },
+    {
+      "type": "arxiv",
+      "tier": "2.1 核心分类（3 个）",
+      "name": "cs.CV",
+      "details": [
+        "Computer Vision and Pattern Recognition"
+      ],
+      "links": [
+        {
+          "label": "近期论文",
+          "url": "https://arxiv.org/list/cs.CV/recent"
+        }
+      ]
+    },
+    {
+      "type": "arxiv",
+      "tier": "2.1 核心分类（3 个）",
+      "name": "cs.LG",
+      "details": [
+        "Machine Learning"
+      ],
+      "links": [
+        {
+          "label": "近期论文",
+          "url": "https://arxiv.org/list/cs.LG/recent"
+        }
+      ]
+    },
+    {
+      "type": "arxiv",
+      "tier": "2.2 扩展分类（3 个）",
+      "name": "cs.AI",
+      "details": [
+        "Artificial Intelligence"
+      ],
+      "links": [
+        {
+          "label": "近期论文",
+          "url": "https://arxiv.org/list/cs.AI/recent"
+        }
+      ]
+    },
+    {
+      "type": "arxiv",
+      "tier": "2.2 扩展分类（3 个）",
+      "name": "eess.SY",
+      "details": [
+        "Systems and Control"
+      ],
+      "links": [
+        {
+          "label": "近期论文",
+          "url": "https://arxiv.org/list/eess.SY/recent"
+        }
+      ]
+    },
+    {
+      "type": "arxiv",
+      "tier": "2.2 扩展分类（3 个）",
+      "name": "eess.IV",
+      "details": [
+        "Image and Video Processing"
+      ],
+      "links": [
+        {
+          "label": "近期论文",
+          "url": "https://arxiv.org/list/eess.IV/recent"
+        }
+      ]
+    },
+    {
+      "type": "lab",
+      "tier": "3.1 北美高校（9 个研究入口）",
+      "name": "Berkeley RAIL / RLL",
+      "details": [
+        "加州大学伯克利分校",
+        "Sergey Levine；Pieter Abbeel"
+      ],
+      "links": [
+        {
+          "label": "RAIL",
+          "url": "https://rail.eecs.berkeley.edu/"
+        },
+        {
+          "label": "RLL",
+          "url": "https://rll.berkeley.edu/"
+        }
+      ]
+    },
+    {
+      "type": "lab",
+      "tier": "3.1 北美高校（9 个研究入口）",
+      "name": "Stanford IRIS",
+      "details": [
+        "斯坦福大学",
+        "Chelsea Finn"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://irislab.stanford.edu/"
+        }
+      ]
+    },
+    {
+      "type": "lab",
+      "tier": "3.1 北美高校（9 个研究入口）",
+      "name": "Stanford REAL",
+      "details": [
+        "斯坦福大学",
+        "Shuran Song"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://real.stanford.edu/"
+        }
+      ]
+    },
+    {
+      "type": "lab",
+      "tier": "3.1 北美高校（9 个研究入口）",
+      "name": "Stanford SVL",
+      "details": [
+        "斯坦福大学",
+        "Fei-Fei Li、Jiajun Wu 等"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://svl.stanford.edu/"
+        }
+      ]
+    },
+    {
+      "type": "lab",
+      "tier": "3.1 北美高校（9 个研究入口）",
+      "name": "MIT Improbable AI",
+      "details": [
+        "麻省理工学院",
+        "Pulkit Agrawal"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://improbableai.com/"
+        }
+      ]
+    },
+    {
+      "type": "lab",
+      "tier": "3.1 北美高校（9 个研究入口）",
+      "name": "CMU Pathak / Abhinav Gupta",
+      "details": [
+        "卡内基梅隆大学",
+        "Deepak Pathak；Abhinav Gupta"
+      ],
+      "links": [
+        {
+          "label": "Pathak 团队",
+          "url": "https://www.cs.cmu.edu/~dpathak/"
+        },
+        {
+          "label": "Abhinav Gupta 团队",
+          "url": "https://www.cs.cmu.edu/~abhinavg/"
+        }
+      ]
+    },
+    {
+      "type": "lab",
+      "tier": "3.1 北美高校（9 个研究入口）",
+      "name": "UT Austin RPL",
+      "details": [
+        "得克萨斯大学奥斯汀分校",
+        "Yuke Zhu"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://ut-austin-rpl.github.io/"
+        }
+      ]
+    },
+    {
+      "type": "lab",
+      "tier": "3.1 北美高校（9 个研究入口）",
+      "name": "UCSD Hao Su / Xiaolong Wang",
+      "details": [
+        "加州大学圣迭戈分校",
+        "Hao Su；Xiaolong Wang"
+      ],
+      "links": [
+        {
+          "label": "Hao Su 团队",
+          "url": "https://cseweb.ucsd.edu/~haosu/"
+        },
+        {
+          "label": "Xiaolong Wang 团队",
+          "url": "https://xiaolonw.github.io/"
+        }
+      ]
+    },
+    {
+      "type": "lab",
+      "tier": "3.1 北美高校（9 个研究入口）",
+      "name": "UT Austin Computer Vision Group",
+      "details": [
+        "得克萨斯大学奥斯汀分校",
+        "Kristen Grauman"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://www.cs.utexas.edu/~grauman/"
+        }
+      ]
+    },
+    {
+      "type": "lab",
+      "tier": "3.2 欧洲高校与研究院（6 个研究入口）",
+      "name": "ETH RSL",
+      "details": [
+        "ETH Zürich",
+        "Marco Hutter"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://rsl.ethz.ch/"
+        }
+      ]
+    },
+    {
+      "type": "lab",
+      "tier": "3.2 欧洲高校与研究院（6 个研究入口）",
+      "name": "UZH RPG",
+      "details": [
+        "University of Zürich",
+        "Davide Scaramuzza"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://rpg.ifi.uzh.ch/"
+        }
+      ]
+    },
+    {
+      "type": "lab",
+      "tier": "3.2 欧洲高校与研究院（6 个研究入口）",
+      "name": "TU Darmstadt IAS",
+      "details": [
+        "TU Darmstadt",
+        "Jan Peters"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://www.ias.informatik.tu-darmstadt.de/"
+        }
+      ]
+    },
+    {
+      "type": "lab",
+      "tier": "3.2 欧洲高校与研究院（6 个研究入口）",
+      "name": "EPFL LASA",
+      "details": [
+        "EPFL",
+        "Aude Billard"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://www.epfl.ch/labs/lasa/"
+        }
+      ]
+    },
+    {
+      "type": "lab",
+      "tier": "3.2 欧洲高校与研究院（6 个研究入口）",
+      "name": "Oxford VGG",
+      "details": [
+        "University of Oxford",
+        "Andrew Zisserman；Andrea Vedaldi；João Henriques等"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://www.robots.ox.ac.uk/~vgg/"
+        }
+      ]
+    },
+    {
+      "type": "lab",
+      "tier": "3.2 欧洲高校与研究院（6 个研究入口）",
+      "name": "MPI-IS Perceiving Systems",
+      "details": [
+        "Max Planck Institute for Intelligent Systems",
+        "Michael J. Black 等"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://is.mpg.de/ps"
+        }
+      ]
+    },
+    {
+      "type": "lab",
+      "tier": "3.3 中国内地、香港与新加坡（9 个研究入口）",
+      "name": "CUHK MMLab",
+      "details": [
+        "香港中文大学",
+        "王晓刚、林达华、李鸿升等"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://mmlab.ie.cuhk.edu.hk/"
+        }
+      ]
+    },
+    {
+      "type": "lab",
+      "tier": "3.3 中国内地、香港与新加坡（9 个研究入口）",
+      "name": "MMLab@NTU",
+      "details": [
+        "南洋理工大学",
+        "Chen Change Loy；Ziwei Liu；Xingang Pan"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://www.mmlab-ntu.com/"
+        }
+      ]
+    },
+    {
+      "type": "lab",
+      "tier": "3.3 中国内地、香港与新加坡（9 个研究入口）",
+      "name": "HKU MMLab",
+      "details": [
+        "香港大学",
+        "罗平"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://mmlab.hk/"
+        }
+      ]
+    },
+    {
+      "type": "lab",
+      "tier": "3.3 中国内地、香港与新加坡（9 个研究入口）",
+      "name": "DVLab",
+      "details": [
+        "香港科技大学；跨校成员网络",
+        "贾佳亚等"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://www.dvlab.ai/"
+        }
+      ]
+    },
+    {
+      "type": "lab",
+      "tier": "3.3 中国内地、香港与新加坡（9 个研究入口）",
+      "name": "OpenGVLab",
+      "details": [
+        "上海人工智能实验室",
+        "通用视觉研究团队"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://github.com/OpenGVLab"
+        }
+      ]
+    },
+    {
+      "type": "lab",
+      "tier": "3.3 中国内地、香港与新加坡（9 个研究入口）",
+      "name": "PKU EPIC",
+      "details": [
+        "北京大学",
+        "王鹤（He Wang）"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://pku-epic.github.io/"
+        }
+      ]
+    },
+    {
+      "type": "lab",
+      "tier": "3.3 中国内地、香港与新加坡（9 个研究入口）",
+      "name": "SJTU MVIG",
+      "details": [
+        "上海交通大学人工智能学院",
+        "卢策吾（Cewu Lu）"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://www.mvig.org/"
+        }
+      ]
+    },
+    {
+      "type": "lab",
+      "tier": "3.3 中国内地、香港与新加坡（9 个研究入口）",
+      "name": "Tsinghua TEA",
+      "details": [
+        "清华大学交叉信息研究院（IIIS）",
+        "许华哲（Huazhe Xu）"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://hxu.rocks/index.html"
+        }
+      ]
+    },
+    {
+      "type": "lab",
+      "tier": "3.3 中国内地、香港与新加坡（9 个研究入口）",
+      "name": "NUS CLeAR / AdaComp",
+      "details": [
+        "新加坡国立大学",
+        "Harold Soh；David Hsu"
+      ],
+      "links": [
+        {
+          "label": "CLeAR",
+          "url": "https://clear-nus.github.io/"
+        },
+        {
+          "label": "AdaComp",
+          "url": "https://adacomp.org/"
+        }
+      ]
+    },
+    {
+      "type": "lab",
+      "tier": "3.4 企业与独立研究机构（6 个研究入口）",
+      "name": "Google DeepMind Robotics",
+      "details": [
+        "Google DeepMind",
+        "研究团队"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://deepmind.google/models/gemini-robotics/"
+        }
+      ]
+    },
+    {
+      "type": "lab",
+      "tier": "3.4 企业与独立研究机构（6 个研究入口）",
+      "name": "Meta FAIR 视觉与具身团队",
+      "details": [
+        "Meta",
+        "多团队"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://ai.meta.com/research/"
+        }
+      ]
+    },
+    {
+      "type": "lab",
+      "tier": "3.4 企业与独立研究机构（6 个研究入口）",
+      "name": "NVIDIA GEAR",
+      "details": [
+        "NVIDIA",
+        "Jim Fan；Yuke Zhu"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://research.nvidia.com/labs/gear/"
+        }
+      ]
+    },
+    {
+      "type": "lab",
+      "tier": "3.4 企业与独立研究机构（6 个研究入口）",
+      "name": "Physical Intelligence",
+      "details": [
+        "Physical Intelligence",
+        "研究团队"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://www.pi.website/"
+        }
+      ]
+    },
+    {
+      "type": "lab",
+      "tier": "3.4 企业与独立研究机构（6 个研究入口）",
+      "name": "Ai2 PRIOR / Robotics",
+      "details": [
+        "Allen Institute for AI（Ai2）",
+        "PRIOR／Robotics 相关团队"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://allenai.org/embodied-ai"
+        }
+      ]
+    },
+    {
+      "type": "lab",
+      "tier": "3.4 企业与独立研究机构（6 个研究入口）",
+      "name": "Toyota Research Institute Robotics",
+      "details": [
+        "Toyota Research Institute",
+        "多团队"
+      ],
+      "links": [
+        {
+          "label": "官方入口",
+          "url": "https://www.tri.global/"
+        }
+      ]
+    }
+  ]
+}
