@@ -152,7 +152,7 @@ test('Source view follows profiles, preserves filters, supports repeated toggles
   assert.equal(h.element('hero').hidden,true);
   assert.equal(h.element('institution-gallery').innerHTML,'');
   h.click({sourceProfile:'lv'});
-  assert.equal((h.element('content').innerHTML.match(/class="watchlist-pending"/g)||[]).length,5);
+  assert.equal((h.element('content').innerHTML.match(/class="watchlist-pending"/g)||[]).length,4);
   h.back();assert.match(h.element('content').innerHTML,/Diego Calvanese/);
   h.forward();assert.equal(h.run('state.category'),'lv');
   h.click({sourceProfile:'xun'});assert.match(h.element('content').innerHTML,/Berkeley RAIL/);

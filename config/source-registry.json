@@ -1039,12 +1039,17 @@
       "name": "NVIDIA GEAR",
       "details": [
         "NVIDIA",
-        "Jim Fan；Yuke Zhu"
+        "Jim Fan；Yuke Zhu",
+        "同时关注 NVIDIA Robotics Research 的机器人相关成果；与 GEAR 共用一个入口条目，避免重复登记。"
       ],
       "links": [
         {
           "label": "官方入口",
           "url": "https://research.nvidia.com/labs/gear/"
+        },
+        {
+          "label": "NVIDIA Robotics Research",
+          "url": "https://www.nvidia.com/en-us/research/robotics/"
         }
       ]
     },
@@ -1092,6 +1097,14 @@
           "url": "https://www.tri.global/"
         }
       ]
+    }
+  ],
+  "supplements": [
+    {
+      "date": "2026-10-31",
+      "source": "NVIDIA GEAR",
+      "note": "按用户补充要求扩展 NVIDIA Robotics Research 官方入口；原 Markdown 清单及其链接保留。",
+      "evidenceUrl": "https://www.nvidia.com/en-us/research/robotics/"
     }
   ]
 }

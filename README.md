@@ -36,7 +36,7 @@ npm run preview
 ```text
 config/digest-rules.json       公开方向、质量、经典与medium研究意图
 config/source-registry.json    迅完整70项来源及原附件中的全部入口链接
-config/profile-watchlists.json 各方向界面关注目录、说明与李的来源；驴留空待补充
+config/profile-watchlists.json 各方向界面关注目录、说明与李的来源；驴通过引用复用团队
 config/xun-source-watchlist.md 原始关注清单文本，保留全部分组与说明
 docs/DIGEST-INTERFACE.md        研究方输入契约与字段定义
 data/days/YYYY-MM-DD.json      已发布日报v2（历史/演示v1兼容）
@@ -102,4 +102,10 @@ node scripts/ingest.mjs normalized.json --plan > commit-plan.json
 
 维护时，迅的 70 项直接复用 `config/source-registry.json`（不复制）；其他方向和说明编辑 `config/profile-watchlists.json`。条目沿用 `{type,tier,name,details,links}` 格式，`type` 为 `conference/journal/lab/arxiv/author`；同组多团队的全部链接必须保留。新增来源后更新对应数量测试，运行 `npm run check`。构建只发布这两个明确允许的配置文件，不暴露自动任务配置。
 
-界面关注名单不是当日检索日志，也不替代 `config/digest-rules.json` 和外部搜集流程。驴的界面按本次要求留空，不删除既有研究方向、历史来源或自动化筛选。李的 SIGMOD/PACMMOD、VLDB/PVLDB 分列会议／期刊，不重复计算论文。李的作者与 Ontop 链接核对自学者主页及 Ontop 官方 research 页面；没有核验的场所只显示名称，不猜网址。
+界面关注名单不是当日检索日志，也不替代 `config/digest-rules.json` 和外部搜集流程。驴的团队栏按后续补充名单显示，其他四栏待补充；不删除既有研究方向、历史来源或自动化筛选。李的 SIGMOD/PACMMOD、VLDB/PVLDB 分列会议／期刊，不重复计算论文。李的作者与 Ontop 链接核对自学者主页及 Ontop 官方 research 页面；没有核验的场所只显示名称，不猜网址。
+
+#### 驴的团队补充与来源复用
+
+驴的实验室／团队栏已补入 NVIDIA GEAR / Robotics Research、Physical Intelligence、Google DeepMind Robotics，以及现有目录中的 Stanford IRIS／REAL／SVL、Berkeley RAIL／RLL，共 7 个分组条目；其余四栏仍待补充。两校按这些具体团队跟踪，不声称覆盖所有实验室。
+
+`registryRefs` 用来源注册表的精确名称引用条目，避免复制团队链接与维护漂移。迅继续读取整个注册表，不重复添加已有团队。NVIDIA Robotics Research 的官方入口补充到既有 GEAR 条目，原 GEAR 链接保留；记录在注册表 `supplements`，不改原始 Markdown。新增引用需通过测试确认存在。此目录更新不更改已收录论文或自动搜集规则。

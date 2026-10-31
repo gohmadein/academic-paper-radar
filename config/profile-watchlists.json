@@ -319,12 +319,22 @@
     },
     "lv": {
       "title": "驴 · 关注重点",
-      "scope": "关注重点名单待补充。",
+      "scope": "关注机器人学习与操作相关团队：NVIDIA GEAR / Robotics Research、Physical Intelligence、Google DeepMind Robotics，以及 Stanford、Berkeley 的相关机器人实验室。",
       "notes": [
-        "会议、期刊、实验室／团队、arXiv 与作者名单暂未提供，保留对应栏目等待补充。",
-        "此处是新的界面关注名单，不表示删除或替代既有自动搜集方向与历史研究规则。"
+        "会议、期刊、arXiv 与独立作者名单待补充。",
+        "Stanford 暂按已有目录的 IRIS、REAL、SVL 具体团队跟踪；Berkeley 暂按 RAIL / RLL 跟踪，保留两个团队链接，不表示覆盖两校全部实验室。",
+        "只关注所列团队的机器人相关成果；名单不是每日全量覆盖承诺，也不替代既有自动搜集方向与历史研究规则。"
       ],
-      "sources": []
+      "sources": [],
+      "registryRefs": [
+        "NVIDIA GEAR",
+        "Physical Intelligence",
+        "Google DeepMind Robotics",
+        "Stanford IRIS",
+        "Stanford REAL",
+        "Stanford SVL",
+        "Berkeley RAIL / RLL"
+      ]
     }
   }
 }

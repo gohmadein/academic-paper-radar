@@ -47,3 +47,10 @@ node scripts/ingest.mjs normalized.json --plan 输出3文件完整内容与SHA25
 - 页面可见标题与导航统一改名为「关注重点」，原有来源数据、五类栏目和驴的待补充状态保留；不更改论文或搜集规则。
 - `npm run check`：54 项测试、数据校验及确定性构建通过。新增测试覆盖父子导航结构、直接打开各目录、父项返回推送、重复点击、后退、折叠侧栏的可访问名称；已有日期、搜索与历史测试继续通过。
 - 已检查用户截图以确认位置问题。真实浏览器像素／交互 QA 仍未重跑，沿用上节沙箱限制说明；手机无溢出仅基于自适应四列、可收缩容器与子入口短标签的代码检查，未声称真机验证。
+
+## 2026-10-31 驴的团队补充
+
+- 驴引用 7 个现有来源条目：NVIDIA GEAR、Physical Intelligence、Google DeepMind Robotics、Stanford IRIS／REAL／SVL、Berkeley RAIL／RLL。Berkeley 两个链接完整保留；其他四个栏目继续待补充。
+- NVIDIA Robotics Research 官方页面 `https://www.nvidia.com/en-us/research/robotics/` 已通过网页读取核验。该页面列有 GEAR，将总览链接并入原 GEAR 条目，迅和驴共同复用，未复制条目。迅仍为 30 个分组团队入口。
+- `npm run check`：55 项测试通过、数据验证和确定性构建通过。新增验证引用同一注册表对象、引用缺失拒绝、NVIDIA 两个链接、两校具体团队范围与去重。
+- 浏览器像素／真机 QA 未新增执行；此前沙箱限制及 VM 测试边界不变。没有修改论文数据或自动搜集规则。
