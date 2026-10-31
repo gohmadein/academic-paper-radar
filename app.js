@@ -141,12 +141,9 @@ function emptyState(kind) {
 
 function render() {
   const active = document.activeElement;
-  const focusSelector = active?.dataset?.category ? `[data-category="${CSS.escape(active.dataset.category)}"]` : active?.dataset?.tag ? `${active.closest('#tags')?'#tags ':''}[data-tag="${CSS.escape(active.dataset.tag)}"]` : active?.dataset?.bookmark ? `[data-bookmark="${CSS.escape(active.dataset.bookmark)}"]` : active?.dataset?.date ? `[data-date="${CSS.escape(active.dataset.date)}"]` : null;
+  const focusSelector = active?.dataset?.sourceProfile ? `[data-source-profile="${CSS.escape(active.dataset.sourceProfile)}"]` : active?.dataset?.category ? `[data-category="${CSS.escape(active.dataset.category)}"]` : active?.dataset?.tag ? `${active.closest('#tags')?'#tags ':''}[data-tag="${CSS.escape(active.dataset.tag)}"]` : active?.dataset?.bookmark ? `[data-bookmark="${CSS.escape(active.dataset.bookmark)}"]` : active?.dataset?.date ? `[data-date="${CSS.escape(active.dataset.date)}"]` : null;
   const {days,papers} = collection();
-  $('category-tabs').innerHTML=['all',...Object.keys(PROFILES)].map(k=>`<button class="profile-link ${k!=='all'?'profile-'+k:''} ${state.category===k?'active':''}" data-category="${k}" aria-label="${k==='all'?'全部方向':PROFILES[k].label+'的推送'}" aria-pressed="${state.category===k}" title="${k==='all'?'浏览全部研究方向':e(PROFILES[k].description)}"><span class="profile-symbol" aria-hidden="true">${k==='all'?'<svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>':PROFILES[k].label}</span><span class="profile-link-copy"><strong>${k==='all'?'全部方向':PROFILES[k].label+'的推送'}</strong><small>${k==='all'?'发现全部研究信号':k==='xun'?'机器人研究':k==='li'?'知识图谱与理论':'机器人学习入门'}</small></span><span class="profile-selected" aria-hidden="true">●</span></button>`).join('');
-  $('source-toggle').setAttribute('aria-pressed',String(state.view==='sources'));
-  $('source-toggle-label').textContent=(PROFILES[state.category]?.label || '各方向')+' · 关注来源';
-  $('source-toggle').setAttribute('aria-label',(PROFILES[state.category]?.label || '各方向')+' · 关注来源');
+  $('category-tabs').innerHTML=['all',...Object.keys(PROFILES)].map(k=>`<div class="profile-nav-item"><button class="profile-link ${k!=='all'?'profile-'+k:''} ${state.category===k&&state.view!=='sources'?'active':''}" data-category="${k}" aria-label="${k==='all'?'全部方向':PROFILES[k].label+'的推送'}" aria-pressed="${state.category===k&&state.view!=='sources'}" title="${k==='all'?'浏览全部研究方向':e(PROFILES[k].description)}"><span class="profile-symbol" aria-hidden="true">${k==='all'?'<svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>':PROFILES[k].label}</span><span class="profile-link-copy"><strong>${k==='all'?'全部方向':PROFILES[k].label+'的推送'}</strong><small>${k==='all'?'发现全部研究信号':k==='xun'?'机器人研究':k==='li'?'知识图谱与理论':'机器人学习入门'}</small></span><span class="profile-selected" aria-hidden="true">●</span></button>${k==='all'?'':`<div class="profile-subnav"><button class="profile-focus-link ${state.category===k&&state.view==='sources'?'active':''}" data-source-profile="${k}" aria-label="${e(PROFILES[k].label)}的关注重点" title="${e(PROFILES[k].label)}的关注重点" ${state.category===k&&state.view==='sources'?'aria-current="page"':''}><span aria-hidden="true">◎</span><span class="focus-label">关注重点</span></button></div>`}</div>`).join('');
   $('read-select').value=state.readStatus;
   $('issue-panel').innerHTML=state.view==='feed'?issueReport(days.find(d=>d.date===state.date)||days[0]):'';
   updateViewChrome();
@@ -165,7 +162,7 @@ function render() {
   const filtered = filterPapers(papers,{...state,read:reads,bookmarks:state.view==='bookmarks'?bookmarks:null});
   $('institution-gallery').innerHTML=state.view==='feed'&&!state.demo?institutionGallery(filtered,data.institutions):'';
   const isFiltered = state.q || state.tag!=='all' || state.date!=='all' || state.category!=='all' || state.readStatus!=='all';
-  $('view-title').childNodes[0].textContent = state.view === 'sources' ? '关注来源' : state.view === 'archive' ? '日期归档' : state.view === 'bookmarks' ? '本机书签' : state.category==='all'?'每日精选':PROFILES[state.category].label+'的推送';
+  $('view-title').childNodes[0].textContent = state.view === 'sources' ? '关注重点' : state.view === 'archive' ? '日期归档' : state.view === 'bookmarks' ? '本机书签' : state.category==='all'?'每日精选':PROFILES[state.category].label+'的推送';
   $('edition-label').textContent = state.demo ? '演示档案' : !days.length ? '等待首期' : state.date === 'all' ? '全部日期' : state.date;
   $('edition-status').textContent = state.demo ? 'DEMO / NOT REAL PAPERS' : papers.length ? 'CURATED & ARCHIVED' : 'AWAITING SIGNAL';
   const isSources=state.view==='sources';
@@ -220,8 +217,9 @@ document.addEventListener('click', event => {
   const b = event.target.closest('button');
   if (!b) return;
   if(b.dataset.institutionScroll){scrollInstitutions($('institution-strip'),Number(b.dataset.institutionScroll));return;}
+  if(PROFILES[b.dataset.sourceProfile]){go({category:b.dataset.sourceProfile,view:'sources',paper:''});return;}
   if(b.dataset.action==='sources'){go(sourceViewPatch(state));return;}
-  if(b.dataset.category)go({category:b.dataset.category,tag:topicForProfile(collection().papers,state.tag,b.dataset.category),view:state.view==='archive'?'feed':state.view,paper:''});
+  if(b.dataset.category)go({category:b.dataset.category,tag:topicForProfile(collection().papers,state.tag,b.dataset.category),view:['archive','sources'].includes(state.view)?'feed':state.view,paper:''});
   else if(b.dataset.read){if(reads.has(b.dataset.read))reads.delete(b.dataset.read);else reads.add(b.dataset.read);try{localStorage.setItem(READ_KEY,JSON.stringify([...reads]));}catch{toast('阅读状态仅在当前会话可用');}render();}
   else if (b.dataset.view) go({view:b.dataset.view,q:'',tag:'all',date:b.dataset.view==='feed'&&!state.demo&&data?.real.days[0]?data.real.days[0].date:'all',paper:''});
   else if(b.dataset.share)requestShare(b.dataset.share);

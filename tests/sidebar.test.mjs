@@ -145,17 +145,17 @@ test('Broad theme chips follow profiles, compose in bookmarks, and preserve lega
 test('Source view follows profiles, preserves filters, supports repeated toggles and Back/Forward',async()=>{
   const h=await appHarness();
   h.run("go({category:'li',q:'Gatterbauer',date:'2026-10-31',tag:'all'})");
-  h.click({action:'sources'});
+  h.click({sourceProfile:'li'});
   assert.equal(h.run('state.view'),'sources');
   assert.match(h.element('content').innerHTML,/Diego Calvanese/);
   assert.equal(h.element('filter-panel').hidden,true);
   assert.equal(h.element('hero').hidden,true);
   assert.equal(h.element('institution-gallery').innerHTML,'');
-  h.click({category:'lv'});
+  h.click({sourceProfile:'lv'});
   assert.equal((h.element('content').innerHTML.match(/class="watchlist-pending"/g)||[]).length,5);
   h.back();assert.match(h.element('content').innerHTML,/Diego Calvanese/);
   h.forward();assert.equal(h.run('state.category'),'lv');
-  h.click({category:'xun'});assert.match(h.element('content').innerHTML,/Berkeley RAIL/);
+  h.click({sourceProfile:'xun'});assert.match(h.element('content').innerHTML,/Berkeley RAIL/);
   h.click({action:'sources'});assert.equal(h.run('state.view'),'feed');
   assert.equal(h.run('state.q'),'Gatterbauer');assert.equal(h.run('state.date'),'2026-10-31');
   for(let i=0;i<2;i++){h.click({action:'sources'});h.click({action:'sources'});}
@@ -163,4 +163,24 @@ test('Source view follows profiles, preserves filters, supports repeated toggles
   h.run("go({category:'all',view:'sources'})");assert.match(h.element('content').innerHTML,/选择一个方向/);
   h.click({view:'bookmarks'});assert.equal(h.element('bookmark-transfer').hidden,false);
   h.click({view:'archive'});assert.equal(h.run('state.view'),'archive');
+});
+
+
+test('Each sidebar profile owns its focus child; parent returns to feed and child remains directly addressable',async()=>{
+  const h=await appHarness(),html=await read('index.html'),css=await read('styles.css');
+  assert.ok(!html.includes('source-toggle'));
+  for(const category of ['xun','li','lv']){
+    const nav=h.element('category-tabs').innerHTML;
+    assert.match(nav,new RegExp('data-category="'+category+'"[\\s\\S]*?</button><div class="profile-subnav"><button[^>]*data-source-profile="'+category+'"'));
+    h.click({sourceProfile:category});assert.equal(h.run('state.category'),category);assert.equal(h.run('state.view'),'sources');
+    assert.match(h.element('category-tabs').innerHTML,new RegExp('data-source-profile="'+category+'"[^>]*aria-current="page"'));
+    h.click({sourceProfile:category});assert.equal(h.run('state.view'),'sources');
+    h.click({category});assert.equal(h.run('state.view'),'feed');
+    h.back();assert.equal(h.run('state.view'),'sources');
+  }
+  h.events['rail-toggle:click']();h.click({sourceProfile:'li'});
+  assert.match(h.element('category-tabs').innerHTML,/aria-label="李的关注重点"/);
+  assert.equal(h.run('state.view'),'sources');
+  assert.ok(css.includes('.rail-collapsed .focus-label{display:none}'));
+  assert.ok(!h.element('content').innerHTML.includes('关注来源'));
 });

@@ -411,9 +411,6 @@ main{width:100%;min-width:0;max-width:1360px;padding:0 36px}
 @media(max-width:800px){.navigation-rail .about-link{width:44px;min-height:44px;justify-content:center;padding:0}.navigation-rail .about-link .utility-label{display:none}}
 
 /* Profile source directories are a separate reading view, never a feed sidebar dump. */
-.source-toggle{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-top:12px;padding:10px 8px;border:1px solid var(--line,#dce3ed);border-radius:7px;background:#fff;color:#2459c7;font:inherit;font-size:12px;cursor:pointer}
-.source-toggle[aria-pressed="true"]{background:#edf3ff;border-color:#2459c7;font-weight:700}
-.source-toggle>span:first-child{font-size:20px;line-height:1}
 .source-directory{min-width:0;padding:24px;background:#fff;border:1px solid #dce3ed;border-radius:10px}
 .watchlist-header{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .source-directory h3{font-size:24px;margin:8px 0 16px}.watchlist-scope{line-height:1.8;font-size:15px}
@@ -427,5 +424,12 @@ main{width:100%;min-width:0;max-width:1360px;padding:0 36px}
 .watchlist-entry{padding:14px;border:1px solid #e4e9f1;border-radius:6px;min-width:0;overflow-wrap:anywhere}.watchlist-entry strong{font-size:14px}.watchlist-entry p{font-size:12px;line-height:1.7;color:#526079;margin:7px 0}
 .watchlist-links{display:flex;gap:8px 14px;flex-wrap:wrap;font-size:12px;margin-top:8px}.watchlist-links a{color:#2459c7;text-underline-offset:3px}.watchlist-pending{padding:0 16px;font-size:13px;line-height:1.8;color:#66748a}
 .source-profile-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:24px 0}.source-profile-card{display:flex;flex-direction:column;gap:12px;text-align:left;padding:20px;background:#fff;border:1px solid #dce3ed;border-top:3px solid #2459c7;border-radius:6px;font:inherit;cursor:pointer}.source-profile-card.profile-li{border-top-color:#d92d20}.source-profile-card.profile-lv{border-top-color:#172033}.source-profile-card span{font-size:12px;line-height:1.8;color:#66748a}
-@media(min-width:801px){.rail-collapsed .source-toggle .utility-label{display:none}}
-@media(max-width:800px){.source-toggle{margin-top:8px;width:auto;min-width:140px}.source-directory{padding:16px}.watchlist-group ul,.source-profile-grid{grid-template-columns:1fr}.watchlist-header .secondary-button{font-size:12px}.watchlist-section>summary{padding:14px}}
+@media(max-width:800px){.source-directory{padding:16px}.watchlist-group ul,.source-profile-grid{grid-template-columns:1fr}.watchlist-header .secondary-button{font-size:12px}.watchlist-section>summary{padding:14px}}
+
+/* Each focus entry belongs to its profile, with a distinct child navigation level. */
+.profile-nav-item{min-width:0}.profile-nav-item>.profile-link{width:100%}
+.profile-subnav{margin:4px 0 8px 26px;padding-left:18px;border-left:1px solid #dce3ed}
+.profile-focus-link{display:flex;align-items:center;gap:8px;width:100%;min-height:36px;padding:8px 10px;background:transparent;border:1px solid transparent;border-radius:6px;color:#526079;font:inherit;font-size:12px;text-align:left;cursor:pointer}
+.profile-focus-link.active{background:#edf3ff;border-color:#b7cdf8;color:#2459c7;font-weight:700}
+@media(min-width:801px){.rail-collapsed .profile-subnav{margin:2px 0 8px;padding:0;border-left:0}.rail-collapsed .profile-focus-link{justify-content:center;padding:8px 0}.rail-collapsed .focus-label{display:none}}
+@media(max-width:800px){.profile-subnav{margin:4px 0 0;padding:0;border-left:0}.profile-focus-link{justify-content:center;gap:4px;padding:7px 2px;font-size:11px;white-space:nowrap}.profile-focus-link>span:first-child{display:none}.rail-collapsed .profile-focus-link{min-height:36px}}
