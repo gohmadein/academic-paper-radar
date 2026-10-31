@@ -1,4 +1,6 @@
-import {categoryClass,categoryRail,digestBadges,digestRecommendations,digestDetails,issueReport} from './lib/digest-view.js';
+import {publicPaperURL,sharePaper} from './lib/paper-share.js';
+import {handleMediaError} from './lib/paper-media.js';
+import {categoryClass,categoryRail,digestBadges,digestRecommendations,digestDetails,issueReport,editorialCard,bilingualDetail} from './lib/digest-view.js';
 import {DEMO_NOTICE, escapeHTML as e, safeUrl, filterPapers, readRoute, routeHash, parseBookmarks, validateIndex, validateDay,PROFILES,profileCounts,mergeOccurrences} from './lib/model.js';
 import {updateHUD} from './lib/hud.js';
 import {makeBookmarkExport,parseBookmarkImport,mergeBookmarkImport,MAX_BOOKMARK_BYTES} from './lib/bookmark-transfer.js';
@@ -94,6 +96,7 @@ function toggleBookmark(id) {
 }
 
 function paperCard(p,index) {
+  if(p.profiles)return editorialCard(p,index,{category:state.category,saved:bookmarks.has(p.id),read:reads.has(p.id)});
   return `<article class="paper-card ${index === 0 ? 'featured' : ''} ${categoryClass(p,state.category)}">
     ${categoryRail(p)}<div class="card-top"><span class="card-number">${String(index+1).padStart(2,'0')}</span>${p.demo ? `<span class="demo-label">${DEMO_NOTICE}</span>` : '<span class="featured-label">RESEARCH SIGNAL</span>'}<time class="card-date" datetime="${p.date}">${p.date.replaceAll('-',' / ')}</time></div>
     ${digestBadges(p)}<h3><button class="title-button" data-paper="${e(p.id)}">${e(p.title)}</button></h3>
@@ -169,7 +172,7 @@ function renderDialog() {
   }
   lastDialogPaper = p.id;
   $('dialog-kicker').textContent = `PAPER BRIEF / ${p.date}`;
-  $('dialog-content').innerHTML = `${p.demo?`<p class="dialog-warning">${DEMO_NOTICE}。本页只展示排版与交互，不代表任何研究成果。</p>`:''}<h2 id="dialog-title">${e(p.title)}</h2>${p.titleEn?`<p>${e(p.titleEn)}</p>`:''}<div class="dialog-meta">${e(p.authors.join(' · '))}<br>${e(p.venue)} / ${p.year} / 收录于 ${p.date}</div><h3>中文导读</h3><p>${e(p.summary)}</p><h3>为什么入选</h3><p>${e(p.whySelected)}</p><h3>研究主题</h3><div class="card-tags">${p.tags.map(t=>`<span class="card-tag">${e(t)}</span>`).join('')}</div><h3>原始来源</h3>${p.sources.length?`<div class="source-links">${p.sources.map(s=>`<a href="${e(safeUrl(s.url))}" target="_blank" rel="noopener noreferrer">${e(s.label)} ↗</a>`).join('')}</div><p class="source-note">链接将打开外部网站；可用性取决于原始来源。导读不能替代阅读全文。</p>`:'<p>演示条目不提供来源链接，避免与真实论文混淆。</p>'}<button class="secondary-button dialog-bookmark" data-bookmark="${e(p.id)}" aria-pressed="${bookmarks.has(p.id)}">${bookmarks.has(p.id)?'◆ 已加入本机书签':'◇ 加入本机书签'}</button>`;
+  $('dialog-content').innerHTML = `${p.demo?`<p class="dialog-warning">${DEMO_NOTICE}。本页只展示排版与交互，不代表任何研究成果。</p>`:''}<h2 id="dialog-title">${e(p.title)}</h2>${p.titleEn?`<p>${e(p.titleEn)}</p>`:''}<div class="dialog-meta">${e(p.authors.join(' · '))}<br>${e(p.venue)} / ${p.year} / 收录于 ${p.date}</div><h3>中文导读</h3><p>${e(p.summary)}</p>${bilingualDetail(p)}<h3>为什么入选</h3><p>${e(p.whySelected)}</p><h3>研究主题</h3><div class="card-tags">${p.tags.map(t=>`<span class="card-tag">${e(t)}</span>`).join('')}</div><h3>原始来源</h3>${p.sources.length?`<div class="source-links">${p.sources.map(s=>`<a href="${e(safeUrl(s.url))}" target="_blank" rel="noopener noreferrer">${e(s.label)} ↗</a>`).join('')}</div><p class="source-note">链接将打开外部网站；可用性取决于原始来源。导读不能替代阅读全文。</p>`:'<p>演示条目不提供来源链接，避免与真实论文混淆。</p>'}<button class="secondary-button dialog-bookmark" data-bookmark="${e(p.id)}" aria-pressed="${bookmarks.has(p.id)}">${bookmarks.has(p.id)?'◆ 已加入本机书签':'◇ 加入本机书签'}</button>`;
   $('dialog-content').insertAdjacentHTML('beforeend',digestDetails(p));
   if (!dialog.open) dialog.showModal();
 }
@@ -188,6 +191,7 @@ document.addEventListener('click', event => {
   if(b.dataset.category)go({category:b.dataset.category,paper:''});
   else if(b.dataset.read){if(reads.has(b.dataset.read))reads.delete(b.dataset.read);else reads.add(b.dataset.read);try{localStorage.setItem(READ_KEY,JSON.stringify([...reads]));}catch{toast('阅读状态仅在当前会话可用');}render();}
   else if (b.dataset.view) go({view:b.dataset.view,q:'',tag:'all',date:b.dataset.view==='feed'&&!state.demo&&data?.real.days[0]?data.real.days[0].date:'all',paper:''});
+  else if(b.dataset.share)requestShare(b.dataset.share);
   else if (b.dataset.paper) { dialogTrigger = b; go({paper:b.dataset.paper}); }
   else if (b.dataset.bookmark) toggleBookmark(b.dataset.bookmark);
   else if (b.dataset.tag) go({tag:b.dataset.tag,view:'feed',paper:''});
@@ -197,6 +201,20 @@ document.addEventListener('click', event => {
   else if (b.dataset.action === 'feed') go({view:'feed',q:'',tag:'all',date:'all'});
   else if (b.dataset.action === 'retry') init();
 });
+async function requestShare(id){
+  const paper=filterPapers(collection().papers,{date:state.date}).find(p=>p.id===id);if(!paper)return;
+  const url=publicPaperURL(location.href,paper);
+  const result=await sharePaper({url,title:paper.title},{share:navigator.share?.bind(navigator),copy:navigator.clipboard?.writeText?.bind(navigator.clipboard)});
+  if(result==='copied')toast('论文链接已复制');
+  else if(result==='manual'){$('share-url').value=url;$('share-status').textContent='请选择并复制下面的公开论文链接；不会包含本机书签或已读状态。';$('share-dialog').showModal();$('share-url').focus();$('share-url').select();}
+}
+$('share-close').addEventListener('click',()=>$('share-dialog').close());
+$('share-copy').addEventListener('click',async()=>{
+  const result=await sharePaper({url:$('share-url').value,title:document.title},{copy:navigator.clipboard?.writeText?.bind(navigator.clipboard)});
+  $('share-status').textContent=result==='copied'?'链接已复制。':'自动复制不可用，请选中文本手动复制。';
+  if(result!=='copied'){$('share-url').focus();$('share-url').select();}
+});
+document.addEventListener('error',event=>{if(event.target?.matches?.('img[data-media-image]'))handleMediaError(event.target);},true);
 $('search').addEventListener('input', event => go({q:event.target.value},{replace:true}));
 $('read-select').addEventListener('change',event=>go({readStatus:event.target.value}));
 $('date-select').addEventListener('change', event => go({date:event.target.value}));
@@ -256,5 +274,5 @@ function syncRoute(){if(location.hash==='#main')return;state=readRoute(location.
 window.addEventListener('popstate',syncRoute);
 window.addEventListener('hashchange',syncRoute);
 window.addEventListener('storage',event=>{if(event.key===BOOKMARK_KEY){bookmarks=parseBookmarks(event.newValue);if(data)render();}});
-document.addEventListener('keydown',event=>{if(event.key==='/' && !event.ctrlKey && !event.metaKey && !event.altKey && !$('detail-dialog').open && !['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName) && !$('filter-panel').hidden){event.preventDefault();$('search').focus();}});
+document.addEventListener('keydown',event=>{if(event.key==='/' && !event.ctrlKey && !event.metaKey && !event.altKey && !$('detail-dialog').open && !$('share-dialog').open && !['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName) && !$('filter-panel').hidden){event.preventDefault();$('search').focus();}});
 init();

@@ -7,7 +7,7 @@ import {ingest}from'../scripts/ingest.mjs';import{root,validateAll}from'../scrip
 const day=JSON.parse(await readFile(new URL('../data/days/2026-10-31.json',import.meta.url),'utf8'));
 const registry=JSON.parse(await readFile(new URL('../data/registry.json',import.meta.url),'utf8'));
 const clone=x=>structuredClone(x);
-async function fixture(){const base=await mkdtemp(join(tmpdir(),'zero-field-ingest-'));await cp(join(root,'data'),join(base,'data'),{recursive:true});await cp(join(root,'config'),join(base,'config'),{recursive:true});return base;}
+async function fixture(){const base=await mkdtemp(join(tmpdir(),'zero-field-ingest-'));await cp(join(root,'data'),join(base,'data'),{recursive:true});await cp(join(root,'config'),join(base,'config'),{recursive:true});await cp(join(root,'assets'),join(base,'assets'),{recursive:true});return base;}
 
 test('首期11篇、类别7/2/2、回溯2篇、无伪造资源，70项来源完整',async()=>{
  assert.deepEqual(validateDay(day),[]);assert.equal(day.papers.length,11);

@@ -35,6 +35,8 @@
 | limits / assumptions | 字符串数组；不清楚时如实说明，不能编造 |
 | evidence | 非空 `[{url:HTTP(S), claim:非空文本, checkedAt:核验日期或带时区时间戳}]`；为状态、结论或资源提供出处，每个非空资源URL均需有证据 |
 | researchNotes | 字符串数组；完整保留重点核读范围、原始难度/阅读计划、修订日期、未运行代码等核验细节 |
+| summaryEn | 必填，同一中文导读的忠实英文翻译（40–5000字符），不是原始摘要 |
+| visuals | 必填，主图、论文署名机构、作者肖像与全部来源/版权记录；见 [素材契约](CARD-ASSETS.md) |
 
 `whySelected` 是公共入选理由；各类别差异写在 recommendations，不把同一论文复制成不同 ID。理论型李论文需说明定义、定理/证明适用范围；系统型说明输入输出、算法和实验条件，可写在导读/limits/assumptions/推荐语中。
 

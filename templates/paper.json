@@ -45,5 +45,12 @@
   "limits": [],
   "assumptions": [],
   "evidence": [],
-  "researchNotes": []
+  "researchNotes": [],
+  "summaryEn": "",
+  "visuals": {
+    "mainFigure": null,
+    "figureNote": "填写实际核验结果；没有可核实主图时如实说明。",
+    "institutions": [],
+    "authors": []
+  }
 }

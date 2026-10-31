@@ -105,7 +105,9 @@
         "limits",
         "assumptions",
         "evidence",
-        "researchNotes"
+        "researchNotes",
+        "summaryEn",
+        "visuals"
       ],
       "properties": {
         "id": {
@@ -588,6 +590,14 @@
             "minLength": 1,
             "maxLength": 10000
           }
+        },
+        "summaryEn": {
+          "type": "string",
+          "minLength": 40,
+          "maxLength": 5000
+        },
+        "visuals": {
+          "$ref": "#/$defs/visuals"
         }
       },
       "allOf": [
@@ -652,6 +662,278 @@
           }
         }
       ]
+    },
+    "mediaAsset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "path",
+        "sha256",
+        "width",
+        "height",
+        "sourceUrl",
+        "evidenceUrl",
+        "verifiedAt",
+        "credit",
+        "rights",
+        "displayPolicy",
+        "background",
+        "altZh",
+        "altEn"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "figure",
+            "institution-logo",
+            "author-portrait"
+          ]
+        },
+        "path": {
+          "type": "string",
+          "pattern": "^assets/(papers|institutions|authors)/[a-zA-Z0-9_./-]+\\.(png|jpe?g|webp|svg)$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "width": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20000
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20000
+        },
+        "sourceUrl": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https?://"
+        },
+        "evidenceUrl": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https?://"
+        },
+        "verifiedAt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "string",
+              "format": "date-time"
+            }
+          ]
+        },
+        "credit": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 5000
+        },
+        "rights": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 5000
+        },
+        "displayPolicy": {
+          "enum": [
+            "open-license",
+            "official-brand",
+            "attributed-thumbnail"
+          ]
+        },
+        "background": {
+          "enum": [
+            "light",
+            "dark",
+            "transparent"
+          ]
+        },
+        "altZh": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 5000
+        },
+        "altEn": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 5000
+        }
+      }
+    },
+    "visuals": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mainFigure",
+        "figureNote",
+        "institutions",
+        "authors"
+      ],
+      "properties": {
+        "mainFigure": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "allOf": [
+                {
+                  "$ref": "#/$defs/mediaAsset"
+                },
+                {
+                  "properties": {
+                    "kind": {
+                      "const": "figure"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "figureNote": {
+          "type": "string"
+        },
+        "institutions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "logo",
+              "authorNames",
+              "evidence",
+              "note"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 5000
+              },
+              "logo": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "allOf": [
+                      {
+                        "$ref": "#/$defs/mediaAsset"
+                      },
+                      {
+                        "properties": {
+                          "kind": {
+                            "const": "institution-logo"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              "authorNames": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 5000
+                }
+              },
+              "evidence": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "url",
+                    "claim",
+                    "checkedAt"
+                  ],
+                  "properties": {
+                    "url": {
+                      "type": "string",
+                      "format": "uri",
+                      "pattern": "^https?://"
+                    },
+                    "claim": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 5000
+                    },
+                    "checkedAt": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "format": "date"
+                        },
+                        {
+                          "type": "string",
+                          "format": "date-time"
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "note": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "authors": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "portrait",
+              "note"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 5000
+              },
+              "portrait": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "allOf": [
+                      {
+                        "$ref": "#/$defs/mediaAsset"
+                      },
+                      {
+                        "properties": {
+                          "kind": {
+                            "const": "author-portrait"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              "note": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

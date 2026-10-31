@@ -3,11 +3,13 @@ import {fileURLToPath} from 'node:url';
 import {resolve, join} from 'node:path';
 import {validateIndex, validateDay,isDate} from '../lib/model.js';
 import {aliasesFor} from './identity.mjs';
+import {validateAssetFiles,uniqueAssets} from './media-assets.mjs';
 
 export const root = fileURLToPath(new URL('../', import.meta.url));
-export async function validateAll(base = root) {
+export async function validateAll(base = root,{assetBase=base}={}) {
   const errors = [];
   let count = 0;
+  const assetPaths=new Set();
   for (const [directory,demo] of [['data',false],['data/demo',true]]) {
     const path = join(base,directory);
     let index;
@@ -33,6 +35,8 @@ export async function validateAll(base = root) {
       count++;
     }
     if(!demo){
+      errors.push(...await validateAssetFiles(realRecords.map(x=>x.paper),assetBase));
+      try{for(const asset of uniqueAssets(realRecords.map(x=>x.paper)))assetPaths.add(asset.path);}catch{}
       try{
         const registry=JSON.parse(await readFile(join(path,'registry.json'),'utf8'));
         if(registry.version!==1||!Array.isArray(registry.papers))throw new Error('注册表根结构无效');
@@ -49,7 +53,7 @@ export async function validateAll(base = root) {
     const files = await readdir(join(path,'days')).catch(error => error.code==='ENOENT' ? [] : Promise.reject(error));
     for (const file of files) if (!index.days.some(e => e.file===`days/${file}`)) errors.push(`${directory}/days/${file}: 未写入日期索引`);
   }
-  return {errors,count};
+  return {errors,count,assets:[...assetPaths].sort()};
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {

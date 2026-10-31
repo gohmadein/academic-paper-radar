@@ -10,7 +10,10 @@ if (!out.startsWith(resolve(root)+sep) || out !== resolve(root,'dist')) throw ne
 // Only delete the verified generated dist directory inside this project.
 await rm(out,{recursive:true,force:true});
 await mkdir(out,{recursive:true});
-for (const file of ['index.html','styles.css','app.js','assets','lib','data','THIRD_PARTY_NOTICES.txt']) await cp(join(root,file),join(out,file),{recursive:true});
+for (const file of ['index.html','styles.css','app.js','lib','data','THIRD_PARTY_NOTICES.txt']) await cp(join(root,file),join(out,file),{recursive:true});
+// Publish only referenced, validated research assets, plus the site's own mark/fonts.
+// Source-review archives or restricted unused logos must never enter dist.
+for(const file of ['assets/favicon.svg','assets/fonts',...result.assets]){await mkdir(resolve(out,file,'..'),{recursive:true});await cp(join(root,file),join(out,file),{recursive:true});}
 // Pages caches files independently. Version all entry assets and module imports
 // together so new HTML cannot execute an older, incompatible cached app module.
 async function runtimeFiles(path){

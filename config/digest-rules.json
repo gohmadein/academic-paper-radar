@@ -126,5 +126,40 @@
     "missingLinks": null,
     "localReadingFeedbackOnly": true
   },
-  "coverage": "每日只陈述实际检索入口；70项来源目录不等于当天已全源核验。"
+  "coverage": "每日只陈述实际检索入口；70项来源目录不等于当天已全源核验。",
+  "presentation": {
+    "bilingualGuides": {
+      "required": true,
+      "order": [
+        "Chinese",
+        "English"
+      ],
+      "englishMustTranslateChineseGuide": true,
+      "noNewUnsupportedClaims": true
+    },
+    "figures": {
+      "source": "actual-paper-or-author-project",
+      "bundleSameOrigin": true,
+      "optimizeWithoutChangingMeaning": true,
+      "missing": "explicit-no-verified-figure",
+      "noGeneratedScientificImages": true,
+      "provenanceAndRightsRequired": true
+    },
+    "affiliations": {
+      "source": "paper-specific-evidence",
+      "noCurrentEmployerInference": true,
+      "restrictedLogo": "named-text-label-only",
+      "noEndorsementBadge": true
+    },
+    "portraits": {
+      "source": "official-page-explicitly-identifies-author",
+      "neverUseInstitutionLogoAsFace": true,
+      "missing": "neutral-initials-and-full-name"
+    },
+    "sharing": {
+      "onlyPublicPaperURL": true,
+      "noLikesOrViewCounts": true
+    },
+    "assetPublishing": "Upload verified image blobs and commit them with the three JSON files atomically; validate local paths, hashes and dimensions before deployment."
+  }
 }

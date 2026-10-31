@@ -108,7 +108,93 @@
         "已阅读官方摘要与元数据；部分另核对作者项目页，未通读论文全文。结果均为作者报告，未独立复现。已核对arXiv官方记录，未发现可据以确认正式录用的记录，统一标为预印本。日期为arXiv初次提交（UTC），完整作者已核验。",
         "原始难度：中高。",
         "阅读建议：优先速读；关注控制接口和失败修订机制。"
-      ]
+      ],
+      "summaryEn": "This paper combines vision and wrist force/torque records in a coding agent that generates contact-probing and force-feedback control programs. Between real robot runs, the agent analyzes failures and revises its code. Across five real-world manipulation tasks, the authors report improvements over an otherwise similar vision-only agent in grasping, adapting to object or surface changes, and maintaining contact during wiping and peeling. No task demonstrations or task-specific training are required, but the system still relies on predefined skills and a particular sensor setup.",
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/arxiv-2610-31841/figure.jpg",
+          "sha256": "34dc3c283cf9d87aae3e29e71604a6846ae87bd2dc70db38b4914a6c53dae8bd",
+          "width": 720,
+          "height": 216,
+          "sourceUrl": "https://tanoom.github.io/forca/static/images/fig1_overview.jpg",
+          "evidenceUrl": "https://arxiv.org/html/2610.31841",
+          "verifiedAt": "2026-10-31",
+          "credit": "Xiao Tan et al. (2026), Figure 1.",
+          "rights": "arXiv perpetual non-exclusive distribution licence is NOT a general reuse licence. Limited attributed thumbnail for paper commentary; copyright remains with authors, no open licence claimed. Proportionally reduced within 720×480; JPEG white background, no cropping or content edits.",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "light",
+          "altZh": "FORCA流程：力感知程序合成、接触反馈执行及执行结果驱动的程序修订。",
+          "altEn": "FORCA workflow: force-aware program synthesis, contact-responsive execution, and execution-grounded program revision."
+        },
+        "figureNote": "",
+        "institutions": [
+          {
+            "name": "University of Illinois Urbana-Champaign",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/illinois.svg",
+              "sha256": "da4679937bf6f1fb8e2ff57728ccd8978014cd2839cd7d16a6988dc3cf47efbc",
+              "width": 180,
+              "height": 180,
+              "sourceUrl": "https://cdn.brand.illinois.edu/icon.svg",
+              "evidenceUrl": "https://illinois.edu/",
+              "verifiedAt": "2026-10-31",
+              "credit": "University of Illinois Urbana-Champaign · official mark",
+              "rights": "Official institutional mark; trademark/copyright retained by its owner. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve aspect ratio, complete mark and clear space.",
+              "displayPolicy": "official-brand",
+              "background": "light",
+              "altZh": "University of Illinois Urbana-Champaign 官方标志",
+              "altEn": "Official mark of University of Illinois Urbana-Champaign"
+            },
+            "authorNames": [
+              "Xiao Tan",
+              "Yixuan Wang",
+              "Zhexi Wang",
+              "Wenzhen Yuan"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.31841",
+                "claim": "论文题名脚注1列出全部四位作者在UIUC。",
+                "checkedAt": "2026-10-31"
+              }
+            ],
+            "note": "论文题名脚注1列出全部四位作者在UIUC。"
+          },
+          {
+            "name": "Tsinghua University",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/tsinghua.png",
+              "sha256": "697e4f54fe35dd35e2090b6b1c2585f04bee244a7adff83367057774beb685ae",
+              "width": 159,
+              "height": 50,
+              "sourceUrl": "https://www.tsinghua.edu.cn/en/image/logo159.png",
+              "evidenceUrl": "https://www.tsinghua.edu.cn/en/",
+              "verifiedAt": "2026-10-31",
+              "credit": "Tsinghua University · official mark",
+              "rights": "Official institutional mark; trademark/copyright retained by its owner. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve aspect ratio, complete mark and clear space.",
+              "displayPolicy": "official-brand",
+              "background": "dark",
+              "altZh": "Tsinghua University 官方标志",
+              "altEn": "Official mark of Tsinghua University"
+            },
+            "authorNames": [
+              "Zhexi Wang"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.31841",
+                "claim": "论文题名脚注2另列Zhexi Wang在清华。白色官方字标在深色小底板展示，不重新着色。",
+                "checkedAt": "2026-10-31"
+              }
+            ],
+            "note": "论文题名脚注2另列Zhexi Wang在清华。白色官方字标在深色小底板展示，不重新着色。"
+          }
+        ],
+        "authors": []
+      }
     },
     {
       "id": "arxiv-2610-19044",
@@ -190,7 +276,49 @@
       "researchNotes": [
         "已阅读官方摘要与元数据；部分另核对作者项目页，未通读论文全文。结果均为作者报告，未独立复现。已核对arXiv官方记录，未发现可据以确认正式录用的记录，统一标为预印本。日期为arXiv初次提交（UTC），完整作者已核验。",
         "阅读建议：优先速读；适合感知与端侧部署读者。"
-      ]
+      ],
+      "summaryEn": "For small robots with limited compute and memory, RingNav constrains heading memory to a circular manifold instead of storing a general hidden state. It learns the rotation between consecutive images and accumulates heading geometrically. The authors report lower rotation and short-horizon accumulated errors on visual benchmarks, together with transfer to a real drone without fine-tuning. Reported operation on a Raspberry Pi and a low-power processor also makes it relevant to embedded perception.",
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/arxiv-2610-19044/figure.jpg",
+          "sha256": "0f7a498bbc87785c838833dbb2644c4f808bc7f0eab17177dc054a1ceed9c33e",
+          "width": 720,
+          "height": 448,
+          "sourceUrl": "https://arxiv.org/html/2610.19044v1/ringnavBanner.png",
+          "evidenceUrl": "https://arxiv.org/html/2610.19044",
+          "verifiedAt": "2026-10-31",
+          "credit": "Naitri Rajyaguru et al. (2026), Figure 1.",
+          "rights": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Attribution required. Proportionally reduced within 720×480; JPEG white background, no cropping or content edits.",
+          "displayPolicy": "open-license",
+          "background": "light",
+          "altZh": "RingNav无人机轨迹及圆周航向估计与运动捕捉真值的比较。",
+          "altEn": "RingNav drone flight trajectory with circular heading comparison against motion-capture ground truth."
+        },
+        "figureNote": "",
+        "institutions": [
+          {
+            "name": "University of Maryland, College Park",
+            "logo": null,
+            "authorNames": [
+              "Naitri Rajyaguru",
+              "Aryan Tajne",
+              "Stephen Jardim",
+              "Cornelia Fermuller",
+              "Yiannis Aloimonos"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.19044",
+                "claim": "本篇论文作者栏署名信息",
+                "checkedAt": "2026-10-31"
+              }
+            ],
+            "note": "论文署名机构已核验。UMD外部标志使用许可未核实，按品牌限制使用文字标识，不下载或发布其标志。"
+          }
+        ],
+        "authors": []
+      }
     },
     {
       "id": "arxiv-2610-20925",
@@ -272,7 +400,62 @@
       "researchNotes": [
         "已阅读官方摘要与元数据；部分另核对作者项目页，未通读论文全文。结果均为作者报告，未独立复现。已核对arXiv官方记录，未发现可据以确认正式录用的记录，统一标为预印本。日期为arXiv初次提交（UTC），完整作者已核验。",
         "阅读建议：控制方向优先；速读后再核查定理假设。"
-      ]
+      ],
+      "summaryEn": "A-SLS incorporates the uncertainty reduction expected from future parameter identification into robust adaptive model predictive control. By retaining correlations among disturbances, parameter errors, and estimator updates, it aims to reduce the conservatism of reachable tubes. The authors accelerate optimization on a GPU and report examples involving nonlinear robotic systems, higher-dimensional quadruped whole-body control, and online identification on a real Crazyflie. The central idea is to consider safety constraints, active learning, and real-time computation together rather than focusing only on tracking error.",
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/arxiv-2610-20925/figure.jpg",
+          "sha256": "0cb5f5880e1fc0b13eec4ac013d3d199dfdf44bd3449920ad348cbba34e0e18d",
+          "width": 360,
+          "height": 366,
+          "sourceUrl": "https://arxiv.org/html/2610.20925v1/front_figure_hardware.png",
+          "evidenceUrl": "https://arxiv.org/html/2610.20925",
+          "verifiedAt": "2026-10-31",
+          "credit": "Anutam Srinivasan et al. (2026), Figure 1.",
+          "rights": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Attribution required. Proportionally reduced within 720×480; JPEG white background, no cropping or content edits.",
+          "displayPolicy": "open-license",
+          "background": "light",
+          "altZh": "Crazyflie飞行、预测不确定性管、参数学习以及高度和推力曲线。",
+          "altEn": "Crazyflie flight with predicted uncertainty tubes, parameter learning, height and thrust plots."
+        },
+        "figureNote": "",
+        "institutions": [
+          {
+            "name": "Georgia Institute of Technology",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/gatech.png",
+              "sha256": "83b1c80b03c1777708ff0047496bb2f687edac4e310422d78ab436b9a1137f7b",
+              "width": 348,
+              "height": 60,
+              "sourceUrl": "https://www.gatech.edu/themes/custom/gatech/images/gatech-color_logo.png",
+              "evidenceUrl": "https://www.gatech.edu/",
+              "verifiedAt": "2026-10-31",
+              "credit": "Georgia Institute of Technology · official mark",
+              "rights": "Official institutional mark; trademark/copyright retained by its owner. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve aspect ratio, complete mark and clear space.",
+              "displayPolicy": "official-brand",
+              "background": "light",
+              "altZh": "Georgia Institute of Technology 官方标志",
+              "altEn": "Official mark of Georgia Institute of Technology"
+            },
+            "authorNames": [
+              "Anutam Srinivasan",
+              "Siddhant Panse",
+              "Glen Chou"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.20925",
+                "claim": "作者栏列出Srinivasan与Panse在Georgia Tech ECE，Chou在其Cybersecurity & Privacy和Aerospace Engineering。",
+                "checkedAt": "2026-10-31"
+              }
+            ],
+            "note": "作者栏列出Srinivasan与Panse在Georgia Tech ECE，Chou在其Cybersecurity & Privacy和Aerospace Engineering。"
+          }
+        ],
+        "authors": []
+      }
     },
     {
       "id": "arxiv-2610-28251",
@@ -354,7 +537,77 @@
       "researchNotes": [
         "已阅读官方摘要与元数据；部分另核对作者项目页，未通读论文全文。结果均为作者报告，未独立复现。已核对arXiv官方记录，未发现可据以确认正式录用的记录，统一标为预印本。日期为arXiv初次提交（UTC），完整作者已核验。",
         "阅读建议：多机器人方向优先；重点读检测假设与可信链路恢复速度。"
-      ]
+      ],
+      "summaryEn": "For robot teams with potentially attacked communication links, this paper adds a trust-filtering layer around existing collaboration algorithms. Continuous trust scores from an anomaly detector feed anytime-valid statistical inference, allowing compromised links to be excluded with high probability over time while healthy links are gradually accepted. The authors demonstrate neural implicit mapping and heading-consensus tasks on real robots, and study larger teams in simulation using hardware-sampled trust scores.",
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/arxiv-2610-28251/figure.jpg",
+          "sha256": "aa1b4cd8e8358282f685cb576b82abe1bff289466ef86965add0836c1bef596e",
+          "width": 720,
+          "height": 414,
+          "sourceUrl": "https://arxiv.org/html/2610.28251v1/figures/udon/UDON_Fig_FIXED.png",
+          "evidenceUrl": "https://arxiv.org/html/2610.28251",
+          "verifiedAt": "2026-10-31",
+          "credit": "Thomas Kaminsky et al. (2026), Figure 1.",
+          "rights": "arXiv perpetual non-exclusive distribution licence is NOT a general reuse licence. Limited attributed thumbnail for paper commentary; copyright remains with authors, no open licence claimed. Proportionally reduced within 720×480; JPEG white background, no cropping or content edits.",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "light",
+          "altZh": "神经建图攻击场景，以及无攻击、受攻击和加入信任筛选层后的地图重建。",
+          "altEn": "Neural mapping attack scenario and map reconstructions with no attack, under attack, and with the trust-based safe wrapper."
+        },
+        "figureNote": "",
+        "institutions": [
+          {
+            "name": "Harvard University",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/harvard.svg",
+              "sha256": "35cf9b91322b7a04c9ab3d17f02958e9d5acebf89fcf89feaf7418b56d32e104",
+              "width": 413,
+              "height": 269,
+              "sourceUrl": "https://www.harvard.edu/wp-content/themes/core/assets/img/theme/branding-assets/footer-logo.svg",
+              "evidenceUrl": "https://www.harvard.edu/",
+              "verifiedAt": "2026-10-31",
+              "credit": "Harvard University · official mark",
+              "rights": "Official institutional mark; trademark/copyright retained by its owner. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve aspect ratio, complete mark and clear space.",
+              "displayPolicy": "official-brand",
+              "background": "dark",
+              "altZh": "Harvard University 官方标志",
+              "altEn": "Official mark of Harvard University"
+            },
+            "authorNames": [
+              "Áron Vékássy",
+              "Hammad Izhar",
+              "Stephanie Gil"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.28251",
+                "claim": "作者栏明确列出Vékássy、Izhar与Gil在Harvard SEAS；对应作者Kaminsky留有Harvard邮箱，但不据此另推断雇佣关系。",
+                "checkedAt": "2026-10-31"
+              }
+            ],
+            "note": "作者栏明确列出Vékássy、Izhar与Gil在Harvard SEAS；对应作者Kaminsky留有Harvard邮箱，但不据此另推断雇佣关系。"
+          },
+          {
+            "name": "Arizona State University",
+            "logo": null,
+            "authorNames": [
+              "Angelia Nedić"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.28251",
+                "claim": "本篇论文作者栏署名信息",
+                "checkedAt": "2026-10-31"
+              }
+            ],
+            "note": "作者栏明确列出Angelia Nedić在ASU电气、计算机与能源工程学院。官方政策要求外部Logo使用先获许可，因此仅显示文字标识。"
+          }
+        ],
+        "authors": []
+      }
     },
     {
       "id": "arxiv-2610-22340",
@@ -450,7 +703,66 @@
         "修订日期：2026-10-26。",
         "原始难度：中高。",
         "阅读建议：优先速读；可结合已公开的仿真代码核查可复现性。"
-      ]
+      ],
+      "summaryEn": "PlayPolicy first learns a behavior policy from a small amount of human play. The robot then collects additional contact data autonomously to train a world model. During task execution, the policy proposes actions for model predictive control to select, and the resulting behavior can be distilled into a fast closed-loop policy. The authors report data-efficiency benefits on pushing and in-hand reorientation. The approach connects data collection, planning proposals, and policy learning, although its abilities remain limited by the coverage of the initial play data.",
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/arxiv-2610-22340/figure.jpg",
+          "sha256": "5042a0b0c18ce488e9b8e96acb899e4c4970e5aaf259a99dbb8ceaa65c293b06",
+          "width": 446,
+          "height": 480,
+          "sourceUrl": "https://arxiv.org/html/2610.22340v2/teaser.png",
+          "evidenceUrl": "https://arxiv.org/html/2610.22340",
+          "verifiedAt": "2026-10-31",
+          "credit": "Botao He et al. (2026), Figure 1.",
+          "rights": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Attribution required. Proportionally reduced within 720×480; JPEG white background, no cropping or content edits.",
+          "displayPolicy": "open-license",
+          "background": "light",
+          "altZh": "PlayPolicy五阶段：监督自由交互、自主交互、世界建模、模型预测控制及策略蒸馏。",
+          "altEn": "Five-stage PlayPolicy pipeline: supervised play, autonomous play, world modeling, model predictive control and policy distillation."
+        },
+        "figureNote": "",
+        "institutions": [
+          {
+            "name": "Amazon Frontier AI & Robotics (FAR)",
+            "logo": null,
+            "authorNames": [
+              "Botao He",
+              "Yiming Dou",
+              "Jitendra Malik",
+              "Akash Sharma",
+              "Ruoshi Liu"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.22340",
+                "claim": "本篇论文作者栏署名信息",
+                "checkedAt": "2026-10-31"
+              }
+            ],
+            "note": "论文作者栏列出Amazon FAR。未发现专属FAR官方标志，不用Amazon Science图标替代；Malik的本篇署名未列Berkeley，不据现雇主猜测。"
+          },
+          {
+            "name": "University of Maryland, College Park",
+            "logo": null,
+            "authorNames": [
+              "Botao He",
+              "Yiannis Aloimonos",
+              "Ruoshi Liu"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.22340",
+                "claim": "本篇论文作者栏署名信息",
+                "checkedAt": "2026-10-31"
+              }
+            ],
+            "note": "论文署名机构已核验。UMD外部标志使用许可未核实，按品牌限制使用文字标识，不下载或发布其标志。"
+          }
+        ],
+        "authors": []
+      }
     },
     {
       "id": "arxiv-2610-37550",
@@ -530,7 +842,124 @@
       "researchNotes": [
         "已阅读官方摘要与元数据；部分另核对作者项目页，未通读论文全文。结果均为作者报告，未独立复现。已核对arXiv官方记录，未发现可据以确认正式录用的记录，统一标为预印本。日期为arXiv初次提交（UTC），完整作者已核验。",
         "阅读建议：评测设计读者优先；篇幅紧凑，适合快速建立指标意识。"
-      ]
+      ],
+      "summaryEn": "Binary success rates can hide whether a robot’s motion respects an object’s joint constraints. This paper projects end-effector motion onto the joint axis to separate useful progress from motion that departs from the constraint. Across simulated articulated objects, the authors show that these metrics can distinguish transfer failures obscured by success rates and examine sensitivity to joint-axis estimation error. No learned evaluator is required, but the method needs a joint model and a reference controller built from it.",
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/arxiv-2610-37550/figure.jpg",
+          "sha256": "d11e04ca5b8c7d706cf1f3ad1911a9bd187489f65a9690ecd923a888f90884d3",
+          "width": 720,
+          "height": 399,
+          "sourceUrl": "https://arxiv.org/html/2610.37550v1/figure-CRS-v2.png",
+          "evidenceUrl": "https://arxiv.org/html/2610.37550",
+          "verifiedAt": "2026-10-31",
+          "credit": "Baptiste Bonin et al. (2026), Figure 1.",
+          "rights": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Attribution required. Proportionally reduced within 720×480; JPEG white background, no cropping or content edits.",
+          "displayPolicy": "open-license",
+          "background": "light",
+          "altZh": "抽屉训练与门训练的策略都能打开抽屉，但只有其中一个遵循其平移关节约束。",
+          "altEn": "Drawer-trained and door-trained policies both open a drawer, but only one follows its translational joint constraint."
+        },
+        "figureNote": "",
+        "institutions": [
+          {
+            "name": "Université Laval",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/laval.svg",
+              "sha256": "d29b13372c6194d10377b5e6a01316717a9605c7db3b10d80253052dfb046949",
+              "width": 315,
+              "height": 130,
+              "sourceUrl": "https://www.ulaval.ca/",
+              "evidenceUrl": "https://www.ulaval.ca/",
+              "verifiedAt": "2026-10-31",
+              "credit": "Université Laval · official mark",
+              "rights": "Official institutional mark; trademark/copyright retained by its owner. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve aspect ratio, complete mark and clear space. Exact inline SVG extracted from official homepage; standalone XML namespace added only when absent.",
+              "displayPolicy": "official-brand",
+              "background": "light",
+              "altZh": "Université Laval 官方标志",
+              "altEn": "Official mark of Université Laval"
+            },
+            "authorNames": [
+              "Baptiste Bonin",
+              "Caro Strickland",
+              "Audrey Durand"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.37550",
+                "claim": "论文作者栏列出的署名机构；标志仅作身份说明，不代表背书。",
+                "checkedAt": "2026-10-31"
+              }
+            ],
+            "note": "论文作者栏列出的署名机构；标志仅作身份说明，不代表背书。"
+          },
+          {
+            "name": "Mila – Quebec AI Institute",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/mila.svg",
+              "sha256": "89fc4145ed3b739c3eaf8b05753835a4653aec706129dce9df268611824dd007",
+              "width": 170,
+              "height": 50,
+              "sourceUrl": "https://mila.quebec/sites/default/themes/mila_v1/logo.svg",
+              "evidenceUrl": "https://mila.quebec/en",
+              "verifiedAt": "2026-10-31",
+              "credit": "Mila – Quebec AI Institute · official mark",
+              "rights": "Official institutional mark; trademark/copyright retained by its owner. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve aspect ratio, complete mark and clear space.",
+              "displayPolicy": "official-brand",
+              "background": "light",
+              "altZh": "Mila – Quebec AI Institute 官方标志",
+              "altEn": "Official mark of Mila – Quebec AI Institute"
+            },
+            "authorNames": [
+              "Baptiste Bonin",
+              "Caro Strickland",
+              "Audrey Durand"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.37550",
+                "claim": "论文作者栏列出的署名机构；标志仅作身份说明，不代表背书。",
+                "checkedAt": "2026-10-31"
+              }
+            ],
+            "note": "论文作者栏列出的署名机构；标志仅作身份说明，不代表背书。"
+          },
+          {
+            "name": "CIFAR AI Chair",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/cifar.svg",
+              "sha256": "b22a2f3178ac2db4973ecfdd0029df70c707f25f962ef7392766fe9ca857d114",
+              "width": 140,
+              "height": 45,
+              "sourceUrl": "https://cifar.ca/wp-content/bb-icons/icon-brand/images/logo.svg",
+              "evidenceUrl": "https://cifar.ca/",
+              "verifiedAt": "2026-10-31",
+              "credit": "CIFAR AI Chair · official mark",
+              "rights": "Official institutional mark; trademark/copyright retained by its owner. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve aspect ratio, complete mark and clear space.",
+              "displayPolicy": "official-brand",
+              "background": "light",
+              "altZh": "CIFAR AI Chair 官方标志",
+              "altEn": "Official mark of CIFAR AI Chair"
+            },
+            "authorNames": [
+              "Audrey Durand"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.37550",
+                "claim": "Audrey Durand另外列出CIFAR AI Chair；这是讲席身份，不推断为雇主。",
+                "checkedAt": "2026-10-31"
+              }
+            ],
+            "note": "Audrey Durand另外列出CIFAR AI Chair；这是讲席身份，不推断为雇主。"
+          }
+        ],
+        "authors": []
+      }
     },
     {
       "id": "arxiv-2610-17326",
@@ -612,7 +1041,63 @@
       "researchNotes": [
         "已阅读官方摘要与元数据；部分另核对作者项目页，未通读论文全文。结果均为作者报告，未独立复现。已核对arXiv官方记录，未发现可据以确认正式录用的记录，统一标为预印本。日期为arXiv初次提交（UTC），完整作者已核验。",
         "阅读建议：速读对照；适合设计具身规划实验。"
-      ]
+      ],
+      "summaryEn": "The authors build seven long-horizon household task types in Habitat, varying the robot’s initial memory and environment configuration while comparing three planning approaches in a shared execution framework. Beyond success, the evaluation measures partial completion and action efficiency, and diagnoses placement, precondition, and redundant-action errors in execution traces. The results suggest that accurate initial memory does not consistently improve every planner, raising questions about how embodied agents use knowledge and handle uncertainty during execution.",
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/arxiv-2610-17326/figure.jpg",
+          "sha256": "ee9f274f58078f6d0a89031cf53867bdfccee0c2977f2e43e247051048575021",
+          "width": 720,
+          "height": 312,
+          "sourceUrl": "https://arxiv.org/html/2610.17326v1/figures/overall_metrics_v2.png",
+          "evidenceUrl": "https://arxiv.org/html/2610.17326",
+          "verifiedAt": "2026-10-31",
+          "credit": "Harsh Muriki et al. (2026), Figure 1.",
+          "rights": "arXiv perpetual non-exclusive distribution licence is NOT a general reuse licence. Limited attributed thumbnail for paper commentary; copyright remains with authors, no open licence claimed. Proportionally reduced within 720×480; JPEG white background, no cropping or content edits.",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "light",
+          "altZh": "图1柱状图：三种规划器在任务成功率、动作加权SPL、完成率及完成率加权SPL上的比较。",
+          "altEn": "Figure 1 bar chart comparing three planners on task success, action-weighted SPL, completion and completion-weighted SPL."
+        },
+        "figureNote": "",
+        "institutions": [
+          {
+            "name": "Georgia Institute of Technology",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/gatech.png",
+              "sha256": "83b1c80b03c1777708ff0047496bb2f687edac4e310422d78ab436b9a1137f7b",
+              "width": 348,
+              "height": 60,
+              "sourceUrl": "https://www.gatech.edu/themes/custom/gatech/images/gatech-color_logo.png",
+              "evidenceUrl": "https://www.gatech.edu/",
+              "verifiedAt": "2026-10-31",
+              "credit": "Georgia Institute of Technology · official mark",
+              "rights": "Official institutional mark; trademark/copyright retained by its owner. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve aspect ratio, complete mark and clear space.",
+              "displayPolicy": "official-brand",
+              "background": "light",
+              "altZh": "Georgia Institute of Technology 官方标志",
+              "altEn": "Official mark of Georgia Institute of Technology"
+            },
+            "authorNames": [
+              "Harsh Muriki",
+              "Gayathri Aravindan",
+              "Yuchen Zheng",
+              "Sonia Chernova"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.17326",
+                "claim": "论文作者栏明确列出Georgia Institute of Technology及gatech.edu通信地址。",
+                "checkedAt": "2026-10-31"
+              }
+            ],
+            "note": "论文作者栏明确列出Georgia Institute of Technology及gatech.edu通信地址。"
+          }
+        ],
+        "authors": []
+      }
     },
     {
       "id": "doi-d0ded22222dc36782e1a",
@@ -711,7 +1196,61 @@
         "阅读深度：正文重点核读，非全文证明复核。GDP统一多个目标和约束；ILP平滑化用于恢复已知可解情形。",
         "系统：输入查询、数据库及删除/保留要求，输出源元组删除方案；Python 3.8.8与Gurobi 10.0.1，实验含合成数据与2019年1月航班实例。",
         "原始难度：中高。"
-      ]
+      ],
+      "summaryEn": "Deleting one view result may unintentionally remove other results supported by shared source data. This paper unifies source-side cost, view side effects, and minimum-witness tasks as generalized deletion propagation. An integer program expresses results that must be deleted or retained and the optimization objective, with smoothing constraints improving solving behavior. The framework covers known tractable cases and supports self-joins, unions, and bag semantics. However, the claim that integer programming suffices for every tractable case remains a conjecture; it does not make the general problem polynomial-time.",
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/doi-d0ded22222dc36782e1a/figure.svg",
+          "sha256": "3216eb834c679c2ec37be0766ba7e66d5c3def71169ed57eb6010a867e758722",
+          "width": 899,
+          "height": 350,
+          "sourceUrl": "https://arxiv.org/html/2411.17603v2/GDP-relatedwork.svg",
+          "evidenceUrl": "https://arxiv.org/html/2411.17603v2#S4.F1",
+          "verifiedAt": "2026-10-31",
+          "credit": "Neha Makhija & Wolfgang Gatterbauer (2025), Figure 1.",
+          "rights": "Formal PVLDB paper states CC BY-NC-ND 4.0. This identical-paper Figure 1 is sourced as an intact vector from the official arXiv extended version for attributed commentary. No chart redrawn, no blanket reuse licence claimed; noncommercial/no-derivatives conditions apply.",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "light",
+          "altZh": "GDP原图：硬删除与保留约束、软最小化与最大化目标在视图与源数据库之间传播。",
+          "altEn": "Original GDP overview: hard delete/preserve constraints and soft minimize/maximize objectives propagate between views and the source database."
+        },
+        "figureNote": "",
+        "institutions": [
+          {
+            "name": "Northeastern University",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/northeastern.svg",
+              "sha256": "f099bc86216ca1c4c540a73841a0f8cd7ea252ba983aba3052f995ab3ec744bd",
+              "width": 486,
+              "height": 180,
+              "sourceUrl": "https://www.northeastern.edu/",
+              "evidenceUrl": "https://www.northeastern.edu/",
+              "verifiedAt": "2026-10-31",
+              "credit": "Northeastern University · official mark",
+              "rights": "Official institutional mark; trademark/copyright retained by its owner. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve aspect ratio, complete mark and clear space. Exact inline SVG extracted from official homepage; standalone XML namespace added only when absent.",
+              "displayPolicy": "official-brand",
+              "background": "dark",
+              "altZh": "Northeastern University 官方标志",
+              "altEn": "Official mark of Northeastern University"
+            },
+            "authorNames": [
+              "Neha Makhija",
+              "Wolfgang Gatterbauer"
+            ],
+            "evidence": [
+              {
+                "url": "https://www.vldb.org/pvldb/vol18/p2667-makhija.pdf",
+                "claim": "原始正式论文第一页作者栏列出两位作者在Northeastern University。官方白色字标保持原色，在深色小底板展示。",
+                "checkedAt": "2026-10-31"
+              }
+            ],
+            "note": "原始正式论文第一页作者栏列出两位作者在Northeastern University。官方白色字标保持原色，在深色小底板展示。"
+          }
+        ],
+        "authors": []
+      }
     },
     {
       "id": "doi-259aaefa9d9fdb4b874f",
@@ -807,7 +1346,46 @@
         "阅读建议：优先读§1–2与§5；再读§4，把“最小源修改”与“最小视图副作用”并列记录。适合作为新算法问题设定的理论对照，而非即用系统。",
         "阅读深度：正文重点核读，非完整证明复核。",
         "定义/定理：修复U=(Ins,Del)，使目标元组属于Q(IU)；分别定义存在、界限、最优大小和构造。弱选择/投影使存在性与查询可满足性相互归约；固定查询利用常数大小修复性质得到可枚举搜索空间。"
-      ]
+      ],
+      "summaryEn": "What is the smallest source-data change that makes a missing query answer appear? This paper permits insertions and deletions, separates repair existence, size, and construction, and compares combined complexity with data complexity. When the query is also input, projection and joins can introduce set-cover-level difficulty. For a fixed semipositive Datalog query, however, a minimum repair can be found in polynomial time. The objective minimizes source edits: it neither guarantees that other view answers remain unchanged nor automatically enforces a VKG ontology.",
+      "visuals": {
+        "mainFigure": null,
+        "figureNote": "已检查原始20页理论论文，未发现编号主图或图解；以文字展示，不制造示意图。",
+        "institutions": [
+          {
+            "name": "University of Pennsylvania",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/penn.svg",
+              "sha256": "5e308eb85b79061a9ab8a8aff977f6aa80131eb6ab95a01469444aea0f9cd9d6",
+              "width": 563,
+              "height": 184,
+              "sourceUrl": "https://www.upenn.edu/themes/custom/penn_starter/assets/img/UPenn-logo.svg",
+              "evidenceUrl": "https://www.upenn.edu/",
+              "verifiedAt": "2026-10-31",
+              "credit": "University of Pennsylvania · official mark",
+              "rights": "Official institutional mark; trademark/copyright retained by its owner. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve aspect ratio, complete mark and clear space.",
+              "displayPolicy": "official-brand",
+              "background": "dark",
+              "altZh": "University of Pennsylvania 官方标志",
+              "altEn": "Official mark of University of Pennsylvania"
+            },
+            "authorNames": [
+              "Jesse Comer",
+              "Val Tannen"
+            ],
+            "evidence": [
+              {
+                "url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICDT.2026.12",
+                "claim": "原始论文第一页作者栏列出University of Pennsylvania。白色官方字标保持完整与比例，在深色小底板展示。",
+                "checkedAt": "2026-10-31"
+              }
+            ],
+            "note": "原始论文第一页作者栏列出University of Pennsylvania。白色官方字标保持完整与比例，在深色小底板展示。"
+          }
+        ],
+        "authors": []
+      }
     },
     {
       "id": "arxiv-2610-12231",
@@ -913,7 +1491,244 @@
         "项目页有官方演示入口；独立 MP4 抓取失败，未验证播放，不另列已验证视频URL。",
         "阅读深度：已读摘要、项目页、方法与实验/局限相关全文段落、代码 README；未逐式审稿或运行实验。",
         "核验限制：仅核验原始论文、作者项目页/代码页面；没有把第三方索引当作内容依据。无独立复现，未声称已通过同行评审。"
-      ]
+      ],
+      "summaryEn": "Must robot action learning use diffusion models? Starting from familiar mean squared error, this paper observes that demonstration prediction errors vary with state, so a few large errors can dominate training. The authors use a Student-t loss that accommodates heavy-tailed errors and additionally predict the error scale, bringing single-forward-pass regression policies closer to generative-policy performance. Start with the project illustrations, then Sections 3–4. Focus on how the loss allocates learning attention rather than trying to derive every probability formula immediately.",
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/arxiv-2610-12231/figure.jpg",
+          "sha256": "209a8f0fef164d2b9ddbd5c7fcce151e007d617453c275448507bf6cbd7e92d7",
+          "width": 720,
+          "height": 229,
+          "sourceUrl": "https://arxiv.org/html/2610.12231v2/teaser.png",
+          "evidenceUrl": "https://arxiv.org/html/2610.12231v2",
+          "verifiedAt": "2026-10-31",
+          "credit": "Yuchen Zhou et al. (2026), Figure 1; CC BY 4.0.",
+          "rights": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Attribution required. Proportionally reduced within 720×480; JPEG white background, no cropping or content edits.",
+          "displayPolicy": "open-license",
+          "background": "light",
+          "altZh": "原文图1比较多模态与重尾解释、残差分布及策略成功率。",
+          "altEn": "Original Figure 1 compares multimodal versus heavy-tail explanations, residual distributions, and policy success rates."
+        },
+        "figureNote": "",
+        "institutions": [
+          {
+            "name": "University of Pennsylvania",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/penn.svg",
+              "sha256": "5e308eb85b79061a9ab8a8aff977f6aa80131eb6ab95a01469444aea0f9cd9d6",
+              "width": 563,
+              "height": 184,
+              "sourceUrl": "https://www.upenn.edu/themes/custom/penn_starter/assets/img/UPenn-logo.svg",
+              "evidenceUrl": "https://www.upenn.edu/",
+              "verifiedAt": "2026-10-31",
+              "credit": "University of Pennsylvania · official mark",
+              "rights": "Official institutional mark; trademark/copyright retained by its owner. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve aspect ratio, complete mark and clear space.",
+              "displayPolicy": "official-brand",
+              "background": "dark",
+              "altZh": "University of Pennsylvania 官方标志",
+              "altEn": "Official mark of University of Pennsylvania"
+            },
+            "authorNames": [
+              "Yuchen Zhou",
+              "Jiayuan Mao"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.12231v2",
+                "claim": "论文作者栏列出的署名机构；标志仅作身份说明，不代表背书。",
+                "checkedAt": "2026-10-31"
+              }
+            ],
+            "note": "论文作者栏列出的署名机构；标志仅作身份说明，不代表背书。"
+          },
+          {
+            "name": "Tsinghua University",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/tsinghua.png",
+              "sha256": "697e4f54fe35dd35e2090b6b1c2585f04bee244a7adff83367057774beb685ae",
+              "width": 159,
+              "height": 50,
+              "sourceUrl": "https://www.tsinghua.edu.cn/en/image/logo159.png",
+              "evidenceUrl": "https://www.tsinghua.edu.cn/en/",
+              "verifiedAt": "2026-10-31",
+              "credit": "Tsinghua University · official mark",
+              "rights": "Official institutional mark; trademark/copyright retained by its owner. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve aspect ratio, complete mark and clear space.",
+              "displayPolicy": "official-brand",
+              "background": "dark",
+              "altZh": "Tsinghua University 官方标志",
+              "altEn": "Official mark of Tsinghua University"
+            },
+            "authorNames": [
+              "Jiacheng You",
+              "Yang Gao"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.12231v2",
+                "claim": "论文作者栏列出的署名机构；标志仅作身份说明，不代表背书。",
+                "checkedAt": "2026-10-31"
+              }
+            ],
+            "note": "论文作者栏列出的署名机构；标志仅作身份说明，不代表背书。"
+          },
+          {
+            "name": "University of California San Diego",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/ucsd.png",
+              "sha256": "d3c87d86175908761937f6d6dd177e939d5bf65c3961f3d1ac825fe636197d40",
+              "width": 510,
+              "height": 102,
+              "sourceUrl": "https://www.ucsd.edu/_resources/img/logo_UCSD.png",
+              "evidenceUrl": "https://ucsd.edu/",
+              "verifiedAt": "2026-10-31",
+              "credit": "University of California San Diego · official mark",
+              "rights": "Official institutional mark; trademark/copyright retained by its owner. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve aspect ratio, complete mark and clear space.",
+              "displayPolicy": "official-brand",
+              "background": "light",
+              "altZh": "University of California San Diego 官方标志",
+              "altEn": "Official mark of University of California San Diego"
+            },
+            "authorNames": [
+              "Weikang Wan",
+              "Weijun Dong"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.12231v2",
+                "claim": "论文作者栏列出的署名机构；标志仅作身份说明，不代表背书。",
+                "checkedAt": "2026-10-31"
+              }
+            ],
+            "note": "论文作者栏列出的署名机构；标志仅作身份说明，不代表背书。"
+          }
+        ],
+        "authors": [
+          {
+            "name": "Yuchen Zhou",
+            "portrait": {
+              "kind": "author-portrait",
+              "path": "assets/authors/yuchen-zhou.jpg",
+              "sha256": "a243876d378faaaf57e63c49ffed1b302f151e998b36c3884a5ba03913738ced",
+              "width": 96,
+              "height": 96,
+              "sourceUrl": "https://projects.thelabone.org/regression-policy/assets/authors/yuchen-zhou.png",
+              "evidenceUrl": "https://projects.thelabone.org/regression-policy/",
+              "verifiedAt": "2026-10-31",
+              "credit": "Yuchen Zhou · official paper-linked project",
+              "rights": "Publicly displayed author portrait; no explicit reuse licence verified. The official paper-linked page labels this person in alt text and adjacent name. Proportionally reduced within 96×96, no face edits or inferred personal traits.",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "light",
+              "altZh": "作者项目页明确标注为Yuchen Zhou的肖像",
+              "altEn": "Portrait explicitly labelled Yuchen Zhou on the official paper-linked project page"
+            },
+            "note": "官方论文链接的项目页用图像alt和相邻姓名明确标注此作者；没有据外貌猜测身份。"
+          },
+          {
+            "name": "Jiacheng You",
+            "portrait": {
+              "kind": "author-portrait",
+              "path": "assets/authors/jiacheng-you.jpg",
+              "sha256": "491201ada4a81245be43e9a4962f5960596cf990b2239873d5f5cab7066be283",
+              "width": 96,
+              "height": 96,
+              "sourceUrl": "https://projects.thelabone.org/regression-policy/assets/authors/jiacheng-you.jpg",
+              "evidenceUrl": "https://projects.thelabone.org/regression-policy/",
+              "verifiedAt": "2026-10-31",
+              "credit": "Jiacheng You · official paper-linked project",
+              "rights": "Publicly displayed author portrait; no explicit reuse licence verified. The official paper-linked page labels this person in alt text and adjacent name. Proportionally reduced within 96×96, no face edits or inferred personal traits.",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "light",
+              "altZh": "作者项目页明确标注为Jiacheng You的肖像",
+              "altEn": "Portrait explicitly labelled Jiacheng You on the official paper-linked project page"
+            },
+            "note": "官方论文链接的项目页用图像alt和相邻姓名明确标注此作者；没有据外貌猜测身份。"
+          },
+          {
+            "name": "Weikang Wan",
+            "portrait": {
+              "kind": "author-portrait",
+              "path": "assets/authors/weikang-wan.jpg",
+              "sha256": "a3e73fe12e95ad554f6b86b18d14c3dc007b9bbf8dc96e0b176137ef5143a5a6",
+              "width": 92,
+              "height": 96,
+              "sourceUrl": "https://projects.thelabone.org/regression-policy/assets/authors/weikang-wan.jpg",
+              "evidenceUrl": "https://projects.thelabone.org/regression-policy/",
+              "verifiedAt": "2026-10-31",
+              "credit": "Weikang Wan · official paper-linked project",
+              "rights": "Publicly displayed author portrait; no explicit reuse licence verified. The official paper-linked page labels this person in alt text and adjacent name. Proportionally reduced within 96×96, no face edits or inferred personal traits.",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "light",
+              "altZh": "作者项目页明确标注为Weikang Wan的肖像",
+              "altEn": "Portrait explicitly labelled Weikang Wan on the official paper-linked project page"
+            },
+            "note": "官方论文链接的项目页用图像alt和相邻姓名明确标注此作者；没有据外貌猜测身份。"
+          },
+          {
+            "name": "Weijun Dong",
+            "portrait": {
+              "kind": "author-portrait",
+              "path": "assets/authors/weijun-dong.jpg",
+              "sha256": "05689895cdc0f35e2c96529daaba05f23464dbfacbd0ee0f58be198f79759610",
+              "width": 96,
+              "height": 96,
+              "sourceUrl": "https://projects.thelabone.org/regression-policy/assets/authors/weijun-dong.jpg",
+              "evidenceUrl": "https://projects.thelabone.org/regression-policy/",
+              "verifiedAt": "2026-10-31",
+              "credit": "Weijun Dong · official paper-linked project",
+              "rights": "Publicly displayed author portrait; no explicit reuse licence verified. The official paper-linked page labels this person in alt text and adjacent name. Proportionally reduced within 96×96, no face edits or inferred personal traits.",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "light",
+              "altZh": "作者项目页明确标注为Weijun Dong的肖像",
+              "altEn": "Portrait explicitly labelled Weijun Dong on the official paper-linked project page"
+            },
+            "note": "官方论文链接的项目页用图像alt和相邻姓名明确标注此作者；没有据外貌猜测身份。"
+          },
+          {
+            "name": "Yang Gao",
+            "portrait": {
+              "kind": "author-portrait",
+              "path": "assets/authors/yang-gao.jpg",
+              "sha256": "674b307b563c7367cf3f0393f7fe6911c84f77a8157f2e6520a4edf881b6a4d2",
+              "width": 64,
+              "height": 96,
+              "sourceUrl": "https://projects.thelabone.org/regression-policy/assets/authors/yang-gao.jpg",
+              "evidenceUrl": "https://projects.thelabone.org/regression-policy/",
+              "verifiedAt": "2026-10-31",
+              "credit": "Yang Gao · official paper-linked project",
+              "rights": "Publicly displayed author portrait; no explicit reuse licence verified. The official paper-linked page labels this person in alt text and adjacent name. Proportionally reduced within 96×96, no face edits or inferred personal traits.",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "light",
+              "altZh": "作者项目页明确标注为Yang Gao的肖像",
+              "altEn": "Portrait explicitly labelled Yang Gao on the official paper-linked project page"
+            },
+            "note": "官方论文链接的项目页用图像alt和相邻姓名明确标注此作者；没有据外貌猜测身份。"
+          },
+          {
+            "name": "Jiayuan Mao",
+            "portrait": {
+              "kind": "author-portrait",
+              "path": "assets/authors/jiayuan-mao.jpg",
+              "sha256": "2de6ccae5f93116068b2031baeb10fbfff94504aecc63acff1f452bd8f4f558a",
+              "width": 96,
+              "height": 96,
+              "sourceUrl": "https://projects.thelabone.org/regression-policy/assets/authors/jiayuan-mao.jpg",
+              "evidenceUrl": "https://projects.thelabone.org/regression-policy/",
+              "verifiedAt": "2026-10-31",
+              "credit": "Jiayuan Mao · official paper-linked project",
+              "rights": "Publicly displayed author portrait; no explicit reuse licence verified. The official paper-linked page labels this person in alt text and adjacent name. Proportionally reduced within 96×96, no face edits or inferred personal traits.",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "light",
+              "altZh": "作者项目页明确标注为Jiayuan Mao的肖像",
+              "altEn": "Portrait explicitly labelled Jiayuan Mao on the official paper-linked project page"
+            },
+            "note": "官方论文链接的项目页用图像alt和相邻姓名明确标注此作者；没有据外貌猜测身份。"
+          }
+        ]
+      }
     },
     {
       "id": "arxiv-2610-37547",
@@ -1011,7 +1826,77 @@
         "论文直接链接的匿名项目页有并排实机视频模块；未核验独立视频文件播放。未发现可验证的实现代码入口，代码字段留空。",
         "阅读深度：已读论文方法、实验设置、结果与局限以及论文直接链接项目页；未运行复现。",
         "核验限制：仅核验原始论文、作者项目页/代码页面；没有把第三方索引当作内容依据。无独立复现，未声称已通过同行评审。"
-      ]
+      ],
+      "summaryEn": "If an imitation policy already performs most of a motion but narrowly misses an insertion or placement, must the whole policy be retrained? ARC keeps the base policy fixed and separates a few human corrections into when to intervene, which directions to adjust, and how much correction to learn through rewards. Across three real-world tasks, mean success rises from 33.3% to 75%, with only 12 tests per method per task. Read the workflow before the experimental setup, distinguishing human-provided exploration guidance from directly imitating human actions.",
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/arxiv-2610-37547/figure.jpg",
+          "sha256": "81cfd04fa789c8740414875e03bd05facf2b35c347515c791dd56bef0546aea0",
+          "width": 665,
+          "height": 305,
+          "sourceUrl": "https://arxiv.org/html/2610.37547v1/fig1_arc_overall_A.png",
+          "evidenceUrl": "https://arxiv.org/html/2610.37547v1",
+          "verifiedAt": "2026-10-31",
+          "credit": "Anukriti Singh et al. (2026), Figure 1.",
+          "rights": "arXiv perpetual non-exclusive distribution licence is NOT a general reuse licence. Limited attributed thumbnail for paper commentary; copyright remains with authors, no open licence claimed. Proportionally reduced within 720×480; JPEG white background, no cropping or content edits.",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "light",
+          "altZh": "ARC原图：人工纠正定义WHEN门控和WHERE子空间，奖励驱动残差学习决定加入冻结ACT的WHAT修正量。",
+          "altEn": "Original ARC overview: human corrections define WHEN gate and WHERE subspace; reward-driven residual learning determines WHAT correction is added to frozen ACT."
+        },
+        "figureNote": "",
+        "institutions": [
+          {
+            "name": "University of Maryland, College Park",
+            "logo": null,
+            "authorNames": [
+              "Anukriti Singh",
+              "Pratap Tokekar"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.37547v1",
+                "claim": "本篇论文作者栏署名信息",
+                "checkedAt": "2026-10-31"
+              }
+            ],
+            "note": "论文署名机构已核验。UMD外部标志使用许可未核实，按品牌限制使用文字标识，不下载或发布其标志。"
+          },
+          {
+            "name": "Enchanted Tools",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/enchanted.svg",
+              "sha256": "ef659a49f0f6546d824ffc60ef402723d665eecff45f010cebec01d8e0ee4568",
+              "width": 22,
+              "height": 26,
+              "sourceUrl": "https://enchanted.tools/",
+              "evidenceUrl": "https://enchanted.tools/",
+              "verifiedAt": "2026-10-31",
+              "credit": "Enchanted Tools · official mark",
+              "rights": "Official institutional mark; trademark/copyright retained by its owner. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve aspect ratio, complete mark and clear space. Exact inline SVG extracted from official homepage; standalone XML namespace added only when absent.",
+              "displayPolicy": "official-brand",
+              "background": "light",
+              "altZh": "Enchanted Tools 官方标志",
+              "altEn": "Official mark of Enchanted Tools"
+            },
+            "authorNames": [
+              "Maxime Caniot",
+              "Firas Abi-Farraj"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.37547v1",
+                "claim": "论文作者栏列出Enchanted Tools；脚注明确第一作者的工作在该机构实习期间完成。作者映射依据本篇署名，不用当前雇主推断。",
+                "checkedAt": "2026-10-31"
+              }
+            ],
+            "note": "论文作者栏列出Enchanted Tools；脚注明确第一作者的工作在该机构实习期间完成。作者映射依据本篇署名，不用当前雇主推断。"
+          }
+        ],
+        "authors": []
+      }
     }
   ]
 }

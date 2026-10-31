@@ -5,6 +5,7 @@ import {randomUUID,createHash} from 'node:crypto';
 import {validateDay} from '../lib/model.js';
 import {root,validateAll} from './validate.mjs';
 import {normalizePapers,aliasesFor} from './identity.mjs';
+import {uniqueAssets,readAsset} from './media-assets.mjs';
 const json=value=>JSON.stringify(value,null,2)+'\n';
 
 export async function prepareDigest(input,base=root){
@@ -45,8 +46,10 @@ export async function ingest(input,{base=root,planOnly=false}={}){
   try{
     await cp(data,join(stage,'data'),{recursive:true});
     for(const file of plan.files){const target=resolve(stage,file.path);if(!target.startsWith(stage+sep))throw new Error('路径越界');await mkdir(resolve(target,'..'),{recursive:true});await writeFile(target,file.content);}
-    const result=await validateAll(stage);if(result.errors.length)throw new Error(result.errors.join('\n'));
+    const result=await validateAll(stage,{assetBase:base});if(result.errors.length)throw new Error(result.errors.join('\n'));
     for(const file of plan.files)file.sha256=createHash('sha256').update(file.content).digest('hex');
+    plan.assetFiles=[];
+    for(const asset of uniqueAssets(JSON.parse(plan.files[0].content).papers)){const bytes=await readAsset(asset,base);plan.assetFiles.push({path:asset.path,encoding:'base64',sha256:asset.sha256,content:bytes.toString('base64')});}
     if(!planOnly){
       // Stage and validate the entire dataset first. Swap directories with rollback;
       // remote publication is one atomic Git commit/ref update, not three API writes.
