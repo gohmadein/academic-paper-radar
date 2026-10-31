@@ -7,6 +7,7 @@ import {root,validateAll} from './validate.mjs';
 import {normalizePapers,aliasesFor} from './identity.mjs';
 import {uniqueAssets,readAsset} from './media-assets.mjs';
 import {reuseInstitutions} from '../lib/institutions.js';
+import {reusePaperGeography,validateVerifiedGeography} from '../lib/geography-validation.js';
 const json=value=>JSON.stringify(value,null,2)+'\n';
 
 export async function prepareDigest(input,base=root){
@@ -16,6 +17,23 @@ export async function prepareDigest(input,base=root){
   const day={...structuredClone(input),papers:normalizePapers(structuredClone(input.papers),registry)};
   const institutions=JSON.parse(await readFile(join(base,'data/institutions.json'),'utf8'));
   reuseInstitutions(day.papers,institutions);
+  let geography, geographyBefore;
+  try{geography=JSON.parse(await readFile(join(base,'data/paper-geography.json'),'utf8'));geographyBefore=JSON.stringify(geography);}catch(error){if(error.code!=='ENOENT')throw error;}
+  if(!geography&&input.papers.some(p=>p.verifiedGeography!==undefined))throw new Error('verifiedGeography 需要先建立已核验地理库');
+  if(geography){
+    const explicitById=new Map();
+    for(const raw of input.papers)if(raw.verifiedGeography!==undefined){
+      const problems=validateVerifiedGeography(raw.verifiedGeography,geography);if(problems.length)throw new Error(problems.join('; '));
+      const id=normalizePapers([structuredClone(raw)],registry)[0].id;
+      const value=JSON.stringify({locationIds:[...raw.verifiedGeography.locationIds].sort(),evidenceUrls:[...raw.verifiedGeography.evidenceUrls].sort()});
+      if(explicitById.has(id)&&explicitById.get(id)!==value)throw new Error(`${id}: 同日地理核验证据冲突`);
+      explicitById.set(id,value);
+    }
+    for(const p of day.papers)if(explicitById.has(p.id))p.verifiedGeography=JSON.parse(explicitById.get(p.id));
+    reusePaperGeography(day.papers,geography);
+  }
+  // Optional ingestion metadata belongs in the sidecar, not the strict daily-paper schema.
+  for(const p of day.papers)delete p.verifiedGeography;
   let rules;
   try{rules=JSON.parse(await readFile(join(base,'config/digest-rules.json'),'utf8'));}catch(error){if(error.code!=='ENOENT')throw error;}
   const normalizedTitle=value=>value.toLowerCase().replace(/[^a-z0-9]/g,'');
@@ -36,7 +54,7 @@ export async function prepareDigest(input,base=root){
   index.days=index.days.filter(d=>d.date!==day.date);
   index.days.push({date:day.date,file:`days/${day.date}.json`,count:day.papers.length,title:day.title});
   index.days.sort((a,b)=>b.date.localeCompare(a.date));
-  return {files:[{path:`data/days/${day.date}.json`,content:json(day)},{path:'data/index.json',content:json(index)},{path:'data/registry.json',content:json(registry)},{path:'data/institutions.json',content:json(institutions)}],summary:{date:day.date,uniquePapers:day.papers.length,profiles:Object.fromEntries(['xun','li','lv'].map(k=>[k,day.papers.filter(p=>p.profiles.includes(k)&&!p.classic).length])),classics:day.papers.filter(p=>p.classic).length}};
+  return {files:[{path:`data/days/${day.date}.json`,content:json(day)},{path:'data/index.json',content:json(index)},{path:'data/registry.json',content:json(registry)},{path:'data/institutions.json',content:json(institutions)},...(geography&&JSON.stringify(geography)!==geographyBefore?[{path:'data/paper-geography.json',content:json(geography)}]:[])],summary:{date:day.date,uniquePapers:day.papers.length,profiles:Object.fromEntries(['xun','li','lv'].map(k=>[k,day.papers.filter(p=>p.profiles.includes(k)&&!p.classic).length])),classics:day.papers.filter(p=>p.classic).length}};
 }
 
 export async function ingest(input,{base=root,planOnly=false}={}){

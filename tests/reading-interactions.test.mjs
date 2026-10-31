@@ -1,3 +1,4 @@
+import * as researchMap from '../lib/research-map.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
@@ -30,7 +31,7 @@ async function harness({navigator={}}={}) {
   });
   const element=id=>{if(!elements.has(id))elements.set(id,make(id));return elements.get(id)};
   const query=selector=>{const match=selector.match(/\[data-([\w-]+)="([^"]+)"\]/);if(!match)return null;const key=match[1].replace(/-([a-z])/g,(_,c)=>c.toUpperCase());return make(selector,{[key]:match[2],paperControl:true})};
-  context=vm.createContext({...profileIcons,...sources,...topics,...model,...digest,...institutions,...transfer,...sharing,...media,
+  context=vm.createContext({...researchMap,...profileIcons,...sources,...topics,...model,...digest,...institutions,...transfer,...sharing,...media,
     navigator,e:model.escapeHTML,updateHUD(){},console,URL,URLSearchParams,CSS:{escape:x=>x},setTimeout:()=>0,clearTimeout(){},
     document:{title:'ZERO FIELD',getElementById:element,querySelectorAll:()=>[],querySelector:query,activeElement:make('body'),body:{classList:{toggle(){}}},addEventListener:(type,fn)=>on(type,fn)},
     window:{addEventListener:(type,fn)=>{windowEvents[type]=fn}},localStorage:{getItem:k=>stored.get(k),setItem:(k,v)=>stored.set(k,v)},location,
@@ -137,4 +138,23 @@ test('Bilingual guide expands independently, retains full CN then EN content, an
   assert.ok(html.includes(model.escapeHTML(p.summary)));assert.ok(html.includes(model.escapeHTML(p.summaryEn)));
   assert.ok(html.indexOf(model.escapeHTML(p.summary))<html.indexOf(model.escapeHTML(p.summaryEn)));
   await h.click({view:'archive'});await h.click({view:'feed'});assert.equal(expanded(id),true);
+});
+
+test('Atlas repeated modes, selection, close, paper detail and profile/navigation do not change feed filters',async()=>{
+ const h=await harness();
+ h.run("go({category:'xun',q:'not-a-match',date:'2026-10-30'})");
+ const region=h.run("researchMapModel(data.real.papers,data.geography,{profile:'xun'}).groups[0].id");
+ const id=h.run("researchMapModel(data.real.papers,data.geography,{profile:'xun'}).groups[0].papers[0].id");
+ for(let i=0;i<3;i++){
+  await h.click({mapMode:'today'});assert.equal(h.run('mapMode'),'today');
+  await h.click({mapMode:'all'});assert.equal(h.run('mapMode'),'all');
+  await h.click({mapRegion:region});assert.equal(h.run('mapRegion'),region);assert.match(h.element('research-map').innerHTML,/data-map-paper/);
+  await h.click({mapPaper:id});assert.equal(h.element('detail-dialog').open,true);assert.equal(h.run('state.date'),'2026-10-30');
+  await h.fire('close-dialog:click');assert.equal(h.element('detail-dialog').open,false);assert.equal(h.run('state.q'),'not-a-match');
+  await h.click({mapClear:'true'});assert.equal(h.run('mapRegion'),'');
+ }
+ await h.click({mapRegion:region});await h.click({category:'li'});assert.equal(h.run('mapRegion'),'');
+ for(const view of ['archive','bookmarks','sources']){h.run(`go({view:'${view}'})`);assert.equal(h.element('research-map').hidden,true);}
+ h.run("go({view:'feed',demo:true})");assert.equal(h.element('research-map').hidden,true);
+ h.run("go({view:'feed',demo:false,category:'all'})");assert.equal(h.element('research-map').hidden,false);
 });

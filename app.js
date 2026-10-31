@@ -1,3 +1,4 @@
+import {researchMapModel,researchMapHTML} from './lib/research-map.js';
 import {profileIcon} from './lib/profile-icons.js';
 import {sourceDirectory,sourceViewPatch,SOURCE_NAV} from './lib/source-directory.js';
 import {availableTopics,topicLabel,topicForProfile} from './lib/topics.js';
@@ -35,6 +36,11 @@ try{reads=parseBookmarks(localStorage.getItem(READ_KEY));}catch{reads=new Set();
 let state = readRoute(location.hash);
 let data = null;
 let watchlists = null;
+let mapMode = 'all';
+let mapRegion = '';
+let mapProfile = '';
+let mapPaper = '';
+let lastMapMarkup = '';
 let bookmarks;
 let storageAvailable = true;
 let toastTimer;
@@ -75,7 +81,8 @@ async function init() {
   $('content').setAttribute('aria-busy','true');
   try {
     const [real,demo,institutions] = await Promise.all([loadCollection('data',false),loadCollection('data/demo',true),getJSON('data/institutions.json')]);
-    data = {real,demo,institutions};
+    const geography = await getJSON('data/paper-geography.json').catch(()=>null);
+    data = {real,demo,institutions,geography};
     if(state.view==='feed'&&!state.demo&&!new URLSearchParams(location.hash.slice(1)).has('date')&&real.days.length){state.date=real.days[0].date;history.replaceState(null,'',routeHash(state));}
     $('real-count').textContent = String(real.papers.length).padStart(2,'0');
     $('real-days').textContent = String(real.days.length).padStart(2,'0');
@@ -102,6 +109,8 @@ function updateViewChrome() {
   $('profile-motto').hidden=!motto;
   $('profile-motto').setAttribute('data-profile',motto?state.category:'');
   $('profile-motto').setAttribute('lang',state.category==='li'?'en':'zh-CN');
+  $('research-map').hidden = !isFeed || state.demo;
+  $('reading-intro').classList.toggle('with-map',isFeed&&!state.demo);
   $('hero').hidden = !isFeed;
   $('demo-banner').hidden = !isFeed || !state.demo;
   $('page-demo-note').hidden = isFeed || !state.demo || state.view==='sources';
@@ -150,6 +159,19 @@ function emptyState(kind) {
   return `<div class="empty-state no-results"><div class="empty-art" aria-hidden="true"><span>⌕</span></div><h3>没有匹配的论文</h3><p>调整关键词或清除筛选。</p><button class="secondary-button" data-action="clear">清除筛选 →</button></div>`;
 }
 
+function renderMap() {
+  if(!data)return;
+  if(mapProfile!==state.category){mapRegion='';mapProfile=state.category;}
+  const model=researchMapModel(data.real.papers,data.geography,{profile:state.category,mode:mapMode});
+  if(!model.groups.some(g=>g.id===mapRegion))mapRegion='';
+  const markup=researchMapHTML(model,mapRegion);
+  if(markup===lastMapMarkup)return;
+  lastMapMarkup=markup;
+  const expanded=$('map-regions')?.open;
+  $('research-map').innerHTML=markup;
+  if(expanded&&$('map-regions'))$('map-regions').open=true;
+}
+
 function render() {
   const active = document.activeElement;
   const focusSelector = active?.dataset?.read ? `[data-read="${CSS.escape(active.dataset.read)}"]` : active?.dataset?.guideToggle ? `[data-guide-toggle="${CSS.escape(active.dataset.guideToggle)}"]` : active?.dataset?.sourceProfile ? `[data-source-profile="${CSS.escape(active.dataset.sourceProfile)}"][data-source-type="${CSS.escape(active.dataset.sourceType||'conference')}"]` : active?.dataset?.category ? `[data-category="${CSS.escape(active.dataset.category)}"]` : active?.dataset?.tag ? `${active.closest('#tags')?'#tags ':''}[data-tag="${CSS.escape(active.dataset.tag)}"]` : active?.dataset?.bookmark ? `[data-bookmark="${CSS.escape(active.dataset.bookmark)}"]` : active?.dataset?.date ? `[data-date="${CSS.escape(active.dataset.date)}"]` : null;
@@ -158,6 +180,7 @@ function render() {
   $('read-select').value=state.readStatus;
   $('issue-panel').innerHTML=state.view==='feed'?issueReport(days.find(d=>d.date===state.date)||days[0]):'';
   updateViewChrome();
+  renderMap();
   if (state.view === 'feed') updateHUD({demo:state.demo,papers,days});
   $('bookmark-transfer').hidden = state.view !== 'bookmarks';
   const tags = availableTopics(papers,state.category);
@@ -199,7 +222,7 @@ function renderDialog() {
     lastDialogPaper = '';
     return;
   }
-  const p = filterPapers(collection().papers,{date:state.date}).find(p => p.id===state.paper);
+  const p = filterPapers(collection().papers,{date:mapPaper===state.paper?'all':state.date}).find(p => p.id===state.paper);
   if (!p) {
     if (dialog.open) dialog.close();
     state.paper = ''; history.replaceState(null,'',routeHash(state));
@@ -222,12 +245,18 @@ function closeDialog() {
   if (state.paper) go({paper:''});
   else $('detail-dialog').close();
   if (dialogTrigger?.isConnected) dialogTrigger.focus();
+  else if (mapPaper===paperId) document.querySelector(`[data-map-paper="${CSS.escape(paperId)}"]`)?.focus({preventScroll:true});
   else if (paperId) document.querySelector(`[data-paper="${CSS.escape(paperId)}"]`)?.focus({preventScroll:true});
 }
 
 document.addEventListener('click', event => {
   const b = event.target.closest('button');
   if (!b) return;
+  if(b.dataset.mapMode){mapMode=b.dataset.mapMode==='today'?'today':'all';mapRegion='';renderMap();document.querySelector(`[data-map-mode="${mapMode}"]`)?.focus({preventScroll:true});return;}
+  if(b.dataset.mapRegion){mapRegion=b.dataset.mapRegion;renderMap();document.querySelector(`[data-map-region="${CSS.escape(mapRegion)}"]`)?.focus({preventScroll:true});return;}
+  if(b.dataset.mapClear){const previous=mapRegion;mapRegion='';renderMap();document.querySelector(`[data-map-region="${CSS.escape(previous)}"]`)?.focus({preventScroll:true});return;}
+  if(b.dataset.mapPaper){mapPaper=b.dataset.mapPaper;dialogTrigger=b;go({paper:mapPaper});return;}
+
   if(b.dataset.guideToggle){const id=b.dataset.guideToggle;if(expandedGuides.has(id))expandedGuides.delete(id);else expandedGuides.add(id);render();return;}
   if(b.dataset.institutionScroll){scrollInstitutions($('institution-strip'),Number(b.dataset.institutionScroll));return;}
   if(PROFILES[b.dataset.sourceProfile]){go({category:b.dataset.sourceProfile,sourceType:SOURCE_NAV.some(([type])=>type===b.dataset.sourceType)?b.dataset.sourceType:'conference',view:'sources',paper:''});return;}
@@ -236,7 +265,7 @@ document.addEventListener('click', event => {
   else if(b.dataset.read){if(reads.has(b.dataset.read))reads.delete(b.dataset.read);else reads.add(b.dataset.read);try{localStorage.setItem(READ_KEY,JSON.stringify([...reads]));}catch{toast('阅读状态仅在当前会话可用');}render();}
   else if (b.dataset.view) go({view:b.dataset.view,q:'',tag:'all',date:b.dataset.view==='feed'&&!state.demo&&data?.real.days[0]?data.real.days[0].date:'all',paper:''});
   else if(b.dataset.share)requestShare(b.dataset.share);
-  else if (b.dataset.paper) { dialogTrigger = b; go({paper:b.dataset.paper}); }
+  else if (b.dataset.paper) { mapPaper=''; dialogTrigger = b; go({paper:b.dataset.paper}); }
   else if (b.dataset.bookmark) toggleBookmark(b.dataset.bookmark);
   else if (b.dataset.tag) go({tag:b.dataset.tag,view:state.view==='archive'?'feed':state.view,paper:''});
   else if (b.dataset.date) go({date:b.dataset.date,view:'feed',q:'',tag:'all',paper:''});
@@ -317,12 +346,15 @@ $('about-button').addEventListener('click',()=>{
   if(state.paper) go({paper:''});
   dialogTrigger = $('about-button'); lastDialogPaper = '';
   $('dialog-kicker').textContent = 'ABOUT / ZERO FIELD';
-  $('dialog-content').innerHTML = '<h2 id="dialog-title">零域 / ZERO FIELD</h2><p>迅、李、驴的每日论文精选。</p><p>书签与已读状态仅保存在本机，不会自动同步；清除浏览器数据会删除记录。</p>';
+  $('dialog-content').innerHTML = '<h2 id="dialog-title">零域 / ZERO FIELD</h2><p>迅、李、驴的每日论文精选。</p><p>书签与已读状态仅保存在本机，不会自动同步；清除浏览器数据会删除记录。</p><p>研究足迹按已核验的作者署名机构所在城市点亮；跨地区论文可点亮多处，篇数按论文去重。城市点位为示意，不代表国籍。底图：<a href="https://www.naturalearthdata.com/about/terms-of-use/" target="_blank" rel="noopener noreferrer">Natural Earth · 公共领域</a>，仅显示陆地轮廓。</p>';
   $('detail-dialog').showModal();
 });
 function syncRoute(){if(location.hash==='#main')return;shareRequest++;if($('share-dialog').open)$('share-dialog').close();state=readRoute(location.hash);updateViewChrome();if(data)render();}
 window.addEventListener('popstate',syncRoute);
 window.addEventListener('hashchange',syncRoute);
+// Refresh date-sensitive counts after returning to an overnight-open tab.
+window.addEventListener('focus',()=>{if(data&&state.view==='feed'&&!state.demo)renderMap();});
+document.addEventListener('visibilitychange',()=>{if(!document.hidden&&data&&state.view==='feed'&&!state.demo)renderMap();});
 window.addEventListener('storage',event=>{if(event.key===BOOKMARK_KEY){bookmarks=parseBookmarks(event.newValue);if(data)render();}});
 document.addEventListener('keydown',event=>{if(event.key==='/' && !event.ctrlKey && !event.metaKey && !event.altKey && !$('detail-dialog').open && !$('share-dialog').open && !['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName) && !$('filter-panel').hidden){event.preventDefault();$('search').focus();}});
 init();

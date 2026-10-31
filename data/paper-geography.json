@@ -1,0 +1,534 @@
+{
+  "version": 1,
+  "verifiedAt": "2026-10-31",
+  "timezone": "Asia/Shanghai",
+  "currentPushDate": "2026-10-31",
+  "scope": "Only real papers in data/days, not demo papers or source watchlists. Countries are neutral geographic labels. Render city points on a land outline without national borders.",
+  "countingPolicy": "Deduplicate stable paper IDs globally and once per selected geographic region; a cross-region paper belongs to each relevant region but is one global paper. Filter papers by active profile before counting; today means push-day date in Asia/Shanghai, not publication date.",
+  "locations": {
+    "illinois": {
+      "id": "illinois",
+      "institutionId": "illinois",
+      "institutionName": "University of Illinois Urbana-Champaign",
+      "label": "Urbana",
+      "labelZh": "厄巴纳",
+      "city": "Urbana",
+      "countryCode": "US",
+      "countryLabel": "United States",
+      "countryLabelZh": "美国",
+      "region": "Illinois",
+      "lat": 40.11,
+      "lon": -88.21,
+      "coordinatePrecision": "representative-city",
+      "coordinateMethod": "Manually selected approximate city-level display anchor; not geocoded research site, building address, or author whereabouts.",
+      "evidenceUrls": [
+        "https://illinois.edu/about/contact/",
+        "https://arxiv.org/html/2610.31841"
+      ],
+      "verifiedAt": "2026-10-31",
+      "caveat": "Public institutional affiliation geography only; no inference about author nationality or residence."
+    },
+    "tsinghua": {
+      "id": "tsinghua",
+      "institutionId": "tsinghua",
+      "institutionName": "Tsinghua University",
+      "label": "Beijing",
+      "labelZh": "北京",
+      "city": "Beijing",
+      "countryCode": "CN",
+      "countryLabel": "China",
+      "countryLabelZh": "中国",
+      "region": "Beijing",
+      "lat": 39.9,
+      "lon": 116.4,
+      "coordinatePrecision": "representative-city",
+      "coordinateMethod": "Manually selected approximate city-level display anchor; not geocoded research site, building address, or author whereabouts.",
+      "evidenceUrls": [
+        "https://www.tsinghua.edu.cn/en/Contact.htm",
+        "https://iiis.tsinghua.edu.cn/en/People/Faculty/GaoYang.htm",
+        "https://arxiv.org/html/2610.31841",
+        "https://arxiv.org/html/2610.12231v2"
+      ],
+      "verifiedAt": "2026-10-31",
+      "caveat": "Public institutional affiliation geography only; no inference about author nationality or residence."
+    },
+    "maryland-college-park": {
+      "id": "maryland-college-park",
+      "institutionId": "maryland-college-park",
+      "institutionName": "University of Maryland, College Park",
+      "label": "College Park",
+      "labelZh": "大学公园市",
+      "city": "College Park",
+      "countryCode": "US",
+      "countryLabel": "United States",
+      "countryLabelZh": "美国",
+      "region": "Maryland",
+      "lat": 38.99,
+      "lon": -76.94,
+      "coordinatePrecision": "representative-city",
+      "coordinateMethod": "Manually selected approximate city-level display anchor; not geocoded research site, building address, or author whereabouts.",
+      "evidenceUrls": [
+        "https://www.registrar.umd.edu/contact-us",
+        "https://arxiv.org/html/2610.19044",
+        "https://arxiv.org/html/2610.22340",
+        "https://arxiv.org/html/2610.37547v1"
+      ],
+      "verifiedAt": "2026-10-31",
+      "caveat": "Public institutional affiliation geography only; no inference about author nationality or residence."
+    },
+    "georgia-tech": {
+      "id": "georgia-tech",
+      "institutionId": "georgia-tech",
+      "institutionName": "Georgia Institute of Technology",
+      "label": "Atlanta",
+      "labelZh": "亚特兰大",
+      "city": "Atlanta",
+      "countryCode": "US",
+      "countryLabel": "United States",
+      "countryLabelZh": "美国",
+      "region": "Georgia",
+      "lat": 33.75,
+      "lon": -84.39,
+      "coordinatePrecision": "representative-city",
+      "coordinateMethod": "Manually selected approximate city-level display anchor; not geocoded research site, building address, or author whereabouts.",
+      "evidenceUrls": [
+        "https://ece.gatech.edu/contact",
+        "https://arxiv.org/html/2610.20925",
+        "https://arxiv.org/html/2610.17326"
+      ],
+      "verifiedAt": "2026-10-31",
+      "caveat": "Public institutional affiliation geography only; no inference about author nationality or residence."
+    },
+    "harvard": {
+      "id": "harvard",
+      "institutionId": "harvard",
+      "institutionName": "Harvard University",
+      "label": "Cambridge",
+      "labelZh": "剑桥",
+      "city": "Cambridge",
+      "countryCode": "US",
+      "countryLabel": "United States",
+      "countryLabelZh": "美国",
+      "region": "Massachusetts",
+      "lat": 42.37,
+      "lon": -71.11,
+      "coordinatePrecision": "representative-city",
+      "coordinateMethod": "Manually selected approximate city-level display anchor; not geocoded research site, building address, or author whereabouts.",
+      "evidenceUrls": [
+        "https://seo.harvard.edu/contact",
+        "https://arxiv.org/html/2610.28251"
+      ],
+      "verifiedAt": "2026-10-31",
+      "caveat": "Public institutional affiliation geography only; no inference about author nationality or residence. Paper explicitly says Cambridge; retain paper city even though current SEAS personnel offices can be in adjacent Allston."
+    },
+    "arizona-state": {
+      "id": "arizona-state",
+      "institutionId": "arizona-state",
+      "institutionName": "Arizona State University",
+      "label": "Tempe",
+      "labelZh": "坦佩",
+      "city": "Tempe",
+      "countryCode": "US",
+      "countryLabel": "United States",
+      "countryLabelZh": "美国",
+      "region": "Arizona",
+      "lat": 33.43,
+      "lon": -111.94,
+      "coordinatePrecision": "representative-city",
+      "coordinateMethod": "Manually selected approximate city-level display anchor; not geocoded research site, building address, or author whereabouts.",
+      "evidenceUrls": [
+        "https://www.asu.edu/about/contact",
+        "https://arxiv.org/html/2610.28251"
+      ],
+      "verifiedAt": "2026-10-31",
+      "caveat": "Public institutional affiliation geography only; no inference about author nationality or residence."
+    },
+    "laval": {
+      "id": "laval",
+      "institutionId": "laval",
+      "institutionName": "Université Laval",
+      "label": "Québec City",
+      "labelZh": "魁北克市",
+      "city": "Québec City",
+      "countryCode": "CA",
+      "countryLabel": "Canada",
+      "countryLabelZh": "加拿大",
+      "region": "Québec",
+      "lat": 46.81,
+      "lon": -71.21,
+      "coordinatePrecision": "representative-city",
+      "coordinateMethod": "Manually selected approximate city-level display anchor; not geocoded research site, building address, or author whereabouts.",
+      "evidenceUrls": [
+        "https://www.ulaval.ca/nous-joindre",
+        "https://arxiv.org/html/2610.37550"
+      ],
+      "verifiedAt": "2026-10-31",
+      "caveat": "Public institutional affiliation geography only; no inference about author nationality or residence."
+    },
+    "mila": {
+      "id": "mila",
+      "institutionId": "mila",
+      "institutionName": "Mila – Quebec AI Institute",
+      "label": "Montréal",
+      "labelZh": "蒙特利尔",
+      "city": "Montréal",
+      "countryCode": "CA",
+      "countryLabel": "Canada",
+      "countryLabelZh": "加拿大",
+      "region": "Québec",
+      "lat": 45.5,
+      "lon": -73.57,
+      "coordinatePrecision": "representative-city",
+      "coordinateMethod": "Manually selected approximate city-level display anchor; not geocoded research site, building address, or author whereabouts.",
+      "evidenceUrls": [
+        "https://mila.quebec/en/about/contact",
+        "https://arxiv.org/html/2610.37550"
+      ],
+      "verifiedAt": "2026-10-31",
+      "caveat": "Public institutional affiliation geography only; no inference about author nationality or residence. Representative location of affiliated institute, not evidence all authors physically worked in Montréal."
+    },
+    "northeastern": {
+      "id": "northeastern",
+      "institutionId": "northeastern",
+      "institutionName": "Northeastern University",
+      "label": "Boston",
+      "labelZh": "波士顿",
+      "city": "Boston",
+      "countryCode": "US",
+      "countryLabel": "United States",
+      "countryLabelZh": "美国",
+      "region": "Massachusetts",
+      "lat": 42.36,
+      "lon": -71.06,
+      "coordinatePrecision": "representative-city",
+      "coordinateMethod": "Manually selected approximate city-level display anchor; not geocoded research site, building address, or author whereabouts.",
+      "evidenceUrls": [
+        "https://www.khoury.northeastern.edu/people/wolfgang-gatterbauer/",
+        "https://www.vldb.org/pvldb/vol18/p2667-makhija.pdf"
+      ],
+      "verifiedAt": "2026-10-31",
+      "caveat": "Public institutional affiliation geography only; no inference about author nationality or residence. Paper gives Northeastern University, USA; named coauthor official faculty page explicitly identifies Boston campus."
+    },
+    "pennsylvania": {
+      "id": "pennsylvania",
+      "institutionId": "pennsylvania",
+      "institutionName": "University of Pennsylvania",
+      "label": "Philadelphia",
+      "labelZh": "费城",
+      "city": "Philadelphia",
+      "countryCode": "US",
+      "countryLabel": "United States",
+      "countryLabelZh": "美国",
+      "region": "Pennsylvania",
+      "lat": 39.95,
+      "lon": -75.17,
+      "coordinatePrecision": "representative-city",
+      "coordinateMethod": "Manually selected approximate city-level display anchor; not geocoded research site, building address, or author whereabouts.",
+      "evidenceUrls": [
+        "https://www.upenn.edu/about/contact",
+        "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICDT.2026.12",
+        "https://arxiv.org/html/2610.12231v2"
+      ],
+      "verifiedAt": "2026-10-31",
+      "caveat": "Public institutional affiliation geography only; no inference about author nationality or residence."
+    },
+    "uc-san-diego": {
+      "id": "uc-san-diego",
+      "institutionId": "uc-san-diego",
+      "institutionName": "University of California San Diego",
+      "label": "San Diego (La Jolla)",
+      "labelZh": "圣地亚哥（拉霍亚）",
+      "city": "San Diego (La Jolla)",
+      "countryCode": "US",
+      "countryLabel": "United States",
+      "countryLabelZh": "美国",
+      "region": "California",
+      "lat": 32.87,
+      "lon": -117.24,
+      "coordinatePrecision": "representative-city",
+      "coordinateMethod": "Manually selected approximate city-level display anchor; not geocoded research site, building address, or author whereabouts.",
+      "evidenceUrls": [
+        "https://www.ucsd.edu/about/contact.html",
+        "https://arxiv.org/html/2610.12231v2"
+      ],
+      "verifiedAt": "2026-10-31",
+      "caveat": "Public institutional affiliation geography only; no inference about author nationality or residence."
+    },
+    "enchanted-tools": {
+      "id": "enchanted-tools",
+      "institutionId": "enchanted-tools",
+      "institutionName": "Enchanted Tools",
+      "label": "Paris",
+      "labelZh": "巴黎",
+      "city": "Paris",
+      "countryCode": "FR",
+      "countryLabel": "France",
+      "countryLabelZh": "法国",
+      "region": "Île-de-France",
+      "lat": 48.86,
+      "lon": 2.35,
+      "coordinatePrecision": "representative-city",
+      "coordinateMethod": "Manually selected approximate city-level display anchor; not geocoded research site, building address, or author whereabouts.",
+      "evidenceUrls": [
+        "https://enchanted.tools/contact/",
+        "https://arxiv.org/html/2610.37547v1"
+      ],
+      "verifiedAt": "2026-10-31",
+      "caveat": "Public institutional affiliation geography only; no inference about author nationality or residence. Paris is explicitly stated in the paper; not inferred from company headquarters."
+    }
+  },
+  "papers": {
+    "arxiv-2610-31841": {
+      "locationIds": [
+        "illinois",
+        "tsinghua"
+      ],
+      "unresolvedInstitutionIds": [],
+      "evidenceUrls": [
+        "https://arxiv.org/html/2610.31841"
+      ],
+      "verifiedAt": "2026-10-31",
+      "pushDates": [
+        "2026-10-31"
+      ],
+      "profiles": [
+        "xun"
+      ]
+    },
+    "arxiv-2610-19044": {
+      "locationIds": [
+        "maryland-college-park"
+      ],
+      "unresolvedInstitutionIds": [],
+      "evidenceUrls": [
+        "https://arxiv.org/html/2610.19044"
+      ],
+      "verifiedAt": "2026-10-31",
+      "pushDates": [
+        "2026-10-31"
+      ],
+      "profiles": [
+        "xun"
+      ]
+    },
+    "arxiv-2610-20925": {
+      "locationIds": [
+        "georgia-tech"
+      ],
+      "unresolvedInstitutionIds": [],
+      "evidenceUrls": [
+        "https://arxiv.org/html/2610.20925"
+      ],
+      "verifiedAt": "2026-10-31",
+      "pushDates": [
+        "2026-10-31"
+      ],
+      "profiles": [
+        "xun"
+      ]
+    },
+    "arxiv-2610-28251": {
+      "locationIds": [
+        "harvard",
+        "arizona-state"
+      ],
+      "unresolvedInstitutionIds": [],
+      "evidenceUrls": [
+        "https://arxiv.org/html/2610.28251"
+      ],
+      "verifiedAt": "2026-10-31",
+      "pushDates": [
+        "2026-10-31"
+      ],
+      "profiles": [
+        "xun"
+      ]
+    },
+    "arxiv-2610-22340": {
+      "locationIds": [
+        "maryland-college-park"
+      ],
+      "unresolvedInstitutionIds": [
+        "amazon-far"
+      ],
+      "evidenceUrls": [
+        "https://arxiv.org/html/2610.22340"
+      ],
+      "verifiedAt": "2026-10-31",
+      "pushDates": [
+        "2026-10-31"
+      ],
+      "profiles": [
+        "xun"
+      ]
+    },
+    "arxiv-2610-37550": {
+      "locationIds": [
+        "laval",
+        "mila"
+      ],
+      "unresolvedInstitutionIds": [
+        "cifar-ai-chair"
+      ],
+      "evidenceUrls": [
+        "https://arxiv.org/html/2610.37550"
+      ],
+      "verifiedAt": "2026-10-31",
+      "pushDates": [
+        "2026-10-31"
+      ],
+      "profiles": [
+        "xun"
+      ]
+    },
+    "arxiv-2610-17326": {
+      "locationIds": [
+        "georgia-tech"
+      ],
+      "unresolvedInstitutionIds": [],
+      "evidenceUrls": [
+        "https://arxiv.org/html/2610.17326"
+      ],
+      "verifiedAt": "2026-10-31",
+      "pushDates": [
+        "2026-10-31"
+      ],
+      "profiles": [
+        "xun"
+      ]
+    },
+    "doi-d0ded22222dc36782e1a": {
+      "locationIds": [
+        "northeastern"
+      ],
+      "unresolvedInstitutionIds": [],
+      "evidenceUrls": [
+        "https://www.vldb.org/pvldb/vol18/p2667-makhija.pdf"
+      ],
+      "verifiedAt": "2026-10-31",
+      "pushDates": [
+        "2026-10-31"
+      ],
+      "profiles": [
+        "li"
+      ]
+    },
+    "doi-259aaefa9d9fdb4b874f": {
+      "locationIds": [
+        "pennsylvania"
+      ],
+      "unresolvedInstitutionIds": [],
+      "evidenceUrls": [
+        "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICDT.2026.12"
+      ],
+      "verifiedAt": "2026-10-31",
+      "pushDates": [
+        "2026-10-31"
+      ],
+      "profiles": [
+        "li"
+      ]
+    },
+    "arxiv-2610-12231": {
+      "locationIds": [
+        "pennsylvania",
+        "tsinghua",
+        "uc-san-diego"
+      ],
+      "unresolvedInstitutionIds": [],
+      "evidenceUrls": [
+        "https://arxiv.org/html/2610.12231v2"
+      ],
+      "verifiedAt": "2026-10-31",
+      "pushDates": [
+        "2026-10-31"
+      ],
+      "profiles": [
+        "lv"
+      ]
+    },
+    "arxiv-2610-37547": {
+      "locationIds": [
+        "maryland-college-park",
+        "enchanted-tools"
+      ],
+      "unresolvedInstitutionIds": [],
+      "evidenceUrls": [
+        "https://arxiv.org/html/2610.37547v1"
+      ],
+      "verifiedAt": "2026-10-31",
+      "pushDates": [
+        "2026-10-31"
+      ],
+      "profiles": [
+        "lv"
+      ]
+    }
+  },
+  "unresolvedInstitutions": {
+    "amazon-far": {
+      "institutionId": "amazon-far",
+      "reason": "Paper and project page identify Amazon FAR but do not specify the affiliated research office city/country. A multinational HQ or hiring location is insufficient evidence. No marker assigned.",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2610.22340",
+        "https://play-policy.github.io/"
+      ]
+    },
+    "cifar-ai-chair": {
+      "institutionId": "cifar-ai-chair",
+      "reason": "CIFAR AI Chair is an appointment/program, not an independent physical campus affiliation. Do not place at CIFAR headquarters. Laval and Mila already represent the explicit physical affiliations.",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2610.37550",
+        "https://cifar.ca/wp-content/uploads/2020/11/AICan-2020-CIFAR-Pan-Canadian-AI-Strategy-Impact-Report.pdf"
+      ]
+    }
+  },
+  "coverage": {
+    "realPaperCount": 11,
+    "papersMissingAffiliations": [],
+    "papersWithNoResolvedLocation": [],
+    "unknownPaperCount": 0,
+    "partiallyUnresolvedPaperIds": [
+      "arxiv-2610-22340",
+      "arxiv-2610-37550"
+    ],
+    "unresolvedAffiliationCount": 2,
+    "resolvedLocationCount": 12,
+    "regionPaperIds": {
+      "US": [
+        "arxiv-2610-31841",
+        "arxiv-2610-19044",
+        "arxiv-2610-20925",
+        "arxiv-2610-28251",
+        "arxiv-2610-22340",
+        "arxiv-2610-17326",
+        "doi-d0ded22222dc36782e1a",
+        "doi-259aaefa9d9fdb4b874f",
+        "arxiv-2610-12231",
+        "arxiv-2610-37547"
+      ],
+      "CN": [
+        "arxiv-2610-31841",
+        "arxiv-2610-12231"
+      ],
+      "CA": [
+        "arxiv-2610-37550"
+      ],
+      "FR": [
+        "arxiv-2610-37547"
+      ]
+    },
+    "regionCounts": {
+      "US": 10,
+      "CN": 2,
+      "CA": 1,
+      "FR": 1
+    }
+  },
+  "caveats": [
+    "All 11 papers were checked against primary paper HTML/PDF/publisher author affiliations on 2026-10-31.",
+    "Coordinates are approximate manually chosen city display anchors, not measured or officially published institutional coordinates; they must not be presented as exact campuses or author locations.",
+    "Only one real push-day exists in this checkout; cumulative and today counts coincide on 2026-10-31.",
+    "Two affiliation records lack standalone geocodes, but their papers have another resolved institution: zero wholly unknown papers does not imply every affiliation resolved."
+  ]
+}
