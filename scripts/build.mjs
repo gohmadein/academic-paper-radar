@@ -11,6 +11,28 @@ if (!out.startsWith(resolve(root)+sep) || out !== resolve(root,'dist')) throw ne
 await rm(out,{recursive:true,force:true});
 await mkdir(out,{recursive:true});
 for (const file of ['index.html','styles.css','hud.css','app.js','assets','lib','data','THIRD_PARTY_NOTICES.txt']) await cp(join(root,file),join(out,file),{recursive:true});
+// Pages caches files independently. Version all entry assets and module imports
+// together so new HTML cannot execute an older, incompatible cached app module.
+async function runtimeFiles(path){
+  const files=[];
+  for(const entry of (await readdir(path,{withFileTypes:true})).sort((a,b)=>a.name.localeCompare(b.name,'en'))){
+    const file=join(path,entry.name);
+    if(entry.isDirectory())files.push(...await runtimeFiles(file));
+    else if(/\.(?:html|css|js|svg|woff2)$/.test(file))files.push(file);
+  }
+  return files;
+}
+const files=await runtimeFiles(out);
+const revisionHash=createHash('sha256');
+for(const file of files)revisionHash.update(await readFile(file));
+const version=revisionHash.digest('hex').slice(0,12);
+for(const file of files.filter(file=>/\.(?:html|css|js)$/.test(file))){
+  let text=await readFile(file,'utf8');
+  text=text.replace(/(\b(?:src|href)=["'])(\.\/[^"']+\.(?:js|css|svg))(["'])/g,`$1$2?v=${version}$3`);
+  text=text.replace(/(\bfrom\s*["'])(\.[^"']+\.js)(["'])/g,`$1$2?v=${version}$3`);
+  text=text.replace(/(url\(["']?)(\.\/[^"')]+\.woff2)(["']?\))/g,`$1$2?v=${version}$3`);
+  await writeFile(file,text);
+}
 await writeFile(join(out,'.nojekyll'),'');
 async function inventory(path,prefix='') {
   const items=[];
