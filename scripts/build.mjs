@@ -11,6 +11,8 @@ if (!out.startsWith(resolve(root)+sep) || out !== resolve(root,'dist')) throw ne
 await rm(out,{recursive:true,force:true});
 await mkdir(out,{recursive:true});
 for (const file of ['index.html','styles.css','app.js','lib','data','THIRD_PARTY_NOTICES.txt']) await cp(join(root,file),join(out,file),{recursive:true});
+await mkdir(join(out,'config'),{recursive:true});
+for(const file of ['source-registry.json','profile-watchlists.json']) await cp(join(root,'config',file),join(out,'config',file));
 // Publish only referenced, validated research assets, plus the site's own mark/fonts.
 // Source-review archives or restricted unused logos must never enter dist.
 for(const file of ['assets/favicon.svg','assets/fonts',...result.assets]){await mkdir(resolve(out,file,'..'),{recursive:true});await cp(join(root,file),join(out,file),{recursive:true});}

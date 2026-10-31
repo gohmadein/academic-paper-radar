@@ -19,6 +19,9 @@ test('Production entry points and dependency imports share a deterministic conte
   assert.ok(imports.some(([,asset])=>asset==='./lib/topics.js'));
   for(const [,asset,revision] of imports){assert.equal(revision,version);await access(new URL('../dist/'+asset.slice(2),import.meta.url));}
   assert.ok(app.includes(`favicon.svg?v=${version}`));
+  for(const name of ['source-registry.json','profile-watchlists.json']){
+    assert.deepEqual(JSON.parse(await readFile(new URL('../dist/config/'+name,import.meta.url),'utf8')),JSON.parse(await readFile(new URL('../config/'+name,import.meta.url),'utf8')));
+  }
   const manifest=await readFile(new URL('../dist/checksums.txt',import.meta.url),'utf8');
   build();
   assert.equal(await readFile(new URL('../dist/checksums.txt',import.meta.url),'utf8'),manifest);

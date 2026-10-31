@@ -1,0 +1,330 @@
+{
+  "version": 1,
+  "profiles": {
+    "xun": {
+      "title": "迅 · 关注来源",
+      "scope": "关注所有机器人相关文献，排除纯机械机构设计。来源层级只影响关注顺序，不限制研究主题。",
+      "notes": [
+        "会议、期刊、arXiv 与实验室入口复用 source-registry.json，保留原清单全部分组与链接。",
+        "30 个实验室／团队研究入口中，部分条目包含多个独立团队；条目顺序不表示全球排名。",
+        "OpenMMLab 作为视觉工具与项目生态，随相关团队跟踪。",
+        "cs.SY 是 eess.SY 的别名，统一按 eess.SY 登记，避免重复关注。",
+        "代表学者随实验室条目保留；独立作者关注名单待补充。"
+      ],
+      "sources": []
+    },
+    "li": {
+      "title": "李 · 关注来源",
+      "scope": "围绕固定本体、映射与源模式下的 VKG/OBDA 实例更新，关注视图更新、provenance（数据来源）、副作用、约束修复、解释与相关理论。",
+      "notes": [
+        "这是关注名单，不要求每天覆盖所有来源；是否入选仍以研究问题的直接关联和论文质量为准。",
+        "以提供的核心论文为种子，持续跟踪作者新作、后续引用与相关项目，同时兼顾其他团队的独立工作。",
+        "关注 Ontop 及相关 OBDA、数据库理论、数据来源和知识表示团队；未具体命名的团队不虚构为已确认名单。",
+        "SIGMOD/PACMMOD、VLDB/PVLDB 分别展示会议与期刊入口，不意味着同一论文重复推荐。",
+        "arXiv 为预印本来源，推荐时必须明确标注预印本状态。"
+      ],
+      "sources": [
+        {
+          "type": "conference",
+          "tier": "数据库 · 优先",
+          "name": "SIGMOD",
+          "details": [
+            "数据库方向优先；筛选与实例更新、视图更新、provenance、约束及相关理论直接相关的工作。",
+            "与 PACMMOD 关联，按正式发表身份登记，避免会议与期刊重复计数。"
+          ],
+          "links": [
+            {
+              "label": "SIGMOD 出版说明",
+              "url": "https://sigmod.org/publications/publications/"
+            }
+          ]
+        },
+        {
+          "type": "conference",
+          "tier": "数据库 · 优先",
+          "name": "VLDB",
+          "details": [
+            "数据库方向优先；筛选与实例更新、视图更新、provenance、约束及相关理论直接相关的工作。",
+            "与 PVLDB 关联，按正式发表身份登记，避免重复计数。"
+          ],
+          "links": [
+            {
+              "label": "PVLDB 研究范围",
+              "url": "https://www.vldb.org/2027/submission-guidelines.html"
+            }
+          ]
+        },
+        {
+          "type": "conference",
+          "tier": "数据库 · 优先",
+          "name": "PODS",
+          "details": [
+            "数据库方向优先；筛选与实例更新、视图更新、provenance、约束及相关理论直接相关的工作。"
+          ],
+          "links": []
+        },
+        {
+          "type": "conference",
+          "tier": "数据库 · 优先",
+          "name": "ICDT",
+          "details": [
+            "数据库方向优先；筛选与实例更新、视图更新、provenance、约束及相关理论直接相关的工作。"
+          ],
+          "links": []
+        },
+        {
+          "type": "conference",
+          "tier": "数据库 · 优先",
+          "name": "ICDE",
+          "details": [
+            "数据库方向优先；筛选与实例更新、视图更新、provenance、约束及相关理论直接相关的工作。"
+          ],
+          "links": []
+        },
+        {
+          "type": "conference",
+          "tier": "数据库 · 优先",
+          "name": "EDBT",
+          "details": [
+            "数据库方向优先；筛选与实例更新、视图更新、provenance、约束及相关理论直接相关的工作。"
+          ],
+          "links": []
+        },
+        {
+          "type": "conference",
+          "tier": "语义与推理 · 优先",
+          "name": "ISWC",
+          "details": [
+            "筛选与 VKG/OBDA、知识表示与推理及当前研究问题直接相关的工作。"
+          ],
+          "links": []
+        },
+        {
+          "type": "conference",
+          "tier": "语义与推理 · 优先",
+          "name": "ESWC",
+          "details": [
+            "筛选与 VKG/OBDA、知识表示与推理及当前研究问题直接相关的工作。"
+          ],
+          "links": []
+        },
+        {
+          "type": "conference",
+          "tier": "语义与推理 · 优先",
+          "name": "KR",
+          "details": [
+            "筛选与 VKG/OBDA、知识表示与推理及当前研究问题直接相关的工作。"
+          ],
+          "links": [
+            {
+              "label": "KR 研究范围",
+              "url": "https://kr.org/KR2026/call_main_track.html"
+            }
+          ]
+        },
+        {
+          "type": "conference",
+          "tier": "扩展 · 仅直接相关",
+          "name": "AAAI",
+          "details": [
+            "仅筛选与上述研究问题直接相关的工作，不泛化为通用 AI 或无关知识图谱推荐。"
+          ],
+          "links": []
+        },
+        {
+          "type": "conference",
+          "tier": "扩展 · 仅直接相关",
+          "name": "IJCAI",
+          "details": [
+            "仅筛选与上述研究问题直接相关的工作，不泛化为通用 AI 或无关知识图谱推荐。"
+          ],
+          "links": []
+        },
+        {
+          "type": "journal",
+          "tier": "数据库 · 优先",
+          "name": "PACMMOD",
+          "details": [
+            "Proceedings of the ACM on Management of Data；包含 SIGMOD/PODS 相关发表，按论文身份去重。"
+          ],
+          "links": [
+            {
+              "label": "SIGMOD 出版说明",
+              "url": "https://sigmod.org/publications/publications/"
+            },
+            {
+              "label": "期刊入口",
+              "url": "https://dl.acm.org/journal/pacmmod"
+            }
+          ]
+        },
+        {
+          "type": "journal",
+          "tier": "数据库 · 优先",
+          "name": "PVLDB",
+          "details": [
+            "Proceedings of the VLDB Endowment；与 VLDB 关联，按论文身份去重。"
+          ],
+          "links": [
+            {
+              "label": "出版政策与研究范围",
+              "url": "https://www.vldb.org/2027/submission-guidelines.html"
+            }
+          ]
+        },
+        {
+          "type": "journal",
+          "tier": "数据库 · 优先",
+          "name": "TODS",
+          "details": [
+            "数据库方向优先。"
+          ],
+          "links": []
+        },
+        {
+          "type": "journal",
+          "tier": "数据库 · 优先",
+          "name": "The VLDB Journal",
+          "details": [
+            "数据库方向优先。"
+          ],
+          "links": []
+        },
+        {
+          "type": "journal",
+          "tier": "数据库 · 优先",
+          "name": "TKDE",
+          "details": [
+            "数据库方向优先。"
+          ],
+          "links": []
+        },
+        {
+          "type": "journal",
+          "tier": "语义与推理 · 优先",
+          "name": "Semantic Web",
+          "details": [
+            "只筛选与当前 VKG/OBDA、更新语义及推理问题直接相关的工作。"
+          ],
+          "links": []
+        },
+        {
+          "type": "journal",
+          "tier": "语义与推理 · 优先",
+          "name": "Journal of Web Semantics",
+          "details": [
+            "只筛选与当前 VKG/OBDA、更新语义及推理问题直接相关的工作。"
+          ],
+          "links": []
+        },
+        {
+          "type": "arxiv",
+          "tier": "核心分类",
+          "name": "cs.DB",
+          "details": [
+            "预印本必须明确标注；不等同于正式发表。"
+          ],
+          "links": [
+            {
+              "label": "近期预印本",
+              "url": "https://arxiv.org/list/cs.DB/recent"
+            }
+          ]
+        },
+        {
+          "type": "arxiv",
+          "tier": "核心分类",
+          "name": "cs.LO",
+          "details": [
+            "预印本必须明确标注；不等同于正式发表。"
+          ],
+          "links": [
+            {
+              "label": "近期预印本",
+              "url": "https://arxiv.org/list/cs.LO/recent"
+            }
+          ]
+        },
+        {
+          "type": "arxiv",
+          "tier": "扩展 · 仅直接相关",
+          "name": "cs.AI",
+          "details": [
+            "预印本必须明确标注；不等同于正式发表。"
+          ],
+          "links": [
+            {
+              "label": "近期预印本",
+              "url": "https://arxiv.org/list/cs.AI/recent"
+            }
+          ]
+        },
+        {
+          "type": "arxiv",
+          "tier": "扩展 · 仅直接相关",
+          "name": "cs.PL",
+          "details": [
+            "预印本必须明确标注；不等同于正式发表。"
+          ],
+          "links": [
+            {
+              "label": "近期预印本",
+              "url": "https://arxiv.org/list/cs.PL/recent"
+            }
+          ]
+        },
+        {
+          "type": "lab",
+          "tier": "项目与相关团队",
+          "name": "Ontop",
+          "details": [
+            "以核心论文为种子，跟踪相关 OBDA、数据库理论、数据来源和知识表示团队；兼顾其他团队的独立工作。"
+          ],
+          "links": [
+            {
+              "label": "研究团队与项目",
+              "url": "https://ontop-vkg.org/research/"
+            }
+          ]
+        },
+        {
+          "type": "author",
+          "tier": "重点跟踪作者",
+          "name": "Diego Calvanese",
+          "details": [
+            "以提供的核心论文为种子，持续跟踪作者新作、后续引用和相关项目；不限于这些作者。"
+          ],
+          "links": [
+            {
+              "label": "学术主页",
+              "url": "https://www.inf.unibz.it/~calvanese/"
+            }
+          ]
+        },
+        {
+          "type": "author",
+          "tier": "重点跟踪作者",
+          "name": "Guohui Xiao",
+          "details": [
+            "以提供的核心论文为种子，持续跟踪作者新作、后续引用和相关项目；不限于这些作者。"
+          ],
+          "links": [
+            {
+              "label": "学术主页",
+              "url": "https://ghxiao.org/"
+            }
+          ]
+        }
+      ]
+    },
+    "lv": {
+      "title": "驴 · 关注来源",
+      "scope": "关注来源名单待补充。",
+      "notes": [
+        "会议、期刊、实验室／团队、arXiv 与作者名单暂未提供，保留对应栏目等待补充。",
+        "此处是新的界面关注名单，不表示删除或替代既有自动搜集方向与历史研究规则。"
+      ],
+      "sources": []
+    }
+  }
+}

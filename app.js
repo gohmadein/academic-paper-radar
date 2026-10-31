@@ -1,3 +1,4 @@
+import {sourceDirectory,sourceViewPatch} from './lib/source-directory.js';
 import {availableTopics,topicLabel,topicForProfile} from './lib/topics.js';
 import {institutionGallery,scrollInstitutions,institutionKeydown} from './lib/institutions.js';
 import {publicPaperURL,sharePaper} from './lib/paper-share.js';
@@ -31,6 +32,7 @@ let reads;
 try{reads=parseBookmarks(localStorage.getItem(READ_KEY));}catch{reads=new Set();}
 let state = readRoute(location.hash);
 let data = null;
+let watchlists = null;
 let bookmarks;
 let storageAvailable = true;
 let toastTimer;
@@ -73,6 +75,10 @@ async function init() {
     if(state.view==='feed'&&!state.demo&&!new URLSearchParams(location.hash.slice(1)).has('date')&&real.days.length){state.date=real.days[0].date;history.replaceState(null,'',routeHash(state));}
     $('real-count').textContent = String(real.papers.length).padStart(2,'0');
     $('real-days').textContent = String(real.days.length).padStart(2,'0');
+    try {
+      const [profiles,registry] = await Promise.all([getJSON('config/profile-watchlists.json'),getJSON('config/source-registry.json')]);
+      watchlists = {profiles,registry};
+    } catch { watchlists = null; }
     render();
   } catch {
     $('hud-status').textContent = '！档案读取失败 / 可重试';
@@ -89,7 +95,7 @@ function updateViewChrome() {
   const isFeed = state.view === 'feed';
   $('hero').hidden = !isFeed;
   $('demo-banner').hidden = !isFeed || !state.demo;
-  $('page-demo-note').hidden = isFeed || !state.demo;
+  $('page-demo-note').hidden = isFeed || !state.demo || state.view==='sources';
   document.body.classList.toggle('compact-view', !isFeed);
 }
 
@@ -138,6 +144,9 @@ function render() {
   const focusSelector = active?.dataset?.category ? `[data-category="${CSS.escape(active.dataset.category)}"]` : active?.dataset?.tag ? `${active.closest('#tags')?'#tags ':''}[data-tag="${CSS.escape(active.dataset.tag)}"]` : active?.dataset?.bookmark ? `[data-bookmark="${CSS.escape(active.dataset.bookmark)}"]` : active?.dataset?.date ? `[data-date="${CSS.escape(active.dataset.date)}"]` : null;
   const {days,papers} = collection();
   $('category-tabs').innerHTML=['all',...Object.keys(PROFILES)].map(k=>`<button class="profile-link ${k!=='all'?'profile-'+k:''} ${state.category===k?'active':''}" data-category="${k}" aria-label="${k==='all'?'全部方向':PROFILES[k].label+'的推送'}" aria-pressed="${state.category===k}" title="${k==='all'?'浏览全部研究方向':e(PROFILES[k].description)}"><span class="profile-symbol" aria-hidden="true">${k==='all'?'<svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>':PROFILES[k].label}</span><span class="profile-link-copy"><strong>${k==='all'?'全部方向':PROFILES[k].label+'的推送'}</strong><small>${k==='all'?'发现全部研究信号':k==='xun'?'机器人研究':k==='li'?'知识图谱与理论':'机器人学习入门'}</small></span><span class="profile-selected" aria-hidden="true">●</span></button>`).join('');
+  $('source-toggle').setAttribute('aria-pressed',String(state.view==='sources'));
+  $('source-toggle-label').textContent=(PROFILES[state.category]?.label || '各方向')+' · 关注来源';
+  $('source-toggle').setAttribute('aria-label',(PROFILES[state.category]?.label || '各方向')+' · 关注来源');
   $('read-select').value=state.readStatus;
   $('issue-panel').innerHTML=state.view==='feed'?issueReport(days.find(d=>d.date===state.date)||days[0]):'';
   updateViewChrome();
@@ -156,13 +165,16 @@ function render() {
   const filtered = filterPapers(papers,{...state,read:reads,bookmarks:state.view==='bookmarks'?bookmarks:null});
   $('institution-gallery').innerHTML=state.view==='feed'&&!state.demo?institutionGallery(filtered,data.institutions):'';
   const isFiltered = state.q || state.tag!=='all' || state.date!=='all' || state.category!=='all' || state.readStatus!=='all';
-  $('view-title').childNodes[0].textContent = state.view === 'archive' ? '日期归档' : state.view === 'bookmarks' ? '本机书签' : state.category==='all'?'每日精选':PROFILES[state.category].label+'的推送';
+  $('view-title').childNodes[0].textContent = state.view === 'sources' ? '关注来源' : state.view === 'archive' ? '日期归档' : state.view === 'bookmarks' ? '本机书签' : state.category==='all'?'每日精选':PROFILES[state.category].label+'的推送';
   $('edition-label').textContent = state.demo ? '演示档案' : !days.length ? '等待首期' : state.date === 'all' ? '全部日期' : state.date;
   $('edition-status').textContent = state.demo ? 'DEMO / NOT REAL PAPERS' : papers.length ? 'CURATED & ARCHIVED' : 'AWAITING SIGNAL';
-  $('filter-panel').hidden = state.view==='archive';
-  $('clear-filters').hidden = !isFiltered || state.view==='archive';
+  const isSources=state.view==='sources';
+  if(isSources){$('edition-label').textContent=PROFILES[state.category]?.label || '全部方向';$('edition-status').textContent='SOURCE WATCHLIST';}
+  $('filter-panel').hidden = state.view==='archive'||isSources;
+  $('clear-filters').hidden = !isFiltered || state.view==='archive'||isSources;
   $('result-count').textContent = state.view==='archive' ? `${days.length} 个${state.demo?'演示':'真实'}日期档案` : papers.length ? `${filtered.length} / ${papers.length} 篇${state.demo?'演示条目 · 非真实论文':'论文'}${state.view==='bookmarks'?' · 仅本机收藏':''}` : '真实论文 0 篇 · 筛选规则待设定';
-  if (state.view==='archive' && days.length) $('content').innerHTML = `<div class="archive-grid">${days.map(d=>`<button class="archive-card" data-date="${d.date}"><p class="eyebrow">${state.demo?'DEMO ARCHIVE':'DAILY ARCHIVE'}</p><strong>${d.date.replaceAll('-',' / ')}</strong><p>${e(d.title)}</p><span>${d.papers.filter(p=>!p.classic).length} 篇${state.demo?'演示条目':'精选'}${d.papers.some(p=>p.classic)?' + '+d.papers.filter(p=>p.classic).length+' 篇经典':''} <span aria-hidden="true">↗</span></span></button>`).join('')}</div>`;
+  if(isSources){$('result-count').textContent='关注名单 · 不代表每天覆盖所有来源';$('content').innerHTML=sourceDirectory(state.category,watchlists);}
+  else if (state.view==='archive' && days.length) $('content').innerHTML = `<div class="archive-grid">${days.map(d=>`<button class="archive-card" data-date="${d.date}"><p class="eyebrow">${state.demo?'DEMO ARCHIVE':'DAILY ARCHIVE'}</p><strong>${d.date.replaceAll('-',' / ')}</strong><p>${e(d.title)}</p><span>${d.papers.filter(p=>!p.classic).length} 篇${state.demo?'演示条目':'精选'}${d.papers.some(p=>p.classic)?' + '+d.papers.filter(p=>p.classic).length+' 篇经典':''} <span aria-hidden="true">↗</span></span></button>`).join('')}</div>`;
   else if (!papers.length) $('content').innerHTML = emptyState('first');
   else if (!filtered.length) $('content').innerHTML = emptyState(state.view==='bookmarks' && !isFiltered ? 'bookmarks':'filtered');
   else $('content').innerHTML = `<div class="paper-list">${filtered.map(paperCard).join('')}</div>`;
@@ -208,6 +220,7 @@ document.addEventListener('click', event => {
   const b = event.target.closest('button');
   if (!b) return;
   if(b.dataset.institutionScroll){scrollInstitutions($('institution-strip'),Number(b.dataset.institutionScroll));return;}
+  if(b.dataset.action==='sources'){go(sourceViewPatch(state));return;}
   if(b.dataset.category)go({category:b.dataset.category,tag:topicForProfile(collection().papers,state.tag,b.dataset.category),view:state.view==='archive'?'feed':state.view,paper:''});
   else if(b.dataset.read){if(reads.has(b.dataset.read))reads.delete(b.dataset.read);else reads.add(b.dataset.read);try{localStorage.setItem(READ_KEY,JSON.stringify([...reads]));}catch{toast('阅读状态仅在当前会话可用');}render();}
   else if (b.dataset.view) go({view:b.dataset.view,q:'',tag:'all',date:b.dataset.view==='feed'&&!state.demo&&data?.real.days[0]?data.real.days[0].date:'all',paper:''});

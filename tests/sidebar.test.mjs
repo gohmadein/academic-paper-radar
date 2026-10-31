@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import vm from 'node:vm';
+import * as sources from '../lib/source-directory.js';
 import * as topics from '../lib/topics.js';
 import * as model from '../lib/model.js';
 import * as digest from '../lib/digest-view.js';
@@ -16,7 +17,7 @@ async function appHarness({stored=new Map(),storageBlocked=false}={}){
     if(!elements.has(id))elements.set(id,{id,hidden:false,value:'',innerHTML:'',textContent:'',dataset:{},childNodes:[{textContent:''}],classList:{toggle(){},add(){},remove(){}},attributes:{},setAttribute(k,v){this.attributes[k]=v},removeAttribute(k){delete this.attributes[k]},addEventListener(type,fn){events[id+':'+type]=fn},open:false,isConnected:true,focus(){context.document.activeElement=this},close(){this.open=false},showModal(){this.open=true}});
     return elements.get(id);
   };
-  const context=vm.createContext({...topics,...model,...digest,...institutions,...transfer,
+  const context=vm.createContext({...sources,...topics,...model,...digest,...institutions,...transfer,
     e:model.escapeHTML,updateHUD(){},console,URL,URLSearchParams,CSS:{escape:x=>x},setTimeout,clearTimeout,
     document:{getElementById:element,querySelectorAll:()=>[],querySelector:()=>null,activeElement:null,body:{classList:{toggle(name,on){if(on)bodyClasses.add(name);else bodyClasses.delete(name)}}},addEventListener:(type,fn)=>{events[type]=fn}},
     window:{addEventListener:(type,fn)=>{windowEvents[type]=fn}},
@@ -139,4 +140,27 @@ test('Broad theme chips follow profiles, compose in bookmarks, and preserve lega
   h.run("go({readStatus:'read',q:'力觉'})");assert.equal(count(),1);
   h.click({view:'archive'});assert.equal(h.element('filter-panel').hidden,true);
   h.click({date:'2026-10-31'});assert.equal(h.run('state.tag'),'all');
+});
+
+test('Source view follows profiles, preserves filters, supports repeated toggles and Back/Forward',async()=>{
+  const h=await appHarness();
+  h.run("go({category:'li',q:'Gatterbauer',date:'2026-10-31',tag:'all'})");
+  h.click({action:'sources'});
+  assert.equal(h.run('state.view'),'sources');
+  assert.match(h.element('content').innerHTML,/Diego Calvanese/);
+  assert.equal(h.element('filter-panel').hidden,true);
+  assert.equal(h.element('hero').hidden,true);
+  assert.equal(h.element('institution-gallery').innerHTML,'');
+  h.click({category:'lv'});
+  assert.equal((h.element('content').innerHTML.match(/class="watchlist-pending"/g)||[]).length,5);
+  h.back();assert.match(h.element('content').innerHTML,/Diego Calvanese/);
+  h.forward();assert.equal(h.run('state.category'),'lv');
+  h.click({category:'xun'});assert.match(h.element('content').innerHTML,/Berkeley RAIL/);
+  h.click({action:'sources'});assert.equal(h.run('state.view'),'feed');
+  assert.equal(h.run('state.q'),'Gatterbauer');assert.equal(h.run('state.date'),'2026-10-31');
+  for(let i=0;i<2;i++){h.click({action:'sources'});h.click({action:'sources'});}
+  assert.equal(h.run('state.view'),'feed');
+  h.run("go({category:'all',view:'sources'})");assert.match(h.element('content').innerHTML,/选择一个方向/);
+  h.click({view:'bookmarks'});assert.equal(h.element('bookmark-transfer').hidden,false);
+  h.click({view:'archive'});assert.equal(h.run('state.view'),'archive');
 });

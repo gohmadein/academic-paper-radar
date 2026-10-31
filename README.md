@@ -36,6 +36,7 @@ npm run preview
 ```text
 config/digest-rules.json       公开方向、质量、经典与medium研究意图
 config/source-registry.json    迅完整70项来源及原附件中的全部入口链接
+config/profile-watchlists.json 各方向界面关注目录、说明与李的来源；驴留空待补充
 config/xun-source-watchlist.md 原始关注清单文本，保留全部分组与说明
 docs/DIGEST-INTERFACE.md        研究方输入契约与字段定义
 data/days/YYYY-MM-DD.json      已发布日报v2（历史/演示v1兼容）
@@ -94,3 +95,11 @@ node scripts/ingest.mjs normalized.json --plan > commit-plan.json
 ### 署名机构标识库
 
 正式日报上方新增手动横向浏览的署名机构库（随当前筛选更新），不自动滚动、不表示机构背书。标识统一登记于 [`data/institutions.json`](data/institutions.json)，导入时由 [`lib/institutions.js`](lib/institutions.js) 先解析别名并复用已核验素材。新机构进入待核验队列，不生成假校徽。完整核验/发布规范见 [`docs/CARD-ASSETS.md`](docs/CARD-ASSETS.md)。
+
+### 各方向的关注来源
+
+侧栏方向选择下方的「关注来源」打开独立目录视图；选迅、李、驴时目录同步切换。五个可折叠栏目为会议、期刊、实验室／团队／项目、arXiv、作者。目录不挤占论文流，返回推送保留日期、关键词与阅读筛选，浏览器前进／后退可恢复目录路径。全部方向提供三个入口。
+
+维护时，迅的 70 项直接复用 `config/source-registry.json`（不复制）；其他方向和说明编辑 `config/profile-watchlists.json`。条目沿用 `{type,tier,name,details,links}` 格式，`type` 为 `conference/journal/lab/arxiv/author`；同组多团队的全部链接必须保留。新增来源后更新对应数量测试，运行 `npm run check`。构建只发布这两个明确允许的配置文件，不暴露自动任务配置。
+
+界面关注名单不是当日检索日志，也不替代 `config/digest-rules.json` 和外部搜集流程。驴的界面按本次要求留空，不删除既有研究方向、历史来源或自动化筛选。李的 SIGMOD/PACMMOD、VLDB/PVLDB 分列会议／期刊，不重复计算论文。李的作者与 Ontop 链接核对自学者主页及 Ontop 官方 research 页面；没有核验的场所只显示名称，不猜网址。
