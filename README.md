@@ -109,3 +109,7 @@ node scripts/ingest.mjs normalized.json --plan > commit-plan.json
 驴的实验室／团队栏已补入 NVIDIA GEAR / Robotics Research、Physical Intelligence、Google DeepMind Robotics，以及现有目录中的 Stanford IRIS／REAL／SVL、Berkeley RAIL／RLL，共 7 个分组条目；其余四栏仍待补充。两校按这些具体团队跟踪，不声称覆盖所有实验室。
 
 `registryRefs` 用来源注册表的精确名称引用条目，避免复制团队链接与维护漂移。迅继续读取整个注册表，不重复添加已有团队。NVIDIA Robotics Research 的官方入口补充到既有 GEAR 条目，原 GEAR 链接保留；记录在注册表 `supplements`，不改原始 Markdown。新增引用需通过测试确认存在。此目录更新不更改已收录论文或自动搜集规则。
+
+### 阅读界面
+
+桌面使用可收起的浅色侧栏和限宽阅读列。论文卡片左文右图，手机改为上下布局；中文／英文导读上下排列，各先显示两行，可原位展开完整内容。书签、已读与分享独立操作，不触发详情。导读展开仅在本次页面会话保留，书签／已读仍使用原本机存储键。详情与分享保留键盘关闭和原有公开链接格式。

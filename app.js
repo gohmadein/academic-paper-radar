@@ -40,6 +40,8 @@ let storageAvailable = true;
 let toastTimer;
 let lastDialogPaper = '';
 let dialogTrigger = null;
+const expandedGuides = new Set();
+let shareRequest = 0;
 try { bookmarks = parseBookmarks(localStorage.getItem(BOOKMARK_KEY)); } catch { bookmarks = new Set(); storageAvailable = false; }
 
 function toast(message) {
@@ -106,6 +108,8 @@ function updateViewChrome() {
 }
 
 function go(patch, {replace = false} = {}) {
+  shareRequest++;
+  if ($('share-dialog').open) $('share-dialog').close();
   state = {...state, ...patch};
   updateViewChrome();
   const hash = routeHash(state);
@@ -127,7 +131,7 @@ function toggleBookmark(id) {
 }
 
 function paperCard(p,index) {
-  if(p.profiles)return editorialCard(p,index,{category:state.category,saved:bookmarks.has(p.id),read:reads.has(p.id)});
+  if(p.profiles)return editorialCard(p,index,{category:state.category,saved:bookmarks.has(p.id),read:reads.has(p.id),expanded:expandedGuides.has(p.id)});
   return `<article class="paper-card ${index === 0 ? 'featured' : ''} ${categoryClass(p,state.category)}">
     ${categoryRail(p)}<div class="card-top"><span class="card-number">${String(index+1).padStart(2,'0')}</span>${p.demo ? `<span class="demo-label">${DEMO_NOTICE}</span>` : '<span class="featured-label">RESEARCH SIGNAL</span>'}<time class="card-date" datetime="${p.date}">${p.date.replaceAll('-',' / ')}</time></div>
     ${digestBadges(p)}<h3><button class="title-button" data-paper="${e(p.id)}">${e(p.title)}</button></h3>
@@ -147,7 +151,7 @@ function emptyState(kind) {
 
 function render() {
   const active = document.activeElement;
-  const focusSelector = active?.dataset?.sourceProfile ? `[data-source-profile="${CSS.escape(active.dataset.sourceProfile)}"][data-source-type="${CSS.escape(active.dataset.sourceType||'conference')}"]` : active?.dataset?.category ? `[data-category="${CSS.escape(active.dataset.category)}"]` : active?.dataset?.tag ? `${active.closest('#tags')?'#tags ':''}[data-tag="${CSS.escape(active.dataset.tag)}"]` : active?.dataset?.bookmark ? `[data-bookmark="${CSS.escape(active.dataset.bookmark)}"]` : active?.dataset?.date ? `[data-date="${CSS.escape(active.dataset.date)}"]` : null;
+  const focusSelector = active?.dataset?.read ? `[data-read="${CSS.escape(active.dataset.read)}"]` : active?.dataset?.guideToggle ? `[data-guide-toggle="${CSS.escape(active.dataset.guideToggle)}"]` : active?.dataset?.sourceProfile ? `[data-source-profile="${CSS.escape(active.dataset.sourceProfile)}"][data-source-type="${CSS.escape(active.dataset.sourceType||'conference')}"]` : active?.dataset?.category ? `[data-category="${CSS.escape(active.dataset.category)}"]` : active?.dataset?.tag ? `${active.closest('#tags')?'#tags ':''}[data-tag="${CSS.escape(active.dataset.tag)}"]` : active?.dataset?.bookmark ? `[data-bookmark="${CSS.escape(active.dataset.bookmark)}"]` : active?.dataset?.date ? `[data-date="${CSS.escape(active.dataset.date)}"]` : null;
   const {days,papers} = collection();
   $('category-tabs').innerHTML=['all',...Object.keys(PROFILES)].map(k=>`<div class="profile-nav-item"><button class="profile-link ${k!=='all'?'profile-'+k:''} ${state.category===k&&state.view!=='sources'?'active':''}" data-category="${k}" aria-label="${k==='all'?'全部方向':PROFILES[k].label+'的推送'}" aria-pressed="${state.category===k&&state.view!=='sources'}" title="${k==='all'?'浏览全部研究方向':e(PROFILES[k].label+' · '+PROFILES[k].description)}"><span class="profile-symbol" aria-hidden="true">${k==='all'?'<svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>':profileIcon(k)}</span><span class="profile-link-copy"><strong>${k==='all'?'全部方向':PROFILES[k].label+'的推送'}</strong><small>${k==='all'?'发现全部研究信号':k==='xun'?'机器人研究':k==='li'?'知识图谱与理论':'机器人学习入门'}</small></span><span class="profile-selected" aria-hidden="true">●</span></button>${k==='all'?'':`<div class="profile-subnav">${SOURCE_NAV.map(([type,label,icon])=>`<button class="profile-focus-link ${state.category===k&&state.view==='sources'&&state.sourceType===type?'active':''}" data-source-profile="${k}" data-source-type="${type}" aria-label="${e(PROFILES[k].label)}的${label}" title="${e(PROFILES[k].label)}的${label}" ${state.category===k&&state.view==='sources'&&state.sourceType===type?'aria-current="page"':''}><span aria-hidden="true">${icon}</span><span class="focus-label">${label}</span></button>`).join('')}</div>`}</div>`).join('');
   $('read-select').value=state.readStatus;
@@ -223,6 +227,7 @@ function closeDialog() {
 document.addEventListener('click', event => {
   const b = event.target.closest('button');
   if (!b) return;
+  if(b.dataset.guideToggle){const id=b.dataset.guideToggle;if(expandedGuides.has(id))expandedGuides.delete(id);else expandedGuides.add(id);render();return;}
   if(b.dataset.institutionScroll){scrollInstitutions($('institution-strip'),Number(b.dataset.institutionScroll));return;}
   if(PROFILES[b.dataset.sourceProfile]){go({category:b.dataset.sourceProfile,sourceType:SOURCE_NAV.some(([type])=>type===b.dataset.sourceType)?b.dataset.sourceType:'conference',view:'sources',paper:''});return;}
   if(b.dataset.action==='sources'){go(sourceViewPatch(state));return;}
@@ -241,14 +246,20 @@ document.addEventListener('click', event => {
 });
 async function requestShare(id){
   const paper=filterPapers(collection().papers,{date:state.date}).find(p=>p.id===id);if(!paper)return;
+  const request=++shareRequest;
   const url=publicPaperURL(location.href,paper);
   const result=await sharePaper({url,title:paper.title},{share:navigator.share?.bind(navigator),copy:navigator.clipboard?.writeText?.bind(navigator.clipboard)});
+  if(request!==shareRequest)return;
   if(result==='copied')toast('论文链接已复制');
   else if(result==='manual'){$('share-url').value=url;$('share-status').textContent='复制论文链接。';$('share-dialog').showModal();$('share-url').focus();$('share-url').select();}
 }
-$('share-close').addEventListener('click',()=>$('share-dialog').close());
+$('share-close').addEventListener('click',()=>{shareRequest++;$('share-dialog').close();});
+$('share-dialog').addEventListener('cancel',()=>{shareRequest++;});
+$('share-dialog').addEventListener('click',event=>{if(event.target===$('share-dialog')){const r=$('share-dialog').getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom){shareRequest++;$('share-dialog').close();}}});
 $('share-copy').addEventListener('click',async()=>{
+  const request=shareRequest;
   const result=await sharePaper({url:$('share-url').value,title:document.title},{copy:navigator.clipboard?.writeText?.bind(navigator.clipboard)});
+  if(request!==shareRequest||!$('share-dialog').open)return;
   $('share-status').textContent=result==='copied'?'链接已复制。':'请手动复制链接。';
   if(result!=='copied'){$('share-url').focus();$('share-url').select();}
 });
@@ -308,7 +319,7 @@ $('about-button').addEventListener('click',()=>{
   $('dialog-content').innerHTML = '<h2 id="dialog-title">零域 / ZERO FIELD</h2><p>迅、李、驴的每日论文精选。</p><p>书签与已读状态仅保存在本机，不会自动同步；清除浏览器数据会删除记录。</p>';
   $('detail-dialog').showModal();
 });
-function syncRoute(){if(location.hash==='#main')return;state=readRoute(location.hash);updateViewChrome();if(data)render();}
+function syncRoute(){if(location.hash==='#main')return;shareRequest++;if($('share-dialog').open)$('share-dialog').close();state=readRoute(location.hash);updateViewChrome();if(data)render();}
 window.addEventListener('popstate',syncRoute);
 window.addEventListener('hashchange',syncRoute);
 window.addEventListener('storage',event=>{if(event.key===BOOKMARK_KEY){bookmarks=parseBookmarks(event.newValue);if(data)render();}});
