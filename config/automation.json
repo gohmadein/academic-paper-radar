@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "timezone": "Asia/Shanghai",
+  "startDate": "2026-11-01",
+  "startTime": "08:00",
+  "frequency": "daily",
+  "scheduleEnabled": true,
+  "scheduler": "external-cloud-task",
+  "researchReasoning": "medium",
+  "reasoningNote": "Request medium effort for configurable research workers; scheduler has no host-effort parameter.",
+  "delivery": [
+    "website",
+    "owner-chat"
+  ],
+  "publicationPolicy": "Start collection at scheduled time; notify after verified deployment. Not an exact publication-time guarantee.",
+  "profiles": {
+    "xun": {
+      "dailyMin": 5,
+      "dailyMax": 8,
+      "border": "blue"
+    },
+    "li": {
+      "dailyMin": 1,
+      "dailyMax": 3,
+      "border": "red"
+    },
+    "lv": {
+      "dailyMin": 1,
+      "dailyMax": 3,
+      "border": "black"
+    }
+  },
+  "allowBelowMinimumWhenQualityInsufficient": true,
+  "weeklyClassics": {
+    "weekday": "Monday",
+    "profiles": [
+      "li",
+      "lv"
+    ],
+    "perProfile": 1,
+    "separateFromDailyNewPapers": true
+  },
+  "publishing": {
+    "repository": "gohmadein/academic-paper-radar",
+    "branch": "main",
+    "method": "cloud-github-connector",
+    "requiresUserDesktop": false,
+    "atomicMultiFileCommit": true,
+    "verifyPagesDeployment": true
+  },
+  "rulesFile": "config/digest-rules.json",
+  "sourcesFile": "config/source-registry.json"
+}
