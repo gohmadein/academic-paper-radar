@@ -147,15 +147,15 @@ test('Source view follows profiles, preserves filters, supports repeated toggles
   h.run("go({category:'li',q:'Gatterbauer',date:'2026-10-31',tag:'all'})");
   h.click({sourceProfile:'li'});
   assert.equal(h.run('state.view'),'sources');
-  assert.match(h.element('content').innerHTML,/Diego Calvanese/);
+  assert.match(h.element('content').innerHTML,/SIGMOD/);
   assert.equal(h.element('filter-panel').hidden,true);
   assert.equal(h.element('hero').hidden,true);
   assert.equal(h.element('institution-gallery').innerHTML,'');
   h.click({sourceProfile:'lv'});
-  assert.equal((h.element('content').innerHTML.match(/class="watchlist-pending"/g)||[]).length,4);
-  h.back();assert.match(h.element('content').innerHTML,/Diego Calvanese/);
+  assert.equal((h.element('content').innerHTML.match(/class="watchlist-pending"/g)||[]).length,1);
+  h.back();assert.match(h.element('content').innerHTML,/SIGMOD/);
   h.forward();assert.equal(h.run('state.category'),'lv');
-  h.click({sourceProfile:'xun'});assert.match(h.element('content').innerHTML,/Berkeley RAIL/);
+  h.click({sourceProfile:'xun',sourceType:'lab'});assert.match(h.element('content').innerHTML,/Berkeley RAIL/);
   h.click({action:'sources'});assert.equal(h.run('state.view'),'feed');
   assert.equal(h.run('state.q'),'Gatterbauer');assert.equal(h.run('state.date'),'2026-10-31');
   for(let i=0;i<2;i++){h.click({action:'sources'});h.click({action:'sources'});}
@@ -179,8 +179,27 @@ test('Each sidebar profile owns its focus child; parent returns to feed and chil
     h.back();assert.equal(h.run('state.view'),'sources');
   }
   h.events['rail-toggle:click']();h.click({sourceProfile:'li'});
-  assert.match(h.element('category-tabs').innerHTML,/aria-label="李的关注重点"/);
+  assert.match(h.element('category-tabs').innerHTML,/aria-label="李的会议"/);
   assert.equal(h.run('state.view'),'sources');
   assert.ok(css.includes('.rail-collapsed .focus-label{display:none}'));
   assert.ok(!h.element('content').innerHTML.includes('关注来源'));
+});
+
+test('Nine sidebar destinations show exactly one section, repeat safely and restore history',async()=>{
+  const h=await appHarness();
+  h.run("go({q:'robot',date:'2026-10-31'})");
+  for(const category of ['xun','li','lv'])for(const [type,label] of [['conference','会议'],['journal','期刊'],['lab','实验室']]){
+    h.click({sourceProfile:category,sourceType:type});
+    assert.equal(h.run('state.category'),category);assert.equal(h.run('state.sourceType'),type);
+    assert.equal((h.element('content').innerHTML.match(/class="watchlist-section"/g)||[]).length,1);
+    assert.match(h.element('content').innerHTML,new RegExp(' · '+label));
+    assert.equal((h.element('category-tabs').innerHTML.match(/data-source-type=/g)||[]).length,9);
+    assert.equal((h.element('category-tabs').innerHTML.match(/aria-current="page"/g)||[]).length,1);
+    assert.ok(!h.element('category-tabs').innerHTML.includes('关注重点'));
+    h.click({sourceProfile:category,sourceType:type});assert.equal(h.run('state.view'),'sources');
+    h.click({category});assert.equal(h.run('state.view'),'feed');
+    h.back();assert.equal(h.run('state.sourceType'),type);assert.equal(h.run('state.view'),'sources');
+    h.forward();assert.equal(h.run('state.view'),'feed');
+    assert.equal(h.run('state.q'),'robot');assert.equal(h.run('state.date'),'2026-10-31');
+  }
 });

@@ -34,7 +34,7 @@ test('搜索同时检查标题、摘要、作者与英文，日期/主题/书签
   assert.equal(filterPapers(papers,{q:'不存在的关键词'}).length,0);
 });
 test('分享路由可往返中文与特殊字符，限制非法日期、视图及超长输入',()=>{
-  const state={category:'all',readStatus:'all',view:'bookmarks',demo:true,date:'2026-10-31',q:'模型 & <test>',tag:'研究方法',paper:'demo-research-question'};
+  const state={sourceType:'conference',category:'all',readStatus:'all',view:'bookmarks',demo:true,date:'2026-10-31',q:'模型 & <test>',tag:'研究方法',paper:'demo-research-question'};
   assert.deepEqual(readRoute(routeHash(state)),state);
   const invalid=readRoute('#view=admin&date=../../x&q='+ 'a'.repeat(500));
   assert.equal(invalid.view,'feed');assert.equal(invalid.date,'all');assert.equal(invalid.q.length,200);

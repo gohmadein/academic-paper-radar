@@ -20,10 +20,10 @@ test('All source records retain safe links, counts, tiers and multi-team registr
 });
 
 test('Source markup escapes text, refuses unsafe links, distinguishes empty sections and scope',()=>{
-  const html=sourceDirectory('li',watchlists);
-  for(const text of ['PACMMOD','PVLDB','Ontop','Diego Calvanese','Guohui Xiao','预印本','不要求每天覆盖所有来源'])assert.ok(html.includes(text));
-  assert.equal((sourceDirectory('lv',watchlists).match(/class="watchlist-pending"/g)||[]).length,4);
-  const copy=structuredClone(watchlists);copy.profiles.profiles.li.sources.push({type:'author',tier:'<img>',name:'<script>',details:['<bad>'],links:[{label:'bad',url:'javascript:alert(1)'}]});
+  const html=['conference','journal','lab'].map(type=>sourceDirectory('li',watchlists,type)).join('');
+  for(const text of ['PACMMOD','PVLDB','Ontop','预印本','不要求每天覆盖所有来源'])assert.ok(html.includes(text));
+  assert.equal((sourceDirectory('lv',watchlists).match(/class="watchlist-pending"/g)||[]).length,1);
+  const copy=structuredClone(watchlists);copy.profiles.profiles.li.sources.push({type:'conference',tier:'<img>',name:'<script>',details:['<bad>'],links:[{label:'bad',url:'javascript:alert(1)'}]});
   const escaped=sourceDirectory('li',copy);assert.ok(escaped.includes('&lt;script&gt;'));assert.ok(!escaped.includes('javascript:'));assert.ok(!escaped.includes('<bad>'));
   assert.match(sourceDirectory('xun',null),/论文档案仍可使用/);
 });
@@ -46,9 +46,21 @@ test('Lv reuses seven existing teams with both Berkeley links; Xun gains Robotic
     assert.ok(nvidia.links.some(link=>link.url==='https://www.nvidia.com/en-us/research/robotics/'));
     assert.ok(nvidia.links.some(link=>link.url==='https://research.nvidia.com/labs/gear/'));
   }
-  const html=sourceDirectory('lv',watchlists);
+  const html=sourceDirectory('lv',watchlists,'lab');
   assert.ok(!html.includes('9 个研究入口'));
   assert.ok(html.includes('不表示覆盖两校全部实验室'));
   const broken=structuredClone(watchlists);broken.profiles.profiles.lv.registryRefs.push('missing');
   assert.throws(()=>profileSources('lv',broken),/未知来源引用/);
+});
+
+test('Section routes validate nine destinations and preserve hidden arXiv and author data',()=>{
+  for(const category of ['xun','li','lv'])for(const type of ['conference','journal','lab']){
+    const state=readRoute(`#view=sources&category=${category}&source=${type}`);
+    assert.equal(state.sourceType,type);assert.deepEqual(readRoute(routeHash(state)),state);
+    assert.equal((sourceDirectory(category,watchlists,type).match(/class="watchlist-section"/g)||[]).length,1);
+  }
+  for(const hash of ['#view=sources&category=li','#view=sources&category=li&source=author','#view=sources&source=bad'])assert.equal(readRoute(hash).sourceType,'conference');
+  assert.equal(profileSources('li',watchlists).filter(s=>s.type==='author').length,2);
+  assert.equal(profileSources('xun',watchlists).filter(s=>s.type==='arxiv').length,6);
+  assert.ok(!sourceDirectory('li',watchlists,'author').includes('Diego Calvanese'));
 });
