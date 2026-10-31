@@ -2,3 +2,10 @@ JetBrains Mono fonts
 Copyright 2020 The JetBrains Mono Project Authors (https://github.com/JetBrains/JetBrainsMono)
 Licensed under the SIL Open Font License, Version 1.1.
 Full license: assets/fonts/OFL.txt
+
+Institutional marks
+Official marks remain the intellectual property/trademarks of their institutions.
+Per-asset official sources, attribution, verified dates and restrictions are recorded
+in data/institutions.json and displayed in the institution library's source details.
+Inclusion identifies paper affiliations only, not partnership or endorsement; official
+availability does not imply a blanket reuse licence or institutional permission.

@@ -1,0 +1,387 @@
+{
+  "version": 1,
+  "institutions": [
+    {
+      "id": "illinois",
+      "officialName": "University of Illinois Urbana-Champaign",
+      "aliases": [
+        "UIUC"
+      ],
+      "institutionType": "university",
+      "markType": "compact-symbol",
+      "status": "verified",
+      "alphaStatus": "transparent",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/illinois.svg",
+        "sha256": "da4679937bf6f1fb8e2ff57728ccd8978014cd2839cd7d16a6988dc3cf47efbc",
+        "width": 180,
+        "height": 180,
+        "sourceUrl": "https://cdn.brand.illinois.edu/icon.svg",
+        "evidenceUrl": "https://illinois.edu/",
+        "verifiedAt": "2026-10-31",
+        "credit": "University of Illinois Urbana-Champaign · official mark",
+        "rights": "Official institutional mark; trademark/copyright retained by its owner. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve aspect ratio, complete mark and clear space.",
+        "displayPolicy": "official-brand",
+        "background": "transparent",
+        "altZh": "Illinois 官方 Block I 身份符号",
+        "altEn": "Official Illinois Block I identity symbol"
+      },
+      "note": "已核验官方来源标识；仅用于识别论文署名机构，不代表合作或背书。"
+    },
+    {
+      "id": "tsinghua",
+      "officialName": "Tsinghua University",
+      "aliases": [
+        "清华大学"
+      ],
+      "institutionType": "university",
+      "markType": "emblem",
+      "status": "verified",
+      "alphaStatus": "opaque-light",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/tsinghua-emblem.jpg",
+        "sha256": "edb1c56f1d4399ef32430f418cb179169e04955e75d95eb57c001e5b2f069ade",
+        "width": 554,
+        "height": 385,
+        "sourceUrl": "https://www.tsinghua.edu.cn/__local/C/B6/1C/5682B1124834BFE4B7BB43744CF_C7C409E3_C2FAA.pdf",
+        "evidenceUrl": "https://www.env.tsinghua.edu.cn/qinghuadaxueerjidanweibiaozhiguifanshouce-shixing.pdf",
+        "verifiedAt": "2026-10-31",
+        "credit": "Tsinghua University official emblem",
+        "rights": "官方校徽；无开放复用许可声明，保持原几何、颜色及安全空间。来源为官方章程PDF及二级单位标志规范。",
+        "displayPolicy": "official-brand",
+        "background": "light",
+        "altZh": "清华大学官方紫色校徽",
+        "altEn": "Official purple Tsinghua University emblem"
+      },
+      "note": "已核验官方来源标识；仅用于识别论文署名机构，不代表合作或背书。 保留清华官方白底原图，不抠图或重绘。"
+    },
+    {
+      "id": "maryland-college-park",
+      "officialName": "University of Maryland, College Park",
+      "aliases": [
+        "University of Maryland"
+      ],
+      "institutionType": "university",
+      "markType": "emblem",
+      "status": "verified",
+      "alphaStatus": "transparent",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/umd-emblem.webp",
+        "sha256": "d91ba74fdf5f9e0d91cf44ca560c8c7abd84d30c20d78981066bb99e4560fb3a",
+        "width": 1330,
+        "height": 818,
+        "sourceUrl": "https://omc-system.transforms.svdcdn.com/production/images/brand/Logos_InformalSeal.png?w=1920&h=1920&q=80&fm=webp&fit=max&dm=1788296316&s=129dbb4bff91a9e8a73666012aed1ead",
+        "evidenceUrl": "https://brand.umd.edu/visual-identity/logos",
+        "verifiedAt": "2026-10-31",
+        "credit": "University of Maryland 官方完整非正式校徽",
+        "rights": "University of Maryland官方商标；无开放复用许可声明。保留完整标识，不裁出独立地球，不修改颜色或几何；用于描述论文署名，不表示校方背书。",
+        "displayPolicy": "official-brand",
+        "background": "transparent",
+        "altZh": "University of Maryland 官方完整非正式校徽",
+        "altEn": "Official complete University of Maryland informal seal"
+      },
+      "note": "已核验官方来源标识；仅用于识别论文署名机构，不代表合作或背书。"
+    },
+    {
+      "id": "georgia-tech",
+      "officialName": "Georgia Institute of Technology",
+      "aliases": [
+        "Georgia Tech"
+      ],
+      "institutionType": "university",
+      "markType": "compact-symbol",
+      "status": "verified",
+      "alphaStatus": "transparent",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/gatech-symbol.png",
+        "sha256": "33c89bd7e3478f65c2a8f818274c18d0075090f3a10ea733cf9e3c371f626edc",
+        "width": 48,
+        "height": 48,
+        "sourceUrl": "https://www.gatech.edu/themes/custom/gatech/favicon.ico",
+        "evidenceUrl": "https://brand.gatech.edu/our-look/logos",
+        "verifiedAt": "2026-10-31",
+        "credit": "Georgia Institute of Technology official compact identity symbol",
+        "rights": "官方首页身份符号，商标归原权利人；无开放许可声明。不是受限大学印章，不表示背书。",
+        "displayPolicy": "official-brand",
+        "background": "transparent",
+        "altZh": "Georgia Tech 官方交织 GT 身份符号",
+        "altEn": "Official Georgia Tech interlocking GT identity symbol"
+      },
+      "note": "已核验官方来源标识；仅用于识别论文署名机构，不代表合作或背书。"
+    },
+    {
+      "id": "harvard",
+      "officialName": "Harvard University",
+      "aliases": [],
+      "institutionType": "university",
+      "markType": "emblem",
+      "status": "verified",
+      "alphaStatus": "transparent",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/harvard-shield.png",
+        "sha256": "2cb61f339af6d378bccaba83fe1636151c5d7e421a720f7781305f9171a4eff8",
+        "width": 192,
+        "height": 192,
+        "sourceUrl": "https://www.harvard.edu/wp-content/uploads/2020/10/cropped-logo-branding-compressed.png?w=192",
+        "evidenceUrl": "https://www.harvard.edu/",
+        "verifiedAt": "2026-10-31",
+        "credit": "Harvard University official emblem",
+        "rights": "Harvard商标归原权利人，未核实开放复用许可；仅作论文署名身份说明，不表示背书。Gazette内容转载规则另有标志许可要求。",
+        "displayPolicy": "official-brand",
+        "background": "transparent",
+        "altZh": "Harvard University 官方 Veritas 盾徽",
+        "altEn": "Official Harvard University Veritas shield"
+      },
+      "note": "已核验官方来源标识；仅用于识别论文署名机构，不代表合作或背书。"
+    },
+    {
+      "id": "arizona-state",
+      "officialName": "Arizona State University",
+      "aliases": [
+        "ASU"
+      ],
+      "institutionType": "university",
+      "markType": "compact-symbol",
+      "status": "verified",
+      "alphaStatus": "transparent",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/asu-vertical.png",
+        "sha256": "eed5fb0279cfad95f2b0b89011cc8646569abf1b098e54563f085b238ba751b4",
+        "width": 303,
+        "height": 234,
+        "sourceUrl": "https://www.asu.edu/profiles/contrib/webspark/modules/asu_brand/dist/assets/img/arizona-state-university-logo-vertical.png",
+        "evidenceUrl": "https://www.asu.edu/",
+        "verifiedAt": "2026-10-31",
+        "credit": "Arizona State University · official vertical mark",
+        "rights": "Official institutional mark; trademark/copyright retained by Arizona State University. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve the complete mark, aspect ratio and clear space. Display at least 48 CSS pixels wide.",
+        "displayPolicy": "official-brand",
+        "background": "transparent",
+        "altZh": "Arizona State University 官方完整竖版标志",
+        "altEn": "Official Arizona State University complete vertical mark"
+      },
+      "note": "已核验官方来源标识；仅用于识别论文署名机构，不代表合作或背书。"
+    },
+    {
+      "id": "amazon-far",
+      "officialName": "Amazon Frontier AI & Robotics (FAR)",
+      "aliases": [],
+      "institutionType": "company",
+      "markType": "organization-mark",
+      "status": "verified",
+      "alphaStatus": "transparent",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/amazon-parent.png",
+        "sha256": "5d26b516f9cf43e65c114ea65369c6fb209e4528678ad7c1d7d67623cbd3efab",
+        "width": 6110,
+        "height": 2047,
+        "sourceUrl": "https://assets.aboutamazon.com/2e/d7/ac71f1f344c39f8949f48fc89e71/amazon-logo-squid-ink-smile-orange.png",
+        "evidenceUrl": "https://press.aboutamazon.com/logos",
+        "verifiedAt": "2026-10-31",
+        "credit": "Amazon 母公司官方标志，非FAR专属标志",
+        "rights": "Amazon官方母公司商标，保留原色及完整比例；无开放复用许可声明，仅作团队所属关系的描述，不表示背书。",
+        "displayPolicy": "official-brand",
+        "background": "transparent",
+        "altZh": "Amazon 母公司官方标志，非FAR专属标志",
+        "altEn": "Official Amazon parent-company mark, not a FAR-specific logo"
+      },
+      "note": "已核验官方来源标识；仅用于识别论文署名机构，不代表合作或背书。 此处为 Amazon 母公司标志，非 FAR 专属标志。"
+    },
+    {
+      "id": "laval",
+      "officialName": "Université Laval",
+      "aliases": [
+        "Laval University"
+      ],
+      "institutionType": "university",
+      "markType": "compact-symbol",
+      "status": "verified",
+      "alphaStatus": "transparent",
+      "logo": {
+        "path": "assets/institutions/laval-emblem.svg",
+        "sourceUrl": "https://www.ulaval.ca/themes/custom/majuscule/assets/dist/favicon/favicon.svg",
+        "evidenceUrl": "https://www.ulaval.ca/",
+        "rights": "Official website publishes this intact red shield silhouette favicon. General identity policy forbids using arms without typographic signature and asks approval via marque@ulaval.ca. This favicon is not full arms and no exception, permission or open license is asserted. Editorial affiliation identification only, no endorsement. Policy: https://www.ulaval.ca/notre-universite/identite-visuelle",
+        "kind": "institution-logo",
+        "verifiedAt": "2026-10-31",
+        "displayPolicy": "official-brand",
+        "background": "transparent",
+        "credit": "Université Laval official compact mark",
+        "altEn": "Official red shield-silhouette favicon; not full coat of arms or reconstructed seal",
+        "altZh": "Official red shield-silhouette favicon; not full coat of arms or reconstructed seal",
+        "width": 64,
+        "height": 64,
+        "sha256": "df4e53e60548069701a2512d7ef8c2e19c6b98d6b8ca25a194bb0f844af76502"
+      },
+      "note": "Official red shield-silhouette favicon; not full coat of arms or reconstructed seal"
+    },
+    {
+      "id": "mila",
+      "officialName": "Mila – Quebec AI Institute",
+      "aliases": [],
+      "institutionType": "research-institute",
+      "markType": "organization-mark",
+      "status": "verified",
+      "alphaStatus": "transparent",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/mila.svg",
+        "sha256": "89fc4145ed3b739c3eaf8b05753835a4653aec706129dce9df268611824dd007",
+        "width": 170,
+        "height": 50,
+        "sourceUrl": "https://mila.quebec/sites/default/themes/mila_v1/logo.svg",
+        "evidenceUrl": "https://mila.quebec/en",
+        "verifiedAt": "2026-10-31",
+        "credit": "Mila – Quebec AI Institute · official mark",
+        "rights": "Official institutional mark; trademark/copyright retained by its owner. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve aspect ratio, complete mark and clear space.",
+        "displayPolicy": "official-brand",
+        "background": "transparent",
+        "altZh": "Mila – Quebec AI Institute 官方标志",
+        "altEn": "Official mark of Mila – Quebec AI Institute"
+      },
+      "note": "已核验官方来源标识；仅用于识别论文署名机构，不代表合作或背书。"
+    },
+    {
+      "id": "cifar-ai-chair",
+      "officialName": "CIFAR AI Chair",
+      "aliases": [],
+      "institutionType": "chair",
+      "markType": "organization-mark",
+      "status": "verified",
+      "alphaStatus": "transparent",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/cifar.svg",
+        "sha256": "b22a2f3178ac2db4973ecfdd0029df70c707f25f962ef7392766fe9ca857d114",
+        "width": 140,
+        "height": 45,
+        "sourceUrl": "https://cifar.ca/wp-content/bb-icons/icon-brand/images/logo.svg",
+        "evidenceUrl": "https://cifar.ca/",
+        "verifiedAt": "2026-10-31",
+        "credit": "CIFAR AI Chair · official mark",
+        "rights": "Official institutional mark; trademark/copyright retained by its owner. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve aspect ratio, complete mark and clear space.",
+        "displayPolicy": "official-brand",
+        "background": "transparent",
+        "altZh": "CIFAR AI Chair 官方标志",
+        "altEn": "Official mark of CIFAR AI Chair"
+      },
+      "note": "已核验官方来源标识；仅用于识别论文署名机构，不代表合作或背书。"
+    },
+    {
+      "id": "northeastern",
+      "officialName": "Northeastern University",
+      "aliases": [],
+      "institutionType": "university",
+      "markType": "compact-symbol",
+      "status": "verified",
+      "alphaStatus": "transparent",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/northeastern-symbol.png",
+        "sha256": "296b176061c82b017f8718b857d8d90dd0d841e35a287761e8eac5671c39395c",
+        "width": 32,
+        "height": 32,
+        "sourceUrl": "https://brand.northeastern.edu/global/assets/favicon/favicon-32x32.png?v=2",
+        "evidenceUrl": "https://www.northeastern.edu/",
+        "verifiedAt": "2026-10-31",
+        "credit": "Northeastern University official compact identity symbol",
+        "rights": "官方主页紧凑N符号，不是大学印章；保持完整及原色，不表示背书。印章政策另有限制。",
+        "displayPolicy": "official-brand",
+        "background": "transparent",
+        "altZh": "Northeastern University 官方红色 N 身份符号",
+        "altEn": "Official Northeastern University red N identity symbol"
+      },
+      "note": "已核验官方来源标识；仅用于识别论文署名机构，不代表合作或背书。"
+    },
+    {
+      "id": "pennsylvania",
+      "officialName": "University of Pennsylvania",
+      "aliases": [
+        "Penn",
+        "UPenn"
+      ],
+      "institutionType": "university",
+      "markType": "compact-symbol",
+      "status": "verified",
+      "alphaStatus": "transparent",
+      "logo": {
+        "path": "assets/institutions/penn-shield.png",
+        "sourceUrl": "https://www.upenn.edu/themes/custom/penn_global/assets/img/simplified-shield.ico",
+        "evidenceUrl": "https://branding.web-resources.upenn.edu/logos-and-branding/download-penn-logos",
+        "rights": "Penn requests permission for the simplified shield and intended web placement at ucomms-web@upenn.edu. Its logo download page authorizes community use supporting its mission; no permission or open license is asserted here. Editorial affiliation identification only, no endorsement.",
+        "kind": "institution-logo",
+        "verifiedAt": "2026-10-31",
+        "displayPolicy": "official-brand",
+        "background": "transparent",
+        "credit": "University of Pennsylvania official compact mark",
+        "altEn": "Official simplified Penn shield; not ceremonial seal",
+        "altZh": "Official simplified Penn shield; not ceremonial seal",
+        "width": 229,
+        "height": 256,
+        "sha256": "7492435842823ff354408fded2cb147415b194f6f10cbffb735ac15b624bdf86"
+      },
+      "note": "Official simplified Penn shield; not ceremonial seal"
+    },
+    {
+      "id": "uc-san-diego",
+      "officialName": "University of California San Diego",
+      "aliases": [
+        "UC San Diego",
+        "UCSD"
+      ],
+      "institutionType": "university",
+      "markType": "emblem",
+      "status": "verified",
+      "alphaStatus": "transparent",
+      "logo": {
+        "path": "assets/institutions/ucsd-seal.svg",
+        "sourceUrl": "https://brand.ucsd.edu/_images/logos-and-brand-elements/additional-campus-logos/ucsd-seal.svg",
+        "evidenceUrl": "https://brand.ucsd.edu/logos/uc-san-diego-seal/index.html",
+        "rights": "Official UC San Diego academic seal. Current institutional policy reserves it for formal academic/ceremonial contexts, lists websites and communications collateral as prohibited general uses, and requires prior approval for exceptions via University Communications (trademarks@ucsd.edu). Download and identity verification do not establish permission. Provided as exact descriptive editorial affiliation asset; no endorsement or open license claimed. Policy: https://brand.ucsd.edu/logos/uc-san-diego-seal/index.html",
+        "kind": "institution-logo",
+        "verifiedAt": "2026-10-31",
+        "displayPolicy": "official-brand",
+        "background": "transparent",
+        "credit": "University of California San Diego official academic seal",
+        "altEn": "Official UC San Diego academic seal",
+        "altZh": "加州大学圣地亚哥分校官方学术校徽",
+        "width": 350,
+        "height": 350,
+        "sha256": "4c6653786f082aede19f69292f4104d5343e31b1b9940156f09d7fb8ff5dd76e"
+      },
+      "note": "Complete official academic seal (star, book, motto and UC San Diego ring). Native transparency verified. Specific website-use restriction recorded; no publishing clearance inferred."
+    },
+    {
+      "id": "enchanted-tools",
+      "officialName": "Enchanted Tools",
+      "aliases": [],
+      "institutionType": "company",
+      "markType": "organization-mark",
+      "status": "verified",
+      "alphaStatus": "transparent",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/enchanted.svg",
+        "sha256": "ef659a49f0f6546d824ffc60ef402723d665eecff45f010cebec01d8e0ee4568",
+        "width": 22,
+        "height": 26,
+        "sourceUrl": "https://enchanted.tools/",
+        "evidenceUrl": "https://enchanted.tools/",
+        "verifiedAt": "2026-10-31",
+        "credit": "Enchanted Tools · official mark",
+        "rights": "Official institutional mark; trademark/copyright retained by its owner. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve aspect ratio, complete mark and clear space. Exact inline SVG extracted from official homepage; standalone XML namespace added only when absent.",
+        "displayPolicy": "official-brand",
+        "background": "transparent",
+        "altZh": "Enchanted Tools 官方标志",
+        "altEn": "Official mark of Enchanted Tools"
+      },
+      "note": "已核验官方来源标识；仅用于识别论文署名机构，不代表合作或背书。"
+    }
+  ]
+}

@@ -159,7 +159,9 @@
       "noBadgePlateOrDarkBacking": true,
       "noArtificialInstitutionInitialBadge": true,
       "neverRegenerateOfficialMarks": true,
-      "opaqueOriginalException": "Record actual background honestly; preserve authentic Tsinghua white-background original on white card rather than altering logo"
+      "opaqueOriginalException": "Record actual background honestly; preserve authentic Tsinghua white-background original on white card rather than altering logo",
+      "registry": "data/institutions.json: resolve stable IDs and aliases before any search; reuse verified path/hash; append new institutions once as needs-verification, never infer paper affiliations from catalogue membership",
+      "gallery": "manual horizontal browsing only; verified paper affiliations, not partners; no autoplay"
     },
     "portraits": {
       "source": "official-page-explicitly-identifies-author",
@@ -170,6 +172,6 @@
       "onlyPublicPaperURL": true,
       "noLikesOrViewCounts": true
     },
-    "assetPublishing": "Upload verified image blobs and commit them with the three JSON files atomically; validate local paths, hashes and dimensions before deployment."
+    "assetPublishing": "Reuse identical verified local assets; publish changed assets plus day/index/paper registry/institution registry in one atomic commit; validate all references, hashes, dimensions and evidence. Browser HTTP cache is not a guarantee of zero network requests."
   }
 }

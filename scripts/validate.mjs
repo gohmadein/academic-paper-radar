@@ -5,6 +5,7 @@ import {validateIndex, validateDay,isDate} from '../lib/model.js';
 import {aliasesFor} from './identity.mjs';
 import {validateAssetFiles,uniqueAssets} from './media-assets.mjs';
 
+import {validateInstitutions} from '../lib/institutions.js';
 export const root = fileURLToPath(new URL('../', import.meta.url));
 export async function validateAll(base = root,{assetBase=base}={}) {
   const errors = [];
@@ -35,6 +36,7 @@ export async function validateAll(base = root,{assetBase=base}={}) {
       count++;
     }
     if(!demo){
+      try{const institutions=JSON.parse(await readFile(join(path,'institutions.json'),'utf8'));errors.push(...validateInstitutions(institutions,realRecords.map(x=>x.paper)));const libraryPapers=[{visuals:{institutions:institutions.institutions}}];errors.push(...await validateAssetFiles(libraryPapers,assetBase));for(const asset of uniqueAssets(libraryPapers))assetPaths.add(asset.path);}catch(error){errors.push(`data/institutions.json: ${error.message}`);}
       errors.push(...await validateAssetFiles(realRecords.map(x=>x.paper),assetBase));
       try{for(const asset of uniqueAssets(realRecords.map(x=>x.paper)))assetPaths.add(asset.path);}catch{}
       try{

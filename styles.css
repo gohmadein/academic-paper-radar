@@ -301,3 +301,17 @@ dialog p,dialog li{font-size:13px;line-height:2;color:#3b4d67}
 @media(min-width:1101px){.workspace{grid-template-columns:minmax(0,1fr) 250px;gap:27px}.editorial-card{padding:24px 24px 17px}.editorial-grid{gap:24px}}
 @media(max-width:1100px){.editorial-grid{grid-template-columns:minmax(0,1fr)}.editorial-visual{width:100%;max-width:560px}.editorial-card h3{font-size:25px}}
 @media(max-width:700px){.editorial-card{padding:21px 19px 15px;border-radius:12px}.editorial-top{margin-bottom:17px}.editorial-card h3{font-size:23px;line-height:1.45;letter-spacing:-.3px}.paper-title-original{font-size:14px;line-height:1.6}.guide-language>p{font-size:13px}.english-guide>p{font-size:12px}.editorial-grid{gap:21px}.paper-authors{gap:10px 14px}.paper-figure figcaption{font-size:9px}.editorial-footer{gap:13px}.editorial-footer .card-actions{gap:10px;width:100%;justify-content:flex-end}.figure-frame{padding:10px}.detail-figure .figure-frame{aspect-ratio:4/3}#share-url{font-size:16px}}
+
+/* Manually browsed institution library; no autoplay or animated decoration. */
+.institution-library{min-width:0;margin:20px 0;padding:20px;background:#fff;border:1px solid #dce5f1;border-radius:12px;color:#19304e}
+.institution-library-heading{display:flex;justify-content:space-between;gap:16px;align-items:center}
+.institution-library-heading h2{font-size:18px;margin:4px 0}.institution-library-heading h2 span{font-size:13px;color:#b43c45;margin-left:6px}
+.institution-library-controls{display:flex;gap:8px}.institution-library-controls button{width:36px;height:36px;border:1px solid #cbd9eb;border-radius:8px;background:#fff;color:#215aa1;cursor:pointer}
+.institution-library-note{font-size:12px;color:#62738b;line-height:1.7;margin:10px 0 14px}
+.institution-strip{display:flex;gap:12px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;list-style:none;padding:4px 2px 12px;margin:0;scrollbar-color:#9cb9dc #f1f5fa}
+.institution-library-card{flex:0 0 184px;min-width:0;scroll-snap-align:start;padding:16px 12px;border:1px solid #e4ebf4;border-radius:10px;background:#fff;display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px}
+.institution-library-mark{width:112px;height:76px;display:flex;align-items:center;justify-content:center;background:transparent;border:0;border-radius:0;box-shadow:none}
+.institution-library-mark img{width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain;background:transparent;border-radius:0}
+.institution-library-card strong{font-size:12px;line-height:1.6;overflow-wrap:anywhere}.institution-library-card details{font-size:11px;color:#62738b;width:100%;margin-top:auto;overflow-wrap:anywhere}.institution-library-card summary{cursor:pointer;color:#215aa1}.institution-library-card details p{text-align:left;line-height:1.6}.institution-library-card a{color:#215aa1}
+.institution-strip:focus-visible,.institution-library button:focus-visible,.institution-library summary:focus-visible{outline:2px solid #2766ac;outline-offset:3px}
+@media(max-width:600px){.institution-library{padding:14px}.institution-library-card{flex-basis:156px}.institution-library-heading h2{font-size:16px}}

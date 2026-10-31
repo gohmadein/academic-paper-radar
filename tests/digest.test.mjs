@@ -45,9 +45,9 @@ test('详情呈现假设、阅读层级和证据，研究文本不能注入HTML'
  assert.equal(categoryClass(day.papers[7],'li'),'category-li');assert.ok(digestRecommendations(day.papers[7],'li',true).includes('TBox'));
 });
 test('导入计划不写入、失败保留数据，成功事务与重复运行确定一致',async()=>{
- const base=await fixture();const paths=['index.json','registry.json','days/2026-10-31.json'];
+ const base=await fixture();const paths=['index.json','registry.json','institutions.json','days/2026-10-31.json'];
  const before=await Promise.all(paths.map(p=>readFile(join(base,'data',p),'utf8')));
- const plan=await ingest(day,{base,planOnly:true});assert.equal(plan.files.length,3);
+ const plan=await ingest(day,{base,planOnly:true});assert.equal(plan.files.length,4);
  assert.deepEqual(await Promise.all(paths.map(p=>readFile(join(base,'data',p),'utf8'))),before);
  const invalid=clone(day);invalid.papers[0].summary='bad';await assert.rejects(ingest(invalid,{base}));
  assert.deepEqual(await Promise.all(paths.map(p=>readFile(join(base,'data',p),'utf8'))),before);

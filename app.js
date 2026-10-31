@@ -1,3 +1,4 @@
+import {institutionGallery,scrollInstitutions,institutionKeydown} from './lib/institutions.js';
 import {publicPaperURL,sharePaper} from './lib/paper-share.js';
 import {handleMediaError} from './lib/paper-media.js';
 import {categoryClass,categoryRail,digestBadges,digestRecommendations,digestDetails,issueReport,editorialCard,bilingualDetail} from './lib/digest-view.js';
@@ -49,8 +50,8 @@ async function init() {
   updateViewChrome();
   $('content').setAttribute('aria-busy','true');
   try {
-    const [real,demo] = await Promise.all([loadCollection('data',false),loadCollection('data/demo',true)]);
-    data = {real,demo};
+    const [real,demo,institutions] = await Promise.all([loadCollection('data',false),loadCollection('data/demo',true),getJSON('data/institutions.json')]);
+    data = {real,demo,institutions};
     if(state.view==='feed'&&!state.demo&&!new URLSearchParams(location.hash.slice(1)).has('date')&&real.days.length){state.date=real.days[0].date;history.replaceState(null,'',routeHash(state));}
     $('real-count').textContent = String(real.papers.length).padStart(2,'0');
     $('real-days').textContent = String(real.days.length).padStart(2,'0');
@@ -136,6 +137,7 @@ function render() {
   $('tags').innerHTML = ['all',...tagValues].map(t=>`<button class="tag ${state.tag===t?'active':''}" data-tag="${e(t)}" aria-pressed="${state.tag===t}">${t==='all'?'全部':e(t)}</button>`).join('');
   $('date-list').innerHTML = days.length ? days.slice(0,4).map(d=>`<button class="date-item ${state.date===d.date?'active':''}" data-date="${d.date}" aria-label="查看 ${d.date}，${d.papers.length} 篇${state.demo?'演示条目':'论文'}"><span class="date-number">${d.date.slice(8)}</span><span class="date-meta">${d.date.slice(0,7).replace('-',' / ')}<small>${state.demo?'演示归档':'研究档案'}</small></span><span class="date-count">${String(d.papers.length).padStart(2,'0')} ↗</span></button>`).join('') : '<div class="archive-placeholder">NO ENTRIES YET<span>首期发布后，按日期自动归档。</span></div>';
   const filtered = filterPapers(papers,{...state,read:reads,bookmarks:state.view==='bookmarks'?bookmarks:null});
+  $('institution-gallery').innerHTML=state.view==='feed'&&!state.demo?institutionGallery(filtered,data.institutions):'';
   const isFiltered = state.q || state.tag!=='all' || state.date!=='all' || state.category!=='all' || state.readStatus!=='all';
   $('view-title').childNodes[0].textContent = state.view === 'archive' ? '日期归档' : state.view === 'bookmarks' ? '本机书签' : '每日精选';
   $('edition-label').textContent = state.demo ? '演示档案' : !days.length ? '等待首期' : state.date === 'all' ? '全部日期' : state.date;
@@ -188,6 +190,7 @@ function closeDialog() {
 document.addEventListener('click', event => {
   const b = event.target.closest('button');
   if (!b) return;
+  if(b.dataset.institutionScroll){scrollInstitutions($('institution-strip'),Number(b.dataset.institutionScroll));return;}
   if(b.dataset.category)go({category:b.dataset.category,paper:''});
   else if(b.dataset.read){if(reads.has(b.dataset.read))reads.delete(b.dataset.read);else reads.add(b.dataset.read);try{localStorage.setItem(READ_KEY,JSON.stringify([...reads]));}catch{toast('阅读状态仅在当前会话可用');}render();}
   else if (b.dataset.view) go({view:b.dataset.view,q:'',tag:'all',date:b.dataset.view==='feed'&&!state.demo&&data?.real.days[0]?data.real.days[0].date:'all',paper:''});
@@ -276,3 +279,5 @@ window.addEventListener('hashchange',syncRoute);
 window.addEventListener('storage',event=>{if(event.key===BOOKMARK_KEY){bookmarks=parseBookmarks(event.newValue);if(data)render();}});
 document.addEventListener('keydown',event=>{if(event.key==='/' && !event.ctrlKey && !event.metaKey && !event.altKey && !$('detail-dialog').open && !$('share-dialog').open && !['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName) && !$('filter-panel').hidden){event.preventDefault();$('search').focus();}});
 init();
+
+document.addEventListener('keydown',event=>{const strip=$('institution-strip');if(strip)institutionKeydown(event,strip);});

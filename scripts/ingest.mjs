@@ -6,6 +6,7 @@ import {validateDay} from '../lib/model.js';
 import {root,validateAll} from './validate.mjs';
 import {normalizePapers,aliasesFor} from './identity.mjs';
 import {uniqueAssets,readAsset} from './media-assets.mjs';
+import {reuseInstitutions} from '../lib/institutions.js';
 const json=value=>JSON.stringify(value,null,2)+'\n';
 
 export async function prepareDigest(input,base=root){
@@ -13,6 +14,8 @@ export async function prepareDigest(input,base=root){
   const index=JSON.parse(await readFile(join(base,'data/index.json'),'utf8'));
   const registry=JSON.parse(await readFile(join(base,'data/registry.json'),'utf8'));
   const day={...structuredClone(input),papers:normalizePapers(structuredClone(input.papers),registry)};
+  const institutions=JSON.parse(await readFile(join(base,'data/institutions.json'),'utf8'));
+  reuseInstitutions(day.papers,institutions);
   let rules;
   try{rules=JSON.parse(await readFile(join(base,'config/digest-rules.json'),'utf8'));}catch(error){if(error.code!=='ENOENT')throw error;}
   const normalizedTitle=value=>value.toLowerCase().replace(/[^a-z0-9]/g,'');
@@ -33,7 +36,7 @@ export async function prepareDigest(input,base=root){
   index.days=index.days.filter(d=>d.date!==day.date);
   index.days.push({date:day.date,file:`days/${day.date}.json`,count:day.papers.length,title:day.title});
   index.days.sort((a,b)=>b.date.localeCompare(a.date));
-  return {files:[{path:`data/days/${day.date}.json`,content:json(day)},{path:'data/index.json',content:json(index)},{path:'data/registry.json',content:json(registry)}],summary:{date:day.date,uniquePapers:day.papers.length,profiles:Object.fromEntries(['xun','li','lv'].map(k=>[k,day.papers.filter(p=>p.profiles.includes(k)&&!p.classic).length])),classics:day.papers.filter(p=>p.classic).length}};
+  return {files:[{path:`data/days/${day.date}.json`,content:json(day)},{path:'data/index.json',content:json(index)},{path:'data/registry.json',content:json(registry)},{path:'data/institutions.json',content:json(institutions)}],summary:{date:day.date,uniquePapers:day.papers.length,profiles:Object.fromEntries(['xun','li','lv'].map(k=>[k,day.papers.filter(p=>p.profiles.includes(k)&&!p.classic).length])),classics:day.papers.filter(p=>p.classic).length}};
 }
 
 export async function ingest(input,{base=root,planOnly=false}={}){

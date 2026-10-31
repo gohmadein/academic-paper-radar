@@ -90,3 +90,7 @@ node scripts/ingest.mjs normalized.json --plan > commit-plan.json
 ## 边界
 
 原文链接仍指向论文与作者网站，其网络可用性由来源决定。页面运行资源均同源，但免费GitHub Pages在大陆各网络的长期可用性未获保证。导读注明摘要级/正文重点核读，不冒充完整审稿或独立复现。首期旧文明确标注，周一经典独立计数。
+
+### 署名机构标识库
+
+正式日报上方新增手动横向浏览的署名机构库（随当前筛选更新），不自动滚动、不表示机构背书。标识统一登记于 [`data/institutions.json`](data/institutions.json)，导入时由 [`lib/institutions.js`](lib/institutions.js) 先解析别名并复用已核验素材。新机构进入待核验队列，不生成假校徽。完整核验/发布规范见 [`docs/CARD-ASSETS.md`](docs/CARD-ASSETS.md)。
