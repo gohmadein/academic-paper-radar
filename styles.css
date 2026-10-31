@@ -433,3 +433,14 @@ main{width:100%;min-width:0;max-width:1360px;padding:0 36px}
 .profile-focus-link.active{background:#edf3ff;border-color:#b7cdf8;color:#2459c7;font-weight:700}
 @media(min-width:801px){.rail-collapsed .profile-subnav{margin:2px 0 8px;padding:0;border-left:0}.rail-collapsed .profile-focus-link{justify-content:center;padding:8px 0}.rail-collapsed .focus-label{display:none}}
 @media(max-width:800px){.profile-subnav{margin:4px 0 0;padding:0;border-left:0}.profile-focus-link{justify-content:center;gap:4px;padding:7px 2px;font-size:11px;white-space:nowrap}.profile-focus-link>span:first-child{display:none}.rail-collapsed .profile-focus-link{min-height:36px}}
+
+/* Shared native profile identities: keep real names, never rely on colour alone. */
+.profile-identity{display:inline-block;width:20px;height:20px;flex-shrink:0;fill:currentColor;stroke:none;vertical-align:middle}
+.profile-symbol .profile-identity{width:30px;height:30px;fill:currentColor;stroke:none}
+.profile-badge{display:inline-flex;align-items:center;gap:4px}
+.profile-badge .profile-identity{width:16px;height:16px}
+.source-profile-card>strong{display:flex;align-items:center;gap:8px}
+.source-profile-card .profile-identity{width:26px;height:26px;color:#175cd3}
+.source-profile-card.profile-li .profile-identity{color:#b42318}
+.source-profile-card.profile-lv .profile-identity{color:#111827}
+@media(max-width:800px){.profile-symbol .profile-identity{width:24px;height:24px}}

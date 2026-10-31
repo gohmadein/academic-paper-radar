@@ -19,6 +19,9 @@ test('Production entry points and dependency imports share a deterministic conte
   assert.ok(imports.some(([,asset])=>asset==='./lib/topics.js'));
   for(const [,asset,revision] of imports){assert.equal(revision,version);await access(new URL('../dist/'+asset.slice(2),import.meta.url));}
   assert.ok(app.includes(`favicon.svg?v=${version}`));
+  assert.ok(imports.some(([,asset])=>asset==='./lib/profile-icons.js'));
+  assert.equal(await readFile(new URL('../dist/lib/profile-icons.js',import.meta.url),'utf8'),await readFile(new URL('../lib/profile-icons.js',import.meta.url),'utf8'));
+  for(const module of ['digest-view','source-directory'])assert.ok((await readFile(new URL('../dist/lib/'+module+'.js',import.meta.url),'utf8')).includes(`./profile-icons.js?v=${version}`));
   for(const name of ['source-registry.json','profile-watchlists.json']){
     assert.deepEqual(JSON.parse(await readFile(new URL('../dist/config/'+name,import.meta.url),'utf8')),JSON.parse(await readFile(new URL('../config/'+name,import.meta.url),'utf8')));
   }
