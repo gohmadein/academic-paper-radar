@@ -1,4 +1,3 @@
-import {createHeroLineEffect} from './lib/line-block.js';
 import {DEMO_NOTICE, escapeHTML as e, safeUrl, filterPapers, readRoute, routeHash, parseBookmarks, validateIndex, validateDay} from './lib/model.js';
 import {updateHUD} from './lib/hud.js';
 import {makeBookmarkExport,parseBookmarkImport,mergeBookmarkImport,MAX_BOOKMARK_BYTES} from './lib/bookmark-transfer.js';
@@ -12,7 +11,6 @@ let storageAvailable = true;
 let toastTimer;
 let lastDialogPaper = '';
 let dialogTrigger = null;
-let heroEffect;
 try { bookmarks = parseBookmarks(localStorage.getItem(BOOKMARK_KEY)); } catch { bookmarks = new Set(); storageAvailable = false; }
 
 function toast(message) {
@@ -68,7 +66,6 @@ function updateViewChrome() {
   $('demo-banner').hidden = !isFeed || !state.demo;
   $('page-demo-note').hidden = isFeed || !state.demo;
   document.body.classList.toggle('compact-view', !isFeed);
-  heroEffect?.setVisible(isFeed);
 }
 
 function go(patch, {replace = false} = {}) {
@@ -248,5 +245,4 @@ window.addEventListener('popstate',syncRoute);
 window.addEventListener('hashchange',syncRoute);
 window.addEventListener('storage',event=>{if(event.key===BOOKMARK_KEY){bookmarks=parseBookmarks(event.newValue);if(data)render();}});
 document.addEventListener('keydown',event=>{if(event.key==='/' && !event.ctrlKey && !event.metaKey && !event.altKey && !$('detail-dialog').open && !['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName) && !$('filter-panel').hidden){event.preventDefault();$('search').focus();}});
-heroEffect = createHeroLineEffect();
 init();

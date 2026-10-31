@@ -14,7 +14,7 @@ test('Production entry points and dependency imports share a deterministic conte
   assert.ok(version);
   for(const [,asset] of html.matchAll(/(?:src|href)="(\.\/[^"?]+\.(?:js|css|svg))\?v=[a-f0-9]+"/g))await access(new URL('../dist/'+asset.slice(2),import.meta.url));
   const imports=[...app.matchAll(/from '(\.[^'?]+\.js)\?v=([a-f0-9]+)'/g)];
-  assert.equal(imports.length,4);
+  assert.equal(imports.length,3);
   for(const [,asset,revision] of imports){assert.equal(revision,version);await access(new URL('../dist/'+asset.slice(2),import.meta.url));}
   assert.ok(app.includes(`favicon.svg?v=${version}`));
   const manifest=await readFile(new URL('../dist/checksums.txt',import.meta.url),'utf8');
