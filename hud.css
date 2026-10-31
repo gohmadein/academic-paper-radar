@@ -52,6 +52,12 @@ body::before {
 }
 @keyframes scan-sweep { to { transform: translateY(1100%); } }
 .hero { grid-template-columns: 1.1fr 1fr; gap: 38px; padding-top: 44px; padding-bottom: 40px; min-height: 390px; }
+.hero { position: relative; }
+.filter-definitions { position: absolute; pointer-events: none; overflow: hidden; }
+#hero.rgb-enabled { filter: url("#hero-rgb-v4"); background-color: var(--bg); background-image: linear-gradient(90deg,#00f0ff06 1px,transparent 1px),linear-gradient(#00f0ff06 1px,transparent 1px); background-size:48px 48px; }
+.rgb-toggle { position:absolute;top:9px;right:0;font:9px var(--mono);color:#9bc7d2;padding:4px 7px;border:1px solid #30515d;z-index:2; }
+.rgb-toggle:hover { color:var(--cyan);border-color:#00f0ff70; }
+.rgb-toggle:disabled { opacity:.8; }
 .compact-view .workspace { border-top: 0; padding-top: 32px; }
 .page-demo-note { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: -7px 0 20px; color: #ff91c8; font-size: 11px; }
 .page-demo-note button { color: #ff91c8; font-size: 11px; padding: 3px 0; }
@@ -159,3 +165,6 @@ body::before {
 @media(max-width:540px) { .hero { padding-top: 30px; gap: 27px; overflow: visible; }.monitor-dashboard { max-width: none; }.monitor-surface { padding: 16px 13px 14px; }.monitor-title-row h2 { font-size: 16px; }.monitor-indicator { font-size: 8px; padding: 3px 5px; }.monitor-subtitle { font-size: 9px; margin-bottom: 14px; }.monitor-heading { font-size: 7px; letter-spacing: .5px; }.hud-counters { gap: 7px; margin-bottom: 0; }.metric-card .hud-surface { padding: 12px 8px; }.metric-card p { font-size: 10px; margin-bottom: 10px; }.metric-card p small { font-size: 7px; }.flip-digit { --digit-height: 31px; width: 18px; font-size: 23px; }.flip-counter { gap: 2px; }.metric-foot { font-size: 7px; white-space: normal; min-height: 22px; }.monitor-footer { font-size: 6px; gap: 6px; align-items: flex-start; }.monitor-footer>span:last-child { max-width: 100px; text-align: right; }.transfer-panel { padding: 17px; }.transfer-panel p { font-size: 12px; }.transfer-actions { gap: 8px; }.transfer-actions .secondary-button { font-size: 12px; padding: 9px 13px; } }
 @media(max-width:360px) { .monitor-surface { padding: 15px 10px 13px; }.monitor-title-row h2 { font-size: 13px; }.monitor-indicator { font-size: 7px; }.metric-card .hud-surface { padding: 11px 6px; }.flip-digit { width: 15px; font-size: 20px; }.monitor-subtitle { font-size: 8px; } }
 @media(prefers-reduced-motion:reduce) { .scanlines::after { display: none; }.glitch-title::before,.glitch-title::after { display: none; }.digit-top,.digit-bottom { display: none; } }
+@media(prefers-reduced-motion:reduce) { #hero.rgb-enabled { filter:none!important; } }
+
+.brand-icon {display:block;object-fit:contain;border:0;background:none;box-shadow:none;flex-shrink:0;}
