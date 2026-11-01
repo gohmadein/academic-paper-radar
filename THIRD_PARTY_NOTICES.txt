@@ -21,3 +21,13 @@ AI-assisted line-art transformations of two model photographs supplied by the si
 Gundam characters and designs remain the property of their respective rights holders;
 reference photography bears © SOTSU · SUNRISE. No official affiliation or endorsement.
 These decorative images are not paper figures, scientific evidence, or institutional marks.
+
+Li profile decorative background photographs
+Two photographs selected and supplied by the site owner for this decorative use.
+Photo 1 uses the visually matching higher-resolution source:
+https://0.soompi.io/wp-content/uploads/2026/07/21083412/Minji-2.jpeg
+Photo 2 uses the owner's supplied image. Original photographer/licence unverified;
+no open licence, ownership transfer or official endorsement is asserted.
+Copyright remains with the respective rights holders. Only proportional WebP
+optimization was performed; CSS cover/white overlay affect presentation only.
+These backgrounds are not research figures, author portraits or scientific evidence.

@@ -630,3 +630,27 @@ dialog::backdrop{background:#18263f38}
   .xun-side-art main.has-side-art::after{left:var(--art-right-start);width:var(--art-right-width);background-image:url("./assets/decor/xun-gundam-right.3561f752a59e.webp")}
 }
 @media print{.xun-side-art main::before,.xun-side-art main::after{display:none}}
+
+/* Li-only photographic reading surface. Static glass, no animation or image timer.
+   The white veil keeps even black pixels light; opaque controls/figures retain contrast. */
+.li-glass{isolation:isolate}
+.li-glass main{--muted:#354358}
+.li-glass .hero>.hero-copy>.eyebrow,.li-glass .section-heading .eyebrow,.li-glass #clear-filters{color:var(--blue-dark)}
+.li-glass .paper-dates{color:var(--muted)}
+.li-glass::before{content:"";position:fixed;inset:0 0 0 222px;z-index:-1;pointer-events:none;user-select:none;background-position:center;background-size:cover;background-repeat:no-repeat}
+.li-background-0::before{background-image:linear-gradient(#ffffffb8,#ffffffb8),url("./assets/decor/li-photo-1.18b7a0d61d5b.webp")}
+.li-background-1::before{background-image:linear-gradient(#ffffffb8,#ffffffb8),url("./assets/decor/li-photo-2.e809542ba20c.webp")}
+.li-glass.rail-collapsed::before{left:76px}
+.li-glass .paper-card{background:#fff;border-top-color:#fff;border-right-color:#fff;border-bottom-color:#e0e5ee;box-shadow:inset 0 1px 0 #fff,0 8px 28px #18263f0c}
+.li-glass .paper-card.category-li{border-left-color:#d92d20}
+.li-glass .paper-card:hover,.li-glass .paper-card:focus-within{border-top-color:#9cb7dc;border-right-color:#9cb7dc;border-bottom-color:#9cb7dc}
+@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  .li-glass .paper-card{background:linear-gradient(135deg,#ffffffb8,#ffffff85);-webkit-backdrop-filter:blur(18px) saturate(1.1);backdrop-filter:blur(18px) saturate(1.1)}
+}
+@media(max-width:800px){.li-glass::before,.li-glass.rail-collapsed::before{left:0}}
+@media(prefers-reduced-transparency:reduce){
+  .li-glass::before{display:none}
+  .li-glass .paper-card{background:#fff;-webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:none}
+}
+@media(forced-colors:active){.li-glass::before{display:none}.li-glass .paper-card{background:Canvas;-webkit-backdrop-filter:none;backdrop-filter:none}}
+@media print{.li-glass::before{display:none}.li-glass .paper-card{background:#fff;-webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:none}}

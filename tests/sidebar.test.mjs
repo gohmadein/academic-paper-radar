@@ -1,3 +1,4 @@
+import * as liBackground from '../lib/li-background.js';
 import * as sideArt from '../lib/side-art.js';
 import * as researchMap from '../lib/research-map.js';
 import test from 'node:test';
@@ -25,7 +26,7 @@ async function appHarness({stored=new Map(),storageBlocked=false}={}){
     if(!elements.has(id))elements.set(id,{id,hidden:false,value:'',innerHTML:'',textContent:'',dataset:{},childNodes:[{textContent:''}],classList:{toggle(){},add(){},remove(){}},attributes:{},setAttribute(k,v){this.attributes[k]=v},removeAttribute(k){delete this.attributes[k]},addEventListener(type,fn){events[id+':'+type]=fn},open:false,isConnected:true,focus(){context.document.activeElement=this},close(){this.open=false},showModal(){this.open=true}});
     return elements.get(id);
   };
-  const context=vm.createContext({...sideArt,...researchMap,...profileIcons,...sources,...topics,...model,...digest,...institutions,...transfer,...notes,...notesView,
+  const context=vm.createContext({...liBackground,...sideArt,...researchMap,...profileIcons,...sources,...topics,...model,...digest,...institutions,...transfer,...notes,...notesView,
     e:model.escapeHTML,updateHUD(){},console,URL,URLSearchParams,TextEncoder,CSS:{escape:x=>x},setTimeout,clearTimeout,
     document:{getElementById:element,querySelectorAll:()=>[],querySelector:()=>null,activeElement:null,body:{classList:{toggle(name,on){if(on)bodyClasses.add(name);else bodyClasses.delete(name)}}},addEventListener:(type,fn)=>{events[type]=fn}},
     window:{addEventListener:(type,fn)=>{windowEvents[type]=fn}},

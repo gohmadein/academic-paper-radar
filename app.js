@@ -1,3 +1,4 @@
+import {liBackgroundClass} from './lib/li-background.js';
 import {sideArtLayout} from './lib/side-art.js';
 import {createNotesStore,MAX_NOTE_LENGTH,MAX_NOTES_BYTES} from './lib/paper-notes.js';
 import {noteButton} from './lib/notes-view.js';
@@ -127,6 +128,9 @@ function collection() { return state.demo ? data.demo : data.real; }
 
 function updateViewChrome() {
   const isFeed = state.view === 'feed';
+  const liBackground = liBackgroundClass(state, data?.real.days || []);
+  document.body.classList.toggle('li-glass', Boolean(liBackground));
+  for (const slot of [0,1]) document.body.classList.toggle(`li-background-${slot}`, liBackground === `li-background-${slot}`);
   document.body.classList.toggle('xun-side-art', isFeed && !state.demo && state.category === 'xun');
   const motto=isFeed&&!state.demo ? PROFILE_MOTTOS[state.category]||'' : '';
   $('profile-motto').textContent=motto;
