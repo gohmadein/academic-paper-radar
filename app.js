@@ -1,3 +1,4 @@
+import {sideArtLayout} from './lib/side-art.js';
 import {createNotesStore,MAX_NOTE_LENGTH,MAX_NOTES_BYTES} from './lib/paper-notes.js';
 import {noteButton} from './lib/notes-view.js';
 import {researchMapModel,researchMapHTML,positionMapMarkers} from './lib/research-map.js';
@@ -21,14 +22,30 @@ const RAIL_KEY = 'zero-field-rail-collapsed-v1';
 const PROFILE_MOTTOS = {xun:'我会成为机器人发展史上不可跨过的人物吗',li:'As Always',lv:'年入百万，迎娶🇨🇦姐姐，我只是想给她一个中国户口'};
 let railCollapsed = false;
 try { railCollapsed = localStorage.getItem(RAIL_KEY) === 'true'; } catch { /* Layout still works without storage. */ }
+function updateSideArt() {
+  const main=$('main'),rail=document.querySelector('.navigation-rail');
+  if(!main?.getBoundingClientRect || !rail?.getBoundingClientRect)return;
+  const bounds=main.getBoundingClientRect();
+  const layout=sideArtLayout({viewportWidth:document.documentElement.clientWidth,mainLeft:bounds.left,mainRight:bounds.right,railRight:rail.getBoundingClientRect().right});
+  main.classList.toggle('has-side-art',layout.visible);
+  main.style.setProperty('--art-left-width',`${layout.leftWidth}px`);
+  main.style.setProperty('--art-right-width',`${layout.rightWidth}px`);
+}
 function updateRail() {
   document.body.classList.toggle('rail-collapsed', railCollapsed);
   const toggle = $('rail-toggle');
   toggle.setAttribute('aria-expanded', String(!railCollapsed));
   toggle.setAttribute('aria-label', railCollapsed ? '展开侧栏' : '收起侧栏');
   toggle.title = railCollapsed ? '展开侧栏' : '收起侧栏';
+  updateSideArt();
 }
 updateRail();
+window.addEventListener('resize',updateSideArt);
+if(typeof ResizeObserver !== 'undefined'){
+  const sideArtObserver=new ResizeObserver(updateSideArt);
+  sideArtObserver.observe($('main'));
+  sideArtObserver.observe(document.querySelector('.navigation-rail'));
+}
 $('rail-toggle').addEventListener('click', () => {
   railCollapsed = !railCollapsed;
   updateRail();

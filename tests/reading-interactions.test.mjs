@@ -1,3 +1,4 @@
+import * as sideArt from '../lib/side-art.js';
 import * as researchMap from '../lib/research-map.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -34,7 +35,7 @@ async function harness({navigator={},storageFailure=false}={}) {
   });
   const element=id=>{if(!elements.has(id))elements.set(id,make(id));return elements.get(id)};
   const query=selector=>{const match=selector.match(/\[data-([\w-]+)="([^"]+)"\]/);if(!match)return null;const key=match[1].replace(/-([a-z])/g,(_,c)=>c.toUpperCase());return make(selector,{[key]:match[2],paperControl:true})};
-  context=vm.createContext({...researchMap,...profileIcons,...sources,...topics,...model,...digest,...institutions,...transfer,...sharing,...media,...notes,...notesView,
+  context=vm.createContext({...sideArt,...researchMap,...profileIcons,...sources,...topics,...model,...digest,...institutions,...transfer,...sharing,...media,...notes,...notesView,
     navigator,e:model.escapeHTML,updateHUD(){},console,URL,URLSearchParams,TextEncoder,CSS:{escape:x=>x},setTimeout:(fn)=>{timers.set(++timerId,fn);return timerId},clearTimeout:id=>timers.delete(id),
     document:{title:'ZERO FIELD',getElementById:element,querySelectorAll:()=>[],querySelector:query,activeElement:make('body'),body:{classList:{toggle(){}}},addEventListener:(type,fn)=>on(type,fn)},
     window:{addEventListener:(type,fn)=>{windowEvents[type]=fn}},localStorage:{getItem:k=>stored.get(k)??null,setItem:(k,v)=>{if(storageFailure)throw Error('QuotaExceededError');stored.set(k,v)}},location,

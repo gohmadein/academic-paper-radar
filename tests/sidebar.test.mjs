@@ -1,3 +1,4 @@
+import * as sideArt from '../lib/side-art.js';
 import * as researchMap from '../lib/research-map.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -24,7 +25,7 @@ async function appHarness({stored=new Map(),storageBlocked=false}={}){
     if(!elements.has(id))elements.set(id,{id,hidden:false,value:'',innerHTML:'',textContent:'',dataset:{},childNodes:[{textContent:''}],classList:{toggle(){},add(){},remove(){}},attributes:{},setAttribute(k,v){this.attributes[k]=v},removeAttribute(k){delete this.attributes[k]},addEventListener(type,fn){events[id+':'+type]=fn},open:false,isConnected:true,focus(){context.document.activeElement=this},close(){this.open=false},showModal(){this.open=true}});
     return elements.get(id);
   };
-  const context=vm.createContext({...researchMap,...profileIcons,...sources,...topics,...model,...digest,...institutions,...transfer,...notes,...notesView,
+  const context=vm.createContext({...sideArt,...researchMap,...profileIcons,...sources,...topics,...model,...digest,...institutions,...transfer,...notes,...notesView,
     e:model.escapeHTML,updateHUD(){},console,URL,URLSearchParams,TextEncoder,CSS:{escape:x=>x},setTimeout,clearTimeout,
     document:{getElementById:element,querySelectorAll:()=>[],querySelector:()=>null,activeElement:null,body:{classList:{toggle(name,on){if(on)bodyClasses.add(name);else bodyClasses.delete(name)}}},addEventListener:(type,fn)=>{events[type]=fn}},
     window:{addEventListener:(type,fn)=>{windowEvents[type]=fn}},
@@ -37,7 +38,7 @@ async function appHarness({stored=new Map(),storageBlocked=false}={}){
   source=source.replace(/^import .*;\n/gm,'').replaceAll('import.meta.url',JSON.stringify(new URL('../app.js',import.meta.url).href)).replace('\ninit();','\nglobalThis.boot=init();');
   vm.runInContext(source,context);await context.boot;
   const run=code=>vm.runInContext(code,context);
-  return {element,run,events,stored,bodyClasses,click:dataset=>events.click({target:{closest:()=>({dataset})}}),
+  return {element,run,events,windowEvents,stored,bodyClasses,click:dataset=>events.click({target:{closest:()=>({dataset})}}),
     back(){location.hash=entries[--position];windowEvents.popstate()},
     forward(){location.hash=entries[++position];windowEvents.popstate()}};
 }
@@ -283,16 +284,33 @@ test('Gundam decorations are exclusive to the real xun feed and follow navigatio
 
 test('Decorative gutters never intersect the main or rail, including collapsed wide layouts',async()=>{
   const css=await read('styles.css');
-  assert.match(css,/@media\(min-width:1650px\)\{/);
+  assert.match(css,/main\.has-side-art::before/);
   assert.match(css,/pointer-events:none;user-select:none/);
   assert.match(css,/opacity:\.22/);
   assert.match(css,/right:calc\(100% \+ 12px\)/);
   assert.match(css,/left:calc\(100% \+ 12px\)/);
-  for(const viewport of [1650,1920,2048,2560,3840])for(const [rail,main] of [[222,1120],[76,1160]]){
-    const gutter=(viewport-rail-main)/2,width=Math.min(340,gutter-24),mainLeft=rail+gutter,mainRight=mainLeft+main;
+  for(const viewport of [1536,1650,1920,2048,2560,3840])for(const [rail,main] of [[222,1120],[76,1160]]){
+    const gutter=(viewport-rail-main)/2,width=gutter-24,mainLeft=rail+gutter,mainRight=mainLeft+main;
     const left={start:mainLeft-12-width,end:mainLeft-12};
     const right={start:mainRight+12,end:mainRight+12+width};
     assert.ok(width>0);assert.ok(left.start>=rail+12);assert.ok(left.end<mainLeft);
     assert.ok(right.start>mainRight);assert.ok(right.end<=viewport-12);
   }
+});
+
+test('Side art measures live layout on resize and rail changes without unsafe inline attributes',async()=>{
+  const h=await appHarness(),main=h.element('main'),props={};let mainLeft=319;
+  main.getBoundingClientRect=()=>({left:mainLeft,right:mainLeft+1120});
+  main.style={setProperty(k,v){props[k]=v}};
+  main.classList.toggle=(name,value)=>{if(name==='has-side-art')main.artVisible=value};
+  h.run("document.documentElement={clientWidth:1536};document.querySelector=()=>({getBoundingClientRect:()=>({right:222})})");
+  h.run('updateSideArt()');assert.equal(main.artVisible,true);assert.equal(props['--art-left-width'],'73px');
+  h.run('document.documentElement.clientWidth=1440');mainLeft=271;
+  h.windowEvents.resize();assert.equal(main.artVisible,true);
+  mainLeft=217;main.getBoundingClientRect=()=>({left:217,right:1377});
+  h.run("document.querySelector=()=>({getBoundingClientRect:()=>({right:76})});document.documentElement.clientWidth=1440");
+  h.events['rail-toggle:click']();assert.equal(main.artVisible,true); // Each image is independently clipped to its actual gutter.
+  main.getBoundingClientRect=()=>({left:178,right:1338});h.windowEvents.resize();
+  assert.equal(main.artVisible,true);assert.equal(props['--art-right-width'],'78px');
+  assert.equal(main.attributes.style,undefined);
 });

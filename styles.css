@@ -616,21 +616,17 @@ dialog::backdrop{background:#18263f38}
 #dialog-content>.note-button{margin-left:12px}
 @media(max-width:700px){.note-button{width:40px;height:40px}.notes-save-row{align-items:flex-start}#notes-dialog{padding:20px}#notes-text{min-height:180px}}
 
-/* Decorative line art lives strictly in the unused outer gutters, never behind papers.
-   The centered main is the geometric boundary; collapsing the rail updates both widths.
-   Narrow viewports do not create these pseudo-elements or load their images. */
-@media(min-width:1650px){
-  body.xun-side-art{--art-rail:222px;--art-main:1120px}
-  body.xun-side-art.rail-collapsed{--art-rail:76px;--art-main:1160px}
-  .xun-side-art main{position:relative}
-  .xun-side-art main::before,.xun-side-art main::after{
-    content:"";position:absolute;top:220px;
-    width:min(340px,calc((100vw - var(--art-rail) - var(--art-main))/2 - 24px));
-    height:600px;max-height:72vh;pointer-events:none;user-select:none;
-    background-position:center top;background-size:contain;background-repeat:no-repeat;
+/* Large line art is cropped to separate measured outer gutters, below the reading layer.
+   Main/rail bounds and scrollbar width are observed; no content is narrowed for art. */
+@media(min-width:801px){
+  .xun-side-art main{position:relative;isolation:isolate;background:#fff}
+  .xun-side-art main.has-side-art::before,.xun-side-art main.has-side-art::after{
+    content:"";position:absolute;top:120px;z-index:-1;
+    height:1000px;pointer-events:none;user-select:none;
+    background-position:center top;background-size:clamp(520px,48vw,860px) auto;background-repeat:no-repeat;
     opacity:.22;
   }
-  .xun-side-art main::before{right:calc(100% + 12px);background-image:url("./assets/decor/xun-gundam-left.c9ffc9b7ef13.webp")}
-  .xun-side-art main::after{left:calc(100% + 12px);background-image:url("./assets/decor/xun-gundam-right.3561f752a59e.webp")}
+  .xun-side-art main.has-side-art::before{right:calc(100% + 12px);width:var(--art-left-width);background-image:url("./assets/decor/xun-gundam-left.c9ffc9b7ef13.webp")}
+  .xun-side-art main.has-side-art::after{left:calc(100% + 12px);width:var(--art-right-width);background-image:url("./assets/decor/xun-gundam-right.3561f752a59e.webp")}
 }
 @media print{.xun-side-art main::before,.xun-side-art main::after{display:none}}
