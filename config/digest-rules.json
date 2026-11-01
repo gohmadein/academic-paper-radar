@@ -83,18 +83,20 @@
       "targetMin": 1,
       "targetMax": 3,
       "priorities": [
-        "机器人学习/操作、RL、IL、BC、Diffusion Policy",
-        "Isaac Lab / MuJoCo、sim2real",
-        "VLA、基础/世界模型、跨形态",
-        "人形机器人"
+        "P0 · Robot Learning / Manipulation：IL、BC、RL、Diffusion Policy、Visuomotor Policy（视觉运动策略）",
+        "P1 · Robot Perception / CV for Robotics：3D／空间感知、深度、点云、6D位姿、检测分割、视觉表征与视觉操作",
+        "P1 · Isaac Lab / MuJoCo：Simulation、Sim2Real、合成数据、评估与仿真环境设计",
+        "P2 · VLA、基础模型／世界模型、跨形态、多模态具身学习",
+        "P2 · 人形机器人、全身控制、灵巧操作"
       ],
       "prefer": [
-        "可信实验",
+        "与上述机器人研究问题直接相关",
+        "可信实验与明确结果边界",
         "可核验代码与材料",
-        "入门可读性"
+        "兼顾前沿理解与基础补齐；难度决定阅读路径，不作为入选门槛"
       ],
       "exclude": [
-        "不相关的纯LLM/CV论文"
+        "与机器人感知、操作、空间理解或具身任务无直接关系的纯LLM/CV论文"
       ],
       "venues": [
         "CoRL",
@@ -103,8 +105,9 @@
         "IROS",
         "RA-L",
         "T-RO",
-        "机器人相关NeurIPS/ICLR/ICML",
-        "arXiv cs.RO及相关cs.LG/cs.CV"
+        "机器人学习相关NeurIPS/ICLR/ICML",
+        "机器人感知／操作／空间理解／具身任务相关CVPR/ICCV/ECCV",
+        "arXiv cs.RO及与机器人任务直接相关的cs.LG/cs.CV"
       ],
       "teams": [
         "NVIDIA GEAR",
@@ -112,7 +115,26 @@
         "Google DeepMind Robotics",
         "Stanford",
         "Berkeley"
-      ]
+      ],
+      "readingPolicy": {
+        "frontierLine": "跟踪有研究价值的新工作，先厘清问题、方法与证据边界；不因难度高、数学多或涉及RL而排除。",
+        "foundationLine": "按所选前沿论文暴露的概念缺口补基础；不把研究方向降级为入门论文筛选器，不要求每天另凑基础论文。",
+        "beginnerOnly": false,
+        "excludeForMathOrRL": false,
+        "classics": "周一可额外推荐最多1篇基础经典，classic=true，独立于每日1–3篇新文；不是每周必须凑满。",
+        "difficulty": "保留beginner/intermediate/advanced真实难度；分步阅读计划与难度标签分开。",
+        "guidanceFields": {
+          "recommendations.lv.whyRead": "为什么值得读、当前优先级；说明适合现在读、先读摘要还是以后读。",
+          "summary / summaryEn": "忠实双语概括问题、方法和有证据支持的主要结果；不得增加未核实结论。",
+          "limits / assumptions": "任务、数据、实验条件与适用限制；区分作者报告与独立验证。",
+          "recommendations.lv.relation": "明确与机器人任务及P0/P1/P2研究线的关系，不只列关键词。",
+          "recommendations.lv.prerequisites": "列关键前置概念和理解该文需要补的知识，不推断读者已掌握或不掌握。",
+          "researchNotes": "标记前沿线／基础线；给出实际核验过的具体阅读章节、图表与顺序，以及未读、未验证和未运行部分。仅摘要可得时写未核验具体章节/图表，不猜编号。",
+          "recommendations.lv.readRecommendation": "read/deep=建议现在阅读（按实际目标选择）；skim=先读摘要／概览；save=稍后读。",
+          "readDepth / evidence": "如实填写metadata/abstract/fulltext并给原始证据；fulltext仅表示确实阅读了正文，研究记录必须限定实际核读范围，不冒充完整通读、复现或独立验证。"
+        },
+        "unknownGuidance": "现有数组字段可空，缺少核验的章节/图表在researchNotes明确写未核验；资源仍用null。禁止用虚构编号或新增私密背景填空。"
+      }
     }
   },
   "publicationRules": {

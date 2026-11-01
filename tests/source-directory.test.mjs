@@ -7,7 +7,7 @@ const read=p=>readFile(new URL('../'+p,import.meta.url),'utf8');
 const watchlists={profiles:JSON.parse(await read('config/profile-watchlists.json')),registry:JSON.parse(await read('config/source-registry.json'))};
 
 test('All source records retain safe links, counts, tiers and multi-team registry entries',()=>{
-  const expected={xun:[14,20,30,6,0],li:[11,7,1,4,2],lv:[7,2,7,3,0]};
+  const expected={xun:[14,20,30,6,0],li:[11,7,1,4,2],lv:[10,2,7,3,0]};
   for(const category of Object.keys(expected)){
     const sources=profileSources(category,watchlists);
     assert.deepEqual(SOURCE_SECTIONS.map(([type])=>sources.filter(s=>s.type===type).length),expected[category]);
@@ -81,13 +81,13 @@ test('Directory preambles stay out of every section while data, scholar details 
     const html=sourceDirectory(category,watchlists,'lab');
     for(const detail of ['Berkeley RAIL / RLL','Sergey Levine','Pieter Abbeel','Stanford IRIS','Chelsea Finn','https://rail.eecs.berkeley.edu/','https://rll.berkeley.edu/'])assert.ok(html.includes(detail),detail);
   }
-  assert.ok(sourceDirectory('lv',watchlists,'conference').includes('7 项'));
+  assert.ok(sourceDirectory('lv',watchlists,'conference').includes('10 项'));
   assert.equal(JSON.stringify(watchlists),before);
 });
 
 test('Lv venues and arXiv reuse registry links but apply its narrower learning/task scope',()=>{
  const before=JSON.stringify(watchlists.registry),lv=profileSources('lv',watchlists);
- for(const [type,names] of [['conference',['CoRL','RSS','ICRA','IROS','NeurIPS','ICLR','ICML']],['journal',['RA-L','T-RO']],['arxiv',['cs.RO','cs.LG','cs.CV']]]){
+ for(const [type,names] of [['conference',['CoRL','RSS','ICRA','IROS','NeurIPS','ICLR','ICML','CVPR','ICCV','ECCV']],['journal',['RA-L','T-RO']],['arxiv',['cs.RO','cs.LG','cs.CV']]]){
    assert.deepEqual(lv.filter(s=>s.type===type).map(s=>s.name),names);
    for(const name of names){const source=lv.find(s=>s.name===name),original=watchlists.registry.sources.find(s=>s.name===name);assert.equal(source.links,original.links);assert.equal(source.type,original.type);}
  }
