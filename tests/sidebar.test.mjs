@@ -11,6 +11,9 @@ import * as digest from '../lib/digest-view.js';
 import * as institutions from '../lib/institutions.js';
 import * as transfer from '../lib/bookmark-transfer.js';
 const read=p=>readFile(new URL('../'+p,import.meta.url),'utf8');
+const index=JSON.parse(await read('data/index.json'));
+const latestDay=JSON.parse(await read('data/'+index.days[0].file));
+const latestCount=category=>latestDay.papers.filter(p=>category==='all'||p.profiles.includes(category)).length;
 
 async function appHarness({stored=new Map(),storageBlocked=false}={}){
   const elements=new Map(),events={},windowEvents={},bodyClasses=new Set(),entries=[''],location={hash:''};
@@ -52,13 +55,14 @@ test('Sidebar is the only category chooser; desktop rail and compact mobile layo
 test('Live app routes all three feeds, repeated switches, Back/Forward and combined search/date filters',async()=>{
   const h=await appHarness();
   const count=()=> (h.element('content').innerHTML.match(/<article /g)||[]).length;
-  assert.equal(count(),11);
-  for(const [category,n] of [['xun',7],['li',2],['lv',2],['all',11],['li',2]]){
+  assert.equal(count(),latestCount('all'));
+  for(const category of ['xun','li','lv','all','li']){
+    const n=latestCount(category);
     h.click({category});assert.equal(count(),n);
     assert.match(h.element('category-tabs').innerHTML,new RegExp('data-category="'+category+'"[^>]*aria-pressed="true"'));
   }
-  h.back();assert.equal(h.run('state.category'),'all');assert.equal(count(),11);
-  h.forward();assert.equal(h.run('state.category'),'li');assert.equal(count(),2);
+  h.back();assert.equal(h.run('state.category'),'all');assert.equal(count(),latestCount('all'));
+  h.forward();assert.equal(h.run('state.category'),'li');assert.equal(count(),latestCount('li'));
   h.run("go({q:'Gatterbauer',date:'2026-10-31'})");
   assert.equal(count(),1);
   h.click({category:'xun'});assert.equal(count(),0);
@@ -113,7 +117,7 @@ test('Unavailable layout storage is harmless; icon destinations retain accessibl
   assert.equal(h.element('rail-toggle').attributes['aria-expanded'],'true');
   h.events['rail-toggle:click']();h.click({category:'li'});
   assert.equal(h.bodyClasses.has('rail-collapsed'),true);
-  assert.equal((h.element('content').innerHTML.match(/<article /g)||[]).length,2);
+  assert.equal((h.element('content').innerHTML.match(/<article /g)||[]).length,latestCount('li'));
   h.events['rail-toggle:click']();assert.equal(h.bodyClasses.has('rail-collapsed'),false);
   const html=await read('index.html'),css=await read('styles.css');
   assert.match(html,/aria-controls="profile-navigation rail-utilities"/);
@@ -125,6 +129,8 @@ test('Unavailable layout storage is harmless; icon destinations retain accessibl
 
 test('Broad theme chips follow profiles, compose in bookmarks, and preserve legacy links/history',async()=>{
   const h=await appHarness();
+  // Fixed historical fixture supplies the legacy fine-tag regression cases.
+  h.run("go({date:'2026-10-31'})");
   const count=()=> (h.element('content').innerHTML.match(/<article /g)||[]).length;
   h.click({category:'xun'});
   assert.equal((h.element('tags').innerHTML.match(/<button /g)||[]).length,6);

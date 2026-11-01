@@ -275,6 +275,309 @@
       ],
       "verifiedAt": "2026-10-31",
       "caveat": "Public institutional affiliation geography only; no inference about author nationality or residence. Paris is explicitly stated in the paper; not inferred from company headquarters."
+    },
+    "pending-university-of-washington": {
+      "id": "pending-university-of-washington",
+      "institutionId": "pending-university-of-washington",
+      "institutionName": "University of Washington",
+      "label": "Seattle",
+      "labelZh": "西雅图",
+      "city": "Seattle",
+      "countryCode": "US",
+      "countryLabel": "United States",
+      "countryLabelZh": "美国",
+      "region": "Washington",
+      "lat": 47.61,
+      "lon": -122.33,
+      "coordinatePrecision": "representative-city",
+      "coordinateMethod": "Manually selected approximate city-level display anchor; not geocoded research site, building address, or author whereabouts.",
+      "evidenceUrls": [
+        "https://people.ece.uw.edu/luo_yiyue/index.html",
+        "https://arxiv.org/html/2610.40646v1"
+      ],
+      "verifiedAt": "2026-11-01",
+      "caveat": "Public institutional affiliation geography only; no inference about author nationality or residence. Official corresponding coauthor university page identifies Seattle campus."
+    },
+    "pending-university-of-zaragoza": {
+      "id": "pending-university-of-zaragoza",
+      "institutionId": "pending-university-of-zaragoza",
+      "institutionName": "University of Zaragoza",
+      "label": "Zaragoza",
+      "labelZh": "萨拉戈萨",
+      "city": "Zaragoza",
+      "countryCode": "ES",
+      "countryLabel": "Spain",
+      "countryLabelZh": "西班牙",
+      "region": "Aragon",
+      "lat": 41.65,
+      "lon": -0.88,
+      "coordinatePrecision": "representative-city",
+      "coordinateMethod": "Manually selected approximate city-level display anchor; not geocoded research site, building address, or author whereabouts.",
+      "evidenceUrls": [
+        "https://i3a.es/es/equipo-directivo",
+        "https://arxiv.org/html/2610.40559v1"
+      ],
+      "verifiedAt": "2026-11-01",
+      "caveat": "Public institutional affiliation geography only; no inference about author nationality or residence. Paper specifies I3A; institute contact identifies Zaragoza."
+    },
+    "pending-university-of-bologna": {
+      "id": "pending-university-of-bologna",
+      "institutionId": "pending-university-of-bologna",
+      "institutionName": "University of Bologna",
+      "label": "Bologna",
+      "labelZh": "博洛尼亚",
+      "city": "Bologna",
+      "countryCode": "IT",
+      "countryLabel": "Italy",
+      "countryLabelZh": "意大利",
+      "region": "Emilia-Romagna",
+      "lat": 44.49,
+      "lon": 11.34,
+      "coordinatePrecision": "representative-city",
+      "coordinateMethod": "Manually selected approximate city-level display anchor; not geocoded research site, building address, or author whereabouts.",
+      "evidenceUrls": [
+        "https://www.unibo.it/sitoweb/gianluca.palli",
+        "https://arxiv.org/html/2610.40559v1"
+      ],
+      "verifiedAt": "2026-11-01",
+      "caveat": "Public institutional affiliation geography only; no inference about author nationality or residence. Paper specifies DEI; official coauthor department address is Bologna."
+    },
+    "pending-clermont-auvergne-inp": {
+      "id": "pending-clermont-auvergne-inp",
+      "institutionId": "pending-clermont-auvergne-inp",
+      "institutionName": "Clermont Auvergne INP",
+      "label": "Aubière",
+      "labelZh": "欧比耶尔",
+      "city": "Aubière",
+      "countryCode": "FR",
+      "countryLabel": "France",
+      "countryLabelZh": "法国",
+      "region": "Auvergne-Rhône-Alpes",
+      "lat": 45.75,
+      "lon": 3.11,
+      "coordinatePrecision": "representative-city",
+      "coordinateMethod": "Manually selected approximate city-level display anchor; not geocoded research site, building address, or author whereabouts.",
+      "evidenceUrls": [
+        "https://www.uca.fr/institut-sciences-de-la-vie-sante-agronomie-environnement/institut-pascal",
+        "https://arxiv.org/html/2610.40559v1"
+      ],
+      "verifiedAt": "2026-11-01",
+      "caveat": "Public institutional affiliation geography only; no inference about author nationality or residence. Paper specifies Institut Pascal; official laboratory address is Aubière, not an assumed Clermont-Ferrand city centre."
+    },
+    "pending-mitsubishi-electric-research-laboratories": {
+      "id": "pending-mitsubishi-electric-research-laboratories",
+      "institutionId": "pending-mitsubishi-electric-research-laboratories",
+      "institutionName": "Mitsubishi Electric Research Laboratories",
+      "label": "Cambridge",
+      "labelZh": "剑桥",
+      "city": "Cambridge",
+      "countryCode": "US",
+      "countryLabel": "United States",
+      "countryLabelZh": "美国",
+      "region": "Massachusetts",
+      "lat": 42.37,
+      "lon": -71.11,
+      "coordinatePrecision": "representative-city",
+      "coordinateMethod": "Manually selected approximate city-level display anchor; not geocoded research site, building address, or author whereabouts.",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2610.40431v1"
+      ],
+      "verifiedAt": "2026-11-01",
+      "caveat": "Public institutional affiliation geography only; no inference about author nationality or residence. Cambridge MA explicitly stated in paper affiliation; not company headquarters inference."
+    },
+    "pending-international-institute-of-information-technology-hyderabad": {
+      "id": "pending-international-institute-of-information-technology-hyderabad",
+      "institutionId": "pending-international-institute-of-information-technology-hyderabad",
+      "institutionName": "International Institute of Information Technology Hyderabad",
+      "label": "Hyderabad",
+      "labelZh": "海得拉巴",
+      "city": "Hyderabad",
+      "countryCode": "IN",
+      "countryLabel": "India",
+      "countryLabelZh": "印度",
+      "region": "Telangana",
+      "lat": 17.39,
+      "lon": 78.49,
+      "coordinatePrecision": "representative-city",
+      "coordinateMethod": "Manually selected approximate city-level display anchor; not geocoded research site, building address, or author whereabouts.",
+      "evidenceUrls": [
+        "https://www.iiit.ac.in/contact-us/",
+        "https://arxiv.org/html/2610.40050v1"
+      ],
+      "verifiedAt": "2026-11-01",
+      "caveat": "Public institutional affiliation geography only; no inference about author nationality or residence. Paper specifies Robotics Research Center, IIIT Hyderabad; official institution contact confirms Hyderabad."
+    },
+    "pending-university-of-tartu": {
+      "id": "pending-university-of-tartu",
+      "institutionId": "pending-university-of-tartu",
+      "institutionName": "University of Tartu",
+      "label": "Tartu",
+      "labelZh": "塔尔图",
+      "city": "Tartu",
+      "countryCode": "EE",
+      "countryLabel": "Estonia",
+      "countryLabelZh": "爱沙尼亚",
+      "region": "Tartu County",
+      "lat": 58.38,
+      "lon": 26.73,
+      "coordinatePrecision": "representative-city",
+      "coordinateMethod": "Manually selected approximate city-level display anchor; not geocoded research site, building address, or author whereabouts.",
+      "evidenceUrls": [
+        "https://adl.cs.ut.ee/discover/team",
+        "https://arxiv.org/html/2610.40050v1"
+      ],
+      "verifiedAt": "2026-11-01",
+      "caveat": "Public institutional affiliation geography only; no inference about author nationality or residence. Paper coauthor Arun Kumar Singh appears on official lab team page with Tartu contact address."
+    },
+    "pending-king-s-college-london": {
+      "id": "pending-king-s-college-london",
+      "institutionId": "pending-king-s-college-london",
+      "institutionName": "King’s College London",
+      "label": "London",
+      "labelZh": "伦敦",
+      "city": "London",
+      "countryCode": "GB",
+      "countryLabel": "United Kingdom",
+      "countryLabelZh": "英国",
+      "region": "England",
+      "lat": 51.51,
+      "lon": -0.13,
+      "coordinatePrecision": "representative-city",
+      "coordinateMethod": "Manually selected approximate city-level display anchor; not geocoded research site, building address, or author whereabouts.",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2610.39998v1"
+      ],
+      "verifiedAt": "2026-11-01",
+      "caveat": "Public institutional affiliation geography only; no inference about author nationality or residence. London explicitly stated for all King’s College affiliations."
+    },
+    "pending-the-hong-kong-university-of-science-and-technology": {
+      "id": "pending-the-hong-kong-university-of-science-and-technology",
+      "institutionId": "pending-the-hong-kong-university-of-science-and-technology",
+      "institutionName": "The Hong Kong University of Science and Technology",
+      "label": "Hong Kong",
+      "labelZh": "香港",
+      "city": "Hong Kong",
+      "countryCode": "CN",
+      "countryLabel": "China",
+      "countryLabelZh": "中国",
+      "region": "Hong Kong",
+      "lat": 22.32,
+      "lon": 114.17,
+      "coordinatePrecision": "representative-city",
+      "coordinateMethod": "Manually selected approximate city-level display anchor; not geocoded research site, building address, or author whereabouts.",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2610.39998v1"
+      ],
+      "verifiedAt": "2026-11-01",
+      "caveat": "Public institutional affiliation geography only; no inference about author nationality or residence. Paper explicitly states Hong Kong, China; this is not HKUST Guangzhou."
+    },
+    "pending-university-of-massachusetts-amherst": {
+      "id": "pending-university-of-massachusetts-amherst",
+      "institutionId": "pending-university-of-massachusetts-amherst",
+      "institutionName": "University of Massachusetts Amherst",
+      "label": "Amherst",
+      "labelZh": "阿默斯特",
+      "city": "Amherst",
+      "countryCode": "US",
+      "countryLabel": "United States",
+      "countryLabelZh": "美国",
+      "region": "Massachusetts",
+      "lat": 42.38,
+      "lon": -72.52,
+      "coordinatePrecision": "representative-city",
+      "coordinateMethod": "Manually selected approximate city-level display anchor; not geocoded research site, building address, or author whereabouts.",
+      "evidenceUrls": [
+        "https://www.vldb.org/pvldb/vol19/p4670-makhija.pdf"
+      ],
+      "verifiedAt": "2026-11-01",
+      "caveat": "Public institutional affiliation geography only; no inference about author nationality or residence. University of Massachusetts Amherst campus explicitly named in paper."
+    },
+    "pending-the-university-of-texas-at-austin": {
+      "id": "pending-the-university-of-texas-at-austin",
+      "institutionId": "pending-the-university-of-texas-at-austin",
+      "institutionName": "The University of Texas at Austin",
+      "label": "Austin",
+      "labelZh": "奥斯汀",
+      "city": "Austin",
+      "countryCode": "US",
+      "countryLabel": "United States",
+      "countryLabelZh": "美国",
+      "region": "Texas",
+      "lat": 30.27,
+      "lon": -97.74,
+      "coordinatePrecision": "representative-city",
+      "coordinateMethod": "Manually selected approximate city-level display anchor; not geocoded research site, building address, or author whereabouts.",
+      "evidenceUrls": [
+        "https://www.cs.utexas.edu/~yukez/documents/yukez.pdf",
+        "https://arxiv.org/html/2610.39429v1"
+      ],
+      "verifiedAt": "2026-11-01",
+      "caveat": "Public institutional affiliation geography only; no inference about author nationality or residence. Austin campus explicitly named in paper and corroborated by coauthor university-hosted CV address."
+    },
+    "pending-carnegie-mellon-university": {
+      "id": "pending-carnegie-mellon-university",
+      "institutionId": "pending-carnegie-mellon-university",
+      "institutionName": "Carnegie Mellon University",
+      "label": "Pittsburgh",
+      "labelZh": "匹兹堡",
+      "city": "Pittsburgh",
+      "countryCode": "US",
+      "countryLabel": "United States",
+      "countryLabelZh": "美国",
+      "region": "Pennsylvania",
+      "lat": 40.44,
+      "lon": -79.99,
+      "coordinatePrecision": "representative-city",
+      "coordinateMethod": "Manually selected approximate city-level display anchor; not geocoded research site, building address, or author whereabouts.",
+      "evidenceUrls": [
+        "https://www.lti.cs.cmu.edu/people/faculty/welleck-sean.html",
+        "https://arxiv.org/html/2610.40565v1"
+      ],
+      "verifiedAt": "2026-11-01",
+      "caveat": "Public institutional affiliation geography only; no inference about author nationality or residence. Official coauthor LTI page identifies Pittsburgh campus address."
+    },
+    "pending-vilnius-university": {
+      "id": "pending-vilnius-university",
+      "institutionId": "pending-vilnius-university",
+      "institutionName": "Vilnius University",
+      "label": "Kaunas",
+      "labelZh": "考纳斯",
+      "city": "Kaunas",
+      "countryCode": "LT",
+      "countryLabel": "Lithuania",
+      "countryLabelZh": "立陶宛",
+      "region": "Kaunas County",
+      "lat": 54.9,
+      "lon": 23.9,
+      "coordinatePrecision": "representative-city",
+      "coordinateMethod": "Manually selected approximate city-level display anchor; not geocoded research site, building address, or author whereabouts.",
+      "evidenceUrls": [
+        "https://cyberphish.knf.vu.lt/en/page/contact/6",
+        "https://arxiv.org/html/2610.39327v1"
+      ],
+      "verifiedAt": "2026-11-01",
+      "caveat": "Public institutional affiliation geography only; no inference about author nationality or residence. Paper explicitly specifies Kaunas Faculty; official faculty contact confirms Kaunas. NEVER infer Vilnius from university name or autoapply Kaunas to generic future affiliations."
+    },
+    "pending-kent-state-university": {
+      "id": "pending-kent-state-university",
+      "institutionId": "pending-kent-state-university",
+      "institutionName": "Kent State University",
+      "label": "Kent",
+      "labelZh": "肯特",
+      "city": "Kent",
+      "countryCode": "US",
+      "countryLabel": "United States",
+      "countryLabelZh": "美国",
+      "region": "Ohio",
+      "lat": 41.15,
+      "lon": -81.36,
+      "coordinatePrecision": "representative-city",
+      "coordinateMethod": "Manually selected approximate city-level display anchor; not geocoded research site, building address, or author whereabouts.",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2610.39327v1"
+      ],
+      "verifiedAt": "2026-11-01",
+      "caveat": "Public institutional affiliation geography only; no inference about author nationality or residence. Paper explicitly states Kent, OH 44242 for Advanced Telerobotics Research Lab."
     }
   },
   "papers": {
@@ -463,6 +766,162 @@
       "profiles": [
         "lv"
       ]
+    },
+    "arxiv-2610-40431": {
+      "locationIds": [
+        "pending-mitsubishi-electric-research-laboratories",
+        "arizona-state"
+      ],
+      "unresolvedInstitutionIds": [],
+      "evidenceUrls": [
+        "https://arxiv.org/html/2610.40431v1"
+      ],
+      "verifiedAt": "2026-11-01",
+      "pushDates": [
+        "2026-11-01"
+      ],
+      "profiles": [
+        "xun"
+      ]
+    },
+    "doi-74a62a3b35ce09b76987": {
+      "locationIds": [
+        "northeastern",
+        "pending-university-of-massachusetts-amherst"
+      ],
+      "unresolvedInstitutionIds": [],
+      "evidenceUrls": [
+        "https://www.vldb.org/pvldb/vol19/p4670-makhija.pdf"
+      ],
+      "verifiedAt": "2026-11-01",
+      "pushDates": [
+        "2026-11-01"
+      ],
+      "profiles": [
+        "li"
+      ]
+    },
+    "arxiv-2610-40646": {
+      "locationIds": [
+        "pending-university-of-washington"
+      ],
+      "unresolvedInstitutionIds": [],
+      "evidenceUrls": [
+        "https://arxiv.org/html/2610.40646v1"
+      ],
+      "verifiedAt": "2026-11-01",
+      "pushDates": [
+        "2026-11-01"
+      ],
+      "profiles": [
+        "xun"
+      ]
+    },
+    "arxiv-2610-40559": {
+      "locationIds": [
+        "pending-university-of-zaragoza",
+        "pending-university-of-bologna",
+        "pending-clermont-auvergne-inp"
+      ],
+      "unresolvedInstitutionIds": [],
+      "evidenceUrls": [
+        "https://arxiv.org/html/2610.40559v1"
+      ],
+      "verifiedAt": "2026-11-01",
+      "pushDates": [
+        "2026-11-01"
+      ],
+      "profiles": [
+        "xun"
+      ]
+    },
+    "arxiv-2610-40050": {
+      "locationIds": [
+        "pending-international-institute-of-information-technology-hyderabad",
+        "pending-university-of-tartu"
+      ],
+      "unresolvedInstitutionIds": [
+        "pending-inria",
+        "pending-universit-de-lorraine"
+      ],
+      "evidenceUrls": [
+        "https://arxiv.org/html/2610.40050v1"
+      ],
+      "verifiedAt": "2026-11-01",
+      "pushDates": [
+        "2026-11-01"
+      ],
+      "profiles": [
+        "xun"
+      ]
+    },
+    "arxiv-2610-39998": {
+      "locationIds": [
+        "pending-king-s-college-london",
+        "pending-the-hong-kong-university-of-science-and-technology"
+      ],
+      "unresolvedInstitutionIds": [],
+      "evidenceUrls": [
+        "https://arxiv.org/html/2610.39998v1"
+      ],
+      "verifiedAt": "2026-11-01",
+      "pushDates": [
+        "2026-11-01"
+      ],
+      "profiles": [
+        "xun"
+      ]
+    },
+    "arxiv-2610-39429": {
+      "locationIds": [
+        "pending-the-university-of-texas-at-austin"
+      ],
+      "unresolvedInstitutionIds": [
+        "pending-nvidia"
+      ],
+      "evidenceUrls": [
+        "https://arxiv.org/html/2610.39429v1"
+      ],
+      "verifiedAt": "2026-11-01",
+      "pushDates": [
+        "2026-11-01"
+      ],
+      "profiles": [
+        "lv"
+      ]
+    },
+    "arxiv-2610-40565": {
+      "locationIds": [
+        "pending-carnegie-mellon-university"
+      ],
+      "unresolvedInstitutionIds": [],
+      "evidenceUrls": [
+        "https://arxiv.org/html/2610.40565v1"
+      ],
+      "verifiedAt": "2026-11-01",
+      "pushDates": [
+        "2026-11-01"
+      ],
+      "profiles": [
+        "lv"
+      ]
+    },
+    "arxiv-2610-39327": {
+      "locationIds": [
+        "pending-vilnius-university",
+        "pending-kent-state-university"
+      ],
+      "unresolvedInstitutionIds": [],
+      "evidenceUrls": [
+        "https://arxiv.org/html/2610.39327v1"
+      ],
+      "verifiedAt": "2026-11-01",
+      "pushDates": [
+        "2026-11-01"
+      ],
+      "profiles": [
+        "lv"
+      ]
     }
   },
   "unresolvedInstitutions": {
@@ -481,6 +940,138 @@
         "https://arxiv.org/html/2610.37550",
         "https://cifar.ca/wp-content/uploads/2020/11/AICan-2020-CIFAR-Pan-Canadian-AI-Strategy-Impact-Report.pdf"
       ]
+    },
+    "pending-nvidia": {
+      "institutionId": "pending-nvidia",
+      "reason": "Paper names institution without research office/campus city. Multiple sites exist; no HQ or generic institution-name geocode inferred.",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2610.39429v1"
+      ]
+    },
+    "pending-inria": {
+      "institutionId": "pending-inria",
+      "reason": "Paper names institution without research office/campus city. Multiple sites exist; no HQ or generic institution-name geocode inferred. HUCEBOT team page links coauthor to Lorraine centre but lists appointment ending September 2026, before this October paper; precise paper-era campus not independently established. Remains unresolved conservatively.",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2610.40050v1",
+        "https://members.loria.fr/SIvaldi/equipe/",
+        "https://www.univ-lorraine.fr/contact/"
+      ]
+    },
+    "pending-universit-de-lorraine": {
+      "institutionId": "pending-universit-de-lorraine",
+      "reason": "Paper names institution without research office/campus city. Multiple sites exist; no HQ or generic institution-name geocode inferred. HUCEBOT team page links coauthor to Lorraine centre but lists appointment ending September 2026, before this October paper; precise paper-era campus not independently established. Remains unresolved conservatively.",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2610.40050v1",
+        "https://members.loria.fr/SIvaldi/equipe/",
+        "https://www.univ-lorraine.fr/contact/"
+      ]
+    },
+    "pending-vilnius-university": {
+      "institutionId": "pending-vilnius-university",
+      "reason": "Generic institution-wide future mapping is ambiguous; current paper has explicit campus-specific verified mapping only. Public institutional affiliation geography only; no inference about author nationality or residence. Paper explicitly specifies Kaunas Faculty; official faculty contact confirms Kaunas. NEVER infer Vilnius from university name or autoapply Kaunas to generic future affiliations.",
+      "evidenceUrls": [
+        "https://cyberphish.knf.vu.lt/en/page/contact/6",
+        "https://arxiv.org/html/2610.39327v1"
+      ]
+    },
+    "pending-clermont-auvergne-inp": {
+      "institutionId": "pending-clermont-auvergne-inp",
+      "reason": "Generic institution-wide future mapping is ambiguous; current paper has explicit campus-specific verified mapping only. Public institutional affiliation geography only; no inference about author nationality or residence. Paper specifies Institut Pascal; official laboratory address is Aubière, not an assumed Clermont-Ferrand city centre.",
+      "evidenceUrls": [
+        "https://www.uca.fr/institut-sciences-de-la-vie-sante-agronomie-environnement/institut-pascal",
+        "https://arxiv.org/html/2610.40559v1"
+      ]
+    },
+    "pending-university-of-washington": {
+      "reason": "本期地点已按具体论文署名、院系或作者官方地址核验；泛机构名称可能跨校区，后续论文须另行核验具体地点，不自动沿用。",
+      "evidenceUrls": [
+        "https://people.ece.uw.edu/luo_yiyue/index.html",
+        "https://arxiv.org/html/2610.40646v1"
+      ],
+      "verifiedAt": "2026-11-01"
+    },
+    "pending-university-of-zaragoza": {
+      "reason": "本期地点已按具体论文署名、院系或作者官方地址核验；泛机构名称可能跨校区，后续论文须另行核验具体地点，不自动沿用。",
+      "evidenceUrls": [
+        "https://i3a.es/es/equipo-directivo",
+        "https://arxiv.org/html/2610.40559v1"
+      ],
+      "verifiedAt": "2026-11-01"
+    },
+    "pending-university-of-bologna": {
+      "reason": "本期地点已按具体论文署名、院系或作者官方地址核验；泛机构名称可能跨校区，后续论文须另行核验具体地点，不自动沿用。",
+      "evidenceUrls": [
+        "https://www.unibo.it/sitoweb/gianluca.palli",
+        "https://arxiv.org/html/2610.40559v1"
+      ],
+      "verifiedAt": "2026-11-01"
+    },
+    "pending-mitsubishi-electric-research-laboratories": {
+      "reason": "本期地点已按具体论文署名、院系或作者官方地址核验；泛机构名称可能跨校区，后续论文须另行核验具体地点，不自动沿用。",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2610.40431v1"
+      ],
+      "verifiedAt": "2026-11-01"
+    },
+    "pending-international-institute-of-information-technology-hyderabad": {
+      "reason": "本期地点已按具体论文署名、院系或作者官方地址核验；泛机构名称可能跨校区，后续论文须另行核验具体地点，不自动沿用。",
+      "evidenceUrls": [
+        "https://www.iiit.ac.in/contact-us/",
+        "https://arxiv.org/html/2610.40050v1"
+      ],
+      "verifiedAt": "2026-11-01"
+    },
+    "pending-university-of-tartu": {
+      "reason": "本期地点已按具体论文署名、院系或作者官方地址核验；泛机构名称可能跨校区，后续论文须另行核验具体地点，不自动沿用。",
+      "evidenceUrls": [
+        "https://adl.cs.ut.ee/discover/team",
+        "https://arxiv.org/html/2610.40050v1"
+      ],
+      "verifiedAt": "2026-11-01"
+    },
+    "pending-king-s-college-london": {
+      "reason": "本期地点已按具体论文署名、院系或作者官方地址核验；泛机构名称可能跨校区，后续论文须另行核验具体地点，不自动沿用。",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2610.39998v1"
+      ],
+      "verifiedAt": "2026-11-01"
+    },
+    "pending-the-hong-kong-university-of-science-and-technology": {
+      "reason": "本期地点已按具体论文署名、院系或作者官方地址核验；泛机构名称可能跨校区，后续论文须另行核验具体地点，不自动沿用。",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2610.39998v1"
+      ],
+      "verifiedAt": "2026-11-01"
+    },
+    "pending-university-of-massachusetts-amherst": {
+      "reason": "本期地点已按具体论文署名、院系或作者官方地址核验；泛机构名称可能跨校区，后续论文须另行核验具体地点，不自动沿用。",
+      "evidenceUrls": [
+        "https://www.vldb.org/pvldb/vol19/p4670-makhija.pdf"
+      ],
+      "verifiedAt": "2026-11-01"
+    },
+    "pending-the-university-of-texas-at-austin": {
+      "reason": "本期地点已按具体论文署名、院系或作者官方地址核验；泛机构名称可能跨校区，后续论文须另行核验具体地点，不自动沿用。",
+      "evidenceUrls": [
+        "https://www.cs.utexas.edu/~yukez/documents/yukez.pdf",
+        "https://arxiv.org/html/2610.39429v1"
+      ],
+      "verifiedAt": "2026-11-01"
+    },
+    "pending-carnegie-mellon-university": {
+      "reason": "本期地点已按具体论文署名、院系或作者官方地址核验；泛机构名称可能跨校区，后续论文须另行核验具体地点，不自动沿用。",
+      "evidenceUrls": [
+        "https://www.lti.cs.cmu.edu/people/faculty/welleck-sean.html",
+        "https://arxiv.org/html/2610.40565v1"
+      ],
+      "verifiedAt": "2026-11-01"
+    },
+    "pending-kent-state-university": {
+      "reason": "本期地点已按具体论文署名、院系或作者官方地址核验；泛机构名称可能跨校区，后续论文须另行核验具体地点，不自动沿用。",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2610.39327v1"
+      ],
+      "verifiedAt": "2026-11-01"
     }
   },
   "coverage": {

@@ -382,6 +382,193 @@
         "altEn": "Official mark of Enchanted Tools"
       },
       "note": "已核验官方来源标识；仅用于识别论文署名机构，不代表合作或背书。"
+    },
+    {
+      "id": "pending-university-of-washington",
+      "officialName": "University of Washington",
+      "aliases": [],
+      "institutionType": "university",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "新机构等待官方标识与使用条件核验；不接受未经核验的输入图片。"
+    },
+    {
+      "id": "pending-university-of-zaragoza",
+      "officialName": "University of Zaragoza",
+      "aliases": [],
+      "institutionType": "university",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "新机构等待官方标识与使用条件核验；不接受未经核验的输入图片。"
+    },
+    {
+      "id": "pending-university-of-bologna",
+      "officialName": "University of Bologna",
+      "aliases": [],
+      "institutionType": "university",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "新机构等待官方标识与使用条件核验；不接受未经核验的输入图片。"
+    },
+    {
+      "id": "pending-clermont-auvergne-inp",
+      "officialName": "Clermont Auvergne INP",
+      "aliases": [],
+      "institutionType": "university",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "新机构等待官方标识与使用条件核验；不接受未经核验的输入图片。"
+    },
+    {
+      "id": "pending-mitsubishi-electric-research-laboratories",
+      "officialName": "Mitsubishi Electric Research Laboratories",
+      "aliases": [],
+      "institutionType": "research-institute",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "新机构等待官方标识与使用条件核验；不接受未经核验的输入图片。"
+    },
+    {
+      "id": "pending-international-institute-of-information-technology-hyderabad",
+      "officialName": "International Institute of Information Technology Hyderabad",
+      "aliases": [],
+      "institutionType": "university",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "新机构等待官方标识与使用条件核验；不接受未经核验的输入图片。"
+    },
+    {
+      "id": "pending-university-of-tartu",
+      "officialName": "University of Tartu",
+      "aliases": [],
+      "institutionType": "university",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "新机构等待官方标识与使用条件核验；不接受未经核验的输入图片。"
+    },
+    {
+      "id": "pending-inria",
+      "officialName": "Inria",
+      "aliases": [],
+      "institutionType": "research-institute",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "新机构等待官方标识与使用条件核验；不接受未经核验的输入图片。"
+    },
+    {
+      "id": "pending-universit-de-lorraine",
+      "officialName": "Université de Lorraine",
+      "aliases": [],
+      "institutionType": "university",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "新机构等待官方标识与使用条件核验；不接受未经核验的输入图片。"
+    },
+    {
+      "id": "pending-king-s-college-london",
+      "officialName": "King’s College London",
+      "aliases": [],
+      "institutionType": "university",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "新机构等待官方标识与使用条件核验；不接受未经核验的输入图片。"
+    },
+    {
+      "id": "pending-the-hong-kong-university-of-science-and-technology",
+      "officialName": "The Hong Kong University of Science and Technology",
+      "aliases": [],
+      "institutionType": "university",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "新机构等待官方标识与使用条件核验；不接受未经核验的输入图片。"
+    },
+    {
+      "id": "pending-university-of-massachusetts-amherst",
+      "officialName": "University of Massachusetts Amherst",
+      "aliases": [],
+      "institutionType": "university",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "官方素材库已定位，但品牌页和图标下载返回 HTTP 403；未绕过访问限制，也未使用 UMass 系统或其他校区标识，因此仅显示文字名称。 官方依据：https://www.umass.edu/brand/assets"
+    },
+    {
+      "id": "pending-nvidia",
+      "officialName": "NVIDIA",
+      "aliases": [],
+      "institutionType": "company",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "NVIDIA 官方法律声明要求事先许可才可公开使用商标；未获得许可，因此仅显示文字名称。 官方依据：https://www.nvidia.com/en-us/about-nvidia/legal-info.html"
+    },
+    {
+      "id": "pending-the-university-of-texas-at-austin",
+      "officialName": "The University of Texas at Austin",
+      "aliases": [],
+      "institutionType": "university",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "官方紧凑盾徽/favicon已确认；官方校徽和其他支持标识要求事先书面许可，未获展示授权，因此仅显示文字名称。 官方依据：https://umac.utexas.edu/brand-center/supporting-marks/"
+    },
+    {
+      "id": "pending-carnegie-mellon-university",
+      "officialName": "Carnegie Mellon University",
+      "aliases": [],
+      "institutionType": "university",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "官方 CMU 字母标保留给与大学紧密相关的社区；与其他文字或图形相邻组合需书面许可，且要求安全空间。未核实适用于本站卡片的展示条件，因此仅显示文字名称。 官方依据：https://brand.cmu.edu/visual-identity/carnegie-mellon-trademarks/lettermark"
+    },
+    {
+      "id": "pending-vilnius-university",
+      "officialName": "Vilnius University",
+      "aliases": [],
+      "institutionType": "university",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "官方主页完整透明徽章已确认；校方名称及标识授予规则列有书面申请和合同程序，未核实本站展示授权，因此仅显示文字名称。 官方依据：https://www.vu.lt/site_files/Vardo_ir_%C5%BEenklo_suteikimo_ir_naudojimo_taisykl%C4%97s.pdf"
+    },
+    {
+      "id": "pending-kent-state-university",
+      "officialName": "Kent State University",
+      "aliases": [],
+      "institutionType": "university",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "官方独立 K 身份符号已下载核验；品牌指引限定装饰用途，不得替代官方标志，未核实本卡片用途的许可，因此仅显示文字名称。 官方依据：https://www.kent.edu/brand/logos"
     }
   ]
 }

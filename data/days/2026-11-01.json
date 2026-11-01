@@ -1,0 +1,1580 @@
+{
+  "version": 2,
+  "date": "2026-11-01",
+  "title": "2026-11-01 零域 · 迅5 / 李1 / 驴3",
+  "demo": false,
+  "timezone": "Asia/Shanghai",
+  "issueNote": "本期9篇：迅5、李1、驴3。8篇为10月29日发布的近期预印本；GDPView为较早2026年独立演示论文首次发现，是昨日广义删除传播算法论文的交互系统后续而非同文重推。本期周日无经典。正文重点核读限于记录所列章节，未逐式复核全部证明、运行代码或独立复现实验；检索未穷尽全部来源。",
+  "coverage": {
+    "checkedSources": [
+      "arXiv cs.RO/recent：10月30日批次前50项标题筛查，逐篇核验5篇摘要和重点全文。",
+      "NVIDIA Robotics Research官方入口、robotics研究列表和Seattle Robotics Lab页面用于交叉检索，未直接入选记录。",
+      "作者DRIP项目页及代码仓库、形状伺服教程代码仓库。",
+      "仓库digest-rules、source-registry、DIGEST-INTERFACE、CARD-ASSETS、day-v2 schema及data/registry核对。",
+      "GitHub：最新digest-rules、profile-watchlists、DIGEST-INTERFACE、CARD-ASSETS、day-v2 schema、registry、index、2026-10-31日报、institutions。",
+      "arXiv cs.DB recent：检查10月23–30日列表大部分标题及2610.36418、2610.37237摘要；cs.LO recent检查首批约40条标题。https://arxiv.org/list/cs.DB/recent；https://arxiv.org/list/cs.LO/recent",
+      "Ontop研究入口、Guohui Xiao主页、Diego Calvanese主页及其2026出版检索结果：https://ontop-vkg.org/research/；https://ghxiao.org/；https://www.inf.unibz.it/~calvanese/",
+      "VLDB官方GDPView四页原文、2026演示日程、Gatterbauer作者出版页、项目页及gdp-demo README：https://www.vldb.org/pvldb/vol19/p4670-makhija.pdf；https://vldb.org/2026/demonstrations.html；https://gatterbauer.name/publications；https://github.com/northeastern-datalab/gdp-demo",
+      "检索并审阅TODS 2026 Finding Smallest Witnesses for Conjunctive Queries出版页面，作为较早理论备选，未凑数收录。https://doi.org/10.1145/3786785",
+      "arXiv cs.RO recent：2026-10-30批次标题筛选",
+      "三篇论文的arXiv摘要、HTML及ScheduleGen/SONIC-K1 PDF署名页",
+      "ScheduleGen与SONIC-K1作者项目页",
+      "gym-anything/robotics与Kyk0/sonic-k1代码仓库；SONIC-K1权重页",
+      "仓库接口、素材契约、规则、schema、身份库与机构库"
+    ],
+    "limitations": [
+      "未完成全部会议、期刊及70项来源目录的逐项检查。",
+      "当前arXiv近期入口最新批次为10月30日，未显示10月31日新增批次。",
+      "全文阅读为重点核读，未复现实验或运行代码。",
+      "若主图未打包必须保留null，不生成或猜测本地哈希；机构仅依据论文署名，标识由既有库核验解析。",
+      "SwapBot和教程交互演示网站重定向后工具不可访问；资源字段保守留空。",
+      "未逐一覆盖全部会议、期刊与arXiv分类；cs.LO未翻完全部73条，cs.DB尾部少量条目未完整返回；不能宣称全源无新文。",
+      "arXiv:2610.36418为近期多关系约束执行候选，仅核读摘要，尚未检查正文的事务/并发与实验边界，本次不作完整推荐；2610.37237主要为GraphRAG解释，不是固定VKG实例更新。",
+      "GDPView正式原文确认2026卷期及DOI，但未核实精确发表日，publicationDate=null；按older-discovery处理。",
+      "未运行代码或播放视频，研究阶段未打包主图，发布准备阶段已完成；不存在性能复现或整站验证结论。",
+      "不是CoRL/RSS/ICRA/IROS/RA-L/T-RO和所有指定团队的全覆盖检索。",
+      "仅研究材料核读，未执行代码或复现实验；主图素材待打包校验。",
+      "Gym-Anything项目网页访问失败；ScheduleGen代码未确认；均如实留空。"
+    ]
+  },
+  "papers": [
+    {
+      "id": "arxiv-2610-40646",
+      "title": "SwapBot：借助可更换工具与触觉感知实现工具中心机器人操作",
+      "titleEn": "SwapBot: Tool-Centric Robot Manipulation via Interchangeable End-Effectors and Tactile Sensing",
+      "authors": [
+        "Yunchu Zhang",
+        "Ray Song",
+        "Junhan Jiao",
+        "Liyiming Ke",
+        "Yuchen Yang",
+        "Ruihan Gao",
+        "Emma Romig",
+        "Siddhartha Srinivasa",
+        "Yiyue Luo"
+      ],
+      "year": 2026,
+      "venue": "arXiv 预印本",
+      "tags": [
+        "触觉操作",
+        "工具切换",
+        "模仿学习"
+      ],
+      "summary": "日常烹饪要求机器人切换工具并感知接触。SwapBot把统一耦合接口、带触觉的工具适配器、遥操作和分层模仿学习连成系统，而非只展示机械结构。作者在十二人遥操作研究及真实豆腐操作中评估系统，报告触觉输入改善策略成功率。阅读时应区分定量豆腐实验与沙拉、翻肉等定性演示，不能据此推断通用厨房能力。",
+      "summaryEn": "Everyday cooking requires robots to switch tools and sense contact. SwapBot combines a common coupling interface, tactile tool adapters, teleoperation, and hierarchical imitation learning rather than presenting mechanics alone. The authors evaluate it in a twelve-person teleoperation study and real tofu manipulation, reporting improved policy success with tactile input. Distinguish quantitative tofu experiments from qualitative salad-stirring and meat-flipping demonstrations; these do not establish general kitchen competence.",
+      "whySelected": "把工具接口、接触感知与学习闭环放在同一系统中，适合判断触觉信息何时真正改变操作策略。",
+      "sources": [
+        {
+          "label": "原始论文",
+          "url": "https://arxiv.org/abs/2610.40646"
+        },
+        {
+          "label": "论文全文",
+          "url": "https://arxiv.org/html/2610.40646v1"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "把工具接口、接触感知与学习闭环放在同一系统中，适合判断触觉信息何时真正改变操作策略。",
+          "relation": "覆盖机器人触觉操作方向，非纯机械机构设计。",
+          "prerequisites": [
+            "模仿学习",
+            "机器人遥操作",
+            "触觉传感"
+          ],
+          "difficulty": "intermediate",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.40646",
+        "other": null
+      },
+      "publicationStatus": "preprint",
+      "publicationDate": "2026-10-29",
+      "discoveredDate": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "readDepth": "fulltext",
+      "paperType": "system",
+      "classic": false,
+      "novelty": "recent",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "定量策略评估集中于豆腐任务及有限工作空间；沙拉和翻肉仅为定性展示。",
+        "项目链接重定向后工具无法访问，未据此补写代码、数据或视频地址。"
+      ],
+      "assumptions": [
+        "使用作者的工具适配器、触觉传感、视觉和本体状态输入；不是任意现成工具的零适配使用。"
+      ],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2610.40646",
+          "claim": "核验完整作者、标题、v1提交日期2026-10-29；未发现正式录用或出版声明，按预印本记录。",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.40646v1",
+          "claim": "核读II节系统及III节实验：12名参与者；分工具策略对比；署名机构University of Washington；Fig.2为系统概览。",
+          "checkedAt": "2026-11-01"
+        }
+      ],
+      "researchNotes": [
+        "按medium操作意图检索和筛选，不声称改变模型设置。",
+        "新近论文；本次在10月30日公告批次中补查发现，未出现在10月31日已推送身份库。",
+        "全文级重点核读，并非逐式复核整篇；没有运行代码或复现实验。",
+        "重点核读II节系统组成、III-B用户研究、III-C策略实验与图7说明。",
+        "原项目链接https://personalrobotics.github.io/SwapBot/重定向访问失败，links.project保守留空。",
+        "图2来源https://arxiv.org/html/2610.40646v1/figures/System.jpg；arXiv非独占许可并非通用开放许可。"
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/arxiv-2610-40646-figure2.webp",
+          "sha256": "3860a42b36646b85fa54f5a10c8be0cf84aa2b4121d9629946674eacbfbe1648",
+          "width": 1600,
+          "height": 546,
+          "sourceUrl": "https://arxiv.org/html/2610.40646v1/figures/System.jpg",
+          "evidenceUrl": "https://arxiv.org/html/2610.40646v1",
+          "verifiedAt": "2026-11-01",
+          "credit": "SwapBot authors · Figure 2",
+          "rights": "版权归原权利人；arXiv非独占发布许可不是通用开放复用许可。完整原图作为署名论文缩略图。 发布素材仅等比例缩小及WebP编码；未裁剪内容或改动图例。",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "light",
+          "altZh": "SwapBot工具坞、可换末端执行器和触觉传感装置",
+          "altEn": "SwapBot tool dock, interchangeable end-effectors and tactile sensing setup"
+        },
+        "figureNote": "已下载原始论文素材并检查完整内容、比例、字节哈希与尺寸；未使用AI生成或无关图片。",
+        "institutions": [
+          {
+            "name": "University of Washington",
+            "logo": null,
+            "authorNames": [
+              "Yunchu Zhang",
+              "Ray Song",
+              "Junhan Jiao",
+              "Liyiming Ke",
+              "Yuchen Yang",
+              "Ruihan Gao",
+              "Emma Romig",
+              "Siddhartha Srinivasa",
+              "Yiyue Luo"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.40646v1",
+                "claim": "论文首页明确列出该机构及对应作者。",
+                "checkedAt": "2026-11-01"
+              }
+            ],
+            "note": "论文署名已核验；标识由机构库解析，未核验时仅文字展示。",
+            "institutionType": "university",
+            "markType": "none",
+            "institutionId": "pending-university-of-washington"
+          }
+        ],
+        "authors": []
+      }
+    },
+    {
+      "id": "arxiv-2610-40559",
+      "title": "可变形物体形状伺服教程（一）：基础",
+      "titleEn": "A Tutorial on Shape Servoing of Deformable Objects-Part I: Fundamentals",
+      "authors": [
+        "Ignacio Cuiral-Zueco",
+        "Alessio Caporali",
+        "Miguel Aranda",
+        "Gianluca Palli",
+        "Gonzalo López-Nicolás",
+        "Youcef Mezouar"
+      ],
+      "year": 2026,
+      "venue": "arXiv 预印本",
+      "tags": [
+        "形状伺服",
+        "可变形物体",
+        "视觉反馈"
+      ],
+      "summary": "如何让机械臂把软物体调整到目标形状？这篇教程从形状特征出发，以局部变形雅可比连接机器人运动与视觉变化，串起离线估计、在线更新和反馈控制。双臂操纵平面弹性杆的仿真贯穿全文，并讨论局部稳定性与目标不可达问题。它适合建立控制直觉，但依赖准静态、可测形状与连续接触条件，不是动态布料操作的通用解法。",
+      "summaryEn": "How can robot arms shape a deformable object toward a target? This tutorial starts with shape features and uses a local deformation Jacobian to connect robot motion to visual changes, combining offline estimation, online updates, and feedback control. A simulated planar elastic rod manipulated by two arms illustrates local stability and unreachable targets. It builds control intuition, but assumes quasistatic motion, measurable shape, and continuous contact conditions; it is not a general solution to dynamic cloth manipulation.",
+      "whySelected": "有完整闭环和可核验教程代码，适合补齐可变形物体操作中模型估计与反馈控制的基础。",
+      "sources": [
+        {
+          "label": "原始论文",
+          "url": "https://arxiv.org/abs/2610.40559"
+        },
+        {
+          "label": "论文全文",
+          "url": "https://arxiv.org/html/2610.40559v1"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "有完整闭环和可核验教程代码，适合补齐可变形物体操作中模型估计与反馈控制的基础。",
+          "relation": "覆盖机器人形状伺服方向，非纯机械机构设计。",
+          "prerequisites": [
+            "线性代数与伪逆",
+            "雅可比矩阵",
+            "基础反馈控制"
+          ],
+          "difficulty": "intermediate",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.40559",
+        "other": null
+      },
+      "publicationStatus": "preprint",
+      "publicationDate": "2026-10-29",
+      "discoveredDate": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "readDepth": "fulltext",
+      "paperType": "survey",
+      "classic": false,
+      "novelty": "recent",
+      "updateNote": "",
+      "links": {
+        "code": "https://github.com/nachocz/tutorial_on_shape_servoing_of_deformable_objects",
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "局部收敛讨论不保证任意目标形状全局可达。",
+        "示例为平面弹性杆仿真；未验证真实部署。",
+        "交互演示入口发生无法访问的重定向，未确认在线运行。"
+      ],
+      "assumptions": [
+        "准静态速度级操作，惯性效应可忽略。",
+        "任务相关形状可测；运动到形变的关系平滑，换抓或碰撞可能要求重新估计。"
+      ],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2610.40559",
+          "claim": "核验完整作者、标题、v1提交日期2026-10-29；未发现正式录用或出版声明，按预印本记录。",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.40559v1",
+          "claim": "核读I-C适用假设、II至IV闭环与算法1；首页声明仅提交IEEE待审，不能写成已录用。",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "url": "https://github.com/nachocz/tutorial_on_shape_servoing_of_deformable_objects",
+          "claim": "作者代码仓库README列出Python参考实现、示例、测试和浏览器交互演示；实际未运行。",
+          "checkedAt": "2026-11-01"
+        }
+      ],
+      "researchNotes": [
+        "按medium操作意图检索和筛选，不声称改变模型设置。",
+        "新近论文；本次在10月30日公告批次中补查发现，未出现在10月31日已推送身份库。",
+        "全文级重点核读，并非逐式复核整篇；没有运行代码或复现实验。",
+        "重点核读I-C、II结构、III估计与IV-A/B闭环及可达性；未逐式复核稳定性推导。",
+        "已从原始HTML object标签核实图1来源https://arxiv.org/html/2610.40559v1/fig_setup_inkscape.svg；尚待工程打包。arXiv非独占许可不等于通用开放许可。",
+        "作者在线演示https://nachocz.github.io/tutorial_on_shape_servoing_of_deformable_objects/重定向失败，project留空。"
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/arxiv-2610-40559-figure1.webp",
+          "sha256": "d317757408d263e7bd73efeb0b85ab20b247d08f096bf454f56503dc0864977e",
+          "width": 765,
+          "height": 978,
+          "sourceUrl": "https://arxiv.org/pdf/2610.40559",
+          "evidenceUrl": "https://arxiv.org/html/2610.40559v1",
+          "verifiedAt": "2026-11-01",
+          "credit": "Cuiral-Zueco et al. · Figure 1",
+          "rights": "版权归原权利人；arXiv非独占发布许可不是开放复用许可。完整图1及图注从原PDF第1页光栅化，未改变图形内容。 发布素材仅等比例缩小及WebP编码；未裁剪内容或改动图例。",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "light",
+          "altZh": "形状伺服闭环、双臂柔性杆操作与目标形状演化",
+          "altEn": "Shape-servoing loop, dual-arm deformable-rod setup and target-shape evolution"
+        },
+        "figureNote": "已下载原始论文素材并检查完整内容、比例、字节哈希与尺寸；未使用AI生成或无关图片。",
+        "institutions": [
+          {
+            "name": "University of Zaragoza",
+            "logo": null,
+            "authorNames": [
+              "Ignacio Cuiral-Zueco",
+              "Miguel Aranda",
+              "Gonzalo López-Nicolás"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.40559v1",
+                "claim": "论文首页明确列出该机构及对应作者。",
+                "checkedAt": "2026-11-01"
+              }
+            ],
+            "note": "论文署名已核验；标识由机构库解析，未核验时仅文字展示。",
+            "institutionType": "university",
+            "markType": "none",
+            "institutionId": "pending-university-of-zaragoza"
+          },
+          {
+            "name": "University of Bologna",
+            "logo": null,
+            "authorNames": [
+              "Alessio Caporali",
+              "Gianluca Palli"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.40559v1",
+                "claim": "论文首页明确列出该机构及对应作者。",
+                "checkedAt": "2026-11-01"
+              }
+            ],
+            "note": "论文署名已核验；标识由机构库解析，未核验时仅文字展示。",
+            "institutionType": "university",
+            "markType": "none",
+            "institutionId": "pending-university-of-bologna"
+          },
+          {
+            "name": "Clermont Auvergne INP",
+            "logo": null,
+            "authorNames": [
+              "Youcef Mezouar"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.40559v1",
+                "claim": "论文首页明确列出该机构及对应作者。",
+                "checkedAt": "2026-11-01"
+              }
+            ],
+            "note": "论文署名为Institut Pascal, Clermont Auvergne INP；不推断其他合作单位。",
+            "institutionType": "university",
+            "markType": "none",
+            "institutionId": "pending-clermont-auvergne-inp"
+          }
+        ],
+        "authors": []
+      }
+    },
+    {
+      "id": "arxiv-2610-40431",
+      "title": "用多臂老虎机实现路径受限移动传感器的自适应搜索",
+      "titleEn": "Adaptive search with path-constrained mobile sensors using multi-arm bandits",
+      "authors": [
+        "Abraham P. Vinod",
+        "Parth K. Thaker",
+        "Gautam Dasarathy",
+        "Stefano Di Cairano"
+      ],
+      "year": 2026,
+      "venue": "arXiv 预印本",
+      "tags": [
+        "主动感知",
+        "多机器人",
+        "路径规划"
+      ],
+      "summary": "移动传感器既要从噪声观测中找到重点区域，又受电量、障碍和运动约束。本文先离线构建可行路径覆盖，再把在线路径分配写成多臂老虎机问题，以置信界决定下一轮采样。作者给出概率正确性与搜索时间界，并用数值仿真分析路径冗余和团队规模。其保证针对已知图与统计观测模型，不能直接等同于真实无人机系统的任务成功保证。",
+      "summaryEn": "Mobile sensors must locate regions of interest from noisy observations while respecting energy, obstacle, and motion constraints. The paper first constructs feasible path covers offline, then formulates online path assignment as a multi-armed bandit problem using confidence bounds to choose sampling. It provides probabilistic correctness and search-time bounds, with simulations examining path redundancy and team size. These guarantees concern a known graph and statistical observation model, not end-to-end mission success for physical drones.",
+      "whySelected": "把主动感知的统计采样需求与机器人可行路径约束连接起来，拓宽仅关注学习策略的阅读视角。",
+      "sources": [
+        {
+          "label": "原始论文",
+          "url": "https://arxiv.org/abs/2610.40431"
+        },
+        {
+          "label": "论文全文",
+          "url": "https://arxiv.org/html/2610.40431v1"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "把主动感知的统计采样需求与机器人可行路径约束连接起来，拓宽仅关注学习策略的阅读视角。",
+          "relation": "覆盖机器人主动感知方向，非纯机械机构设计。",
+          "prerequisites": [
+            "概率与置信界",
+            "多臂老虎机",
+            "图论与路径规划"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.40431",
+        "other": null
+      },
+      "publicationStatus": "preprint",
+      "publicationDate": "2026-10-29",
+      "discoveredDate": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "readDepth": "fulltext",
+      "paperType": "theory",
+      "classic": false,
+      "novelty": "recent",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "实验为数值仿真，没有据此声称真实机器人部署。",
+        "上下界适用条件需区分；正文4.3讨论特定结构条件下至对数因子的匹配，不采用摘要较强的概括。"
+      ],
+      "assumptions": [
+        "搜索环境抽象为已知有限无向图，障碍和充电站已知。",
+        "节点观测采用独立伯努利变量；传感器执行预先计算、满足电量约束的路径。"
+      ],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2610.40431",
+          "claim": "核验完整作者、标题、v1提交日期2026-10-29；未发现正式录用或出版声明，按预印本记录。",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.40431v1",
+          "claim": "核读第2节图、观测及路径覆盖定义，第4.2–4.3节上下界讨论；首页明确列出MERL与ASU署名。",
+          "checkedAt": "2026-11-01"
+        }
+      ],
+      "researchNotes": [
+        "按medium操作意图检索和筛选，不声称改变模型设置。",
+        "新近论文；本次在10月30日公告批次中补查发现，未出现在10月31日已推送身份库。",
+        "全文级重点核读，并非逐式复核整篇；没有运行代码或复现实验。",
+        "重点核读问题定义和理论保证的适用范围；未逐步验证附录证明。",
+        "图1来源https://arxiv.org/html/2610.40431v1/figures/Figure1_Illustration.png；arXiv非独占许可，不冒称开放再利用。"
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/arxiv-2610-40431-figure1.webp",
+          "sha256": "41ee51e097882c75b249b05ee60c096f324f7957ec0416cf9c009ba8b134614c",
+          "width": 1600,
+          "height": 936,
+          "sourceUrl": "https://arxiv.org/html/2610.40431v1/figures/Figure1_Illustration.png",
+          "evidenceUrl": "https://arxiv.org/html/2610.40431v1",
+          "verifiedAt": "2026-11-01",
+          "credit": "Vinod et al. · Figure 1",
+          "rights": "版权归原权利人；arXiv非独占发布许可不是开放复用许可。完整原图作为署名论文缩略图。 发布素材仅等比例缩小及WebP编码；未裁剪内容或改动图例。",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "transparent",
+          "altZh": "路径约束移动传感器的离线路径集与在线搜索分配示意",
+          "altEn": "Offline feasible path sets and online search allocation for path-constrained mobile sensors"
+        },
+        "figureNote": "已下载原始论文素材并检查完整内容、比例、字节哈希与尺寸；未使用AI生成或无关图片。",
+        "institutions": [
+          {
+            "name": "Mitsubishi Electric Research Laboratories",
+            "logo": null,
+            "authorNames": [
+              "Abraham P. Vinod",
+              "Stefano Di Cairano"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.40431v1",
+                "claim": "论文首页明确列出该机构及对应作者。",
+                "checkedAt": "2026-11-01"
+              }
+            ],
+            "note": "论文署名已核验；标识由机构库解析，未核验时仅文字展示。",
+            "institutionType": "research-institute",
+            "markType": "none",
+            "institutionId": "pending-mitsubishi-electric-research-laboratories"
+          },
+          {
+            "name": "Arizona State University",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/asu-vertical.png",
+              "sha256": "eed5fb0279cfad95f2b0b89011cc8646569abf1b098e54563f085b238ba751b4",
+              "width": 303,
+              "height": 234,
+              "sourceUrl": "https://www.asu.edu/profiles/contrib/webspark/modules/asu_brand/dist/assets/img/arizona-state-university-logo-vertical.png",
+              "evidenceUrl": "https://www.asu.edu/",
+              "verifiedAt": "2026-10-31",
+              "credit": "Arizona State University · official vertical mark",
+              "rights": "Official institutional mark; trademark/copyright retained by Arizona State University. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve the complete mark, aspect ratio and clear space. Display at least 48 CSS pixels wide.",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "altZh": "Arizona State University 官方完整竖版标志",
+              "altEn": "Official Arizona State University complete vertical mark"
+            },
+            "authorNames": [
+              "Parth K. Thaker",
+              "Gautam Dasarathy"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.40431v1",
+                "claim": "论文首页明确列出该机构及对应作者。",
+                "checkedAt": "2026-11-01"
+              }
+            ],
+            "note": "本篇署名已核验；标识复用既有机构库，既有权利边界保留。",
+            "institutionType": "university",
+            "markType": "compact-symbol",
+            "institutionId": "arizona-state"
+          }
+        ],
+        "authors": []
+      }
+    },
+    {
+      "id": "arxiv-2610-40050",
+      "title": "别冒险：面向纯激光雷达人群导航的轨迹条件分布风险",
+      "titleEn": "Don't Risk It!: Trajectory-Conditioned Distributional Risk for LiDAR-Only Crowd Navigation",
+      "authors": [
+        "Mathai Mathew Pulicken",
+        "Laksh Nanwani",
+        "Basant Sharma",
+        "Phani Teja Singamaneni",
+        "Arun Kumar Singh",
+        "K. Madhava Krishna"
+      ],
+      "year": 2026,
+      "venue": "arXiv 预印本",
+      "tags": [
+        "人群导航",
+        "风险预测",
+        "激光雷达"
+      ],
+      "summary": "在人群中导航，预测占据地图准确并不等于候选轨迹安全。DRIP直接读取激光雷达栅格历史，预测轨迹相关的最小间距分布，并用碰撞风险监督不确定性，再对采样轨迹排序。作者在最多四十五名行人的仿真及两类实机上评估，实机二十次试验成功十七次。结果值得关注，但样本有限，学习风险分数不构成形式化安全认证。",
+      "summaryEn": "Accurate occupancy prediction does not necessarily make a candidate path safe in crowds. DRIP takes LiDAR-grid histories, predicts trajectory-conditioned minimum-clearance distributions, supervises uncertainty using collision risk, and ranks sampled trajectories. The authors evaluate simulations with up to forty-five pedestrians and two physical platforms, reporting seventeen successes in twenty hardware trials. The results are promising but limited in sample size; a learned risk score is not a formal safety certification.",
+      "whySelected": "把预测不确定性直接对齐下游规划风险，并提供可核验实现，是感知—规划接口的具体案例。",
+      "sources": [
+        {
+          "label": "原始论文",
+          "url": "https://arxiv.org/abs/2610.40050"
+        },
+        {
+          "label": "论文全文",
+          "url": "https://arxiv.org/html/2610.40050v1"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "把预测不确定性直接对齐下游规划风险，并提供可核验实现，是感知—规划接口的具体案例。",
+          "relation": "覆盖机器人人群导航方向，非纯机械机构设计。",
+          "prerequisites": [
+            "占据栅格与局部规划",
+            "概率分布",
+            "深度学习基础"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.40050",
+        "other": null
+      },
+      "publicationStatus": "preprint",
+      "publicationDate": "2026-10-29",
+      "discoveredDate": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "readDepth": "fulltext",
+      "paperType": "system",
+      "classic": false,
+      "novelty": "recent",
+      "updateNote": "",
+      "links": {
+        "code": "https://github.com/dont-risk-it-planner/drip",
+        "project": "https://dont-risk-it-planner.github.io/",
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "实机仅20次室内试验；并非统计充分的部署安全证明。",
+        "DRL-VO基线使用特权行人状态，不能假定所有基线传感输入一致。",
+        "项目页仍显示Anonymous submission，署名以arXiv原文为准。"
+      ],
+      "assumptions": [
+        "依赖自运动补偿、对齐的占据栅格历史和机器人速度。",
+        "训练风险判别及采样局部规划；硬件使用适配后的二维BEV输入。"
+      ],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2610.40050",
+          "claim": "核验完整作者、标题、v1提交日期2026-10-29；未发现正式录用或出版声明，按预印本记录。",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.40050v1",
+          "claim": "核读IV方法、V-A协议与表I、V-E/F运行和硬件实验；原文声明CC BY 4.0。",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "url": "https://github.com/dont-risk-it-planner/drip",
+          "claim": "README确认论文对应实现、模型、训练、ROS规划器目录；未运行。",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "url": "https://dont-risk-it-planner.github.io/",
+          "claim": "项目页面可以读取，含方法、实验与视频展示区；不把页面安全措辞当形式证明。",
+          "checkedAt": "2026-11-01"
+        }
+      ],
+      "researchNotes": [
+        "按medium操作意图检索和筛选，不声称改变模型设置。",
+        "新近论文；本次在10月30日公告批次中补查发现，未出现在10月31日已推送身份库。",
+        "全文级重点核读，并非逐式复核整篇；没有运行代码或复现实验。",
+        "全文级重点核读方法接口、训练目标、实验对比条件及硬件样本量。",
+        "PDF因工具大小上限未取到，HTML正文可读。",
+        "图2来源https://arxiv.org/html/2610.40050v1/arch_updated.png；原文CC BY 4.0；可用于注明来源的概览图。",
+        "视频为项目页内嵌区域，未核验独立视频文件URL，links.video留空。"
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/arxiv-2610-40050-figure2.webp",
+          "sha256": "d087cdd17b80a931640a13989c4cf54dc8e6308667ffe3bc7d26432e3d5ddc08",
+          "width": 1600,
+          "height": 824,
+          "sourceUrl": "https://arxiv.org/html/2610.40050v1/arch_updated.png",
+          "evidenceUrl": "https://arxiv.org/html/2610.40050v1",
+          "verifiedAt": "2026-11-01",
+          "credit": "DRIP authors · Figure 2",
+          "rights": "原文CC BY 4.0；原图完整保留并署名，不改变内容或隐去图例。 发布素材仅等比例缩小及WebP编码；未裁剪内容或改动图例。",
+          "displayPolicy": "open-license",
+          "background": "light",
+          "altZh": "LiDAR时空编码、未来占据预测与轨迹风险评估架构",
+          "altEn": "LiDAR spatiotemporal encoding, future occupancy prediction and trajectory risk evaluation architecture"
+        },
+        "figureNote": "已下载原始论文素材并检查完整内容、比例、字节哈希与尺寸；未使用AI生成或无关图片。",
+        "institutions": [
+          {
+            "name": "International Institute of Information Technology Hyderabad",
+            "logo": null,
+            "authorNames": [
+              "Mathai Mathew Pulicken",
+              "Laksh Nanwani",
+              "K. Madhava Krishna"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.40050v1",
+                "claim": "论文首页明确列出该机构及对应作者。",
+                "checkedAt": "2026-11-01"
+              }
+            ],
+            "note": "论文Robotics Research Center, IIIT Hyderabad署名；不混同其他IIIT。",
+            "institutionType": "university",
+            "markType": "none",
+            "institutionId": "pending-international-institute-of-information-technology-hyderabad"
+          },
+          {
+            "name": "University of Tartu",
+            "logo": null,
+            "authorNames": [
+              "Basant Sharma",
+              "Arun Kumar Singh"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.40050v1",
+                "claim": "论文首页明确列出该机构及对应作者。",
+                "checkedAt": "2026-11-01"
+              }
+            ],
+            "note": "论文署名已核验；标识由机构库解析，未核验时仅文字展示。",
+            "institutionType": "university",
+            "markType": "none",
+            "institutionId": "pending-university-of-tartu"
+          },
+          {
+            "name": "Inria",
+            "logo": null,
+            "authorNames": [
+              "Phani Teja Singamaneni"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.40050v1",
+                "claim": "论文首页明确列出该机构及对应作者。",
+                "checkedAt": "2026-11-01"
+              }
+            ],
+            "note": "论文同时署名Inria, Université de Lorraine。",
+            "institutionType": "research-institute",
+            "markType": "none",
+            "institutionId": "pending-inria"
+          },
+          {
+            "name": "Université de Lorraine",
+            "logo": null,
+            "authorNames": [
+              "Phani Teja Singamaneni"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.40050v1",
+                "claim": "论文首页明确列出该机构及对应作者。",
+                "checkedAt": "2026-11-01"
+              }
+            ],
+            "note": "论文署名已核验；标识由机构库解析，未核验时仅文字展示。",
+            "institutionType": "university",
+            "markType": "none",
+            "institutionId": "pending-universit-de-lorraine"
+          }
+        ],
+        "authors": []
+      }
+    },
+    {
+      "id": "arxiv-2610-39998",
+      "title": "并行监测任务下月球机械臂遥操作的视线辅助监督控制",
+      "titleEn": "Gaze-Assisted Supervisory Control for Lunar Robotic Arm Teleoperation Under Concurrent Monitoring",
+      "authors": [
+        "Jiayu He",
+        "Yifan Li",
+        "Oliver R. Runswick",
+        "Ernest N. Kamavuako",
+        "Yunjie Jia",
+        "Peter D. Hodkinson",
+        "Yang Gao"
+      ],
+      "year": 2026,
+      "venue": "arXiv 预印本",
+      "tags": [
+        "人机交互",
+        "遥操作",
+        "空间机器人"
+      ],
+      "summary": "操作者一边监测系统、一边遥控机械臂时，持续摇杆控制可能增加负担。本文让视线提名目标、按键明确确认，再交由机器人完成有限自主抓放。十六人的月球任务类比虚拟现实实验中，平均单块岩石操作时间从四十七点六五秒降至十八点四三秒，但精细放置仍是人工控制更准确。适合思考按任务阶段分配自主权，而不是一概替代人工。",
+      "summaryEn": "Continuous joystick control can burden an operator who must also monitor system states. This paper uses gaze to nominate a target and a button to explicitly confirm it, followed by bounded autonomous grasp-and-place execution. In a sixteen-person lunar-mission-analog virtual-reality study, mean time per rock fell from 47.65 to 18.43 seconds, but manual control remained more accurate for precision placement. It motivates allocating autonomy by task stage rather than universally replacing human control.",
+      "whySelected": "提供效率与精度相冲突的人机实验，不只展示更快结果，也解释何时需要保留人工细调。",
+      "sources": [
+        {
+          "label": "原始论文",
+          "url": "https://arxiv.org/abs/2610.39998"
+        },
+        {
+          "label": "论文全文",
+          "url": "https://arxiv.org/html/2610.39998v1"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "提供效率与精度相冲突的人机实验，不只展示更快结果，也解释何时需要保留人工细调。",
+          "relation": "覆盖机器人人机交互方向，非纯机械机构设计。",
+          "prerequisites": [
+            "遥操作与监督控制",
+            "被试内实验设计",
+            "基础统计检验"
+          ],
+          "difficulty": "intermediate",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.39998",
+        "other": null
+      },
+      "publicationStatus": "preprint",
+      "publicationDate": "2026-10-29",
+      "discoveredDate": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "recent",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "16名参与者的受控VR研究，不是真实月球或完整实体感知系统验证。",
+        "精细放置人工控制更优；监测负荷只测试所述听觉条件。"
+      ],
+      "assumptions": [
+        "模拟器提供场景几何、物体身份和位置，视线目标匹配不含完整真实视觉误差。",
+        "视线只提名，明确确认后才授权动作。"
+      ],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2610.39998",
+          "claim": "核验完整作者、标题、v1提交日期2026-10-29；未发现正式录用或出版声明，按预印本记录。",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.39998v1",
+          "claim": "核读第3节控制架构、第5节结果与第6–7节边界；明确精细放置的反向结果。",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2610.39998",
+          "claim": "PDF首页给出完整7名作者及单位上标；King’s College London与HKUST对应关系已核验。",
+          "checkedAt": "2026-11-01"
+        }
+      ],
+      "researchNotes": [
+        "按medium操作意图检索和筛选，不声称改变模型设置。",
+        "新近论文；本次在10月30日公告批次中补查发现，未出现在10月31日已推送身份库。",
+        "全文级重点核读，并非逐式复核整篇；没有运行代码或复现实验。",
+        "重点核读第3、5、6节；PDF首页用于解决HTML作者-机构上标丢失。",
+        "摘要页自动描述误称“5 other authors”，实际作者栏和PDF均为7名，按完整名单记录。",
+        "图2来源https://arxiv.org/html/2610.39998v1/fig2.png；原文CC BY 4.0；不要使用含ESA/NASA第三方素材的图1。",
+        "未核验独立代码、项目或数据资源。"
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/arxiv-2610-39998-figure2.webp",
+          "sha256": "2e9c9545aa41d6b226c91a7c2a6f82aab45b058c7816ef94354f17df366539af",
+          "width": 1600,
+          "height": 900,
+          "sourceUrl": "https://arxiv.org/html/2610.39998v1/fig2.png",
+          "evidenceUrl": "https://arxiv.org/html/2610.39998v1",
+          "verifiedAt": "2026-11-01",
+          "credit": "He et al. · Figure 2",
+          "rights": "原文CC BY 4.0；完整原图保持比例并署名。不使用含ESA/NASA第三方素材的图1。 发布素材仅等比例缩小及WebP编码；未裁剪内容或改动图例。",
+          "displayPolicy": "open-license",
+          "background": "light",
+          "altZh": "注视候选目标、显式确认授权与机械臂自主执行流程",
+          "altEn": "Gaze-based target nomination, explicit confirmation and autonomous robot-arm execution"
+        },
+        "figureNote": "已下载原始论文素材并检查完整内容、比例、字节哈希与尺寸；未使用AI生成或无关图片。",
+        "institutions": [
+          {
+            "name": "King’s College London",
+            "logo": null,
+            "authorNames": [
+              "Jiayu He",
+              "Yifan Li",
+              "Oliver R. Runswick",
+              "Ernest N. Kamavuako",
+              "Peter D. Hodkinson",
+              "Yang Gao"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/pdf/2610.39998",
+                "claim": "论文首页明确列出该机构及对应作者。",
+                "checkedAt": "2026-11-01"
+              }
+            ],
+            "note": "论文署名已核验；标识由机构库解析，未核验时仅文字展示。",
+            "institutionType": "university",
+            "markType": "none",
+            "institutionId": "pending-king-s-college-london"
+          },
+          {
+            "name": "The Hong Kong University of Science and Technology",
+            "logo": null,
+            "authorNames": [
+              "Yunjie Jia",
+              "Yang Gao"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/pdf/2610.39998",
+                "claim": "论文首页明确列出该机构及对应作者。",
+                "checkedAt": "2026-11-01"
+              }
+            ],
+            "note": "论文署名已核验；标识由机构库解析，未核验时仅文字展示。",
+            "institutionType": "university",
+            "markType": "none",
+            "institutionId": "pending-the-hong-kong-university-of-science-and-technology"
+          }
+        ],
+        "authors": []
+      }
+    },
+    {
+      "id": "doi-74a62a3b35ce09b76987",
+      "title": "GDPView：统一删除传播变体的交互界面",
+      "titleEn": "GDPView: An Interactive Interface that Unifies Variants of Deletion Propagation (DP)",
+      "authors": [
+        "Yihan Luo",
+        "Neha Makhija",
+        "Wolfgang Gatterbauer"
+      ],
+      "year": 2026,
+      "venue": "PVLDB 19(12): 4670–4673 / VLDB 2026 Demonstration",
+      "tags": [
+        "视图更新",
+        "删除传播",
+        "provenance",
+        "ILP",
+        "交互解释",
+        "较早论文 · 首次发现"
+      ],
+      "summary": "这是昨日广义删除传播算法的独立交互演示后续。系统用删除、保留、最小化和最大化四类操作描述视图目标，并展示源元组删除、见证及整数规划约束之间的联系。适合思考如何让用户检查更新副作用；但它面向合取查询删除，不是完整的本体映射更新器，大规模效果仍引用前作。",
+      "summaryEn": "This is a separate interactive demonstration following yesterday’s generalized deletion-propagation algorithm. Four operations—delete, preserve, minimize and maximize—specify view goals, with displays connecting source-tuple deletions, witnesses and ILP constraints. It is useful for thinking about user inspection of update side effects, but targets deletions for conjunctive queries, not a complete ontology-and-mapping update engine; large-scale evidence still comes from the earlier work.",
+      "whySelected": "从算法到可解释更新界面的直接后续；独立DOI，非昨日论文换名重复。",
+      "sources": [
+        {
+          "label": "原始论文（PVLDB）",
+          "url": "https://www.vldb.org/pvldb/vol19/p4670-makhija.pdf"
+        },
+        {
+          "label": "官方演示日程",
+          "url": "https://vldb.org/2026/demonstrations.html"
+        },
+        {
+          "label": "官方代码README",
+          "url": "https://github.com/northeastern-datalab/gdp-demo/blob/main/README.md"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "li"
+      ],
+      "recommendations": {
+        "li": {
+          "whyRead": "重点看四种原语如何组合更新意图，并通过见证导航解释副作用。",
+          "relation": "可作为固定VKG实例更新的交互层设计参照；将本体推理、映射和源完整性约束纳入系统仍是另需证明的研究步骤，不能直接套用。",
+          "prerequisites": [
+            "合取查询与视图更新",
+            "查询见证与provenance",
+            "整数线性规划"
+          ],
+          "difficulty": "intermediate",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": "10.14778/3827998.3828093",
+        "arxiv": null,
+        "other": null
+      },
+      "publicationStatus": "published",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "readDepth": "fulltext",
+      "paperType": "system",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": "https://github.com/northeastern-datalab/gdp-demo",
+        "project": "https://northeastern-datalab.github.io/unified-reverse-data-management/",
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "演示论文，不是新的复杂度定理；通用GDP仍NP-hard，可解类保证来自2025前作。",
+        "未验证本体蕴含、R2RML、插入或任意源约束修复能力。",
+        "解释面板仅对配置大小内的小实例启用；本篇未新增大规模基准。"
+      ],
+      "assumptions": [
+        "输入为关系数据与合取查询视图，修改动作是删除源元组。",
+        "README要求有效Gurobi许可证；本次未安装或运行。"
+      ],
+      "evidence": [
+        {
+          "url": "https://www.vldb.org/pvldb/vol19/p4670-makhija.pdf",
+          "claim": "四页正式原文确认题名、DOI、卷期、定义2.1及演示和架构；第4节说明限制与前作依赖。",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "url": "https://vldb.org/2026/demonstrations.html",
+          "claim": "官方日程列为演示并确认三位作者及论文署名机构。",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "url": "https://github.com/northeastern-datalab/gdp-demo",
+          "claim": "公开仓库可访问；README核实CSV、Datalog、见证导航、ILP面板与Gurobi依赖，未执行代码。",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "url": "https://gatterbauer.name/publications",
+          "claim": "作者将GDPView链接至Unified Reverse Data Management项目；该项目页面本次可访问。",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "url": "https://northeastern-datalab.github.io/unified-reverse-data-management/",
+          "claim": "项目页可访问，包含该研究线的论文与资源；不是独立GDPView在线服务可用性证明。",
+          "checkedAt": "2026-11-01"
+        }
+      ],
+      "researchNotes": [
+        "核读原文四页正文，重点定义2.1、§3交互、§4系统边界；未复核2025前作全部证明。",
+        "建议按Figure 2→§3→§4阅读；以昨日算法论文作为背景，不把demo当新算法贡献。",
+        "论文的Demonstration类别已写venue；schema中的demo=false表示真实研究记录而非网站虚构演示数据。",
+        "README视频链接存在，但返回Git LFS指针，未验证视频字节与播放，故video=null。",
+        "Figure 2在PDF第3页；研究阶段web截图失败；发布准备阶段从官方PDF完成完整图2及图注的光栅化、视觉检查和哈希核验。"
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/doi-74a62a3b35ce09b76987-figure2.webp",
+          "sha256": "00cdbf9bc61107c38dddca8fee92d36e3e9c1d9a9c5b2a5ad7b701525c77347c",
+          "width": 992,
+          "height": 620,
+          "sourceUrl": "https://www.vldb.org/pvldb/vol19/p4670-makhija.pdf",
+          "evidenceUrl": "https://www.vldb.org/pvldb/vol19/p4670-makhija.pdf",
+          "verifiedAt": "2026-11-01",
+          "credit": "Yihan Luo, Neha Makhija and Wolfgang Gatterbauer · Figure 2",
+          "rights": "原文CC BY-NC-ND 4.0；完整Figure 2及图注从PDF第3页按原样光栅化，未改图形内容。非商业论文导读缩略图。 发布素材仅等比例缩小及WebP编码；未裁剪内容或改动图例。",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "light",
+          "altZh": "GDPView界面及数据、视图、约束、见证和整数规划面板的交互概览",
+          "altEn": "GDPView interface overview with data, views, constraints, witnesses and ILP interaction panels"
+        },
+        "figureNote": "已下载原始论文素材并检查完整内容、比例、字节哈希与尺寸；未使用AI生成或无关图片。",
+        "institutions": [
+          {
+            "name": "Northeastern University",
+            "institutionId": "northeastern",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/northeastern-symbol.png",
+              "sha256": "296b176061c82b017f8718b857d8d90dd0d841e35a287761e8eac5671c39395c",
+              "width": 32,
+              "height": 32,
+              "sourceUrl": "https://brand.northeastern.edu/global/assets/favicon/favicon-32x32.png?v=2",
+              "evidenceUrl": "https://www.northeastern.edu/",
+              "verifiedAt": "2026-10-31",
+              "credit": "Northeastern University official compact identity symbol",
+              "rights": "官方主页紧凑N符号，不是大学印章；保持完整及原色，不表示背书。印章政策另有限制。",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "altZh": "Northeastern University 官方红色 N 身份符号",
+              "altEn": "Official Northeastern University red N identity symbol"
+            },
+            "authorNames": [
+              "Yihan Luo",
+              "Wolfgang Gatterbauer"
+            ],
+            "evidence": [
+              {
+                "url": "https://vldb.org/2026/demonstrations.html",
+                "claim": "本篇演示论文作者列表标明两人署名Northeastern University。",
+                "checkedAt": "2026-11-01"
+              }
+            ],
+            "note": "已查机构库；构建阶段可复用登记的northeastern标识与hash，本交接暂以名称呈现。",
+            "institutionType": "university",
+            "markType": "compact-symbol"
+          },
+          {
+            "name": "University of Massachusetts Amherst",
+            "logo": null,
+            "authorNames": [
+              "Neha Makhija"
+            ],
+            "evidence": [
+              {
+                "url": "https://vldb.org/2026/demonstrations.html",
+                "claim": "本篇演示论文标明Neha Makhija署名University of Massachusetts Amherst。",
+                "checkedAt": "2026-11-01"
+              }
+            ],
+            "note": "机构库尚无已核验标识；仅文字名称，不推断现雇主。",
+            "institutionType": "university",
+            "markType": "none",
+            "institutionId": "pending-university-of-massachusetts-amherst"
+          }
+        ],
+        "authors": []
+      }
+    },
+    {
+      "id": "arxiv-2610-39429",
+      "title": "ScheduleGen：以技能调度生成多臂模仿学习示范",
+      "titleEn": "ScheduleGen: Demonstration Generation via Skill Scheduling for Multi-Arm Imitation Learning",
+      "authors": [
+        "Neel Jawale",
+        "Stephan Pleines",
+        "Soha Pouya",
+        "Yuke Zhu",
+        "Ajay Mandlekar",
+        "Caelan Garrett"
+      ],
+      "year": 2026,
+      "venue": "arXiv 预印本",
+      "tags": [
+        "多臂操作",
+        "模仿学习",
+        "示范生成",
+        "sim2real"
+      ],
+      "summary": "多臂模仿学习不仅缺数据，还需避免机械臂相互碰撞。ScheduleGen从少量示范保留接触技能，结合运动规划与联合时间调度生成新轨迹。作者在28个仿真变体上报告79.6%的生成成功率，所得策略平均成功率65.5%；八个真实变体为50%至80%。适合学习数据生成与协调控制的接口，但真实评估每项仅20回合。",
+      "summaryEn": "Multi-arm imitation learning needs data that also avoids collisions between arms. ScheduleGen preserves contact skills from a few demonstrations and combines motion planning with joint temporal scheduling to generate new trajectories. The authors report 79.6% generation success and 65.5% mean learned-policy success across 28 simulation variants; eight real-world variants achieve 50–80%. It is useful for studying the interface between data generation and coordinated control, though each hardware variant has only 20 evaluation episodes.",
+      "whySelected": "把规划与模仿学习衔接起来，实验分开报告数据生成、策略学习与真实迁移。",
+      "sources": [
+        {
+          "label": "原始论文",
+          "url": "https://arxiv.org/abs/2610.39429"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "lv"
+      ],
+      "recommendations": {
+        "lv": {
+          "whyRead": "先看图2再读5.4节，理解为何有示范仍需要规划与调度。",
+          "relation": "直接对应多臂操作、IL和sim2real。",
+          "prerequisites": [
+            "行为克隆",
+            "刚体变换",
+            "运动规划基础",
+            "混合整数线性规划概念"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.39429",
+        "other": null
+      },
+      "publicationStatus": "preprint",
+      "publicationDate": "2026-10-29",
+      "discoveredDate": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "readDepth": "fulltext",
+      "paperType": "system",
+      "classic": false,
+      "novelty": "recent",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": "https://schedulegen.github.io/",
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "真实实验每变体20回合；结果不等于未见机器人或任意环境泛化。",
+        "项目页仍显示匿名作者，部分摘要数字与论文不同；作者、八个真实变体及50–80%范围以arXiv v1为准。",
+        "未找到可核实的独立代码发布链接，code保持null。"
+      ],
+      "assumptions": [
+        "输入为带技能和任务约束标注的少量示范；真实迁移采用标定后的机器人、相机和场景几何。"
+      ],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2610.39429",
+          "claim": "核对完整作者、原题与2026-10-29首次提交日期；未确认正式录用，按预印本收录。",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.39429v1",
+          "claim": "核读方法概述及5.4节，核对输入、调度方法、仿真统计与真实评估条件。",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "url": "https://schedulegen.github.io/",
+          "claim": "作者从arXiv链接的项目页可访问，有方法与演示；未据此声明代码开源。",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2610.39429",
+          "claim": "首页署名：全部作者属NVIDIA，Yuke Zhu同时属UT Austin；图1为系统概览。",
+          "checkedAt": "2026-11-01"
+        }
+      ],
+      "researchNotes": [
+        "核读摘要、方法概述与真实实验表3，非逐行通读附录；未运行代码或复现实验。",
+        "主图候选 https://arxiv.org/html/2610.39429v1/intro_figure.png 。HTML标示CC BY 4.0，但PDF同时含©2026 NVIDIA all rights reserved；打包方需保留权利边界。",
+        "NVIDIA检索结果出现2026-11-12未来日期，未把它当作本期发表或录用证据。"
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/arxiv-2610-39429-figure1.webp",
+          "sha256": "4e36f1d55011d3a2e954d332d488265e9d36227d12a5aac3ce825bacb1da2c3d",
+          "width": 861,
+          "height": 357,
+          "sourceUrl": "https://arxiv.org/html/2610.39429v1/intro_figure.png",
+          "evidenceUrl": "https://arxiv.org/html/2610.39429v1",
+          "verifiedAt": "2026-11-01",
+          "credit": "ScheduleGen authors · Figure 1",
+          "rights": "HTML标示CC BY 4.0，但PDF同时含©2026 NVIDIA all rights reserved；不据此断言开放再利用许可。仅署名缩略图，保留全部图例。 发布素材仅等比例缩小及WebP编码；未裁剪内容或改动图例。",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "light",
+          "altZh": "ScheduleGen从源演示、技能调度到多臂策略部署的概览",
+          "altEn": "ScheduleGen overview from source demonstrations and skill scheduling to multi-arm policy deployment"
+        },
+        "figureNote": "已下载原始论文素材并检查完整内容、比例、字节哈希与尺寸；未使用AI生成或无关图片。",
+        "institutions": [
+          {
+            "name": "NVIDIA",
+            "logo": null,
+            "authorNames": [
+              "Neel Jawale",
+              "Stephan Pleines",
+              "Soha Pouya",
+              "Yuke Zhu",
+              "Ajay Mandlekar",
+              "Caelan Garrett"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/pdf/2610.39429",
+                "claim": "论文署名页核实作者与机构对应关系。",
+                "checkedAt": "2026-11-01"
+              }
+            ],
+            "note": "机构库无现成记录；未核验可展示标识，仅显示机构名称。",
+            "institutionType": "company",
+            "markType": "none",
+            "institutionId": "pending-nvidia"
+          },
+          {
+            "name": "The University of Texas at Austin",
+            "logo": null,
+            "authorNames": [
+              "Yuke Zhu"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/pdf/2610.39429",
+                "claim": "论文署名页核实作者与机构对应关系。",
+                "checkedAt": "2026-11-01"
+              }
+            ],
+            "note": "机构库无现成记录；未核验可展示标识，仅显示机构名称。",
+            "institutionType": "university",
+            "markType": "none",
+            "institutionId": "pending-the-university-of-texas-at-austin"
+          }
+        ],
+        "authors": []
+      }
+    },
+    {
+      "id": "arxiv-2610-40565",
+      "title": "Gym-Anything：让数字智能体扩展机器人物理仿真",
+      "titleEn": "Gym-Anything for Robotics: Scaling physical simulations with digital agents",
+      "authors": [
+        "Pranjal Aggarwal",
+        "Sean Welleck"
+      ],
+      "year": 2026,
+      "venue": "arXiv 预印本",
+      "tags": [
+        "机器人仿真",
+        "强化学习环境",
+        "VLA",
+        "基准"
+      ],
+      "summary": "手工构建机器人仿真难以覆盖多样物理任务。本文用编程智能体创建环境，再以对抗式审计检查物理与奖励，构建25类仿真、200个强化学习环境的RoboWorld。作者报告初始测试任务对受测模型很困难，并探索特权状态指导和代码示范训练VLA。代码已核实，但项目网页暂不可访问；阅读重点应是审计标准，而非把模拟成功等同真实部署。",
+      "summaryEn": "Hand-built robot simulations struggle to cover diverse physical tasks. This work uses coding agents to create environments and adversarial audits to check physics and rewards, producing RoboWorld with 200 reinforcement-learning environments across 25 simulations. The authors find the initial test tasks difficult for the evaluated models and explore privileged-state guidance and code-generated demonstrations for VLA training. The code repository was verified, but the project website was inaccessible. Focus on the auditing criteria rather than equating simulation success with real deployment.",
+      "whySelected": "提供可检查的环境、任务与审计实现，便于比较仿真可信度和学习接口。",
+      "sources": [
+        {
+          "label": "原始论文",
+          "url": "https://arxiv.org/abs/2610.40565"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "lv"
+      ],
+      "recommendations": {
+        "lv": {
+          "whyRead": "先读环境与审计定义，再选一个环境技术报告学习，不建议一上来复跑全基准。",
+          "relation": "连接机器人仿真、RL环境设计与VLA示范生成。",
+          "prerequisites": [
+            "强化学习奖励与评估",
+            "Python",
+            "仿真误差与sim2real概念"
+          ],
+          "difficulty": "intermediate",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.40565",
+        "other": null
+      },
+      "publicationStatus": "preprint",
+      "publicationDate": "2026-10-29",
+      "discoveredDate": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "readDepth": "fulltext",
+      "paperType": "benchmark",
+      "classic": false,
+      "novelty": "recent",
+      "updateNote": "",
+      "links": {
+        "code": "https://github.com/gym-anything/robotics",
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "未独立验证物理准确性，也未执行实验。",
+        "代码README注明GPU、Isaac Sim及长物理测试未在该发行版运行。",
+        "项目网址访问失败，project和独立data链接保持null；代码仓库中包含基准。"
+      ],
+      "assumptions": [
+        "区分普通策略观测与仅仿真可用的特权状态；不能把特权实验直接解释为真实机器人能力。"
+      ],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2610.40565",
+          "claim": "核对完整作者、原题与2026-10-29首次提交日期；未确认正式录用，按预印本收录。",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.40565v1",
+          "claim": "核读环境生成、审计及实验设置；首页署名为Carnegie Mellon University，图1展示RoboWorld。",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "url": "https://github.com/gym-anything/robotics",
+          "claim": "仓库可访问，README和目录含框架、RoboWorld、环境报告、安装说明与测试限制。",
+          "checkedAt": "2026-11-01"
+        }
+      ],
+      "researchNotes": [
+        "核读摘要、方法、任务设计和实验设置的重点段落；未逐个审阅25份环境报告。",
+        "主图候选 https://arxiv.org/html/2610.40565v1/figures/teaser_sewing.jpg ，论文HTML标注CC BY 4.0；研究交接时尚未打包；发布准备阶段已完成本地下载与视觉核验。",
+        "项目入口 https://gym-anything.github.io/robotics/ 多次访问失败；没有把失败页面列为已验证资源。",
+        "代码运行涉及Linux、NVIDIA GPU及渲染配置；本次只读未安装、未付费调用。"
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/arxiv-2610-40565-figure1.webp",
+          "sha256": "252d4ccbc70039a3ec21191aa6512c1c3e3060ac799cd23e55d660621802c94a",
+          "width": 1600,
+          "height": 594,
+          "sourceUrl": "https://arxiv.org/html/2610.40565v1/figures/teaser_sewing.jpg",
+          "evidenceUrl": "https://arxiv.org/html/2610.40565v1",
+          "verifiedAt": "2026-11-01",
+          "credit": "Pranjal Aggarwal and Sean Welleck · Figure 1",
+          "rights": "论文HTML标注CC BY 4.0；原图完整保留，仅作为论文导读配图。 发布素材仅等比例缩小及WebP编码；未裁剪内容或改动图例。",
+          "displayPolicy": "open-license",
+          "background": "light",
+          "altZh": "Gym-Anything跨食品、家务、建筑、制造与物流的仿真任务概览",
+          "altEn": "Gym-Anything overview of simulated tasks in food service, household, construction, manufacturing and logistics"
+        },
+        "figureNote": "已下载原始论文素材并检查完整内容、比例、字节哈希与尺寸；未使用AI生成或无关图片。",
+        "institutions": [
+          {
+            "name": "Carnegie Mellon University",
+            "logo": null,
+            "authorNames": [
+              "Pranjal Aggarwal",
+              "Sean Welleck"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.40565v1",
+                "claim": "论文署名页核实作者与机构对应关系。",
+                "checkedAt": "2026-11-01"
+              }
+            ],
+            "note": "机构库无现成记录；未核验可展示标识，仅显示机构名称。",
+            "institutionType": "university",
+            "markType": "none",
+            "institutionId": "pending-carnegie-mellon-university"
+          }
+        ],
+        "authors": []
+      }
+    },
+    {
+      "id": "arxiv-2610-39327",
+      "title": "SONIC-K1：在单GPU上把通用动作跟踪迁移到小型人形机器人",
+      "titleEn": "SONIC-K1: Porting a Universal Humanoid Motion Tracker to a Small Humanoid on a Single GPU",
+      "authors": [
+        "Kyrylo Kolesnichenko",
+        "Jong-Hoon Kim"
+      ],
+      "year": 2026,
+      "venue": "arXiv 预印本",
+      "tags": [
+        "人形机器人",
+        "PPO",
+        "Isaac Lab",
+        "MuJoCo",
+        "动作跟踪"
+      ],
+      "summary": "SONIC-K1将已有全身动作跟踪框架迁移到较小的Booster K1，在共享单卡上重新训练，并公开代码与权重。作者在MuJoCo留出动作集上报告97.4%成功率，但这是指定判据下的仿真结果。真机仅作定性测试，迈步和转身仍不稳定。短文清楚交代迁移配方、延迟敏感性与评估缺口，适合作为人形强化学习复现前的阅读材料。",
+      "summaryEn": "SONIC-K1 ports an existing whole-body motion-tracking framework to the smaller Booster K1, retrains it on one shared GPU, and releases code and weights. The authors report 97.4% success on held-out motions in MuJoCo, but this is a simulation result under a specified criterion. Hardware testing is qualitative, and stepping and turning remain unreliable. The short paper clearly describes the porting recipe, latency sensitivity, and evaluation gaps, making it useful preparation before reproducing humanoid reinforcement learning.",
+      "whySelected": "短文、可核验代码和权重、明确失败边界，便于学习而不是只看高成功率。",
+      "sources": [
+        {
+          "label": "原始论文",
+          "url": "https://arxiv.org/abs/2610.39327"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "lv"
+      ],
+      "recommendations": {
+        "lv": {
+          "whyRead": "按方法表1、结果表2、局限性顺序阅读，先理解成功判据再尝试仿真播放器。",
+          "relation": "直接对应PPO、Isaac Lab、MuJoCo与人形sim2real。",
+          "prerequisites": [
+            "PPO基本概念",
+            "关节PD控制",
+            "动作重定向",
+            "训练集与留出集"
+          ],
+          "difficulty": "intermediate",
+          "readRecommendation": "deep"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.39327",
+        "other": null
+      },
+      "publicationStatus": "preprint",
+      "publicationDate": "2026-10-29",
+      "discoveredDate": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "readDepth": "fulltext",
+      "paperType": "system",
+      "classic": false,
+      "novelty": "recent",
+      "updateNote": "",
+      "links": {
+        "code": "https://github.com/Kyk0/sonic-k1",
+        "project": "https://kyry.me/sonic-k1/",
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "只有一个训练种子，无完整消融；真机无定量动作捕捉评估。",
+        "与G1其他方法的数值是引用结果，机器人与数据不同，不是受控正面对比。",
+        "项目页部分信息落后于论文，真机结论以论文为准；权重为CC BY-NC 4.0，动作数据不随仓库再分发。"
+      ],
+      "assumptions": [
+        "97.4%基于SONIC高度误差判据与10秒窗口，不代表任意长动作、所有评判标准或真机可靠性。"
+      ],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2610.39327",
+          "claim": "核对完整作者、原题与2026-10-29首次提交日期；未确认正式录用，按预印本收录。",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.39327v1",
+          "claim": "核读方法、结果表2、延迟实验与局限性；结果和硬件边界均为作者报告。",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "url": "https://github.com/Kyk0/sonic-k1",
+          "claim": "代码仓库可访问；项目和论文共同指向此SONIC-K1实现。",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "url": "https://kyry.me/sonic-k1/",
+          "claim": "作者项目页可访问，提供MuJoCo播放器说明与资源入口；部分内容与新版论文不同。",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "url": "https://huggingface.co/Kyry10/sonic-k1",
+          "claim": "权重页面可访问；是模型权重而非训练动作数据，因此未填data。",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2610.39327",
+          "claim": "首页作者上标核实：Kolesnichenko属Vilnius与Kent State，Kim属Kent State。",
+          "checkedAt": "2026-11-01"
+        }
+      ],
+      "researchNotes": [
+        "核读全文主体方法、实验及局限性；未运行播放器、训练或硬件测试。",
+        "主图候选 https://arxiv.org/html/2610.39327v1/figures/teaser.jpg ，为人类参考动作与仿真K1；arXiv非独占许可不等于开放复用许可，研究交接时尚未打包；发布准备阶段已完成本地下载与视觉核验。",
+        "单GPU指共享H100，不等于普通消费卡训练成本。"
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/arxiv-2610-39327-figure1.webp",
+          "sha256": "791afc557804c26e4d95408024b05a072f85a1191cc49ebcaa1c18e8371c355b",
+          "width": 1564,
+          "height": 1126,
+          "sourceUrl": "https://arxiv.org/html/2610.39327v1/figures/teaser.jpg",
+          "evidenceUrl": "https://arxiv.org/html/2610.39327v1",
+          "verifiedAt": "2026-11-01",
+          "credit": "Kyrylo Kolesnichenko and Jong-Hoon Kim · Figure 1",
+          "rights": "版权归论文作者；arXiv非独占发布许可不等于开放再利用许可。仅署名论文缩略图，未生成或更改内容。 发布素材仅等比例缩小及WebP编码；未裁剪内容或改动图例。",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "light",
+          "altZh": "人类参考动作与仿真K1人形机器人的并排示例",
+          "altEn": "Side-by-side example of human reference motion and the simulated K1 humanoid"
+        },
+        "figureNote": "已下载原始论文素材并检查完整内容、比例、字节哈希与尺寸；未使用AI生成或无关图片。",
+        "institutions": [
+          {
+            "name": "Vilnius University",
+            "logo": null,
+            "authorNames": [
+              "Kyrylo Kolesnichenko"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/pdf/2610.39327",
+                "claim": "论文署名页核实作者与机构对应关系。",
+                "checkedAt": "2026-11-01"
+              }
+            ],
+            "note": "机构库无现成记录；未核验可展示标识，仅显示机构名称。",
+            "institutionType": "university",
+            "markType": "none",
+            "institutionId": "pending-vilnius-university"
+          },
+          {
+            "name": "Kent State University",
+            "logo": null,
+            "authorNames": [
+              "Kyrylo Kolesnichenko",
+              "Jong-Hoon Kim"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/pdf/2610.39327",
+                "claim": "论文署名页核实作者与机构对应关系。",
+                "checkedAt": "2026-11-01"
+              }
+            ],
+            "note": "机构库无现成记录；未核验可展示标识，仅显示机构名称。",
+            "institutionType": "university",
+            "markType": "none",
+            "institutionId": "pending-kent-state-university"
+          }
+        ],
+        "authors": []
+      }
+    }
+  ]
+}
