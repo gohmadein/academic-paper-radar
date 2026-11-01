@@ -1,3 +1,5 @@
+import {createNotesStore,MAX_NOTE_LENGTH,MAX_NOTES_BYTES} from './lib/paper-notes.js';
+import {noteButton} from './lib/notes-view.js';
 import {researchMapModel,researchMapHTML,positionMapMarkers} from './lib/research-map.js';
 import {profileIcon} from './lib/profile-icons.js';
 import {sourceDirectory,sourceViewPatch,SOURCE_NAV} from './lib/source-directory.js';
@@ -12,6 +14,8 @@ import {makeBookmarkExport,parseBookmarkImport,mergeBookmarkImport,MAX_BOOKMARK_
 
 const $ = id => document.getElementById(id);
 const BOOKMARK_KEY = 'paper-signal-bookmarks-v1';
+const notes = createNotesStore({getItem:key=>localStorage.getItem(key),setItem:(key,value)=>localStorage.setItem(key,value)});
+let noteId='', noteTrigger=null, noteTimer, resumeDetail=false;
 const READ_KEY = 'paper-signal-read-v1';
 const RAIL_KEY = 'zero-field-rail-collapsed-v1';
 const PROFILE_MOTTOS = {xun:'我会成为机器人发展史上不可跨过的人物吗',li:'As Always',lv:'年入百万，迎娶🇨🇦姐姐，我只是想给她一个中国户口'};
@@ -118,6 +122,7 @@ function updateViewChrome() {
 }
 
 function go(patch, {replace = false} = {}) {
+  closeNotes(false);
   shareRequest++;
   if ($('share-dialog').open) $('share-dialog').close();
   state = {...state, ...patch};
@@ -141,14 +146,14 @@ function toggleBookmark(id) {
 }
 
 function paperCard(p,index) {
-  if(p.profiles)return editorialCard(p,index,{category:state.category,saved:bookmarks.has(p.id),read:reads.has(p.id),expanded:expandedGuides.has(p.id)});
+  if(p.profiles)return editorialCard(p,index,{category:state.category,saved:bookmarks.has(p.id),read:reads.has(p.id),expanded:expandedGuides.has(p.id),hasNote:notes.has(p.id)});
   return `<article class="paper-card ${index === 0 ? 'featured' : ''} ${categoryClass(p,state.category)}">
     ${categoryRail(p)}<div class="card-top"><span class="card-number">${String(index+1).padStart(2,'0')}</span>${p.demo ? `<span class="demo-label">${DEMO_NOTICE}</span>` : '<span class="featured-label">RESEARCH SIGNAL</span>'}<time class="card-date" datetime="${p.date}">${p.date.replaceAll('-',' / ')}</time></div>
     ${digestBadges(p)}<h3><button class="title-button" data-paper="${e(p.id)}">${e(p.title)}</button></h3>
     ${p.profiles?`<p class="paper-title-en">${e(p.titleEn)}</p>`:''}<p class="paper-meta">${e(p.authors.join(' · '))} <span aria-hidden="true">/</span> ${e(p.year)} <span aria-hidden="true">/</span> ${e(p.venue)}</p>
     <p class="paper-summary">${e(p.summary)}</p>
     ${p.profiles?'':`<div class="selection-reason"><strong>入选理由</strong>${e(p.whySelected)}</div>`}
-    ${digestRecommendations(p,state.category)}<div class="card-bottom"><div class="card-tags">${p.tags.map(t => `<button class="card-tag" data-tag="${e(t)}" aria-label="筛选主题 ${e(t)}">${e(t)}</button>`).join('')}</div><div class="card-actions"><button class="read-button ${reads.has(p.id)?'is-read':''}" data-read="${e(p.id)}" aria-pressed="${reads.has(p.id)}">${reads.has(p.id)?'已读':'标为已读'}</button><button class="bookmark-button ${bookmarks.has(p.id)?'saved':''}" data-bookmark="${e(p.id)}" aria-label="${bookmarks.has(p.id)?'移除':'添加'}本机书签：${e(p.title)}" aria-pressed="${bookmarks.has(p.id)}">${bookmarks.has(p.id)?'◆':'◇'}</button><button class="detail-button" data-paper="${e(p.id)}">阅读导读 <span aria-hidden="true">↗</span></button></div></div>
+    ${digestRecommendations(p,state.category)}<div class="card-bottom"><div class="card-tags">${p.tags.map(t => `<button class="card-tag" data-tag="${e(t)}" aria-label="筛选主题 ${e(t)}">${e(t)}</button>`).join('')}</div><div class="card-actions">${noteButton(p,notes.has(p.id))}<button class="read-button ${reads.has(p.id)?'is-read':''}" data-read="${e(p.id)}" aria-pressed="${reads.has(p.id)}">${reads.has(p.id)?'已读':'标为已读'}</button><button class="bookmark-button ${bookmarks.has(p.id)?'saved':''}" data-bookmark="${e(p.id)}" aria-label="${bookmarks.has(p.id)?'移除':'添加'}本机书签：${e(p.title)}" aria-pressed="${bookmarks.has(p.id)}">${bookmarks.has(p.id)?'◆':'◇'}</button><button class="detail-button" data-paper="${e(p.id)}">阅读导读 <span aria-hidden="true">↗</span></button></div></div>
     <div class="source-note">${p.demo ? '演示条目不提供真实论文来源。' : p.sources.map(s => `<a href="${e(safeUrl(s.url))}" target="_blank" rel="noopener noreferrer">${e(s.label)} ↗</a>`).join(' · ')}</div>
   </article>`;
 }
@@ -217,6 +222,7 @@ function render() {
 }
 
 function renderDialog() {
+  if ($('notes-dialog').open) return;
   const dialog = $('detail-dialog');
   if (!state.paper) {
     if (dialog.open) dialog.close();
@@ -237,7 +243,7 @@ function renderDialog() {
   lastDialogPaper = p.id;
   $('dialog-kicker').textContent = `PAPER BRIEF / ${p.date}`;
   $('dialog-content').innerHTML = `${p.demo?`<p class="dialog-warning">${DEMO_NOTICE}。</p>`:''}<h2 id="dialog-title">${e(p.title)}</h2>${p.titleEn?`<p>${e(p.titleEn)}</p>`:''}<div class="dialog-meta">${e(p.authors.join(' · '))}<br>${e(p.venue)} / ${p.year} / 收录于 ${p.date}</div><h3>中文导读</h3><p>${e(p.summary)}</p>${bilingualDetail(p)}<h3>为什么入选</h3><p>${e(p.whySelected)}</p><h3>研究主题</h3><div class="card-tags">${p.tags.map(t=>`<span class="card-tag">${e(t)}</span>`).join('')}</div><h3>原始来源</h3>${p.sources.length?`<div class="source-links">${p.sources.map(s=>`<a href="${e(safeUrl(s.url))}" target="_blank" rel="noopener noreferrer">${e(s.label)} ↗</a>`).join('')}</div>`:'<p>演示条目无真实论文来源。</p>'}<button class="secondary-button dialog-bookmark" data-bookmark="${e(p.id)}" aria-pressed="${bookmarks.has(p.id)}">${bookmarks.has(p.id)?'◆ 已加入本机书签':'◇ 加入本机书签'}</button>`;
-  $('dialog-content').insertAdjacentHTML('beforeend',digestDetails(p));
+  $('dialog-content').insertAdjacentHTML('beforeend',noteButton(p,notes.has(p.id))+digestDetails(p));
   if (!dialog.open) dialog.showModal();
 }
 
@@ -253,6 +259,7 @@ function closeDialog() {
 document.addEventListener('click', event => {
   const b = event.target.closest('button');
   if (!b) return;
+  if(b.dataset.note){openNotes(b.dataset.note,b);return;}
   if(b.dataset.mapMode){mapMode=b.dataset.mapMode==='today'?'today':'all';mapRegion='';renderMap();document.querySelector(`[data-map-mode="${mapMode}"]`)?.focus({preventScroll:true});return;}
   if(b.dataset.mapRegion){mapRegion=b.dataset.mapRegion;renderMap();document.querySelector(`[data-map-region="${CSS.escape(mapRegion)}"]`)?.focus({preventScroll:true});return;}
   if(b.dataset.mapClear){const previous=mapRegion;mapRegion='';renderMap();document.querySelector(`[data-map-region="${CSS.escape(previous)}"]`)?.focus({preventScroll:true});return;}
@@ -347,17 +354,109 @@ $('about-button').addEventListener('click',()=>{
   if(state.paper) go({paper:''});
   dialogTrigger = $('about-button'); lastDialogPaper = '';
   $('dialog-kicker').textContent = 'ABOUT / ZERO FIELD';
-  $('dialog-content').innerHTML = '<h2 id="dialog-title">零域 / ZERO FIELD</h2><p>迅、李、驴的每日论文精选。</p><p>书签与已读状态仅保存在本机，不会自动同步；清除浏览器数据会删除记录。</p><p>研究足迹按已核验的作者署名机构所在城市点亮；跨地区论文可点亮多处，篇数按论文去重。城市点位为示意，不代表国籍。底图：<a href="https://www.naturalearthdata.com/about/terms-of-use/" target="_blank" rel="noopener noreferrer">Natural Earth · 公共领域</a>，仅显示陆地轮廓。</p>';
+  $('dialog-content').innerHTML = '<h2 id="dialog-title">零域 / ZERO FIELD</h2><p>迅、李、驴的每日论文精选。</p><p>书签、已读与笔记仅保存在本机，不会自动同步；清除浏览器数据会删除记录。</p><p>研究足迹按已核验的作者署名机构所在城市点亮；跨地区论文可点亮多处，篇数按论文去重。城市点位为示意，不代表国籍。底图：<a href="https://www.naturalearthdata.com/about/terms-of-use/" target="_blank" rel="noopener noreferrer">Natural Earth · 公共领域</a>，仅显示陆地轮廓。</p>';
   $('detail-dialog').showModal();
 });
-function syncRoute(){if(location.hash==='#main')return;shareRequest++;if($('share-dialog').open)$('share-dialog').close();state=readRoute(location.hash);updateViewChrome();if(data)render();}
+function syncRoute(){if(location.hash==='#main')return;closeNotes(false);shareRequest++;if($('share-dialog').open)$('share-dialog').close();state=readRoute(location.hash);updateViewChrome();if(data)render();}
 window.addEventListener('popstate',syncRoute);
 window.addEventListener('hashchange',syncRoute);
 // Refresh date-sensitive counts after returning to an overnight-open tab.
 window.addEventListener('focus',()=>{if(data&&state.view==='feed'&&!state.demo)renderMap();});
 document.addEventListener('visibilitychange',()=>{if(!document.hidden&&data&&state.view==='feed'&&!state.demo)renderMap();});
 window.addEventListener('storage',event=>{if(event.key===BOOKMARK_KEY){bookmarks=parseBookmarks(event.newValue);if(data)render();}});
-document.addEventListener('keydown',event=>{if(event.key==='/' && !event.ctrlKey && !event.metaKey && !event.altKey && !$('detail-dialog').open && !$('share-dialog').open && !['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName) && !$('filter-panel').hidden){event.preventDefault();$('search').focus();}});
+document.addEventListener('keydown',event=>{if(event.key==='/' && !event.ctrlKey && !event.metaKey && !event.altKey && !$('detail-dialog').open && !$('share-dialog').open && !$('notes-dialog').open && !['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName) && !$('filter-panel').hidden){event.preventDefault();$('search').focus();}});
+function updateNoteButtons() {
+  document.querySelectorAll('[data-note]').forEach(button=>{
+    const has=notes.has(button.dataset.note);
+    button.classList.toggle('has-note',has);
+    button.title=has?'编辑笔记（已有内容）':'添加笔记';
+    button.setAttribute('aria-label',`${button.title}：${button.dataset.noteTitle||''}`);
+  });
+}
+function noteStatus(saved) {
+  $('notes-status').textContent=notes.conflict?'另一标签页已修改笔记 · 请先导出本页草稿，再重新加载':notes.loadError?'本机笔记读取失败 · 新内容仅在此页，关闭页面前请导出':saved?'已保存到本机':'尚未保存到本机 · 请重试或导出，关闭页面会丢失';
+  $('notes-status').classList.toggle('error',!saved||notes.loadError);
+  $('notes-count').textContent=`${$('notes-text').value.length} / ${MAX_NOTE_LENGTH}`;
+}
+function flushNotes() {
+  clearTimeout(noteTimer);
+  const saved=notes.flush();
+  noteStatus(saved);
+  updateNoteButtons();
+  return saved;
+}
+function captureNote() {
+  if(!noteId)return;
+  try { notes.set(noteId,$('notes-text').value); }
+  catch(error){$('notes-status').textContent=error.message;return;}
+  $('notes-count').textContent=`${$('notes-text').value.length} / ${MAX_NOTE_LENGTH}`;
+  $('notes-status').textContent='正在保存…';
+  clearTimeout(noteTimer);noteTimer=setTimeout(flushNotes,350);
+}
+function openNotes(id,trigger) {
+  const paper=collection().papers.find(p=>p.id===id);if(!paper)return;
+  if(noteId===id&&$('notes-dialog').open){$('notes-text').focus();return;}
+  if(noteId)closeNotes(false);
+  shareRequest++;if($('share-dialog').open)$('share-dialog').close();
+  resumeDetail=$('detail-dialog').open;
+  if(resumeDetail)$('detail-dialog').close();
+  noteId=id;noteTrigger=trigger;
+  $('notes-paper-title').textContent=paper.title;
+  $('notes-text').value=notes.get(id);
+  $('notes-export-preview').hidden=true;
+  $('notes-transfer-status').textContent='';
+  noteStatus(!notes.dirty&&!notes.loadError);
+  $('notes-dialog').showModal();$('notes-text').focus();
+}
+function closeNotes(restore=true) {
+  if(!noteId)return;
+  const saved=flushNotes();
+  if(!saved)toast('笔记未保存到本机，草稿仍保留在本页；请导出备份');
+  const trigger=noteTrigger,id=noteId,detail=resumeDetail;
+  noteId='';resumeDetail=false;
+  $('notes-dialog').close();
+  if(restore){
+    if(detail&&state.paper)$('detail-dialog').showModal();
+    if(trigger?.isConnected)trigger.focus({preventScroll:true});
+    else document.querySelector(`[data-note="${CSS.escape(id)}"]`)?.focus({preventScroll:true});
+  }
+}
+$('notes-text').addEventListener('input',captureNote);
+$('notes-close').addEventListener('click',()=>closeNotes());
+$('notes-retry').addEventListener('click',flushNotes);
+$('notes-dialog').addEventListener('cancel',event=>{event.preventDefault();closeNotes();});
+$('notes-dialog').addEventListener('click',event=>{if(event.target===$('notes-dialog')){const r=$('notes-dialog').getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)closeNotes();}});
+$('notes-delete').addEventListener('click',()=>{
+  if(!noteId||!notes.get(noteId)||!window.confirm('删除这篇论文的本机笔记？此操作不可撤销。'))return;
+  $('notes-text').value='';captureNote();flushNotes();$('notes-text').focus();
+});
+function exportNotes(onlyCurrent=false) {
+  flushNotes();
+  try {
+    const text=notes.export(onlyCurrent?noteId:undefined);$('notes-export-json').value=text;$('notes-export-preview').hidden=false;
+    const url=URL.createObjectURL(new Blob([text],{type:'application/json;charset=utf-8'}));
+    const anchor=document.createElement('a');anchor.href=url;anchor.download=onlyCurrent?`paper-signal-notes-${noteId}.json`:'paper-signal-notes.json';document.body.append(anchor);anchor.click();anchor.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);
+    $('notes-transfer-status').textContent=onlyCurrent?'已生成本篇笔记备份。':'已生成全部笔记备份；请妥善保存，不要公开上传。';
+  }catch(error){$('notes-transfer-status').textContent=`${error.message}。可先导出本篇笔记，或复制编辑框中的内容。`;}
+}
+$('notes-export').addEventListener('click',()=>exportNotes());
+$('notes-export-current').addEventListener('click',()=>exportNotes(true));
+function importNotes(text) {
+  const result=notes.import(text);
+  if(noteId)$('notes-text').value=notes.get(noteId);
+  noteStatus(true);updateNoteButtons();
+  $('notes-transfer-status').textContent=`新增 ${result.added} 条，重复 ${result.duplicates} 条；跳过 ${result.conflicts} 条不同内容（保留本机笔记）。`;
+}
+$('notes-import').addEventListener('change',async event=>{
+  const file=event.target.files?.[0];if(!file)return;
+  try {if(file.size>MAX_NOTES_BYTES)throw new Error('文件过大：最多 2 MB');importNotes(await file.text());}
+  catch(error){$('notes-transfer-status').textContent=`导入失败，原笔记未改变：${error.message}`;}
+  finally{event.target.value='';}
+});
+$('notes-import-pasted').addEventListener('click',()=>{try{importNotes($('notes-import-json').value);}catch(error){$('notes-transfer-status').textContent=`导入失败，原笔记未改变：${error.message}`;}});
+window.addEventListener('pagehide',flushNotes);
+window.addEventListener('beforeunload',event=>{if(!flushNotes()&&notes.dirty){event.preventDefault();event.returnValue='';}});
+document.addEventListener('visibilitychange',()=>{if(document.hidden)flushNotes();});
 init();
 
 document.addEventListener('keydown',event=>{const strip=$('institution-strip');if(strip)institutionKeydown(event,strip);});

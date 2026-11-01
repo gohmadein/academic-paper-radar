@@ -36,7 +36,7 @@
     <section id="hero" class="hero" aria-labelledby="hero-title" hidden>
       <div class="hero-copy">
         <p class="eyebrow"><span class="status-light"></span> DAILY RESEARCH INTELLIGENCE <span class="eyebrow-version">/ VOL. 001</span></p>
-        <h1 id="hero-title">在噪声之外，<br>捕获<span class="hero-emphasis">研究信号</span><span class="title-period">。</span></h1>
+        <h1 id="hero-title">零域 · 从零探索，<br><span class="hero-emphasis">向未知进发</span><span class="title-period">。</span></h1>
         
         <div class="hero-metrics"><span><strong id="real-count">00</strong> 篇真实收录</span><span><strong id="real-days">00</strong> 天研究档案</span></div>
       </div>
@@ -69,7 +69,7 @@
       </div>
       <aside class="sidebar" aria-label="档案与站点信息">
         <section class="side-panel archive-panel"><div class="panel-title"><h2>研究日历</h2><span aria-hidden="true">↙</span></div><div id="date-list" class="date-list"></div><button class="archive-link" data-view="archive">查看全部归档 <span aria-hidden="true">→</span></button></section>
-        <div class="local-note"><span aria-hidden="true">◇</span><p>书签与已读状态仅保存在本机，不会自动同步。</p></div>
+        <div class="local-note"><span aria-hidden="true">◇</span><p>书签、已读与笔记仅保存在本机，不会自动同步。</p></div>
       </aside>
     </section>
     <div id="institution-gallery"></div>
@@ -77,6 +77,19 @@
   </main>
   <dialog id="detail-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><span id="dialog-kicker" class="eyebrow">PAPER BRIEF</span><button id="close-dialog" class="icon-button" aria-label="关闭详情">×</button></div><div id="dialog-content"></div></dialog>
   <dialog id="share-dialog" aria-labelledby="share-title"><div class="dialog-top"><h2 id="share-title">分享论文</h2><button id="share-close" class="icon-button" aria-label="关闭分享">×</button></div><label for="share-url">公开论文链接</label><input id="share-url" type="url" readonly><p id="share-status" role="status"></p><button id="share-copy" class="secondary-button">复制链接</button></dialog>
+  <dialog id="notes-dialog" aria-labelledby="notes-title" aria-describedby="notes-privacy">
+    <div class="dialog-top"><h2 id="notes-title">论文笔记</h2><button id="notes-close" class="icon-button" aria-label="关闭笔记">×</button></div>
+    <p id="notes-paper-title"></p><p id="notes-privacy">仅保存在此浏览器，不会上传或自动同步；清除浏览器数据会丢失。</p>
+    <label class="sr-only" for="notes-text">这篇论文的笔记</label><textarea id="notes-text" rows="9" maxlength="10000" placeholder="记下想法、疑问或下一步…"></textarea>
+    <div class="notes-save-row"><p id="notes-status" role="status" aria-live="polite"></p><span id="notes-count"></span></div>
+    <div class="notes-actions"><button id="notes-retry" class="text-button">重试保存</button><button id="notes-delete" class="text-button">删除本篇笔记</button></div>
+    <details class="notes-backup"><summary>备份与迁移</summary><p>导出全部笔记；导入只补充新内容，同一论文的不同笔记会跳过，保留本机版本。最多 2 MB。</p>
+      <div class="transfer-actions"><button id="notes-export" class="secondary-button">导出笔记 JSON ↓</button><button id="notes-export-current" class="secondary-button">导出本篇</button><label class="transfer-import secondary-button">导入笔记 JSON ↑<input id="notes-import" type="file" accept=".json,application/json" aria-label="导入笔记 JSON"></label></div>
+      <details><summary>粘贴 JSON 导入</summary><label class="sr-only" for="notes-import-json">笔记备份 JSON</label><textarea id="notes-import-json" rows="4" maxlength="2097152" spellcheck="false"></textarea><button id="notes-import-pasted" class="secondary-button">合并导入（保留本机）</button></details>
+      <details id="notes-export-preview" hidden><summary>下载未出现？复制 JSON</summary><label class="sr-only" for="notes-export-json">笔记备份内容</label><textarea id="notes-export-json" rows="5" readonly spellcheck="false"></textarea></details>
+      <p id="notes-transfer-status" role="status" aria-live="polite"></p>
+    </details>
+  </dialog>
   <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
   <noscript><div class="noscript">请启用 JavaScript 浏览论文。</div></noscript>
 </body>

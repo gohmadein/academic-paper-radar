@@ -10,6 +10,8 @@ import * as model from '../lib/model.js';
 import * as digest from '../lib/digest-view.js';
 import * as institutions from '../lib/institutions.js';
 import * as transfer from '../lib/bookmark-transfer.js';
+import * as notes from '../lib/paper-notes.js';
+import * as notesView from '../lib/notes-view.js';
 const read=p=>readFile(new URL('../'+p,import.meta.url),'utf8');
 const index=JSON.parse(await read('data/index.json'));
 const latestDay=JSON.parse(await read('data/'+index.days[0].file));
@@ -22,11 +24,11 @@ async function appHarness({stored=new Map(),storageBlocked=false}={}){
     if(!elements.has(id))elements.set(id,{id,hidden:false,value:'',innerHTML:'',textContent:'',dataset:{},childNodes:[{textContent:''}],classList:{toggle(){},add(){},remove(){}},attributes:{},setAttribute(k,v){this.attributes[k]=v},removeAttribute(k){delete this.attributes[k]},addEventListener(type,fn){events[id+':'+type]=fn},open:false,isConnected:true,focus(){context.document.activeElement=this},close(){this.open=false},showModal(){this.open=true}});
     return elements.get(id);
   };
-  const context=vm.createContext({...researchMap,...profileIcons,...sources,...topics,...model,...digest,...institutions,...transfer,
-    e:model.escapeHTML,updateHUD(){},console,URL,URLSearchParams,CSS:{escape:x=>x},setTimeout,clearTimeout,
+  const context=vm.createContext({...researchMap,...profileIcons,...sources,...topics,...model,...digest,...institutions,...transfer,...notes,...notesView,
+    e:model.escapeHTML,updateHUD(){},console,URL,URLSearchParams,TextEncoder,CSS:{escape:x=>x},setTimeout,clearTimeout,
     document:{getElementById:element,querySelectorAll:()=>[],querySelector:()=>null,activeElement:null,body:{classList:{toggle(name,on){if(on)bodyClasses.add(name);else bodyClasses.delete(name)}}},addEventListener:(type,fn)=>{events[type]=fn}},
     window:{addEventListener:(type,fn)=>{windowEvents[type]=fn}},
-    localStorage:{getItem:k=>{if(storageBlocked)throw Error('storage blocked');return stored.get(k)},setItem:(k,v)=>{if(storageBlocked)throw Error('storage blocked');stored.set(k,v)}},
+    localStorage:{getItem:k=>{if(storageBlocked)throw Error('storage blocked');return stored.get(k)??null},setItem:(k,v)=>{if(storageBlocked)throw Error('storage blocked');stored.set(k,v)}},
     location,
     history:{pushState(_a,_b,hash){entries.splice(++position);entries.push(hash);location.hash=hash},replaceState(_a,_b,hash){entries[position]=hash;location.hash=hash}},
     fetch:async url=>({ok:true,json:async()=>JSON.parse(await readFile(url,'utf8'))})
@@ -216,7 +218,7 @@ test('Nine sidebar destinations show exactly one section, repeat safely and rest
 test('Site copy stays concise without removing functional state or demo warnings',async()=>{
   const h=await appHarness(),html=await read('index.html');
   for(const text of ['同源 JSON','NO BACKEND / NO TRACKING','少一点信息过载','有依据的精选','每一天，都有迹可循','纯前端阅读站','signal-panel'])assert.ok(!html.includes(text),text);
-  assert.ok(html.includes('书签与已读状态仅保存在本机，不会自动同步。'));
+  assert.ok(html.includes('书签、已读与笔记仅保存在本机，不会自动同步。'));
   h.click({sourceProfile:'xun',sourceType:'lab'});assert.equal(h.element('result-bar').hidden,true);
   h.click({category:'xun'});assert.equal(h.element('result-bar').hidden,false);
   assert.match(h.element('content').innerHTML,/预印本/);

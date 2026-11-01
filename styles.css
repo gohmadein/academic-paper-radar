@@ -591,3 +591,27 @@ dialog::backdrop{background:#18263f38}
 @media(max-width:1100px){.reading-intro.with-map{grid-template-columns:1fr;gap:20px}.research-map{width:100%;max-width:620px;justify-self:end}.with-map .section-heading{display:flex}.with-map #edition-status{margin-top:0}}
 @media(max-width:600px){.research-map{padding:15px}.reading-intro.with-map{gap:16px}.with-map .section-heading{display:block}.with-map #edition-status{margin-top:12px}.map-heading h3{font-size:16px}.map-modes button{font-size:10px;padding:6px}.map-scope{font-size:9px}}
 @media(prefers-reduced-motion:reduce){.map-marker span{transition:none}}
+
+/* Private, per-paper notes: same quiet action geometry as bookmark/share. */
+.note-button{position:relative;display:inline-grid;place-items:center;flex-shrink:0;width:36px;height:36px;padding:9px;border:0;border-radius:50%;background:#f3f5f8;color:#52627a;vertical-align:middle}
+.note-button svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.note-button:hover,.note-button.has-note{background:#e8eef7;color:var(--blue)}
+.note-dot{display:none;position:absolute;right:5px;bottom:5px;width:5px;height:5px;border-radius:50%;background:currentColor}
+.has-note .note-dot{display:block}
+#notes-dialog{width:calc(100% - 32px);max-width:640px}
+#notes-title{font-size:21px;margin:0}
+#notes-paper-title{font-size:15px;font-weight:600;line-height:1.6;margin:0 0 8px}
+#notes-privacy,.notes-backup p{font-size:11px;line-height:1.7;color:#52627a}
+#notes-dialog textarea{display:block;width:100%;resize:vertical;min-height:90px;padding:12px;border:1px solid #b8cae3;border-radius:8px;background:#fafcff;color:var(--ink);font:14px/1.8 var(--sans);box-sizing:border-box}
+#notes-text{min-height:220px}
+.notes-save-row,.notes-actions{display:flex;align-items:center;justify-content:space-between;gap:12px}
+#notes-status,#notes-count,#notes-transfer-status{font-size:11px;line-height:1.7}
+#notes-count{white-space:nowrap;color:#52627a}
+#notes-status.error{color:#b42318}
+.notes-actions .text-button{font-size:11px}
+.notes-backup{margin-top:18px;border-top:1px solid #e3eaf3;padding-top:12px}
+.notes-backup summary{cursor:pointer;font-size:12px;color:#52627a}
+.notes-backup details{margin-top:12px}
+.notes-backup .transfer-actions{margin:12px 0}
+#dialog-content>.note-button{margin-left:12px}
+@media(max-width:700px){.note-button{width:40px;height:40px}.notes-save-row{align-items:flex-start}#notes-dialog{padding:20px}#notes-text{min-height:180px}}
