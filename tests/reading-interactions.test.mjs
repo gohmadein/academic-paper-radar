@@ -1,3 +1,4 @@
+import * as calendarTaskModule from '../lib/calendar-tasks.js';
 import * as calendar from '../lib/research-calendar.js';
 import * as liBackground from '../lib/li-background.js';
 import * as sideArt from '../lib/side-art.js';
@@ -38,10 +39,10 @@ async function harness({navigator={},storageFailure=false}={}) {
   });
   const element=id=>{if(!elements.has(id))elements.set(id,make(id));return elements.get(id)};
   const query=selector=>{const match=selector.match(/\[data-([\w-]+)="([^"]+)"\]/);if(!match)return null;const key=match[1].replace(/-([a-z])/g,(_,c)=>c.toUpperCase());return make(selector,{[key]:match[2],paperControl:true})};
-  context=vm.createContext({...calendar,...liBackground,...sideArt,...researchMap,...profileIcons,...sources,...topics,...model,...digest,...institutions,...transfer,...sharing,...media,...notes,...notesView,
+  context=vm.createContext({...calendarTaskModule,...calendar,...liBackground,...sideArt,...researchMap,...profileIcons,...sources,...topics,...model,...digest,...institutions,...transfer,...sharing,...media,...notes,...notesView,
     navigator,e:model.escapeHTML,updateHUD(){},console,URL,URLSearchParams,TextEncoder,CSS:{escape:x=>x},setTimeout:(fn)=>{timers.set(++timerId,fn);return timerId},clearTimeout:id=>timers.delete(id),
     document:{title:'ZERO FIELD',getElementById:element,querySelectorAll:()=>[],querySelector:query,activeElement:make('body'),body:{classList:{toggle(name,on){if(on)bodyClasses.add(name);else bodyClasses.delete(name)}}},addEventListener:(type,fn)=>on(type,fn)},
-    window:{addEventListener:(type,fn)=>{windowEvents[type]=fn}},localStorage:{getItem:k=>stored.get(k)??null,setItem:(k,v)=>{if(storageFailure)throw Error('QuotaExceededError');stored.set(k,v)}},location,
+    window:{confirm:()=>true,addEventListener:(type,fn)=>{windowEvents[type]=fn}},localStorage:{getItem:k=>stored.get(k)??null,setItem:(k,v)=>{if(storageFailure)throw Error('QuotaExceededError');stored.set(k,v)}},location,
     history:{pushState(_a,_b,hash){entries.splice(++position);entries.push(hash);location.hash=hash},replaceState(_a,_b,hash){entries[position]=hash;location.hash=hash}},
     fetch:async url=>({ok:true,json:async()=>JSON.parse(await readFile(url,'utf8'))})});
   const source=(await read('app.js')).replace(/^import .*;\n/gm,'').replaceAll('import.meta.url',JSON.stringify(new URL('../app.js',import.meta.url).href)).replace('\ninit();','\nglobalThis.boot=init();');
@@ -280,4 +281,30 @@ test('Shared glass follows real feeds while Li photographs remain exclusive acro
  h.run("go({demo:false})");
  assert.ok(h.bodyClasses.has('feed-glass'));
  assert.ok(h.bodyClasses.has('li-glass'));
+});
+
+test('Private calendar create/edit/complete/delete stays local and keeps paper state unchanged',async()=>{
+ const h=await harness(),route=h.location.hash;
+ await h.click({calendarTaskAdd:'2026-11-05'});h.element('calendar-task-text').value='<img src=x> synthetic task';
+ await h.fire('calendar-task-save:click');
+ assert.equal(h.element('calendar-task-dialog').open,false);
+ const task=h.run('calendarTasks.list()[0]');assert.equal(task.date,'2026-11-05');
+ assert.equal(JSON.parse(h.stored.get(calendarTaskModule.CALENDAR_TASKS_KEY)).tasks.length,1);
+ await h.click({calendarTaskToggle:task.id});assert.equal(h.run('calendarTasks.list()[0].done'),true);
+ await h.click({calendarTaskEdit:task.id});h.element('calendar-task-date').value='2026-11-06';
+ await h.fire('calendar-task-cancel:click');assert.equal(h.run('calendarEditorDraft.date'),'2026-11-06');
+ await h.click({calendarTaskEdit:task.id});assert.equal(h.element('calendar-task-date').value,'2026-11-06');await h.fire('calendar-task-save:click');
+ assert.equal(h.run('calendarTasks.list()[0].date'),'2026-11-06');
+ await h.click({calendarTaskDelete:task.id});assert.equal(h.run('calendarTasks.list().length'),0);assert.equal(h.location.hash,route);
+});
+
+test('Calendar save failure retains text/draft and warns on unload; public refresh preserves editor',async()=>{
+ const h=await harness({storageFailure:true});await h.click({calendarTaskAdd:'2026-11-07'});
+ h.element('calendar-task-text').value='unsaved synthetic draft';await h.fire('calendar-task-save:click');
+ assert.equal(h.element('calendar-task-dialog').open,true);assert.match(h.element('calendar-task-status').textContent,/尚未保存/);
+ let warned=false;h.windowEvents.beforeunload({preventDefault(){warned=true}});assert.ok(warned);
+ h.run('calendarLastAttempt=0;');await h.run('refreshCalendarData(true)');
+ assert.equal(h.element('calendar-task-text').value,'unsaved synthetic draft');assert.equal(h.element('calendar-task-dialog').open,true);
+ h.run('fetch=async()=>{throw Error("offline")};calendarLastAttempt=0');const before=h.run('calendarData');await h.run('refreshCalendarData(true)');
+ assert.equal(h.run('calendarData'),before);assert.match(h.run('calendarRefreshError'),/保留/);
 });

@@ -1,3 +1,4 @@
+import {createCalendarTaskStore,CALENDAR_TASKS_KEY,MAX_CALENDAR_TASKS_BYTES} from './lib/calendar-tasks.js';
 import {calendarDate,shiftCalendarMonth,calendarEventDay,researchCalendarHTML,validateCalendar} from './lib/research-calendar.js';
 import {liBackgroundClass} from './lib/li-background.js';
 import {sideArtLayout} from './lib/side-art.js';
@@ -17,6 +18,7 @@ import {makeBookmarkExport,parseBookmarkImport,mergeBookmarkImport,MAX_BOOKMARK_
 
 const $ = id => document.getElementById(id);
 const BOOKMARK_KEY = 'paper-signal-bookmarks-v1';
+const calendarTasks=createCalendarTaskStore({getItem:key=>localStorage.getItem(key),setItem:(key,value)=>localStorage.setItem(key,value)});
 const notes = createNotesStore({getItem:key=>localStorage.getItem(key),setItem:(key,value)=>localStorage.setItem(key,value)});
 let noteId='', noteTrigger=null, noteTimer, resumeDetail=false;
 const READ_KEY = 'paper-signal-read-v1';
@@ -67,6 +69,8 @@ let mapProfile = '';
 let mapPaper = '';
 let lastMapMarkup = '';
 let calendarData=null,calendarMonth='',calendarSelected='',lastCalendarMarkup='',calendarTimer;
+let calendarTab='conference',calendarScope='main',calendarFetchedDay='',calendarFetching=false,calendarLastAttempt=0,calendarRefreshError='';
+let calendarEditingId='',calendarEditorOriginal='',calendarEditorOriginalDate='',calendarEditorDraft=null,calendarTaskTrigger=null;
 let bookmarks;
 let storageAvailable = true;
 let toastTimer;
@@ -109,7 +113,7 @@ async function init() {
     const [real,demo,institutions] = await Promise.all([loadCollection('data',false),loadCollection('data/demo',true),getJSON('data/institutions.json')]);
     const geography = await getJSON('data/paper-geography.json').catch(()=>null);
     const calendar = await getJSON('data/conference-calendar.json').catch(()=>null);
-    calendarData=calendar&&!validateCalendar(calendar).length?calendar:null;
+    calendarData=calendar?.coverage?.length&&!validateCalendar(calendar).length?calendar:null;calendarFetchedDay=calendarData?calendarDate():'';
     data = {real,demo,institutions,geography};
     if(state.view==='feed'&&!state.demo&&!new URLSearchParams(location.hash.slice(1)).has('date')&&real.days.length){state.date=real.days[0].date;history.replaceState(null,'',routeHash(state));}
     $('real-count').textContent = String(real.papers.length).padStart(2,'0');
@@ -146,6 +150,7 @@ function updateViewChrome() {
   $('research-calendar').hidden = !isFeed || state.demo || state.category !== 'xun';
   renderCalendar();
   $('reading-intro').classList.toggle('with-map',isFeed&&!state.demo);
+  $('reading-intro').classList.toggle('with-calendar',isFeed&&!state.demo&&state.category==='xun');
   $('hero').hidden = !isFeed;
   $('demo-banner').hidden = !isFeed || !state.demo;
   $('page-demo-note').hidden = isFeed || !state.demo || state.view==='sources';
@@ -153,6 +158,7 @@ function updateViewChrome() {
 }
 
 function go(patch, {replace = false} = {}) {
+  closeCalendarTask();
   closeNotes(false);
   shareRequest++;
   if ($('share-dialog').open) $('share-dialog').close();
@@ -198,13 +204,22 @@ function emptyState(kind) {
 function renderCalendar() {
   clearTimeout(calendarTimer);
   if($('research-calendar').hidden||document.hidden)return;
-  const markup=researchCalendarHTML(calendarData,{month:calendarMonth,selectedDate:calendarSelected});
+  if(calendarFetchedDay!==calendarDate())refreshCalendarData();
+  const taskError=calendarTasks.error||((calendarTasks.dirty)?'尚未保存：草稿仅在当前页面，请重试或导出。':'');
+  const markup=researchCalendarHTML(calendarData,{month:calendarMonth,selectedDate:calendarSelected,tab:calendarTab,scope:calendarScope,tasks:calendarTasks.list(),taskError,refreshError:calendarRefreshError});
   if(markup!==lastCalendarMarkup){$('research-calendar').innerHTML=markup;lastCalendarMarkup=markup;}
   calendarTimer=setTimeout(renderCalendar,60000);
   calendarTimer?.unref?.(); // Node test harness only; browsers use numeric timer IDs.
 }
-window.addEventListener('focus',renderCalendar);
-document.addEventListener('visibilitychange',()=>{if(!document.hidden)renderCalendar();});
+async function refreshCalendarData(force=false){
+  if(calendarFetching||Date.now()-calendarLastAttempt<60000||(!force&&calendarFetchedDay===calendarDate()))return;
+  calendarFetching=true;calendarLastAttempt=Date.now();
+  try{const next=await getJSON('data/conference-calendar.json');if(!next?.coverage?.length||validateCalendar(next).length)throw new Error('invalid calendar');calendarData=next;calendarFetchedDay=calendarDate();calendarRefreshError='';}
+  catch{calendarRefreshError='刷新失败，保留上次已核验的会议资料。';}
+  finally{calendarFetching=false;renderCalendar();}
+}
+window.addEventListener('focus',()=>{refreshCalendarData(true);renderCalendar();});
+document.addEventListener('visibilitychange',()=>{if(!document.hidden){refreshCalendarData(true);renderCalendar();}else clearTimeout(calendarTimer);});
 
 function renderMap() {
   if(!data)return;
@@ -301,6 +316,14 @@ function closeDialog() {
 document.addEventListener('click', event => {
   const b = event.target.closest('button');
   if (!b) return;
+  if(b.dataset.calendarTab){calendarTab=b.dataset.calendarTab==='private'?'private':'conference';renderCalendar();document.querySelector(`[data-calendar-tab="${calendarTab}"]`)?.focus({preventScroll:true});return;}
+  if(b.dataset.calendarScope){calendarScope=b.dataset.calendarScope==='all'?'all':'main';calendarSelected='';renderCalendar();return;}
+  if(b.dataset.calendarTaskAdd){openCalendarTask('',b.dataset.calendarTaskAdd,b);return;}
+  if(b.dataset.calendarTaskEdit){openCalendarTask(b.dataset.calendarTaskEdit,'',b);return;}
+  if(b.dataset.calendarTaskBackup){openCalendarTask('',calendarSelected||calendarDate(),b);return;}
+  if(b.dataset.calendarTaskRetry){calendarTasks.flush();renderCalendar();return;}
+  if(b.dataset.calendarTaskToggle){try{const task=calendarTasks.get(b.dataset.calendarTaskToggle);if(task){calendarTasks.set({id:task.id,date:task.date,text:task.text,done:!task.done});calendarTasks.flush();renderCalendar();}}catch(error){toast(error.message);}return;}
+  if(b.dataset.calendarTaskDelete){if(window.confirm('删除这条本机私人事项？')){calendarTasks.remove(b.dataset.calendarTaskDelete);calendarTasks.flush();renderCalendar();}return;}
   if(b.dataset.calendarMonth){calendarMonth=shiftCalendarMonth(calendarMonth||calendarDate().slice(0,7),Number(b.dataset.calendarMonth));calendarSelected='';renderCalendar();document.querySelector(`[data-calendar-month="${b.dataset.calendarMonth}"]`)?.focus({preventScroll:true});return;}
   if(b.dataset.calendarToday){calendarMonth='';calendarSelected=calendarDate();renderCalendar();document.querySelector('[data-calendar-today]')?.focus({preventScroll:true});return;}
   if(b.dataset.calendarDate){calendarSelected=b.dataset.calendarDate;renderCalendar();document.querySelector(`[data-calendar-date="${calendarSelected}"]`)?.focus({preventScroll:true});return;}
@@ -404,14 +427,14 @@ $('about-button').addEventListener('click',()=>{
   $('dialog-content').innerHTML = '<h2 id="dialog-title">零域 / ZERO FIELD</h2><p>迅、李、驴的每日论文精选。</p><p>书签、已读与笔记仅保存在本机，不会自动同步；清除浏览器数据会删除记录。</p><p>研究足迹按已核验的作者署名机构所在城市点亮；跨地区论文可点亮多处，篇数按论文去重。城市点位为示意，不代表国籍。底图：<a href="https://www.naturalearthdata.com/about/terms-of-use/" target="_blank" rel="noopener noreferrer">Natural Earth · 公共领域</a>，仅显示陆地轮廓。</p>';
   $('detail-dialog').showModal();
 });
-function syncRoute(){if(location.hash==='#main')return;closeNotes(false);shareRequest++;if($('share-dialog').open)$('share-dialog').close();state=readRoute(location.hash);updateViewChrome();if(data)render();}
+function syncRoute(){if(location.hash==='#main')return;closeCalendarTask();closeNotes(false);shareRequest++;if($('share-dialog').open)$('share-dialog').close();state=readRoute(location.hash);updateViewChrome();if(data)render();}
 window.addEventListener('popstate',syncRoute);
 window.addEventListener('hashchange',syncRoute);
 // Refresh date-sensitive counts after returning to an overnight-open tab.
 window.addEventListener('focus',()=>{if(data&&state.view==='feed'&&!state.demo)renderMap();});
 document.addEventListener('visibilitychange',()=>{if(!document.hidden&&data&&state.view==='feed'&&!state.demo)renderMap();});
-window.addEventListener('storage',event=>{if(event.key===BOOKMARK_KEY){bookmarks=parseBookmarks(event.newValue);if(data)render();}});
-document.addEventListener('keydown',event=>{if(event.key==='/' && !event.ctrlKey && !event.metaKey && !event.altKey && !$('detail-dialog').open && !$('share-dialog').open && !$('notes-dialog').open && !['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName) && !$('filter-panel').hidden){event.preventDefault();$('search').focus();}});
+window.addEventListener('storage',event=>{if(event.key===CALENDAR_TASKS_KEY){if(!$('calendar-task-dialog').open&&!calendarTasks.dirty)calendarTasks.reload();else $('calendar-task-status').textContent='其他标签页已更新；请先导出本页草稿再重新加载。';renderCalendar();}if(event.key===BOOKMARK_KEY){bookmarks=parseBookmarks(event.newValue);if(data)render();}});
+document.addEventListener('keydown',event=>{if(event.key==='/' && !event.ctrlKey && !event.metaKey && !event.altKey && !$('detail-dialog').open && !$('share-dialog').open && !$('notes-dialog').open && !$('calendar-task-dialog').open && !['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName) && !$('filter-panel').hidden){event.preventDefault();$('search').focus();}});
 function updateNoteButtons() {
   document.querySelectorAll('[data-note]').forEach(button=>{
     const has=notes.has(button.dataset.note);
@@ -502,8 +525,53 @@ $('notes-import').addEventListener('change',async event=>{
 });
 $('notes-import-pasted').addEventListener('click',()=>{try{importNotes($('notes-import-json').value);}catch(error){$('notes-transfer-status').textContent=`导入失败，原笔记未改变：${error.message}`;}});
 window.addEventListener('pagehide',flushNotes);
-window.addEventListener('beforeunload',event=>{if(!flushNotes()&&notes.dirty){event.preventDefault();event.returnValue='';}});
+window.addEventListener('beforeunload',event=>{const notesFailed=!flushNotes()&&notes.dirty;if(notesFailed||calendarTasks.dirty||calendarEditorDraft||($('calendar-task-dialog').open&&calendarEditorChanged())){event.preventDefault();event.returnValue='';}});
 document.addEventListener('visibilitychange',()=>{if(document.hidden)flushNotes();});
+
+function calendarEditorChanged(){return $('calendar-task-text').value!==calendarEditorOriginal||$('calendar-task-date').value!==calendarEditorOriginalDate;}
+function openCalendarTask(id,date,trigger){
+ const task=calendarTasks.get(id);
+ const draft=calendarEditorDraft;
+ calendarEditingId=draft?.id||task?.id||'';calendarTaskTrigger=trigger;
+ $('calendar-task-date').value=draft?.date||task?.date||date||calendarDate();
+ $('calendar-task-text').value=draft?.text??task?.text??'';
+ calendarEditorOriginal=draft?.original??task?.text??'';calendarEditorOriginalDate=draft?.originalDate??task?.date??$('calendar-task-date').value;
+ $('calendar-task-status').textContent=draft?'已恢复未保存的本页草稿。':calendarTasks.error||'';
+ $('calendar-task-dialog').showModal();$('calendar-task-text').focus();
+}
+function closeCalendarTask(){
+ if(!$('calendar-task-dialog').open)return;
+ if(calendarEditorChanged())calendarEditorDraft={id:calendarEditingId,date:$('calendar-task-date').value,text:$('calendar-task-text').value,original:calendarEditorOriginal,originalDate:calendarEditorOriginalDate};
+ $('calendar-task-dialog').close();calendarTaskTrigger?.focus?.({preventScroll:true});
+}
+function stageCalendarTask(){
+ const task=calendarTasks.set({id:calendarEditingId||undefined,date:$('calendar-task-date').value,text:$('calendar-task-text').value,done:calendarTasks.get(calendarEditingId)?.done||false});
+ calendarEditingId=task.id;return task;
+}
+$('calendar-task-save').addEventListener('click',()=>{
+ try{const task=stageCalendarTask();if(!calendarTasks.flush())throw new Error(calendarTasks.error||'尚未保存');calendarEditorOriginal=task.text;calendarEditorOriginalDate=task.date;calendarEditorDraft=null;calendarSelected=task.date;calendarMonth=task.date.slice(0,7);calendarTab='private';$('calendar-task-status').textContent='已保存到本机';closeCalendarTask();renderCalendar();}
+ catch(error){$('calendar-task-status').textContent='尚未保存：'+error.message;renderCalendar();}
+});
+$('calendar-task-close').addEventListener('click',closeCalendarTask);
+$('calendar-task-cancel').addEventListener('click',closeCalendarTask);
+$('calendar-task-discard').addEventListener('click',()=>{if(calendarTasks.dirty){$('calendar-task-status').textContent='已有尚未写入的事项，请先导出或重试保存；不会丢弃这些记录。';return;}if(!window.confirm('放弃当前未保存的编辑草稿？'))return;calendarEditorDraft=null;$('calendar-task-text').value=calendarEditorOriginal;$('calendar-task-date').value=calendarEditorOriginalDate;closeCalendarTask();});
+$('calendar-task-dialog').addEventListener('cancel',event=>{event.preventDefault();closeCalendarTask();});
+$('calendar-task-export').addEventListener('click',()=>{
+ try{
+  if($('calendar-task-text').value.trim()&&calendarEditorChanged())stageCalendarTask();
+  const text=calendarTasks.export();$('calendar-task-backup-text').value=text;
+  const url=URL.createObjectURL(new Blob([text],{type:'application/json;charset=utf-8'}));const anchor=document.createElement('a');anchor.href=url;anchor.download='paper-signal-calendar-tasks.json';document.body.append(anchor);anchor.click();anchor.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);
+  $('calendar-task-transfer-status').textContent='备份已生成；下载未出现时请复制上面的JSON（包含私人事项，勿公开上传）。';
+ }catch(error){$('calendar-task-transfer-status').textContent='导出失败：'+error.message;}
+});
+function importCalendarTasks(text){
+ if(calendarEditorChanged())throw new Error('请先保存或导出编辑草稿，再导入');
+ const result=calendarTasks.import(text);$('calendar-task-transfer-status').textContent=`已导入 ${result.added} 条；重复 ${result.duplicates} 条，冲突跳过 ${result.conflicts} 条。`;renderCalendar();
+}
+$('calendar-task-import-pasted').addEventListener('click',()=>{try{importCalendarTasks($('calendar-task-backup-text').value);}catch(error){$('calendar-task-transfer-status').textContent='导入失败：'+error.message;}});
+$('calendar-task-import').addEventListener('change',async event=>{try{const file=event.target.files?.[0];if(!file)return;if(file.size>MAX_CALENDAR_TASKS_BYTES)throw new Error('文件超过1MiB');importCalendarTasks(await file.text());}catch(error){$('calendar-task-transfer-status').textContent='导入失败：'+error.message;}finally{event.target.value='';}});
+
+
 init();
 
-document.addEventListener('keydown',event=>{const strip=$('institution-strip');if(strip)institutionKeydown(event,strip);});
+document.addEventListener('keydown',event=>{const tab=event.target?.closest?.('[data-calendar-tab]');if(tab&&['ArrowLeft','ArrowRight','Home','End'].includes(event.key)){event.preventDefault();calendarTab=event.key==='Home'?'private':event.key==='End'?'conference':calendarTab==='private'?'conference':'private';renderCalendar();document.querySelector(`[data-calendar-tab="${calendarTab}"]`)?.focus();return;}const strip=$('institution-strip');if(strip)institutionKeydown(event,strip);});

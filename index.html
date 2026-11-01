@@ -57,7 +57,7 @@
     <div id="demo-banner" class="demo-banner" hidden><span><strong>演示模式</strong> 当前所有条目均为演示数据，非真实论文；不计入真实收录。</span><button id="exit-demo">返回真实内容 <span aria-hidden="true">↗</span></button></div>
     <section class="workspace" aria-label="论文阅读区">
       <div class="feed-column">
-        <div id="reading-intro" class="reading-intro"><div class="section-heading"><div><p class="eyebrow">THE READING DESK</p><h2 id="view-title">每日精选<span class="heading-slash"> / </span><span id="edition-label">等待首期</span></h2><p id="profile-motto" class="profile-motto" hidden></p><section id="research-calendar" class="research-calendar" aria-labelledby="research-calendar-title" hidden></section></div><span class="small-label" id="edition-status">AWAITING SIGNAL</span></div><aside id="research-map" class="research-map" aria-labelledby="research-map-title" hidden></aside></div>
+        <div id="reading-intro" class="reading-intro"><div class="section-heading"><div><div class="reading-title"><p class="eyebrow">THE READING DESK</p><h2 id="view-title">每日精选<span class="heading-slash"> / </span><span id="edition-label">等待首期</span></h2></div><p id="profile-motto" class="profile-motto" hidden></p><section id="research-calendar" class="research-calendar" aria-labelledby="research-calendar-title" hidden></section></div><span class="small-label" id="edition-status">AWAITING SIGNAL</span></div><aside id="research-map" class="research-map" aria-labelledby="research-map-title" hidden></aside></div>
         <p id="page-demo-note" class="page-demo-note" hidden><span>演示档案 · 非真实论文</span><button id="exit-page-demo">查看真实内容 ↗</button></p>
         <section id="bookmark-transfer" class="transfer-panel" aria-labelledby="transfer-title" hidden><div><p class="eyebrow">MANUAL TRANSFER / 本机书签</p><h3 id="transfer-title">书签迁移</h3><p>导出后可在另一设备导入。</p></div><div class="transfer-actions"><button id="export-bookmarks" class="secondary-button">导出 JSON <span aria-hidden="true">↓</span></button><label class="transfer-import secondary-button"><span>导入 JSON <span aria-hidden="true">↑</span></span><input id="import-bookmarks" type="file" accept=".json,application/json" aria-label="导入本机书签 JSON 文件"></label></div><p id="transfer-status" class="transfer-status" role="status" aria-live="polite"></p><details id="paste-import"><summary>也可粘贴 JSON 导入</summary><label for="import-json">粘贴本站导出的完整 JSON</label><textarea id="import-json" rows="6" maxlength="262144" spellcheck="false" placeholder="粘贴完整的书签 JSON 内容"></textarea><button class="secondary-button" id="import-pasted">合并导入</button></details><details id="export-preview" hidden><summary>下载未出现？查看并复制 JSON</summary><label for="export-json">导出文件内容（只读）</label><textarea id="export-json" readonly rows="7" spellcheck="false"></textarea><p>复制并保存为 .json 文件。</p></details></section>
         <div id="issue-panel"></div><div class="filter-panel" id="filter-panel">
@@ -89,6 +89,15 @@
       <details id="notes-export-preview" hidden><summary>下载未出现？复制 JSON</summary><label class="sr-only" for="notes-export-json">笔记备份内容</label><textarea id="notes-export-json" rows="5" readonly spellcheck="false"></textarea></details>
       <p id="notes-transfer-status" role="status" aria-live="polite"></p>
     </details>
+  </dialog>
+  <dialog id="calendar-task-dialog" aria-labelledby="calendar-task-title">
+    <div class="dialog-top"><h2 id="calendar-task-title">私人事项</h2><button id="calendar-task-close" class="icon-button" aria-label="关闭私人事项编辑器">×</button></div>
+    <p class="calendar-private-note">只保存在此浏览器，不上传、不发送提醒。清除浏览器数据会丢失，请单独备份。</p>
+    <label for="calendar-task-date">日期</label><input id="calendar-task-date" type="date" required>
+    <label for="calendar-task-text">要处理的事情</label><textarea id="calendar-task-text" rows="5" maxlength="2000" placeholder="添加这一天的私人事项"></textarea>
+    <p id="calendar-task-status" role="status" aria-live="polite"></p>
+    <button id="calendar-task-save" class="primary-button">保存到本机</button><button id="calendar-task-cancel" class="text-button">关闭（保留草稿）</button><button id="calendar-task-discard" class="text-button">放弃编辑草稿</button>
+    <details class="calendar-task-backup"><summary>事项备份与迁移</summary><p>独立JSON，不混入论文笔记/书签；导入保留本机冲突版本。最多1MiB。</p><button id="calendar-task-export" class="secondary-button">导出事项JSON</button><label class="secondary-button">导入JSON<input id="calendar-task-import" type="file" accept=".json,application/json"></label><label for="calendar-task-backup-text">复制备份或粘贴待导入JSON</label><textarea id="calendar-task-backup-text" rows="4" maxlength="1048576" spellcheck="false"></textarea><button id="calendar-task-import-pasted" class="text-button">合并导入</button><p id="calendar-task-transfer-status" role="status"></p></details>
   </dialog>
   <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
   <noscript><div class="noscript">请启用 JavaScript 浏览论文。</div></noscript>

@@ -1,3 +1,4 @@
+import * as calendarTaskModule from '../lib/calendar-tasks.js';
 import * as calendar from '../lib/research-calendar.js';
 import * as liBackground from '../lib/li-background.js';
 import * as sideArt from '../lib/side-art.js';
@@ -27,7 +28,7 @@ async function appHarness({stored=new Map(),storageBlocked=false}={}){
     if(!elements.has(id))elements.set(id,{id,hidden:false,value:'',innerHTML:'',textContent:'',dataset:{},childNodes:[{textContent:''}],classList:{toggle(){},add(){},remove(){}},attributes:{},setAttribute(k,v){this.attributes[k]=v},removeAttribute(k){delete this.attributes[k]},addEventListener(type,fn){events[id+':'+type]=fn},open:false,isConnected:true,focus(){context.document.activeElement=this},close(){this.open=false},showModal(){this.open=true}});
     return elements.get(id);
   };
-  const context=vm.createContext({...calendar,...liBackground,...sideArt,...researchMap,...profileIcons,...sources,...topics,...model,...digest,...institutions,...transfer,...notes,...notesView,
+  const context=vm.createContext({...calendarTaskModule,...calendar,...liBackground,...sideArt,...researchMap,...profileIcons,...sources,...topics,...model,...digest,...institutions,...transfer,...notes,...notesView,
     e:model.escapeHTML,updateHUD(){},console,URL,URLSearchParams,TextEncoder,CSS:{escape:x=>x},setTimeout,clearTimeout,
     document:{getElementById:element,querySelectorAll:()=>[],querySelector:()=>null,activeElement:null,body:{classList:{toggle(name,on){if(on)bodyClasses.add(name);else bodyClasses.delete(name)}}},addEventListener:(type,fn)=>{events[type]=fn}},
     window:{addEventListener:(type,fn)=>{windowEvents[type]=fn}},
@@ -239,7 +240,7 @@ test('Site copy stays concise without removing functional state or demo warnings
 
 test('Exact profile mottos appear only below their real daily feed heading without blank placeholders',async()=>{
   const h=await appHarness(),html=await read('index.html'),css=await read('styles.css');
-  assert.match(html,/<\/h2><p id="profile-motto" class="profile-motto" hidden><\/p>/);
+  assert.match(html,/<\/h2><\/div><p id="profile-motto" class="profile-motto" hidden><\/p>/);
   assert.match(css,/\[hidden\]\{display:none!important\}/);
   const motto=h.element('profile-motto');
   assert.equal(motto.hidden,true);assert.equal(motto.textContent,'');

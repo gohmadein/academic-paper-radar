@@ -1,3 +1,4 @@
+import {validateCalendar} from '../lib/research-calendar.js';
 import {readFile, readdir} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 import {resolve, join} from 'node:path';
@@ -57,6 +58,11 @@ export async function validateAll(base = root,{assetBase=base}={}) {
     const files = await readdir(join(path,'days')).catch(error => error.code==='ENOENT' ? [] : Promise.reject(error));
     for (const file of files) if (!index.days.some(e => e.file===`days/${file}`)) errors.push(`${directory}/days/${file}: 未写入日期索引`);
   }
+  try{
+    const calendar=JSON.parse(await readFile(join(base,'data/conference-calendar.json'),'utf8'));
+    const registry=JSON.parse(await readFile(join(assetBase,'config/source-registry.json'),'utf8').catch(()=>readFile(join(root,'config/source-registry.json'),'utf8')));
+    errors.push(...validateCalendar(calendar,registry.sources.filter(source=>source.type==='conference').map(source=>source.name)).map(error=>'data/conference-calendar.json: '+error));
+  }catch(error){errors.push('data/conference-calendar.json: '+error.message);}
   return {errors,count,assets:[...assetPaths].sort()};
 }
 

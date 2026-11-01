@@ -1,9 +1,221 @@
 {
   "version": 1,
-  "scope": "按迅关注清单定向核验的 6 个近期/核心节点，并非全量会议覆盖。",
+  "checkedAt": "2026-11-01",
+  "scope": "按 source-registry.json 全部14个关注会议逐项核验；核验覆盖不等于全部日期已公布，日期冲突与未公布项明确保留。",
+  "coverage": [
+    {
+      "sourceId": "CoRL",
+      "edition": 2026,
+      "status": "verified",
+      "checkedAt": "2026-11-01",
+      "sourceUrls": [
+        "https://www.corl.org/"
+      ],
+      "note": "未来最近一届2026；2027未核实公布，不估算。2026主会与late-breaking投稿已过期。"
+    },
+    {
+      "sourceId": "RSS",
+      "edition": 2027,
+      "status": "verified",
+      "checkedAt": "2026-11-01",
+      "sourceUrls": [
+        "https://roboticsconference.org/attending/travel/",
+        "https://roboticsconference.org/information/cfp/"
+      ],
+      "note": "主会两阶段制；阶段一不是单纯摘要登记。已核验阶段二、补充材料、定稿期限及会场。"
+    },
+    {
+      "sourceId": "ICRA",
+      "edition": 2027,
+      "status": "verified",
+      "checkedAt": "2026-11-01",
+      "sourceUrls": [
+        "https://2027.ieee-icra.org/",
+        "https://2027.ieee-icra.org/contribute/call-for-icra-2027-papers-now-accepting-submissions/",
+        "https://2027.ieee-icra.org/contribute/call-for-workshop-and-tutorial/"
+      ],
+      "note": "普通论文投稿已结束；完整workshop提案更新为11/2。期刊转入12/31仅特定已录用期刊论文。"
+    },
+    {
+      "sourceId": "IROS",
+      "edition": 2027,
+      "status": "conflict",
+      "checkedAt": "2026-11-01",
+      "sourceUrls": [
+        "https://www.ieee-ras.org/event/2027-ieee-rsj-international-conference-on-intelligent-robots-and-systems-iros-70525/",
+        "https://www.ieee-ras.org/conferences-workshops/financially-co-sponsored/iros/iros-past-and-future-venues/",
+        "https://ras.papercept.net/conferences/scripts/requestassistancepanel.pl",
+        "https://2027.ieee-iros.org/"
+      ],
+      "note": "RAS活动页和Future Venues列9/27–10/1，PaperCept另列9/25–9/30；官网根路径读取还曾跳至2023。会期冲突不做倒计时；RAS明确论文截止3/1，时区未知。"
+    },
+    {
+      "sourceId": "NeurIPS",
+      "edition": 2026,
+      "status": "verified",
+      "checkedAt": "2026-11-01",
+      "sourceUrls": [
+        "https://neurips.cc/Conferences/2026/Dates",
+        "https://neurips.cc/Conferences/2026/VenueInformation"
+      ],
+      "note": "下一届仍是 2026；2027 不从往年估算。只收主会和官方卫星会期，不把展商操作期限当论文投稿期限。"
+    },
+    {
+      "sourceId": "ICLR",
+      "edition": 2027,
+      "status": "verified",
+      "checkedAt": "2026-11-01",
+      "sourceUrls": [
+        "https://iclr.cc/Conferences/2027",
+        "https://iclr.cc/Conferences/2027/Dates",
+        "https://iclr.cc/Conferences/2027/CallForWorkshops",
+        "https://openreview.net/group?id=ICLR.cc/2027/Conference"
+      ],
+      "note": "官网主会 4/26–28，workshops 4/29–30。城市由官方 CallForWorkshops 与官方 OpenReview 支持；会场正文仍待公布，不能仅凭 Moscone 图片 alt 确认。Workshop CFP 正文有 2026 年笔误，不据此变更官网 2027 会期。2/1 workshop contribution 为 suggested，不视为硬截止。"
+    },
+    {
+      "sourceId": "ICML",
+      "edition": 2027,
+      "status": "unpublished",
+      "checkedAt": "2026-11-01",
+      "sourceUrls": [
+        "https://icml.cc/Conferences/FutureMeetings",
+        "https://icml.cc/"
+      ],
+      "note": "FutureMeetings 仅公告 South America。/Conferences/2027 工具访问失败；不是整个官网访问失败。无可核验精确日期，不采用第三方预测。"
+    },
+    {
+      "sourceId": "CVPR",
+      "edition": 2027,
+      "status": "verified",
+      "checkedAt": "2026-11-01",
+      "sourceUrls": [
+        "https://cvpr.thecvf.com/Conferences/2027",
+        "https://cvpr.thecvf.com/Conferences/2027/Dates",
+        "https://cvpr.thecvf.com/Conferences/2027/CallForPapers",
+        "https://cvpr.thecvf.com/Conferences/2027/CallForWorkshops"
+      ],
+      "note": "2027 Dates and homepage agree June20–25. Older CVF general announcement says June20–24 and June2026 press says June19–26; do not use old dates."
+    },
+    {
+      "sourceId": "ICCV",
+      "edition": 2027,
+      "status": "conflict",
+      "checkedAt": "2026-11-01",
+      "sourceUrls": [
+        "https://iccv.thecvf.com/Conferences/2027/Dates",
+        "https://iccv.thecvf.com/"
+      ],
+      "note": "Display place and 待核对日期; withhold overall conference countdown until conflict resolved. No inferred submission deadlines."
+    },
+    {
+      "sourceId": "ECCV",
+      "edition": 2028,
+      "status": "unpublished",
+      "checkedAt": "2026-11-01",
+      "sourceUrls": [
+        "https://eccv.ecva.net/",
+        "https://www.ecva.net/"
+      ],
+      "note": "Current official conference page is completed ECCV2026; association conference list and scoped searches found no official 2028 date/place/CFP. This is a scoped negative finding, not exhaustive proof."
+    },
+    {
+      "sourceId": "3DV",
+      "edition": 2027,
+      "status": "verified",
+      "checkedAt": "2026-11-01",
+      "sourceUrls": [
+        "https://3dvconf.github.io/2027/"
+      ],
+      "note": "2027 main submission already closed per official OpenReview. Homepage next item is final notification Dec2, not submission. No future submission date claimed."
+    },
+    {
+      "sourceId": "Humanoids",
+      "edition": 2026,
+      "status": "conflict",
+      "checkedAt": "2026-11-01",
+      "sourceUrls": [
+        "https://www.ieee-ras.org/event/2026-ieee-ras-25th-international-conference-on-humanoid-robots-humanoids-68892/",
+        "https://humanoids.exhibitprospectus.com/"
+      ],
+      "note": "2026 RAS event date Dec7–9, official organizer prospectus Dec6–9 including Sunday public activities; Monday workshops; Tue/Wed main conference. Root conference URL exposes stale template content. Date discrepancy documented, not silently resolved. Main-paper deadlines past; no next-edition future main-paper cutoff verified."
+    },
+    {
+      "sourceId": "ICAPS",
+      "edition": 2027,
+      "status": "verified",
+      "checkedAt": "2026-11-01",
+      "sourceUrls": [
+        "https://icaps27.icaps-conference.org/calls/cfp/",
+        "https://icaps27.icaps-conference.org/"
+      ],
+      "note": "Both main and Planning Under a Different Name tracks share deadlines, long/short papers. Supplementary material same deadline as full paper. Conference overall Jun27–Jul2; main sessions Jun30–Jul2. Historic proposed dates and venue not current."
+    },
+    {
+      "sourceId": "SIGGRAPH",
+      "edition": 2027,
+      "status": "verified",
+      "checkedAt": "2026-11-01",
+      "sourceUrls": [
+        "https://s2027.siggraph.org/program/technical-papers/",
+        "https://s2027.siggraph.org/"
+      ],
+      "note": "Specific official Technical Papers page gives Jan21/28/29 deadlines; general submission index still TBA. Prefer detailed track page but retain discrepancy. Do not relabel form/conflicts as abstract or upload as supplementary without further rules."
+    }
+  ],
   "events": [
     {
+      "id": "icra-2027-workshop-proposal",
+      "sourceId": "ICRA",
+      "conference": "ICRA",
+      "name": "ICRA 2027 · Workshop/Tutorial 完整提案截止",
+      "type": "submission",
+      "startDate": "2026-11-02",
+      "endDate": "2026-11-02",
+      "precision": "date",
+      "timeZone": null,
+      "deadlineAt": null,
+      "sourceUrl": "https://2027.ieee-icra.org/contribute/call-for-workshop-and-tutorial/",
+      "verifiedAt": "2026-11-01",
+      "place": {
+        "city": "Seoul",
+        "country": "South Korea",
+        "venue": "Coex",
+        "sourceUrl": "https://2027.ieee-icra.org/"
+      },
+      "deadlineKind": "Workshop/Tutorial 完整提案",
+      "note": "官方更新从11/1延期至11/2；仅针对已参加预提案流程的组织者，不是主会论文投稿。更新行没有公布时区或时刻。",
+      "timeZoneLabel": null,
+      "track": "workshop"
+    },
+    {
+      "id": "cvpr-2027-workshop-proposals",
+      "sourceId": "CVPR",
+      "conference": "CVPR",
+      "name": "CVPR 2027 · Workshop 提案截止",
+      "type": "submission",
+      "startDate": "2026-11-04",
+      "endDate": "2026-11-04",
+      "precision": "instant",
+      "timeZone": "Etc/GMT+12",
+      "deadlineAt": "2026-11-04T23:59:00-12:00",
+      "sourceUrl": "https://cvpr.thecvf.com/Conferences/2027/CallForWorkshops",
+      "verifiedAt": "2026-11-01",
+      "place": {
+        "city": "Seattle",
+        "country": "USA",
+        "venue": "Seattle Convention Center",
+        "sourceUrl": "https://cvpr.thecvf.com/Conferences/2026/News/Best_Papers"
+      },
+      "deadlineKind": "CVPR 2027 · Workshop 提案截止",
+      "note": "",
+      "timeZoneLabel": "AoE (UTC−12)",
+      "track": "workshop"
+    },
+    {
       "id": "corl-2026-conference",
+      "sourceId": "CoRL",
+      "conference": "CoRL",
       "name": "CoRL 2026 · 会议",
       "type": "conference",
       "startDate": "2026-11-09",
@@ -13,13 +225,21 @@
       "deadlineAt": null,
       "sourceUrl": "https://www.corl.org/",
       "verifiedAt": "2026-11-01",
-      "conference": "CoRL",
+      "place": {
+        "city": "Austin",
+        "country": "United States",
+        "venue": "JW Marriott Austin; Hilton Austin; Bass Hall",
+        "sourceUrl": "https://www.corl.org/"
+      },
+      "deadlineKind": null,
+      "note": "主会11/9–11，workshops11/12；三个场地分别承担不同活动。",
       "timeZoneLabel": null,
-      "note": "",
-      "deadlineKind": "全文投稿"
+      "track": "main"
     },
     {
       "id": "cvpr-2027-enrollment",
+      "sourceId": "CVPR",
+      "conference": "CVPR",
       "name": "CVPR 2027 · 论文登记截止",
       "type": "submission",
       "startDate": "2026-11-10",
@@ -29,13 +249,21 @@
       "deadlineAt": "2026-11-10T23:59:00-12:00",
       "sourceUrl": "https://cvpr.thecvf.com/Conferences/2027/CallForPapers",
       "verifiedAt": "2026-11-01",
-      "conference": "CVPR",
-      "timeZoneLabel": "AoE (UTC−12)",
+      "place": {
+        "city": "Seattle",
+        "country": "USA",
+        "venue": "Seattle Convention Center",
+        "sourceUrl": "https://cvpr.thecvf.com/Conferences/2026/News/Best_Papers"
+      },
+      "deadlineKind": "CVPR 2027 · 论文登记截止",
       "note": "",
-      "deadlineKind": "论文登记"
+      "timeZoneLabel": "AoE (UTC−12)",
+      "track": "main"
     },
     {
       "id": "cvpr-2027-submission",
+      "sourceId": "CVPR",
+      "conference": "CVPR",
       "name": "CVPR 2027 · 全文投稿截止",
       "type": "submission",
       "startDate": "2026-11-16",
@@ -45,13 +273,45 @@
       "deadlineAt": "2026-11-16T23:59:00-12:00",
       "sourceUrl": "https://cvpr.thecvf.com/Conferences/2027/CallForPapers",
       "verifiedAt": "2026-11-01",
-      "conference": "CVPR",
+      "place": {
+        "city": "Seattle",
+        "country": "USA",
+        "venue": "Seattle Convention Center",
+        "sourceUrl": "https://cvpr.thecvf.com/Conferences/2026/News/Best_Papers"
+      },
+      "deadlineKind": "CVPR 2027 · 全文投稿截止",
+      "note": "",
       "timeZoneLabel": "AoE (UTC−12)",
-      "note": "全文投稿前须完成 2026-11-10 23:59 AoE 论文登记；不能只关注全文截止。",
-      "deadlineKind": "全文投稿"
+      "track": "main"
+    },
+    {
+      "id": "cvpr-2027-supplementary",
+      "sourceId": "CVPR",
+      "conference": "CVPR",
+      "name": "CVPR 2027 · 补充材料截止",
+      "type": "submission",
+      "startDate": "2026-11-23",
+      "endDate": "2026-11-23",
+      "precision": "instant",
+      "timeZone": "Etc/GMT+12",
+      "deadlineAt": "2026-11-23T23:59:00-12:00",
+      "sourceUrl": "https://cvpr.thecvf.com/Conferences/2027/CallForPapers",
+      "verifiedAt": "2026-11-01",
+      "place": {
+        "city": "Seattle",
+        "country": "USA",
+        "venue": "Seattle Convention Center",
+        "sourceUrl": "https://cvpr.thecvf.com/Conferences/2026/News/Best_Papers"
+      },
+      "deadlineKind": "CVPR 2027 · 补充材料截止",
+      "note": "",
+      "timeZoneLabel": "AoE (UTC−12)",
+      "track": "supplementary"
     },
     {
       "id": "rss-2027-stage1",
+      "sourceId": "RSS",
+      "conference": "RSS",
       "name": "RSS 2027 · 阶段一扩展摘要投稿截止",
       "type": "submission",
       "startDate": "2026-12-04",
@@ -61,13 +321,381 @@
       "deadlineAt": "2026-12-04T23:59:00-12:00",
       "sourceUrl": "https://roboticsconference.org/information/cfp/",
       "verifiedAt": "2026-11-01",
-      "conference": "RSS",
-      "timeZoneLabel": "AoE (UTC−12)",
+      "place": {
+        "city": "Athens",
+        "country": "Greece",
+        "venue": "Megaron Athens International Conference Centre (MAICC)",
+        "sourceUrl": "https://roboticsconference.org/attending/travel/"
+      },
+      "deadlineKind": "阶段一扩展摘要投稿",
       "note": "主会议 Stage 1：6 页扩展摘要（最多 5 页内容 + 1 页参考文献），不是仅登记标题摘要。受邀进入 Stage 2 的作者须于 2027-04-16 23:59 AoE 提交最终论文。",
-      "deadlineKind": "扩展摘要投稿"
+      "timeZoneLabel": "AoE (UTC−12)",
+      "track": "main"
+    },
+    {
+      "id": "neurips-2026-sydney",
+      "sourceId": "NeurIPS",
+      "conference": "NeurIPS",
+      "name": "NeurIPS 2026 · 悉尼主会场（含 Expo / Workshops）",
+      "type": "conference",
+      "startDate": "2026-12-06",
+      "endDate": "2026-12-12",
+      "precision": "date",
+      "timeZone": null,
+      "deadlineAt": null,
+      "sourceUrl": "https://neurips.cc/Conferences/2026/Dates",
+      "verifiedAt": "2026-11-01",
+      "place": {
+        "city": "Sydney",
+        "country": "Australia",
+        "venue": "International Convention Centre (ICC) Sydney",
+        "sourceUrl": "https://neurips.cc/Conferences/2026/VenueInformation"
+      },
+      "deadlineKind": null,
+      "note": "技术主会议 12/8–10；整体包含 12/6 Expo、12/7 Tutorials、12/11–12 Workshops。",
+      "timeZoneLabel": null,
+      "track": "main"
+    },
+    {
+      "id": "icaps-2027-abstract",
+      "sourceId": "ICAPS",
+      "conference": "ICAPS",
+      "name": "ICAPS 2027 · 摘要提交截止",
+      "type": "submission",
+      "startDate": "2026-12-07",
+      "endDate": "2026-12-07",
+      "precision": "instant",
+      "timeZone": "Etc/GMT+12",
+      "deadlineAt": "2026-12-07T23:59:00-12:00",
+      "sourceUrl": "https://icaps27.icaps-conference.org/calls/cfp/",
+      "verifiedAt": "2026-11-01",
+      "place": {
+        "city": "Columbia, South Carolina",
+        "country": "United States",
+        "venue": null,
+        "sourceUrl": "https://icaps27.icaps-conference.org/"
+      },
+      "deadlineKind": "ICAPS 2027 · 摘要提交截止",
+      "note": "",
+      "timeZoneLabel": "AoE (UTC−12)",
+      "track": "main"
+    },
+    {
+      "id": "neurips-2026-atlanta",
+      "sourceId": "NeurIPS",
+      "conference": "NeurIPS",
+      "name": "NeurIPS 2026 · 亚特兰大卫星会场",
+      "type": "conference",
+      "startDate": "2026-12-09",
+      "endDate": "2026-12-13",
+      "precision": "date",
+      "timeZone": null,
+      "deadlineAt": null,
+      "sourceUrl": "https://neurips.cc/Conferences/2026/Dates",
+      "verifiedAt": "2026-11-01",
+      "place": {
+        "city": "Atlanta",
+        "country": "United States",
+        "venue": "Georgia World Congress Center (GWCC)",
+        "sourceUrl": "https://neurips.cc/Conferences/2026/VenueInformation"
+      },
+      "deadlineKind": null,
+      "note": "按最新官网 Dates；旧 July newsletter 写 12/8，最新官网为12/9。",
+      "timeZoneLabel": null,
+      "track": "main"
+    },
+    {
+      "id": "neurips-2026-paris",
+      "sourceId": "NeurIPS",
+      "conference": "NeurIPS",
+      "name": "NeurIPS 2026 · 巴黎卫星会场",
+      "type": "conference",
+      "startDate": "2026-12-09",
+      "endDate": "2026-12-13",
+      "precision": "date",
+      "timeZone": null,
+      "deadlineAt": null,
+      "sourceUrl": "https://neurips.cc/Conferences/2026/Dates",
+      "verifiedAt": "2026-11-01",
+      "place": {
+        "city": "Paris",
+        "country": "France",
+        "venue": "Palais des Congrès de Paris",
+        "sourceUrl": "https://neurips.cc/Conferences/2026/VenueInformation"
+      },
+      "deadlineKind": null,
+      "note": "",
+      "timeZoneLabel": null,
+      "track": "main"
+    },
+    {
+      "id": "icaps-2027-paper",
+      "sourceId": "ICAPS",
+      "conference": "ICAPS",
+      "name": "ICAPS 2027 · 论文及补充材料截止",
+      "type": "submission",
+      "startDate": "2026-12-14",
+      "endDate": "2026-12-14",
+      "precision": "instant",
+      "timeZone": "Etc/GMT+12",
+      "deadlineAt": "2026-12-14T23:59:00-12:00",
+      "sourceUrl": "https://icaps27.icaps-conference.org/calls/cfp/",
+      "verifiedAt": "2026-11-01",
+      "place": {
+        "city": "Columbia, South Carolina",
+        "country": "United States",
+        "venue": null,
+        "sourceUrl": "https://icaps27.icaps-conference.org/"
+      },
+      "deadlineKind": "ICAPS 2027 · 论文及补充材料截止",
+      "note": "",
+      "timeZoneLabel": "AoE (UTC−12)",
+      "track": "main"
+    },
+    {
+      "id": "icra-2027-journal-transfer",
+      "sourceId": "ICRA",
+      "conference": "ICRA",
+      "name": "ICRA 2027 · 已录用期刊论文转入截止",
+      "type": "submission",
+      "startDate": "2026-12-31",
+      "endDate": "2026-12-31",
+      "precision": "date",
+      "timeZone": null,
+      "deadlineAt": null,
+      "sourceUrl": "https://2027.ieee-icra.org/contribute/call-for-icra-2027-papers-now-accepting-submissions/",
+      "verifiedAt": "2026-11-01",
+      "place": {
+        "city": "Seoul",
+        "country": "South Korea",
+        "venue": "Coex",
+        "sourceUrl": "https://2027.ieee-icra.org/"
+      },
+      "deadlineKind": "已录用期刊论文转入",
+      "note": "非普通主会新投稿；仅符合资格的已录用 RAS 期刊论文。官方日期未附时刻。",
+      "timeZoneLabel": null,
+      "track": "journal-transfer"
+    },
+    {
+      "id": "siggraph-2027-form",
+      "sourceId": "SIGGRAPH",
+      "conference": "SIGGRAPH",
+      "name": "SIGGRAPH 2027 · Technical Papers 表单及利益冲突登记截止",
+      "type": "submission",
+      "startDate": "2027-01-21",
+      "endDate": "2027-01-21",
+      "precision": "instant",
+      "timeZone": "UTC",
+      "deadlineAt": "2027-01-21T22:00:00+00:00",
+      "sourceUrl": "https://s2027.siggraph.org/program/technical-papers/",
+      "verifiedAt": "2026-11-01",
+      "place": {
+        "city": "Anaheim, California",
+        "country": "United States",
+        "venue": "Anaheim Convention Center (ACC)",
+        "sourceUrl": "https://s2027.siggraph.org/general-conference-information/"
+      },
+      "deadlineKind": "SIGGRAPH 2027 · Technical Papers 表单及利益冲突登记截止",
+      "note": "",
+      "timeZoneLabel": "UTC",
+      "track": "main"
+    },
+    {
+      "id": "siggraph-2027-paper",
+      "sourceId": "SIGGRAPH",
+      "conference": "SIGGRAPH",
+      "name": "SIGGRAPH 2027 · Technical Papers 论文截止",
+      "type": "submission",
+      "startDate": "2027-01-28",
+      "endDate": "2027-01-28",
+      "precision": "instant",
+      "timeZone": "UTC",
+      "deadlineAt": "2027-01-28T22:00:00+00:00",
+      "sourceUrl": "https://s2027.siggraph.org/program/technical-papers/",
+      "verifiedAt": "2026-11-01",
+      "place": {
+        "city": "Anaheim, California",
+        "country": "United States",
+        "venue": "Anaheim Convention Center (ACC)",
+        "sourceUrl": "https://s2027.siggraph.org/general-conference-information/"
+      },
+      "deadlineKind": "SIGGRAPH 2027 · Technical Papers 论文截止",
+      "note": "",
+      "timeZoneLabel": "UTC",
+      "track": "main"
+    },
+    {
+      "id": "siggraph-2027-upload",
+      "sourceId": "SIGGRAPH",
+      "conference": "SIGGRAPH",
+      "name": "SIGGRAPH 2027 · Technical Papers 上传截止",
+      "type": "submission",
+      "startDate": "2027-01-29",
+      "endDate": "2027-01-29",
+      "precision": "instant",
+      "timeZone": "UTC",
+      "deadlineAt": "2027-01-29T22:00:00+00:00",
+      "sourceUrl": "https://s2027.siggraph.org/program/technical-papers/",
+      "verifiedAt": "2026-11-01",
+      "place": {
+        "city": "Anaheim, California",
+        "country": "United States",
+        "venue": "Anaheim Convention Center (ACC)",
+        "sourceUrl": "https://s2027.siggraph.org/general-conference-information/"
+      },
+      "deadlineKind": "SIGGRAPH 2027 · Technical Papers 上传截止",
+      "note": "",
+      "timeZoneLabel": "UTC",
+      "track": "main"
+    },
+    {
+      "id": "iros-2027-paper",
+      "sourceId": "IROS",
+      "conference": "IROS",
+      "name": "IROS 2027 · 论文投稿截止（日期已公布）",
+      "type": "submission",
+      "startDate": "2027-03-01",
+      "endDate": "2027-03-01",
+      "precision": "date",
+      "timeZone": null,
+      "deadlineAt": null,
+      "sourceUrl": "https://www.ieee-ras.org/event/2027-ieee-rsj-international-conference-on-intelligent-robots-and-systems-iros-70525/",
+      "verifiedAt": "2026-11-01",
+      "place": {
+        "city": "Florence",
+        "country": "Italy",
+        "venue": "Fortezza da Basso",
+        "sourceUrl": "https://www.ieee-ras.org/event/2027-ieee-rsj-international-conference-on-intelligent-robots-and-systems-iros-70525/"
+      },
+      "deadlineKind": "论文投稿",
+      "note": "IEEE RAS 官方列出日期；未公布具体时间与时区，禁止套用往届 Pacific 截止。会期存在其他官方入口差异，暂不生成会期开幕倒计时。",
+      "timeZoneLabel": null,
+      "track": "main"
+    },
+    {
+      "id": "3dv-2027-conference",
+      "sourceId": "3DV",
+      "conference": "3DV",
+      "name": "3DV 2027 · 会议",
+      "type": "conference",
+      "startDate": "2027-04-06",
+      "endDate": "2027-04-09",
+      "precision": "date",
+      "timeZone": null,
+      "deadlineAt": null,
+      "sourceUrl": "https://3dvconf.github.io/2027/",
+      "verifiedAt": "2026-11-01",
+      "place": {
+        "city": "Thessaloniki",
+        "country": "Greece",
+        "venue": "Thessaloniki Concert Hall (M2 building)",
+        "sourceUrl": "https://3dvconf.github.io/2027/"
+      },
+      "deadlineKind": null,
+      "note": "",
+      "timeZoneLabel": null,
+      "track": "main"
+    },
+    {
+      "id": "rss-2027-stage2",
+      "sourceId": "RSS",
+      "conference": "RSS",
+      "name": "RSS 2027 · 受邀阶段二最终论文截止",
+      "type": "submission",
+      "startDate": "2027-04-16",
+      "endDate": "2027-04-16",
+      "precision": "instant",
+      "timeZone": "Etc/GMT+12",
+      "deadlineAt": "2027-04-16T23:59:00-12:00",
+      "sourceUrl": "https://roboticsconference.org/information/cfp/",
+      "verifiedAt": "2026-11-01",
+      "place": {
+        "city": "Athens",
+        "country": "Greece",
+        "venue": "Megaron Athens International Conference Centre (MAICC)",
+        "sourceUrl": "https://roboticsconference.org/attending/travel/"
+      },
+      "deadlineKind": "受邀阶段二最终论文",
+      "note": "仅收到 Extension Charter 的作者。",
+      "timeZoneLabel": "AoE (UTC−12)",
+      "track": "conditional"
+    },
+    {
+      "id": "rss-2027-supplementary",
+      "sourceId": "RSS",
+      "conference": "RSS",
+      "name": "RSS 2027 · 阶段二补充材料截止",
+      "type": "submission",
+      "startDate": "2027-04-19",
+      "endDate": "2027-04-19",
+      "precision": "instant",
+      "timeZone": "Etc/GMT+12",
+      "deadlineAt": "2027-04-19T23:59:00-12:00",
+      "sourceUrl": "https://roboticsconference.org/information/cfp/",
+      "verifiedAt": "2026-11-01",
+      "place": {
+        "city": "Athens",
+        "country": "Greece",
+        "venue": "Megaron Athens International Conference Centre (MAICC)",
+        "sourceUrl": "https://roboticsconference.org/attending/travel/"
+      },
+      "deadlineKind": "阶段二补充材料",
+      "note": "主会议阶段二补充材料，非新投稿入口。",
+      "timeZoneLabel": "AoE (UTC−12)",
+      "track": "supplementary"
+    },
+    {
+      "id": "iclr-2027-conference",
+      "sourceId": "ICLR",
+      "conference": "ICLR",
+      "name": "ICLR 2027 · 会议（含 Workshops）",
+      "type": "conference",
+      "startDate": "2027-04-26",
+      "endDate": "2027-04-30",
+      "precision": "date",
+      "timeZone": null,
+      "deadlineAt": null,
+      "sourceUrl": "https://iclr.cc/Conferences/2027",
+      "verifiedAt": "2026-11-01",
+      "place": {
+        "city": "San Francisco",
+        "country": "United States",
+        "venue": null,
+        "sourceUrl": "https://iclr.cc/Conferences/2027/CallForWorkshops"
+      },
+      "deadlineKind": null,
+      "note": "具体场馆待官方正文确认。",
+      "timeZoneLabel": null,
+      "track": "main"
+    },
+    {
+      "id": "rss-2027-camera-ready",
+      "sourceId": "RSS",
+      "conference": "RSS",
+      "name": "RSS 2027 · 录用论文定稿截止",
+      "type": "submission",
+      "startDate": "2027-05-14",
+      "endDate": "2027-05-14",
+      "precision": "instant",
+      "timeZone": "Etc/GMT+12",
+      "deadlineAt": "2027-05-14T23:59:00-12:00",
+      "sourceUrl": "https://roboticsconference.org/information/cfp/",
+      "verifiedAt": "2026-11-01",
+      "place": {
+        "city": "Athens",
+        "country": "Greece",
+        "venue": "Megaron Athens International Conference Centre (MAICC)",
+        "sourceUrl": "https://roboticsconference.org/attending/travel/"
+      },
+      "deadlineKind": "录用论文定稿",
+      "note": "仅已录用论文。",
+      "timeZoneLabel": "AoE (UTC−12)",
+      "track": "camera-ready"
     },
     {
       "id": "icra-2027-conference",
+      "sourceId": "ICRA",
+      "conference": "ICRA",
       "name": "ICRA 2027 · 会议",
       "type": "conference",
       "startDate": "2027-05-24",
@@ -77,13 +705,69 @@
       "deadlineAt": null,
       "sourceUrl": "https://2027.ieee-icra.org/",
       "verifiedAt": "2026-11-01",
-      "conference": "ICRA",
-      "timeZoneLabel": null,
+      "place": {
+        "city": "Seoul",
+        "country": "South Korea",
+        "venue": "Coex",
+        "sourceUrl": "https://2027.ieee-icra.org/"
+      },
+      "deadlineKind": null,
       "note": "",
-      "deadlineKind": "全文投稿"
+      "timeZoneLabel": null,
+      "track": "main"
+    },
+    {
+      "id": "cvpr-2027-conference",
+      "sourceId": "CVPR",
+      "conference": "CVPR",
+      "name": "CVPR 2027 · 会议（含 Workshops/Tutorials）",
+      "type": "conference",
+      "startDate": "2027-06-20",
+      "endDate": "2027-06-25",
+      "precision": "date",
+      "timeZone": null,
+      "deadlineAt": null,
+      "sourceUrl": "https://cvpr.thecvf.com/Conferences/2027/Dates",
+      "verifiedAt": "2026-11-01",
+      "place": {
+        "city": "Seattle",
+        "country": "USA",
+        "venue": "Seattle Convention Center",
+        "sourceUrl": "https://cvpr.thecvf.com/Conferences/2026/News/Best_Papers"
+      },
+      "deadlineKind": null,
+      "note": "",
+      "timeZoneLabel": null,
+      "track": "main"
+    },
+    {
+      "id": "icaps-2027-conference",
+      "sourceId": "ICAPS",
+      "conference": "ICAPS",
+      "name": "ICAPS 2027 · 会议（含博士生论坛及 workshops）",
+      "type": "conference",
+      "startDate": "2027-06-27",
+      "endDate": "2027-07-02",
+      "precision": "date",
+      "timeZone": null,
+      "deadlineAt": null,
+      "sourceUrl": "https://icaps27.icaps-conference.org/",
+      "verifiedAt": "2026-11-01",
+      "place": {
+        "city": "Columbia, South Carolina",
+        "country": "United States",
+        "venue": null,
+        "sourceUrl": "https://icaps27.icaps-conference.org/"
+      },
+      "deadlineKind": null,
+      "note": "",
+      "timeZoneLabel": null,
+      "track": "main"
     },
     {
       "id": "rss-2027-conference",
+      "sourceId": "RSS",
+      "conference": "RSS",
       "name": "RSS 2027 · 会议",
       "type": "conference",
       "startDate": "2027-07-06",
@@ -93,10 +777,40 @@
       "deadlineAt": null,
       "sourceUrl": "https://roboticsconference.org/information/cfp/",
       "verifiedAt": "2026-11-01",
-      "conference": "RSS",
-      "timeZoneLabel": null,
+      "place": {
+        "city": "Athens",
+        "country": "Greece",
+        "venue": "Megaron Athens International Conference Centre (MAICC)",
+        "sourceUrl": "https://roboticsconference.org/attending/travel/"
+      },
+      "deadlineKind": null,
       "note": "",
-      "deadlineKind": "全文投稿"
+      "timeZoneLabel": null,
+      "track": "main"
+    },
+    {
+      "id": "siggraph-2027-conference",
+      "sourceId": "SIGGRAPH",
+      "conference": "SIGGRAPH",
+      "name": "SIGGRAPH 2027 · 会议",
+      "type": "conference",
+      "startDate": "2027-08-08",
+      "endDate": "2027-08-12",
+      "precision": "date",
+      "timeZone": null,
+      "deadlineAt": null,
+      "sourceUrl": "https://s2027.siggraph.org/",
+      "verifiedAt": "2026-11-01",
+      "place": {
+        "city": "Anaheim, California",
+        "country": "United States",
+        "venue": "Anaheim Convention Center (ACC)",
+        "sourceUrl": "https://s2027.siggraph.org/general-conference-information/"
+      },
+      "deadlineKind": null,
+      "note": "",
+      "timeZoneLabel": null,
+      "track": "main"
     }
   ]
 }
