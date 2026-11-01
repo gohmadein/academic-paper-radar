@@ -50,6 +50,6 @@ test('Institution library outer container is rounded; shared glass keeps logo su
  const shared=css.slice(css.indexOf('/* Li-only'));
  assert.match(shared,/\.feed-glass \.paper-card,\.feed-glass \.institution-library/);
  assert.doesNotMatch(shared,/\.institution-library-(?:mark|card)\b/);
- assert.match(css,/\.xun-side-art main\{[^}]*background:#fff/);
+ assert.match(css,/\.xun-side-art main\{[^}]*background:transparent/);
  assert.match(shared,/\.li-background-0::before/);
 });

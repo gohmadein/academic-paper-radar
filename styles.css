@@ -616,20 +616,20 @@ dialog::backdrop{background:#18263f38}
 #dialog-content>.note-button{margin-left:12px}
 @media(max-width:700px){.note-button{width:40px;height:40px}.notes-save-row{align-items:flex-start}#notes-dialog{padding:20px}#notes-text{min-height:180px}}
 
-/* Large line art is cropped to separate measured outer gutters, below the reading layer.
-   Fixed viewport positions follow the scroll; measured gutters update on resize/collapse. */
-@media(min-width:801px){
-  .xun-side-art main{position:relative;isolation:isolate;background:#fff}
-  .xun-side-art main.has-side-art::before,.xun-side-art main.has-side-art::after{
-    content:"";position:fixed;top:120px;z-index:-1;
-    height:calc(100vh - 120px);pointer-events:none;user-select:none;
-    background-position:center top;background-size:clamp(520px,48vw,860px) auto;background-repeat:no-repeat;
-    opacity:.22;
-  }
-  .xun-side-art main.has-side-art::before{left:var(--art-left-start);width:var(--art-left-width);background-image:url("./assets/decor/xun-gundam-left.c9ffc9b7ef13.webp")}
-  .xun-side-art main.has-side-art::after{left:var(--art-right-start);width:var(--art-right-width);background-image:url("./assets/decor/xun-gundam-right.3561f752a59e.webp")}
+/* Xun art now fills two non-overlapping halves behind the glass reading surface.
+   Fixed positions remain independent of scroll; no foreground image covers text. */
+.xun-side-art main{position:relative;isolation:isolate;background:transparent;--muted:#354358}
+.xun-side-art .paper-dates{color:var(--muted)}
+.xun-side-art .hero>.hero-copy>.eyebrow,.xun-side-art .section-heading .eyebrow,.xun-side-art #clear-filters{color:var(--blue-dark)}
+.xun-side-art main.has-side-art::before,.xun-side-art main.has-side-art::after{
+  content:"";position:fixed;top:0;z-index:-1;
+  height:100vh;pointer-events:none;user-select:none;
+  background-position:center;background-size:max(520px,100vh) auto;background-repeat:no-repeat;
+  opacity:.22;
 }
-@media print{.xun-side-art main::before,.xun-side-art main::after{display:none}}
+.xun-side-art main.has-side-art::before{left:var(--art-left-start);width:var(--art-left-width);background-image:url("./assets/decor/xun-gundam-left.c9ffc9b7ef13.webp")}
+.xun-side-art main.has-side-art::after{left:var(--art-right-start);width:var(--art-right-width);background-image:url("./assets/decor/xun-gundam-right.3561f752a59e.webp")}
+@media print,(prefers-reduced-transparency:reduce),(forced-colors:active){.xun-side-art main::before,.xun-side-art main::after{display:none}}
 
 /* Li-only photographic reading surface, shared static glass cards across real feeds.
    No animation or image timer.

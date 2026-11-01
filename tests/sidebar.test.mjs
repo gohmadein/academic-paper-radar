@@ -284,20 +284,16 @@ test('Gundam decorations are exclusive to the real xun feed and follow navigatio
   h.click({action:'demo'});assert.equal(visible(),false);
 });
 
-test('Decorative gutters never intersect the main or rail, including collapsed wide layouts',async()=>{
+test('Xun art sits behind transparent reading layer with shared glass and accessibility fallback',async()=>{
   const css=await read('styles.css');
   assert.match(css,/main\.has-side-art::before/);
   assert.match(css,/pointer-events:none;user-select:none/);
   assert.match(css,/opacity:\.22/);
   assert.match(css,/left:var\(--art-left-start\)/);
-  assert.match(css,/left:var\(--art-right-start\)/);assert.match(css,/position:fixed;top:120px/);
-  for(const viewport of [1536,1650,1920,2048,2560,3840])for(const [rail,main] of [[222,1120],[76,1160]]){
-    const gutter=(viewport-rail-main)/2,width=gutter-24,mainLeft=rail+gutter,mainRight=mainLeft+main;
-    const left={start:mainLeft-12-width,end:mainLeft-12};
-    const right={start:mainRight+12,end:mainRight+12+width};
-    assert.ok(width>0);assert.ok(left.start>=rail+12);assert.ok(left.end<mainLeft);
-    assert.ok(right.start>mainRight);assert.ok(right.end<=viewport-12);
-  }
+  assert.match(css,/left:var\(--art-right-start\)/);
+  assert.match(css,/position:fixed;top:0;z-index:-1/);
+  assert.match(css,/\.xun-side-art main\{[^}]*background:transparent/);
+  assert.match(css,/@media print,\(prefers-reduced-transparency:reduce\),\(forced-colors:active\)/);
 });
 
 test('Side art measures live layout on resize and rail changes without unsafe inline attributes',async()=>{
@@ -306,13 +302,13 @@ test('Side art measures live layout on resize and rail changes without unsafe in
   main.style={setProperty(k,v){props[k]=v}};
   main.classList.toggle=(name,value)=>{if(name==='has-side-art')main.artVisible=value};
   h.run("document.documentElement={clientWidth:1536};document.querySelector=()=>({getBoundingClientRect:()=>({right:222})})");
-  h.run('updateSideArt()');assert.equal(main.artVisible,true);assert.equal(props['--art-left-width'],'73px');assert.equal(props['--art-left-start'],'234px');assert.equal(props['--art-right-start'],'1451px');
+  h.run('updateSideArt()');assert.equal(main.artVisible,true);assert.equal(props['--art-left-width'],'657px');assert.equal(props['--art-left-start'],'222px');assert.equal(props['--art-right-start'],'879px');
   h.run('document.documentElement.clientWidth=1440');mainLeft=271;
   h.windowEvents.resize();assert.equal(main.artVisible,true);
   mainLeft=217;main.getBoundingClientRect=()=>({left:217,right:1377});
   h.run("document.querySelector=()=>({getBoundingClientRect:()=>({right:76})});document.documentElement.clientWidth=1440");
-  h.events['rail-toggle:click']();assert.equal(main.artVisible,true); // Each image is independently clipped to its actual gutter.
+  h.events['rail-toggle:click']();assert.equal(main.artVisible,true); // Each image is independently clipped to half the reading viewport.
   main.getBoundingClientRect=()=>({left:178,right:1338});h.windowEvents.resize();
-  assert.equal(main.artVisible,true);assert.equal(props['--art-right-width'],'78px');
+  assert.equal(main.artVisible,true);assert.equal(props['--art-right-width'],'682px');
   assert.equal(main.attributes.style,undefined);
 });
