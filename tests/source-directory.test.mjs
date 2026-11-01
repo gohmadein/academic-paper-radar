@@ -98,3 +98,18 @@ test('Lv venues and arXiv reuse registry links but apply its narrower learning/t
  assert.ok(!sourceDirectory('lv',watchlists,'journal').includes('待补充'));
  assert.equal(profileSources('xun',watchlists).length,70);
 });
+
+test('Only Lv lab headings omit 3.1/3.4 prefixes without changing registry or entry content',()=>{
+ const before=JSON.stringify(watchlists);
+ const lv=sourceDirectory('lv',watchlists,'lab'),xun=sourceDirectory('xun',watchlists,'lab');
+ assert.ok(lv.includes('<h4>企业与独立研究机构</h4>'));
+ assert.ok(lv.includes('<h4>北美高校</h4>'));
+ assert.doesNotMatch(lv,/<h4>3\.[14]\s/);
+ assert.match(xun,/<h4>3\.1 北美高校/);assert.match(xun,/<h4>3\.4 企业与独立研究机构/);
+ for(const source of profileSources('lv',watchlists).filter(s=>s.type==='lab')){
+   assert.ok(lv.includes(source.name));
+   for(const link of source.links)assert.ok(lv.includes(link.url));
+   for(const detail of source.details)assert.ok(lv.includes(detail));
+ }
+ assert.equal(JSON.stringify(watchlists),before);
+});
