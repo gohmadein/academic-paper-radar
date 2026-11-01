@@ -1,3 +1,4 @@
+import {calendarDate,shiftCalendarMonth,calendarEventDay,researchCalendarHTML,validateCalendar} from './lib/research-calendar.js';
 import {liBackgroundClass} from './lib/li-background.js';
 import {sideArtLayout} from './lib/side-art.js';
 import {createNotesStore,MAX_NOTE_LENGTH,MAX_NOTES_BYTES} from './lib/paper-notes.js';
@@ -65,6 +66,7 @@ let mapRegion = '';
 let mapProfile = '';
 let mapPaper = '';
 let lastMapMarkup = '';
+let calendarData=null,calendarMonth='',calendarSelected='',lastCalendarMarkup='',calendarTimer;
 let bookmarks;
 let storageAvailable = true;
 let toastTimer;
@@ -106,6 +108,8 @@ async function init() {
   try {
     const [real,demo,institutions] = await Promise.all([loadCollection('data',false),loadCollection('data/demo',true),getJSON('data/institutions.json')]);
     const geography = await getJSON('data/paper-geography.json').catch(()=>null);
+    const calendar = await getJSON('data/conference-calendar.json').catch(()=>null);
+    calendarData=calendar&&!validateCalendar(calendar).length?calendar:null;
     data = {real,demo,institutions,geography};
     if(state.view==='feed'&&!state.demo&&!new URLSearchParams(location.hash.slice(1)).has('date')&&real.days.length){state.date=real.days[0].date;history.replaceState(null,'',routeHash(state));}
     $('real-count').textContent = String(real.papers.length).padStart(2,'0');
@@ -139,6 +143,8 @@ function updateViewChrome() {
   $('profile-motto').setAttribute('data-profile',motto?state.category:'');
   $('profile-motto').setAttribute('lang',state.category==='li'?'en':'zh-CN');
   $('research-map').hidden = !isFeed || state.demo;
+  $('research-calendar').hidden = !isFeed || state.demo || state.category !== 'xun';
+  renderCalendar();
   $('reading-intro').classList.toggle('with-map',isFeed&&!state.demo);
   $('hero').hidden = !isFeed;
   $('demo-banner').hidden = !isFeed || !state.demo;
@@ -188,6 +194,17 @@ function emptyState(kind) {
   if (kind === 'bookmarks') return `<div class="empty-state no-results"><div class="empty-art" aria-hidden="true"><span>◇</span></div><h3>暂无书签</h3><p>点击论文卡片上的 ◇ 收藏。${state.demo?'当前只显示演示模式的书签。':'当前只显示真实论文的书签。'}</p><button class="secondary-button" data-action="feed">返回每日精选 →</button></div>`;
   return `<div class="empty-state no-results"><div class="empty-art" aria-hidden="true"><span>⌕</span></div><h3>没有匹配的论文</h3><p>调整关键词或清除筛选。</p><button class="secondary-button" data-action="clear">清除筛选 →</button></div>`;
 }
+
+function renderCalendar() {
+  clearTimeout(calendarTimer);
+  if($('research-calendar').hidden||document.hidden)return;
+  const markup=researchCalendarHTML(calendarData,{month:calendarMonth,selectedDate:calendarSelected});
+  if(markup!==lastCalendarMarkup){$('research-calendar').innerHTML=markup;lastCalendarMarkup=markup;}
+  calendarTimer=setTimeout(renderCalendar,60000);
+  calendarTimer?.unref?.(); // Node test harness only; browsers use numeric timer IDs.
+}
+window.addEventListener('focus',renderCalendar);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)renderCalendar();});
 
 function renderMap() {
   if(!data)return;
@@ -284,6 +301,11 @@ function closeDialog() {
 document.addEventListener('click', event => {
   const b = event.target.closest('button');
   if (!b) return;
+  if(b.dataset.calendarMonth){calendarMonth=shiftCalendarMonth(calendarMonth||calendarDate().slice(0,7),Number(b.dataset.calendarMonth));calendarSelected='';renderCalendar();document.querySelector(`[data-calendar-month="${b.dataset.calendarMonth}"]`)?.focus({preventScroll:true});return;}
+  if(b.dataset.calendarToday){calendarMonth='';calendarSelected=calendarDate();renderCalendar();document.querySelector('[data-calendar-today]')?.focus({preventScroll:true});return;}
+  if(b.dataset.calendarDate){calendarSelected=b.dataset.calendarDate;renderCalendar();document.querySelector(`[data-calendar-date="${calendarSelected}"]`)?.focus({preventScroll:true});return;}
+  if(b.dataset.calendarUpcoming){calendarSelected='';renderCalendar();document.querySelector('[data-calendar-today]')?.focus({preventScroll:true});return;}
+  if(b.dataset.calendarEvent){const event=calendarData?.events.find(ev=>ev.id===b.dataset.calendarEvent);if(event){calendarSelected=calendarEventDay(event);calendarMonth=calendarSelected.slice(0,7);renderCalendar();document.querySelector(`[data-calendar-date="${calendarSelected}"]`)?.focus({preventScroll:true});}return;}
   if(b.dataset.note){openNotes(b.dataset.note,b);return;}
   if(b.dataset.mapMode){mapMode=b.dataset.mapMode==='today'?'today':'all';mapRegion='';renderMap();document.querySelector(`[data-map-mode="${mapMode}"]`)?.focus({preventScroll:true});return;}
   if(b.dataset.mapRegion){mapRegion=b.dataset.mapRegion;renderMap();document.querySelector(`[data-map-region="${CSS.escape(mapRegion)}"]`)?.focus({preventScroll:true});return;}

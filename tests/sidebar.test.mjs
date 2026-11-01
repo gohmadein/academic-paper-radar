@@ -1,3 +1,4 @@
+import * as calendar from '../lib/research-calendar.js';
 import * as liBackground from '../lib/li-background.js';
 import * as sideArt from '../lib/side-art.js';
 import * as researchMap from '../lib/research-map.js';
@@ -26,7 +27,7 @@ async function appHarness({stored=new Map(),storageBlocked=false}={}){
     if(!elements.has(id))elements.set(id,{id,hidden:false,value:'',innerHTML:'',textContent:'',dataset:{},childNodes:[{textContent:''}],classList:{toggle(){},add(){},remove(){}},attributes:{},setAttribute(k,v){this.attributes[k]=v},removeAttribute(k){delete this.attributes[k]},addEventListener(type,fn){events[id+':'+type]=fn},open:false,isConnected:true,focus(){context.document.activeElement=this},close(){this.open=false},showModal(){this.open=true}});
     return elements.get(id);
   };
-  const context=vm.createContext({...liBackground,...sideArt,...researchMap,...profileIcons,...sources,...topics,...model,...digest,...institutions,...transfer,...notes,...notesView,
+  const context=vm.createContext({...calendar,...liBackground,...sideArt,...researchMap,...profileIcons,...sources,...topics,...model,...digest,...institutions,...transfer,...notes,...notesView,
     e:model.escapeHTML,updateHUD(){},console,URL,URLSearchParams,TextEncoder,CSS:{escape:x=>x},setTimeout,clearTimeout,
     document:{getElementById:element,querySelectorAll:()=>[],querySelector:()=>null,activeElement:null,body:{classList:{toggle(name,on){if(on)bodyClasses.add(name);else bodyClasses.delete(name)}}},addEventListener:(type,fn)=>{events[type]=fn}},
     window:{addEventListener:(type,fn)=>{windowEvents[type]=fn}},
@@ -311,4 +312,21 @@ test('Side art measures live layout on resize and rail changes without unsafe in
   main.getBoundingClientRect=()=>({left:178,right:1338});h.windowEvents.resize();
   assert.equal(main.artVisible,true);assert.equal(props['--art-right-width'],'682px');
   assert.equal(main.attributes.style,undefined);
+});
+
+test('Research calendar is Xun feed only; month/date interactions do not change paper route or local data',async()=>{
+ const h=await appHarness();h.click({category:'xun'});
+ assert.equal(h.element('research-calendar').hidden,false);
+ assert.match(h.element('research-calendar').innerHTML,/科研日历/);
+ const before=h.run('JSON.stringify(state)');
+ h.click({calendarMonth:'1'});h.click({calendarMonth:'-1'});h.click({calendarToday:'true'});
+ assert.equal(h.run('JSON.stringify(state)'),before);
+ h.click({calendarEvent:'cvpr-2027-enrollment'});
+ assert.equal(h.run('calendarSelected'),'2026-11-11');assert.equal(h.run('calendarMonth'),'2026-11');
+ assert.match(h.element('research-calendar').innerHTML,/论文登记/);
+ h.click({calendarUpcoming:'true'});assert.equal(h.run('calendarSelected'),'');
+ for(const category of ['li','lv','all']){h.click({category});assert.equal(h.element('research-calendar').hidden,true);}
+ h.click({category:'xun'});h.click({sourceProfile:'xun',sourceType:'conference'});assert.equal(h.element('research-calendar').hidden,true);
+ h.click({category:'xun'});h.click({view:'archive'});assert.equal(h.element('research-calendar').hidden,true);
+ h.click({view:'feed'});h.click({action:'demo'});assert.equal(h.element('research-calendar').hidden,true);
 });
