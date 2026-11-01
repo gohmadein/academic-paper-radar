@@ -628,7 +628,7 @@ dialog::backdrop{background:#18263f38}
     width:min(340px,calc((100vw - var(--art-rail) - var(--art-main))/2 - 24px));
     height:600px;max-height:72vh;pointer-events:none;user-select:none;
     background-position:center top;background-size:contain;background-repeat:no-repeat;
-    opacity:.13;
+    opacity:.22;
   }
   .xun-side-art main::before{right:calc(100% + 12px);background-image:url("./assets/decor/xun-gundam-left.c9ffc9b7ef13.webp")}
   .xun-side-art main::after{left:calc(100% + 12px);background-image:url("./assets/decor/xun-gundam-right.3561f752a59e.webp")}

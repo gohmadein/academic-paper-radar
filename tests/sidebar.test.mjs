@@ -285,7 +285,7 @@ test('Decorative gutters never intersect the main or rail, including collapsed w
   const css=await read('styles.css');
   assert.match(css,/@media\(min-width:1650px\)\{/);
   assert.match(css,/pointer-events:none;user-select:none/);
-  assert.match(css,/opacity:\.13/);
+  assert.match(css,/opacity:\.22/);
   assert.match(css,/right:calc\(100% \+ 12px\)/);
   assert.match(css,/left:calc\(100% \+ 12px\)/);
   for(const viewport of [1650,1920,2048,2560,3840])for(const [rail,main] of [[222,1120],[76,1160]]){
