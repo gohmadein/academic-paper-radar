@@ -331,3 +331,7 @@ test('Research calendar is Xun feed only; month/date interactions do not change 
  h.click({category:'xun'});h.click({view:'archive'});assert.equal(h.element('research-calendar').hidden,true);
  h.click({view:'feed'});h.click({action:'demo'});assert.equal(h.element('research-calendar').hidden,true);
 });
+
+test('Aligned calendar map preserves its geographic aspect ratio instead of stretching marker coordinates',async()=>{
+ const css=await read('styles.css');assert.match(css,/\.with-calendar #research-map \.map-surface\{flex:0 0 auto;aspect-ratio:2;margin:auto 0;min-height:0\}/);
+});

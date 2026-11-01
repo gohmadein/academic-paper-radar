@@ -71,3 +71,7 @@ test('Daily source coverage, optional tracks, places and private markers are exp
  const html=researchCalendarHTML(data,{tab:'private',selectedDate:'2026-11-05',month:'2026-11',tasks:[{id:'task-1',date:'2026-11-05',text:'<script>private</script>',done:false}]});
  assert.ok(html.includes('personal-marker'));assert.ok(html.includes('&lt;script&gt;'));assert.ok(!html.includes('<script>'));assert.match(html,/不上传或发送提醒/);
 });
+
+test('Invalid official timezone fails validation without breaking the paper page',()=>{
+ assert.ok(validateCalendar({...data,events:[{...deadline,timeZone:'invalid'}]}).includes('日历时区无效'));
+});

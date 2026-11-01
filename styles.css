@@ -690,7 +690,7 @@ dialog::backdrop{background:#18263f38}
  .with-calendar .reading-title{grid-column:1/-1;grid-row:1}.with-calendar #profile-motto{grid-column:1;grid-row:2;margin:0}
  .with-calendar #research-calendar{grid-column:1;grid-row:3;margin:0;max-width:none}
  .with-calendar #research-map{grid-column:2;grid-row:2/4;align-self:stretch;display:flex;flex-direction:column;max-width:none;width:auto}
- .with-calendar #research-map .map-surface{flex:1;min-height:150px}.with-calendar #edition-status{grid-column:1/-1;grid-row:4;margin:0}
+ .with-calendar #research-map .map-surface{flex:0 0 auto;aspect-ratio:2;margin:auto 0;min-height:0}.with-calendar #edition-status{grid-column:1/-1;grid-row:4;margin:0}
 }
 .calendar-tabs{display:flex;gap:3px;padding:3px;background:#edf3fc;border-radius:8px;margin-bottom:8px}
 .calendar-tabs button{flex:1;padding:6px 4px;font-size:10px;white-space:nowrap;border-radius:6px;color:#526787}
