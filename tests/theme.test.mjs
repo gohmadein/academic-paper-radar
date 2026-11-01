@@ -16,7 +16,7 @@ test('Light theme text and focus palette meets readable contrast',async()=>{
   assert.match(css,/focus-visible[^}]*outline:3px solid var\(--blue\)/);
 });
 
-test('No animation or image filters; only explicitly scoped Li backdrop glass is allowed',async()=>{
+test('No animation or image filters; only explicitly scoped feed backdrop glass is allowed',async()=>{
   const html=await read('index.html'),css=await read('styles.css');
   assert.doesNotMatch(html,/<filter\b|scanlines|line-toggle|rgb-toggle|glitch-title|flip-counter/);
   assert.doesNotMatch(css,/@keyframes|\banimation\s*:|(?:^|[;{])\s*filter\s*:|text-shadow|repeating-linear-gradient/);

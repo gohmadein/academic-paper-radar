@@ -128,6 +128,7 @@ function collection() { return state.demo ? data.demo : data.real; }
 
 function updateViewChrome() {
   const isFeed = state.view === 'feed';
+  document.body.classList.toggle('feed-glass', isFeed && !state.demo);
   const liBackground = liBackgroundClass(state, data?.real.days || []);
   document.body.classList.toggle('li-glass', Boolean(liBackground));
   for (const slot of [0,1]) document.body.classList.toggle(`li-background-${slot}`, liBackground === `li-background-${slot}`);

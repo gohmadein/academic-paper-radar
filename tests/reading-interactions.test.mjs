@@ -21,6 +21,7 @@ const read=p=>readFile(new URL('../'+p,import.meta.url),'utf8');
 // Exercise the real app event handlers and routing without a browser. This is
 // intentionally not a layout, native dialog focus-trap, or browser-history test.
 async function harness({navigator={},storageFailure=false}={}) {
+  const bodyClasses=new Set();
   const elements=new Map(),listeners=new Map(),windowEvents={},stored=new Map(),entries=[''];
   const location={hash:'',href:'https://example.org/academic-paper-radar/?private=secret'};
   let position=0,context,timerId=0;
@@ -38,14 +39,14 @@ async function harness({navigator={},storageFailure=false}={}) {
   const query=selector=>{const match=selector.match(/\[data-([\w-]+)="([^"]+)"\]/);if(!match)return null;const key=match[1].replace(/-([a-z])/g,(_,c)=>c.toUpperCase());return make(selector,{[key]:match[2],paperControl:true})};
   context=vm.createContext({...liBackground,...sideArt,...researchMap,...profileIcons,...sources,...topics,...model,...digest,...institutions,...transfer,...sharing,...media,...notes,...notesView,
     navigator,e:model.escapeHTML,updateHUD(){},console,URL,URLSearchParams,TextEncoder,CSS:{escape:x=>x},setTimeout:(fn)=>{timers.set(++timerId,fn);return timerId},clearTimeout:id=>timers.delete(id),
-    document:{title:'ZERO FIELD',getElementById:element,querySelectorAll:()=>[],querySelector:query,activeElement:make('body'),body:{classList:{toggle(){}}},addEventListener:(type,fn)=>on(type,fn)},
+    document:{title:'ZERO FIELD',getElementById:element,querySelectorAll:()=>[],querySelector:query,activeElement:make('body'),body:{classList:{toggle(name,on){if(on)bodyClasses.add(name);else bodyClasses.delete(name)}}},addEventListener:(type,fn)=>on(type,fn)},
     window:{addEventListener:(type,fn)=>{windowEvents[type]=fn}},localStorage:{getItem:k=>stored.get(k)??null,setItem:(k,v)=>{if(storageFailure)throw Error('QuotaExceededError');stored.set(k,v)}},location,
     history:{pushState(_a,_b,hash){entries.splice(++position);entries.push(hash);location.hash=hash},replaceState(_a,_b,hash){entries[position]=hash;location.hash=hash}},
     fetch:async url=>({ok:true,json:async()=>JSON.parse(await readFile(url,'utf8'))})});
   const source=(await read('app.js')).replace(/^import .*;\n/gm,'').replaceAll('import.meta.url',JSON.stringify(new URL('../app.js',import.meta.url).href)).replace('\ninit();','\nglobalThis.boot=init();');
   vm.runInContext(source,context);await context.boot;
   const run=code=>vm.runInContext(code,context);
-  return {element,run,fire,stored,location,make,windowEvents,runTimers(){const pending=[...timers.values()];timers.clear();for(const fn of pending)fn();},click:async dataset=>{const button=make('clicked',{...dataset,paperControl:true});button.focus();await fire('click',{target:{closest:()=>button}});return button},
+  return {bodyClasses,element,run,fire,stored,location,make,windowEvents,runTimers(){const pending=[...timers.values()];timers.clear();for(const fn of pending)fn();},click:async dataset=>{const button=make('clicked',{...dataset,paperControl:true});button.focus();await fire('click',{target:{closest:()=>button}});return button},
     back(){location.hash=entries[--position];windowEvents.popstate()},forward(){location.hash=entries[++position];windowEvents.popstate()}};
 }
 
@@ -258,4 +259,24 @@ test('Background bookmark refresh cannot reopen suspended detail over the note e
   h.windowEvents.storage({key:'paper-signal-bookmarks-v1',newValue:JSON.stringify([id])});
   assert.equal(h.element('notes-dialog').open,true);assert.equal(h.element('detail-dialog').open,false);
   assert.equal(h.element('notes-text').value,'in progress');
+});
+
+test('Shared glass follows real feeds while Li photographs remain exclusive across navigation',async()=>{
+ const h=await harness();
+ for(const category of ['xun','li','lv','all']){
+   await h.click({category});
+   assert.ok(h.bodyClasses.has('feed-glass'),category);
+   assert.equal(h.bodyClasses.has('li-glass'),category==='li');
+ }
+ for(const view of ['archive','bookmarks','sources']){
+   h.run(`go({view:'${view}',category:'li'})`);
+   assert.equal(h.bodyClasses.has('feed-glass'),false,view);
+   assert.equal(h.bodyClasses.has('li-glass'),false,view);
+ }
+ h.run("go({view:'feed',category:'li',demo:true})");
+ assert.equal(h.bodyClasses.has('feed-glass'),false);
+ assert.equal(h.bodyClasses.has('li-glass'),false);
+ h.run("go({demo:false})");
+ assert.ok(h.bodyClasses.has('feed-glass'));
+ assert.ok(h.bodyClasses.has('li-glass'));
 });

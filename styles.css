@@ -532,7 +532,7 @@ main{width:100%;min-width:0;max-width:1360px;padding:0 36px}
 .editorial-footer .read-button.is-read{background:var(--blue-soft);color:var(--blue)}
 .editorial-footer .detail-button{min-height:36px;padding:7px 4px;font-size:11px}
 .editorial-card .source-note{margin-top:8px;line-height:1.7}
-.institution-library{padding:20px 0;border:0;border-top:1px solid var(--line);border-radius:0;margin-top:28px}
+.institution-library{padding:20px;border:1px solid var(--line);border-radius:16px;margin-top:28px}
 .institution-library-card{border-radius:12px}
 dialog{border-radius:16px;border:1px solid var(--line);box-shadow:0 20px 70px #18263f24}
 dialog::backdrop{background:#18263f38}
@@ -631,7 +631,8 @@ dialog::backdrop{background:#18263f38}
 }
 @media print{.xun-side-art main::before,.xun-side-art main::after{display:none}}
 
-/* Li-only photographic reading surface. Static glass, no animation or image timer.
+/* Li-only photographic reading surface, shared static glass cards across real feeds.
+   No animation or image timer.
    The white veil keeps even black pixels light; opaque controls/figures retain contrast. */
 .li-glass{isolation:isolate}
 .li-glass main{--muted:#354358}
@@ -641,16 +642,16 @@ dialog::backdrop{background:#18263f38}
 .li-background-0::before{background-image:linear-gradient(#ffffffb8,#ffffffb8),url("./assets/decor/li-photo-1.18b7a0d61d5b.webp")}
 .li-background-1::before{background-image:linear-gradient(#ffffffb8,#ffffffb8),url("./assets/decor/li-photo-2.e809542ba20c.webp")}
 .li-glass.rail-collapsed::before{left:76px}
-.li-glass .paper-card{background:#fff;border-top-color:#fff;border-right-color:#fff;border-bottom-color:#e0e5ee;box-shadow:inset 0 1px 0 #fff,0 8px 28px #18263f0c}
-.li-glass .paper-card.category-li{border-left-color:#d92d20}
-.li-glass .paper-card:hover,.li-glass .paper-card:focus-within{border-top-color:#9cb7dc;border-right-color:#9cb7dc;border-bottom-color:#9cb7dc}
+.feed-glass .paper-card,.feed-glass .institution-library{background:#fff;border-top-color:#fff;border-right-color:#fff;border-bottom-color:#e0e5ee;box-shadow:inset 0 1px 0 #fff,0 8px 28px #18263f0c}
+.feed-glass .paper-card.category-li{border-left-color:#d92d20}
+.feed-glass .paper-card:hover,.feed-glass .paper-card:focus-within{border-top-color:#9cb7dc;border-right-color:#9cb7dc;border-bottom-color:#9cb7dc}
 @supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
-  .li-glass .paper-card{background:linear-gradient(135deg,#ffffffb8,#ffffff85);-webkit-backdrop-filter:blur(18px) saturate(1.1);backdrop-filter:blur(18px) saturate(1.1)}
+  .feed-glass .paper-card,.feed-glass .institution-library{background:linear-gradient(135deg,#ffffffb8,#ffffff85);-webkit-backdrop-filter:blur(18px) saturate(1.1);backdrop-filter:blur(18px) saturate(1.1)}
 }
 @media(max-width:800px){.li-glass::before,.li-glass.rail-collapsed::before{left:0}}
 @media(prefers-reduced-transparency:reduce){
   .li-glass::before{display:none}
-  .li-glass .paper-card{background:#fff;-webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:none}
+  .feed-glass .paper-card,.feed-glass .institution-library{background:#fff;-webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:none}
 }
-@media(forced-colors:active){.li-glass::before{display:none}.li-glass .paper-card{background:Canvas;-webkit-backdrop-filter:none;backdrop-filter:none}}
-@media print{.li-glass::before{display:none}.li-glass .paper-card{background:#fff;-webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:none}}
+@media(forced-colors:active){.li-glass::before{display:none}.feed-glass .paper-card,.feed-glass .institution-library{background:Canvas;-webkit-backdrop-filter:none;backdrop-filter:none}}
+@media print{.li-glass::before{display:none}.feed-glass .paper-card,.feed-glass .institution-library{background:#fff;-webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:none}}
