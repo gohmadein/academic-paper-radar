@@ -131,7 +131,6 @@ function updateViewChrome() {
   document.body.classList.toggle('feed-glass', isFeed && !state.demo);
   const liBackground = liBackgroundClass(state, data?.real.days || []);
   document.body.classList.toggle('li-glass', Boolean(liBackground));
-  document.body.classList.toggle('lv-glass', isFeed && !state.demo && state.category === 'lv' && Boolean(data?.real.days.length));
   for (const slot of [0,1]) document.body.classList.toggle(`li-background-${slot}`, liBackground === `li-background-${slot}`);
   document.body.classList.toggle('xun-side-art', isFeed && !state.demo && state.category === 'xun');
   const motto=isFeed&&!state.demo ? PROFILE_MOTTOS[state.category]||'' : '';

@@ -267,18 +267,15 @@ test('Shared glass follows real feeds while Li photographs remain exclusive acro
    await h.click({category});
    assert.ok(h.bodyClasses.has('feed-glass'),category);
    assert.equal(h.bodyClasses.has('li-glass'),category==='li');
-   assert.equal(h.bodyClasses.has('lv-glass'),category==='lv');
  }
  for(const view of ['archive','bookmarks','sources']){
    h.run(`go({view:'${view}',category:'li'})`);
    assert.equal(h.bodyClasses.has('feed-glass'),false,view);
    assert.equal(h.bodyClasses.has('li-glass'),false,view);
-   assert.equal(h.bodyClasses.has('lv-glass'),false,view);
  }
  h.run("go({view:'feed',category:'li',demo:true})");
  assert.equal(h.bodyClasses.has('feed-glass'),false);
  assert.equal(h.bodyClasses.has('li-glass'),false);
- assert.equal(h.bodyClasses.has('lv-glass'),false);
  h.run("go({demo:false})");
  assert.ok(h.bodyClasses.has('feed-glass'));
  assert.ok(h.bodyClasses.has('li-glass'));
