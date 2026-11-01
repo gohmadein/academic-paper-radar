@@ -164,7 +164,8 @@ test('Source view follows profiles, preserves filters, supports repeated toggles
   assert.equal(h.element('hero').hidden,true);
   assert.equal(h.element('institution-gallery').innerHTML,'');
   h.click({sourceProfile:'lv'});
-  assert.equal((h.element('content').innerHTML.match(/class="watchlist-pending"/g)||[]).length,1);
+  assert.equal((h.element('content').innerHTML.match(/class="watchlist-pending"/g)||[]).length,0);
+  assert.match(h.element('content').innerHTML,/CoRL/);
   h.back();assert.match(h.element('content').innerHTML,/SIGMOD/);
   h.forward();assert.equal(h.run('state.category'),'lv');
   h.click({sourceProfile:'xun',sourceType:'lab'});assert.match(h.element('content').innerHTML,/Berkeley RAIL/);

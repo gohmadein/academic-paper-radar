@@ -7,7 +7,7 @@ const read=p=>readFile(new URL('../'+p,import.meta.url),'utf8');
 const watchlists={profiles:JSON.parse(await read('config/profile-watchlists.json')),registry:JSON.parse(await read('config/source-registry.json'))};
 
 test('All source records retain safe links, counts, tiers and multi-team registry entries',()=>{
-  const expected={xun:[14,20,30,6,0],li:[11,7,1,4,2],lv:[0,0,7,0,0]};
+  const expected={xun:[14,20,30,6,0],li:[11,7,1,4,2],lv:[7,2,7,3,0]};
   for(const category of Object.keys(expected)){
     const sources=profileSources(category,watchlists);
     assert.deepEqual(SOURCE_SECTIONS.map(([type])=>sources.filter(s=>s.type===type).length),expected[category]);
@@ -22,7 +22,7 @@ test('All source records retain safe links, counts, tiers and multi-team registr
 test('Source markup escapes text, refuses unsafe links, distinguishes empty sections and scope',()=>{
   const html=['conference','journal','lab'].map(type=>sourceDirectory('li',watchlists,type)).join('');
   for(const text of ['PACMMOD','PVLDB','Ontop'])assert.ok(html.includes(text));
-  assert.equal((sourceDirectory('lv',watchlists).match(/class="watchlist-pending"/g)||[]).length,1);
+  assert.equal((sourceDirectory('lv',watchlists).match(/class="watchlist-pending"/g)||[]).length,0);
   const copy=structuredClone(watchlists);copy.profiles.profiles.li.sources.push({type:'conference',tier:'<img>',name:'<script>',details:['<bad>'],links:[{label:'bad',url:'javascript:alert(1)'}]});
   const escaped=sourceDirectory('li',copy);assert.ok(escaped.includes('&lt;script&gt;'));assert.ok(!escaped.includes('javascript:'));assert.ok(!escaped.includes('<bad>'));
   assert.match(sourceDirectory('xun',null),/论文档案仍可使用/);
@@ -36,8 +36,8 @@ test('Source route is bookmarkable and preserves date, reading status and filter
 
 test('Lv reuses seven existing teams with both Berkeley links; Xun gains Robotics Research without duplicates',()=>{
   const lv=profileSources('lv',watchlists),xun=profileSources('xun',watchlists);
-  assert.equal(lv.length,7);
-  for(const source of lv)assert.equal(source,watchlists.registry.sources.find(s=>s.name===source.name));
+  assert.equal(lv.filter(s=>s.type==='lab').length,7);
+  for(const source of lv.filter(s=>s.type==='lab'))assert.equal(source,watchlists.registry.sources.find(s=>s.name===source.name));
   assert.equal(lv.find(s=>s.name==='Berkeley RAIL / RLL').links.length,2);
   for(const list of [lv,xun]){
     assert.equal(list.filter(s=>s.name==='NVIDIA GEAR').length,1);
@@ -81,6 +81,20 @@ test('Directory preambles stay out of every section while data, scholar details 
     const html=sourceDirectory(category,watchlists,'lab');
     for(const detail of ['Berkeley RAIL / RLL','Sergey Levine','Pieter Abbeel','Stanford IRIS','Chelsea Finn','https://rail.eecs.berkeley.edu/','https://rll.berkeley.edu/'])assert.ok(html.includes(detail),detail);
   }
-  assert.match(sourceDirectory('lv',watchlists,'conference'),/<p class="watchlist-pending">待补充<\/p>/);
+  assert.ok(sourceDirectory('lv',watchlists,'conference').includes('7 项'));
   assert.equal(JSON.stringify(watchlists),before);
+});
+
+test('Lv venues and arXiv reuse registry links but apply its narrower learning/task scope',()=>{
+ const before=JSON.stringify(watchlists.registry),lv=profileSources('lv',watchlists);
+ for(const [type,names] of [['conference',['CoRL','RSS','ICRA','IROS','NeurIPS','ICLR','ICML']],['journal',['RA-L','T-RO']],['arxiv',['cs.RO','cs.LG','cs.CV']]]){
+   assert.deepEqual(lv.filter(s=>s.type===type).map(s=>s.name),names);
+   for(const name of names){const source=lv.find(s=>s.name===name),original=watchlists.registry.sources.find(s=>s.name===name);assert.equal(source.links,original.links);assert.equal(source.type,original.type);}
+ }
+ for(const name of ['NeurIPS','ICLR','ICML'])assert.ok(lv.find(s=>s.name===name).details.some(s=>s.includes('真正与机器人学习相关')));
+ for(const name of ['cs.LG','cs.CV'])assert.ok(lv.find(s=>s.name===name).details.some(s=>s.includes('与机器人任务直接相关')));
+ assert.equal(JSON.stringify(watchlists.registry),before);
+ assert.ok(!sourceDirectory('lv',watchlists,'conference').includes('待补充'));
+ assert.ok(!sourceDirectory('lv',watchlists,'journal').includes('待补充'));
+ assert.equal(profileSources('xun',watchlists).length,70);
 });

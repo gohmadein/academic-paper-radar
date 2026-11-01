@@ -319,14 +319,26 @@
     },
     "lv": {
       "title": "驴 · 关注重点",
-      "scope": "关注机器人学习与操作相关团队：NVIDIA GEAR / Robotics Research、Physical Intelligence、Google DeepMind Robotics，以及 Stanford、Berkeley 的相关机器人实验室。",
+      "scope": "关注机器人学习与操作；重点 CoRL、RSS、ICRA、IROS、RA-L、T-RO，以及 NeurIPS、ICLR、ICML 中真正与机器人学习相关的论文。arXiv 关注 cs.RO，以及与机器人任务直接相关的 cs.LG、cs.CV。",
       "notes": [
-        "会议、期刊、arXiv 与独立作者名单待补充。",
+        "会议、期刊和 arXiv 复用来源注册表的官方入口；独立作者名单待补充。NeurIPS、ICLR、ICML 仅筛选真正与机器人学习相关的工作，cs.LG、cs.CV 仅筛选与机器人任务直接相关的论文。",
         "Stanford 暂按已有目录的 IRIS、REAL、SVL 具体团队跟踪；Berkeley 暂按 RAIL / RLL 跟踪，保留两个团队链接，不表示覆盖两校全部实验室。",
         "只关注所列团队的机器人相关成果；名单不是每日全量覆盖承诺，也不替代既有自动搜集方向与历史研究规则。"
       ],
       "sources": [],
       "registryRefs": [
+        "CoRL",
+        "RSS",
+        "ICRA",
+        "IROS",
+        "NeurIPS",
+        "ICLR",
+        "ICML",
+        "RA-L",
+        "T-RO",
+        "cs.RO",
+        "cs.LG",
+        "cs.CV",
         "NVIDIA GEAR",
         "Physical Intelligence",
         "Google DeepMind Robotics",
@@ -334,7 +346,81 @@
         "Stanford REAL",
         "Stanford SVL",
         "Berkeley RAIL / RLL"
-      ]
+      ],
+      "registryOverrides": {
+        "CoRL": {
+          "tier": "会议 · 重点",
+          "details": [
+            "重点关注机器人学习与操作相关论文。"
+          ]
+        },
+        "RSS": {
+          "tier": "会议 · 重点",
+          "details": [
+            "重点关注机器人学习与操作相关论文。"
+          ]
+        },
+        "ICRA": {
+          "tier": "会议 · 重点",
+          "details": [
+            "重点关注机器人学习与操作相关论文。"
+          ]
+        },
+        "IROS": {
+          "tier": "会议 · 重点",
+          "details": [
+            "重点关注机器人学习与操作相关论文。"
+          ]
+        },
+        "NeurIPS": {
+          "tier": "机器学习会议 · 仅机器人学习相关",
+          "details": [
+            "仅筛选真正与机器人学习相关的论文，不推荐无关的通用机器学习工作。"
+          ]
+        },
+        "ICLR": {
+          "tier": "机器学习会议 · 仅机器人学习相关",
+          "details": [
+            "仅筛选真正与机器人学习相关的论文，不推荐无关的通用机器学习工作。"
+          ]
+        },
+        "ICML": {
+          "tier": "机器学习会议 · 仅机器人学习相关",
+          "details": [
+            "仅筛选真正与机器人学习相关的论文，不推荐无关的通用机器学习工作。"
+          ]
+        },
+        "RA-L": {
+          "tier": "期刊 · 重点",
+          "details": [
+            "重点关注机器人学习与操作相关论文。"
+          ]
+        },
+        "T-RO": {
+          "tier": "期刊 · 重点",
+          "details": [
+            "重点关注机器人学习与操作相关论文。"
+          ]
+        },
+        "cs.RO": {
+          "tier": "arXiv · 核心",
+          "details": [
+            "关注机器人研究；预印本不等同于正式发表。"
+          ]
+        },
+        "cs.LG": {
+          "tier": "arXiv · 仅机器人任务相关",
+          "details": [
+            "仅筛选与机器人任务直接相关的论文，排除无关的纯机器学习／视觉工作；明确标注预印本状态。"
+          ]
+        },
+        "cs.CV": {
+          "tier": "arXiv · 仅机器人任务相关",
+          "details": [
+            "仅筛选与机器人任务直接相关的论文，排除无关的纯机器学习／视觉工作；明确标注预印本状态。"
+          ]
+        }
+      }
     }
   }
 }

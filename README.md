@@ -102,11 +102,11 @@ node scripts/ingest.mjs normalized.json --plan > commit-plan.json
 
 维护时，迅的 70 项直接复用 `config/source-registry.json`（不复制）；其他方向和说明编辑 `config/profile-watchlists.json`。条目沿用 `{type,tier,name,details,links}` 格式，`type` 为 `conference/journal/lab/arxiv/author`；同组多团队的全部链接必须保留。新增来源后更新对应数量测试，运行 `npm run check`。构建只发布这两个明确允许的配置文件，不暴露自动任务配置。
 
-界面关注名单不是当日检索日志，也不替代 `config/digest-rules.json` 和外部搜集流程。驴的团队栏按后续补充名单显示，其他四栏待补充；不删除既有研究方向、历史来源或自动化筛选。李的 SIGMOD/PACMMOD、VLDB/PVLDB 分列会议／期刊，不重复计算论文。李的作者与 Ontop 链接核对自学者主页及 Ontop 官方 research 页面；没有核验的场所只显示名称，不猜网址。
+界面关注名单不是当日检索日志，也不替代 `config/digest-rules.json` 和外部搜集流程。驴的会议、期刊、arXiv 与团队栏按补充名单配置，独立作者待补充；不删除既有研究方向、历史来源或自动化筛选。李的 SIGMOD/PACMMOD、VLDB/PVLDB 分列会议／期刊，不重复计算论文。李的作者与 Ontop 链接核对自学者主页及 Ontop 官方 research 页面；没有核验的场所只显示名称，不猜网址。
 
 #### 驴的团队补充与来源复用
 
-驴的实验室／团队栏已补入 NVIDIA GEAR / Robotics Research、Physical Intelligence、Google DeepMind Robotics，以及现有目录中的 Stanford IRIS／REAL／SVL、Berkeley RAIL／RLL，共 7 个分组条目；其余四栏仍待补充。两校按这些具体团队跟踪，不声称覆盖所有实验室。
+驴的实验室／团队栏已补入 NVIDIA GEAR / Robotics Research、Physical Intelligence、Google DeepMind Robotics，以及现有目录中的 Stanford IRIS／REAL／SVL、Berkeley RAIL／RLL，共 7 个分组条目；会议、期刊和 arXiv 的后续补充见下；独立作者待补充。两校按这些具体团队跟踪，不声称覆盖所有实验室。
 
 `registryRefs` 用来源注册表的精确名称引用条目，避免复制团队链接与维护漂移。迅继续读取整个注册表，不重复添加已有团队。NVIDIA Robotics Research 的官方入口补充到既有 GEAR 条目，原 GEAR 链接保留；记录在注册表 `supplements`，不改原始 Markdown。新增引用需通过测试确认存在。此目录更新不更改已收录论文或自动搜集规则。
 
@@ -138,3 +138,9 @@ node scripts/ingest.mjs normalized.json --plan > commit-plan.json
 全部方向、迅、李、驴的真实每日推送共用静态半透明磨砂卡片（18px背景模糊、白色高光），保留各方向蓝／红／黑边框。机构标识库的外容器统一16px圆角及内边距，推送页也采用同样磨砂底；内部机构卡片和标志本身不裁切、不额外磨糊。其他视图只更新外容器圆角，保持普通可读底色。
 
 李的照片和按日报轮换逻辑不变；迅的高达仍只在固定22%透明度的外侧留白中，中央白色阅读层继续阻止线稿进入正文；驴与全部方向不新增背景图片。因此无照片页面的玻璃视觉更克制。无背景模糊支持／减少透明度／强制颜色／打印时均保留清晰实底回退。不改变笔记、书签、已读或论文ID。
+
+### 驴的会议、期刊与 arXiv 补充
+
+会议目录含 CoRL、RSS、ICRA、IROS，以及**仅机器人学习相关**的 NeurIPS、ICLR、ICML；期刊目录含 RA-L、T-RO。arXiv 配置关注 cs.RO 和**仅与机器人任务直接相关**的 cs.LG、cs.CV，不增加第四个侧栏菜单。原有7组团队不变。
+
+通过 `registryRefs` 复用原来源身份和全部官方链接，`registryOverrides` 只补充驴的分组／筛选说明，不覆盖链接、类型或名称，不缩窄迅的全部机器人范围。`digest-rules.json` 已包含这些来源及无关纯LLM/CV排除规则，本次不改变自动搜集规则、配额、调度或已有日报。
