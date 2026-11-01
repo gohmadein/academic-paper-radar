@@ -18,6 +18,8 @@ Converted to an equirectangular SVG path (720 × 360), rounded to 0.01 SVG units
 
 Xun profile decorative mecha line art
 AI-assisted line-art transformations of two model photographs supplied by the site owner.
+Current versions add owner-approved soft grey armour/joint shading and preserve
+transparent backgrounds; optimized as same-origin WebP without further visual edits.
 Gundam characters and designs remain the property of their respective rights holders;
 reference photography bears © SOTSU · SUNRISE. No official affiliation or endorsement.
 These decorative images are not paper figures, scientific evidence, or institutional marks.

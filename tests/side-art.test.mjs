@@ -32,3 +32,15 @@ test('Darkest 22% line art under white glass retains readable text contrast',()=
  assert.ok(contrast([18,59,115],bg)>=4.5);
  assert.ok(contrast([82,98,122],card)>=4.5);
 });
+test('Xun shaded replacements are packaged same-origin with matching content hashes',async()=>{
+ const {readFile}=await import('node:fs/promises');const {createHash}=await import('node:crypto');
+ const read=p=>readFile(new URL('../'+p,import.meta.url));
+ const css=(await read('styles.css')).toString(),build=(await read('scripts/build.mjs')).toString();
+ for(const path of ['assets/decor/xun-gundam-left-shaded.6ac07ae904b9.webp','assets/decor/xun-gundam-right-shaded.7039e6b45647.webp']){
+  const bytes=await read(path);assert.ok(css.includes(path));assert.ok(build.includes(path));
+  assert.ok(path.includes(createHash('sha256').update(bytes).digest('hex').slice(0,12)));
+  assert.equal(bytes.toString('ascii',8,12),'WEBP');assert.ok(bytes.includes(Buffer.from('ALPH')));
+ }
+ assert.match(css,/opacity:\.22/);assert.match(css,/position:fixed;top:0;z-index:-1/);
+ assert.doesNotMatch(css,/c9ffc9b7ef13|3561f752a59e/);
+});
