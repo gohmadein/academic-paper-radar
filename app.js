@@ -30,6 +30,8 @@ function updateSideArt() {
   main.classList.toggle('has-side-art',layout.visible);
   main.style.setProperty('--art-left-width',`${layout.leftWidth}px`);
   main.style.setProperty('--art-right-width',`${layout.rightWidth}px`);
+  main.style.setProperty('--art-left-start',`${layout.leftStart||0}px`);
+  main.style.setProperty('--art-right-start',`${layout.rightStart||0}px`);
 }
 function updateRail() {
   document.body.classList.toggle('rail-collapsed', railCollapsed);

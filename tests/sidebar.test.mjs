@@ -287,8 +287,8 @@ test('Decorative gutters never intersect the main or rail, including collapsed w
   assert.match(css,/main\.has-side-art::before/);
   assert.match(css,/pointer-events:none;user-select:none/);
   assert.match(css,/opacity:\.22/);
-  assert.match(css,/right:calc\(100% \+ 12px\)/);
-  assert.match(css,/left:calc\(100% \+ 12px\)/);
+  assert.match(css,/left:var\(--art-left-start\)/);
+  assert.match(css,/left:var\(--art-right-start\)/);assert.match(css,/position:fixed;top:120px/);
   for(const viewport of [1536,1650,1920,2048,2560,3840])for(const [rail,main] of [[222,1120],[76,1160]]){
     const gutter=(viewport-rail-main)/2,width=gutter-24,mainLeft=rail+gutter,mainRight=mainLeft+main;
     const left={start:mainLeft-12-width,end:mainLeft-12};
@@ -304,7 +304,7 @@ test('Side art measures live layout on resize and rail changes without unsafe in
   main.style={setProperty(k,v){props[k]=v}};
   main.classList.toggle=(name,value)=>{if(name==='has-side-art')main.artVisible=value};
   h.run("document.documentElement={clientWidth:1536};document.querySelector=()=>({getBoundingClientRect:()=>({right:222})})");
-  h.run('updateSideArt()');assert.equal(main.artVisible,true);assert.equal(props['--art-left-width'],'73px');
+  h.run('updateSideArt()');assert.equal(main.artVisible,true);assert.equal(props['--art-left-width'],'73px');assert.equal(props['--art-left-start'],'234px');assert.equal(props['--art-right-start'],'1451px');
   h.run('document.documentElement.clientWidth=1440');mainLeft=271;
   h.windowEvents.resize();assert.equal(main.artVisible,true);
   mainLeft=217;main.getBoundingClientRect=()=>({left:217,right:1377});

@@ -15,3 +15,9 @@ test('Mobile, absent layout and asymmetric insufficient gutters are hidden safel
   assert.equal(sideArtLayout({}).visible,false);
   assert.equal(sideArtLayout({viewportWidth:1600,mainLeft:300,mainRight:1585,railRight:76}).visible,false);
 });
+test('Fixed art anchors are viewport x coordinates, independent of document scroll',()=>{
+ const measured={viewportWidth:2048,mainLeft:575,mainRight:1695,railRight:222};
+ const a=sideArtLayout({...measured,scrollY:0}),b=sideArtLayout({...measured,scrollY:12000});
+ assert.deepEqual(a,b);assert.equal(a.leftStart,234);assert.equal(a.rightStart,1707);
+ assert.equal(a.leftStart+a.leftWidth,563);assert.equal(a.rightStart+a.rightWidth,2036);
+});
