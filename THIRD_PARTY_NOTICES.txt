@@ -31,3 +31,10 @@ no open licence, ownership transfer or official endorsement is asserted.
 Copyright remains with the respective rights holders. Only proportional WebP
 optimization was performed; CSS cover/white overlay affect presentation only.
 These backgrounds are not research figures, author portraits or scientific evidence.
+
+Lv profile decorative background photograph
+One photograph supplied and explicitly approved by the site owner for public
+repository/site background use. Photographer and original licence are unverified;
+no open licence or endorsement is asserted. Rights remain with their holders.
+Only proportional WebP optimization was performed, with CSS cover/white overlay.
+This decoration is not a research figure, author portrait or scientific evidence.

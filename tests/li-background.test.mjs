@@ -53,3 +53,13 @@ test('Institution library outer container is rounded; shared glass keeps logo su
  assert.match(css,/\.xun-side-art main\{[^}]*background:transparent/);
  assert.match(shared,/\.li-background-0::before/);
 });
+test('Lv single photograph is same-origin, packaged, fixed and has photo accessibility fallbacks',async()=>{
+ const css=await readFile(new URL('../styles.css',import.meta.url),'utf8');
+ const path='assets/decor/lv-photo.59a5fb1618b3.webp';
+ assert.match(css,/\.li-glass::before,\.lv-glass::before\{[^}]*position:fixed/);
+ assert.ok(css.includes(`url("./${path}")`));
+ assert.match(css,/@media\(max-width:800px\)\{[^}]*\.lv-glass::before[^}]*left:0/);
+ for(const mode of ['prefers-reduced-transparency:reduce','forced-colors:active','print'])assert.ok(css.slice(css.indexOf('@media('+mode+')')>=0?css.indexOf('@media('+mode+')'):css.lastIndexOf('@media print')).includes('.li-glass::before,.lv-glass::before{display:none}'));
+ assert.ok((await readFile(new URL('../'+path,import.meta.url))).length>10000);
+ assert.ok((await readFile(new URL('../scripts/build.mjs',import.meta.url),'utf8')).includes(path));
+});
