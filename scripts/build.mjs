@@ -15,7 +15,7 @@ await mkdir(join(out,'config'),{recursive:true});
 for(const file of ['source-registry.json','profile-watchlists.json']) await cp(join(root,'config',file),join(out,'config',file));
 // Publish only referenced, validated research assets, plus the site's own mark/fonts.
 // Source-review archives or restricted unused logos must never enter dist.
-for(const file of ['assets/favicon.svg','assets/fonts',...result.assets]){await mkdir(resolve(out,file,'..'),{recursive:true});await cp(join(root,file),join(out,file),{recursive:true});}
+for(const file of ['assets/favicon.svg','assets/fonts','assets/decor/xun-gundam-left.c9ffc9b7ef13.webp','assets/decor/xun-gundam-right.3561f752a59e.webp',...result.assets]){await mkdir(resolve(out,file,'..'),{recursive:true});await cp(join(root,file),join(out,file),{recursive:true});}
 // Pages caches files independently. Version all entry assets and module imports
 // together so new HTML cannot execute an older, incompatible cached app module.
 async function runtimeFiles(path){

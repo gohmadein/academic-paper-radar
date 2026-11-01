@@ -265,3 +265,34 @@ test('Exact profile mottos appear only below their real daily feed heading witho
   for(const category of ['xun','li','lv']){h.click({category});assert.equal(motto.attributes['data-profile'],category);assert.equal(motto.hidden,false);}
   h.click({category:'all'});assert.equal(motto.hidden,true);assert.equal(motto.attributes['data-profile'],'');
 });
+
+test('Gundam decorations are exclusive to the real xun feed and follow navigation',async()=>{
+  const h=await appHarness();
+  const visible=()=>h.bodyClasses.has('xun-side-art');
+  assert.equal(visible(),false);
+  h.click({category:'xun'});assert.equal(visible(),true);
+  h.click({category:'li'});assert.equal(visible(),false);
+  h.back();assert.equal(visible(),true);
+  h.forward();assert.equal(visible(),false);
+  for(const category of ['all','lv']){h.click({category});assert.equal(visible(),false);}
+  h.click({category:'xun'});
+  for(const view of ['archive','bookmarks']){h.click({view});assert.equal(visible(),false);h.click({view:'feed'});assert.equal(visible(),true);}
+  for(const sourceType of ['conference','journal','lab']){h.click({sourceProfile:'xun',sourceType});assert.equal(visible(),false);h.click({category:'xun'});assert.equal(visible(),true);}
+  h.click({action:'demo'});assert.equal(visible(),false);
+});
+
+test('Decorative gutters never intersect the main or rail, including collapsed wide layouts',async()=>{
+  const css=await read('styles.css');
+  assert.match(css,/@media\(min-width:1650px\)\{/);
+  assert.match(css,/pointer-events:none;user-select:none/);
+  assert.match(css,/opacity:\.13/);
+  assert.match(css,/right:calc\(100% \+ 12px\)/);
+  assert.match(css,/left:calc\(100% \+ 12px\)/);
+  for(const viewport of [1650,1920,2048,2560,3840])for(const [rail,main] of [[222,1120],[76,1160]]){
+    const gutter=(viewport-rail-main)/2,width=Math.min(340,gutter-24),mainLeft=rail+gutter,mainRight=mainLeft+main;
+    const left={start:mainLeft-12-width,end:mainLeft-12};
+    const right={start:mainRight+12,end:mainRight+12+width};
+    assert.ok(width>0);assert.ok(left.start>=rail+12);assert.ok(left.end<mainLeft);
+    assert.ok(right.start>mainRight);assert.ok(right.end<=viewport-12);
+  }
+});

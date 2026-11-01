@@ -15,3 +15,9 @@ Natural Earth 1:110m land, v5.1.2 — public domain.
 Source: https://github.com/nvkelso/natural-earth-vector/blob/v5.1.2/geojson/ne_110m_land.geojson
 Terms: https://www.naturalearthdata.com/about/terms-of-use/
 Converted to an equirectangular SVG path (720 × 360), rounded to 0.01 SVG units. No political boundaries.
+
+Xun profile decorative mecha line art
+AI-assisted line-art transformations of two model photographs supplied by the site owner.
+Gundam characters and designs remain the property of their respective rights holders;
+reference photography bears © SOTSU · SUNRISE. No official affiliation or endorsement.
+These decorative images are not paper figures, scientific evidence, or institutional marks.

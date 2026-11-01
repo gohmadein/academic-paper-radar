@@ -108,6 +108,7 @@ function collection() { return state.demo ? data.demo : data.real; }
 
 function updateViewChrome() {
   const isFeed = state.view === 'feed';
+  document.body.classList.toggle('xun-side-art', isFeed && !state.demo && state.category === 'xun');
   const motto=isFeed&&!state.demo ? PROFILE_MOTTOS[state.category]||'' : '';
   $('profile-motto').textContent=motto;
   $('profile-motto').hidden=!motto;
