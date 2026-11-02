@@ -69,7 +69,7 @@ test('Daily source coverage, optional tracks, places and private markers are exp
  assert.ok(!upcomingCalendarEvents(data.events,'2026-11-01T00:00:00Z').some(event=>event.track==='workshop'));
  const hidden=researchCalendarHTML(data,{selectedDate:'2026-11-02',scope:'main'}),all=researchCalendarHTML(data,{selectedDate:'2026-11-02',scope:'all'});
  assert.ok(!hidden.includes('data-calendar-event="icra-2027-workshop-proposal"'));assert.ok(all.includes('data-calendar-event="icra-2027-workshop-proposal"'));
- assert.match(all,/Seoul/);assert.match(all,/官方信息冲突/);
+ assert.match(all,/Seoul/);assert.doesNotMatch(all,/核验覆盖与待确认|官方信息冲突|资料核验|投稿条件/);assert.ok(data.coverage.some(row=>row.status==='conflict'));
  const html=researchCalendarHTML(data,{tab:'private',selectedDate:'2026-11-05',month:'2026-11',tasks:[{id:'task-1',date:'2026-11-05',text:'<script>private</script>',done:false}]});
  assert.ok(html.includes('personal-marker'));assert.ok(html.includes('&lt;script&gt;'));assert.ok(!html.includes('<script>'));assert.match(html,/不上传或发送提醒/);
 });
@@ -98,4 +98,13 @@ test('Calendar tabs retain a fixed scroll viewport and six-week grid at every br
   assert.match(html,/id="calendar-agenda-panel" class="calendar-agenda-scroll" role="tabpanel" tabindex="0"/);
   assert.match(html,/class="calendar-days"/);
  }
+});
+
+test('Calendar chrome omits audit prose but retains critical dates, sources, privacy and errors',()=>{
+ const html=researchCalendarHTML(data,{selectedDate:'2027-04-17',scope:'all'});
+ assert.doesNotMatch(html,/calendar-coverage|calendar-footnote|RESEARCH CALENDAR|投稿条件/);
+ const errors=researchCalendarHTML(data,{tab:'private',taskError:'未保存测试',refreshError:'刷新失败测试'});
+ assert.match(errors,/未保存测试/);assert.match(errors,/刷新失败测试/);assert.match(errors,/不上传或发送提醒/);
+ const deadlineHTML=researchCalendarHTML(data,{selectedDate:'2026-11-11'});
+ assert.match(deadlineHTML,/论文登记/);assert.match(deadlineHTML,/AoE/);assert.match(deadlineHTML,/北京 2026-11-11 19:59/);assert.match(deadlineHTML,/官方日期/);
 });

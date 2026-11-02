@@ -75,3 +75,14 @@ test('Xun region disclosure and selected results share a bounded keyboard-scroll
   assert.match(html,/<summary>按地区浏览/);assert.ok(html.endsWith('</details></div>'));
  }
 });
+
+test('Xun regions are directly visible; other profiles retain their native disclosure',()=>{
+ const model=researchMapModel([{...p,date:'2026-10-31'}],geography);
+ for(const selection of ['', 'US:A']){
+  const html=researchMapHTML(model,selection,{compact:true});
+  assert.match(html,/<section id="map-region-list" class="map-regions map-regions-direct"/);
+  assert.doesNotMatch(html,/<details|<summary|RESEARCH ATLAS|不受下方筛选影响|署名机构的地区待核验/);
+  assert.match(html,/已定位/);assert.match(html,/data-map-region="US:A"/);
+ }
+ assert.match(researchMapHTML(model),/<details id="map-regions"/);
+});

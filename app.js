@@ -226,7 +226,7 @@ function renderMap() {
   if(mapProfile!==state.category){mapRegion='';mapProfile=state.category;}
   const model=researchMapModel(data.real.papers,data.geography,{profile:state.category,mode:mapMode});
   if(!model.groups.some(g=>g.id===mapRegion))mapRegion='';
-  const markup=researchMapHTML(model,mapRegion);
+  const markup=researchMapHTML(model,mapRegion,{compact:state.category==='xun'});
   if(markup===lastMapMarkup)return;
   lastMapMarkup=markup;
   const expanded=$('map-regions')?.open;
