@@ -753,4 +753,4 @@ dialog::backdrop{background:#18263f38}
 .arxiv-bulletin-body:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
 
 /* UW's informational-use mark: preserve a serif-height quiet field, never a decorative badge. */
-.institution-avatar.uw-affiliation-mark{padding:6px;background:#fff;border:0;border-radius:0;box-shadow:none}
+.institution-avatar.uw-affiliation-mark{width:60px;height:44px;flex:0 0 60px;padding:6px;background:#fff;border:0;border-radius:0;box-shadow:none}
