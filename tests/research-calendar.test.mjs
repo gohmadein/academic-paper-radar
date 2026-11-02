@@ -85,3 +85,17 @@ test('Current daily calendar covers the configured conferences with valid proven
  assert.equal(current.coverage.length,watched.length);
  for(const event of current.events)assert.ok(event.verifiedAt<=current.checkedAt);
 });
+
+test('Calendar tabs retain a fixed scroll viewport and six-week grid at every breakpoint',async()=>{
+ const css=await read('styles.css');
+ assert.match(css,/\.calendar-agenda-scroll\{height:255px;min-height:0;overflow:auto;scrollbar-gutter:stable;/);
+ assert.match(css,/\.calendar-agenda-scroll\{height:285px\}/);
+ assert.match(css,/\.calendar-agenda-scroll\{height:260px\}/);
+ assert.doesNotMatch(css,/\.calendar-agenda-scroll\{max-height:/);
+ for(const height of [27,32,34])assert.ok(css.includes(`grid-template-rows:repeat(6,${height}px)`));
+ for(const tab of ['private','conference'])for(const month of ['2027-02','2026-11']){
+  const html=researchCalendarHTML(data,{tab,month,tasks:[]});
+  assert.match(html,/id="calendar-agenda-panel" class="calendar-agenda-scroll" role="tabpanel" tabindex="0"/);
+  assert.match(html,/class="calendar-days"/);
+ }
+});

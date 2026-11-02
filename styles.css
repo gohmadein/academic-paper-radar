@@ -695,7 +695,7 @@ dialog::backdrop{background:#18263f38}
 .calendar-tabs{display:flex;gap:3px;padding:3px;background:#edf3fc;border-radius:8px;margin-bottom:8px}
 .calendar-tabs button{flex:1;padding:6px 4px;font-size:10px;white-space:nowrap;border-radius:6px;color:#526787}
 .calendar-tabs button[aria-selected="true"]{background:#fff;color:#175cd3;box-shadow:0 1px 4px #18263f0c}
-.calendar-agenda-scroll{max-height:255px;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;padding:1px 3px 3px 0}
+.calendar-agenda-scroll{height:255px;min-height:0;overflow:auto;scrollbar-gutter:stable;overscroll-behavior:contain;scrollbar-width:thin;padding:1px 3px 3px 0}
 .calendar-place{color:#354358!important}.calendar-private-note{font-size:10px;line-height:1.7;color:#526787}
 .calendar-day .personal-marker{left:calc(50% + 3px);background:#ad5a14}.calendar-legend .personal-marker{background:#ad5a14}
 .calendar-add-task{padding:7px 10px;border:1px solid #cedef5;border-radius:8px;background:#f6f9ff;font-size:11px;margin-bottom:9px;color:#175cd3}
@@ -705,7 +705,12 @@ dialog::backdrop{background:#18263f38}
 #calendar-task-dialog{max-width:560px;width:calc(100% - 32px)}#calendar-task-title{font-size:20px;margin:0}
 #calendar-task-dialog label{display:block;font-size:12px;margin:12px 0 5px}#calendar-task-dialog textarea,#calendar-task-date{display:block;width:100%;padding:10px;border:1px solid #b8cae3;border-radius:8px;background:#fafcff;color:#18263f;font:14px/1.7 var(--sans);box-sizing:border-box}
 #calendar-task-dialog textarea{resize:vertical}#calendar-task-status,#calendar-task-transfer-status{font-size:11px;line-height:1.7}.calendar-task-backup{margin-top:18px;border-top:1px solid #e0e8f5;padding-top:12px;font-size:11px}.calendar-task-backup summary{cursor:pointer}.calendar-task-backup input[type=file]{max-width:100%;font-size:11px}
-@media(max-width:1100px){.with-calendar .reading-title{margin-bottom:12px}.calendar-agenda-scroll{max-height:285px}}
-@media(max-width:440px){.calendar-agenda-scroll{max-height:260px}.calendar-tabs button{min-height:36px}}
+@media(max-width:1100px){.with-calendar .reading-title{margin-bottom:12px}.calendar-agenda-scroll{height:285px}}
+@media(max-width:440px){.calendar-agenda-scroll{height:260px}.calendar-tabs button{min-height:36px}}
 .calendar-event-scopes{display:flex;gap:8px;margin-bottom:8px}.calendar-event-scopes button{font-size:9px;padding:3px 5px;border-radius:5px;color:#526787}.calendar-event-scopes button[aria-pressed="true"]{color:#175cd3;background:#edf4ff}
 .calendar-coverage{font-size:10px;line-height:1.7;color:#526787;margin-top:7px}.calendar-coverage summary{cursor:pointer}.calendar-coverage ul{max-height:140px;overflow:auto;margin:6px 0 0;padding-left:16px}.calendar-coverage p{margin:2px 0 7px}.calendar-coverage a{color:#175cd3}
+
+/* Reserve six weeks and a fixed agenda viewport: tab content never resizes the module. */
+.calendar-days{grid-template-rows:repeat(6,27px)}
+@media(max-width:1100px){.calendar-days{grid-template-rows:repeat(6,32px)}}
+@media(max-width:440px){.calendar-days{grid-template-rows:repeat(6,34px)}}
