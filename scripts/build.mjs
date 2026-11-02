@@ -1,3 +1,4 @@
+import {institutionDisplayCSS} from '../lib/institution-display.js';
 import {mkdir,cp,writeFile,readFile,readdir,rm} from 'node:fs/promises';
 import {join,resolve,sep} from 'node:path';
 import {createHash} from 'node:crypto';
@@ -11,6 +12,8 @@ if (!out.startsWith(resolve(root)+sep) || out !== resolve(root,'dist')) throw ne
 await rm(out,{recursive:true,force:true});
 await mkdir(out,{recursive:true});
 for (const file of ['index.html','styles.css','app.js','lib','data','THIRD_PARTY_NOTICES.txt']) await cp(join(root,file),join(out,file),{recursive:true});
+const institutionCSS=institutionDisplayCSS(JSON.parse(await readFile(join(root,'data/institutions.json'),'utf8')));
+await writeFile(join(out,'styles.css'),(await readFile(join(out,'styles.css'),'utf8'))+institutionCSS);
 await mkdir(join(out,'config'),{recursive:true});
 for(const file of ['source-registry.json','profile-watchlists.json']) await cp(join(root,'config',file),join(out,'config',file));
 // Publish only referenced, validated research assets, plus the site's own mark/fonts.

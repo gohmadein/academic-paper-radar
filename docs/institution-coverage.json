@@ -1,0 +1,1492 @@
+{
+  "checkedAt": "2026-11-02",
+  "scope": "Public paper-affiliation mark audit, not permission grants or endorsement. Snapshot only.",
+  "institutionCounts": {
+    "total": 252,
+    "verified": 105,
+    "pending": 147
+  },
+  "pendingReasonCounts": {
+    "permission-required": 63,
+    "policy-uncertain": 15,
+    "access-unavailable": 43,
+    "no-compatible-official-asset": 14,
+    "identity-unverified": 12
+  },
+  "resolvedParent": [
+    {
+      "previousId": "pending-institute-of-medical-science",
+      "paperId": "arxiv-2610-23826",
+      "parentId": "pending-university-of-toronto",
+      "reason": "Exact paper unit name, street, room and postal-code match to official University of Toronto calendar. Paper-specific normalization; generic IMS not made a global alias.",
+      "source": "https://sgs.calendar.utoronto.ca/degree/Medical-Science"
+    }
+  ],
+  "pending": [
+    {
+      "id": "pending-university-of-bologna",
+      "name": "University of Bologna",
+      "reasonCode": "permission-required",
+      "reason": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Article 6 requires third-party authorization; no applicable authorization established. 核验：2026-11-02。 官方核验入口：https://normateneo.unibo.it/regolamento-per-l2019uso-del-marchio-alma-mater-studiorum-2013-universita-di-bologna-1/@@download/testo_integrato/Regolamento%20marchio.pdf",
+      "sources": [],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-clermont-auvergne-inp",
+      "name": "Clermont Auvergne INP",
+      "reasonCode": "permission-required",
+      "reason": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Official homepage returned HTTP403; official legal notice requires prior written permission for reproduction including logos. No bypass. Do not substitute Universite Clermont Auvergne parent logo. 核验：2026-11-02。 官方核验入口：https://www.clermont-auvergne-inp.fr/mentions-legales/",
+      "sources": [
+        "https://www.clermont-auvergne-inp.fr/mentions-legales/"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-mitsubishi-electric-research-laboratories",
+      "name": "Mitsubishi Electric Research Laboratories",
+      "reasonCode": "policy-uncertain",
+      "reason": "Exact full MERL lockup is identified, but parent trademark conditions and applicable MERL external publication permission remain unresolved. CandidateSVG also embedsPNG with nonstandard data:img MIME and fails strict import safety; no silent sanitizing of unverified content.",
+      "sources": [
+        "https://www.mitsubishielectric.com/en/terms/"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-inria",
+      "name": "Inria",
+      "reasonCode": "access-unavailable",
+      "reason": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Official brand page returned Anubis Access Denied error9e4edb5b6b850c41. No challenge bypass. Indexed guide requires minimum45px width; downloadable official bytes not verified. 核验：2026-11-02。 官方核验入口：https://www.inria.fr/fr/charte-dutilisation-de-lidentite-visuelle-dinria",
+      "sources": [],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-universit-de-lorraine",
+      "name": "Université de Lorraine",
+      "reasonCode": "permission-required",
+      "reason": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Official logo and favicon found; legal notice bars public reproduction absent express authorization. Exception only personal/private restricted free distribution, not public site. 核验：2026-11-02。 官方核验入口：https://www.univ-lorraine.fr/welcome/en/legal-notice/",
+      "sources": [],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-the-hong-kong-university-of-science-and-technology",
+      "name": "The Hong Kong University of Science and Technology",
+      "reasonCode": "permission-required",
+      "reason": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Third-party mark use requires approval under paragraphs3.2–3.3; Appendix3 requires prepublication GECO review. No permission established. 核验：2026-11-02。 官方核验入口：https://dst.hkust.edu.hk/sites/default/files/2026-03/Guidelines_Use_of_University_Titles_Names_and_Logos.pdf",
+      "sources": [
+        "https://dst.hkust.edu.hk/sites/default/files/2026-03/Guidelines_Use_of_University_Titles_Names_and_Logos.pdf"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-university-of-massachusetts-amherst",
+      "name": "University of Massachusetts Amherst",
+      "reasonCode": "access-unavailable",
+      "reason": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Prior audit retained without bypass or duplicate download: 官方素材库已定位，但品牌页和图标下载返回 HTTP 403；未绕过访问限制，也未使用 UMass 系统或其他校区标识，因此仅显示文字名称。 官方依据：https://www.umass.edu/brand/assets 核验：2026-11-02。",
+      "sources": [],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-nvidia",
+      "name": "NVIDIA",
+      "reasonCode": "permission-required",
+      "reason": "Educational/research applications appear among approved logo-use examples but opening authorization condition remains. Newsroom downloadable logo gallery does not establish overriding permission. No blanket noncommercial exception; standalone eye prohibited. Prior exact finding: Prior audit retained without bypass or duplicate download: NVIDIA 官方法律声明要求事先许可才可公开使用商标；未获得许可，因此仅显示文字名称。 官方依据：https://www.nvidia.com/en-us/about-nvidia/legal-info.html 核验：2026-11-02。",
+      "sources": [
+        "https://www.nvidia.com/en-eu/about-nvidia/legal-info/logo-brand-usage/",
+        "https://nvidianews.nvidia.com/multimedia/corporate/nvidia-logos",
+        "https://www.nvidia.com/en-us/about-nvidia/legal-info.html"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-the-university-of-texas-at-austin",
+      "name": "The University of Texas at Austin",
+      "reasonCode": "permission-required",
+      "reason": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Prior audit retained without bypass or duplicate download: 官方紧凑盾徽/favicon已确认；官方校徽和其他支持标识要求事先书面许可，未获展示授权，因此仅显示文字名称。 官方依据：https://umac.utexas.edu/brand-center/supporting-marks/ 核验：2026-11-02。",
+      "sources": [
+        "https://umac.utexas.edu/brand-center/supporting-marks/"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-carnegie-mellon-university",
+      "name": "Carnegie Mellon University",
+      "reasonCode": "permission-required",
+      "reason": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Prior audit retained without bypass or duplicate download: 官方 CMU 字母标保留给与大学紧密相关的社区；与其他文字或图形相邻组合需书面许可，且要求安全空间。未核实适用于本站卡片的展示条件，因此仅显示文字名称。 官方依据：https://brand.cmu.edu/visual-identity/carnegie-mellon-trademarks/lettermark 核验：2026-11-02。",
+      "sources": [],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-vilnius-university",
+      "name": "Vilnius University",
+      "reasonCode": "permission-required",
+      "reason": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Prior audit retained without bypass or duplicate download: 官方主页完整透明徽章已确认；校方名称及标识授予规则列有书面申请和合同程序，未核实本站展示授权，因此仅显示文字名称。 官方依据：https://www.vu.lt/site_files/Vardo_ir_%C5%BEenklo_suteikimo_ir_naudojimo_taisykl%C4%97s.pdf 核验：2026-11-02。",
+      "sources": [],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-johns-hopkins-university",
+      "name": "Johns Hopkins University",
+      "reasonCode": "permission-required",
+      "reason": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Official standalone shield allowed as format, but use-of-name rules strictly prohibit third-party mark use without prior written permission. 核验：2026-11-02。 官方核验入口：https://brand.jhu.edu/resources/use-of-name/",
+      "sources": [
+        "https://brand.jhu.edu/resources/use-of-name/"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-washington-university-in-st-louis",
+      "name": "Washington University in St. Louis",
+      "reasonCode": "permission-required",
+      "reason": "Full official WashU logo recovered; original compact-format blocker is solved. Current university policy expressly requires written authorization for third-party and not-for-profit use. Public brand JPG is not permission; no Washington-Seattle substitution. Prior exact finding: Shield must be solo, not combined with text as lockup; full-colour shield alone requires approval and seal requires permission. No compliant current compact card use verified. 核验：2026-11-02。 官方核验入口：https://marcomm.washu.edu/university-shield-seal/",
+      "sources": [
+        "https://policies.washu.edu/policies/permission-to-use-university-names-logos-and-trademarks/",
+        "https://marcomm.washu.edu/washu-logo/",
+        "https://marcomm.washu.edu/app/uploads/2024/02/WashU-RGB.jpg"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-stony-brook-university",
+      "name": "Stony Brook University",
+      "reasonCode": "access-unavailable",
+      "reason": "Full intact shield+wordmark now acceptable under expanded contract. Fresh official identity page returned403; no permitted current complete file obtained and no detached shield used. Prior no-separation rule is not a blanket prohibition on full logo.",
+      "sources": [
+        "https://www.stonybrook.edu/sbu-brand/design-visual-identity/logos"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-shanghai-jiao-tong-university",
+      "name": "Shanghai Jiao Tong University",
+      "reasonCode": "permission-required",
+      "reason": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Complete transparent official240px emblem downloaded and inspected. Article15 explicitly prohibits outside units/individuals making or using items carrying identity without permission. Withheld from deployment. 核验：2026-11-02。 官方核验入口：https://vi.sjtu.edu.cn/index.php/articles/bulletin/16",
+      "sources": [
+        "https://vi.sjtu.edu.cn/index.php/articles/bulletin/16"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-the-university-of-hong-kong",
+      "name": "The University of Hong Kong",
+      "reasonCode": "access-unavailable",
+      "reason": "Full shield+wordmark is now acceptable if online shield≥50px. Fresh official basic identity page returned403; no independently verified complete downloadable positive asset available in local candidates. Did not bypass or crop.",
+      "sources": [
+        "https://www-2.hku.hk/about/uid/basic.html"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-xense-robotics",
+      "name": "Xense Robotics",
+      "reasonCode": "no-compatible-official-asset",
+      "reason": "Reinspected genuine full183x28 SVG: all paths white. No separate positive logo or official brand instruction prescribing contrasting background verified; no recolor/filter or made-up backing.",
+      "sources": [
+        "https://www.xenserobotics.com/static/index/images/logo.svg"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-university-of-waterloo",
+      "name": "University of Waterloo",
+      "reasonCode": "access-unavailable",
+      "reason": "Full academic signature is acceptable under new contract, unlike informal swag-only shield. Guide requires horizontal shield28px or vertical full logo54px. Official download page fresh request503, so no complete verified file acquired.",
+      "sources": [
+        "https://uwaterloo.ca/brand/uw-logos"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-university-of-illinois-chicago",
+      "name": "University of Illinois Chicago",
+      "reasonCode": "permission-required",
+      "reason": "Official policy says UIC trademarks used solely with UIC permission. No applicable independent editorial exception established; standalone circle internal-audience preference is secondary.",
+      "sources": [
+        "https://brand.uic.edu/resources/trademarks-and-licensing/"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-university-of-edinburgh",
+      "name": "University of Edinburgh",
+      "reasonCode": "access-unavailable",
+      "reason": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Current official logo assets/guidance require University SharePoint login. Public2017 digital guidelines PDF returned403. No bypass; current standalone emblem conditions unverified. 核验：2026-11-02。 官方核验入口：https://information-services.ed.ac.uk/design-system/brand",
+      "sources": [],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-columbia-university",
+      "name": "Columbia University",
+      "reasonCode": "permission-required",
+      "reason": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Current official logo files available to Columbia faculty/staff; site offers permission requests. Standalone crown external-use conditions not verified; no invented seal or inferred clearance. 核验：2026-11-02。 官方核验入口：https://visualidentity.columbia.edu/",
+      "sources": [],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-toyota-research-institute",
+      "name": "Toyota Research Institute",
+      "reasonCode": "access-unavailable",
+      "reason": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Official TRI homepage returned403. No bypass; parent Toyota emblem is not TRI-specific and must not be substituted. 核验：2026-11-02。 官方核验入口：https://www.tri.global/",
+      "sources": [],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-massachusetts-institute-of-technology",
+      "name": "Massachusetts Institute of Technology",
+      "reasonCode": "policy-uncertain",
+      "reason": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. MIT communications official FAQ instructs outsiders to contact the Institute to request logo-file access. No external publication permission established; not substituting unofficial M icon. 核验：2026-11-02。 官方核验入口：https://comms.mit.edu/",
+      "sources": [
+        "https://comms.mit.edu/"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.815186+00:00"
+    },
+    {
+      "id": "pending-university-of-california-berkeley",
+      "name": "University of California, Berkeley",
+      "reasonCode": "permission-required",
+      "reason": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Primary logo and university seal require Brand Protection permission. B monogram must not represent primary identity; no substitution made. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://brand.berkeley.edu/downloads/brand-essentials-toolkit/",
+      "sources": [
+        "https://brand.berkeley.edu/downloads/brand-essentials-toolkit/"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.815395+00:00"
+    },
+    {
+      "id": "pending-university-of-california-los-angeles",
+      "name": "University of California, Los Angeles",
+      "reasonCode": "permission-required",
+      "reason": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Official third-party-use process explicitly requires approval for webpages/articles; no approval obtained. 核验：2026-11-02T07:27:19.441377+00:00。 官方核验入口：https://adminvc.ucla.edu/request-to-use-uc-name-or-logo",
+      "sources": [
+        "https://adminvc.ucla.edu/request-to-use-uc-name-or-logo"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-czech-technical-university-in-prague",
+      "name": "Czech Technical University in Prague",
+      "reasonCode": "no-compatible-official-asset",
+      "reason": "Main/student identity page502/503. Alternative public faculty-hosted cvut-logo-blue.png successfully downloaded and visually checked, but says Faculty of Mechanical Engineering, not whole university. Cannot substitute faculty identity or crop lion.",
+      "sources": [
+        "https://www.fs.cvut.cz/content/images/design/2014/cvut-logo-blue.png"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-mohammed-vi-polytechnic-university",
+      "name": "Mohammed VI Polytechnic University",
+      "reasonCode": "access-unavailable",
+      "reason": "One bounded official homepage recheck again returned503. Separate um6pbrandgo.studio offers assets but university-domain linkage/ownership remains unverified; do not adopt plausible third-party brand portal without primary provenance.",
+      "sources": [
+        "https://www.um6p.ma/"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-jet-propulsion-laboratory",
+      "name": "Jet Propulsion Laboratory",
+      "reasonCode": "permission-required",
+      "reason": "Fresh current JPL image-use policy broadly allows many photographs but specifically excludes JPL logo: prior written approval required. NASA insignia similarly excluded. No false inference from public-government-image policy. Prior exact finding: JPL image policy specifically requires prior written approval for JPL logo, excluding it from broad image reuse permission. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://www.jpl.nasa.gov/jpl-image-use-policy/",
+      "sources": [
+        "https://www.jpl.nasa.gov/jpl-image-use-policy/"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-california-institute-of-technology",
+      "name": "California Institute of Technology",
+      "reasonCode": "access-unavailable",
+      "reason": "Full Caltech wordmark now acceptable: official guide minimum70px and clearspace reviewed. Public download link redirects to login; no authenticated download attempted. Seal remains ceremonial-only and is not substituted. Need publicly available complete logo file or authorized package.",
+      "sources": [
+        "https://identity.caltech.edu/officiallogomarks/download-caltech-logo"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-fieldai",
+      "name": "FieldAI",
+      "reasonCode": "permission-required",
+      "reason": "Official Terms rights section permits local display for using Services only and expressly prohibits reproduction/distribution for other purposes without prior written permission. New explicit blocker supersedes earlier orange-tile/white-lettering format limitation.",
+      "sources": [
+        "https://www.fieldai.com/terms-of-use"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-institute-of-automation-chinese-academy-of-sciences",
+      "name": "Institute of Automation, Chinese Academy of Sciences",
+      "reasonCode": "no-compatible-official-asset",
+      "reason": "Reinspected full497x81 institute logo: native white institute name with colored symbol; second386x90 mark includes parent CAS. No documented official dark-background treatment or complete positive variant verified; no parent-only substitution or symbol cropping.",
+      "sources": [
+        "https://ia.cas.cn/"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-university-of-chinese-academy-of-sciences",
+      "name": "University of Chinese Academy of Sciences",
+      "reasonCode": "policy-uncertain",
+      "reason": "Previous audited identity-page exception was personal study/classroom, not public bulletin. Fresh browser fetch timed out and targeted search did not retrieve policy text. No new permission conclusion; retain prior queue without claiming fresh policy verification. Prior exact finding: Official identity page explicitly requires authorization except personal study/classroom fair use; no authorization for bulletin publication established. No permission asserted; not publishable. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://onestop.ucas.edu.cn/home/info/6b9e95dc-5785-4eee-b25f-1f884698cfc3",
+      "sources": [
+        "https://onestop.ucas.edu.cn/home/info/6b9e95dc-5785-4eee-b25f-1f884698cfc3"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-university-college-london",
+      "name": "University College London",
+      "reasonCode": "policy-uncertain",
+      "reason": "Rechecked2026 current full horizontal identity, not merely compact alternative. Full version is suitable in principle; official page directs contacting brand team for right project artwork, while alternative formats expressly require permission. Public examples are guideline illustrations rather than verified production assets; no asset request/contact made.",
+      "sources": [
+        "https://www.ucl.ac.uk/brand-and-experience/brand/visual-guidelines/logo/logo-guidelines"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-ludwig-maximilian-university-of-munich",
+      "name": "Ludwig Maximilian University of Munich",
+      "reasonCode": "policy-uncertain",
+      "reason": "Official faculty guidance restricts LMU logo to university purposes. A full LMU/name lockup could render under new contract, but applicability to independent paper-affiliation website is not established; not treated as globally prohibited merely because trademarked.",
+      "sources": [
+        "https://cms-cdn.lmu.de/media/04-som/fakultaetswebsite-som/downloads/verwendung_unilogo_abschlussarbeiten.pdf"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-german-aerospace-center",
+      "name": "German Aerospace Center",
+      "reasonCode": "access-unavailable",
+      "reason": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official institutional pages and linked logo identified, but downloads returned 503/502; no usable verified asset. No repeated blocked route. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.dlr.de/de/fk/medien/vorschaubilder-und-logos",
+      "sources": [
+        "https://www.dlr.de/de/fk/medien/vorschaubilder-und-logos"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.815072+00:00"
+    },
+    {
+      "id": "pending-university-of-virginia",
+      "name": "University of Virginia",
+      "reasonCode": "permission-required",
+      "reason": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. University marks may only be used with permission. No permission asserted; not publishable. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://brand.virginia.edu/design-assets/Logos",
+      "sources": [
+        "https://brand.virginia.edu/design-assets/Logos"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.815590+00:00"
+    },
+    {
+      "id": "pending-city-university-of-hong-kong",
+      "name": "City University of Hong Kong",
+      "reasonCode": "access-unavailable",
+      "reason": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official logo/name policy verified, linked full policy PDF returned 403; homepage produced no retrievable mark. No access bypass; official compact transparent asset and full use conditions unresolved. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.cityu.edu.hk/web/logo-name-policy",
+      "sources": [
+        "https://www.cityu.edu.hk/web/logo-name-policy"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.815001+00:00"
+    },
+    {
+      "id": "pending-microsoft",
+      "name": "Microsoft",
+      "reasonCode": "permission-required",
+      "reason": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Official Microsoft corporate logo is listed among assets requiring authorization; no license obtained. 核验：2026-11-02T07:29:59.505816+00:00。 官方核验入口：https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
+      "sources": [],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-university-of-missouri-columbia",
+      "name": "University of Missouri–Columbia",
+      "reasonCode": "permission-required",
+      "reason": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Official university policy requires permission for university trademarks/indicators; no approval obtained. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://missouri.edu/marks-identity-content",
+      "sources": [
+        "https://missouri.edu/marks-identity-content"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-seoul-national-university",
+      "name": "Seoul National University",
+      "reasonCode": "permission-required",
+      "reason": "Fresh official English identity page distinguishes unauthorized commercial ban from separate external-party prior-approval requirement; the latter covers this external emblem request. High-resolution files reserved for SNU members. Prior exact finding: Official policy explicitly requires prior approval for external parties using emblem. No approval obtained. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://en.snu.ac.kr/about/symbol/ui",
+      "sources": [
+        "https://www.useoul.edu/about/symbol/ui"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-university-of-southern-california",
+      "name": "University of Southern California",
+      "reasonCode": "access-unavailable",
+      "reason": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official compact USC favicon is opaque cardinal block. Shield source download restricted to USC faculty/staff email account; seal/formal variants special-request only. No native transparent shield obtained without login. 核验：2026-11-02T07:35:41.425644+00:00。 官方核验入口：https://identity.usc.edu/identity/logos-marks/",
+      "sources": [
+        "https://identity.usc.edu/identity/logos-marks/"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.815576+00:00"
+    },
+    {
+      "id": "pending-jd-com",
+      "name": "JD.com",
+      "reasonCode": "no-compatible-official-asset",
+      "reason": "Followed official investor site Media Resources to JD Corporate Blog gallery/media resources. Current public collection contains logistics/product photos and video, not standalone corporate mark. InvestorHTML fetch503 and corporate JoyGen shell supplies no logo. Retail-specific JD brand page not substituted for unverified corporate asset.",
+      "sources": [
+        "https://jdcorporateblog.com/media-resources/"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-nanyang-technological-university",
+      "name": "Nanyang Technological University",
+      "reasonCode": "access-unavailable",
+      "reason": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official homepage access failed: HTTP Error 403: Forbidden No bypass attempted. 核验：2026-11-02T07:37:52.246437+00:00。 官方核验入口：https://www.ntu.edu.sg/",
+      "sources": [
+        "https://www.ntu.edu.sg/"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.815211+00:00"
+    },
+    {
+      "id": "pending-huawei-technologies",
+      "name": "Huawei Technologies",
+      "reasonCode": "permission-required",
+      "reason": "Policy covers instructional/reference materials too; no positive external-logo exception found. Copyright paragraph requires consent for distribution/reproduction. Cloud guideline expressly requires prior written permission; corporate media center offers downloads but no verified overriding logo license. Prior exact finding: Explicit prior written permission required for trademark/logo use; no permission obtained. 核验：2026-11-02T07:37:52.246428+00:00。",
+      "sources": [
+        "https://consumer.huawei.com/en/legal/intellectual-property/huawei-trademark-policy/",
+        "https://www.huaweicloud.com/eu/declaration/hcpn_tg.html",
+        "https://www.huawei.com/en/media-center"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-the-hong-kong-university-of-science-and-technology-guangzhou",
+      "name": "The Hong Kong University of Science and Technology (Guangzhou)",
+      "reasonCode": "permission-required",
+      "reason": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Campus-specific official marks subject to respective University Name and Marks policy. Central HKUST third-party approval rules also mention collaborative campuses; no clearance obtained, withhold. 核验：2026-11-02T07:37:52.246484+00:00。",
+      "sources": [],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-beihang-university",
+      "name": "Beihang University",
+      "reasonCode": "access-unavailable",
+      "reason": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official emblem ZIP link returned a CAPTCHA download page; not solved or bypassed. Public preview is a combined-marks raster and header is long white wordmark, neither suitable as standalone transparent emblem. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://xcb.buaa.edu.cn/info/1091/1481.htm",
+      "sources": [
+        "https://xcb.buaa.edu.cn/info/1091/1481.htm"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.814952+00:00"
+    },
+    {
+      "id": "pending-rlwrld",
+      "name": "RLWRLD",
+      "reasonCode": "access-unavailable",
+      "reason": "Prior official403 retained; no bypass or repeat same denied route. No already-verified complete official asset available locally.",
+      "sources": [
+        "https://www.rlwrld.ai/"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-university-of-salerno",
+      "name": "University of Salerno",
+      "reasonCode": "access-unavailable",
+      "reason": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official English homepage returned HTTP 500. No verified official transparent emblem acquired. 核验：2026-11-02T07:33:47.496356+00:00。 官方核验入口：https://web.unisa.it/en/",
+      "sources": [
+        "https://web.unisa.it/en/"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.815565+00:00"
+    },
+    {
+      "id": "pending-chongqing-changan-technology-co-ltd",
+      "name": "Chongqing Changan Technology Co., Ltd.",
+      "reasonCode": "identity-unverified",
+      "reason": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Exact subsidiary mark not established. Located Changan Automobile parent site only; do not substitute automobile brand without exact-entity evidence. 核验：2026-11-02T07:33:47.511756+00:00。 官方核验入口：https://www.changan.com.cn/cca/",
+      "sources": [],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-civil-aviation-university-of-china",
+      "name": "Civil Aviation University of China",
+      "reasonCode": "no-compatible-official-asset",
+      "reason": "Reinspected complete homepage logo.png: blue emblem plus white name. White-name portion is invisible on white; no official usage guide prescribing suitable dark presentation or genuine positive complete variant verified. No recoloring or separation.",
+      "sources": [
+        "https://www.cauc.edu.cn/zhv5/template_files/1/img/logo.png"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-the-university-of-tokyo",
+      "name": "The University of Tokyo",
+      "reasonCode": "permission-required",
+      "reason": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Official 2024 visual identity process permits university members; alumni and research collaborations remain subject to review. No external-use authorization confirmed; not substituting faculty logo. 核验：2026-11-02T07:27:19.443783+00:00。 官方核验入口：https://www.u-tokyo.ac.jp/focus/en/features/z1304_00261.html",
+      "sources": [],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-university-of-liverpool",
+      "name": "University of Liverpool",
+      "reasonCode": "permission-required",
+      "reason": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Use in other contexts requires express university consent. No permission asserted; not publishable. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.liverpool.ac.uk/legal/website-terms-and-conditions/",
+      "sources": [
+        "https://www.liverpool.ac.uk/legal/website-terms-and-conditions/"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-jiangsu-jitri-tsingunited-intelligent-control-technology-co-ltd",
+      "name": "Jiangsu JITRI Tsingunited Intelligent Control Technology Co., Ltd.",
+      "reasonCode": "identity-unverified",
+      "reason": "Fresh exact English/Chinese company-name searches did not establish official logo-bearing page. Aggregator listings cannot validate exact mark; no parent substitution.",
+      "sources": [
+        "https://arxiv.org/"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-university-of-cambridge",
+      "name": "University of Cambridge",
+      "reasonCode": "permission-required",
+      "reason": "Current official permission page returned403; stopped, no bypass. Search excerpt distinguishes academic-support providers from purely commercial providers but still describes requesting permission, not an automatic exemption. Official alumni terms reserve logo use and do not authorize personal publication. Prior exact finding: Third-party usage requires licence; coat of arms must not be used alone. No permission asserted; not publishable. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.cam.ac.uk/brand-resources/logo/permission",
+      "sources": [
+        "https://www.cam.ac.uk/brand-resources/logo/permission",
+        "https://www.alumni.cam.ac.uk/terms-and-conditions"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-national-institute-of-advanced-industrial-science-and-technology",
+      "name": "National Institute of Advanced Industrial Science and Technology",
+      "reasonCode": "no-compatible-official-asset",
+      "reason": "Native white favicon is now potentially format-compatible, but only low-resolution icon retained and no verified standalone current complete high-quality logo package or official designation of favicon for editorial identity acquired.2025brand guide found; no tracing/cropping from guide or transparent reconstruction.",
+      "sources": [
+        "https://www.aist.go.jp/Portals/0/resource_images/aist_j/information/brandguidelines/aist_brand_guidelines.pdf"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-tianjin-university",
+      "name": "Tianjin University",
+      "reasonCode": "access-unavailable",
+      "reason": "Official homepage redirect loop remains source blocker. No complete verified native mark in retained candidates; no guessing endpoint or third-party substitute.",
+      "sources": [
+        "https://www.tju.edu.cn/"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-keio-university",
+      "name": "Keio University",
+      "reasonCode": "permission-required",
+      "reason": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Usage permission application and login ID/password required for production data; did not bypass. 核验：2026-11-02T07:27:19.441956+00:00。 官方核验入口：https://www.keio.ac.jp/en/about/public-relations/logo/",
+      "sources": [],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-waseda-university",
+      "name": "Waseda University",
+      "reasonCode": "permission-required",
+      "reason": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: All university symbols prohibited without express written permission. No permission asserted; not publishable. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.waseda.jp/top/en/about/work/logos",
+      "sources": [
+        "https://www.waseda.jp/top/en/about/work/logos"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-stanford-university",
+      "name": "Stanford University",
+      "reasonCode": "permission-required",
+      "reason": "Current FAQ directly addresses external websites, not only merchandise. Written-agreement event co-sponsorship exception does not match bulletin. Current identity guide also bars personal-project logo use. Prior exact finding: Official art sheet requires prior approval from Stanford Trademarks and Licensing; no approval obtained. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://identity.stanford.edu/wp-content/uploads/sites/3/2020/07/SU-Logo-Art-Sheet-Final.pdf",
+      "sources": [
+        "https://ucomm.stanford.edu/policies-and-guidance/frequently-asked-questions-about-name-use",
+        "https://identity.stanford.edu/visual-identity/stanford-logos/"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-lambda-inc",
+      "name": "Lambda Inc.",
+      "reasonCode": "permission-required",
+      "reason": "New official brand policy expressly requires prior written authorization for reproduction/distribution of logo and icon. No publication exception established; white full mark versus opaque square is no longer primary blocker.",
+      "sources": [
+        "https://lambda.ai/lambda-brand-use-policy"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-northwestern-university",
+      "name": "Northwestern University",
+      "reasonCode": "permission-required",
+      "reason": "Fresh official handbook p53 expressly requires license for individual/organization/company commercial or noncommercial reproduction. Official brand page reiterates unauthorized-use restriction; no editorial exception established. Prior exact finding: External companies cannot use Northwestern marks without permission. No permission asserted; not publishable. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://alumni.northwestern.edu/careers-networking/small-business-directory/faqs.html",
+      "sources": [
+        "https://www.northwestern.edu/communitystandards/student-handbook/student-handbook.pdf",
+        "https://www.northwestern.edu/brand/visual-identity/logos-lockups/"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-daimon-robotics",
+      "name": "Daimon Robotics",
+      "reasonCode": "no-compatible-official-asset",
+      "reason": "Exact official full PNG and compact SVG already downloaded; both white-only. New contract permits official negative variants only with evidenced authorized contrast-background guidance. None found for these files, so no invented backing/recolor/crop.",
+      "sources": [
+        "https://www.dmrobot.com/en/about/"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-northwest-university",
+      "name": "Northwest University",
+      "reasonCode": "access-unavailable",
+      "reason": "Official Office download page supplies school-name/emblem RAR, but attachment returned CAPTCHA; stopped without bypass. Available home full logo white-only with no explicit contrasting-background instructions verified.",
+      "sources": [
+        "https://office.nwu.edu.cn/info/1020/2124.htm"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.815234+00:00"
+    },
+    {
+      "id": "pending-deepmind",
+      "name": "DeepMind",
+      "reasonCode": "policy-uncertain",
+      "reason": "Google’s current public guidance positively permits Google wordmark/G for nonmarketing news/teaching with accurate attribution, clearspace and correct colors. This does not establish permission or identity for a distinct DeepMind symbol, and parent Google G must not silently substitute for exact affiliation. Official DeepMind homepage checked; no explicit compact-mark editorial license established. Prior exact finding: Native transparent Google DeepMind symbol obtained and inspected; Google brand guidance says many graphical brand uses require permission while media page explicitly allows plain-text reference. External logo-use authorization not established; keep text rather than assert permission. 核验：2026-11-02T07:37:07.485144+00:00。 官方核验入口：https://about.google/brand-resource-center/guidance/media/",
+      "sources": [
+        "https://partnermarketinghub.withgoogle.com/brands/google/branding-guidelines/how-to-show-googles-brand/",
+        "https://deepmind.google/",
+        "https://about.google/brand-resource-center/guidance/"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-kth-royal-institute-of-technology",
+      "name": "KTH Royal Institute of Technology",
+      "reasonCode": "permission-required",
+      "reason": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Official mark limited exclusively to situations where KTH asserts ownership/authorship/production/operation. External bulletin use not confirmed. 核验：2026-11-02T07:27:19.442641+00:00。 官方核验入口：https://intra.kth.se/en/administration/kommunikation/varumarke/grafiskprofil/logotyp-1.845049",
+      "sources": [],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-national-university-of-singapore",
+      "name": "National University of Singapore",
+      "reasonCode": "permission-required",
+      "reason": "Official-publication exception is for NUS publications, not every educational publication. Complete logo requires crest+name together; standalone crest prohibited. Noncommercial research/study saving exception not public redistribution. Prior exact finding: University requires permission for other uses; crest and namestyle must remain together. 核验：2026-11-02T07:37:52.246438+00:00。",
+      "sources": [
+        "https://www.nus.edu.sg/identity",
+        "https://nus.edu.sg/identity/guidelines/logo-guideline",
+        "https://www.nus.edu.sg/legal-information-notices"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-university-of-toronto",
+      "name": "University of Toronto",
+      "reasonCode": "access-unavailable",
+      "reason": "Official brand-access page confirms University signature files restricted to Brandhub/UTORid. Public media page provides newsphotos, not logo authorization or full mark package; no login bypass.",
+      "sources": [
+        "https://spacesandexperiences.utoronto.ca/logos-and-brand-identity/"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-vector-institute-for-artificial-intelligence",
+      "name": "Vector Institute for Artificial Intelligence",
+      "reasonCode": "access-unavailable",
+      "reason": "Prior official403 remains restricted route; no repeated attempt or third-party replacement. No prior verified full asset to recover under expanded rendering.",
+      "sources": [
+        "https://vectorinstitute.ai/"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-acceleration-consortium",
+      "name": "Acceleration Consortium",
+      "reasonCode": "access-unavailable",
+      "reason": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official site returns Site Unavailable. University-hosted alternative did not yield a verifiable consortium logo. Third-party Commons claim not accepted as official asset proof. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://acceleration.utoronto.ca/",
+      "sources": [
+        "https://acceleration.utoronto.ca/"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.814792+00:00"
+    },
+    {
+      "id": "pending-university-of-amsterdam",
+      "name": "University of Amsterdam",
+      "reasonCode": "permission-required",
+      "reason": "Official Rights page explicitly requires Executive Board approval for third-party logo or element use. Also identifies black block as intrinsic symbol; removing it is not legitimate background removal. No deployment without approval.",
+      "sources": [
+        "https://www.uva.nl/en/about-the-uva/about-the-university/corporate-identity/brands-and-rights/rights/rights.html"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.815383+00:00"
+    },
+    {
+      "id": "pending-peking-university",
+      "name": "Peking University",
+      "reasonCode": "permission-required",
+      "reason": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Official downloads include a noncommercial-use application and commitment form. No approval obtained; hold pending permission review. 核验：2026-11-02T07:37:52.246441+00:00。",
+      "sources": [],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-massachusetts-general-hospital",
+      "name": "Massachusetts General Hospital",
+      "reasonCode": "policy-uncertain",
+      "reason": "Official hospital branding guide still directs login/register to massgeneralbrand.org. Fresh official MGB ethics guide confirms institution-specific logo guidelines must be checked; parent MGB identity not substituted and no login bypass.",
+      "sources": [
+        "https://www.massgeneral.org/assets/MGH/pdf/notices/social-media-resource-guide-feb-2017.pdf"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-cornell-university",
+      "name": "Cornell University",
+      "reasonCode": "permission-required",
+      "reason": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Policy 4.10 permits marks only with permission; no approval obtained. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://policy.cornell.edu/policy-library/use-cornells-name-logos-trademarks-and-insignias",
+      "sources": [
+        "https://policy.cornell.edu/policy-library/use-cornells-name-logos-trademarks-and-insignias"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.815015+00:00"
+    },
+    {
+      "id": "pending-yale-university",
+      "name": "Yale University",
+      "reasonCode": "permission-required",
+      "reason": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Non-Yale publications require Yale Trademark Licensing approval; no approval obtained. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://yaleidentity.yale.edu/core-identity-elements/yale-logo-and-wordmarks/yale-logo",
+      "sources": [
+        "https://yaleidentity.yale.edu/core-identity-elements/yale-logo-and-wordmarks/yale-logo"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.815646+00:00"
+    },
+    {
+      "id": "pending-industrial-university-of-ho-chi-minh-city",
+      "name": "Industrial University of Ho Chi Minh City",
+      "reasonCode": "access-unavailable",
+      "reason": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official homepage returned HTTP 503; no verified official transparent emblem acquired. 核验：2026-11-02T07:33:47.480209+00:00。 官方核验入口：https://iuh.edu.vn/",
+      "sources": [
+        "https://iuh.edu.vn/"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.815100+00:00"
+    },
+    {
+      "id": "pending-roboscience",
+      "name": "RoboScience",
+      "reasonCode": "access-unavailable",
+      "reason": "Fresh official-domain response returned Site Unavailable, despite HTTP200. No logo bytes established; do not treat successful status code as functioning official asset source.",
+      "sources": [
+        "https://www.robosci.com/"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-shanghai-artificial-intelligence-laboratory",
+      "name": "Shanghai Artificial Intelligence Laboratory",
+      "reasonCode": "no-compatible-official-asset",
+      "reason": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official complete WebP mark inspected: white lettering, incompatible on current light background. No verified native dark-color alternate obtained; no recolor. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.shlab.org.cn/",
+      "sources": [
+        "https://www.shlab.org.cn/"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.815290+00:00"
+    },
+    {
+      "id": "pending-zhejiang-university",
+      "name": "Zhejiang University",
+      "reasonCode": "permission-required",
+      "reason": "Official policy requires written authorization for display of university logo. No existing authorization or applicable editorial exception identified; widened rendering contract does not resolve this.",
+      "sources": [
+        "https://my.zju.edu.cn/_s4/2019/0104/c4a2/page.psp"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-agency-for-science-technology-and-research",
+      "name": "Agency for Science, Technology and Research",
+      "reasonCode": "permission-required",
+      "reason": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Official terms prohibit reproducing or displaying site content without prior written A*STAR permission. No approval obtained. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://www.a-star.edu.sg/terms-and-conditions",
+      "sources": [
+        "https://www.a-star.edu.sg/terms-and-conditions"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-institute-of-advanced-intelligence-and-computing-agency-for-science-te",
+      "name": "Institute of Advanced Intelligence and Computing, Agency for Science, Technology and Research",
+      "reasonCode": "no-compatible-official-asset",
+      "reason": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official Singapore government directory confirms IAIC, but no standalone logo asset obtained. A*STAR I2R is different named institute and was not substituted. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.sgdi.gov.sg/ministries/mti/statutory-boards/a-star/departments/re/departments/iaic",
+      "sources": [
+        "https://www.sgdi.gov.sg/ministries/mti/statutory-boards/a-star/departments/re/departments/iaic"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.815111+00:00"
+    },
+    {
+      "id": "pending-joy-future-academy",
+      "name": "Joy Future Academy",
+      "reasonCode": "identity-unverified",
+      "reason": "Matching official model organization establishes affiliation name but publishes no independently verified academy logo. JD association does not authorize substituting JD corporate identity; exact text retained.",
+      "sources": [
+        "https://huggingface.co/JoyFutureAcademy"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-novaxbot",
+      "name": "NovaXBot",
+      "reasonCode": "identity-unverified",
+      "reason": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Paper confirms name; targeted exact-name logo/site search found third-party trademark listings and unrelated Discord bot results, not a verified official brand asset. No substitute used. 核验：2026-11-02T07:37:52.246440+00:00。 官方核验入口：https://arxiv.org/html/2610.40799v1",
+      "sources": [],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-southeast-university",
+      "name": "Southeast University",
+      "reasonCode": "access-unavailable",
+      "reason": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official homepage access failed: HTTP Error 403: Forbidden No bypass attempted. 核验：2026-11-02T07:37:52.246478+00:00。 官方核验入口：https://www.seu.edu.cn/",
+      "sources": [
+        "https://www.seu.edu.cn/"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.815313+00:00"
+    },
+    {
+      "id": "pending-xiong-an-national-innovation-center",
+      "name": "Xiong’an National Innovation Center",
+      "reasonCode": "no-compatible-official-asset",
+      "reason": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official government account confirms entity but did not locate official standalone identity asset; do not substitute Xiongan government seal. 核验：2026-11-02T07:33:47.517190+00:00。 官方核验入口：https://www.xiongan.gov.cn/20260108/d13c6dd67a1449d0bd254fc9d2adf60b/c.html",
+      "sources": [
+        "https://www.xiongan.gov.cn/20260108/d13c6dd67a1449d0bd254fc9d2adf60b/c.html"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.815634+00:00"
+    },
+    {
+      "id": "pending-xiong-an-guochuang-lantian-technology-company-ltd",
+      "name": "Xiong’an Guochuang Lantian Technology Company Ltd.",
+      "reasonCode": "identity-unverified",
+      "reason": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Paper provenance confirms name but targeted search did not establish the company official website or official mark. No similarly named company substituted. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://ojs.aaai.org/index.php/AAAI/article/download/39267/43228",
+      "sources": [],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-analog-devices",
+      "name": "Analog Devices",
+      "reasonCode": "permission-required",
+      "reason": "Official brand guide requires Brand/Legal approval for third-party logo use and licensing. Official media kit requests trademark licence agreement. Opaque favicon is no longer the deciding blocker; no approval obtained.",
+      "sources": [
+        "https://www.analog.com/media/en/brand/adi-brand-guidelines.pdf"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-nimishes-lab",
+      "name": "NIMISHES Lab",
+      "reasonCode": "identity-unverified",
+      "reason": "Founder official page confirms lab name but no distinct official lab logo published. Portrait or generated initials cannot establish organization mark.",
+      "sources": [
+        "https://nishi-kanta-paul.github.io/"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-university-of-south-florida",
+      "name": "University of South Florida",
+      "reasonCode": "permission-required",
+      "reason": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Official sources establish trademark permission requirements; main homepage logo is white-only long anniversary lockup. No authorized compact transparent candidate verified. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.usf.edu/marketplace/licensing/faqs.aspx",
+      "sources": [],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-institute-of-science-tokyo",
+      "name": "Institute of Science Tokyo",
+      "reasonCode": "permission-required",
+      "reason": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Science Tokyo logo use requires president permission. No permission obtained; withhold. 核验：2026-11-02T07:37:52.246431+00:00。",
+      "sources": [
+        "https://design-system.isct.ac.jp/ja/introduction/usage"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-pratt-institute",
+      "name": "Pratt Institute",
+      "reasonCode": "permission-required",
+      "reason": "Prior followup verified explicit prior written consent required for institutional name/logo/trademarked material. OneKey assets/Creative Services request require additional authorization. Expanded format contract does not resolve permission; no duplicate access attempt.",
+      "sources": [
+        "https://www.pratt.edu/administrative-departments/communications-and-marketing/"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-princeton-university",
+      "name": "Princeton University",
+      "reasonCode": "access-unavailable",
+      "reason": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official homepage access failed: HTTP Error 403: Forbidden No bypass attempted. 核验：2026-11-02T07:37:52.246444+00:00。 官方核验入口：https://www.princeton.edu/",
+      "sources": [
+        "https://www.princeton.edu/"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.815270+00:00"
+    },
+    {
+      "id": "pending-university-of-ottawa",
+      "name": "University of Ottawa",
+      "reasonCode": "permission-required",
+      "reason": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Policy 57 requires written consent unless pre-authorized and reserves coat of arms for official documents, not branding. No applicable authorization obtained. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://www.uottawa.ca/about-us/leadership-governance/policies-regulations/policy-57-brand-policy",
+      "sources": [
+        "https://www.uottawa.ca/about-us/leadership-governance/policies-regulations/policy-57-brand-policy"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-li-auto",
+      "name": "Li Auto",
+      "reasonCode": "no-compatible-official-asset",
+      "reason": "Previously found native green app icon does not establish that color tile is prescribed complete institutional identity. Revised contract still excludes accidental app/favicon tiles; no verified complete wordmark acquired.",
+      "sources": [
+        "https://www.lixiang.com/"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.815173+00:00"
+    },
+    {
+      "id": "pending-university-of-wisconsin-madison",
+      "name": "University of Wisconsin–Madison",
+      "reasonCode": "policy-uncertain",
+      "reason": "Official crest-only web ZIP downloaded and visually verified; format/size no longer blocker. FAQ expressly requires communications-office approval for noncommercial external websites/publications. Licensing office separately exempts news-media informational references from licensing (https://licensing.wisc.edu/how-to-use-trademarks/for-non-campus-use/), but this does not clearly waive separate approval. Hold, no blanket noncommercial clearance inferred.",
+      "sources": [
+        "https://brand.wisc.edu/faq/may-an-outside-organization-or-business-use-uw-madison-logos/"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-dartmouth-college",
+      "name": "Dartmouth College",
+      "reasonCode": "permission-required",
+      "reason": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Official Trademark Licensing Program requires prior written permission from Trademark Office; no approval obtained. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://www.dartmouth.edu/ogc/trademark.html",
+      "sources": [
+        "https://www.dartmouth.edu/ogc/trademark.html"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-the-ohio-state-university",
+      "name": "The Ohio State University",
+      "reasonCode": "permission-required",
+      "reason": "Official Trademark Licensing external request page directs noncommercial outside logo users to external brand request form. No permission obtained; tiny favicon not substituted.",
+      "sources": [
+        "https://trademarklicensing.osu.edu/page/external-request"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.815338+00:00"
+    },
+    {
+      "id": "pending-rochester-institute-of-technology",
+      "name": "Rochester Institute of Technology",
+      "reasonCode": "permission-required",
+      "reason": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Third-party logo use requires prior written consent; no approval obtained. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://www.rit.edu/brandportal/logos",
+      "sources": [
+        "https://www.rit.edu/brandportal/logos"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-brigham-young-university",
+      "name": "Brigham Young University",
+      "reasonCode": "access-unavailable",
+      "reason": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Brand guidelines say block Y is supportive, not primary university identifier, can be confused with Yale externally; medallion restricted to formal official usage and minimum 125px. Homepage primary BYU asset is all-white. Medallion archive download did not return a ZIP; later web fetch of brand page returned 403. No invalid or restricted substitute deployed. 核验：2026-11-02T07:37:52.246423+00:00。 官方核验入口：https://brand.byu.edu/logos-marks",
+      "sources": [
+        "https://brand.byu.edu/logos-marks"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.814972+00:00"
+    },
+    {
+      "id": "pending-aerovironment",
+      "name": "AeroVironment",
+      "reasonCode": "permission-required",
+      "reason": "Official policy reserves trademark rights and prohibits unauthorized trademark use; expanded full-wordmark/native-background rendering does not resolve permission.",
+      "sources": [
+        "https://www.avinc.com/our-policies/"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-nyu-abu-dhabi",
+      "name": "NYU Abu Dhabi",
+      "reasonCode": "no-compatible-official-asset",
+      "reason": "Official campus-specific full white bilingual logo exists, but no official contrasting-background presentation instruction verified in this review. Generic NYU torch tile is not a campus-specific substitute. Complete wordmarks are now supported; width alone is no longer a blocker.",
+      "sources": [
+        "https://nyuad.nyu.edu/"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.815246+00:00"
+    },
+    {
+      "id": "pending-purdue-university",
+      "name": "Purdue University",
+      "reasonCode": "permission-required",
+      "reason": "Prior official brand policy requires express license/permission for marks. No relevant independent editorial exception established; full wordmark cannot resolve explicit permission requirement.",
+      "sources": [
+        "https://www.purdue.edu/brand-studio/brand/logos-usage/"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-texas-a-m-university",
+      "name": "Texas A&M University",
+      "reasonCode": "permission-required",
+      "reason": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: All registered marks require express written approval; no clearance obtained. 核验：2026-11-02T07:37:52.246480+00:00。",
+      "sources": [
+        "https://www.tamu.edu/statements/trademark.html"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-shenzhen-loop-area-institute",
+      "name": "Shenzhen Loop Area Institute",
+      "reasonCode": "access-unavailable",
+      "reason": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Exact institution official domain confirmed from official admissions; homepage returned HTTP 503. No verified asset acquired. 核验：2026-11-02T07:33:47.487744+00:00。 官方核验入口：https://www.slai.edu.cn/en/InternationalAdmissions",
+      "sources": [
+        "https://www.slai.edu.cn/en/InternationalAdmissions"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.815301+00:00"
+    },
+    {
+      "id": "pending-sogang-university",
+      "name": "Sogang University",
+      "reasonCode": "access-unavailable",
+      "reason": "Bounded homepage recheck503 and official symbol/UI page timed out. No verified local asset obtained; no access restriction bypass.",
+      "sources": [
+        "https://www.sogang.ac.kr/ko/symbol/ui"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-university-of-utah",
+      "name": "University of Utah",
+      "reasonCode": "policy-uncertain",
+      "reason": "Native official template interlocking-U SVG downloaded/inspected, current university adoption checked. Compact format is now available. Brand guide route previously403 remains untouched; auxiliary licensing materials focus retail/NIL, and no clear external editorial display conditions for this mark established. Do not mistake athletic/NIL-specific permission rules for all uses; retain pending context.",
+      "sources": [
+        "https://attheu.utah.edu/community/six-questions-and-answers-about-the-us-new-logo/"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-xi-an-jiaotong-university",
+      "name": "Xi’an Jiaotong University",
+      "reasonCode": "policy-uncertain",
+      "reason": "Official alumni notice describes approval process for emblem/name uses including web/news/publicity. No applicable external factual-affiliation exception established. Existingwhite seal/CDR/combination-sheet candidates not altered or cropped.",
+      "sources": [
+        "https://alumni.xjtu.edu.cn/info/1230/4197.htm"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-xdof-ai",
+      "name": "xdof.ai",
+      "reasonCode": "access-unavailable",
+      "reason": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official homepage access failed: HTTP Error 403: Forbidden No bypass attempted. 核验：2026-11-02T07:37:52.246754+00:00。 官方核验入口：https://xdof.ai/",
+      "sources": [
+        "https://xdof.ai/"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.815624+00:00"
+    },
+    {
+      "id": "pending-university-of-electronic-science-and-technology-of-china",
+      "name": "University of Electronic Science and Technology of China",
+      "reasonCode": "access-unavailable",
+      "reason": "Official anniversary notice identifies vi.uestc.edu.cn as VIS source; prior bounded followup got403 and stopped. Only16px homepage icon verified; no compliant full high-resolution identity recovered.",
+      "sources": [
+        "https://70.uestc.edu.cn/info/1015/1008.htm"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.815400+00:00"
+    },
+    {
+      "id": "pending-noitom",
+      "name": "Noitom",
+      "reasonCode": "access-unavailable",
+      "reason": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Official homepage access failed: HTTP Error 403: Forbidden No bypass attempted. 核验：2026-11-02T07:37:52.246439+00:00。 官方核验入口：https://www.noitom.com/",
+      "sources": [],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-university-of-sydney",
+      "name": "University of Sydney",
+      "reasonCode": "permission-required",
+      "reason": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Written approval is required; shield and wordmark must appear together. Compact shield not deployable. 核验：2026-11-02T07:37:52.246502+00:00。",
+      "sources": [
+        "https://www.sydney.edu.au/about-us/affiliates-and-contractors/logo-requests.html"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-friedrich-alexander-universit-t-erlangen-n-rnberg",
+      "name": "Friedrich-Alexander-Universität Erlangen-Nürnberg",
+      "reasonCode": "permission-required",
+      "reason": "Complete official dark print SVG exists and was inspected, so width is recoverable. Official imprint limits copying to personal/private use and requires consent for reproduction in other electronic/print publications; no applicable logo exception established.",
+      "sources": [
+        "https://www.fau.eu/imprint/"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-precision-medtech",
+      "name": "Precision Medtech",
+      "reasonCode": "identity-unverified",
+      "reason": "Fresh exact-name search still fails to establish official logo-bearing website for paper Beijing entity; Bournemouth supplier rejected. Chinese corporate listing alone is not primary official brand evidence.",
+      "sources": [
+        "https://arxiv.org/html/2610.41429v1"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-queen-s-university-belfast",
+      "name": "Queen’s University Belfast",
+      "reasonCode": "access-unavailable",
+      "reason": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official homepage returned HTTP 403. No access workaround attempted. 核验：2026-11-02T07:33:47.485578+00:00。 官方核验入口：https://www.qub.ac.uk/",
+      "sources": [
+        "https://www.qub.ac.uk/"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.815280+00:00"
+    },
+    {
+      "id": "pending-queen-mary-university-of-london",
+      "name": "Queen Mary University of London",
+      "reasonCode": "policy-uncertain",
+      "reason": "Current official brand page asks external users to request access to logo and guidance. Existing homepage full white/yellow logo is authentic but dark-background/clearspace use guidance was not available. Did not recolor, crop, confuse with Queen Margaret University, or contact team.",
+      "sources": [
+        "https://www.qmul.ac.uk/our-brand/"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-eth-zurich",
+      "name": "ETH Zurich",
+      "reasonCode": "policy-uncertain",
+      "reason": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Use restricted to demonstrably institutional, noncommercial connections; protected download; no third-party clearance established. 核验：2026-11-02T07:37:52.246425+00:00。",
+      "sources": [],
+      "checkedAt": "2026-11-02T08:43:32.815063+00:00"
+    },
+    {
+      "id": "pending-university-of-geneva",
+      "name": "University of Geneva",
+      "reasonCode": "permission-required",
+      "reason": "Official identity principles explicitly prohibit third-party use of logo on websites, reports and other materials without prior written authorization. This stronger source supersedes earlier Access Denied-only reason.",
+      "sources": [
+        "https://www.unige.ch/communication/en/publier/principes-generaux-logotype"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-huawei-noah-s-ark-lab",
+      "name": "Huawei Noah’s Ark Lab",
+      "reasonCode": "identity-unverified",
+      "reason": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Exact lab official homepage supplies only parent HUAWEI combination logo, not distinct lab mark. Do not infer parent-brand display authorization for this lab. 核验：2026-11-02T07:37:07.483784+00:00。 官方核验入口：https://www.noahlab.com.hk/",
+      "sources": [],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-university-of-science-and-technology-korea",
+      "name": "University of Science and Technology (Korea)",
+      "reasonCode": "access-unavailable",
+      "reason": "Fresh official identity subpage discovered and fetched publicly, but server returned503. No institution/campus substitution or access workaround; retain exact KoreaUST identity.",
+      "sources": [
+        "https://www.ust.ac.kr/kor/sub01_02_05_01.do"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-centralesup-lec",
+      "name": "CentraleSupélec",
+      "reasonCode": "permission-required",
+      "reason": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Official terms explicitly prohibit any logo reproduction/use without authorization. No publication permission obtained. 核验：2026-11-02T07:27:19.440687+00:00。 官方核验入口：https://www.centralesupelec.fr/mentions-legales",
+      "sources": [
+        "https://www.centralesupelec.fr/mentions-legales"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-university-of-california-davis",
+      "name": "University of California, Davis",
+      "reasonCode": "access-unavailable",
+      "reason": "Full wordmark now accepted; official extended-logo guide min150px and clearspace considered. Current homepage SVG includes white University of California text unsuitable on white. Official Wordmarks2020ZIP returned403; no bypass or recolor. Need genuine positive full version.",
+      "sources": [
+        "https://communicationsguide.ucdavis.edu/sites/g/files/dgvnsk6246/files/files/page/UC-Davis-Wordmarks-2020.zip"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-peng-cheng-laboratory",
+      "name": "Peng Cheng Laboratory",
+      "reasonCode": "access-unavailable",
+      "reason": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official homepage access failed: HTTP Error 508: Loop Detected No bypass attempted. 核验：2026-11-02T07:37:52.246442+00:00。 官方核验入口：https://www.pcl.ac.cn/",
+      "sources": [
+        "https://www.pcl.ac.cn/"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.815259+00:00"
+    },
+    {
+      "id": "pending-nanjing-university-of-aeronautics-and-astronautics",
+      "name": "Nanjing University of Aeronautics and Astronautics",
+      "reasonCode": "access-unavailable",
+      "reason": "Official emblem explanation page located through search, but linked native JPEG could not be retrieved in bounded download attempt; homepage recheck502. No usable local file verified. Native white JPEG would be acceptable if exact bytes become accessible, no cutout required.",
+      "sources": [
+        "https://www.nuaa.edu.cn/2017/0116/c589a18507/page.htm"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-german-jordanian-university",
+      "name": "German Jordanian University",
+      "reasonCode": "access-unavailable",
+      "reason": "Fresh public homepage request again returnedHTTP500. Official brochures found but marks embedded in publication pages, not separate logo assets; no page crop or third-party recreation used.",
+      "sources": [
+        "https://www.gju.edu.jo/"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-ku-leuven",
+      "name": "KU Leuven",
+      "reasonCode": "access-unavailable",
+      "reason": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official style directory identifies logo.svg; exact asset download returned HTTP 503, as did primary pages. No usable logo file verified. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://stijl.kuleuven.be/releases/3.2/img/svg/",
+      "sources": [
+        "https://stijl.kuleuven.be/releases/3.2/img/svg/"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.815162+00:00"
+    },
+    {
+      "id": "pending-university-of-antwerp",
+      "name": "University of Antwerp",
+      "reasonCode": "access-unavailable",
+      "reason": "Official identity guide puts complete logo download packages behind login. No credentials used; old low-res colored favicon alone does not prove designated full institutional design or applicable presentation.",
+      "sources": [
+        "https://www.uantwerpen.be/nl/projecten/huisstijlgids/logo/downloads/"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-university-of-wuppertal",
+      "name": "University of Wuppertal",
+      "reasonCode": "no-compatible-official-asset",
+      "reason": "Prior official native green app/favicon tiles not established as prescribed complete institutional identity. Full white wordmarks found but no explicit official contrasting-background instructions verified; unchanged pixels retained, not deployed.",
+      "sources": [
+        "https://www.uni-wuppertal.de/"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.815598+00:00"
+    },
+    {
+      "id": "pending-joint-laboratory-of-embodied-intelligence-zju-unitree-robotics",
+      "name": "Joint Laboratory of Embodied Intelligence, ZJU & Unitree Robotics",
+      "reasonCode": "no-compatible-official-asset",
+      "reason": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Paper explicitly names joint ZJU/Unitree laboratory; targeted search did not locate a standalone official laboratory mark. No invented combined-parent mark. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://arxiv.org/html/2610.41877v1",
+      "sources": [
+        "https://arxiv.org/html/2610.41877v1"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.815136+00:00"
+    },
+    {
+      "id": "pending-bit-oasis",
+      "name": "Bit Oasis",
+      "reasonCode": "identity-unverified",
+      "reason": "Fresh exact-name research did not establish official robotics affiliation site/mark; cryptocurrency exchange namesake rejected.",
+      "sources": [
+        "https://arxiv.org/html/2610.41877v1"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-hithink-research",
+      "name": "HiThink Research",
+      "reasonCode": "identity-unverified",
+      "reason": "Fresh research found paper/author references but not primary evidence connecting exact Research affiliation to parent corporate mark. Do not infer logo ownership from similar name.",
+      "sources": [
+        "https://hithink.sg/"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-microsoft-research",
+      "name": "Microsoft Research",
+      "reasonCode": "permission-required",
+      "reason": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. MS Research header uses Microsoft parent mark; Microsoft policy lists corporate logos as requiring authorization. No license established and no distinct MSR logo substituted. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
+      "sources": [
+        "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.815191+00:00"
+    },
+    {
+      "id": "pending-nct-ucc-dresden",
+      "name": "NCT/UCC Dresden",
+      "reasonCode": "policy-uncertain",
+      "reason": "Exact complete official mark exists as native opaque-white262x100PNG; native background is now acceptable. Official imprint requires express permission for images/graphics, alongside informational noncommercial provisions. Those conditions do not establish logo reuse permission; retain text until scope clarified.",
+      "sources": [
+        "https://www.nct-dresden.de/de/impressum"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-tu-dresden",
+      "name": "TU Dresden",
+      "reasonCode": "permission-required",
+      "reason": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. 2025 mark update confirmed. External logo-use requests must use official approval form; no authorization obtained. 核验：2026-11-02T07:29:59.505139+00:00。 官方核验入口：https://tu-dresden.de/tu-dresden/organisation/zentrale-universitaetsverwaltung/dezernat-7/sachgebiet-7-1-corporate-design/cd/cd",
+      "sources": [
+        "https://tu-dresden.de/tu-dresden/organisation/zentrale-universitaetsverwaltung/dezernat-7/sachgebiet-7-1-corporate-design/cd/cd"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.815376+00:00"
+    },
+    {
+      "id": "pending-center-for-tactile-internet-with-human-in-the-loop-ceti",
+      "name": "Center for Tactile Internet with Human-in-the-Loop (CeTI)",
+      "reasonCode": "access-unavailable",
+      "reason": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official home returned Security Check challenge, not logo HTML. Did not bypass. 核验：2026-11-02T07:33:47.472841+00:00。 官方核验入口：https://ceti.one/",
+      "sources": [
+        "https://ceti.one/"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.814990+00:00"
+    },
+    {
+      "id": "pending-fujitsu",
+      "name": "Fujitsu",
+      "reasonCode": "policy-uncertain",
+      "reason": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Official terms require prior permission to copy/use contents except where applicable law expressly permits; no permission established. 核验：2026-11-02T07:29:59.506616+00:00。 官方核验入口：https://global.fujitsu/en-global/terms",
+      "sources": [
+        "https://global.fujitsu/en-global/terms"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-florida-international-university",
+      "name": "Florida International University",
+      "reasonCode": "permission-required",
+      "reason": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Official trademark policy requires prior approval for proposed trademark use; no approval obtained. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://policies.fiu.edu/download/c9bb41336224cf90d12301ca512ab70b",
+      "sources": [
+        "https://policies.fiu.edu/download/c9bb41336224cf90d12301ca512ab70b"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-university-of-georgia",
+      "name": "University of Georgia",
+      "reasonCode": "permission-required",
+      "reason": "Official approval form covers internal/nonprofit and retail uses, and requires artwork approval. Full logo relaxation does not supply third-party approval.",
+      "sources": [
+        "https://brand.uga.edu/wp-content/uploads/uga-logo-approval-form.pdf"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.815546+00:00"
+    },
+    {
+      "id": "pending-embodyx-inc",
+      "name": "EmbodyX Inc",
+      "reasonCode": "identity-unverified",
+      "reason": "Native512px fully opaque white-background icon exists and white backing is now acceptable. Homepage/app source does not establish this ring-of-dots favicon as an approved full institutional mark rather than application icon. No documented standalone identity/context verified, so not promoted solely because background rules relaxed.",
+      "sources": [
+        "https://www.embodyx.io/"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-beijing-university-of-posts-and-telecommunications",
+      "name": "Beijing University of Posts and Telecommunications",
+      "reasonCode": "access-unavailable",
+      "reason": "Official homepage HTTP412 remains an access restriction; not retried with altered identity or bypass. No previously verified complete native mark in local collection.",
+      "sources": [
+        "https://www.bupt.edu.cn/"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-duquesne-university",
+      "name": "Duquesne University",
+      "reasonCode": "permission-required",
+      "reason": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Each product using branded logo assets must be individually reviewed and approved. No permission asserted; not publishable. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.duq.edu/about/policies-and-initiatives/the-administrative-policies/tap-35.php",
+      "sources": [
+        "https://www.duq.edu/about/policies-and-initiatives/the-administrative-policies/tap-35.php"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.815055+00:00"
+    },
+    {
+      "id": "pending-infrec",
+      "name": "InfRec",
+      "reasonCode": "identity-unverified",
+      "reason": "Existing paper/project evidence identifies InfRec/Cardinal AI Lab, but no distinct official organization mark tied to this research unit. Retain exact affiliation text; do not substitute unrelated finance/camera marks.",
+      "sources": [
+        "https://arxiv.org/html/2610.42053v1"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-shenzhen-institutes-of-advanced-technology-chinese-academy-of-sciences",
+      "name": "Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences",
+      "reasonCode": "access-unavailable",
+      "reason": "Bounded official homepage recheck503; targeted official-source search did not establish another downloadable exact-institute asset. Parent CAS emblem not substituted.",
+      "sources": [
+        "https://www.siat.ac.cn/"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-chinese-academy-of-sciences",
+      "name": "Chinese Academy of Sciences",
+      "reasonCode": "policy-uncertain",
+      "reason": "Official academy identity rules constrain outside enterprise brand use. No applicable independent editorial-site exception established; not a finding that all factual references are forbidden. Native full mark would not resolve this scope question.",
+      "sources": [
+        "https://www.cas.cn/gzzd/kxcb/202107/P020210730538633854643.pdf"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-university-of-freiburg",
+      "name": "University of Freiburg",
+      "reasonCode": "permission-required",
+      "reason": "Prior targeted followup confirmed third parties directed to logo-use permission request, short ufr specifically restricted to social profiles, downloads intranet. Full-wordmark support does not establish current-site permission; no repeat gated route.",
+      "sources": [
+        "https://cd.uni-freiburg.de/logo-policy/"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-karlsruhe-institute-of-technology",
+      "name": "Karlsruhe Institute of Technology",
+      "reasonCode": "permission-required",
+      "reason": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Official guideline prohibits isolated word/symbol use and requires approval for use outside KIT official business; native favicon is not a licence exception. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://kit-cd.km.kit.edu/logo.php",
+      "sources": [
+        "https://kit-cd.km.kit.edu/logo.php"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-new-york-university",
+      "name": "New York University",
+      "reasonCode": "access-unavailable",
+      "reason": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official main website request returned HTTP 405. No verified current transparent compact emblem obtained. NYU Abu Dhabi artwork was not substituted for NYU. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://www.nyu.edu/",
+      "sources": [
+        "https://www.nyu.edu/"
+      ],
+      "checkedAt": "2026-11-02T08:43:32.815222+00:00"
+    },
+    {
+      "id": "pending-meta",
+      "name": "Meta",
+      "reasonCode": "permission-required",
+      "reason": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: June 2026 official guidelines explicitly require approval for all Meta logo usage; no approval obtained. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://www.meta.com/brand/resources/meta/company-brand/",
+      "sources": [
+        "https://www.meta.com/brand/resources/meta/company-brand/"
+      ],
+      "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "pending-us-army-research-laboratory",
+      "name": "U.S. Army Research Laboratory",
+      "reasonCode": "permission-required",
+      "reason": "Exact DEVCOM Army Research Laboratory complete logo located in official DVIDS item dated2026-03-09,1775x511. DVIDS public-domain copyright label does not waive Army-specific trademark conditions. ATLP expressly includes research-laboratory marks, requires contact for non-product use, and FAQ requires Army review even for claimed incidental fair use. General DVIDS noncommercial/newsworthy VI permission does not clearly waive this specific requirement. No license/contact undertaken; no Army generic emblem substituted.",
+      "sources": [
+        "https://www.army.mil/ATLP",
+        "https://devcom.army.mil/centerslabs/arl/",
+        "https://www.dvidshub.net/image/9582595/devcom-army-research-laboratory-logo",
+        "https://www.dvidshub.net/about/copyright"
+      ],
+      "checkedAt": "2026-11-02T08:55:40Z"
+    }
+  ],
+  "paperAffiliationGaps": [
+    {
+      "id": "arxiv-2610-40016",
+      "title": "LOGIV: Graph-Verified Execution with Causal Local Repair for Long-Horizon Robot Tasks",
+      "url": "https://arxiv.org/abs/2610.40016v2",
+      "status": "partial",
+      "reason": "Retain partial: v2 explicitly omits Yuxiang Gao affiliation superscript. v1 had COCO Matrix but v2 removes that unit and changes other mappings. No current-version primary project source found to resolve; previous-version affiliation not substituted."
+    },
+    {
+      "id": "arxiv-2610-41671",
+      "title": "OpenVIO: A Versatile Open-Source Visual-Inertial Odometry System",
+      "url": "https://arxiv.org/abs/2610.41671v1",
+      "status": "unavailable",
+      "reason": "Still unavailable after official PDF/HTML and paper-linked repository review plus exact-title search. Author and email are not institutional affiliation; no current-employer inference."
+    },
+    {
+      "id": "arxiv-2610-41844",
+      "title": "SketchMate: Agentic Geometric Reasoning for Zero-Shot Precision Insertion",
+      "url": "https://arxiv.org/abs/2610.41844v1",
+      "status": "unavailable",
+      "reason": "Still unavailable: official HTML/PDF only names Jiaming Wang, no institutional block. Exact-title/author project searches yielded no matching official affiliation-bearing source; unrelated SketchMate projects excluded."
+    }
+  ]
+}

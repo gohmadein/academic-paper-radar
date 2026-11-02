@@ -1,1 +1,4 @@
 * text=auto eol=lf
+
+# Official SVG assets retain exact source bytes for provenance hashes.
+assets/institutions/*.svg -text

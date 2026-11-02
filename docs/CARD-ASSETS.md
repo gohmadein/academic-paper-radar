@@ -61,7 +61,7 @@ ASU等有外部许可限制的标志，以及许可未核实且要求保守展�
 
 大学展示官方提供的完整校徽、盾徽或紧凑身份符号（如官方Block I）；不要求只能使用受限仪式印章，也不把字母身份符号称为传统校徽。不使用长字标、自造首字母或从组合标志裁出的图形代替。研究机构和公司使用本机构的官方标识，不用上级组织或相近机构标识替代。标识约32px，object-fit:contain，名称紧邻展示；不可拉伸、重绘或任意改色。缺少可核验且可展示的校徽时只显示机构名称，并保留缺失或使用限制的说明；不显示仿官方首字母徽章。作者头像规则不变。
 
-每项机构记录必填 institutionType（university/research-institute/company/chair）及 markType（emblem/compact-symbol/organization-mark/none）。大学可用emblem或compact-symbol，其他机构用organization-mark；none对应logo=null。缺失标识只保留机构名称。
+每项机构记录必填 institutionType（university/research-institute/company/chair）及 markType（emblem/compact-symbol/wordmark/organization-mark/none）。大学可用emblem、compact-symbol或完整官方wordmark，其他机构用organization-mark；none对应logo=null。缺失标识只保留机构名称。
 
 本期紧凑大学标识：Illinois官方Block I；清华章程PDF第15页嵌入JPEG校徽（554×385，原样提取，未重绘/裁切）；Harvard官方Veritas盾徽；Georgia Tech官方GT、Northeastern官方N和UCSD官方主页三叉戟。ICO仅转为PNG保留完整图案。后四者的紧凑身份符号不称为仪式印章。Penn独立盾徽、UMD/ASU及Laval受限展示保持文字名称。精确源地址、类型、权利说明和字节哈希随每篇visuals.institutions保存。
 
@@ -98,3 +98,13 @@ ASU等有外部许可限制的标志，以及许可未核实且要求保守展�
 官方依据：[商标政策](https://cdn.uw.edu/wp-content/uploads/sites/65/2023/06/22155930/Revised-Policies-Jun23-APPROVED-MG.pdf)、[标识规范](https://www.washington.edu/brand/brand-elements/logos/)。新增这一项后库内可展示标识为79项；前节78项计数是上一批修复的独立时点。
 
 同次另补NYU Shanghai官方417px透明square-alternative完整标识，依据官方University Logo下载说明的无外框紧凑版本，原字节保留；不取NYU Tandon的黑底单火炬替代，不把公开下载称为普遍授权。此后库中真实可展示标识80项，其他172项仍保持名称与具体未解决说明。
+
+### 按官方规范展示，不以固定32px拒绝真实素材
+
+`lib/institution-display-rules.js` 保存经过核验的逐素材展示约束，严格素材字段不变。`lib/institution-display.js` 根据素材SHA为卡片、详情及必要时机构库生成外部CSS，构建时合入样式表；不使用被CSP阻止的行内style。原始文件与比例保持不变，不能裁出字标一角冒充独立校徽。完整大学官方字标标为 `wordmark`，不伪称紧凑符号。
+
+约束包含图片画布宽高、四边留白、官方允许的背景、原生可见像素边界及最小可见标识尺寸、证据URL和解释。核验实际标识尺寸，不能只看透明画布宽。较大的完整标识使用独立整行，在极窄屏内部可键盘/触摸/滚轮横向浏览，不压缩到官方最小尺寸以下，也不撑大页面或日历地图。图库同样遵守最小尺寸；UW仍只在有论文署名证据的卡片和详情出现。
+
+若官方使用条件要求标识链接官网，约束中的 `linkUrl` 必须保留，卡片、详情和图库均以标识本身链接所指定官网；不能把带条件允许解释为无限制授权。原生不透明背景须诚实记录，白色负片只按官方明确背景指导展示，不自行添加底色或移除背景。无可用许可/身份依据的条目仍只显示名称。
+
+本轮完整核验快照与每项未解决原因见 [机构标识覆盖报告](institution-coverage.md) 及 [机器可读数据](institution-coverage.json)。报告注明核验日期；未来新增机构或更新素材后应重新生成，不把旧快照当实时授权状态。

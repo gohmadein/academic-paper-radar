@@ -325,7 +325,22 @@
         "institutions": [
           {
             "name": "University of Zaragoza",
-            "logo": null,
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/university-of-zaragoza-full.svg",
+              "sha256": "cb005d1bbfe7990924d3958db69c7731aab3d7e7d104d3901cadbb6b36db6827",
+              "width": 399,
+              "height": 112,
+              "sourceUrl": "https://gic.unizar.es/sites/gic/files/logosuz/logo_uz.zip",
+              "evidenceUrl": "https://gic.unizar.es/identidad-corporativa/logotipo-de-la-universidad-de-zaragoza",
+              "verifiedAt": "2026-11-02",
+              "credit": "University of Zaragoza official identity asset",
+              "rights": "Copyright and trademarks retained by institution. Exact official mark for factual paper-affiliation identification only, not endorsement. No open license asserted. Preserve complete geometry, colours and clear space. Official current complete academic/administrative/social-use logo from public ZIP, not ceremonial historical seal. SVG unchanged from official package.",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "altZh": "University of Zaragoza 官方完整标识",
+              "altEn": "University of Zaragoza official complete mark"
+            },
             "authorNames": [
               "Ignacio Cuiral-Zueco",
               "Miguel Aranda",
@@ -338,9 +353,9 @@
                 "checkedAt": "2026-11-01"
               }
             ],
-            "note": "论文署名已核验；标识由机构库解析，未核验时仅文字展示。",
+            "note": "论文署名已核验；复用机构库中的完整官方标识，保留原始比例和来源记录。",
             "institutionType": "university",
-            "markType": "none",
+            "markType": "wordmark",
             "institutionId": "pending-university-of-zaragoza"
           },
           {
@@ -916,7 +931,22 @@
         "institutions": [
           {
             "name": "King’s College London",
-            "logo": null,
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/king-s-college-london-full.webp",
+              "sha256": "c3f3dcb7761fa7c671fbf03f7d3a49d958d72a45086f80432aa62f632ea0c598",
+              "width": 501,
+              "height": 378,
+              "sourceUrl": "https://www.kcl.ac.uk/newimages/logos/kcl-logo.x5f83f6ee.png?f=webp",
+              "evidenceUrl": "https://www.kcl.ac.uk/sitehelp/linking",
+              "verifiedAt": "2026-11-02",
+              "credit": "King’s College London official identity asset",
+              "rights": "Copyright and trademarks retained by institution. Exact official mark for factual paper-affiliation identification only, not endorsement. No open license asserted. Preserve complete geometry, colours and clear space. Official linked-image use permitted on linking page, conditional on link to College and listed terms. Native red box is integral official logo, not incidental app tile or added backing. No unrestricted license asserted.",
+              "displayPolicy": "official-brand",
+              "background": "dark",
+              "altZh": "King’s College London 官方完整标识",
+              "altEn": "King’s College London official complete mark"
+            },
             "authorNames": [
               "Jiayu He",
               "Yifan Li",
@@ -932,9 +962,9 @@
                 "checkedAt": "2026-11-01"
               }
             ],
-            "note": "论文署名已核验；标识由机构库解析，未核验时仅文字展示。",
+            "note": "论文署名已核验；完整官方标识依官网链接使用条件直接链接学院主页，不代表学院背书。",
             "institutionType": "university",
-            "markType": "none",
+            "markType": "wordmark",
             "institutionId": "pending-king-s-college-london"
           },
           {
@@ -1600,7 +1630,22 @@
           },
           {
             "name": "Kent State University",
-            "logo": null,
+            "logo": {
+              "path": "assets/institutions/kent-state-university.png",
+              "sourceUrl": "https://s3.amazonaws.com/undeniable.kent.edu/brand/kent-state-university-Horizontal.zip",
+              "evidenceUrl": "https://www.kent.edu/brand/logos",
+              "width": 1792,
+              "height": 523,
+              "sha256": "7e6bf9d729375819b741f338249d452bea47aa81a07ca566a50e355bc4b7b3dc",
+              "credit": "Kent State University official website identity asset",
+              "kind": "institution-logo",
+              "verifiedAt": "2026-11-02",
+              "background": "transparent",
+              "rights": "Official source; copyright/trademarks remain with owner. No blanket public-domain license or endorsement asserted. Intended solely for accurate editorial affiliation identification; preserve complete mark.",
+              "displayPolicy": "official-brand",
+              "altEn": "Kent State University complete official logo",
+              "altZh": "Kent State University 官方完整标识"
+            },
             "authorNames": [
               "Kyrylo Kolesnichenko",
               "Jong-Hoon Kim"
@@ -1612,9 +1657,9 @@
                 "checkedAt": "2026-11-01"
               }
             ],
-            "note": "机构库无现成记录；未核验可展示标识，仅显示机构名称。",
+            "note": "论文署名已核验；复用机构库中的完整官方标识，保留原始比例和来源记录。",
             "institutionType": "university",
-            "markType": "none",
+            "markType": "wordmark",
             "institutionId": "pending-kent-state-university"
           }
         ],

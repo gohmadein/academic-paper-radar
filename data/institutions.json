@@ -415,11 +415,26 @@
       "officialName": "University of Zaragoza",
       "aliases": [],
       "institutionType": "university",
-      "markType": "none",
-      "status": "needs-verification",
-      "alphaStatus": "not-applicable",
-      "logo": null,
-      "note": "Downloaded current 2026 official logo zip: complete mark is long lockup; separate historical shield is reserved for solemn/protocol use. Do not crop tower out of lockup or substitute ceremonial shield. 核验：2026-11-02。 官方核验入口：https://gic.unizar.es/identidad-corporativa/logotipo-de-la-universidad-de-zaragoza"
+      "markType": "wordmark",
+      "status": "verified",
+      "alphaStatus": "transparent",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/university-of-zaragoza-full.svg",
+        "sha256": "cb005d1bbfe7990924d3958db69c7731aab3d7e7d104d3901cadbb6b36db6827",
+        "width": 399,
+        "height": 112,
+        "sourceUrl": "https://gic.unizar.es/sites/gic/files/logosuz/logo_uz.zip",
+        "evidenceUrl": "https://gic.unizar.es/identidad-corporativa/logotipo-de-la-universidad-de-zaragoza",
+        "verifiedAt": "2026-11-02",
+        "credit": "University of Zaragoza official identity asset",
+        "rights": "Copyright and trademarks retained by institution. Exact official mark for factual paper-affiliation identification only, not endorsement. No open license asserted. Preserve complete geometry, colours and clear space. Official current complete academic/administrative/social-use logo from public ZIP, not ceremonial historical seal. SVG unchanged from official package.",
+        "displayPolicy": "official-brand",
+        "background": "transparent",
+        "altZh": "University of Zaragoza 官方完整标识",
+        "altEn": "University of Zaragoza official complete mark"
+      },
+      "note": "Official current complete academic/administrative/social-use logo from public ZIP, not ceremonial historical seal. SVG unchanged from official package."
     },
     {
       "id": "pending-university-of-bologna",
@@ -430,7 +445,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Article 6 requires third-party authorization; no applicable authorization established. 核验：2026-11-02。 官方核验入口：https://normateneo.unibo.it/regolamento-per-l2019uso-del-marchio-alma-mater-studiorum-2013-universita-di-bologna-1/@@download/testo_integrato/Regolamento%20marchio.pdf"
+      "note": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Article 6 requires third-party authorization; no applicable authorization established. 核验：2026-11-02。 官方核验入口：https://normateneo.unibo.it/regolamento-per-l2019uso-del-marchio-alma-mater-studiorum-2013-universita-di-bologna-1/@@download/testo_integrato/Regolamento%20marchio.pdf 核验：2026-11-02。"
     },
     {
       "id": "pending-clermont-auvergne-inp",
@@ -441,7 +456,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official homepage returned HTTP403; official legal notice requires prior written permission for reproduction including logos. No bypass. Do not substitute Universite Clermont Auvergne parent logo. 核验：2026-11-02。 官方核验入口：https://www.clermont-auvergne-inp.fr/mentions-legales/"
+      "note": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Official homepage returned HTTP403; official legal notice requires prior written permission for reproduction including logos. No bypass. Do not substitute Universite Clermont Auvergne parent logo. 核验：2026-11-02。 官方核验入口：https://www.clermont-auvergne-inp.fr/mentions-legales/ 核验：2026-11-02。 官方核验入口：https://www.clermont-auvergne-inp.fr/mentions-legales/"
     },
     {
       "id": "pending-mitsubishi-electric-research-laboratories",
@@ -452,7 +467,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Exact MERL-specific complete lockup identified on official website. Mitsubishi parent terms reserve trademark use; applicable MERL publication permission not established. SVG contains embedded PNG with nonstandard data:img MIME; not imported unsanitized. 核验：2026-11-02。 官方核验入口：https://www.mitsubishielectric.com/en/terms/"
+      "note": "Exact full MERL lockup is identified, but parent trademark conditions and applicable MERL external publication permission remain unresolved. CandidateSVG also embedsPNG with nonstandard data:img MIME and fails strict import safety; no silent sanitizing of unverified content. 官方核验入口：https://www.mitsubishielectric.com/en/terms/"
     },
     {
       "id": "pending-international-institute-of-information-technology-hyderabad",
@@ -515,7 +530,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official brand page returned Anubis Access Denied error9e4edb5b6b850c41. No challenge bypass. Indexed guide requires minimum45px width; downloadable official bytes not verified. 核验：2026-11-02。 官方核验入口：https://www.inria.fr/fr/charte-dutilisation-de-lidentite-visuelle-dinria"
+      "note": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Official brand page returned Anubis Access Denied error9e4edb5b6b850c41. No challenge bypass. Indexed guide requires minimum45px width; downloadable official bytes not verified. 核验：2026-11-02。 官方核验入口：https://www.inria.fr/fr/charte-dutilisation-de-lidentite-visuelle-dinria 核验：2026-11-02。"
     },
     {
       "id": "pending-universit-de-lorraine",
@@ -526,18 +541,33 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official logo and favicon found; legal notice bars public reproduction absent express authorization. Exception only personal/private restricted free distribution, not public site. 核验：2026-11-02。 官方核验入口：https://www.univ-lorraine.fr/welcome/en/legal-notice/"
+      "note": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Official logo and favicon found; legal notice bars public reproduction absent express authorization. Exception only personal/private restricted free distribution, not public site. 核验：2026-11-02。 官方核验入口：https://www.univ-lorraine.fr/welcome/en/legal-notice/ 核验：2026-11-02。"
     },
     {
       "id": "pending-king-s-college-london",
       "officialName": "King’s College London",
       "aliases": [],
       "institutionType": "university",
-      "markType": "none",
-      "status": "needs-verification",
-      "alphaStatus": "not-applicable",
-      "logo": null,
-      "note": "No current official compact emblem with applicable digital-use conditions verified. Main corporate boxed wordmark not a transparent emblem; do not use third-party crest downloads. 核验：2026-11-02。 官方核验入口：https://www.kcl.ac.uk/"
+      "markType": "wordmark",
+      "status": "verified",
+      "alphaStatus": "opaque-dark",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/king-s-college-london-full.webp",
+        "sha256": "c3f3dcb7761fa7c671fbf03f7d3a49d958d72a45086f80432aa62f632ea0c598",
+        "width": 501,
+        "height": 378,
+        "sourceUrl": "https://www.kcl.ac.uk/newimages/logos/kcl-logo.x5f83f6ee.png?f=webp",
+        "evidenceUrl": "https://www.kcl.ac.uk/sitehelp/linking",
+        "verifiedAt": "2026-11-02",
+        "credit": "King’s College London official identity asset",
+        "rights": "Copyright and trademarks retained by institution. Exact official mark for factual paper-affiliation identification only, not endorsement. No open license asserted. Preserve complete geometry, colours and clear space. Official linked-image use permitted on linking page, conditional on link to College and listed terms. Native red box is integral official logo, not incidental app tile or added backing. No unrestricted license asserted.",
+        "displayPolicy": "official-brand",
+        "background": "dark",
+        "altZh": "King’s College London 官方完整标识",
+        "altEn": "King’s College London official complete mark"
+      },
+      "note": "Official linked-image use permitted on linking page, conditional on link to College and listed terms. Native red box is integral official logo, not incidental app tile or added backing. No unrestricted license asserted. 已核对官方linking页面实际嵌入的kcl logo图片URL与本标识来源完全一致；保留图片直链学院官网的条件。"
     },
     {
       "id": "pending-the-hong-kong-university-of-science-and-technology",
@@ -548,7 +578,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Third-party mark use requires approval under paragraphs3.2–3.3; Appendix3 requires prepublication GECO review. No permission established. 核验：2026-11-02。 官方核验入口：https://dst.hkust.edu.hk/sites/default/files/2026-03/Guidelines_Use_of_University_Titles_Names_and_Logos.pdf"
+      "note": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Third-party mark use requires approval under paragraphs3.2–3.3; Appendix3 requires prepublication GECO review. No permission established. 核验：2026-11-02。 官方核验入口：https://dst.hkust.edu.hk/sites/default/files/2026-03/Guidelines_Use_of_University_Titles_Names_and_Logos.pdf 核验：2026-11-02。 官方核验入口：https://dst.hkust.edu.hk/sites/default/files/2026-03/Guidelines_Use_of_University_Titles_Names_and_Logos.pdf"
     },
     {
       "id": "pending-university-of-massachusetts-amherst",
@@ -559,7 +589,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Prior audit retained without bypass or duplicate download: 官方素材库已定位，但品牌页和图标下载返回 HTTP 403；未绕过访问限制，也未使用 UMass 系统或其他校区标识，因此仅显示文字名称。 官方依据：https://www.umass.edu/brand/assets 核验：2026-11-02。"
+      "note": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Prior audit retained without bypass or duplicate download: 官方素材库已定位，但品牌页和图标下载返回 HTTP 403；未绕过访问限制，也未使用 UMass 系统或其他校区标识，因此仅显示文字名称。 官方依据：https://www.umass.edu/brand/assets 核验：2026-11-02。 核验：2026-11-02。"
     },
     {
       "id": "pending-nvidia",
@@ -570,18 +600,20 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Prior audit retained without bypass or duplicate download: NVIDIA 官方法律声明要求事先许可才可公开使用商标；未获得许可，因此仅显示文字名称。 官方依据：https://www.nvidia.com/en-us/about-nvidia/legal-info.html 核验：2026-11-02。"
+      "note": "Educational/research applications appear among approved logo-use examples but opening authorization condition remains. Newsroom downloadable logo gallery does not establish overriding permission. No blanket noncommercial exception; standalone eye prohibited. Prior exact finding: Prior audit retained without bypass or duplicate download: NVIDIA 官方法律声明要求事先许可才可公开使用商标；未获得许可，因此仅显示文字名称。 官方依据：https://www.nvidia.com/en-us/about-nvidia/legal-info.html 核验：2026-11-02。 核验：2026-11-02。 官方核验入口：https://www.nvidia.com/en-eu/about-nvidia/legal-info/logo-brand-usage/"
     },
     {
       "id": "pending-the-university-of-texas-at-austin",
       "officialName": "The University of Texas at Austin",
-      "aliases": [],
+      "aliases": [
+        "University of Texas at Austin"
+      ],
       "institutionType": "university",
       "markType": "none",
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Prior audit retained without bypass or duplicate download: 官方紧凑盾徽/favicon已确认；官方校徽和其他支持标识要求事先书面许可，未获展示授权，因此仅显示文字名称。 官方依据：https://umac.utexas.edu/brand-center/supporting-marks/ 核验：2026-11-02。"
+      "note": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Prior audit retained without bypass or duplicate download: 官方紧凑盾徽/favicon已确认；官方校徽和其他支持标识要求事先书面许可，未获展示授权，因此仅显示文字名称。 官方依据：https://umac.utexas.edu/brand-center/supporting-marks/ 核验：2026-11-02。 核验：2026-11-02。 官方核验入口：https://umac.utexas.edu/brand-center/supporting-marks/"
     },
     {
       "id": "pending-carnegie-mellon-university",
@@ -592,7 +624,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Prior audit retained without bypass or duplicate download: 官方 CMU 字母标保留给与大学紧密相关的社区；与其他文字或图形相邻组合需书面许可，且要求安全空间。未核实适用于本站卡片的展示条件，因此仅显示文字名称。 官方依据：https://brand.cmu.edu/visual-identity/carnegie-mellon-trademarks/lettermark 核验：2026-11-02。"
+      "note": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Prior audit retained without bypass or duplicate download: 官方 CMU 字母标保留给与大学紧密相关的社区；与其他文字或图形相邻组合需书面许可，且要求安全空间。未核实适用于本站卡片的展示条件，因此仅显示文字名称。 官方依据：https://brand.cmu.edu/visual-identity/carnegie-mellon-trademarks/lettermark 核验：2026-11-02。 核验：2026-11-02。"
     },
     {
       "id": "pending-vilnius-university",
@@ -603,18 +635,33 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Prior audit retained without bypass or duplicate download: 官方主页完整透明徽章已确认；校方名称及标识授予规则列有书面申请和合同程序，未核实本站展示授权，因此仅显示文字名称。 官方依据：https://www.vu.lt/site_files/Vardo_ir_%C5%BEenklo_suteikimo_ir_naudojimo_taisykl%C4%97s.pdf 核验：2026-11-02。"
+      "note": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Prior audit retained without bypass or duplicate download: 官方主页完整透明徽章已确认；校方名称及标识授予规则列有书面申请和合同程序，未核实本站展示授权，因此仅显示文字名称。 官方依据：https://www.vu.lt/site_files/Vardo_ir_%C5%BEenklo_suteikimo_ir_naudojimo_taisykl%C4%97s.pdf 核验：2026-11-02。 核验：2026-11-02。"
     },
     {
       "id": "pending-kent-state-university",
       "officialName": "Kent State University",
       "aliases": [],
       "institutionType": "university",
-      "markType": "none",
-      "status": "needs-verification",
-      "alphaStatus": "not-applicable",
-      "logo": null,
-      "note": "Prior audit retained without bypass or duplicate download: 官方独立 K 身份符号已下载核验；品牌指引限定装饰用途，不得替代官方标志，未核实本卡片用途的许可，因此仅显示文字名称。 官方依据：https://www.kent.edu/brand/logos 核验：2026-11-02。"
+      "markType": "wordmark",
+      "status": "verified",
+      "alphaStatus": "transparent",
+      "logo": {
+        "path": "assets/institutions/kent-state-university.png",
+        "sourceUrl": "https://s3.amazonaws.com/undeniable.kent.edu/brand/kent-state-university-Horizontal.zip",
+        "evidenceUrl": "https://www.kent.edu/brand/logos",
+        "width": 1792,
+        "height": 523,
+        "sha256": "7e6bf9d729375819b741f338249d452bea47aa81a07ca566a50e355bc4b7b3dc",
+        "credit": "Kent State University official website identity asset",
+        "kind": "institution-logo",
+        "verifiedAt": "2026-11-02",
+        "background": "transparent",
+        "rights": "Official source; copyright/trademarks remain with owner. No blanket public-domain license or endorsement asserted. Intended solely for accurate editorial affiliation identification; preserve complete mark.",
+        "displayPolicy": "official-brand",
+        "altEn": "Kent State University complete official logo",
+        "altZh": "Kent State University 官方完整标识"
+      },
+      "note": "Complete official mark visually inspected. Native appearance and all elements retained; no cropping, recoloring, redrawing or background removal. PNG lossless re-encoding only if original JPEG. Full responsive wordmark accepted under revised contract."
     },
     {
       "id": "pending-johns-hopkins-university",
@@ -625,7 +672,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official standalone shield allowed as format, but use-of-name rules strictly prohibit third-party mark use without prior written permission. 核验：2026-11-02。 官方核验入口：https://brand.jhu.edu/resources/use-of-name/"
+      "note": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Official standalone shield allowed as format, but use-of-name rules strictly prohibit third-party mark use without prior written permission. 核验：2026-11-02。 官方核验入口：https://brand.jhu.edu/resources/use-of-name/ 核验：2026-11-02。 官方核验入口：https://brand.jhu.edu/resources/use-of-name/"
     },
     {
       "id": "pending-washington-university-in-st-louis",
@@ -636,7 +683,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Shield must be solo, not combined with text as lockup; full-colour shield alone requires approval and seal requires permission. No compliant current compact card use verified. 核验：2026-11-02。 官方核验入口：https://marcomm.washu.edu/university-shield-seal/"
+      "note": "Full official WashU logo recovered; original compact-format blocker is solved. Current university policy expressly requires written authorization for third-party and not-for-profit use. Public brand JPG is not permission; no Washington-Seattle substitution. Prior exact finding: Shield must be solo, not combined with text as lockup; full-colour shield alone requires approval and seal requires permission. No compliant current compact card use verified. 核验：2026-11-02。 官方核验入口：https://marcomm.washu.edu/university-shield-seal/ 核验：2026-11-02。 官方核验入口：https://policies.washu.edu/policies/permission-to-use-university-names-logos-and-trademarks/"
     },
     {
       "id": "pending-indian-institute-of-science-education-and-research-bhopal",
@@ -673,7 +720,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Shield and wordmark must not be separated except rare preapproved instances. No approved standalone shield for this card established; no cropping. 核验：2026-11-02。 官方核验入口：https://www.stonybrook.edu/sbu-brand/design-visual-identity/logos"
+      "note": "Full intact shield+wordmark now acceptable under expanded contract. Fresh official identity page returned403; no permitted current complete file obtained and no detached shield used. Prior no-separation rule is not a blanket prohibition on full logo. 官方核验入口：https://www.stonybrook.edu/sbu-brand/design-visual-identity/logos"
     },
     {
       "id": "pending-shanghai-jiao-tong-university",
@@ -684,7 +731,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Complete transparent official240px emblem downloaded and inspected. Article15 explicitly prohibits outside units/individuals making or using items carrying identity without permission. Withheld from deployment. 核验：2026-11-02。 官方核验入口：https://vi.sjtu.edu.cn/index.php/articles/bulletin/16"
+      "note": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Complete transparent official240px emblem downloaded and inspected. Article15 explicitly prohibits outside units/individuals making or using items carrying identity without permission. Withheld from deployment. 核验：2026-11-02。 官方核验入口：https://vi.sjtu.edu.cn/index.php/articles/bulletin/16 核验：2026-11-02。 官方核验入口：https://vi.sjtu.edu.cn/index.php/articles/bulletin/16"
     },
     {
       "id": "pending-the-university-of-hong-kong",
@@ -695,7 +742,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Shield and wordmark must remain intact; online shield minimum50px. Complete compact emblem under current32px design not verified; no cropped shield. 核验：2026-11-02。 官方核验入口：https://www-2.hku.hk/about/uid/basic.html"
+      "note": "Full shield+wordmark is now acceptable if online shield≥50px. Fresh official basic identity page returned403; no independently verified complete downloadable positive asset available in local candidates. Did not bypass or crop. 官方核验入口：https://www-2.hku.hk/about/uid/basic.html"
     },
     {
       "id": "pending-xense-robotics",
@@ -706,7 +753,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official183x28 organization SVG found at /static/index/images/logo.svg, but all paths white; invisible on mandated light cards. No dark variant verified; do not recolour or add prohibited backing. 核验：2026-11-02。 官方核验入口：https://www.xenserobotics.com/"
+      "note": "Reinspected genuine full183x28 SVG: all paths white. No separate positive logo or official brand instruction prescribing contrasting background verified; no recolor/filter or made-up backing. 官方核验入口：https://www.xenserobotics.com/static/index/images/logo.svg"
     },
     {
       "id": "pending-fudan-university",
@@ -743,7 +790,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official compact informal shield logo is restricted to swag/merchandise, not other communication materials. No separate eligible academic compact identity verified. 核验：2026-11-02。 官方核验入口：https://uwaterloo.ca/brand/how-express-our-brand/logo-architecture"
+      "note": "Full academic signature is acceptable under new contract, unlike informal swag-only shield. Guide requires horizontal shield28px or vertical full logo54px. Official download page fresh request503, so no complete verified file acquired. 官方核验入口：https://uwaterloo.ca/brand/uw-logos"
     },
     {
       "id": "pending-university-of-illinois-chicago",
@@ -754,7 +801,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official trademark guidance says UIC trademarks may be used solely with UIC permission; standalone circle additionally preferred for internal audiences. Permission not established. 核验：2026-11-02。 官方核验入口：https://brand.uic.edu/resources/trademarks-and-licensing/"
+      "note": "Official policy says UIC trademarks used solely with UIC permission. No applicable independent editorial exception established; standalone circle internal-audience preference is secondary. 官方核验入口：https://brand.uic.edu/resources/trademarks-and-licensing/"
     },
     {
       "id": "pending-university-of-edinburgh",
@@ -765,7 +812,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Current official logo assets/guidance require University SharePoint login. Public2017 digital guidelines PDF returned403. No bypass; current standalone emblem conditions unverified. 核验：2026-11-02。 官方核验入口：https://information-services.ed.ac.uk/design-system/brand"
+      "note": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Current official logo assets/guidance require University SharePoint login. Public2017 digital guidelines PDF returned403. No bypass; current standalone emblem conditions unverified. 核验：2026-11-02。 官方核验入口：https://information-services.ed.ac.uk/design-system/brand 核验：2026-11-02。"
     },
     {
       "id": "pending-columbia-university",
@@ -776,7 +823,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Current official logo files available to Columbia faculty/staff; site offers permission requests. Standalone crown external-use conditions not verified; no invented seal or inferred clearance. 核验：2026-11-02。 官方核验入口：https://visualidentity.columbia.edu/"
+      "note": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Current official logo files available to Columbia faculty/staff; site offers permission requests. Standalone crown external-use conditions not verified; no invented seal or inferred clearance. 核验：2026-11-02。 官方核验入口：https://visualidentity.columbia.edu/ 核验：2026-11-02。"
     },
     {
       "id": "pending-toyota-research-institute",
@@ -787,7 +834,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official TRI homepage returned403. No bypass; parent Toyota emblem is not TRI-specific and must not be substituted. 核验：2026-11-02。 官方核验入口：https://www.tri.global/"
+      "note": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Official TRI homepage returned403. No bypass; parent Toyota emblem is not TRI-specific and must not be substituted. 核验：2026-11-02。 官方核验入口：https://www.tri.global/ 核验：2026-11-02。"
     },
     {
       "id": "pending-massachusetts-institute-of-technology",
@@ -798,7 +845,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "MIT communications official FAQ instructs outsiders to contact the Institute to request logo-file access. No external publication permission established; not substituting unofficial M icon. 核验：2026-11-02。 官方核验入口：https://comms.mit.edu/"
+      "note": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. MIT communications official FAQ instructs outsiders to contact the Institute to request logo-file access. No external publication permission established; not substituting unofficial M icon. 核验：2026-11-02。 官方核验入口：https://comms.mit.edu/ 核验：2026-11-02T08:43:32.815186+00:00。 官方核验入口：https://comms.mit.edu/"
     },
     {
       "id": "pending-delft-university-of-technology",
@@ -835,7 +882,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Primary logo and university seal require Brand Protection permission. B monogram must not represent primary identity; no substitution made. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://brand.berkeley.edu/downloads/brand-essentials-toolkit/"
+      "note": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Primary logo and university seal require Brand Protection permission. B monogram must not represent primary identity; no substitution made. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://brand.berkeley.edu/downloads/brand-essentials-toolkit/ 核验：2026-11-02T08:43:32.815395+00:00。 官方核验入口：https://brand.berkeley.edu/downloads/brand-essentials-toolkit/"
     },
     {
       "id": "pending-yonsei-university",
@@ -872,7 +919,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official third-party-use process explicitly requires approval for webpages/articles; no approval obtained. 核验：2026-11-02T07:27:19.441377+00:00。 官方核验入口：https://adminvc.ucla.edu/request-to-use-uc-name-or-logo"
+      "note": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Official third-party-use process explicitly requires approval for webpages/articles; no approval obtained. 核验：2026-11-02T07:27:19.441377+00:00。 官方核验入口：https://adminvc.ucla.edu/request-to-use-uc-name-or-logo 核验：2026-11-02。 官方核验入口：https://adminvc.ucla.edu/request-to-use-uc-name-or-logo"
     },
     {
       "id": "pending-czech-technical-university-in-prague",
@@ -883,7 +930,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official main and student logo/manual pages returned HTTP 503 (web reader also 502); no login bypass attempted. 核验：2026-11-02T07:33:47.477939+00:00。 官方核验入口：https://www.cvut.cz/logo-a-graficky-manual"
+      "note": "Main/student identity page502/503. Alternative public faculty-hosted cvut-logo-blue.png successfully downloaded and visually checked, but says Faculty of Mechanical Engineering, not whole university. Cannot substitute faculty identity or crop lion. 官方核验入口：https://www.fs.cvut.cz/content/images/design/2014/cvut-logo-blue.png"
     },
     {
       "id": "pending-mohammed-vi-polytechnic-university",
@@ -894,7 +941,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official main site returned HTTP 503. Candidate Brandgo studio site supplies UM6P artwork but a primary university-domain ownership/link confirmation was not established; unconfirmed separate-domain assets withheld. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://www.um6p.ma/"
+      "note": "One bounded official homepage recheck again returned503. Separate um6pbrandgo.studio offers assets but university-domain linkage/ownership remains unverified; do not adopt plausible third-party brand portal without primary provenance. 核验：2026-11-02。 官方核验入口：https://www.um6p.ma/"
     },
     {
       "id": "pending-jet-propulsion-laboratory",
@@ -905,7 +952,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "JPL image policy specifically requires prior written approval for JPL logo, excluding it from broad image reuse permission. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://www.jpl.nasa.gov/jpl-image-use-policy/"
+      "note": "Fresh current JPL image-use policy broadly allows many photographs but specifically excludes JPL logo: prior written approval required. NASA insignia similarly excluded. No false inference from public-government-image policy. Prior exact finding: JPL image policy specifically requires prior written approval for JPL logo, excluding it from broad image reuse permission. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://www.jpl.nasa.gov/jpl-image-use-policy/ 核验：2026-11-02。 官方核验入口：https://www.jpl.nasa.gov/jpl-image-use-policy/"
     },
     {
       "id": "pending-california-institute-of-technology",
@@ -916,7 +963,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official seal reserved for formal/ceremonial uses, not downloadable and may not be used as graphic element. Main logo is a long wordmark, not the requested compact emblem. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://identity.caltech.edu/officiallogomarks"
+      "note": "Full Caltech wordmark now acceptable: official guide minimum70px and clearspace reviewed. Public download link redirects to login; no authenticated download attempted. Seal remains ceremonial-only and is not substituted. Need publicly available complete logo file or authorized package. 官方核验入口：https://identity.caltech.edu/officiallogomarks/download-caltech-logo"
     },
     {
       "id": "pending-fieldai",
@@ -927,7 +974,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official supplied standalone icon is an orange solid square backing; full transparent logo has white lettering. No genuine dark transparent standalone mark found. No masking/backing/filter added. 核验：2026-11-02T07:37:07.482697+00:00。 官方核验入口：https://www.fieldai.com/"
+      "note": "Official Terms rights section permits local display for using Services only and expressly prohibits reproduction/distribution for other purposes without prior written permission. New explicit blocker supersedes earlier orange-tile/white-lettering format limitation. 官方核验入口：https://www.fieldai.com/terms-of-use"
     },
     {
       "id": "pending-gigaai",
@@ -964,7 +1011,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official icon candidates are opaque 32px; other page-linked assets are extended institute/CAS wordmarks (497×81 and 386×90). No emblem crop or parent-only CAS substitution used. 核验：2026-11-02T07:37:52.246430+00:00。 官方核验入口：https://ia.cas.cn/"
+      "note": "Reinspected full497x81 institute logo: native white institute name with colored symbol; second386x90 mark includes parent CAS. No documented official dark-background treatment or complete positive variant verified; no parent-only substitution or symbol cropping. 官方核验入口：https://ia.cas.cn/"
     },
     {
       "id": "pending-university-of-chinese-academy-of-sciences",
@@ -977,7 +1024,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official identity page explicitly requires authorization except personal study/classroom fair use; no authorization for bulletin publication established. No permission asserted; not publishable. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://onestop.ucas.edu.cn/home/info/6b9e95dc-5785-4eee-b25f-1f884698cfc3"
+      "note": "Previous audited identity-page exception was personal study/classroom, not public bulletin. Fresh browser fetch timed out and targeted search did not retrieve policy text. No new permission conclusion; retain prior queue without claiming fresh policy verification. Prior exact finding: Official identity page explicitly requires authorization except personal study/classroom fair use; no authorization for bulletin publication established. No permission asserted; not publishable. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://onestop.ucas.edu.cn/home/info/6b9e95dc-5785-4eee-b25f-1f884698cfc3 核验：2026-11-02。 官方核验入口：https://onestop.ucas.edu.cn/home/info/6b9e95dc-5785-4eee-b25f-1f884698cfc3"
     },
     {
       "id": "pending-zhongguancun-academy",
@@ -1014,7 +1061,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Alternative compact formats require brand-team permission. No permission asserted; not publishable. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.ucl.ac.uk/brand-and-experience/brand/visual-guidelines/logo/logo-guidelines"
+      "note": "Rechecked2026 current full horizontal identity, not merely compact alternative. Full version is suitable in principle; official page directs contacting brand team for right project artwork, while alternative formats expressly require permission. Public examples are guideline illustrations rather than verified production assets; no asset request/contact made. 核验：2026-11-02。 官方核验入口：https://www.ucl.ac.uk/brand-and-experience/brand/visual-guidelines/logo/logo-guidelines"
     },
     {
       "id": "pending-university-of-technology-nuremberg",
@@ -1051,7 +1098,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official logo combines LMU square and long name; standalone favicon has opaque green square. No compliant transparent standalone dark mark found; no crop. 核验：2026-11-02T07:33:47.523246+00:00。 官方核验入口：https://www.lmu.de/en/"
+      "note": "Official faculty guidance restricts LMU logo to university purposes. A full LMU/name lockup could render under new contract, but applicability to independent paper-affiliation website is not established; not treated as globally prohibited merely because trademarked. 官方核验入口：https://cms-cdn.lmu.de/media/04-som/fakultaetswebsite-som/downloads/verwendung_unilogo_abschlussarbeiten.pdf"
     },
     {
       "id": "pending-technical-university-of-munich",
@@ -1084,22 +1131,52 @@
       "officialName": "Munich Center for Machine Learning",
       "aliases": [],
       "institutionType": "research-institute",
-      "markType": "none",
-      "status": "needs-verification",
-      "alphaStatus": "not-applicable",
-      "logo": null,
-      "note": "Official logo and icon downloaded; both have opaque white backgrounds. No transparent original found; no background removal. 核验：2026-11-02T07:33:47.526348+00:00。 官方核验入口：https://mcml.ai/"
+      "markType": "organization-mark",
+      "status": "verified",
+      "alphaStatus": "opaque-light",
+      "logo": {
+        "path": "assets/institutions/munich-center-for-machine-learning.png",
+        "sourceUrl": "https://mcml.ai/images/MCML_Logo_cropped.jpg",
+        "evidenceUrl": "https://mcml.ai/",
+        "width": 1472,
+        "height": 408,
+        "sha256": "d95d7a761a88bf07b53174bdf688514ab15c8acb79fbd7ae95157eb5a45f923a",
+        "credit": "Munich Center for Machine Learning official website identity asset",
+        "kind": "institution-logo",
+        "verifiedAt": "2026-11-02",
+        "background": "light",
+        "rights": "Official source; copyright/trademarks remain with owner. No blanket public-domain license or endorsement asserted. Intended solely for accurate editorial affiliation identification; preserve complete mark.",
+        "displayPolicy": "official-brand",
+        "altEn": "Munich Center for Machine Learning complete official logo",
+        "altZh": "Munich Center for Machine Learning 官方完整标识"
+      },
+      "note": "Complete official mark visually inspected. Native appearance and all elements retained; no cropping, recoloring, redrawing or background removal. PNG lossless re-encoding only if original JPEG. Full responsive wordmark accepted under revised contract."
     },
     {
       "id": "pending-university-of-troms",
       "officialName": "University of Tromsø",
       "aliases": [],
       "institutionType": "university",
-      "markType": "none",
-      "status": "needs-verification",
-      "alphaStatus": "not-applicable",
-      "logo": null,
-      "note": "Official navy seal verified but official minimum24mm (~91 CSS pixels) and readable ring inscription cannot be satisfied by current32px cards. Withheld without resizing/recolouring/cropping. Source: https://uit.no/ansatte/kommunikasjonstips/grafisk/profilmanual/sub?p_document_id=861333 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://uit.no/"
+      "markType": "emblem",
+      "status": "verified",
+      "alphaStatus": "transparent",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/pending-university-of-troms.png",
+        "sha256": "e341e5be748d3dc55ce73c46773cb92c9027facd4a10ab31e82998ec161c2063",
+        "width": 960,
+        "height": 960,
+        "sourceUrl": "https://uit.no/ressurs/uit/profil2019/logo/UiT_logo_Engelsk.zip",
+        "evidenceUrl": "https://uit.no/ansatte/kommunikasjonstips/grafisk/profilmanual/sub?p_document_id=861333",
+        "verifiedAt": "2026-11-02",
+        "credit": "University of Tromsø official mark",
+        "rights": "Official institutional trademark/copyright retained by owner. No open licence or endorsement claimed. Exact complete official mark used only for descriptive paper-affiliation identification; preserve geometry, colours and clear space. No explicit external-use prohibition established in inspected source. Official seal-alone guidance requires at least 24mm (~91 CSS px) and readable ring text; do not render below this size.",
+        "displayPolicy": "official-brand",
+        "background": "transparent",
+        "altEn": "University of Tromsø official complete mark",
+        "altZh": "University of Tromsø 官方完整标志"
+      },
+      "note": "Native complete seal approved format for small digital contexts; render actual seal >=91px and readable ring text, plus prescribed clear space. No explicit external editorial-use prohibition established in reviewed official identity source. Not an open-license claim."
     },
     {
       "id": "pending-german-aerospace-center",
@@ -1110,7 +1187,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official institutional pages and linked logo identified, but downloads returned 503/502; no usable verified asset. No repeated blocked route. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.dlr.de/de/fk/medien/vorschaubilder-und-logos"
+      "note": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official institutional pages and linked logo identified, but downloads returned 503/502; no usable verified asset. No repeated blocked route. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.dlr.de/de/fk/medien/vorschaubilder-und-logos 核验：2026-11-02T08:43:32.815072+00:00。 官方核验入口：https://www.dlr.de/de/fk/medien/vorschaubilder-und-logos"
     },
     {
       "id": "pending-university-of-virginia",
@@ -1121,7 +1198,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "University marks may only be used with permission. No permission asserted; not publishable. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://brand.virginia.edu/design-assets/Logos"
+      "note": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. University marks may only be used with permission. No permission asserted; not publishable. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://brand.virginia.edu/design-assets/Logos 核验：2026-11-02T08:43:32.815590+00:00。 官方核验入口：https://brand.virginia.edu/design-assets/Logos"
     },
     {
       "id": "pending-city-university-of-hong-kong",
@@ -1132,7 +1209,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official logo/name policy verified, linked full policy PDF returned 403; homepage produced no retrievable mark. No access bypass; official compact transparent asset and full use conditions unresolved. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.cityu.edu.hk/web/logo-name-policy"
+      "note": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official logo/name policy verified, linked full policy PDF returned 403; homepage produced no retrievable mark. No access bypass; official compact transparent asset and full use conditions unresolved. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.cityu.edu.hk/web/logo-name-policy 核验：2026-11-02T08:43:32.815001+00:00。 官方核验入口：https://www.cityu.edu.hk/web/logo-name-policy"
     },
     {
       "id": "pending-microsoft",
@@ -1143,7 +1220,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official Microsoft corporate logo is listed among assets requiring authorization; no license obtained. 核验：2026-11-02T07:29:59.505816+00:00。 官方核验入口：https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
+      "note": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Official Microsoft corporate logo is listed among assets requiring authorization; no license obtained. 核验：2026-11-02T07:29:59.505816+00:00。 官方核验入口：https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks 核验：2026-11-02。"
     },
     {
       "id": "pending-university-of-missouri-columbia",
@@ -1154,7 +1231,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official university policy requires permission for university trademarks/indicators; no approval obtained. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://missouri.edu/marks-identity-content"
+      "note": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Official university policy requires permission for university trademarks/indicators; no approval obtained. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://missouri.edu/marks-identity-content 核验：2026-11-02。 官方核验入口：https://missouri.edu/marks-identity-content"
     },
     {
       "id": "pending-seoul-national-university",
@@ -1165,29 +1242,59 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official policy explicitly requires prior approval for external parties using emblem. No approval obtained. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://en.snu.ac.kr/about/symbol/ui"
+      "note": "Fresh official English identity page distinguishes unauthorized commercial ban from separate external-party prior-approval requirement; the latter covers this external emblem request. High-resolution files reserved for SNU members. Prior exact finding: Official policy explicitly requires prior approval for external parties using emblem. No approval obtained. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://en.snu.ac.kr/about/symbol/ui 核验：2026-11-02。 官方核验入口：https://www.useoul.edu/about/symbol/ui"
     },
     {
       "id": "pending-lancaster-university",
       "officialName": "Lancaster University",
       "aliases": [],
       "institutionType": "university",
-      "markType": "none",
-      "status": "needs-verification",
-      "alphaStatus": "not-applicable",
-      "logo": null,
-      "note": "Official brand guideline says shield and words must never be separated. No independent compact emblem suitable for requested use established. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://www.lancaster.ac.uk/external-relations/marketing-office/brand/visual-identity/logos/index.php"
+      "markType": "wordmark",
+      "status": "verified",
+      "alphaStatus": "transparent",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/round2-pending-lancaster-university.png",
+        "sha256": "45a3f7eacf04707a0540f6b5b60adc8664d01e4246b9fff36198d45364924c6a",
+        "width": 465,
+        "height": 146,
+        "sourceUrl": "https://www.lancaster.ac.uk/media/lancaster-university/content-assets/documents/brand-resources/LancasterUniversity_logos.zip",
+        "evidenceUrl": "https://www.lancaster.ac.uk/external-relations/marketing-office/brand/visual-identity/logos/index.php",
+        "verifiedAt": "2026-11-02",
+        "credit": "Lancaster University official identity",
+        "rights": "Official institutional artwork; copyright/trademark remain with institution. Public official identity source verified for unaltered factual paper-affiliation identification, not endorsement or merchandising. No open licence or blanket permission asserted. Native complete positive PNG from official public logo pack. Keep shield and words together. Official print minimum10mm height interpreted conservatively as38CSSpx; clearspace at least full displayed logo height. No cropping, recoloring or resizing file.",
+        "displayPolicy": "official-brand",
+        "background": "transparent",
+        "altZh": "Lancaster University 官方完整标识",
+        "altEn": "Official complete Lancaster University identity"
+      },
+      "note": "Native complete positive PNG from official public logo pack. Keep shield and words together. Official print minimum10mm height interpreted conservatively as38CSSpx; clearspace at least full displayed logo height. No cropping, recoloring or resizing file."
     },
     {
       "id": "pending-case-western-reserve-university",
       "officialName": "Case Western Reserve University",
       "aliases": [],
       "institutionType": "university",
-      "markType": "none",
-      "status": "needs-verification",
-      "alphaStatus": "not-applicable",
-      "logo": null,
-      "note": "Official favicon has opaque blue backing; brand policy disallows alteration/cropping, and supplied logo configurations are name lockups. Outside promotional/advertising use requires approval. No compatible transparent standalone asset verified. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://case.edu/brand/visual-identity/logos"
+      "markType": "wordmark",
+      "status": "verified",
+      "alphaStatus": "opaque-light",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/cwru-four-line-original.jpg",
+        "sha256": "fd063328581dc0ce23a14ec97b407be01ee463335f2c2c40dd83f6031a5202a7",
+        "width": 560,
+        "height": 173,
+        "sourceUrl": "https://case.edu/brand/sites/default/files/2023-05/CWRU_Four-line-logo-brand_3.jpg",
+        "evidenceUrl": "https://case.edu/brand/visual-identity/logos",
+        "verifiedAt": "2026-11-02",
+        "credit": "Case Western Reserve University official brand page, four-line logo",
+        "rights": "University trademark/copyright retained. Official page requires approval for outside promotional/advertising materials; this asset is limited to nonpromotional descriptive paper-affiliation identification with no endorsement. No open licence or blanket permission asserted. Full original four-line logo and native white canvas preserved; no alteration/cropping. Digital visible mark minimum90x44px and clearspace50%of symbol square height.",
+        "displayPolicy": "official-brand",
+        "background": "light",
+        "altEn": "Case Western Reserve University complete four-line official logo",
+        "altZh": "凯斯西储大学官方完整四行标识"
+      },
+      "note": "Original complete four-line official logo on native white canvas; no cutout/crop. Brand rule requires approval for outside promotional/advertising material, not a blanket prohibition on descriptive editorial affiliation. Limit to nonpromotional truthful affiliation; no endorsement or recreated lockup."
     },
     {
       "id": "pending-university-of-southern-california",
@@ -1198,7 +1305,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official compact USC favicon is opaque cardinal block. Shield source download restricted to USC faculty/staff email account; seal/formal variants special-request only. No native transparent shield obtained without login. 核验：2026-11-02T07:35:41.425644+00:00。 官方核验入口：https://identity.usc.edu/identity/logos-marks/"
+      "note": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official compact USC favicon is opaque cardinal block. Shield source download restricted to USC faculty/staff email account; seal/formal variants special-request only. No native transparent shield obtained without login. 核验：2026-11-02T07:35:41.425644+00:00。 官方核验入口：https://identity.usc.edu/identity/logos-marks/ 核验：2026-11-02T08:43:32.815576+00:00。 官方核验入口：https://identity.usc.edu/identity/logos-marks/"
     },
     {
       "id": "pending-jd-com",
@@ -1209,7 +1316,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official current corporate site is JavaScript-rendered JoyGen shell; inspected source contains no identifiable JD.com logo. No asset guessed or unrelated brand substituted. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://corporate.jd.com/"
+      "note": "Followed official investor site Media Resources to JD Corporate Blog gallery/media resources. Current public collection contains logistics/product photos and video, not standalone corporate mark. InvestorHTML fetch503 and corporate JoyGen shell supplies no logo. Retail-specific JD brand page not substituted for unverified corporate asset. 官方核验入口：https://jdcorporateblog.com/media-resources/"
     },
     {
       "id": "pending-nanyang-technological-university",
@@ -1220,18 +1327,33 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official homepage access failed: HTTP Error 403: Forbidden No bypass attempted. 核验：2026-11-02T07:37:52.246437+00:00。 官方核验入口：https://www.ntu.edu.sg/"
+      "note": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official homepage access failed: HTTP Error 403: Forbidden No bypass attempted. 核验：2026-11-02T07:37:52.246437+00:00。 官方核验入口：https://www.ntu.edu.sg/ 核验：2026-11-02T08:43:32.815211+00:00。 官方核验入口：https://www.ntu.edu.sg/"
     },
     {
       "id": "pending-southern-university-of-science-and-technology",
       "officialName": "Southern University of Science and Technology",
       "aliases": [],
       "institutionType": "university",
-      "markType": "none",
-      "status": "needs-verification",
-      "alphaStatus": "not-applicable",
-      "logo": null,
-      "note": "Official identity page provides 190×189 emblem preview with fully opaque backing, plus RAR/vector downloads. Native transparent compact PNG/SVG not obtained from these targeted sources; no background removal or manual vectorization performed. 核验：2026-11-02T07:37:52.246479+00:00。 官方核验入口：https://sustech.edu.cn/en/school_logo.html"
+      "markType": "emblem",
+      "status": "verified",
+      "alphaStatus": "transparent",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/sustech-official-emblem.png",
+        "sha256": "1a3468dee6d572402ab515a42f32b8ed851a2688a6ca02ffada76ff071c694c7",
+        "width": 413,
+        "height": 297,
+        "sourceUrl": "https://www.sustech.edu.cn/uploads/%E6%A0%A1%E5%BE%BD.rar",
+        "evidenceUrl": "https://www.sustech.edu.cn/zh/school_logo.html",
+        "verifiedAt": "2026-11-02",
+        "credit": "Southern University of Science and Technology official identity archive 校徽/校徽.png",
+        "rights": "Official institutional trademark/copyright retained. Native file offered by university identity page; VIS2022 A1-05/A1-06 lists news communications among applications, requires10mm minimum actual seal diameter and safe area1/5diameter. No open licence or endorsement claimed. Descriptive affiliation identification only; preserve complete geometry, colour and whitespace. No explicit external editorial-use prohibition established in inspected official sources.",
+        "displayPolicy": "official-brand",
+        "background": "transparent",
+        "altEn": "Southern University of Science and Technology complete orange emblem",
+        "altZh": "南方科技大学官方完整橙色校徽"
+      },
+      "note": "Complete original official transparent seal from identity archive, unchanged bytes. Official VIS lists news communications among applications; no explicit external editorial-use prohibition established. Minimum actual emblem diameter10mm and safe area1/5diameter preserved."
     },
     {
       "id": "pending-huawei-technologies",
@@ -1242,7 +1364,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Explicit prior written permission required for trademark/logo use; no permission obtained. 核验：2026-11-02T07:37:52.246428+00:00。"
+      "note": "Policy covers instructional/reference materials too; no positive external-logo exception found. Copyright paragraph requires consent for distribution/reproduction. Cloud guideline expressly requires prior written permission; corporate media center offers downloads but no verified overriding logo license. Prior exact finding: Explicit prior written permission required for trademark/logo use; no permission obtained. 核验：2026-11-02T07:37:52.246428+00:00。 核验：2026-11-02。 官方核验入口：https://consumer.huawei.com/en/legal/intellectual-property/huawei-trademark-policy/"
     },
     {
       "id": "pending-the-chinese-university-of-hong-kong",
@@ -1305,7 +1427,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Campus-specific official marks subject to respective University Name and Marks policy. Central HKUST third-party approval rules also mention collaborative campuses; no clearance obtained, withhold. 核验：2026-11-02T07:37:52.246484+00:00。"
+      "note": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Campus-specific official marks subject to respective University Name and Marks policy. Central HKUST third-party approval rules also mention collaborative campuses; no clearance obtained, withhold. 核验：2026-11-02T07:37:52.246484+00:00。 核验：2026-11-02。"
     },
     {
       "id": "pending-university-of-science-and-technology-of-china",
@@ -1342,7 +1464,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official emblem ZIP link returned a CAPTCHA download page; not solved or bypassed. Public preview is a combined-marks raster and header is long white wordmark, neither suitable as standalone transparent emblem. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://xcb.buaa.edu.cn/info/1091/1481.htm"
+      "note": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official emblem ZIP link returned a CAPTCHA download page; not solved or bypassed. Public preview is a combined-marks raster and header is long white wordmark, neither suitable as standalone transparent emblem. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://xcb.buaa.edu.cn/info/1091/1481.htm 核验：2026-11-02T08:43:32.814952+00:00。 官方核验入口：https://xcb.buaa.edu.cn/info/1091/1481.htm"
     },
     {
       "id": "pending-rlwrld",
@@ -1353,7 +1475,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official website returned HTTP 403. Access restriction not bypassed and no third-party logo substituted. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://www.rlwrld.ai/"
+      "note": "Prior official403 retained; no bypass or repeat same denied route. No already-verified complete official asset available locally. 官方核验入口：https://www.rlwrld.ai/"
     },
     {
       "id": "pending-university-of-salerno",
@@ -1364,7 +1486,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official English homepage returned HTTP 500. No verified official transparent emblem acquired. 核验：2026-11-02T07:33:47.496356+00:00。 官方核验入口：https://web.unisa.it/en/"
+      "note": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official English homepage returned HTTP 500. No verified official transparent emblem acquired. 核验：2026-11-02T07:33:47.496356+00:00。 官方核验入口：https://web.unisa.it/en/ 核验：2026-11-02T08:43:32.815565+00:00。 官方核验入口：https://web.unisa.it/en/"
     },
     {
       "id": "pending-chongqing-changan-technology-co-ltd",
@@ -1375,7 +1497,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Exact subsidiary mark not established. Located Changan Automobile parent site only; do not substitute automobile brand without exact-entity evidence. 核验：2026-11-02T07:33:47.511756+00:00。 官方核验入口：https://www.changan.com.cn/cca/"
+      "note": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Exact subsidiary mark not established. Located Changan Automobile parent site only; do not substitute automobile brand without exact-entity evidence. 核验：2026-11-02T07:33:47.511756+00:00。 官方核验入口：https://www.changan.com.cn/cca/ 核验：2026-11-02。"
     },
     {
       "id": "pending-civil-aviation-university-of-china",
@@ -1386,7 +1508,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official homepage supplies full horizontal emblem+name logo only; standalone favicon response did not decode as verified image. No emblem cropped from combined logo. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.cauc.edu.cn/"
+      "note": "Reinspected complete homepage logo.png: blue emblem plus white name. White-name portion is invisible on white; no official usage guide prescribing suitable dark presentation or genuine positive complete variant verified. No recoloring or separation. 官方核验入口：https://www.cauc.edu.cn/zhv5/template_files/1/img/logo.png"
     },
     {
       "id": "pending-guilin-university-of-electronic-technology",
@@ -1449,18 +1571,33 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official 2024 visual identity process permits university members; alumni and research collaborations remain subject to review. No external-use authorization confirmed; not substituting faculty logo. 核验：2026-11-02T07:27:19.443783+00:00。 官方核验入口：https://www.u-tokyo.ac.jp/focus/en/features/z1304_00261.html"
+      "note": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Official 2024 visual identity process permits university members; alumni and research collaborations remain subject to review. No external-use authorization confirmed; not substituting faculty logo. 核验：2026-11-02T07:27:19.443783+00:00。 官方核验入口：https://www.u-tokyo.ac.jp/focus/en/features/z1304_00261.html 核验：2026-11-02。"
     },
     {
       "id": "pending-xi-an-jiaotong-liverpool-university",
       "officialName": "Xi’an Jiaotong-Liverpool University",
       "aliases": [],
       "institutionType": "university",
-      "markType": "none",
-      "status": "needs-verification",
-      "alphaStatus": "not-applicable",
-      "logo": null,
-      "note": "Official homepage supplies long XJTLU+Chinese-name wordmark and anniversary lockup, not compact emblem. No cropping or invented acronym symbol. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.xjtlu.edu.cn/"
+      "markType": "wordmark",
+      "status": "verified",
+      "alphaStatus": "transparent",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/round2-pending-xi-an-jiaotong-liverpool-university.svg",
+        "sha256": "00f5bbb632d1b25f0a8f66e4b3d8c73f08acaa350667d5415b562744188e591a",
+        "width": 201,
+        "height": 28,
+        "sourceUrl": "https://www.xjtlu.edu.cn/wp-content/uploads/2024/01/cn-header-logo.svg",
+        "evidenceUrl": "https://www.xjtlu.edu.cn/en/about/brand-resources",
+        "verifiedAt": "2026-11-02",
+        "credit": "Xi’an Jiaotong-Liverpool University official identity",
+        "rights": "Official institutional artwork; copyright/trademark remain with institution. Public official identity source verified for unaltered factual paper-affiliation identification, not endorsement or merchandising. No open licence or blanket permission asserted. Native complete current university-header wordmark, not a cropped emblem. Public policy restricts unapproved commercial product manufacture/sale/promotion; no commercial or endorsement use asserted. Internal guideline downloads require account and were not accessed. Retain full mark at native201x28px or larger with12px space; sizing is conservative display choice, not official minimum.",
+        "displayPolicy": "official-brand",
+        "background": "transparent",
+        "altZh": "Xi’an Jiaotong-Liverpool University 官方完整标识",
+        "altEn": "Official complete Xi’an Jiaotong-Liverpool University identity"
+      },
+      "note": "Native complete current university-header wordmark, not a cropped emblem. Public policy restricts unapproved commercial product manufacture/sale/promotion; no commercial or endorsement use asserted. Internal guideline downloads require account and were not accessed. Retain full mark at native201x28px or larger with12px space; sizing is conservative display choice, not official minimum."
     },
     {
       "id": "pending-university-of-liverpool",
@@ -1471,7 +1608,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Use in other contexts requires express university consent. No permission asserted; not publishable. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.liverpool.ac.uk/legal/website-terms-and-conditions/"
+      "note": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Use in other contexts requires express university consent. No permission asserted; not publishable. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.liverpool.ac.uk/legal/website-terms-and-conditions/ 核验：2026-11-02。 官方核验入口：https://www.liverpool.ac.uk/legal/website-terms-and-conditions/"
     },
     {
       "id": "pending-jiangsu-jitri-tsingunited-intelligent-control-technology-co-ltd",
@@ -1482,18 +1619,33 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Exact English and Chinese company searches did not locate authoritative official downloadable mark. Recruiting aggregators not accepted. 核验：2026-11-02T07:33:47.512560+00:00。"
+      "note": "Fresh exact English/Chinese company-name searches did not establish official logo-bearing page. Aggregator listings cannot validate exact mark; no parent substitution. 核验：2026-11-02。 官方核验入口：https://arxiv.org/"
     },
     {
       "id": "pending-universidad-antonio-de-nebrija",
       "officialName": "Universidad Antonio de Nebrija",
       "aliases": [],
       "institutionType": "university",
-      "markType": "none",
-      "status": "needs-verification",
-      "alphaStatus": "not-applicable",
-      "logo": null,
-      "note": "Official favicon SVG embeds a blurry portrait; public media resource offers horizontal JPEG logo. No crisp transparent compact identity mark verified; no tracing/redrawing. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.nebrija.com/la-universidad/transparencia/medios-de-comunicacion/"
+      "markType": "wordmark",
+      "status": "verified",
+      "alphaStatus": "transparent",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/universidad-antonio-de-nebrija-full.png",
+        "sha256": "85c7542c19d64ebb6746cb7f580f7ab4b876ffdbe33f83978f1906a5cf942f80",
+        "width": 479,
+        "height": 221,
+        "sourceUrl": "https://images.griddo.nebrija.com/universidad-nebrija-horz-5e853610-00c6-4af8-8724-61cea3e49ed7",
+        "evidenceUrl": "https://www.nebrija.com/la-universidad/transparencia/medios-de-comunicacion/",
+        "verifiedAt": "2026-11-02",
+        "credit": "Universidad Antonio de Nebrija official identity asset",
+        "rights": "Copyright and trademarks retained by institution. Exact official mark for factual paper-affiliation identification only, not endorsement. No open license asserted. Preserve complete geometry, colours and clear space. Complete portrait and horizontal name, public media resource. Download labelled SVG actually serves native transparent PNG; preserved original bytes and correct MIME. Official manual minimum actual visible mark65px height; chosen260px yields about73px mark height. Clearspace retained plus24px padding.",
+        "displayPolicy": "official-brand",
+        "background": "transparent",
+        "altZh": "Universidad Antonio de Nebrija 官方完整标识",
+        "altEn": "Universidad Antonio de Nebrija official complete mark"
+      },
+      "note": "Complete portrait and horizontal name, public media resource. Download labelled SVG actually serves native transparent PNG; preserved original bytes and correct MIME. Official manual minimum actual visible mark65px height; chosen260px yields about73px mark height. Clearspace retained plus24px padding."
     },
     {
       "id": "pending-hunan-university",
@@ -1530,7 +1682,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Third-party usage requires licence; coat of arms must not be used alone. No permission asserted; not publishable. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.cam.ac.uk/brand-resources/logo/permission"
+      "note": "Current official permission page returned403; stopped, no bypass. Search excerpt distinguishes academic-support providers from purely commercial providers but still describes requesting permission, not an automatic exemption. Official alumni terms reserve logo use and do not authorize personal publication. Prior exact finding: Third-party usage requires licence; coat of arms must not be used alone. No permission asserted; not publishable. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.cam.ac.uk/brand-resources/logo/permission 核验：2026-11-02。 官方核验入口：https://www.cam.ac.uk/brand-resources/logo/permission"
     },
     {
       "id": "pending-national-institute-of-advanced-industrial-science-and-technology",
@@ -1541,18 +1693,33 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official compact favicon/apple icon inspected; opaque white backing. Brand guidance located but no native transparent standalone source obtained. No background removal. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.aist.go.jp/Portals/0/resource_images/aist_j/information/brandguidelines/aist_brand_guidelines.pdf"
+      "note": "Native white favicon is now potentially format-compatible, but only low-resolution icon retained and no verified standalone current complete high-quality logo package or official designation of favicon for editorial identity acquired.2025brand guide found; no tracing/cropping from guide or transparent reconstruction. 官方核验入口：https://www.aist.go.jp/Portals/0/resource_images/aist_j/information/brandguidelines/aist_brand_guidelines.pdf"
     },
     {
       "id": "pending-tianjin-medical-university",
       "officialName": "Tianjin Medical University",
       "aliases": [],
       "institutionType": "university",
-      "markType": "none",
-      "status": "needs-verification",
-      "alphaStatus": "not-applicable",
-      "logo": null,
-      "note": "Official homepage provides transparent but long combined circular emblem plus Chinese/English university name. Separate complete emblem not obtained; combination not cropped. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://www.tmu.edu.cn/"
+      "markType": "wordmark",
+      "status": "verified",
+      "alphaStatus": "transparent",
+      "logo": {
+        "path": "assets/institutions/tianjin-medical-university.png",
+        "sourceUrl": "https://www.tmu.edu.cn/_upload/site/00/04/4/logo.png",
+        "evidenceUrl": "https://www.tmu.edu.cn/",
+        "width": 305,
+        "height": 72,
+        "sha256": "4912bb34eda256b262526aa661d96ffa15dce701e892262243410898d4acb52a",
+        "credit": "Tianjin Medical University official website identity asset",
+        "kind": "institution-logo",
+        "verifiedAt": "2026-11-02",
+        "background": "transparent",
+        "rights": "Official source; copyright/trademarks remain with owner. No blanket public-domain license or endorsement asserted. Intended solely for accurate editorial affiliation identification; preserve complete mark.",
+        "displayPolicy": "official-brand",
+        "altEn": "Tianjin Medical University complete official logo",
+        "altZh": "Tianjin Medical University 官方完整标识"
+      },
+      "note": "Complete official mark visually inspected. Native appearance and all elements retained; no cropping, recoloring, redrawing or background removal. PNG lossless re-encoding only if original JPEG. Full responsive wordmark accepted under revised contract."
     },
     {
       "id": "pending-tianjin-university",
@@ -1563,7 +1730,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official homepage access failed: HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound No bypass attempted. 核验：2026-11-02T07:37:52.246486+00:00。 官方核验入口：https://www.tju.edu.cn/"
+      "note": "Official homepage redirect loop remains source blocker. No complete verified native mark in retained candidates; no guessing endpoint or third-party substitute. 官方核验入口：https://www.tju.edu.cn/"
     },
     {
       "id": "pending-keio-university",
@@ -1574,7 +1741,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Usage permission application and login ID/password required for production data; did not bypass. 核验：2026-11-02T07:27:19.441956+00:00。 官方核验入口：https://www.keio.ac.jp/en/about/public-relations/logo/"
+      "note": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Usage permission application and login ID/password required for production data; did not bypass. 核验：2026-11-02T07:27:19.441956+00:00。 官方核验入口：https://www.keio.ac.jp/en/about/public-relations/logo/ 核验：2026-11-02。"
     },
     {
       "id": "pending-waseda-university",
@@ -1585,7 +1752,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "All university symbols prohibited without express written permission. No permission asserted; not publishable. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.waseda.jp/top/en/about/work/logos"
+      "note": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: All university symbols prohibited without express written permission. No permission asserted; not publishable. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.waseda.jp/top/en/about/work/logos 核验：2026-11-02。 官方核验入口：https://www.waseda.jp/top/en/about/work/logos"
     },
     {
       "id": "pending-stanford-university",
@@ -1596,7 +1763,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official art sheet requires prior approval from Stanford Trademarks and Licensing; no approval obtained. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://identity.stanford.edu/wp-content/uploads/sites/3/2020/07/SU-Logo-Art-Sheet-Final.pdf"
+      "note": "Current FAQ directly addresses external websites, not only merchandise. Written-agreement event co-sponsorship exception does not match bulletin. Current identity guide also bars personal-project logo use. Prior exact finding: Official art sheet requires prior approval from Stanford Trademarks and Licensing; no approval obtained. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://identity.stanford.edu/wp-content/uploads/sites/3/2020/07/SU-Logo-Art-Sheet-Final.pdf 核验：2026-11-02。 官方核验入口：https://ucomm.stanford.edu/policies-and-guidance/frequently-asked-questions-about-name-use"
     },
     {
       "id": "pending-lambda-inc",
@@ -1607,7 +1774,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official favicon is opaque black-square lambda. Complete official wordmark SVG is pale/white. Neither meets transparent dark-mark contract without alteration; no redraw/recolor. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://lambda.ai/"
+      "note": "New official brand policy expressly requires prior written authorization for reproduction/distribution of logo and icon. No publication exception established; white full mark versus opaque square is no longer primary blocker. 官方核验入口：https://lambda.ai/lambda-brand-use-policy"
     },
     {
       "id": "pending-northwestern-university",
@@ -1618,7 +1785,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "External companies cannot use Northwestern marks without permission. No permission asserted; not publishable. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://alumni.northwestern.edu/careers-networking/small-business-directory/faqs.html"
+      "note": "Fresh official handbook p53 expressly requires license for individual/organization/company commercial or noncommercial reproduction. Official brand page reiterates unauthorized-use restriction; no editorial exception established. Prior exact finding: External companies cannot use Northwestern marks without permission. No permission asserted; not publishable. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://alumni.northwestern.edu/careers-networking/small-business-directory/faqs.html 核验：2026-11-02。 官方核验入口：https://www.northwestern.edu/communitystandards/student-handbook/student-handbook.pdf"
     },
     {
       "id": "pending-daimon-robotics",
@@ -1629,18 +1796,33 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Correct official Daimon site verified. Both downloaded full PNG logo and native compact SVG are white-only; incompatible with no-dark-backing contract. No recolor. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.dmrobot.com/en/about/"
+      "note": "Exact official full PNG and compact SVG already downloaded; both white-only. New contract permits official negative variants only with evidenced authorized contrast-background guidance. None found for these files, so no invented backing/recolor/crop. 核验：2026-11-02。 官方核验入口：https://www.dmrobot.com/en/about/"
     },
     {
       "id": "pending-nanjing-university",
       "officialName": "Nanjing University",
       "aliases": [],
       "institutionType": "university",
-      "markType": "none",
-      "status": "needs-verification",
-      "alphaStatus": "not-applicable",
-      "logo": null,
-      "note": "Official main mark image is long combination logo; official archive standalone emblem is JPEG (opaque). Downloaded official AI archive contains one complete standards sheet, not separate transparent emblem; no cropped combination or redrawing used. 核验：2026-11-02T07:35:41.420124+00:00。 官方核验入口：https://ndbgs.nju.edu.cn/zlxz/bsbz/20231012/i251602.html"
+      "markType": "emblem",
+      "status": "verified",
+      "alphaStatus": "opaque-light",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/nanjing-university-full.webp",
+        "sha256": "a8b3afa5cab5430bac1c7335cef4cbb87f777d27ebdcf11f25313efb6ba07b3c",
+        "width": 1723,
+        "height": 2160,
+        "sourceUrl": "https://ndbgs.nju.edu.cn/DFS//file/2022/03/17/20220317171655668wlq22b.rar",
+        "evidenceUrl": "https://ndbgs.nju.edu.cn/zlxz/bsbz/20231012/i251602.html",
+        "verifiedAt": "2026-11-02",
+        "credit": "Nanjing University official identity asset",
+        "rights": "Copyright and trademarks retained by institution. Exact official mark for factual paper-affiliation identification only, not endorsement. No open license asserted. Preserve complete geometry, colours and clear space. Complete standalone shield from official public JPEG archive, file01校标.jpg; native white backing preserved. Not cropped from standards sheet. Original notice confirms shield as university mark and prescribes proportions/colors.",
+        "displayPolicy": "official-brand",
+        "background": "light",
+        "altZh": "Nanjing University 官方完整标识",
+        "altEn": "Nanjing University official complete mark"
+      },
+      "note": "Complete standalone shield from official public JPEG archive, file01校标.jpg; native white backing preserved. Not cropped from standards sheet. Original notice confirms shield as university mark and prescribes proportions/colors. 发布副本为无损WebP，尺寸及解码RGBA逐像素与官方JPEG完全一致，保留原生白底。"
     },
     {
       "id": "pending-great-bay-university",
@@ -1703,7 +1885,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official home supplied white combined seal/wordmark, not standalone dark transparent emblem. Official school-identity page checked; did not crop seal from lockup. 核验：2026-11-02T07:35:41.421982+00:00。 官方核验入口：https://www.nwu.edu.cn/xxgk/xxbs/xm.htm"
+      "note": "Official Office download page supplies school-name/emblem RAR, but attachment returned CAPTCHA; stopped without bypass. Available home full logo white-only with no explicit contrasting-background instructions verified. 核验：2026-11-02T08:43:32.815234+00:00。 官方核验入口：https://office.nwu.edu.cn/info/1020/2124.htm"
     },
     {
       "id": "pending-renmin-university-of-china",
@@ -1740,7 +1922,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Native transparent Google DeepMind symbol obtained and inspected; Google brand guidance says many graphical brand uses require permission while media page explicitly allows plain-text reference. External logo-use authorization not established; keep text rather than assert permission. 核验：2026-11-02T07:37:07.485144+00:00。 官方核验入口：https://about.google/brand-resource-center/guidance/media/"
+      "note": "Google’s current public guidance positively permits Google wordmark/G for nonmarketing news/teaching with accurate attribution, clearspace and correct colors. This does not establish permission or identity for a distinct DeepMind symbol, and parent Google G must not silently substitute for exact affiliation. Official DeepMind homepage checked; no explicit compact-mark editorial license established. Prior exact finding: Native transparent Google DeepMind symbol obtained and inspected; Google brand guidance says many graphical brand uses require permission while media page explicitly allows plain-text reference. External logo-use authorization not established; keep text rather than assert permission. 核验：2026-11-02T07:37:07.485144+00:00。 官方核验入口：https://about.google/brand-resource-center/guidance/media/ 核验：2026-11-02。 官方核验入口：https://partnermarketinghub.withgoogle.com/brands/google/branding-guidelines/how-to-show-googles-brand/"
     },
     {
       "id": "pending-kth-royal-institute-of-technology",
@@ -1751,7 +1933,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official mark limited exclusively to situations where KTH asserts ownership/authorship/production/operation. External bulletin use not confirmed. 核验：2026-11-02T07:27:19.442641+00:00。 官方核验入口：https://intra.kth.se/en/administration/kommunikation/varumarke/grafiskprofil/logotyp-1.845049"
+      "note": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Official mark limited exclusively to situations where KTH asserts ownership/authorship/production/operation. External bulletin use not confirmed. 核验：2026-11-02T07:27:19.442641+00:00。 官方核验入口：https://intra.kth.se/en/administration/kommunikation/varumarke/grafiskprofil/logotyp-1.845049 核验：2026-11-02。"
     },
     {
       "id": "pending-national-university-of-singapore",
@@ -1762,7 +1944,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "University requires permission for other uses; crest and namestyle must remain together. 核验：2026-11-02T07:37:52.246438+00:00。"
+      "note": "Official-publication exception is for NUS publications, not every educational publication. Complete logo requires crest+name together; standalone crest prohibited. Noncommercial research/study saving exception not public redistribution. Prior exact finding: University requires permission for other uses; crest and namestyle must remain together. 核验：2026-11-02T07:37:52.246438+00:00。 核验：2026-11-02。 官方核验入口：https://www.nus.edu.sg/identity"
     },
     {
       "id": "pending-university-of-toronto",
@@ -1773,7 +1955,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official homepage returned Site Unavailable rather than institution HTML. No asset acquired. 核验：2026-11-02T07:33:47.498510+00:00。 官方核验入口：https://www.utoronto.ca/"
+      "note": "Official brand-access page confirms University signature files restricted to Brandhub/UTORid. Public media page provides newsphotos, not logo authorization or full mark package; no login bypass. 官方核验入口：https://spacesandexperiences.utoronto.ca/logos-and-brand-identity/"
     },
     {
       "id": "pending-vector-institute-for-artificial-intelligence",
@@ -1784,7 +1966,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official homepage returned HTTP 403. No access workaround attempted. 核验：2026-11-02T07:33:47.499240+00:00。 官方核验入口：https://vectorinstitute.ai/"
+      "note": "Prior official403 remains restricted route; no repeated attempt or third-party replacement. No prior verified full asset to recover under expanded rendering. 官方核验入口：https://vectorinstitute.ai/"
     },
     {
       "id": "pending-acceleration-consortium",
@@ -1795,7 +1977,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official site returns Site Unavailable. University-hosted alternative did not yield a verifiable consortium logo. Third-party Commons claim not accepted as official asset proof. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://acceleration.utoronto.ca/"
+      "note": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official site returns Site Unavailable. University-hosted alternative did not yield a verifiable consortium logo. Third-party Commons claim not accepted as official asset proof. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://acceleration.utoronto.ca/ 核验：2026-11-02T08:43:32.814792+00:00。 官方核验入口：https://acceleration.utoronto.ca/"
     },
     {
       "id": "pending-university-of-amsterdam",
@@ -1806,18 +1988,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official standalone university identity icon found but opaque black square. No transparent original acquired; did not remove intrinsic backing. 核验：2026-11-02T07:33:47.531146+00:00。 官方核验入口：https://www.uva.nl/en"
-    },
-    {
-      "id": "pending-institute-of-medical-science",
-      "officialName": "Institute of Medical Science",
-      "aliases": [],
-      "institutionType": "research-institute",
-      "markType": "none",
-      "status": "needs-verification",
-      "alphaStatus": "not-applicable",
-      "logo": null,
-      "note": "Ambiguous entity: paper does not establish parent or location. Multiple institutions share name; no guessed parent/logo used. 核验：2026-11-02T07:33:47.509549+00:00。"
+      "note": "Official Rights page explicitly requires Executive Board approval for third-party logo or element use. Also identifies black block as intrinsic symbol; removing it is not legitimate background removal. No deployment without approval. 核验：2026-11-02T08:43:32.815383+00:00。 官方核验入口：https://www.uva.nl/en/about-the-uva/about-the-university/corporate-identity/brands-and-rights/rights/rights.html"
     },
     {
       "id": "pending-canadian-institute-for-advanced-research",
@@ -1902,11 +2073,26 @@
       "officialName": "Hosei University",
       "aliases": [],
       "institutionType": "university",
-      "markType": "none",
-      "status": "needs-verification",
-      "alphaStatus": "not-applicable",
-      "logo": null,
-      "note": "Official homepage supplied only horizontal symbol-plus-bilingual-wordmark and long text-only variant. No separate complete compact emblem verified; combined mark not cropped. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://www.hosei.ac.jp/"
+      "markType": "wordmark",
+      "status": "verified",
+      "alphaStatus": "transparent",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/hosei-university-full.png",
+        "sha256": "61764179a856186d1851abefbd5e216acf0f5250b3a41c120988e1703cfebe03",
+        "width": 200,
+        "height": 53,
+        "sourceUrl": "https://www.hosei.ac.jp/common/img/logo_01.png",
+        "evidenceUrl": "https://www.hosei.ac.jp/hosei/daigakugaiyo/symbol/mark/",
+        "verifiedAt": "2026-11-02",
+        "credit": "Hosei University official identity asset",
+        "rights": "Copyright and trademarks retained by institution. Exact official mark for factual paper-affiliation identification only, not endorsement. No open license asserted. Preserve complete geometry, colours and clear space. Complete official orange/blue symbol and black bilingual name. Public identity page describes brand mark; no explicit third-party prohibition established in inspected source.",
+        "displayPolicy": "official-brand",
+        "background": "transparent",
+        "altZh": "Hosei University 官方完整标识",
+        "altEn": "Hosei University official complete mark"
+      },
+      "note": "Complete official orange/blue symbol and black bilingual name. Public identity page describes brand mark; no explicit third-party prohibition established in inspected source."
     },
     {
       "id": "pending-peking-university",
@@ -1917,7 +2103,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official downloads include a noncommercial-use application and commitment form. No approval obtained; hold pending permission review. 核验：2026-11-02T07:37:52.246441+00:00。"
+      "note": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Official downloads include a noncommercial-use application and commitment form. No approval obtained; hold pending permission review. 核验：2026-11-02T07:37:52.246441+00:00。 核验：2026-11-02。"
     },
     {
       "id": "pending-massachusetts-general-hospital",
@@ -1928,7 +2114,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official brand guide directs users to login/register at massgeneralbrand.org. Current hospital homepage redirects to MGB informational site, not distinct logo. No login bypass or parent-brand substitution. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.massgeneral.org/assets/MGH/pdf/notices/social-media-resource-guide-feb-2017.pdf"
+      "note": "Official hospital branding guide still directs login/register to massgeneralbrand.org. Fresh official MGB ethics guide confirms institution-specific logo guidelines must be checked; parent MGB identity not substituted and no login bypass. 核验：2026-11-02。 官方核验入口：https://www.massgeneral.org/assets/MGH/pdf/notices/social-media-resource-guide-feb-2017.pdf"
     },
     {
       "id": "pending-cornell-university",
@@ -1939,7 +2125,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Policy 4.10 permits marks only with permission; no approval obtained. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://policy.cornell.edu/policy-library/use-cornells-name-logos-trademarks-and-insignias"
+      "note": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Policy 4.10 permits marks only with permission; no approval obtained. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://policy.cornell.edu/policy-library/use-cornells-name-logos-trademarks-and-insignias 核验：2026-11-02T08:43:32.815015+00:00。 官方核验入口：https://policy.cornell.edu/policy-library/use-cornells-name-logos-trademarks-and-insignias"
     },
     {
       "id": "pending-yale-university",
@@ -1950,7 +2136,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Non-Yale publications require Yale Trademark Licensing approval; no approval obtained. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://yaleidentity.yale.edu/core-identity-elements/yale-logo-and-wordmarks/yale-logo"
+      "note": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Non-Yale publications require Yale Trademark Licensing approval; no approval obtained. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://yaleidentity.yale.edu/core-identity-elements/yale-logo-and-wordmarks/yale-logo 核验：2026-11-02T08:43:32.815646+00:00。 官方核验入口：https://yaleidentity.yale.edu/core-identity-elements/yale-logo-and-wordmarks/yale-logo"
     },
     {
       "id": "pending-eastern-international-university",
@@ -1987,7 +2173,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official homepage returned HTTP 503; no verified official transparent emblem acquired. 核验：2026-11-02T07:33:47.480209+00:00。 官方核验入口：https://iuh.edu.vn/"
+      "note": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official homepage returned HTTP 503; no verified official transparent emblem acquired. 核验：2026-11-02T07:33:47.480209+00:00。 官方核验入口：https://iuh.edu.vn/ 核验：2026-11-02T08:43:32.815100+00:00。 官方核验入口：https://iuh.edu.vn/"
     },
     {
       "id": "pending-roboscience",
@@ -1998,7 +2184,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official site located by search; direct page response was Site Unavailable, Unable to access this site. No valid logo asset retrieved, no bypass attempted. 核验：2026-11-02T07:37:52.246446+00:00。 官方核验入口：https://www.robosci.com/"
+      "note": "Fresh official-domain response returned Site Unavailable, despite HTTP200. No logo bytes established; do not treat successful status code as functioning official asset source. 核验：2026-11-02。 官方核验入口：https://www.robosci.com/"
     },
     {
       "id": "pending-the-hong-kong-polytechnic-university",
@@ -2035,18 +2221,33 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official complete WebP mark inspected: white lettering, incompatible on current light background. No verified native dark-color alternate obtained; no recolor. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.shlab.org.cn/"
+      "note": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official complete WebP mark inspected: white lettering, incompatible on current light background. No verified native dark-color alternate obtained; no recolor. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.shlab.org.cn/ 核验：2026-11-02T08:43:32.815290+00:00。 官方核验入口：https://www.shlab.org.cn/"
     },
     {
       "id": "pending-northwestern-polytechnical-university",
       "officialName": "Northwestern Polytechnical University",
       "aliases": [],
       "institutionType": "university",
-      "markType": "none",
-      "status": "needs-verification",
-      "alphaStatus": "not-applicable",
-      "logo": null,
-      "note": "Official homepage provides only full horizontal emblem/name combinations. Standalone favicon request returned 504; no verified transparent complete standalone emblem found. No crop. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.nwpu.edu.cn/"
+      "markType": "wordmark",
+      "status": "verified",
+      "alphaStatus": "transparent",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/northwestern-polytechnical-university-full.png",
+        "sha256": "b8a1c9f0c926b9663d2b11c972e2facb17c312b2eb9ed4c596641a12175a8a8b",
+        "width": 321,
+        "height": 63,
+        "sourceUrl": "https://www.nwpu.edu.cn/images/logo2.png",
+        "evidenceUrl": "https://www.nwpu.edu.cn/",
+        "verifiedAt": "2026-11-02",
+        "credit": "Northwestern Polytechnical University official identity asset",
+        "rights": "Copyright and trademarks retained by institution. Exact official mark for factual paper-affiliation identification only, not endorsement. No open license asserted. Preserve complete geometry, colours and clear space. Official full blue emblem/bilingual-name identity, original file reused. Earlier identity download access block not bypassed; already-public homepage source independently acquired previously.",
+        "displayPolicy": "official-brand",
+        "background": "transparent",
+        "altZh": "Northwestern Polytechnical University 官方完整标识",
+        "altEn": "Northwestern Polytechnical University official complete mark"
+      },
+      "note": "Official full blue emblem/bilingual-name identity, original file reused. Earlier identity download access block not bypassed; already-public homepage source independently acquired previously."
     },
     {
       "id": "pending-zhejiang-university",
@@ -2057,7 +2258,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official policy states written authorization required to display university logos. 核验：2026-11-02T07:37:52.246753+00:00。"
+      "note": "Official policy requires written authorization for display of university logo. No existing authorization or applicable editorial exception identified; widened rendering contract does not resolve this. 官方核验入口：https://my.zju.edu.cn/_s4/2019/0104/c4a2/page.psp"
     },
     {
       "id": "pending-institute-of-artificial-intelligence-of-china-telecom-teleai",
@@ -2090,11 +2291,26 @@
       "officialName": "The Chinese University of Hong Kong, Shenzhen",
       "aliases": [],
       "institutionType": "university",
-      "markType": "none",
-      "status": "needs-verification",
-      "alphaStatus": "not-applicable",
-      "logo": null,
-      "note": "Official favicon crest sits on a light-gray circular backing. Transparent outer corners do not satisfy standalone no-backing contract; no native unbacked compact variant verified; no cutout performed. 核验：2026-11-02T07:37:52.246482+00:00。 官方核验入口：https://www.cuhk.edu.cn/zh-hans"
+      "markType": "wordmark",
+      "status": "verified",
+      "alphaStatus": "transparent",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/the-chinese-university-of-hong-kong-shenzhen-full.png",
+        "sha256": "ad996831e1ecad366ed60d1bd1d8bff12336f9d4e86a7cdddd0efcb23df39198",
+        "width": 697,
+        "height": 100,
+        "sourceUrl": "https://www.cuhk.edu.cn/sites/default/files/zh-hans_logo.png",
+        "evidenceUrl": "https://www.cuhk.edu.cn/zh-hans",
+        "verifiedAt": "2026-11-02",
+        "credit": "The Chinese University of Hong Kong, Shenzhen official identity asset",
+        "rights": "Copyright and trademarks retained by institution. Exact official mark for factual paper-affiliation identification only, not endorsement. No open license asserted. Preserve complete geometry, colours and clear space. Complete official Shenzhen-campus crest and bilingual name; no gray-disc favicon or parent-campus substitution. Exact identification only, not sponsorship.",
+        "displayPolicy": "official-brand",
+        "background": "transparent",
+        "altZh": "The Chinese University of Hong Kong, Shenzhen 官方完整标识",
+        "altEn": "The Chinese University of Hong Kong, Shenzhen official complete mark"
+      },
+      "note": "Complete official Shenzhen-campus crest and bilingual name; no gray-disc favicon or parent-campus substitution. Exact identification only, not sponsorship."
     },
     {
       "id": "pending-agency-for-science-technology-and-research",
@@ -2105,7 +2321,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official terms prohibit reproducing or displaying site content without prior written A*STAR permission. No approval obtained. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://www.a-star.edu.sg/terms-and-conditions"
+      "note": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Official terms prohibit reproducing or displaying site content without prior written A*STAR permission. No approval obtained. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://www.a-star.edu.sg/terms-and-conditions 核验：2026-11-02。 官方核验入口：https://www.a-star.edu.sg/terms-and-conditions"
     },
     {
       "id": "pending-king-abdullah-university-of-science-and-technology",
@@ -2142,7 +2358,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official Singapore government directory confirms IAIC, but no standalone logo asset obtained. A*STAR I2R is different named institute and was not substituted. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.sgdi.gov.sg/ministries/mti/statutory-boards/a-star/departments/re/departments/iaic"
+      "note": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official Singapore government directory confirms IAIC, but no standalone logo asset obtained. A*STAR I2R is different named institute and was not substituted. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.sgdi.gov.sg/ministries/mti/statutory-boards/a-star/departments/re/departments/iaic 核验：2026-11-02T08:43:32.815111+00:00。 官方核验入口：https://www.sgdi.gov.sg/ministries/mti/statutory-boards/a-star/departments/re/departments/iaic"
     },
     {
       "id": "pending-joy-future-academy",
@@ -2153,7 +2369,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Targeted exact-name search found institutional model account and JD opensource association, but no independently verified official standalone academy logo asset. Do not substitute JD corporate mark without source verification. 核验：2026-11-02T07:37:52.246432+00:00。 官方核验入口：https://huggingface.co/JoyFutureAcademy"
+      "note": "Matching official model organization establishes affiliation name but publishes no independently verified academy logo. JD association does not authorize substituting JD corporate identity; exact text retained. 官方核验入口：https://huggingface.co/JoyFutureAcademy"
     },
     {
       "id": "pending-novaxbot",
@@ -2164,7 +2380,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Paper confirms name; targeted exact-name logo/site search found third-party trademark listings and unrelated Discord bot results, not a verified official brand asset. No substitute used. 核验：2026-11-02T07:37:52.246440+00:00。 官方核验入口：https://arxiv.org/html/2610.40799v1"
+      "note": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Paper confirms name; targeted exact-name logo/site search found third-party trademark listings and unrelated Discord bot results, not a verified official brand asset. No substitute used. 核验：2026-11-02T07:37:52.246440+00:00。 官方核验入口：https://arxiv.org/html/2610.40799v1 核验：2026-11-02。"
     },
     {
       "id": "pending-nankai-university",
@@ -2201,7 +2417,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official homepage access failed: HTTP Error 403: Forbidden No bypass attempted. 核验：2026-11-02T07:37:52.246478+00:00。 官方核验入口：https://www.seu.edu.cn/"
+      "note": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official homepage access failed: HTTP Error 403: Forbidden No bypass attempted. 核验：2026-11-02T07:37:52.246478+00:00。 官方核验入口：https://www.seu.edu.cn/ 核验：2026-11-02T08:43:32.815313+00:00。 官方核验入口：https://www.seu.edu.cn/"
     },
     {
       "id": "pending-xiong-an-national-innovation-center",
@@ -2212,7 +2428,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official government account confirms entity but did not locate official standalone identity asset; do not substitute Xiongan government seal. 核验：2026-11-02T07:33:47.517190+00:00。 官方核验入口：https://www.xiongan.gov.cn/20260108/d13c6dd67a1449d0bd254fc9d2adf60b/c.html"
+      "note": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official government account confirms entity but did not locate official standalone identity asset; do not substitute Xiongan government seal. 核验：2026-11-02T07:33:47.517190+00:00。 官方核验入口：https://www.xiongan.gov.cn/20260108/d13c6dd67a1449d0bd254fc9d2adf60b/c.html 核验：2026-11-02T08:43:32.815634+00:00。 官方核验入口：https://www.xiongan.gov.cn/20260108/d13c6dd67a1449d0bd254fc9d2adf60b/c.html"
     },
     {
       "id": "pending-xiong-an-guochuang-lantian-technology-company-ltd",
@@ -2223,7 +2439,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Paper provenance confirms name but targeted search did not establish the company official website or official mark. No similarly named company substituted. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://ojs.aaai.org/index.php/AAAI/article/download/39267/43228"
+      "note": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Paper provenance confirms name but targeted search did not establish the company official website or official mark. No similarly named company substituted. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://ojs.aaai.org/index.php/AAAI/article/download/39267/43228 核验：2026-11-02。"
     },
     {
       "id": "pending-analog-devices",
@@ -2234,7 +2450,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official page-linked PNG/ICO candidates are opaque blue square icons. Native SVG favicon was inspected/rendered but embeds the same opaque low-resolution square. No suitable native transparent compact asset verified; no background removal performed. 核验：2026-11-02T07:37:52.246421+00:00。 官方核验入口：https://www.analog.com/en/index.html"
+      "note": "Official brand guide requires Brand/Legal approval for third-party logo use and licensing. Official media kit requests trademark licence agreement. Opaque favicon is no longer the deciding blocker; no approval obtained. 核验：2026-11-02。 官方核验入口：https://www.analog.com/media/en/brand/adi-brand-guidelines.pdf"
     },
     {
       "id": "pending-nimishes-lab",
@@ -2245,7 +2461,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Lab founder official page confirms NIMISHES Lab; no distinct lab logo published in inspected homepage. No personal portrait or initials substituted. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://nishi-kanta-paul.github.io/"
+      "note": "Founder official page confirms lab name but no distinct official lab logo published. Portrait or generated initials cannot establish organization mark. 官方核验入口：https://nishi-kanta-paul.github.io/"
     },
     {
       "id": "pending-university-of-south-florida",
@@ -2256,7 +2472,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official sources establish trademark permission requirements; main homepage logo is white-only long anniversary lockup. No authorized compact transparent candidate verified. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.usf.edu/marketplace/licensing/faqs.aspx"
+      "note": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Official sources establish trademark permission requirements; main homepage logo is white-only long anniversary lockup. No authorized compact transparent candidate verified. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.usf.edu/marketplace/licensing/faqs.aspx 核验：2026-11-02。"
     },
     {
       "id": "pending-institute-of-science-tokyo",
@@ -2267,7 +2483,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Science Tokyo logo use requires president permission. No permission obtained; withhold. 核验：2026-11-02T07:37:52.246431+00:00。"
+      "note": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Science Tokyo logo use requires president permission. No permission obtained; withhold. 核验：2026-11-02T07:37:52.246431+00:00。 核验：2026-11-02。 官方核验入口：https://design-system.isct.ac.jp/ja/introduction/usage"
     },
     {
       "id": "pending-pratt-institute",
@@ -2278,7 +2494,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official compact P identity favicon found but fully opaque white background; no compliant native transparent compact original acquired. 核验：2026-11-02T07:33:47.528115+00:00。 官方核验入口：https://www.pratt.edu/"
+      "note": "Prior followup verified explicit prior written consent required for institutional name/logo/trademarked material. OneKey assets/Creative Services request require additional authorization. Expanded format contract does not resolve permission; no duplicate access attempt. 官方核验入口：https://www.pratt.edu/administrative-departments/communications-and-marketing/"
     },
     {
       "id": "pending-princeton-university",
@@ -2289,7 +2505,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official homepage access failed: HTTP Error 403: Forbidden No bypass attempted. 核验：2026-11-02T07:37:52.246444+00:00。 官方核验入口：https://www.princeton.edu/"
+      "note": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official homepage access failed: HTTP Error 403: Forbidden No bypass attempted. 核验：2026-11-02T07:37:52.246444+00:00。 官方核验入口：https://www.princeton.edu/ 核验：2026-11-02T08:43:32.815270+00:00。 官方核验入口：https://www.princeton.edu/"
     },
     {
       "id": "pending-university-of-ottawa",
@@ -2300,7 +2516,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Policy 57 requires written consent unless pre-authorized and reserves coat of arms for official documents, not branding. No applicable authorization obtained. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://www.uottawa.ca/about-us/leadership-governance/policies-regulations/policy-57-brand-policy"
+      "note": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Policy 57 requires written consent unless pre-authorized and reserves coat of arms for official documents, not branding. No applicable authorization obtained. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://www.uottawa.ca/about-us/leadership-governance/policies-regulations/policy-57-brand-policy 核验：2026-11-02。 官方核验入口：https://www.uottawa.ca/about-us/leadership-governance/policies-regulations/policy-57-brand-policy"
     },
     {
       "id": "pending-artpark-indian-institute-of-science",
@@ -2363,7 +2579,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official icon is a green app tile with rounded transparent corners, not a standalone transparent corporate symbol. Rejected under no-backing contract; no background removal. 核验：2026-11-02T07:37:52.246433+00:00。 官方核验入口：https://www.lixiang.com/"
+      "note": "Previously found native green app icon does not establish that color tile is prescribed complete institutional identity. Revised contract still excludes accidental app/favicon tiles; no verified complete wordmark acquired. 核验：2026-11-02T08:43:32.815173+00:00。 官方核验入口：https://www.lixiang.com/"
     },
     {
       "id": "pending-bigai",
@@ -2400,7 +2616,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Current institutional identity is W Crest plus wordmark. Brand page displays combined marks, restricts Motion W to athletics and historical Numen Lumen to select materials. No current standalone transparent compact academic asset approved by targeted sources. 核验：2026-11-02T07:37:52.246748+00:00。 官方核验入口：https://brand.wisc.edu/visual-identity/logos/"
+      "note": "Official crest-only web ZIP downloaded and visually verified; format/size no longer blocker. FAQ expressly requires communications-office approval for noncommercial external websites/publications. Licensing office separately exempts news-media informational references from licensing (https://licensing.wisc.edu/how-to-use-trademarks/for-non-campus-use/), but this does not clearly waive separate approval. Hold, no blanket noncommercial clearance inferred. 核验：2026-11-02。 官方核验入口：https://brand.wisc.edu/faq/may-an-outside-organization-or-business-use-uw-madison-logos/"
     },
     {
       "id": "pending-epfl",
@@ -2437,7 +2653,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official Trademark Licensing Program requires prior written permission from Trademark Office; no approval obtained. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://www.dartmouth.edu/ogc/trademark.html"
+      "note": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Official Trademark Licensing Program requires prior written permission from Trademark Office; no approval obtained. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://www.dartmouth.edu/ogc/trademark.html 核验：2026-11-02。 官方核验入口：https://www.dartmouth.edu/ogc/trademark.html"
     },
     {
       "id": "pending-south-china-university-of-technology",
@@ -2474,7 +2690,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official favicon is only 16x16 pixels, unsuitable for crisp institution display. No higher-resolution transparent official compact asset verified in inspected sources. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.osu.edu/"
+      "note": "Official Trademark Licensing external request page directs noncommercial outside logo users to external brand request form. No permission obtained; tiny favicon not substituted. 核验：2026-11-02T08:43:32.815338+00:00。 官方核验入口：https://trademarklicensing.osu.edu/page/external-request"
     },
     {
       "id": "pending-rochester-institute-of-technology",
@@ -2485,7 +2701,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Third-party logo use requires prior written consent; no approval obtained. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://www.rit.edu/brandportal/logos"
+      "note": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Third-party logo use requires prior written consent; no approval obtained. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://www.rit.edu/brandportal/logos 核验：2026-11-02。 官方核验入口：https://www.rit.edu/brandportal/logos"
     },
     {
       "id": "pending-brigham-young-university",
@@ -2496,7 +2712,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Brand guidelines say block Y is supportive, not primary university identifier, can be confused with Yale externally; medallion restricted to formal official usage and minimum 125px. Homepage primary BYU asset is all-white. Medallion archive download did not return a ZIP; later web fetch of brand page returned 403. No invalid or restricted substitute deployed. 核验：2026-11-02T07:37:52.246423+00:00。 官方核验入口：https://brand.byu.edu/logos-marks"
+      "note": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Brand guidelines say block Y is supportive, not primary university identifier, can be confused with Yale externally; medallion restricted to formal official usage and minimum 125px. Homepage primary BYU asset is all-white. Medallion archive download did not return a ZIP; later web fetch of brand page returned 403. No invalid or restricted substitute deployed. 核验：2026-11-02T07:37:52.246423+00:00。 官方核验入口：https://brand.byu.edu/logos-marks 核验：2026-11-02T08:43:32.814972+00:00。 官方核验入口：https://brand.byu.edu/logos-marks"
     },
     {
       "id": "pending-aerovironment",
@@ -2507,7 +2723,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official policy grants no trademark license and prohibits unauthorized trademark use; no clearance established. 核验：2026-11-02T07:37:52.246406+00:00。"
+      "note": "Official policy reserves trademark rights and prohibits unauthorized trademark use; expanded full-wordmark/native-background rendering does not resolve permission. 官方核验入口：https://www.avinc.com/our-policies/"
     },
     {
       "id": "pending-nyu-shanghai",
@@ -2540,11 +2756,26 @@
       "officialName": "NYU Tandon",
       "aliases": [],
       "institutionType": "university",
-      "markType": "none",
-      "status": "needs-verification",
-      "alphaStatus": "not-applicable",
-      "logo": null,
-      "note": "Native Tandon-hosted pinned-tab SVG has solid black square with torch cutout (not genuinely transparent mark background). Rejected after pixel review; no crop/recolor. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://engineering.nyu.edu/"
+      "markType": "wordmark",
+      "status": "verified",
+      "alphaStatus": "opaque-light",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/nyu-tandon-full.png",
+        "sha256": "3166ef01172a6f2e7e7551fa55298241d3211a6cde9c23ad9f36e864bfc5fc8b",
+        "width": 4376,
+        "height": 1043,
+        "sourceUrl": "https://engineering.nyu.edu/sites/default/files/inline-images/IdentityGuidelines_TandonWeb_SC2526_V16%28LogoBasics%29-02.png",
+        "evidenceUrl": "https://engineering.nyu.edu/marketing-and-communications/identity-guide/logos-lockups",
+        "verifiedAt": "2026-11-02",
+        "credit": "NYU Tandon official identity asset",
+        "rights": "Copyright and trademarks retained by institution. Exact official mark for factual paper-affiliation identification only, not endorsement. No open license asserted. Preserve complete geometry, colours and clear space. Complete official preferred short logo including torch and NYU Tandon logotype. Native whitespace preserved. Minimum visible logo height30px; clearspace at least half torch-box height. At320px image width actual mark height about38px;16px added padding exceeds half visible torch height when combined intrinsic margins.",
+        "displayPolicy": "official-brand",
+        "background": "light",
+        "altZh": "NYU Tandon 官方完整标识",
+        "altEn": "NYU Tandon official complete mark"
+      },
+      "note": "Complete official preferred short logo including torch and NYU Tandon logotype. Native whitespace preserved. Minimum visible logo height30px; clearspace at least half torch-box height. At320px image width actual mark height about38px;16px added padding exceeds half visible torch height when combined intrinsic margins."
     },
     {
       "id": "pending-nyu-abu-dhabi",
@@ -2555,7 +2786,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official compact icon is opaque generic NYU torch; the campus-specific native logo is a long all-white bilingual combination. Neither meets transparent campus-specific compact-mark requirement; no generic NYU substitution. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://nyuad.nyu.edu/"
+      "note": "Official campus-specific full white bilingual logo exists, but no official contrasting-background presentation instruction verified in this review. Generic NYU torch tile is not a campus-specific substitute. Complete wordmarks are now supported; width alone is no longer a blocker. 核验：2026-11-02T08:43:32.815246+00:00。 官方核验入口：https://nyuad.nyu.edu/"
     },
     {
       "id": "pending-purdue-university",
@@ -2566,7 +2797,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "All marks require express license or permission; no display clearance obtained. 核验：2026-11-02T07:37:52.246445+00:00。"
+      "note": "Prior official brand policy requires express license/permission for marks. No relevant independent editorial exception established; full wordmark cannot resolve explicit permission requirement. 官方核验入口：https://www.purdue.edu/brand-studio/brand/logos-usage/"
     },
     {
       "id": "pending-texas-a-m-university",
@@ -2577,7 +2808,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "All registered marks require express written approval; no clearance obtained. 核验：2026-11-02T07:37:52.246480+00:00。"
+      "note": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: All registered marks require express written approval; no clearance obtained. 核验：2026-11-02T07:37:52.246480+00:00。 核验：2026-11-02。 官方核验入口：https://www.tamu.edu/statements/trademark.html"
     },
     {
       "id": "pending-shenzhen-loop-area-institute",
@@ -2588,7 +2819,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Exact institution official domain confirmed from official admissions; homepage returned HTTP 503. No verified asset acquired. 核验：2026-11-02T07:33:47.487744+00:00。 官方核验入口：https://www.slai.edu.cn/en/InternationalAdmissions"
+      "note": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Exact institution official domain confirmed from official admissions; homepage returned HTTP 503. No verified asset acquired. 核验：2026-11-02T07:33:47.487744+00:00。 官方核验入口：https://www.slai.edu.cn/en/InternationalAdmissions 核验：2026-11-02T08:43:32.815301+00:00。 官方核验入口：https://www.slai.edu.cn/en/InternationalAdmissions"
     },
     {
       "id": "pending-sogang-university",
@@ -2599,7 +2830,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official homepage access failed: HTTP Error 503: Service Unavailable No bypass attempted. 核验：2026-11-02T07:37:52.246475+00:00。 官方核验入口：https://www.sogang.ac.kr/"
+      "note": "Bounded homepage recheck503 and official symbol/UI page timed out. No verified local asset obtained; no access restriction bypass. 核验：2026-11-02。 官方核验入口：https://www.sogang.ac.kr/ko/symbol/ui"
     },
     {
       "id": "pending-university-of-utah",
@@ -2610,7 +2841,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Homepage apple icon is opaque 180px; other assets are extended wordmarks. No suitable native transparent standalone compact academic asset selected; no cropping/background removal. 核验：2026-11-02T07:37:52.246503+00:00。 官方核验入口：https://www.utah.edu/"
+      "note": "Native official template interlocking-U SVG downloaded/inspected, current university adoption checked. Compact format is now available. Brand guide route previously403 remains untouched; auxiliary licensing materials focus retail/NIL, and no clear external editorial display conditions for this mark established. Do not mistake athletic/NIL-specific permission rules for all uses; retain pending context. 核验：2026-11-02。 官方核验入口：https://attheu.utah.edu/community/six-questions-and-answers-about-the-us-new-logo/"
     },
     {
       "id": "pending-xi-an-jiaotong-university",
@@ -2621,7 +2852,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official VI site 105px seal is all-white; downloaded PNG is a sheet of six extended combinations, not standalone mark; official seal ZIP contains only a CorelDRAW .cdr. No crop, recolor or reconstruction performed. 核验：2026-11-02T07:37:52.246752+00:00。 官方核验入口：https://vi.xjtu.edu.cn/ksxz/ksxz1.htm"
+      "note": "Official alumni notice describes approval process for emblem/name uses including web/news/publicity. No applicable external factual-affiliation exception established. Existingwhite seal/CDR/combination-sheet candidates not altered or cropped. 官方核验入口：https://alumni.xjtu.edu.cn/info/1230/4197.htm"
     },
     {
       "id": "pending-university-of-science-and-technology-beijing",
@@ -2658,7 +2889,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official homepage access failed: HTTP Error 403: Forbidden No bypass attempted. 核验：2026-11-02T07:37:52.246754+00:00。 官方核验入口：https://xdof.ai/"
+      "note": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official homepage access failed: HTTP Error 403: Forbidden No bypass attempted. 核验：2026-11-02T07:37:52.246754+00:00。 官方核验入口：https://xdof.ai/ 核验：2026-11-02T08:43:32.815624+00:00。 官方核验入口：https://xdof.ai/"
     },
     {
       "id": "pending-university-of-electronic-science-and-technology-of-china",
@@ -2669,7 +2900,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Homepage /images/1.png is actually ICO data with only a 16×16 image, too small to serve as a legible seal. Targeted official searches confirmed seal description but no suitable transparent high-resolution asset. No fabricated enlargement used. 核验：2026-11-02T07:37:52.246494+00:00。 官方核验入口：https://www.uestc.edu.cn/"
+      "note": "Official anniversary notice identifies vi.uestc.edu.cn as VIS source; prior bounded followup got403 and stopped. Only16px homepage icon verified; no compliant full high-resolution identity recovered. 核验：2026-11-02T08:43:32.815400+00:00。 官方核验入口：https://70.uestc.edu.cn/info/1015/1008.htm"
     },
     {
       "id": "pending-noitom",
@@ -2680,18 +2911,33 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official homepage access failed: HTTP Error 403: Forbidden No bypass attempted. 核验：2026-11-02T07:37:52.246439+00:00。 官方核验入口：https://www.noitom.com/"
+      "note": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Official homepage access failed: HTTP Error 403: Forbidden No bypass attempted. 核验：2026-11-02T07:37:52.246439+00:00。 官方核验入口：https://www.noitom.com/ 核验：2026-11-02。"
     },
     {
       "id": "pending-shanghaitech-university",
       "officialName": "ShanghaiTech University",
       "aliases": [],
       "institutionType": "university",
-      "markType": "none",
-      "status": "needs-verification",
-      "alphaStatus": "not-applicable",
-      "logo": null,
-      "note": "Official page-linked favicon is opaque 32px; SVG assets are extended red/white university wordmarks, not standalone compact emblem. No cropping, white-logo filter or invented seal used. 核验：2026-11-02T07:37:52.246448+00:00。 官方核验入口：https://www.shanghaitech.edu.cn/"
+      "markType": "wordmark",
+      "status": "verified",
+      "alphaStatus": "transparent",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/shanghaitech-university-full.svg",
+        "sha256": "eccbe46ec3ac529aaa89e688c0bf6398a1cbe366a275e12a97031a7aecdb65a0",
+        "width": 1057,
+        "height": 283,
+        "sourceUrl": "https://www.shanghaitech.edu.cn/_upload/tpl/00/20/32/template32/images/logo_red.svg",
+        "evidenceUrl": "https://www.shanghaitech.edu.cn/",
+        "verifiedAt": "2026-11-02",
+        "credit": "ShanghaiTech University official identity asset",
+        "rights": "Copyright and trademarks retained by institution. Exact official mark for factual paper-affiliation identification only, not endorsement. No open license asserted. Preserve complete geometry, colours and clear space. Official complete red seal/name lockup, current homepage source; no standalone emblem cropping.",
+        "displayPolicy": "official-brand",
+        "background": "transparent",
+        "altZh": "ShanghaiTech University 官方完整标识",
+        "altEn": "ShanghaiTech University official complete mark"
+      },
+      "note": "Official complete red seal/name lockup, current homepage source; no standalone emblem cropping."
     },
     {
       "id": "pending-tsingtec",
@@ -2724,11 +2970,26 @@
       "officialName": "Meituan",
       "aliases": [],
       "institutionType": "company",
-      "markType": "none",
-      "status": "needs-verification",
-      "alphaStatus": "not-applicable",
-      "logo": null,
-      "note": "Official compact icon is a yellow rounded-square app tile, not standalone unbacked mark. Rejected under no-backing contract; no cutout performed. 核验：2026-11-02T07:37:52.246435+00:00。 官方核验入口：https://www.meituan.com/"
+      "markType": "organization-mark",
+      "status": "verified",
+      "alphaStatus": "transparent",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/meituan-full.png",
+        "sha256": "49b41e8adae5547675ca04cded446a613225a821c29d8eec98e2477f06b93a55",
+        "width": 1896,
+        "height": 687,
+        "sourceUrl": "https://s3plus.meituan.net/smart/22c45b30-80ba-4aa5-bfad-2bfaed7beb4e.zip",
+        "evidenceUrl": "https://www.meituan.com/media",
+        "verifiedAt": "2026-11-02",
+        "credit": "Meituan official identity asset",
+        "rights": "Copyright and trademarks retained by institution. Exact official mark for factual paper-affiliation identification only, not endorsement. No open license asserted. Preserve complete geometry, colours and clear space. Complete official horizontal colored logo from media ZIP, not standalone app icon. Media page explicitly limits images to personal or editorial use; factual paper-affiliation context is editorial. Preserve original yellow symbol and black name without separating; no endorsement or commercial promotion. Original transparent PNG unchanged.",
+        "displayPolicy": "official-brand",
+        "background": "transparent",
+        "altZh": "Meituan 官方完整标识",
+        "altEn": "Meituan official complete mark"
+      },
+      "note": "Complete official horizontal colored logo from media ZIP, not standalone app icon. Media page explicitly limits images to personal or editorial use; factual paper-affiliation context is editorial. Preserve original yellow symbol and black name without separating; no endorsement or commercial promotion. Original transparent PNG unchanged."
     },
     {
       "id": "pending-university-of-sydney",
@@ -2739,18 +3000,33 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Written approval is required; shield and wordmark must appear together. Compact shield not deployable. 核验：2026-11-02T07:37:52.246502+00:00。"
+      "note": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Written approval is required; shield and wordmark must appear together. Compact shield not deployable. 核验：2026-11-02T07:37:52.246502+00:00。 核验：2026-11-02。 官方核验入口：https://www.sydney.edu.au/about-us/affiliates-and-contractors/logo-requests.html"
     },
     {
       "id": "pending-shenzhen-university-of-advanced-technology",
       "officialName": "Shenzhen University of Advanced Technology",
       "aliases": [],
       "institutionType": "university",
-      "markType": "none",
-      "status": "needs-verification",
-      "alphaStatus": "not-applicable",
-      "logo": null,
-      "note": "Only complete extended wordmarks verified (223×55 and 274×64), not suitable compact institutional emblems. No cropping performed. 核验：2026-11-02T07:37:52.246450+00:00。 官方核验入口：https://www.suat-sz.edu.cn/"
+      "markType": "wordmark",
+      "status": "verified",
+      "alphaStatus": "opaque-light",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/shenzhen-university-of-advanced-technology-full.jpg",
+        "sha256": "8bb855f28a738ae17fe48f87f9500e79c46c47dc71f4759e77b6736b637200de",
+        "width": 1024,
+        "height": 443,
+        "sourceUrl": "https://www.suat-sz.edu.cn/__local/D/6E/FB/7D9E98BB8DEF29350950E7A61F1_6B393EEA_9AF6.jpg",
+        "evidenceUrl": "https://www.suat-sz.edu.cn/info/1007/1108.htm",
+        "verifiedAt": "2026-11-02",
+        "credit": "Shenzhen University of Advanced Technology official identity asset",
+        "rights": "Copyright and trademarks retained by institution. Exact official mark for factual paper-affiliation identification only, not endorsement. No open license asserted. Preserve complete geometry, colours and clear space. Current complete SUAT identity from official school identity page. Native white JPEG background preserved, not removed.",
+        "displayPolicy": "official-brand",
+        "background": "light",
+        "altZh": "Shenzhen University of Advanced Technology 官方完整标识",
+        "altEn": "Shenzhen University of Advanced Technology official complete mark"
+      },
+      "note": "Current complete SUAT identity from official school identity page. Native white JPEG background preserved, not removed."
     },
     {
       "id": "pending-allen-institute-for-ai",
@@ -2839,7 +3115,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Homepage icons are opaque blue-background 192px images; available SVG marks are full extended logos. Additional corporate-design route returned 404. No compact transparent asset verified. 核验：2026-11-02T07:37:52.246427+00:00。 官方核验入口：https://www.fau.eu/"
+      "note": "Complete official dark print SVG exists and was inspected, so width is recoverable. Official imprint limits copying to personal/private use and requires consent for reproduction in other electronic/print publications; no applicable logo exception established. 核验：2026-11-02。 官方核验入口：https://www.fau.eu/imprint/"
     },
     {
       "id": "pending-precision-medtech",
@@ -2850,7 +3126,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Paper names Beijing company. Targeted exact-name search chiefly returned a Bournemouth supplier at precisionmedtech.shop, which cannot be established as the same institution. Rejected identity mismatch; no logo guessed. 核验：2026-11-02T07:37:52.246443+00:00。 官方核验入口：https://arxiv.org/html/2610.41429v1"
+      "note": "Fresh exact-name search still fails to establish official logo-bearing website for paper Beijing entity; Bournemouth supplier rejected. Chinese corporate listing alone is not primary official brand evidence. 核验：2026-11-02。 官方核验入口：https://arxiv.org/html/2610.41429v1"
     },
     {
       "id": "pending-institute-of-ai-for-industries-chinese-academy-of-sciences",
@@ -2913,7 +3189,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official homepage returned HTTP 403. No access workaround attempted. 核验：2026-11-02T07:33:47.485578+00:00。 官方核验入口：https://www.qub.ac.uk/"
+      "note": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official homepage returned HTTP 403. No access workaround attempted. 核验：2026-11-02T07:33:47.485578+00:00。 官方核验入口：https://www.qub.ac.uk/ 核验：2026-11-02T08:43:32.815280+00:00。 官方核验入口：https://www.qub.ac.uk/"
     },
     {
       "id": "pending-queen-mary-university-of-london",
@@ -2924,7 +3200,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official icons are fully opaque 16px blue squares; full logo is a long white university-name/1785 combination. No separate native-transparent dark compact emblem verified; no crop/recolor. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://www.qmul.ac.uk/"
+      "note": "Current official brand page asks external users to request access to logo and guidance. Existing homepage full white/yellow logo is authentic but dark-background/clearspace use guidance was not available. Did not recolor, crop, confuse with Queen Margaret University, or contact team. 核验：2026-11-02。 官方核验入口：https://www.qmul.ac.uk/our-brand/"
     },
     {
       "id": "pending-eth-zurich",
@@ -2937,7 +3213,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Use restricted to demonstrably institutional, noncommercial connections; protected download; no third-party clearance established. 核验：2026-11-02T07:37:52.246425+00:00。"
+      "note": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Use restricted to demonstrably institutional, noncommercial connections; protected download; no third-party clearance established. 核验：2026-11-02T07:37:52.246425+00:00。 核验：2026-11-02T08:43:32.815063+00:00。"
     },
     {
       "id": "pending-soochow-university",
@@ -3026,7 +3302,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official homepage returned Access Denied. No bypass attempted; no independently verified usable official asset obtained. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.unige.ch/"
+      "note": "Official identity principles explicitly prohibit third-party use of logo on websites, reports and other materials without prior written authorization. This stronger source supersedes earlier Access Denied-only reason. 核验：2026-11-02。 官方核验入口：https://www.unige.ch/communication/en/publier/principes-generaux-logotype"
     },
     {
       "id": "pending-university-of-applied-sciences-and-arts-western-switzerland",
@@ -3063,7 +3339,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Exact lab official homepage supplies only parent HUAWEI combination logo, not distinct lab mark. Do not infer parent-brand display authorization for this lab. 核验：2026-11-02T07:37:07.483784+00:00。 官方核验入口：https://www.noahlab.com.hk/"
+      "note": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Exact lab official homepage supplies only parent HUAWEI combination logo, not distinct lab mark. Do not infer parent-brand display authorization for this lab. 核验：2026-11-02T07:37:07.483784+00:00。 官方核验入口：https://www.noahlab.com.hk/ 核验：2026-11-02。"
     },
     {
       "id": "pending-riken",
@@ -3122,11 +3398,26 @@
       "officialName": "Electronics and Telecommunications Research Institute",
       "aliases": [],
       "institutionType": "research-institute",
-      "markType": "none",
-      "status": "needs-verification",
-      "alphaStatus": "not-applicable",
-      "logo": null,
-      "note": "Followed official homepage public navigation to /intro.html. Only extended corporate/50th-anniversary SVGs and a 32px favicon were located. Favicon renders effectively blank/all-white for no-backing display; no usable native dark compact variant verified. No recolor, filter or anniversary substitute. 核验：2026-11-02T07:37:52.246426+00:00。 官方核验入口：https://www.etri.re.kr/intro.html"
+      "markType": "organization-mark",
+      "status": "verified",
+      "alphaStatus": "transparent",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/electronics-and-telecommunications-research-institute-full.svg",
+        "sha256": "01f0ca49626d6ee3e8a1bae789ea7800107bf09530020b6f155d7e023226426c",
+        "width": 177,
+        "height": 59,
+        "sourceUrl": "https://www.etri.re.kr/images/intro/logo-color.svg",
+        "evidenceUrl": "https://www.etri.re.kr/intro.html",
+        "verifiedAt": "2026-11-02",
+        "credit": "Electronics and Telecommunications Research Institute official identity asset",
+        "rights": "Copyright and trademarks retained by institution. Exact official mark for factual paper-affiliation identification only, not endorsement. No open license asserted. Preserve complete geometry, colours and clear space. Complete standard colored ETRI/Korean-name logo, not anniversary variation. Exact homepage SVG, no alterations.",
+        "displayPolicy": "official-brand",
+        "background": "transparent",
+        "altZh": "Electronics and Telecommunications Research Institute 官方完整标识",
+        "altEn": "Electronics and Telecommunications Research Institute official complete mark"
+      },
+      "note": "Complete standard colored ETRI/Korean-name logo, not anniversary variation. Exact homepage SVG, no alterations."
     },
     {
       "id": "pending-university-of-science-and-technology-korea",
@@ -3137,7 +3428,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official homepage access failed: HTTP Error 503: Service Unavailable No bypass attempted. 核验：2026-11-02T07:37:52.246496+00:00。 官方核验入口：https://www.ust.ac.kr/"
+      "note": "Fresh official identity subpage discovered and fetched publicly, but server returned503. No institution/campus substitution or access workaround; retain exact KoreaUST identity. 官方核验入口：https://www.ust.ac.kr/kor/sub01_02_05_01.do"
     },
     {
       "id": "pending-d-robotics",
@@ -3200,18 +3491,33 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official terms explicitly prohibit any logo reproduction/use without authorization. No publication permission obtained. 核验：2026-11-02T07:27:19.440687+00:00。 官方核验入口：https://www.centralesupelec.fr/mentions-legales"
+      "note": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Official terms explicitly prohibit any logo reproduction/use without authorization. No publication permission obtained. 核验：2026-11-02T07:27:19.440687+00:00。 官方核验入口：https://www.centralesupelec.fr/mentions-legales 核验：2026-11-02。 官方核验入口：https://www.centralesupelec.fr/mentions-legales"
     },
     {
       "id": "pending-universit-paris-saclay",
       "officialName": "Université Paris-Saclay",
       "aliases": [],
       "institutionType": "university",
-      "markType": "none",
-      "status": "needs-verification",
-      "alphaStatus": "not-applicable",
-      "logo": null,
-      "note": "External users must use complete cartouche wordmark, no truncation or removal of elements. Transparent compact emblem not found in official format guidance; do not crop. 核验：2026-11-02T07:27:19.445308+00:00。 官方核验入口：https://www.universite-paris-saclay.fr/en/node/78758"
+      "markType": "wordmark",
+      "status": "verified",
+      "alphaStatus": "transparent",
+      "logo": {
+        "path": "assets/institutions/universit-paris-saclay.png",
+        "sourceUrl": "https://cirrus.universite-paris-saclay.fr/s/9miwmJRbjsEdjHD/download",
+        "evidenceUrl": "https://www.universite-paris-saclay.fr/en/node/78758",
+        "width": 989,
+        "height": 447,
+        "sha256": "c51bfd2efcb274a3a1281a346624b22168463c3f438134aecae1e1f9fba96af5",
+        "credit": "Université Paris-Saclay official website identity asset",
+        "kind": "institution-logo",
+        "verifiedAt": "2026-11-02",
+        "background": "transparent",
+        "rights": "Official page explicitly provides cartouche format for external users. Preserve plum cartouche and all elements; no distortion, truncation, recoloring or added text.",
+        "displayPolicy": "official-brand",
+        "altEn": "Université Paris-Saclay complete official logo",
+        "altZh": "Université Paris-Saclay 官方完整标识"
+      },
+      "note": "Complete official mark visually inspected. Native appearance and all elements retained; no cropping, recoloring, redrawing or background removal. PNG lossless re-encoding only if original JPEG. Full responsive wordmark accepted under revised contract."
     },
     {
       "id": "pending-university-of-california-davis",
@@ -3222,7 +3528,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Homepage compact icon is opaque 32×32; full SVG is an extended wordmark. Official seal is restricted formal asset; no transparent compact academic identifier verified. 核验：2026-11-02T07:37:52.246492+00:00。 官方核验入口：https://www.ucdavis.edu/"
+      "note": "Full wordmark now accepted; official extended-logo guide min150px and clearspace considered. Current homepage SVG includes white University of California text unsuitable on white. Official Wordmarks2020ZIP returned403; no bypass or recolor. Need genuine positive full version. 官方核验入口：https://communicationsguide.ucdavis.edu/sites/g/files/dgvnsk6246/files/files/page/UC-Davis-Wordmarks-2020.zip"
     },
     {
       "id": "pending-peng-cheng-laboratory",
@@ -3233,7 +3539,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official homepage access failed: HTTP Error 508: Loop Detected No bypass attempted. 核验：2026-11-02T07:37:52.246442+00:00。 官方核验入口：https://www.pcl.ac.cn/"
+      "note": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official homepage access failed: HTTP Error 508: Loop Detected No bypass attempted. 核验：2026-11-02T07:37:52.246442+00:00。 官方核验入口：https://www.pcl.ac.cn/ 核验：2026-11-02T08:43:32.815259+00:00。 官方核验入口：https://www.pcl.ac.cn/"
     },
     {
       "id": "pending-nanjing-university-of-aeronautics-and-astronautics",
@@ -3244,7 +3550,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official homepage access failed: HTTP Error 502: Bad Gateway No bypass attempted. 核验：2026-11-02T07:37:52.246436+00:00。 官方核验入口：https://www.nuaa.edu.cn/"
+      "note": "Official emblem explanation page located through search, but linked native JPEG could not be retrieved in bounded download attempt; homepage recheck502. No usable local file verified. Native white JPEG would be acceptable if exact bytes become accessible, no cutout required. 核验：2026-11-02。 官方核验入口：https://www.nuaa.edu.cn/2017/0116/c589a18507/page.htm"
     },
     {
       "id": "pending-university-of-kaiserslautern-landau",
@@ -3281,7 +3587,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official homepage request returned HTTP 500. No verified standalone transparent emblem obtained; no alternate-campus or third-party image substituted. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://www.gju.edu.jo/"
+      "note": "Fresh public homepage request again returnedHTTP500. Official brochures found but marks embedded in publication pages, not separate logo assets; no page crop or third-party recreation used. 官方核验入口：https://www.gju.edu.jo/"
     },
     {
       "id": "pending-ku-leuven",
@@ -3292,7 +3598,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official style directory identifies logo.svg; exact asset download returned HTTP 503, as did primary pages. No usable logo file verified. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://stijl.kuleuven.be/releases/3.2/img/svg/"
+      "note": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official style directory identifies logo.svg; exact asset download returned HTTP 503, as did primary pages. No usable logo file verified. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://stijl.kuleuven.be/releases/3.2/img/svg/ 核验：2026-11-02T08:43:32.815162+00:00。 官方核验入口：https://stijl.kuleuven.be/releases/3.2/img/svg/"
     },
     {
       "id": "pending-flanders-make",
@@ -3325,11 +3631,26 @@
       "officialName": "Tel Aviv University",
       "aliases": [],
       "institutionType": "university",
-      "markType": "none",
-      "status": "needs-verification",
-      "alphaStatus": "not-applicable",
-      "logo": null,
-      "note": "Official native favicon is 16px and visually shows a generic star rather than enough detail for reliable university emblem; complete homepage logos are combinations. No acceptable compact emblem acquired. 核验：2026-11-02T07:35:41.424129+00:00。 官方核验入口：https://english.tau.ac.il/"
+      "markType": "wordmark",
+      "status": "verified",
+      "alphaStatus": "transparent",
+      "logo": {
+        "path": "assets/institutions/tel-aviv-university.png",
+        "sourceUrl": "https://finance.tau.ac.il/sites/finance.tau.ac.il/files/media_server/graphic-design/TAU%20NEW%20LOGO/Eng_BW.png",
+        "evidenceUrl": "https://finance.tau.ac.il/graphics/gellery-TAU_logo_download_2493_2811",
+        "width": 1478,
+        "height": 788,
+        "sha256": "5ce94e2e10d6057c66876361291eed731c6f3140454d67316cdf9316f20d1505",
+        "credit": "Tel Aviv University official website identity asset",
+        "kind": "institution-logo",
+        "verifiedAt": "2026-11-02",
+        "background": "transparent",
+        "rights": "Official source; copyright/trademarks remain with owner. No blanket public-domain license or endorsement asserted. Intended solely for accurate editorial affiliation identification; preserve complete mark.",
+        "displayPolicy": "official-brand",
+        "altEn": "Tel Aviv University complete official logo",
+        "altZh": "Tel Aviv University 官方完整标识"
+      },
+      "note": "Complete official mark visually inspected. Native appearance and all elements retained; no cropping, recoloring, redrawing or background removal. PNG lossless re-encoding only if original JPEG. Full responsive wordmark accepted under revised contract."
     },
     {
       "id": "pending-institute-of-software-chinese-academy-of-sciences",
@@ -3418,7 +3739,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official style guide explicitly states logo packages are behind login. Public favicon is low-resolution colored-square variant. No login bypass, crop, or recolor. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.uantwerpen.be/nl/projecten/huisstijlgids/logo/downloads/"
+      "note": "Official identity guide puts complete logo download packages behind login. No credentials used; old low-res colored favicon alone does not prove designated full institutional design or applicable presentation. 官方核验入口：https://www.uantwerpen.be/nl/projecten/huisstijlgids/logo/downloads/"
     },
     {
       "id": "pending-norwegian-institute-of-bioeconomy-research",
@@ -3451,11 +3772,26 @@
       "officialName": "Technische Hochschule Ingolstadt",
       "aliases": [],
       "institutionType": "university",
-      "markType": "none",
-      "status": "needs-verification",
-      "alphaStatus": "not-applicable",
-      "logo": null,
-      "note": "Official compact favicon includes an opaque white rounded-square backing; other discovered logo is a long negative wordmark. No native-transparent backing-free compact variant established. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://www.thi.de/"
+      "markType": "wordmark",
+      "status": "verified",
+      "alphaStatus": "transparent",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/round2-pending-technische-hochschule-ingolstadt.svg",
+        "sha256": "0f2e3e38998a76f484ec95613550413f686fbf0838af037a8fbffff7c65b1b9c",
+        "width": 999,
+        "height": 145,
+        "sourceUrl": "https://www.thi.de/fileadmin/daten/allgemein/Logos/thi_logo_wb_RGB_01.svg",
+        "evidenceUrl": "https://www.thi.de/hochschule/ueber-uns/hochschulorganisation/stabsstelle-kommunikation-und-medien/",
+        "verifiedAt": "2026-11-02",
+        "credit": "Technische Hochschule Ingolstadt official identity",
+        "rights": "Official institutional artwork; copyright/trademark remain with institution. Public official identity source verified for unaltered factual paper-affiliation identification, not endorsement or merchandising. No open licence or blanket permission asserted. Complete native dark wordmark provided by official press/communications page for screen applications. Preserve all letters and symbol. Display width240px/height35px with12px clearspace is conservative legibility choice, not quoted official minimum.",
+        "displayPolicy": "official-brand",
+        "background": "transparent",
+        "altZh": "Technische Hochschule Ingolstadt 官方完整标识",
+        "altEn": "Official complete Technische Hochschule Ingolstadt identity"
+      },
+      "note": "Complete native dark wordmark provided by official press/communications page for screen applications. Preserve all letters and symbol. Display width240px/height35px with12px clearspace is conservative legibility choice, not quoted official minimum."
     },
     {
       "id": "pending-university-of-wuppertal",
@@ -3466,7 +3802,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Discovered official icons use opaque green backgrounds and full header/footer logos are white. No dark, native-transparent standalone lion/emblem verified; no white-mark recoloring or cropping. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://www.uni-wuppertal.de/"
+      "note": "Prior official native green app/favicon tiles not established as prescribed complete institutional identity. Full white wordmarks found but no explicit official contrasting-background instructions verified; unchanged pixels retained, not deployed. 核验：2026-11-02T08:43:32.815598+00:00。 官方核验入口：https://www.uni-wuppertal.de/"
     },
     {
       "id": "pending-aptiv",
@@ -3555,7 +3891,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Paper explicitly names joint ZJU/Unitree laboratory; targeted search did not locate a standalone official laboratory mark. No invented combined-parent mark. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://arxiv.org/html/2610.41877v1"
+      "note": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Paper explicitly names joint ZJU/Unitree laboratory; targeted search did not locate a standalone official laboratory mark. No invented combined-parent mark. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://arxiv.org/html/2610.41877v1 核验：2026-11-02T08:43:32.815136+00:00。 官方核验入口：https://arxiv.org/html/2610.41877v1"
     },
     {
       "id": "pending-bit-oasis",
@@ -3566,7 +3902,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Paper names Bit Oasis, but targeted research did not establish an official logo-bearing site for that affiliation. Cryptocurrency exchange namesake not substituted. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://arxiv.org/html/2610.41877v1"
+      "note": "Fresh exact-name research did not establish official robotics affiliation site/mark; cryptocurrency exchange namesake rejected. 核验：2026-11-02。 官方核验入口：https://arxiv.org/html/2610.41877v1"
     },
     {
       "id": "pending-hithink-research",
@@ -3577,7 +3913,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "HiThink corporate site icon found, but relationship between this exact HiThink Research paper affiliation and corporate mark was not established from official material. No guessed corporate affiliation/logo used. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://hithink.sg/"
+      "note": "Fresh research found paper/author references but not primary evidence connecting exact Research affiliation to parent corporate mark. Do not infer logo ownership from similar name. 核验：2026-11-02。 官方核验入口：https://hithink.sg/"
     },
     {
       "id": "pending-microsoft-research",
@@ -3588,7 +3924,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "MS Research header uses Microsoft parent mark; Microsoft policy lists corporate logos as requiring authorization. No license established and no distinct MSR logo substituted. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
+      "note": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. MS Research header uses Microsoft parent mark; Microsoft policy lists corporate logos as requiring authorization. No license established and no distinct MSR logo substituted. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks 核验：2026-11-02T08:43:32.815191+00:00。 官方核验入口：https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
     },
     {
       "id": "pending-east-china-normal-university",
@@ -3621,11 +3957,26 @@
       "officialName": "Hong Kong Centre for Logistics Robotics",
       "aliases": [],
       "institutionType": "research-institute",
-      "markType": "none",
-      "status": "needs-verification",
-      "alphaStatus": "not-applicable",
-      "logo": null,
-      "note": "Official linked full transparent SVG inspected; lettering is white, inappropriate on current light background. Other homepage variants did not establish compatible transparent dark asset. No recolor. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.hkclr.hk/en/about-us/overview"
+      "markType": "organization-mark",
+      "status": "verified",
+      "alphaStatus": "opaque-light",
+      "logo": {
+        "path": "assets/institutions/hong-kong-centre-for-logistics-robotics.png",
+        "sourceUrl": "https://www.hkclr.hk/hkclr-logo-large.png",
+        "evidenceUrl": "https://www.hkclr.hk/en",
+        "width": 1356,
+        "height": 200,
+        "sha256": "3cee6e59e457bbf513dad93f9755b4a2f7244cd47bda3f8fba5898bf42224404",
+        "credit": "Hong Kong Centre for Logistics Robotics official website identity asset",
+        "kind": "institution-logo",
+        "verifiedAt": "2026-11-02",
+        "background": "light",
+        "rights": "Official source; copyright/trademarks remain with owner. No blanket public-domain license or endorsement asserted. Intended solely for accurate editorial affiliation identification; preserve complete mark.",
+        "displayPolicy": "official-brand",
+        "altEn": "Hong Kong Centre for Logistics Robotics complete official logo",
+        "altZh": "Hong Kong Centre for Logistics Robotics 官方完整标识"
+      },
+      "note": "Complete official mark visually inspected. Native appearance and all elements retained; no cropping, recoloring, redrawing or background removal. PNG lossless re-encoding only if original JPEG. Full responsive wordmark accepted under revised contract."
     },
     {
       "id": "pending-cnrs",
@@ -3662,7 +4013,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Exact NCT/UCC organization mark downloaded from official site, but image has fully opaque white background. Do not remove background or substitute partner marks. 核验：2026-11-02T07:33:47.520510+00:00。 官方核验入口：https://www.nct-dresden.de/de/das-nctucc-dresden"
+      "note": "Exact complete official mark exists as native opaque-white262x100PNG; native background is now acceptable. Official imprint requires express permission for images/graphics, alongside informational noncommercial provisions. Those conditions do not establish logo reuse permission; retain text until scope clarified. 核验：2026-11-02。 官方核验入口：https://www.nct-dresden.de/de/impressum"
     },
     {
       "id": "pending-university-hospital-carl-gustav-carus-dresden",
@@ -3699,7 +4050,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "2025 mark update confirmed. External logo-use requests must use official approval form; no authorization obtained. 核验：2026-11-02T07:29:59.505139+00:00。 官方核验入口：https://tu-dresden.de/tu-dresden/organisation/zentrale-universitaetsverwaltung/dezernat-7/sachgebiet-7-1-corporate-design/cd/cd"
+      "note": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. 2025 mark update confirmed. External logo-use requests must use official approval form; no authorization obtained. 核验：2026-11-02T07:29:59.505139+00:00。 官方核验入口：https://tu-dresden.de/tu-dresden/organisation/zentrale-universitaetsverwaltung/dezernat-7/sachgebiet-7-1-corporate-design/cd/cd 核验：2026-11-02T08:43:32.815376+00:00。 官方核验入口：https://tu-dresden.de/tu-dresden/organisation/zentrale-universitaetsverwaltung/dezernat-7/sachgebiet-7-1-corporate-design/cd/cd"
     },
     {
       "id": "pending-german-cancer-research-center",
@@ -3762,7 +4113,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official home returned Security Check challenge, not logo HTML. Did not bypass. 核验：2026-11-02T07:33:47.472841+00:00。 官方核验入口：https://ceti.one/"
+      "note": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official home returned Security Check challenge, not logo HTML. Did not bypass. 核验：2026-11-02T07:33:47.472841+00:00。 官方核验入口：https://ceti.one/ 核验：2026-11-02T08:43:32.814990+00:00。 官方核验入口：https://ceti.one/"
     },
     {
       "id": "pending-helmholtz-zentrum-dresden-rossendorf",
@@ -3799,7 +4150,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official terms require prior permission to copy/use contents except where applicable law expressly permits; no permission established. 核验：2026-11-02T07:29:59.506616+00:00。 官方核验入口：https://global.fujitsu/en-global/terms"
+      "note": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Official terms require prior permission to copy/use contents except where applicable law expressly permits; no permission established. 核验：2026-11-02T07:29:59.506616+00:00。 官方核验入口：https://global.fujitsu/en-global/terms 核验：2026-11-02。 官方核验入口：https://global.fujitsu/en-global/terms"
     },
     {
       "id": "pending-florida-international-university",
@@ -3810,7 +4161,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official trademark policy requires prior approval for proposed trademark use; no approval obtained. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://policies.fiu.edu/download/c9bb41336224cf90d12301ca512ab70b"
+      "note": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Official trademark policy requires prior approval for proposed trademark use; no approval obtained. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://policies.fiu.edu/download/c9bb41336224cf90d12301ca512ab70b 核验：2026-11-02。 官方核验入口：https://policies.fiu.edu/download/c9bb41336224cf90d12301ca512ab70b"
     },
     {
       "id": "pending-university-of-georgia",
@@ -3821,7 +4172,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official guide prohibits using arch-shield icon alone. No compatible independent emblem established. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://alumni.uga.edu/wp-content/uploads/Brandguidlines-ALAresource-2020-v1.pdf"
+      "note": "Official approval form covers internal/nonprofit and retail uses, and requires artwork approval. Full logo relaxation does not supply third-party approval. 核验：2026-11-02T08:43:32.815546+00:00。 官方核验入口：https://brand.uga.edu/wp-content/uploads/uga-logo-approval-form.pdf"
     },
     {
       "id": "pending-embodyx-inc",
@@ -3832,18 +4183,33 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official favicon is 512px but fully opaque white-background artwork. Homepage is a JS application; source bundle inspection did not yield a separate transparent official logo. No background removal/redrawing performed. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://www.embodyx.io/"
+      "note": "Native512px fully opaque white-background icon exists and white backing is now acceptable. Homepage/app source does not establish this ring-of-dots favicon as an approved full institutional mark rather than application icon. No documented standalone identity/context verified, so not promoted solely because background rules relaxed. 核验：2026-11-02。 官方核验入口：https://www.embodyx.io/"
     },
     {
       "id": "pending-it-university-of-copenhagen",
       "officialName": "IT University of Copenhagen",
       "aliases": [],
       "institutionType": "university",
-      "markType": "none",
-      "status": "needs-verification",
-      "alphaStatus": "not-applicable",
-      "logo": null,
-      "note": "Official current logo SVG is a long rectangular university-name wordmark. No current separate compact university emblem verified; historical third-party logo not substituted. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://www.itu.dk/"
+      "markType": "wordmark",
+      "status": "verified",
+      "alphaStatus": "opaque-dark",
+      "logo": {
+        "path": "assets/institutions/it-university-of-copenhagen.png",
+        "sourceUrl": "https://www.itu.dk/-/media/DK/Om-ITU/Presse/ITU-Logoer/ITU_logo_UK-jpg.jpg",
+        "evidenceUrl": "https://www.itu.dk/om-itu/presse/logoer",
+        "width": 2000,
+        "height": 220,
+        "sha256": "f47e626dcfde6b9f306073e8198f8fe70f2eae5210ed7fec412ce095be438268",
+        "credit": "IT University of Copenhagen official website identity asset",
+        "kind": "institution-logo",
+        "verifiedAt": "2026-11-02",
+        "background": "dark",
+        "rights": "Official press-logo policy permits use in work, education or research at ITU; external-collaboration permission requirement has explicit exception when identifying ITU. This use identifies paper affiliation only; no sponsorship claim.",
+        "displayPolicy": "official-brand",
+        "altEn": "IT University of Copenhagen complete official logo",
+        "altZh": "IT University of Copenhagen 官方完整标识"
+      },
+      "note": "Complete official mark visually inspected. Native appearance and all elements retained; no cropping, recoloring, redrawing or background removal. PNG lossless re-encoding only if original JPEG. Full responsive wordmark accepted under revised contract."
     },
     {
       "id": "pending-beijing-university-of-posts-and-telecommunications",
@@ -3854,7 +4220,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official homepage returned HTTP 412; no verified standalone official transparent emblem acquired. 核验：2026-11-02T07:33:47.475074+00:00。 官方核验入口：https://www.bupt.edu.cn/"
+      "note": "Official homepage HTTP412 remains an access restriction; not retried with altered identity or bypass. No previously verified complete native mark in local collection. 官方核验入口：https://www.bupt.edu.cn/"
     },
     {
       "id": "pending-duquesne-university",
@@ -3865,7 +4231,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Each product using branded logo assets must be individually reviewed and approved. No permission asserted; not publishable. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.duq.edu/about/policies-and-initiatives/the-administrative-policies/tap-35.php"
+      "note": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Each product using branded logo assets must be individually reviewed and approved. No permission asserted; not publishable. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.duq.edu/about/policies-and-initiatives/the-administrative-policies/tap-35.php 核验：2026-11-02T08:43:32.815055+00:00。 官方核验入口：https://www.duq.edu/about/policies-and-initiatives/the-administrative-policies/tap-35.php"
     },
     {
       "id": "pending-universidad-polit-cnica-de-madrid",
@@ -3902,7 +4268,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Paper identifies InfRec, Cardinal AI Lab. Matching research project repository found, but no independently verifiable organization logo asset. Unrelated Infrec finance/infrared-camera namesakes excluded. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://arxiv.org/html/2610.42053v1"
+      "note": "Existing paper/project evidence identifies InfRec/Cardinal AI Lab, but no distinct official organization mark tied to this research unit. Retain exact affiliation text; do not substitute unrelated finance/camera marks. 官方核验入口：https://arxiv.org/html/2610.42053v1"
     },
     {
       "id": "pending-shenzhen-institutes-of-advanced-technology-chinese-academy-of-sciences",
@@ -3913,7 +4279,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official website request returned HTTP 503. No institute-specific native-transparent official mark obtained; CAS parent emblem not substituted. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://www.siat.ac.cn/"
+      "note": "Bounded official homepage recheck503; targeted official-source search did not establish another downloadable exact-institute asset. Parent CAS emblem not substituted. 核验：2026-11-02。 官方核验入口：https://www.siat.ac.cn/"
     },
     {
       "id": "pending-chinese-academy-of-sciences",
@@ -3924,7 +4290,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official identity rules prohibit brand use by enterprises outside academy-controlled entities, and regulate emblem colors. Applicability/authorization for this independent website not established; no publishing clearance inferred. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://www.hf.cas.cn/lmjx/glbm/zhbgs/xxxc/200911/t20091118_2660657.html"
+      "note": "Official academy identity rules constrain outside enterprise brand use. No applicable independent editorial-site exception established; not a finding that all factual references are forbidden. Native full mark would not resolve this scope question. 官方核验入口：https://www.cas.cn/gzzd/kxcb/202107/P020210730538633854643.pdf"
     },
     {
       "id": "pending-university-of-freiburg",
@@ -3935,7 +4301,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official compact ufr favicon found but opaque blue background; no native transparent compact dark original acquired. 核验：2026-11-02T07:33:47.532915+00:00。 官方核验入口：https://uni-freiburg.de/en/"
+      "note": "Prior targeted followup confirmed third parties directed to logo-use permission request, short ufr specifically restricted to social profiles, downloads intranet. Full-wordmark support does not establish current-site permission; no repeat gated route. 官方核验入口：https://cd.uni-freiburg.de/logo-policy/"
     },
     {
       "id": "pending-karlsruhe-institute-of-technology",
@@ -3946,7 +4312,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official guideline prohibits isolated word/symbol use and requires approval for use outside KIT official business; native favicon is not a licence exception. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://kit-cd.km.kit.edu/logo.php"
+      "note": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Official guideline prohibits isolated word/symbol use and requires approval for use outside KIT official business; native favicon is not a licence exception. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://kit-cd.km.kit.edu/logo.php 核验：2026-11-02。 官方核验入口：https://kit-cd.km.kit.edu/logo.php"
     },
     {
       "id": "pending-new-york-university",
@@ -3957,7 +4323,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Official main website request returned HTTP 405. No verified current transparent compact emblem obtained. NYU Abu Dhabi artwork was not substituted for NYU. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://www.nyu.edu/"
+      "note": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official main website request returned HTTP 405. No verified current transparent compact emblem obtained. NYU Abu Dhabi artwork was not substituted for NYU. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://www.nyu.edu/ 核验：2026-11-02T08:43:32.815222+00:00。 官方核验入口：https://www.nyu.edu/"
     },
     {
       "id": "pending-meta",
@@ -3968,7 +4334,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "June 2026 official guidelines explicitly require approval for all Meta logo usage; no approval obtained. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://www.meta.com/brand/resources/meta/company-brand/"
+      "note": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: June 2026 official guidelines explicitly require approval for all Meta logo usage; no approval obtained. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://www.meta.com/brand/resources/meta/company-brand/ 核验：2026-11-02。 官方核验入口：https://www.meta.com/brand/resources/meta/company-brand/"
     },
     {
       "id": "pending-ami-labs",
@@ -3995,6 +4361,17 @@
         "path": "assets/institutions/ami-labs.png"
       },
       "note": "Official standalone geometric favicon. Correct organization site amilabs.xyz verified; amilabs.ai rejected."
+    },
+    {
+      "id": "pending-us-army-research-laboratory",
+      "officialName": "U.S. Army Research Laboratory",
+      "aliases": [],
+      "institutionType": "research-institute",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "Exact DEVCOM Army Research Laboratory complete logo located in official DVIDS item dated2026-03-09,1775x511. DVIDS public-domain copyright label does not waive Army-specific trademark conditions. ATLP expressly includes research-laboratory marks, requires contact for non-product use, and FAQ requires Army review even for claimed incidental fair use. General DVIDS noncommercial/newsworthy VI permission does not clearly waive this specific requirement. No license/contact undertaken; no Army generic emblem substituted. 官方核验入口：https://www.army.mil/ATLP"
     }
   ]
 }

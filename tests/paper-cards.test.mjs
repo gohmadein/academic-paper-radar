@@ -51,6 +51,6 @@ test('ASU使用完整透明官方标志，至少48px宽；未核实标志只显�
  assert.equal(inst.markType,'compact-symbol');assert.equal(inst.logo.background,'transparent');assert.equal(inst.logo.width,303);assert.equal(inst.logo.height,234);
  assert.equal(inst.logo.sourceUrl,'https://www.asu.edu/profiles/contrib/webspark/modules/asu_brand/dist/assets/img/arizona-state-university-logo-vertical.png');
  await readAsset(inst.logo,new URL('../',import.meta.url).pathname);
- const html=institutionRow(p);assert.match(html,/style="width:48px;height:38px"/);assert.ok(html.includes('asu-vertical.png?v='));assert.ok(html.includes('width="303" height="234"'));
+ const html=institutionRow(p);assert.ok(!html.includes('style='));const {institutionDisplayCSS}=await import('../lib/institution-display.js');const registry=JSON.parse(await readFile(new URL('../data/institutions.json',import.meta.url)));assert.match(institutionDisplayCSS(registry),/institution-mark-eed5fb0279cfad95\{width:48px;height:38px/);assert.ok(html.includes('asu-vertical.png?v='));assert.ok(html.includes('width="303" height="234"'));
  for(const paper of day.papers){const row=institutionRow(paper);assert.ok(!row.includes('文字标识'));for(const i of paper.visuals.institutions.filter(i=>!i.logo))assert.ok(row.includes(i.name));}
 });

@@ -1,3 +1,4 @@
+import {validateInstitutionDisplay} from '../lib/institution-display.js';
 import {validateArxivArchive} from './arxiv-ingest.mjs';
 import {profileSources} from '../lib/source-directory.js';
 import {validateCalendarProfiles} from '../lib/research-calendar.js';
@@ -41,7 +42,7 @@ export async function validateAll(base = root,{assetBase=base}={}) {
     }
     if(!demo){
       try{const geography=JSON.parse(await readFile(join(path,'paper-geography.json'),'utf8'));errors.push(...validateGeography(geography).map(e=>'data/paper-geography.json: '+e));}catch(error){if(error.code!=='ENOENT')errors.push(`data/paper-geography.json: ${error.message}`);}
-      try{const institutions=JSON.parse(await readFile(join(path,'institutions.json'),'utf8'));errors.push(...validateInstitutions(institutions,realRecords.map(x=>x.paper)));const libraryPapers=[{visuals:{institutions:institutions.institutions}}];errors.push(...await validateAssetFiles(libraryPapers,assetBase));for(const asset of uniqueAssets(libraryPapers))assetPaths.add(asset.path);}catch(error){errors.push(`data/institutions.json: ${error.message}`);}
+      try{const institutions=JSON.parse(await readFile(join(path,'institutions.json'),'utf8'));errors.push(...validateInstitutions(institutions,realRecords.map(x=>x.paper)),...validateInstitutionDisplay(institutions));const libraryPapers=[{visuals:{institutions:institutions.institutions}}];errors.push(...await validateAssetFiles(libraryPapers,assetBase));for(const asset of uniqueAssets(libraryPapers))assetPaths.add(asset.path);}catch(error){errors.push(`data/institutions.json: ${error.message}`);}
       errors.push(...await validateAssetFiles(realRecords.map(x=>x.paper),assetBase));
       try{for(const asset of uniqueAssets(realRecords.map(x=>x.paper)))assetPaths.add(asset.path);}catch{}
       try{

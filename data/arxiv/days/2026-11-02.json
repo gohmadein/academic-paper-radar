@@ -4090,105 +4090,159 @@
           "institutionId": "pending-university-of-toronto",
           "name": "University of Toronto",
           "institutionType": "university",
-          "authorNames": [],
+          "authorNames": [
+            "Jiaru Bai",
+            "Yuchi Zhao",
+            "Han Hao",
+            "Miroslav Bogdanovic",
+            "Yang Cao",
+            "Varinia Bernales",
+            "Alán Aspuru-Guzik"
+          ],
           "evidence": [
             {
               "url": "https://arxiv.org/html/2610.23826v2",
-              "claim": "Paper author affiliation block explicitly lists University of Toronto.（定位：HTML author affiliation block）",
+              "claim": "Paper author affiliation block explicitly lists University of Toronto.",
               "checkedAt": "2026-11-02T07:23:00.228362+00:00"
+            },
+            {
+              "url": "https://self-building-labs.github.io/self-building-labs-arxiv.pdf",
+              "claim": "Matching project PDF first-page author superscripts map authors to numbered institutional units.",
+              "checkedAt": "2026-11-02T08:48:59.057637+00:00"
+            },
+            {
+              "url": "https://self-building-labs.github.io/self-building-labs-arxiv.pdf",
+              "claim": "Paper unit8 maps to Alán Aspuru-Guzik; full address anchors institution identity.",
+              "checkedAt": "2026-11-02T08:48:59.057637+00:00"
+            },
+            {
+              "url": "https://sgs.calendar.utoronto.ca/degree/Medical-Science",
+              "claim": "Official university calendar exactly matches paper unit name, room, street and postal code; resolves parent institution, not current employer inference.",
+              "checkedAt": "2026-11-02T08:48:59.057637+00:00"
             }
           ],
-          "note": "Paper-specific institution verified; author-to-affiliation mapping not transcribed, so authorNames intentionally empty."
+          "note": "Author mapping transcribed from matching official project PDF page1 superscripts."
         },
         {
           "institutionId": "pending-vector-institute-for-artificial-intelligence",
           "name": "Vector Institute for Artificial Intelligence",
           "institutionType": "research-institute",
-          "authorNames": [],
+          "authorNames": [
+            "Jiaru Bai",
+            "Yuchi Zhao",
+            "Miroslav Bogdanovic",
+            "Alán Aspuru-Guzik"
+          ],
           "evidence": [
             {
               "url": "https://arxiv.org/html/2610.23826v2",
-              "claim": "Paper author affiliation block explicitly lists Vector Institute for Artificial Intelligence.（定位：HTML author affiliation block）",
+              "claim": "Paper author affiliation block explicitly lists Vector Institute for Artificial Intelligence.",
               "checkedAt": "2026-11-02T07:23:00.228362+00:00"
+            },
+            {
+              "url": "https://self-building-labs.github.io/self-building-labs-arxiv.pdf",
+              "claim": "Matching project PDF first-page author superscripts map authors to numbered institutional units.",
+              "checkedAt": "2026-11-02T08:48:59.057637+00:00"
             }
           ],
-          "note": "Paper-specific institution verified; author-to-affiliation mapping not transcribed, so authorNames intentionally empty."
+          "note": "Author mapping transcribed from matching official project PDF page1 superscripts."
         },
         {
           "institutionId": "pending-acceleration-consortium",
           "name": "Acceleration Consortium",
           "institutionType": "research-institute",
-          "authorNames": [],
+          "authorNames": [
+            "Han Hao",
+            "Miroslav Bogdanovic",
+            "Yang Cao",
+            "Varinia Bernales",
+            "Alán Aspuru-Guzik"
+          ],
           "evidence": [
             {
               "url": "https://arxiv.org/html/2610.23826v2",
-              "claim": "Paper author affiliation block explicitly lists Acceleration Consortium.（定位：HTML author affiliation block）",
+              "claim": "Paper author affiliation block explicitly lists Acceleration Consortium.",
               "checkedAt": "2026-11-02T07:23:00.228362+00:00"
+            },
+            {
+              "url": "https://self-building-labs.github.io/self-building-labs-arxiv.pdf",
+              "claim": "Matching project PDF first-page author superscripts map authors to numbered institutional units.",
+              "checkedAt": "2026-11-02T08:48:59.057637+00:00"
             }
           ],
-          "note": "Paper-specific institution verified; author-to-affiliation mapping not transcribed, so authorNames intentionally empty."
+          "note": "Author mapping transcribed from matching official project PDF page1 superscripts."
         },
         {
           "institutionId": "pending-university-of-amsterdam",
           "name": "University of Amsterdam",
           "institutionType": "university",
-          "authorNames": [],
+          "authorNames": [
+            "Elia Savino",
+            "Derk H.W. ten Klooster",
+            "Simone Pilon",
+            "Timothy Noël"
+          ],
           "evidence": [
             {
               "url": "https://arxiv.org/html/2610.23826v2",
-              "claim": "Paper author affiliation block explicitly lists Universiteit van Amsterdam (UvA).（定位：HTML author affiliation block）",
+              "claim": "Paper author affiliation block explicitly lists Universiteit van Amsterdam (UvA).",
               "checkedAt": "2026-11-02T07:23:00.228362+00:00"
-            }
-          ],
-          "note": "Paper-specific institution verified; author-to-affiliation mapping not transcribed, so authorNames intentionally empty."
-        },
-        {
-          "institutionId": "pending-institute-of-medical-science",
-          "name": "Institute of Medical Science",
-          "institutionType": "research-institute",
-          "authorNames": [],
-          "evidence": [
+            },
             {
-              "url": "https://arxiv.org/html/2610.23826v2",
-              "claim": "Paper author affiliation block explicitly lists Institute of Medical Science.（定位：HTML author affiliation block）",
-              "checkedAt": "2026-11-02T07:23:00.228362+00:00"
+              "url": "https://self-building-labs.github.io/self-building-labs-arxiv.pdf",
+              "claim": "Matching project PDF first-page author superscripts map authors to numbered institutional units.",
+              "checkedAt": "2026-11-02T08:48:59.057637+00:00"
             }
           ],
-          "note": "Paper-specific institution verified; author-to-affiliation mapping not transcribed, so authorNames intentionally empty. Paper lists this unit without naming its parent; retained verbatim, do not infer university parent or standalone logo."
+          "note": "Author mapping transcribed from matching official project PDF page1 superscripts."
         },
         {
           "institutionId": "pending-canadian-institute-for-advanced-research",
           "name": "Canadian Institute for Advanced Research",
           "institutionType": "research-institute",
-          "authorNames": [],
+          "authorNames": [
+            "Alán Aspuru-Guzik"
+          ],
           "evidence": [
             {
               "url": "https://arxiv.org/html/2610.23826v2",
-              "claim": "Paper author affiliation block explicitly lists Canadian Institute for Advanced Research.（定位：HTML author affiliation block）",
+              "claim": "Paper author affiliation block explicitly lists Canadian Institute for Advanced Research.",
               "checkedAt": "2026-11-02T07:23:00.228362+00:00"
+            },
+            {
+              "url": "https://self-building-labs.github.io/self-building-labs-arxiv.pdf",
+              "claim": "Matching project PDF first-page author superscripts map authors to numbered institutional units.",
+              "checkedAt": "2026-11-02T08:48:59.057637+00:00"
             }
           ],
-          "note": "Paper-specific institution verified; author-to-affiliation mapping not transcribed, so authorNames intentionally empty."
+          "note": "Author mapping transcribed from matching official project PDF page1 superscripts."
         },
         {
           "institutionId": "pending-nvidia",
           "name": "NVIDIA",
           "institutionType": "company",
-          "authorNames": [],
+          "authorNames": [
+            "Alán Aspuru-Guzik"
+          ],
           "evidence": [
             {
               "url": "https://arxiv.org/html/2610.23826v2",
-              "claim": "Paper author affiliation block explicitly lists NVIDIA.（定位：HTML author affiliation block）",
+              "claim": "Paper author affiliation block explicitly lists NVIDIA.",
               "checkedAt": "2026-11-02T07:23:00.228362+00:00"
+            },
+            {
+              "url": "https://self-building-labs.github.io/self-building-labs-arxiv.pdf",
+              "claim": "Matching project PDF first-page author superscripts map authors to numbered institutional units.",
+              "checkedAt": "2026-11-02T08:48:59.057637+00:00"
             }
           ],
-          "note": "Paper-specific institution verified; author-to-affiliation mapping not transcribed, so authorNames intentionally empty."
+          "note": "Author mapping transcribed from matching official project PDF page1 superscripts."
         }
       ],
       "affiliationVerification": {
-        "status": "partial",
-        "checkedAt": "2026-11-02T07:23:00.228362+00:00",
-        "note": "All institutional units visible in official paper affiliation block transcribed; no current-job or API-author inference. University departments normalized to named parent university; named standalone labs preserved. Institute of Medical Science has no explicit parent in paper block; affiliation text verified but parent/logo entity unresolved."
+        "status": "complete",
+        "checkedAt": "2026-11-02T08:48:59.057637+00:00",
+        "note": "All eleven authors mapped from official matching project PDF. Institute of Medical Science parent resolved by exact institutional name/address match to official Toronto2026-27 calendar and normalized under University of Toronto; no separate mark inferred."
       }
     },
     {
@@ -5499,105 +5553,128 @@
           "institutionId": "pending-the-chinese-university-of-hong-kong-shenzhen",
           "name": "The Chinese University of Hong Kong, Shenzhen",
           "institutionType": "university",
-          "authorNames": [],
+          "authorNames": [
+            "Enqiao Lu",
+            "Yuxiang Xie",
+            "Yipeng Gu"
+          ],
           "evidence": [
             {
               "url": "https://arxiv.org/pdf/2610.40016v2",
-              "claim": "Affiliation text: \"CUHKSZ\"（定位：1）",
+              "claim": "Affiliation text: \"CUHKSZ\"",
               "checkedAt": "2026-11-02T07:22:46.977207+00:00"
             }
           ],
-          "note": "Institution verified in the paper affiliation block; author-level mapping not transcribed (empty list is not an assertion of no authors)."
+          "note": "Author mapping verified from v2 PDF page1 superscripts; Yuxiang Gao remains unassigned."
         },
         {
           "institutionId": "pending-agency-for-science-technology-and-research",
           "name": "Agency for Science, Technology and Research",
           "institutionType": "research-institute",
-          "authorNames": [],
+          "authorNames": [
+            "Enqiao Lu",
+            "Xingrui Yu",
+            "Ivor Tsang"
+          ],
           "evidence": [
             {
               "url": "https://arxiv.org/pdf/2610.40016v2",
-              "claim": "Affiliation text: \"A*STAR\"（定位：1）",
+              "claim": "Affiliation text: \"A*STAR\"",
               "checkedAt": "2026-11-02T07:22:46.977207+00:00"
             }
           ],
-          "note": "Institution verified in the paper affiliation block; author-level mapping not transcribed (empty list is not an assertion of no authors)."
+          "note": "Author mapping verified from v2 PDF page1 superscripts; Yuxiang Gao remains unassigned."
         },
         {
           "institutionId": "tsinghua",
           "name": "Tsinghua University",
           "institutionType": "university",
-          "authorNames": [],
+          "authorNames": [
+            "Enqiao Lu",
+            "Zhirui Fang",
+            "Xinrun Xu"
+          ],
           "evidence": [
             {
               "url": "https://arxiv.org/pdf/2610.40016v2",
-              "claim": "Affiliation text: \"THU\"（定位：1）",
+              "claim": "Affiliation text: \"THU\"",
               "checkedAt": "2026-11-02T07:22:46.977207+00:00"
             }
           ],
-          "note": "Institution verified in the paper affiliation block; author-level mapping not transcribed (empty list is not an assertion of no authors)."
+          "note": "Author mapping verified from v2 PDF page1 superscripts; Yuxiang Gao remains unassigned."
         },
         {
           "institutionId": "pending-california-institute-of-technology",
           "name": "California Institute of Technology",
           "institutionType": "university",
-          "authorNames": [],
+          "authorNames": [
+            "Yuyang Wang"
+          ],
           "evidence": [
             {
               "url": "https://arxiv.org/pdf/2610.40016v2",
-              "claim": "Affiliation text: \"Caltech\"（定位：1）",
+              "claim": "Affiliation text: \"Caltech\"",
               "checkedAt": "2026-11-02T07:22:46.977207+00:00"
             }
           ],
-          "note": "Institution verified in the paper affiliation block; author-level mapping not transcribed (empty list is not an assertion of no authors)."
+          "note": "Author mapping verified from v2 PDF page1 superscripts; Yuxiang Gao remains unassigned."
         },
         {
           "institutionId": "pending-national-university-of-singapore",
           "name": "National University of Singapore",
           "institutionType": "university",
-          "authorNames": [],
+          "authorNames": [
+            "Zhenglin Wan",
+            "Pengfei Zhou",
+            "Yang You"
+          ],
           "evidence": [
             {
               "url": "https://arxiv.org/pdf/2610.40016v2",
-              "claim": "Affiliation text: \"NUS\"（定位：1）",
+              "claim": "Affiliation text: \"NUS\"",
               "checkedAt": "2026-11-02T07:22:46.977207+00:00"
             }
           ],
-          "note": "Institution verified in the paper affiliation block; author-level mapping not transcribed (empty list is not an assertion of no authors)."
+          "note": "Author mapping verified from v2 PDF page1 superscripts; Yuxiang Gao remains unassigned."
         },
         {
           "institutionId": "pending-the-hong-kong-university-of-science-and-technology",
           "name": "The Hong Kong University of Science and Technology",
           "institutionType": "university",
-          "authorNames": [],
+          "authorNames": [
+            "Wangbo Zhao"
+          ],
           "evidence": [
             {
               "url": "https://arxiv.org/pdf/2610.40016v2",
-              "claim": "Affiliation text: \"HKUST\"（定位：1）",
+              "claim": "Affiliation text: \"HKUST\"",
               "checkedAt": "2026-11-02T07:22:46.977207+00:00"
             }
           ],
-          "note": "Institution verified in the paper affiliation block; author-level mapping not transcribed (empty list is not an assertion of no authors)."
+          "note": "Author mapping verified from v2 PDF page1 superscripts; Yuxiang Gao remains unassigned."
         },
         {
           "institutionId": "pending-nanyang-technological-university",
           "name": "Nanyang Technological University",
           "institutionType": "university",
-          "authorNames": [],
+          "authorNames": [
+            "Zhirui Fang",
+            "Ivor Tsang"
+          ],
           "evidence": [
             {
               "url": "https://arxiv.org/pdf/2610.40016v2",
-              "claim": "Affiliation text: \"NTU\"（定位：1）",
+              "claim": "Affiliation text: \"NTU\"",
               "checkedAt": "2026-11-02T07:22:46.977207+00:00"
             }
           ],
-          "note": "Institution verified in the paper affiliation block; author-level mapping not transcribed (empty list is not an assertion of no authors)."
+          "note": "Author mapping verified from v2 PDF page1 superscripts; Yuxiang Gao remains unassigned."
         }
       ],
       "affiliationVerification": {
         "status": "partial",
-        "checkedAt": "2026-11-02T07:22:46.977207+00:00",
-        "note": "All listed institution affiliation units read from official versioned PDF. Funding acknowledgements excluded. Subordinate departments normalized to institution; empty authorNames means not transcribed. Listed abbreviations mapped to standard institutional expansions, but Yuxiang Gao has no affiliation superscript; cannot claim full author coverage."
+        "checkedAt": "2026-11-02T08:48:59.057637+00:00",
+        "note": "Retain partial: v2 explicitly omits Yuxiang Gao affiliation superscript. v1 had COCO Matrix but v2 removes that unit and changes other mappings. No current-version primary project source found to resolve; previous-version affiliation not substituted."
       }
     },
     {
@@ -7221,11 +7298,62 @@
           }
         ]
       },
-      "affiliations": [],
+      "affiliations": [
+        {
+          "institutionId": "pending-university-of-california-berkeley",
+          "name": "University of California, Berkeley",
+          "institutionType": "university",
+          "authorNames": [
+            "Ryan Park",
+            "Li-huan Shen",
+            "Negar Mehr"
+          ],
+          "evidence": [
+            {
+              "url": "https://arxiv.org/html/2610.40999v1",
+              "claim": "Official HTML attaches this explicit affiliation to the listed authors.",
+              "checkedAt": "2026-11-02T08:48:59.057637+00:00"
+            }
+          ],
+          "note": "Author-specific HTML affiliation statements verified; PDF footnote omission does not override explicit HTML."
+        },
+        {
+          "institutionId": "pending-us-army-research-laboratory",
+          "name": "U.S. Army Research Laboratory",
+          "institutionType": "research-institute",
+          "authorNames": [
+            "Jesse Milzman"
+          ],
+          "evidence": [
+            {
+              "url": "https://arxiv.org/html/2610.40999v1",
+              "claim": "Official HTML attaches this explicit affiliation to the listed authors.",
+              "checkedAt": "2026-11-02T08:48:59.057637+00:00"
+            }
+          ],
+          "note": "Author-specific HTML affiliation statements verified; PDF footnote omission does not override explicit HTML."
+        },
+        {
+          "institutionId": "pending-the-university-of-texas-at-austin",
+          "name": "The University of Texas at Austin",
+          "institutionType": "university",
+          "authorNames": [
+            "David Fridovich-Keil"
+          ],
+          "evidence": [
+            {
+              "url": "https://arxiv.org/html/2610.40999v1",
+              "claim": "Official HTML attaches this explicit affiliation to the listed authors.",
+              "checkedAt": "2026-11-02T08:48:59.057637+00:00"
+            }
+          ],
+          "note": "Author-specific HTML affiliation statements verified; PDF footnote omission does not override explicit HTML."
+        }
+      ],
       "affiliationVerification": {
-        "status": "unavailable",
-        "checkedAt": "2026-11-02T07:23:00.228362+00:00",
-        "note": "Official arXiv PDF downloaded successfully and full text inspected. Author superscripts 1,2,3 are printed, but corresponding affiliation definitions are absent from extracted paper text. Matching-title web search did not reveal an official affiliation-bearing alternative. No affiliations guessed. Rendered first page also visually confirms there is no affiliation footnote block (batch4/belief-firstpage.png)."
+        "status": "complete",
+        "checkedAt": "2026-11-02T08:48:59.057637+00:00",
+        "note": "All five authors explicitly mapped by official versioned HTML. Previous PDF-only absence resolved. Funding support excluded from affiliation mapping."
       }
     },
     {
@@ -12733,8 +12861,8 @@
       "affiliations": [],
       "affiliationVerification": {
         "status": "unavailable",
-        "checkedAt": "2026-11-02T07:21:56.784761+00:00",
-        "note": "Official arXiv HTML author header and PDF first page name Seungwon Choi and a contact email, but no institution. Email domain is not treated as affiliation evidence. No inferred university/logo. Linked official project repository README also provides no paper-specific institutional affiliation."
+        "checkedAt": "2026-11-02T08:48:59.057637+00:00",
+        "note": "Still unavailable after official PDF/HTML and paper-linked repository review plus exact-title search. Author and email are not institutional affiliation; no current-employer inference."
       }
     },
     {
@@ -14098,8 +14226,8 @@
       "affiliations": [],
       "affiliationVerification": {
         "status": "unavailable",
-        "checkedAt": "2026-11-02T07:23:30.645793+00:00",
-        "note": "Official HTML and PDF first page list author Jiaming Wang but no institutional affiliation. PDF first page visually inspected. No affiliation inferred from name or current employment."
+        "checkedAt": "2026-11-02T08:48:59.057637+00:00",
+        "note": "Still unavailable: official HTML/PDF only names Jiaming Wang, no institutional block. Exact-title/author project searches yielded no matching official affiliation-bearing source; unrelated SketchMate projects excluded."
       }
     },
     {
