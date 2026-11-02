@@ -308,3 +308,28 @@ test('Calendar save failure retains text/draft and warns on unload; public refre
  h.run('fetch=async()=>{throw Error("offline")};calendarLastAttempt=0');const before=h.run('calendarData');await h.run('refreshCalendarData(true)');
  assert.equal(h.run('calendarData'),before);assert.match(h.run('calendarRefreshError'),/保留/);
 });
+
+test('Profile calendar navigation isolates tasks and resumes only its own editor draft',async()=>{
+ const h=await harness();await h.click({category:'xun'});
+ await h.click({calendarTaskAdd:'2026-11-05'});h.element('calendar-task-text').value='Xun draft';
+ await h.click({category:'li'});assert.equal(h.element('calendar-task-dialog').open,false);assert.equal(h.run('calendarTasks.list().length'),0);
+ await h.click({calendarTaskAdd:'2026-11-05'});assert.equal(h.element('calendar-task-text').value,'');h.element('calendar-task-text').value='Li only';await h.fire('calendar-task-save:click');
+ assert.equal(h.run('calendarTasks.list()[0].text'),'Li only');assert.ok(h.stored.has(calendarTaskModule.calendarTaskKey('li')));assert.ok(!h.stored.has(calendarTaskModule.CALENDAR_TASKS_KEY));
+ await h.click({category:'lv'});assert.equal(h.run('calendarTasks.list().length'),0);assert.equal(h.run('calendarEditorDraft'),null);
+ await h.click({category:'xun'});await h.click({calendarTaskAdd:'2026-11-06'});assert.equal(h.element('calendar-task-text').value,'Xun draft');assert.equal(h.element('calendar-task-date').value,'2026-11-05');
+ await h.fire('calendar-task-save:click');assert.equal(h.run('calendarTasks.list()[0].text'),'Xun draft');
+ await h.click({category:'li'});assert.equal(h.run('calendarTasks.list()[0].text'),'Li only');assert.equal(h.run('calendarEditorDraft'),null);
+});
+
+test('A closed profile draft is not silently rebased on another tab write',async()=>{
+ const h=await harness();await h.click({category:'xun'});await h.click({calendarTaskAdd:'2026-11-06'});h.element('calendar-task-text').value='Keep draft';await h.click({category:'li'});
+ h.stored.set(calendarTaskModule.CALENDAR_TASKS_KEY,calendarTaskModule.makeCalendarTasksExport([{id:'task-other',date:'2026-11-06',text:'Other tab',done:false,updatedAt:'2026-11-02T00:00:00.000Z'}]));
+ h.windowEvents.storage({key:calendarTaskModule.CALENDAR_TASKS_KEY});await h.click({category:'xun'});await h.click({calendarTaskAdd:'2026-11-06'});await h.fire('calendar-task-save:click');
+ assert.match(h.element('calendar-task-status').textContent,/标签页/);assert.equal(h.element('calendar-task-text').value,'Keep draft');assert.equal(JSON.parse(h.stored.get(calendarTaskModule.CALENDAR_TASKS_KEY)).tasks[0].text,'Other tab');
+});
+
+test('Calendar backup text and status stay within their owning profile',async()=>{
+ const h=await harness();await h.click({category:'li'});h.element('calendar-task-backup-text').value='Li backup buffer';h.element('calendar-task-transfer-status').textContent='Li result';
+ await h.click({category:'lv'});assert.equal(h.element('calendar-task-backup-text').value,'');assert.equal(h.element('calendar-task-transfer-status').textContent,'');
+ h.element('calendar-task-backup-text').value='Lv buffer';await h.click({category:'li'});assert.equal(h.element('calendar-task-backup-text').value,'Li backup buffer');assert.equal(h.element('calendar-task-transfer-status').textContent,'Li result');
+});

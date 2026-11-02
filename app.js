@@ -1,5 +1,5 @@
-import {createCalendarTaskStore,CALENDAR_TASKS_KEY,MAX_CALENDAR_TASKS_BYTES} from './lib/calendar-tasks.js';
-import {calendarDate,shiftCalendarMonth,calendarEventDay,researchCalendarHTML,validateCalendar} from './lib/research-calendar.js';
+import {createCalendarTaskStore,calendarTaskKey,CALENDAR_TASKS_KEY,MAX_CALENDAR_TASKS_BYTES} from './lib/calendar-tasks.js';
+import {calendarDate,shiftCalendarMonth,calendarEventDay,researchCalendarHTML,validateCalendar,calendarForProfile} from './lib/research-calendar.js';
 import {liBackgroundClass} from './lib/li-background.js';
 import {sideArtLayout} from './lib/side-art.js';
 import {createNotesStore,MAX_NOTE_LENGTH,MAX_NOTES_BYTES} from './lib/paper-notes.js';
@@ -18,7 +18,9 @@ import {makeBookmarkExport,parseBookmarkImport,mergeBookmarkImport,MAX_BOOKMARK_
 
 const $ = id => document.getElementById(id);
 const BOOKMARK_KEY = 'paper-signal-bookmarks-v1';
-const calendarTasks=createCalendarTaskStore({getItem:key=>localStorage.getItem(key),setItem:(key,value)=>localStorage.setItem(key,value)});
+const calendarTaskStores=Object.fromEntries(['xun','li','lv'].map(profile=>[profile,createCalendarTaskStore({getItem:key=>localStorage.getItem(key),setItem:(key,value)=>localStorage.setItem(key,value)},{profile})]));
+let calendarTasks=calendarTaskStores.xun,calendarProfile='xun';
+const calendarDrafts={},calendarTransfers={};
 const notes = createNotesStore({getItem:key=>localStorage.getItem(key),setItem:(key,value)=>localStorage.setItem(key,value)});
 let noteId='', noteTrigger=null, noteTimer, resumeDetail=false;
 const READ_KEY = 'paper-signal-read-v1';
@@ -147,10 +149,12 @@ function updateViewChrome() {
   $('profile-motto').setAttribute('data-profile',motto?state.category:'');
   $('profile-motto').setAttribute('lang',state.category==='li'?'en':'zh-CN');
   $('research-map').hidden = !isFeed || state.demo;
-  $('research-calendar').hidden = !isFeed || state.demo || state.category !== 'xun';
+  if(PROFILES[state.category]&&calendarProfile!==state.category){calendarDrafts[calendarProfile]=calendarEditorDraft;calendarTransfers[calendarProfile]={text:$('calendar-task-backup-text').value,status:$('calendar-task-transfer-status').textContent};calendarProfile=state.category;calendarTasks=calendarTaskStores[calendarProfile];calendarEditorDraft=calendarDrafts[calendarProfile]||null;$('calendar-task-backup-text').value=calendarTransfers[calendarProfile]?.text||'';$('calendar-task-transfer-status').textContent=calendarTransfers[calendarProfile]?.status||'';$('calendar-task-import').value='';}
+  $('research-calendar').hidden = !isFeed || state.demo || !PROFILES[state.category];
+  $('reading-intro').setAttribute('data-calendar-profile',PROFILES[state.category]?state.category:'');
   renderCalendar();
   $('reading-intro').classList.toggle('with-map',isFeed&&!state.demo);
-  $('reading-intro').classList.toggle('with-calendar',isFeed&&!state.demo&&state.category==='xun');
+  $('reading-intro').classList.toggle('with-calendar',isFeed&&!state.demo&&Boolean(PROFILES[state.category]));
   $('hero').hidden = !isFeed;
   $('demo-banner').hidden = !isFeed || !state.demo;
   $('page-demo-note').hidden = isFeed || !state.demo || state.view==='sources';
@@ -206,7 +210,7 @@ function renderCalendar() {
   if($('research-calendar').hidden||document.hidden)return;
   if(calendarFetchedDay!==calendarDate())refreshCalendarData();
   const taskError=calendarTasks.error||((calendarTasks.dirty)?'尚未保存：草稿仅在当前页面，请重试或导出。':'');
-  const markup=researchCalendarHTML(calendarData,{month:calendarMonth,selectedDate:calendarSelected,tab:calendarTab,scope:calendarScope,tasks:calendarTasks.list(),taskError,refreshError:calendarRefreshError});
+  const markup=researchCalendarHTML(calendarForProfile(calendarData,calendarProfile),{month:calendarMonth,selectedDate:calendarSelected,tab:calendarTab,scope:calendarScope,tasks:calendarTasks.list(),taskError,refreshError:calendarRefreshError});
   if(markup!==lastCalendarMarkup){$('research-calendar').innerHTML=markup;lastCalendarMarkup=markup;}
   calendarTimer=setTimeout(renderCalendar,60000);
   calendarTimer?.unref?.(); // Node test harness only; browsers use numeric timer IDs.
@@ -226,7 +230,7 @@ function renderMap() {
   if(mapProfile!==state.category){mapRegion='';mapProfile=state.category;}
   const model=researchMapModel(data.real.papers,data.geography,{profile:state.category,mode:mapMode});
   if(!model.groups.some(g=>g.id===mapRegion))mapRegion='';
-  const markup=researchMapHTML(model,mapRegion,{compact:state.category==='xun'});
+  const markup=researchMapHTML(model,mapRegion,{compact:Boolean(PROFILES[state.category])});
   if(markup===lastMapMarkup)return;
   lastMapMarkup=markup;
   const expanded=$('map-regions')?.open;
@@ -328,7 +332,7 @@ document.addEventListener('click', event => {
   if(b.dataset.calendarToday){calendarMonth='';calendarSelected=calendarDate();renderCalendar();document.querySelector('[data-calendar-today]')?.focus({preventScroll:true});return;}
   if(b.dataset.calendarDate){calendarSelected=b.dataset.calendarDate;renderCalendar();document.querySelector(`[data-calendar-date="${calendarSelected}"]`)?.focus({preventScroll:true});return;}
   if(b.dataset.calendarUpcoming){calendarSelected='';renderCalendar();document.querySelector('[data-calendar-today]')?.focus({preventScroll:true});return;}
-  if(b.dataset.calendarEvent){const event=calendarData?.events.find(ev=>ev.id===b.dataset.calendarEvent);if(event){calendarSelected=calendarEventDay(event);calendarMonth=calendarSelected.slice(0,7);renderCalendar();document.querySelector(`[data-calendar-date="${calendarSelected}"]`)?.focus({preventScroll:true});}return;}
+  if(b.dataset.calendarEvent){const event=calendarForProfile(calendarData,calendarProfile)?.events.find(ev=>ev.id===b.dataset.calendarEvent);if(event){calendarSelected=calendarEventDay(event);calendarMonth=calendarSelected.slice(0,7);renderCalendar();document.querySelector(`[data-calendar-date="${calendarSelected}"]`)?.focus({preventScroll:true});}return;}
   if(b.dataset.note){openNotes(b.dataset.note,b);return;}
   if(b.dataset.mapMode){mapMode=b.dataset.mapMode==='today'?'today':'all';mapRegion='';renderMap();document.querySelector(`[data-map-mode="${mapMode}"]`)?.focus({preventScroll:true});return;}
   if(b.dataset.mapRegion){mapRegion=b.dataset.mapRegion;renderMap();document.querySelector(`[data-map-region="${CSS.escape(mapRegion)}"]`)?.focus({preventScroll:true});return;}
@@ -433,7 +437,7 @@ window.addEventListener('hashchange',syncRoute);
 // Refresh date-sensitive counts after returning to an overnight-open tab.
 window.addEventListener('focus',()=>{if(data&&state.view==='feed'&&!state.demo)renderMap();});
 document.addEventListener('visibilitychange',()=>{if(!document.hidden&&data&&state.view==='feed'&&!state.demo)renderMap();});
-window.addEventListener('storage',event=>{if(event.key===CALENDAR_TASKS_KEY){if(!$('calendar-task-dialog').open&&!calendarTasks.dirty)calendarTasks.reload();else $('calendar-task-status').textContent='其他标签页已更新；请先导出本页草稿再重新加载。';renderCalendar();}if(event.key===BOOKMARK_KEY){bookmarks=parseBookmarks(event.newValue);if(data)render();}});
+window.addEventListener('storage',event=>{const changedProfile=['xun','li','lv'].find(profile=>event.key===calendarTaskKey(profile));if(changedProfile){const store=calendarTaskStores[changedProfile];if((changedProfile!==calendarProfile||!$('calendar-task-dialog').open)&&!store.dirty&&!calendarDrafts[changedProfile]&&!(changedProfile===calendarProfile&&calendarEditorDraft))store.reload();else $('calendar-task-status').textContent='其他标签页已更新；请先导出本页草稿再重新加载。';renderCalendar();}if(event.key===BOOKMARK_KEY){bookmarks=parseBookmarks(event.newValue);if(data)render();}});
 document.addEventListener('keydown',event=>{if(event.key==='/' && !event.ctrlKey && !event.metaKey && !event.altKey && !$('detail-dialog').open && !$('share-dialog').open && !$('notes-dialog').open && !$('calendar-task-dialog').open && !['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName) && !$('filter-panel').hidden){event.preventDefault();$('search').focus();}});
 function updateNoteButtons() {
   document.querySelectorAll('[data-note]').forEach(button=>{
@@ -525,7 +529,7 @@ $('notes-import').addEventListener('change',async event=>{
 });
 $('notes-import-pasted').addEventListener('click',()=>{try{importNotes($('notes-import-json').value);}catch(error){$('notes-transfer-status').textContent=`导入失败，原笔记未改变：${error.message}`;}});
 window.addEventListener('pagehide',flushNotes);
-window.addEventListener('beforeunload',event=>{const notesFailed=!flushNotes()&&notes.dirty;if(notesFailed||calendarTasks.dirty||calendarEditorDraft||($('calendar-task-dialog').open&&calendarEditorChanged())){event.preventDefault();event.returnValue='';}});
+window.addEventListener('beforeunload',event=>{const notesFailed=!flushNotes()&&notes.dirty;if(notesFailed||Object.values(calendarTaskStores).some(store=>store.dirty)||Object.values(calendarDrafts).some(Boolean)||calendarEditorDraft||($('calendar-task-dialog').open&&calendarEditorChanged())){event.preventDefault();event.returnValue='';}});
 document.addEventListener('visibilitychange',()=>{if(document.hidden)flushNotes();});
 
 function calendarEditorChanged(){return $('calendar-task-text').value!==calendarEditorOriginal||$('calendar-task-date').value!==calendarEditorOriginalDate;}
@@ -533,6 +537,7 @@ function openCalendarTask(id,date,trigger){
  const task=calendarTasks.get(id);
  const draft=calendarEditorDraft;
  calendarEditingId=draft?.id||task?.id||'';calendarTaskTrigger=trigger;
+ $('calendar-task-title').textContent=PROFILES[calendarProfile].label+' · 私人事项';
  $('calendar-task-date').value=draft?.date||task?.date||date||calendarDate();
  $('calendar-task-text').value=draft?.text??task?.text??'';
  calendarEditorOriginal=draft?.original??task?.text??'';calendarEditorOriginalDate=draft?.originalDate??task?.date??$('calendar-task-date').value;
@@ -549,18 +554,18 @@ function stageCalendarTask(){
  calendarEditingId=task.id;return task;
 }
 $('calendar-task-save').addEventListener('click',()=>{
- try{const task=stageCalendarTask();if(!calendarTasks.flush())throw new Error(calendarTasks.error||'尚未保存');calendarEditorOriginal=task.text;calendarEditorOriginalDate=task.date;calendarEditorDraft=null;calendarSelected=task.date;calendarMonth=task.date.slice(0,7);calendarTab='private';$('calendar-task-status').textContent='已保存到本机';closeCalendarTask();renderCalendar();}
+ try{const task=stageCalendarTask();if(!calendarTasks.flush())throw new Error(calendarTasks.error||'尚未保存');calendarEditorOriginal=task.text;calendarEditorOriginalDate=task.date;calendarEditorDraft=null;calendarDrafts[calendarProfile]=null;calendarSelected=task.date;calendarMonth=task.date.slice(0,7);calendarTab='private';$('calendar-task-status').textContent='已保存到本机';closeCalendarTask();renderCalendar();}
  catch(error){$('calendar-task-status').textContent='尚未保存：'+error.message;renderCalendar();}
 });
 $('calendar-task-close').addEventListener('click',closeCalendarTask);
 $('calendar-task-cancel').addEventListener('click',closeCalendarTask);
-$('calendar-task-discard').addEventListener('click',()=>{if(calendarTasks.dirty){$('calendar-task-status').textContent='已有尚未写入的事项，请先导出或重试保存；不会丢弃这些记录。';return;}if(!window.confirm('放弃当前未保存的编辑草稿？'))return;calendarEditorDraft=null;$('calendar-task-text').value=calendarEditorOriginal;$('calendar-task-date').value=calendarEditorOriginalDate;closeCalendarTask();});
+$('calendar-task-discard').addEventListener('click',()=>{if(calendarTasks.dirty){$('calendar-task-status').textContent='已有尚未写入的事项，请先导出或重试保存；不会丢弃这些记录。';return;}if(!window.confirm('放弃当前未保存的编辑草稿？'))return;calendarEditorDraft=null;calendarDrafts[calendarProfile]=null;$('calendar-task-text').value=calendarEditorOriginal;$('calendar-task-date').value=calendarEditorOriginalDate;closeCalendarTask();});
 $('calendar-task-dialog').addEventListener('cancel',event=>{event.preventDefault();closeCalendarTask();});
 $('calendar-task-export').addEventListener('click',()=>{
  try{
   if($('calendar-task-text').value.trim()&&calendarEditorChanged())stageCalendarTask();
   const text=calendarTasks.export();$('calendar-task-backup-text').value=text;
-  const url=URL.createObjectURL(new Blob([text],{type:'application/json;charset=utf-8'}));const anchor=document.createElement('a');anchor.href=url;anchor.download='paper-signal-calendar-tasks.json';document.body.append(anchor);anchor.click();anchor.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);
+  const url=URL.createObjectURL(new Blob([text],{type:'application/json;charset=utf-8'}));const anchor=document.createElement('a');anchor.href=url;anchor.download=`paper-signal-calendar-tasks-${calendarProfile}.json`;document.body.append(anchor);anchor.click();anchor.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);
   $('calendar-task-transfer-status').textContent='备份已生成；下载未出现时请复制上面的JSON（包含私人事项，勿公开上传）。';
  }catch(error){$('calendar-task-transfer-status').textContent='导出失败：'+error.message;}
 });

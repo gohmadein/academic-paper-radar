@@ -1,4 +1,5 @@
-import {validateCalendar} from '../lib/research-calendar.js';
+import {profileSources} from '../lib/source-directory.js';
+import {validateCalendarProfiles} from '../lib/research-calendar.js';
 import {readFile, readdir} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 import {resolve, join} from 'node:path';
@@ -61,7 +62,9 @@ export async function validateAll(base = root,{assetBase=base}={}) {
   try{
     const calendar=JSON.parse(await readFile(join(base,'data/conference-calendar.json'),'utf8'));
     const registry=JSON.parse(await readFile(join(assetBase,'config/source-registry.json'),'utf8').catch(()=>readFile(join(root,'config/source-registry.json'),'utf8')));
-    errors.push(...validateCalendar(calendar,registry.sources.filter(source=>source.type==='conference').map(source=>source.name)).map(error=>'data/conference-calendar.json: '+error));
+    const profiles=JSON.parse(await readFile(join(assetBase,'config/profile-watchlists.json'),'utf8').catch(()=>readFile(join(root,'config/profile-watchlists.json'),'utf8')));
+    const expected=Object.fromEntries(['xun','li','lv'].map(profile=>[profile,profileSources(profile,{profiles,registry}).filter(source=>source.type==='conference').map(source=>source.name)]));
+    errors.push(...validateCalendarProfiles(calendar,expected).map(error=>'data/conference-calendar.json: '+error));
   }catch(error){errors.push('data/conference-calendar.json: '+error.message);}
   return {errors,count,assets:[...assetPaths].sort()};
 }

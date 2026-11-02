@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {calendarDate,shiftCalendarMonth,calendarMonthDays,calendarEventDay,calendarEventOn,calendarEventStatus,upcomingCalendarEvents,validateCalendar,researchCalendarHTML} from '../lib/research-calendar.js';
+import {calendarDate,shiftCalendarMonth,calendarMonthDays,calendarEventDay,calendarEventOn,calendarEventStatus,upcomingCalendarEvents,validateCalendar,researchCalendarHTML,calendarForProfile,validateCalendarProfiles} from '../lib/research-calendar.js';
 const read=p=>readFile(new URL('../'+p,import.meta.url),'utf8');
 // Freeze behavioral examples; daily official updates must not rewrite time-bound test cases.
 const data=JSON.parse(await read('tests/fixtures/conference-calendar-2026-11-01.json'));
@@ -81,8 +81,10 @@ test('Invalid official timezone fails validation without breaking the paper page
 test('Current daily calendar covers the configured conferences with valid provenance',async()=>{
  const registry=JSON.parse(await read('config/source-registry.json'));
  const watched=registry.sources.filter(source=>source.type==='conference').map(source=>source.name);
- assert.deepEqual(validateCalendar(current,watched),[]);
- assert.equal(current.coverage.length,watched.length);
+ const profiles=JSON.parse(await read('config/profile-watchlists.json'));
+ const {profileSources}=await import('../lib/source-directory.js');
+ const expected=Object.fromEntries(['xun','li','lv'].map(profile=>[profile,profileSources(profile,{registry,profiles}).filter(source=>source.type==='conference').map(source=>source.name)]));
+ assert.deepEqual(validateCalendarProfiles(current,expected),[]);
  for(const event of current.events)assert.ok(event.verifiedAt<=current.checkedAt);
 });
 
@@ -107,4 +109,13 @@ test('Calendar chrome omits audit prose but retains critical dates, sources, pri
  assert.match(errors,/未保存测试/);assert.match(errors,/刷新失败测试/);assert.match(errors,/不上传或发送提醒/);
  const deadlineHTML=researchCalendarHTML(data,{selectedDate:'2026-11-11'});
  assert.match(deadlineHTML,/论文登记/);assert.match(deadlineHTML,/AoE/);assert.match(deadlineHTML,/北京 2026-11-11 19:59/);assert.match(deadlineHTML,/官方日期/);
+});
+
+test('Conference views isolate profiles and reuse overlap without duplicating events',()=>{
+ const input={...data,profileSources:{xun:['CoRL','CVPR'],li:['SIGMOD'],lv:['CoRL']}};
+ assert.ok(calendarForProfile(input,'xun').events.every(event=>['CoRL','CVPR'].includes(event.sourceId)));
+ assert.equal(calendarForProfile(input,'li').events.length,0);
+ assert.ok(calendarForProfile(input,'lv').events.every(event=>event.sourceId==='CoRL'));
+ assert.equal(calendarForProfile(data,'li').events.length,0);
+ assert.equal(calendarForProfile(null,'lv'),null);
 });

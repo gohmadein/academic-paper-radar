@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {CALENDAR_TASKS_KEY,MAX_TASK_LENGTH,MAX_CALENDAR_TASKS,MAX_CALENDAR_TASKS_BYTES,createCalendarTaskStore,makeCalendarTasksExport,parseCalendarTasksImport,mergeCalendarTasks} from '../lib/calendar-tasks.js';
+import {calendarTaskKey,CALENDAR_TASKS_KEY,MAX_TASK_LENGTH,MAX_CALENDAR_TASKS,MAX_CALENDAR_TASKS_BYTES,createCalendarTaskStore,makeCalendarTasksExport,parseCalendarTasksImport,mergeCalendarTasks} from '../lib/calendar-tasks.js';
 const stamp='2026-11-01T08:00:00.000Z';
 const task=(id='task-one',date='2026-11-01',text='完成实验')=>({id,date,text,done:false,updatedAt:stamp});
 function memory(raw=null){let value=raw,failRead=false,failWrite=false,writes=0;const storage={getItem(key){assert.equal(key,CALENDAR_TASKS_KEY);if(failRead)throw Error('blocked');return value;},setItem(key,next){assert.equal(key,CALENDAR_TASKS_KEY);if(failWrite)throw Error('QuotaExceededError');value=next;writes++;},now:()=>stamp};return {storage,get raw(){return value;},get writes(){return writes;},external(next){value=next;},failRead(on){failRead=on;},failWrite(on){failWrite=on;}};}
@@ -76,4 +76,49 @@ test('Validation errors are non-mutating and empty reads do not save spuriously'
  const first=store.set({date:'2026-11-01',text:'keep'});store.flush();const saved=m.raw;
  assert.throws(()=>store.set({id:first.id,date:'invalid',text:'changed'}));assert.equal(store.get(first.id).text,'keep');assert.equal(store.dirty,false);assert.equal(m.raw,saved);
  store.set({id:first.id,date:'2026-11-01',text:'keep'});assert.equal(store.dirty,false);
+});
+
+
+test('Profile stores isolate keys and preserve unchanged legacy Xun records and backups',()=>{
+ const legacy=makeCalendarTasksExport([task()]),values=new Map([[CALENDAR_TASKS_KEY,legacy]]);
+ const storage={getItem:key=>values.get(key)??null,setItem:(key,value)=>values.set(key,value),now:()=>stamp};
+ const xun=createCalendarTaskStore(storage),li=createCalendarTaskStore(storage,{profile:'li'}),lv=createCalendarTaskStore(storage,{profile:'lv'});
+ assert.equal(calendarTaskKey(),CALENDAR_TASKS_KEY);assert.equal(calendarTaskKey('xun'),CALENDAR_TASKS_KEY);
+ assert.equal(new Set(['xun','li','lv'].map(calendarTaskKey)).size,3);
+ assert.equal(xun.export(),legacy);assert.equal(xun.get('task-one').text,'完成实验');assert.equal(xun.flush(),true);assert.equal(values.get(CALENDAR_TASKS_KEY),legacy);
+ assert.deepEqual(li.list(),[]);assert.deepEqual(lv.list(),[]);
+ li.set({id:'task-one',date:'2026-11-01',text:'李的事项'});lv.set({id:'task-one',date:'2026-11-01',text:'驴的事项'});
+ assert.equal(li.flush(),true);assert.equal(lv.flush(),true);assert.equal(xun.flush(),true);
+ for(const [profile,text] of [['li','李的事项'],['lv','驴的事项']]){
+  const raw=values.get(calendarTaskKey(profile));assert.equal(JSON.parse(raw).profile,profile);
+  assert.equal(createCalendarTaskStore(storage,{profile}).get('task-one').text,text);
+  assert.equal(parseCalendarTasksImport(raw,{profile}).get('task-one').text,text);
+ }
+ assert.equal(values.get(CALENDAR_TASKS_KEY),legacy);assert.equal(JSON.parse(xun.export()).profile,undefined);
+});
+
+test('Profile imports reject legacy and mismatched backups without altering existing records',()=>{
+ const backups=Object.fromEntries(['xun','li','lv'].map(profile=>[profile,makeCalendarTasksExport([task()],{profile})]));
+ for(const profile of ['xun','li','lv']){
+  const values=new Map(),storage={getItem:key=>values.get(key)??null,setItem:(key,value)=>values.set(key,value),now:()=>stamp};
+  const store=createCalendarTaskStore(storage,{profile});store.set({id:'task-kept',date:'2026-11-02',text:'keep'});assert.equal(store.flush(),true);
+  const raw=values.get(calendarTaskKey(profile));
+  for(const other of ['xun','li','lv'].filter(value=>value!==profile)){
+   assert.throws(()=>parseCalendarTasksImport(backups[other],{profile}),/其他订阅/);
+   assert.throws(()=>store.import(backups[other]),/其他订阅/);assert.equal(values.get(calendarTaskKey(profile)),raw);assert.equal(store.list().length,1);
+  }
+  assert.deepEqual(store.import(backups[profile]),{added:1,duplicates:0,conflicts:0});
+ }
+ for(const profile of ['',null,'all','constructor']){
+  assert.throws(()=>calendarTaskKey(profile));assert.throws(()=>makeCalendarTasksExport([],{profile}));assert.throws(()=>parseCalendarTasksImport(backups.xun,{profile}));
+ }
+ assert.throws(()=>parseCalendarTasksImport(JSON.stringify({...JSON.parse(backups.xun),profile:null})));
+});
+
+test('Profile conflict detection ignores other profiles and protects same-profile drafts',()=>{
+ const values=new Map(),storage={getItem:key=>values.get(key)??null,setItem:(key,value)=>values.set(key,value),now:()=>stamp};
+ const a=createCalendarTaskStore(storage,{profile:'li'}),b=createCalendarTaskStore(storage,{profile:'li'}),lv=createCalendarTaskStore(storage,{profile:'lv'});
+ a.set({date:'2026-11-02',text:'A'});assert.equal(a.flush(),true);
+ lv.set({date:'2026-11-02',text:'LV'});assert.equal(lv.flush(),true);assert.equal(a.flush(),true);
+ b.set({date:'2026-11-02',text:'B'});assert.equal(b.flush(),false);assert.equal(b.dirty,true);assert.equal(b.conflict,true);assert.equal(JSON.parse(b.export()).profile,'li');
 });

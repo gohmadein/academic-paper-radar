@@ -315,7 +315,7 @@ test('Side art measures live layout on resize and rail changes without unsafe in
   assert.equal(main.attributes.style,undefined);
 });
 
-test('Research calendar is Xun feed only; month/date interactions do not change paper route or local data',async()=>{
+test('Research calendar is available on all three profile feeds; month/date interactions do not change paper route or local data',async()=>{
  const h=await appHarness();h.click({category:'xun'});
  assert.equal(h.element('research-calendar').hidden,false);
  assert.match(h.element('research-calendar').innerHTML,/科研日历/);
@@ -326,7 +326,8 @@ test('Research calendar is Xun feed only; month/date interactions do not change 
  assert.equal(h.run('calendarSelected'),'2026-11-11');assert.equal(h.run('calendarMonth'),'2026-11');
  assert.match(h.element('research-calendar').innerHTML,/论文登记/);
  h.click({calendarUpcoming:'true'});assert.equal(h.run('calendarSelected'),'');
- for(const category of ['li','lv','all']){h.click({category});assert.equal(h.element('research-calendar').hidden,true);}
+ for(const category of ['li','lv']){h.click({category});assert.equal(h.element('research-calendar').hidden,false);}
+ h.click({category:'all'});assert.equal(h.element('research-calendar').hidden,true);
  h.click({category:'xun'});h.click({sourceProfile:'xun',sourceType:'conference'});assert.equal(h.element('research-calendar').hidden,true);
  h.click({category:'xun'});h.click({view:'archive'});assert.equal(h.element('research-calendar').hidden,true);
  h.click({view:'feed'});h.click({action:'demo'});assert.equal(h.element('research-calendar').hidden,true);

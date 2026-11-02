@@ -1,7 +1,7 @@
 {
   "version": 1,
   "checkedAt": "2026-11-02",
-  "scope": "按 source-registry.json 全部14个关注会议逐项核验；核验覆盖不等于全部日期已公布，日期冲突与未公布项明确保留。",
+  "scope": "按三个方向各自关注名单核验；共享会议复用记录，日期冲突、未公布或暂不可核验项保留明确状态。",
   "coverage": [
     {
       "sourceId": "CoRL",
@@ -166,6 +166,124 @@
         "https://s2027.siggraph.org/submit-to-siggraph/"
       ],
       "note": "Specific official Technical Papers page gives Jan21/28/29 deadlines; general submission index still TBA. Prefer detailed track page but retain discrepancy. Do not relabel form/conflicts as abstract or upload as supplementary without further rules."
+    },
+    {
+      "sourceId": "SIGMOD",
+      "edition": 2027,
+      "status": "verified",
+      "checkedAt": "2026-11-02",
+      "sourceUrls": [
+        "https://2027.sigmodconf.hosting.acm.org/calls_papers_sigmod_research.shtml",
+        "https://2027.sigmod.org/accomodations.shtml"
+      ],
+      "note": "会期与会场已核验；2027研究论文四轮全文截止均在2026年（1/17、4/17、7/17、10/17），已结束；不推算2028。PACMMOD为关联期刊，不增设会议来源。"
+    },
+    {
+      "sourceId": "PODS",
+      "edition": 2027,
+      "status": "verified",
+      "checkedAt": "2026-11-02",
+      "sourceUrls": [
+        "https://2027.sigmodconf.hosting.acm.org/calls_papers_pods_research.shtml",
+        "https://2027.sigmod.org/accomodations.shtml"
+      ],
+      "note": "第二轮摘要12/3、全文12/10，均23:59 AoE；与SIGMOD同会期会场但为不同关注会议。"
+    },
+    {
+      "sourceId": "VLDB",
+      "edition": 2027,
+      "status": "verified",
+      "checkedAt": "2026-11-02",
+      "sourceUrls": [
+        "https://www.vldb.org/2027/important-dates.html",
+        "https://www.vldb.org/2027/"
+      ],
+      "note": "PVLDB研究轨道每月25日摘要、次月1日全文，全文轮次截至2027年3月，均17:00 Pacific Time。仅加入当前仍未来的2026年12月至2027年3月轮次；PVLDB不另建会议来源。场馆未核实。"
+    },
+    {
+      "sourceId": "ICDE",
+      "edition": 2027,
+      "status": "verified",
+      "checkedAt": "2026-11-02",
+      "sourceUrls": [
+        "https://icde2027.github.io/important-dates.html",
+        "https://icde2027.github.io/index.html"
+      ],
+      "note": "研究论文第二轮11/11 17:00 Pacific Time；重要日期页未列独立摘要截止。不把Industry、DEFT、PhD、Tutorial等其他轨道混为研究全文。场馆未核实。"
+    },
+    {
+      "sourceId": "EDBT",
+      "edition": 2027,
+      "status": "verified",
+      "checkedAt": "2026-11-02",
+      "sourceUrls": [
+        "https://edbt.org/",
+        "https://edbticdt2027.github.io/"
+      ],
+      "note": "协会官网和联会首页一致列Lille 4/6–9；协会列三轮研究全文截止2/4、6/10、10/7，均已结束；场馆未核实。"
+    },
+    {
+      "sourceId": "ICDT",
+      "edition": 2027,
+      "status": "conflict",
+      "checkedAt": "2026-11-02",
+      "sourceUrls": [
+        "https://edbticdt2027.github.io/?contents=ICDT_CFP.html",
+        "https://edbticdt2027.github.io/"
+      ],
+      "note": "官网首页及页头列4/6–9，ICDT CFP正文列4/6–8，未确认是否主会与联会范围区别；不建立会期倒计时。两轮投稿已结束（3/3摘要、3/10全文；9/3摘要、9/10全文）。"
+    },
+    {
+      "sourceId": "ISWC",
+      "edition": 2027,
+      "status": "unpublished",
+      "checkedAt": "2026-11-02",
+      "sourceUrls": [
+        "https://swsa.semanticweb.org/conferences/"
+      ],
+      "note": "SWSA官方仅列2027年10/11月窗口，地点待公布；无具体会期和主会截止，不生成猜测日期。2026已结束。"
+    },
+    {
+      "sourceId": "ESWC",
+      "edition": 2027,
+      "status": "verified",
+      "checkedAt": "2026-11-02",
+      "sourceUrls": [
+        "https://2027.eswc-conferences.org/important-dates/",
+        "https://2027.eswc-conferences.org/attending/venue/"
+      ],
+      "note": "已核验研究轨道12/10摘要、12/17全文23:59 AoE及会期会场。会期含5/23–24 workshops/tutorials；未把建议工作坊论文期限或ISWC重投路径当通用主会截止。"
+    },
+    {
+      "sourceId": "KR",
+      "edition": 2027,
+      "status": "unavailable",
+      "checkedAt": "2026-11-02",
+      "sourceUrls": [
+        "https://kr.org/conferences.html",
+        "https://kr.org/"
+      ],
+      "note": "本轮官方首页返回动态Loading、conference目录仅返回Show earlier conferences；官方2027具体会期与截止未能读取，记unavailable而非断言未公布；不造日期。"
+    },
+    {
+      "sourceId": "AAAI",
+      "edition": 2027,
+      "status": "verified",
+      "checkedAt": "2026-11-02",
+      "sourceUrls": [
+        "https://aaai.org/conference/aaai/aaai-27/"
+      ],
+      "note": "官方会期2/16–23，主会摘要7/21、全文7/28（2026，AoE）均已结束；不把其他track或定稿当开放主会投稿。场馆未核实。"
+    },
+    {
+      "sourceId": "IJCAI",
+      "edition": 2027,
+      "status": "verified",
+      "checkedAt": "2026-11-02",
+      "sourceUrls": [
+        "https://2027.ijcai.org/ijcai-2027-call-for-papers-main-track/"
+      ],
+      "note": "主会摘要1/4、全文1/11均23:59 AoE；京都8/7–13与横琴8/15–17卫星活动分开，不延长主会范围；场馆未核实。"
     }
   ],
   "events": [
@@ -816,6 +934,589 @@
       "note": "",
       "timeZoneLabel": null,
       "track": "main"
+    },
+    {
+      "id": "sigmod-2027-conference",
+      "sourceId": "SIGMOD",
+      "conference": "SIGMOD",
+      "name": "SIGMOD 2027 · 会议日期",
+      "type": "conference",
+      "startDate": "2027-06-13",
+      "endDate": "2027-06-18",
+      "precision": "date",
+      "timeZone": null,
+      "deadlineAt": null,
+      "sourceUrl": "https://2027.sigmodconf.hosting.acm.org/calls_papers_sigmod_research.shtml",
+      "verifiedAt": "2026-11-02",
+      "place": {
+        "city": "Huntington Beach",
+        "country": "United States",
+        "venue": "Hyatt Regency Huntington Beach Resort and Spa",
+        "sourceUrl": "https://2027.sigmod.org/accomodations.shtml"
+      },
+      "track": "main",
+      "note": "含官方公布的联会/工作坊日期；不是每日主会报告日程。"
+    },
+    {
+      "id": "pods-2027-conference",
+      "sourceId": "PODS",
+      "conference": "PODS",
+      "name": "PODS 2027 · 会议日期",
+      "type": "conference",
+      "startDate": "2027-06-13",
+      "endDate": "2027-06-18",
+      "precision": "date",
+      "timeZone": null,
+      "deadlineAt": null,
+      "sourceUrl": "https://2027.sigmodconf.hosting.acm.org/calls_papers_pods_research.shtml",
+      "verifiedAt": "2026-11-02",
+      "place": {
+        "city": "Huntington Beach",
+        "country": "United States",
+        "venue": "Hyatt Regency Huntington Beach Resort and Spa",
+        "sourceUrl": "https://2027.sigmod.org/accomodations.shtml"
+      },
+      "track": "main",
+      "note": "含官方公布的联会/工作坊日期；不是每日主会报告日程。"
+    },
+    {
+      "id": "vldb-2027-conference",
+      "sourceId": "VLDB",
+      "conference": "VLDB",
+      "name": "VLDB 2027 · 会议日期",
+      "type": "conference",
+      "startDate": "2027-08-23",
+      "endDate": "2027-08-27",
+      "precision": "date",
+      "timeZone": null,
+      "deadlineAt": null,
+      "sourceUrl": "https://www.vldb.org/2027/important-dates.html",
+      "verifiedAt": "2026-11-02",
+      "place": {
+        "city": "Athens",
+        "country": "Greece",
+        "venue": null,
+        "sourceUrl": "https://www.vldb.org/2027/"
+      },
+      "track": "main"
+    },
+    {
+      "id": "icde-2027-conference",
+      "sourceId": "ICDE",
+      "conference": "ICDE",
+      "name": "ICDE 2027 · 会议日期",
+      "type": "conference",
+      "startDate": "2027-05-17",
+      "endDate": "2027-05-21",
+      "precision": "date",
+      "timeZone": null,
+      "deadlineAt": null,
+      "sourceUrl": "https://icde2027.github.io/important-dates.html",
+      "verifiedAt": "2026-11-02",
+      "place": {
+        "city": "Copenhagen",
+        "country": "Denmark",
+        "venue": null,
+        "sourceUrl": "https://icde2027.github.io/index.html"
+      },
+      "track": "main"
+    },
+    {
+      "id": "edbt-2027-conference",
+      "sourceId": "EDBT",
+      "conference": "EDBT",
+      "name": "EDBT 2027 · 会议日期",
+      "type": "conference",
+      "startDate": "2027-04-06",
+      "endDate": "2027-04-09",
+      "precision": "date",
+      "timeZone": null,
+      "deadlineAt": null,
+      "sourceUrl": "https://edbt.org/",
+      "verifiedAt": "2026-11-02",
+      "place": {
+        "city": "Lille",
+        "country": "France",
+        "venue": null,
+        "sourceUrl": "https://edbticdt2027.github.io/"
+      },
+      "track": "main",
+      "note": "含官方公布的联会/工作坊日期；不是每日主会报告日程。"
+    },
+    {
+      "id": "eswc-2027-conference",
+      "sourceId": "ESWC",
+      "conference": "ESWC",
+      "name": "ESWC 2027 · 会议日期",
+      "type": "conference",
+      "startDate": "2027-05-23",
+      "endDate": "2027-05-27",
+      "precision": "date",
+      "timeZone": null,
+      "deadlineAt": null,
+      "sourceUrl": "https://2027.eswc-conferences.org/important-dates/",
+      "verifiedAt": "2026-11-02",
+      "place": {
+        "city": "Limassol",
+        "country": "Cyprus",
+        "venue": "St. Raphael Resort & Marina",
+        "sourceUrl": "https://2027.eswc-conferences.org/attending/venue/"
+      },
+      "track": "main",
+      "note": "含官方公布的联会/工作坊日期；不是每日主会报告日程。"
+    },
+    {
+      "id": "aaai-2027-conference",
+      "sourceId": "AAAI",
+      "conference": "AAAI",
+      "name": "AAAI 2027 · 会议日期",
+      "type": "conference",
+      "startDate": "2027-02-16",
+      "endDate": "2027-02-23",
+      "precision": "date",
+      "timeZone": null,
+      "deadlineAt": null,
+      "sourceUrl": "https://aaai.org/conference/aaai/aaai-27/",
+      "verifiedAt": "2026-11-02",
+      "place": {
+        "city": "Montréal",
+        "country": "Canada",
+        "venue": null,
+        "sourceUrl": "https://aaai.org/conference/aaai/aaai-27/"
+      },
+      "track": "main",
+      "note": "含官方公布的联会/工作坊日期；不是每日主会报告日程。"
+    },
+    {
+      "id": "ijcai-2027-conference",
+      "sourceId": "IJCAI",
+      "conference": "IJCAI",
+      "name": "IJCAI 2027 · 会议日期",
+      "type": "conference",
+      "startDate": "2027-08-07",
+      "endDate": "2027-08-13",
+      "precision": "date",
+      "timeZone": null,
+      "deadlineAt": null,
+      "sourceUrl": "https://2027.ijcai.org/ijcai-2027-call-for-papers-main-track/",
+      "verifiedAt": "2026-11-02",
+      "place": {
+        "city": "Kyoto",
+        "country": "Japan",
+        "venue": null,
+        "sourceUrl": "https://2027.ijcai.org/ijcai-2027-call-for-papers-main-track/"
+      },
+      "track": "main"
+    },
+    {
+      "id": "pods-2027-round2-abstract",
+      "sourceId": "PODS",
+      "conference": "PODS",
+      "name": "PODS 2027 · 研究论文摘要截止",
+      "type": "submission",
+      "startDate": "2026-12-03",
+      "endDate": "2026-12-03",
+      "precision": "instant",
+      "timeZone": "Etc/GMT+12",
+      "deadlineAt": "2026-12-03T23:59:00-12:00",
+      "sourceUrl": "https://2027.sigmodconf.hosting.acm.org/calls_papers_pods_research.shtml",
+      "verifiedAt": "2026-11-02",
+      "place": {
+        "city": "Huntington Beach",
+        "country": "United States",
+        "venue": "Hyatt Regency Huntington Beach Resort and Spa",
+        "sourceUrl": "https://2027.sigmod.org/accomodations.shtml"
+      },
+      "track": "main",
+      "deadlineKind": "研究论文摘要截止",
+      "timeZoneLabel": "AoE"
+    },
+    {
+      "id": "pods-2027-round2-paper",
+      "sourceId": "PODS",
+      "conference": "PODS",
+      "name": "PODS 2027 · 研究论文全文截止",
+      "type": "submission",
+      "startDate": "2026-12-10",
+      "endDate": "2026-12-10",
+      "precision": "instant",
+      "timeZone": "Etc/GMT+12",
+      "deadlineAt": "2026-12-10T23:59:00-12:00",
+      "sourceUrl": "https://2027.sigmodconf.hosting.acm.org/calls_papers_pods_research.shtml",
+      "verifiedAt": "2026-11-02",
+      "place": {
+        "city": "Huntington Beach",
+        "country": "United States",
+        "venue": "Hyatt Regency Huntington Beach Resort and Spa",
+        "sourceUrl": "https://2027.sigmod.org/accomodations.shtml"
+      },
+      "track": "main",
+      "deadlineKind": "研究论文全文截止",
+      "timeZoneLabel": "AoE"
+    },
+    {
+      "id": "eswc-2027-research-abstract",
+      "sourceId": "ESWC",
+      "conference": "ESWC",
+      "name": "ESWC 2027 · 研究论文摘要截止",
+      "type": "submission",
+      "startDate": "2026-12-10",
+      "endDate": "2026-12-10",
+      "precision": "instant",
+      "timeZone": "Etc/GMT+12",
+      "deadlineAt": "2026-12-10T23:59:00-12:00",
+      "sourceUrl": "https://2027.eswc-conferences.org/important-dates/",
+      "verifiedAt": "2026-11-02",
+      "place": {
+        "city": "Limassol",
+        "country": "Cyprus",
+        "venue": "St. Raphael Resort & Marina",
+        "sourceUrl": "https://2027.eswc-conferences.org/attending/venue/"
+      },
+      "track": "main",
+      "deadlineKind": "研究论文摘要截止",
+      "timeZoneLabel": "AoE"
+    },
+    {
+      "id": "eswc-2027-research-paper",
+      "sourceId": "ESWC",
+      "conference": "ESWC",
+      "name": "ESWC 2027 · 研究论文全文截止",
+      "type": "submission",
+      "startDate": "2026-12-17",
+      "endDate": "2026-12-17",
+      "precision": "instant",
+      "timeZone": "Etc/GMT+12",
+      "deadlineAt": "2026-12-17T23:59:00-12:00",
+      "sourceUrl": "https://2027.eswc-conferences.org/important-dates/",
+      "verifiedAt": "2026-11-02",
+      "place": {
+        "city": "Limassol",
+        "country": "Cyprus",
+        "venue": "St. Raphael Resort & Marina",
+        "sourceUrl": "https://2027.eswc-conferences.org/attending/venue/"
+      },
+      "track": "main",
+      "deadlineKind": "研究论文全文截止",
+      "timeZoneLabel": "AoE"
+    },
+    {
+      "id": "ijcai-2027-main-abstract",
+      "sourceId": "IJCAI",
+      "conference": "IJCAI",
+      "name": "IJCAI 2027 · 研究论文摘要截止",
+      "type": "submission",
+      "startDate": "2027-01-04",
+      "endDate": "2027-01-04",
+      "precision": "instant",
+      "timeZone": "Etc/GMT+12",
+      "deadlineAt": "2027-01-04T23:59:00-12:00",
+      "sourceUrl": "https://2027.ijcai.org/ijcai-2027-call-for-papers-main-track/",
+      "verifiedAt": "2026-11-02",
+      "place": {
+        "city": "Kyoto",
+        "country": "Japan",
+        "venue": null,
+        "sourceUrl": "https://2027.ijcai.org/ijcai-2027-call-for-papers-main-track/"
+      },
+      "track": "main",
+      "deadlineKind": "研究论文摘要截止",
+      "timeZoneLabel": "AoE"
+    },
+    {
+      "id": "ijcai-2027-main-paper",
+      "sourceId": "IJCAI",
+      "conference": "IJCAI",
+      "name": "IJCAI 2027 · 研究论文全文截止",
+      "type": "submission",
+      "startDate": "2027-01-11",
+      "endDate": "2027-01-11",
+      "precision": "instant",
+      "timeZone": "Etc/GMT+12",
+      "deadlineAt": "2027-01-11T23:59:00-12:00",
+      "sourceUrl": "https://2027.ijcai.org/ijcai-2027-call-for-papers-main-track/",
+      "verifiedAt": "2026-11-02",
+      "place": {
+        "city": "Kyoto",
+        "country": "Japan",
+        "venue": null,
+        "sourceUrl": "https://2027.ijcai.org/ijcai-2027-call-for-papers-main-track/"
+      },
+      "track": "main",
+      "deadlineKind": "研究论文全文截止",
+      "timeZoneLabel": "AoE"
+    },
+    {
+      "id": "icde-2027-research-round2-paper",
+      "sourceId": "ICDE",
+      "conference": "ICDE",
+      "name": "ICDE 2027 · 研究论文第二轮全文截止",
+      "type": "submission",
+      "startDate": "2026-11-11",
+      "endDate": "2026-11-11",
+      "precision": "instant",
+      "timeZone": "America/Los_Angeles",
+      "deadlineAt": "2026-11-11T17:00:00-08:00",
+      "sourceUrl": "https://icde2027.github.io/important-dates.html",
+      "verifiedAt": "2026-11-02",
+      "place": {
+        "city": "Copenhagen",
+        "country": "Denmark",
+        "venue": null,
+        "sourceUrl": "https://icde2027.github.io/index.html"
+      },
+      "track": "main",
+      "deadlineKind": "研究论文第二轮全文截止",
+      "timeZoneLabel": "Pacific Time"
+    },
+    {
+      "id": "vldb-2027-research-2026-12-abstract",
+      "sourceId": "VLDB",
+      "conference": "VLDB",
+      "name": "VLDB 2027 · PVLDB研究轨道 2026-12轮摘要截止",
+      "type": "submission",
+      "startDate": "2026-11-25",
+      "endDate": "2026-11-25",
+      "precision": "instant",
+      "timeZone": "America/Los_Angeles",
+      "deadlineAt": "2026-11-25T17:00:00-08:00",
+      "sourceUrl": "https://www.vldb.org/2027/important-dates.html",
+      "verifiedAt": "2026-11-02",
+      "place": {
+        "city": "Athens",
+        "country": "Greece",
+        "venue": null,
+        "sourceUrl": "https://www.vldb.org/2027/"
+      },
+      "track": "main",
+      "deadlineKind": "PVLDB研究轨道 2026-12轮摘要截止",
+      "timeZoneLabel": "Pacific Time"
+    },
+    {
+      "id": "vldb-2027-research-2026-12-paper",
+      "sourceId": "VLDB",
+      "conference": "VLDB",
+      "name": "VLDB 2027 · PVLDB研究轨道 2026-12轮全文截止",
+      "type": "submission",
+      "startDate": "2026-12-01",
+      "endDate": "2026-12-01",
+      "precision": "instant",
+      "timeZone": "America/Los_Angeles",
+      "deadlineAt": "2026-12-01T17:00:00-08:00",
+      "sourceUrl": "https://www.vldb.org/2027/important-dates.html",
+      "verifiedAt": "2026-11-02",
+      "place": {
+        "city": "Athens",
+        "country": "Greece",
+        "venue": null,
+        "sourceUrl": "https://www.vldb.org/2027/"
+      },
+      "track": "main",
+      "deadlineKind": "PVLDB研究轨道 2026-12轮全文截止",
+      "timeZoneLabel": "Pacific Time"
+    },
+    {
+      "id": "vldb-2027-research-2027-01-abstract",
+      "sourceId": "VLDB",
+      "conference": "VLDB",
+      "name": "VLDB 2027 · PVLDB研究轨道 2027-01轮摘要截止",
+      "type": "submission",
+      "startDate": "2026-12-25",
+      "endDate": "2026-12-25",
+      "precision": "instant",
+      "timeZone": "America/Los_Angeles",
+      "deadlineAt": "2026-12-25T17:00:00-08:00",
+      "sourceUrl": "https://www.vldb.org/2027/important-dates.html",
+      "verifiedAt": "2026-11-02",
+      "place": {
+        "city": "Athens",
+        "country": "Greece",
+        "venue": null,
+        "sourceUrl": "https://www.vldb.org/2027/"
+      },
+      "track": "main",
+      "deadlineKind": "PVLDB研究轨道 2027-01轮摘要截止",
+      "timeZoneLabel": "Pacific Time"
+    },
+    {
+      "id": "vldb-2027-research-2027-01-paper",
+      "sourceId": "VLDB",
+      "conference": "VLDB",
+      "name": "VLDB 2027 · PVLDB研究轨道 2027-01轮全文截止",
+      "type": "submission",
+      "startDate": "2027-01-01",
+      "endDate": "2027-01-01",
+      "precision": "instant",
+      "timeZone": "America/Los_Angeles",
+      "deadlineAt": "2027-01-01T17:00:00-08:00",
+      "sourceUrl": "https://www.vldb.org/2027/important-dates.html",
+      "verifiedAt": "2026-11-02",
+      "place": {
+        "city": "Athens",
+        "country": "Greece",
+        "venue": null,
+        "sourceUrl": "https://www.vldb.org/2027/"
+      },
+      "track": "main",
+      "deadlineKind": "PVLDB研究轨道 2027-01轮全文截止",
+      "timeZoneLabel": "Pacific Time"
+    },
+    {
+      "id": "vldb-2027-research-2027-02-abstract",
+      "sourceId": "VLDB",
+      "conference": "VLDB",
+      "name": "VLDB 2027 · PVLDB研究轨道 2027-02轮摘要截止",
+      "type": "submission",
+      "startDate": "2027-01-25",
+      "endDate": "2027-01-25",
+      "precision": "instant",
+      "timeZone": "America/Los_Angeles",
+      "deadlineAt": "2027-01-25T17:00:00-08:00",
+      "sourceUrl": "https://www.vldb.org/2027/important-dates.html",
+      "verifiedAt": "2026-11-02",
+      "place": {
+        "city": "Athens",
+        "country": "Greece",
+        "venue": null,
+        "sourceUrl": "https://www.vldb.org/2027/"
+      },
+      "track": "main",
+      "deadlineKind": "PVLDB研究轨道 2027-02轮摘要截止",
+      "timeZoneLabel": "Pacific Time"
+    },
+    {
+      "id": "vldb-2027-research-2027-02-paper",
+      "sourceId": "VLDB",
+      "conference": "VLDB",
+      "name": "VLDB 2027 · PVLDB研究轨道 2027-02轮全文截止",
+      "type": "submission",
+      "startDate": "2027-02-01",
+      "endDate": "2027-02-01",
+      "precision": "instant",
+      "timeZone": "America/Los_Angeles",
+      "deadlineAt": "2027-02-01T17:00:00-08:00",
+      "sourceUrl": "https://www.vldb.org/2027/important-dates.html",
+      "verifiedAt": "2026-11-02",
+      "place": {
+        "city": "Athens",
+        "country": "Greece",
+        "venue": null,
+        "sourceUrl": "https://www.vldb.org/2027/"
+      },
+      "track": "main",
+      "deadlineKind": "PVLDB研究轨道 2027-02轮全文截止",
+      "timeZoneLabel": "Pacific Time"
+    },
+    {
+      "id": "vldb-2027-research-2027-03-abstract",
+      "sourceId": "VLDB",
+      "conference": "VLDB",
+      "name": "VLDB 2027 · PVLDB研究轨道 2027-03轮摘要截止",
+      "type": "submission",
+      "startDate": "2027-02-25",
+      "endDate": "2027-02-25",
+      "precision": "instant",
+      "timeZone": "America/Los_Angeles",
+      "deadlineAt": "2027-02-25T17:00:00-08:00",
+      "sourceUrl": "https://www.vldb.org/2027/important-dates.html",
+      "verifiedAt": "2026-11-02",
+      "place": {
+        "city": "Athens",
+        "country": "Greece",
+        "venue": null,
+        "sourceUrl": "https://www.vldb.org/2027/"
+      },
+      "track": "main",
+      "deadlineKind": "PVLDB研究轨道 2027-03轮摘要截止",
+      "timeZoneLabel": "Pacific Time"
+    },
+    {
+      "id": "vldb-2027-research-2027-03-paper",
+      "sourceId": "VLDB",
+      "conference": "VLDB",
+      "name": "VLDB 2027 · PVLDB研究轨道 2027-03轮全文截止",
+      "type": "submission",
+      "startDate": "2027-03-01",
+      "endDate": "2027-03-01",
+      "precision": "instant",
+      "timeZone": "America/Los_Angeles",
+      "deadlineAt": "2027-03-01T17:00:00-08:00",
+      "sourceUrl": "https://www.vldb.org/2027/important-dates.html",
+      "verifiedAt": "2026-11-02",
+      "place": {
+        "city": "Athens",
+        "country": "Greece",
+        "venue": null,
+        "sourceUrl": "https://www.vldb.org/2027/"
+      },
+      "track": "main",
+      "deadlineKind": "PVLDB研究轨道 2027-03轮全文截止",
+      "timeZoneLabel": "Pacific Time"
+    },
+    {
+      "id": "ijcai-2027-hengqin-satellite",
+      "sourceId": "IJCAI",
+      "conference": "IJCAI",
+      "name": "IJCAI 2027 · 横琴卫星活动",
+      "type": "conference",
+      "startDate": "2027-08-15",
+      "endDate": "2027-08-17",
+      "precision": "date",
+      "timeZone": null,
+      "deadlineAt": null,
+      "sourceUrl": "https://2027.ijcai.org/ijcai-2027-call-for-papers-main-track/",
+      "verifiedAt": "2026-11-02",
+      "place": {
+        "city": "Hengqin",
+        "country": "China",
+        "venue": null,
+        "sourceUrl": "https://2027.ijcai.org/ijcai-2027-call-for-papers-main-track/"
+      },
+      "track": "main",
+      "note": "官方单独公布的卫星活动，不是京都主会日期延长。"
     }
-  ]
+  ],
+  "profileSources": {
+    "xun": [
+      "CoRL",
+      "RSS",
+      "ICRA",
+      "IROS",
+      "NeurIPS",
+      "ICLR",
+      "ICML",
+      "CVPR",
+      "ICCV",
+      "ECCV",
+      "3DV",
+      "Humanoids",
+      "ICAPS",
+      "SIGGRAPH"
+    ],
+    "li": [
+      "SIGMOD",
+      "PODS",
+      "VLDB",
+      "ICDE",
+      "EDBT",
+      "ICDT",
+      "ISWC",
+      "ESWC",
+      "KR",
+      "AAAI",
+      "IJCAI"
+    ],
+    "lv": [
+      "CoRL",
+      "RSS",
+      "ICRA",
+      "IROS",
+      "NeurIPS",
+      "ICLR",
+      "ICML",
+      "CVPR",
+      "ICCV",
+      "ECCV"
+    ]
+  }
 }
