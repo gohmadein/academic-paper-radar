@@ -119,3 +119,14 @@ test('Conference views isolate profiles and reuse overlap without duplicating ev
  assert.equal(calendarForProfile(data,'li').events.length,0);
  assert.equal(calendarForProfile(null,'lv'),null);
 });
+
+test('Calendar header reuses the canonical identity for each profile without changing icon size',async()=>{
+ const {profileIcon}=await import('../lib/profile-icons.js');
+ for(const profile of ['xun','li','lv']){
+  const html=researchCalendarHTML(data,{profile});
+  assert.ok(html.includes(`<div class="calendar-heading">${profileIcon(profile)}`));
+  assert.doesNotMatch(html,/calendar-robot/);
+  assert.match(html,/aria-hidden="true" focusable="false"/);
+ }
+ const css=await read('styles.css');assert.match(css,/\.calendar-heading>\.profile-identity\{width:30px;height:30px;flex-shrink:0;fill:currentColor;color:var\(--calendar-accent,#175cd3\)\}/);
+});

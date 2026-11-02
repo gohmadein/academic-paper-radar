@@ -210,7 +210,7 @@ function renderCalendar() {
   if($('research-calendar').hidden||document.hidden)return;
   if(calendarFetchedDay!==calendarDate())refreshCalendarData();
   const taskError=calendarTasks.error||((calendarTasks.dirty)?'尚未保存：草稿仅在当前页面，请重试或导出。':'');
-  const markup=researchCalendarHTML(calendarForProfile(calendarData,calendarProfile),{month:calendarMonth,selectedDate:calendarSelected,tab:calendarTab,scope:calendarScope,tasks:calendarTasks.list(),taskError,refreshError:calendarRefreshError});
+  const markup=researchCalendarHTML(calendarForProfile(calendarData,calendarProfile),{profile:calendarProfile,month:calendarMonth,selectedDate:calendarSelected,tab:calendarTab,scope:calendarScope,tasks:calendarTasks.list(),taskError,refreshError:calendarRefreshError});
   if(markup!==lastCalendarMarkup){$('research-calendar').innerHTML=markup;lastCalendarMarkup=markup;}
   calendarTimer=setTimeout(renderCalendar,60000);
   calendarTimer?.unref?.(); // Node test harness only; browsers use numeric timer IDs.

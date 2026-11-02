@@ -661,7 +661,7 @@ dialog::backdrop{background:#18263f38}
 .calendar-heading{display:flex;gap:9px;align-items:center;margin-bottom:13px}
 .calendar-heading>div{min-width:0}.calendar-heading p{font:8px var(--mono);letter-spacing:1.2px;margin:0 0 2px;color:#526787}
 .calendar-heading h3{font-size:16px;line-height:1.4;margin:0}.calendar-zone{margin-left:auto;font-size:9px;color:#526787;white-space:nowrap}
-.calendar-robot{width:30px;height:30px;flex-shrink:0;fill:none;stroke:var(--calendar-accent,#175cd3);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.calendar-heading>.profile-identity{width:30px;height:30px;flex-shrink:0;fill:currentColor;color:var(--calendar-accent,#175cd3)}
 .calendar-layout{display:grid;grid-template-columns:minmax(155px,.9fr) minmax(0,1.1fr);gap:14px}
 .calendar-month{min-width:0}.calendar-toolbar{display:flex;justify-content:space-between;gap:4px;align-items:center;margin-bottom:8px}
 .calendar-toolbar strong{font:600 11px var(--mono);white-space:nowrap}.calendar-toolbar>div{display:flex;gap:2px}.calendar-toolbar button{height:28px;min-width:26px;border-radius:7px;font-size:11px;color:var(--calendar-accent,#175cd3)}.calendar-toolbar button:hover{background:var(--calendar-tint,#edf4ff)}
