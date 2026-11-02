@@ -30,3 +30,13 @@ test('Same-date import rejects stale batch, timestamp and version regressions',a
   }
  }finally{await rm(base,{recursive:true,force:true});}
 });
+
+
+test('Same-date enriched guides cannot be silently removed by metadata refresh',async()=>{
+ const base=await mkdtemp(join(tmpdir(),'arxiv-guide-'));try{
+  const input=sample();input.entries[0].guide={titleZh:'机器人研究',summaryZh:'本项研究依据作者摘要介绍机器人任务中的控制与学习方法，结果仍需结合原文进一步核实。'.repeat(3),summaryEn:'The guide summarizes the author abstract about robot control and learning; the reported results still require full-text verification.',whyRead:'机器人方法参考',relation:'机器人学习',prerequisites:[],difficulty:'intermediate',readRecommendation:'skim',tags:['机器人'],limits:['未独立复现'],assumptions:[],readingAdvice:['先阅读摘要'],links:{code:null,project:null,video:null,data:null},evidence:[{url:input.entries[0].url,claim:'摘要来源',checkedAt:input.checkedAt}]};
+  await ingestArxivBulletin(input,{base});const saved=await readFile(join(base,'data/arxiv/days/2026-11-02.json'),'utf8');
+  await assert.rejects(ingestArxivBulletin(sample(),{base}),/丢失.*导读/);assert.equal(await readFile(join(base,'data/arxiv/days/2026-11-02.json'),'utf8'),saved);
+  input.entries[0].guide.whyRead='更新后的方向关联';await ingestArxivBulletin(input,{base});assert.deepEqual(await validateArxivArchive(base),[]);
+ }finally{await rm(base,{recursive:true,force:true});}
+});

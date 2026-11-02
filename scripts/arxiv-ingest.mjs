@@ -28,7 +28,7 @@ export async function prepareArxivBulletin(input,{base=root}={}){
   const old=JSON.parse(await readFile(join(base,'data/arxiv',prior.file),'utf8'));validateArxivBulletin(old);
   if(old.announcementDate&&(!input.announcementDate||input.announcementDate<old.announcementDate))throw Error('公告批次回退，保留上次有效资料');
   if(Date.parse(input.checkedAt)<Date.parse(old.checkedAt))throw Error('核验时刻回退，保留上次有效资料');
-  for(const entry of old.entries){const next=input.entries.find(item=>item.arxivId===entry.arxivId);if(next&&((entry.version!==null&&(next.version===null||next.version<entry.version))||(entry.updatedDate&&(!next.updatedDate||next.updatedDate<entry.updatedDate))))throw Error('论文版本回退，保留上次有效资料');}
+  for(const entry of old.entries){const next=input.entries.find(item=>item.arxivId===entry.arxivId);if(entry.guide&&next&&!next.guide)throw Error('刷新会丢失已归档导读，保留上次有效资料');if(next&&((entry.version!==null&&(next.version===null||next.version<entry.version))||(entry.updatedDate&&(!next.updatedDate||next.updatedDate<entry.updatedDate))))throw Error('论文版本回退，保留上次有效资料');}
   if(old.status==='complete'&&input.status!=='complete')throw Error('刷新未完成，保留已发布的完整公告');
   if(old.entries.some(entry=>!input.entries.some(next=>next.arxivId===entry.arxivId)))throw Error('刷新会丢失已归档条目，保留上次有效资料');
  }

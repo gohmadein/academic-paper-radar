@@ -1,4 +1,4 @@
-import {bulletinHTML,validateArxivBulletin} from './lib/arxiv-bulletin.js';
+import {bulletinHTML,validateArxivBulletin,bulletinPapers} from './lib/arxiv-bulletin.js';
 import {createCalendarTaskStore,calendarTaskKey,CALENDAR_TASKS_KEY,MAX_CALENDAR_TASKS_BYTES} from './lib/calendar-tasks.js';
 import {calendarDate,shiftCalendarMonth,calendarEventDay,researchCalendarHTML,validateCalendar,calendarForProfile} from './lib/research-calendar.js';
 import {liBackgroundClass} from './lib/li-background.js';
@@ -71,7 +71,8 @@ let mapRegion = '';
 let mapProfile = '';
 let mapPaper = '';
 let lastMapMarkup = '';
-let arxivError='',lastArxivMarkup='',arxivIndex=null,arxivSelected='',arxivLoadedDate='',arxivDay=null,arxivLoading=false,arxivAttempt=0,arxivToken=0;
+const arxivArchive=new Map();
+let arxivError='',lastArxivMarkup='',lastArxivRenderedDate='',arxivIndex=null,arxivSelected='',arxivLoadedDate='',arxivDay=null,arxivLoading=false,arxivAttempt=0,arxivToken=0;
 let calendarData=null,calendarMonth='',calendarSelected='',lastCalendarMarkup='',calendarTimer;
 let calendarTab='conference',calendarScope='main',calendarFetchedDay='',calendarFetching=false,calendarLastAttempt=0,calendarRefreshError='';
 let calendarEditingId='',calendarEditorOriginal='',calendarEditorOriginalDate='',calendarEditorDraft=null,calendarTaskTrigger=null;
@@ -91,8 +92,9 @@ function toast(message) {
   toastTimer = setTimeout(() => { $('toast').hidden = true; }, 3500);
 }
 
-async function getJSON(path) {
-  const response = await fetch(new URL(path, import.meta.url), {cache:'no-cache'});
+async function getJSON(path,{timeout=0}={}) {
+  const options={cache:'no-cache'};if(timeout&&typeof AbortSignal!=='undefined'&&typeof AbortSignal.timeout==='function')options.signal=AbortSignal.timeout(timeout);
+  const response = await fetch(new URL(path, import.meta.url), options);
   if (!response.ok) throw new Error('资料请求失败');
   return response.json();
 }
@@ -114,7 +116,7 @@ async function init() {
   updateViewChrome();
   $('content').setAttribute('aria-busy','true');
   try {
-    const [real,demo,institutions] = await Promise.all([loadCollection('data',false),loadCollection('data/demo',true),getJSON('data/institutions.json')]);
+    const [real,demo,institutions] = await Promise.all([loadCollection('data',false),loadCollection('data/demo',true),getJSON('data/institutions.json'),loadArxivArchive()]);
     const geography = await getJSON('data/paper-geography.json').catch(()=>null);
     const calendar = await getJSON('data/conference-calendar.json').catch(()=>null);
     calendarData=calendar?.coverage?.length&&!validateCalendar(calendar).length?calendar:null;calendarFetchedDay=calendarData?calendarDate():'';
@@ -136,7 +138,32 @@ async function init() {
   }
 }
 
-function collection() { return state.demo ? data.demo : data.real; }
+// Bulletin records are lookup/bookmark material, never daily-quota or map inputs.
+function bulletinRecords(){
+ const seen=new Set(),papers=[];
+ for(const day of [...arxivArchive.values()].sort((a,b)=>b.date.localeCompare(a.date)))for(const p of bulletinPapers(day))if(!seen.has(p.id)){seen.add(p.id);papers.push(p);}
+ return papers;
+}
+function allReadingPapers(){
+ const primary=state.demo?data.demo.papers:data.real.papers;if(state.demo)return primary;
+ const ids=new Set(primary.map(p=>p.id));return [...primary,...bulletinRecords().filter(p=>!ids.has(p.id))];
+}
+function collection() { const base=state.demo?data.demo:data.real;return state.view==='bookmarks'?{...base,papers:allReadingPapers()}:base; }
+function readingPaper(id,{date='all'}={}){
+ if(!data)return null;
+ const curated=state.demo?data.demo.papers:data.real.papers;
+ const primary=filterPapers(curated,{date}).find(p=>p.id===id)||curated.find(p=>p.id===id);
+ if(primary||state.demo)return primary;
+ const days=[...arxivArchive.values()].sort((a,b)=>b.date.localeCompare(a.date));
+ return days.filter(d=>date==='all'||d.date===date).flatMap(bulletinPapers).find(p=>p.id===id)||bulletinRecords().find(p=>p.id===id);
+}
+async function loadArxivArchive(){
+ try{
+  const index=await getJSON('data/arxiv/index.json',{timeout:15000});
+  if(index.version!==1||!Array.isArray(index.days)||index.days.some(row=>!/^\d{4}-\d{2}-\d{2}$/.test(row.date)||row.file!==`days/${row.date}.json`))throw Error('invalid bulletin index');
+  await Promise.all(index.days.map(async row=>{try{const day=await getJSON('data/arxiv/'+row.file,{timeout:15000});validateArxivBulletin(day);if(day.date!==row.date||day.entries.length!==row.count||day.status!==row.status)throw Error('invalid bulletin day');arxivArchive.set(day.date,day);}catch{/* Existing local IDs remain preserved when a public archive cannot load. */}}));
+ }catch{/* Bulletin availability cannot prevent curated archives from loading. */}
+}
 
 function updateViewChrome() {
   const isFeed = state.view === 'feed';
@@ -170,13 +197,13 @@ function go(patch, {replace = false} = {}) {
   closeNotes(false);
   shareRequest++;
   if ($('share-dialog').open) $('share-dialog').close();
-  state = {...state, ...patch};
+  state = {...state, ...(Object.hasOwn(patch,'paper')&&!patch.bulletinDate?{bulletinDate:''}:{}), ...patch};
   updateViewChrome();
   const hash = routeHash(state);
   if (replace) history.replaceState(null,'',hash);
   else history.pushState(null,'',hash);
   if (data) {
-    if (Object.keys(patch).every(key=>key==='paper')) renderDialog();
+    if (Object.keys(patch).every(key=>key==='paper'||key==='bulletinDate')) renderDialog();
     else render();
   }
 }
@@ -212,21 +239,22 @@ function emptyState(kind) {
 function renderArxivBulletin(){
  const root=$('arxiv-updates');if(root.hidden)return;
  if(!arxivIndex&&!arxivLoading&&Date.now()-arxivAttempt>60000)refreshArxivBulletin();
- const expanded=root.querySelector('details')?.open;
+ const expanded=root.querySelector('details')?.open,scrollTop=lastArxivRenderedDate===arxivDay?.date?(root.querySelector('.arxiv-bulletin-body')?.scrollTop||0):0;
  const selector=arxivIndex?.days?.length?`<label class="arxiv-bulletin-date">归档日期 <select id="arxiv-bulletin-date" aria-label="arXiv公告归档日期">${arxivIndex.days.map(row=>`<option value="${e(row.date)}"${row.date===arxivLoadedDate?' selected':''}>${e(row.date)}</option>`).join('')}</select></label>`:'';
- const markup=bulletinHTML(arxivDay).replace('</summary>','</summary>'+selector+(arxivError?`<p class="arxiv-bulletin-status" role="status">${e(arxivError)}</p>`:''));
- if(markup===lastArxivMarkup)return;lastArxivMarkup=markup;root.innerHTML=markup;
+ const markup=bulletinHTML(arxivDay,data?paperCard:undefined).replace('</summary>','</summary>'+selector+(arxivError?`<p class="arxiv-bulletin-status" role="status">${e(arxivError)}</p>`:''));
+ if(markup===lastArxivMarkup)return;lastArxivMarkup=markup;lastArxivRenderedDate=arxivDay?.date||'';root.innerHTML=markup;
  if(expanded)root.querySelector('details').open=true;
+ const body=root.querySelector('.arxiv-bulletin-body');if(body)body.scrollTop=scrollTop;
 }
 async function refreshArxivBulletin(date=''){
  if(arxivLoading&&!date)return;arxivLoading=true;arxivAttempt=Date.now();const token=++arxivToken;
  try{
-  const index=await getJSON('data/arxiv/index.json');
+  const index=await getJSON('data/arxiv/index.json',{timeout:15000});
   if(index.version!==1||!Array.isArray(index.days)||index.days.some(row=>!/^\d{4}-\d{2}-\d{2}$/.test(row.date)||row.file!==`days/${row.date}.json`))throw Error('invalid bulletin index');
   if(token!==arxivToken)return;arxivIndex=index;const selected=date||arxivSelected||index.days[0]?.date||'';
   const row=index.days.find(row=>row.date===selected);if(!row){arxivDay=null;arxivLoadedDate='';return;}
-  const next=await getJSON('data/arxiv/'+row.file);validateArxivBulletin(next);if(next.date!==row.date||next.entries.length!==row.count||next.status!==row.status)throw Error('invalid bulletin day');
-  if(token===arxivToken){arxivDay=next;arxivLoadedDate=selected;arxivError='';}
+  const next=await getJSON('data/arxiv/'+row.file,{timeout:15000});validateArxivBulletin(next);if(next.date!==row.date||next.entries.length!==row.count||next.status!==row.status)throw Error('invalid bulletin day');
+  if(token===arxivToken){arxivDay=next;arxivArchive.set(next.date,next);arxivLoadedDate=selected;arxivError='';}
  }catch{if(token===arxivToken){if(date&&date!==arxivLoadedDate){arxivDay=null;arxivLoadedDate=date;}arxivError=arxivDay?'刷新失败，当前仍为上次已发布资料。':'公告读取失败，未能确认更新。';}}
  finally{if(token===arxivToken){arxivLoading=false;renderArxivBulletin();}}
 }
@@ -281,7 +309,7 @@ function render() {
   $('bookmark-transfer').hidden = state.view !== 'bookmarks';
   const tags = availableTopics(papers,state.category);
   document.querySelectorAll('nav [data-view]').forEach(b => { b.classList.toggle('active',b.dataset.view === state.view); if(b.dataset.view===state.view) b.setAttribute('aria-current','page'); else b.removeAttribute('aria-current'); });
-  $('bookmark-count').textContent = papers.filter(p=>bookmarks.has(p.id)).length;
+  $('bookmark-count').textContent = allReadingPapers().filter(p=>bookmarks.has(p.id)).length;
   $('search').value = state.q;
   const dateValues = days.map(d=>d.date);
   $('date-select').innerHTML = '<option value="all">全部日期</option>' + (state.date !== 'all' && !dateValues.includes(state.date) ? `<option value="${state.date}">${state.date}（无档案）</option>` : '') + days.map(d=>`<option value="${d.date}">${d.date}</option>`).join('');
@@ -308,7 +336,7 @@ function render() {
   else $('content').innerHTML = `<div class="paper-list">${filtered.map(paperCard).join('')}</div>`;
   $('content').setAttribute('aria-busy','false');
   renderDialog();
-  if (focusSelector && !active.isConnected && !$('detail-dialog').open) document.querySelector(focusSelector)?.focus({preventScroll:true});
+  if (focusSelector && !active.isConnected && !$('detail-dialog').open) document.querySelector((active.closest?.('#arxiv-updates')?'#arxiv-updates ':'')+focusSelector)?.focus({preventScroll:true});
 }
 
 function renderDialog() {
@@ -319,18 +347,19 @@ function renderDialog() {
     lastDialogPaper = '';
     return;
   }
-  const p = filterPapers(collection().papers,{date:mapPaper===state.paper?'all':state.date}).find(p => p.id===state.paper);
+  const p = readingPaper(state.paper,{date:state.bulletinDate||(mapPaper===state.paper?'all':state.date)});
   if (!p) {
     if (dialog.open) dialog.close();
     state.paper = ''; history.replaceState(null,'',routeHash(state));
     toast('未找到这篇论文，已返回当前档案。'); return;
   }
-  if (lastDialogPaper===p.id && dialog.open) {
+  const dialogKey=[p.id,p.date,p.arxivVersion||'',p.verifiedAt||''].join('|');
+  if (lastDialogPaper===dialogKey && dialog.open) {
     const b = $('dialog-content').querySelector('[data-bookmark]');
     if (b) { b.textContent = bookmarks.has(p.id)?'◆ 已加入本机书签':'◇ 加入本机书签'; b.setAttribute('aria-pressed',bookmarks.has(p.id)); }
     return;
   }
-  lastDialogPaper = p.id;
+  lastDialogPaper = dialogKey;
   $('dialog-kicker').textContent = `PAPER BRIEF / ${p.date}`;
   $('dialog-content').innerHTML = `${p.demo?`<p class="dialog-warning">${DEMO_NOTICE}。</p>`:''}<h2 id="dialog-title">${e(p.title)}</h2>${p.titleEn?`<p>${e(p.titleEn)}</p>`:''}<div class="dialog-meta">${e(p.authors.join(' · '))}<br>${e(p.venue)} / ${p.year} / 收录于 ${p.date}</div><h3>中文导读</h3><p>${e(p.summary)}</p>${bilingualDetail(p)}<h3>为什么入选</h3><p>${e(p.whySelected)}</p><h3>研究主题</h3><div class="card-tags">${p.tags.map(t=>`<span class="card-tag">${e(t)}</span>`).join('')}</div><h3>原始来源</h3>${p.sources.length?`<div class="source-links">${p.sources.map(s=>`<a href="${e(safeUrl(s.url))}" target="_blank" rel="noopener noreferrer">${e(s.label)} ↗</a>`).join('')}</div>`:'<p>演示条目无真实论文来源。</p>'}<button class="secondary-button dialog-bookmark" data-bookmark="${e(p.id)}" aria-pressed="${bookmarks.has(p.id)}">${bookmarks.has(p.id)?'◆ 已加入本机书签':'◇ 加入本机书签'}</button>`;
   $('dialog-content').insertAdjacentHTML('beforeend',noteButton(p,notes.has(p.id))+digestDetails(p));
@@ -375,8 +404,8 @@ document.addEventListener('click', event => {
   if(b.dataset.category)go({category:b.dataset.category,tag:topicForProfile(collection().papers,state.tag,b.dataset.category),view:['archive','sources'].includes(state.view)?'feed':state.view,paper:''});
   else if(b.dataset.read){if(reads.has(b.dataset.read))reads.delete(b.dataset.read);else reads.add(b.dataset.read);try{localStorage.setItem(READ_KEY,JSON.stringify([...reads]));}catch{toast('阅读状态仅在当前会话可用');}render();}
   else if (b.dataset.view) go({view:b.dataset.view,q:'',tag:'all',date:b.dataset.view==='feed'&&!state.demo&&data?.real.days[0]?data.real.days[0].date:'all',paper:''});
-  else if(b.dataset.share)requestShare(b.dataset.share);
-  else if (b.dataset.paper) { mapPaper=''; dialogTrigger = b; go({paper:b.dataset.paper}); }
+  else if(b.dataset.share)requestShare(b.dataset.share,b.dataset.bulletinDate);
+  else if (b.dataset.paper) { mapPaper=''; dialogTrigger = b; go({paper:b.dataset.paper,bulletinDate:b.dataset.bulletinDate||''}); }
   else if (b.dataset.bookmark) toggleBookmark(b.dataset.bookmark);
   else if (b.dataset.tag) go({tag:b.dataset.tag,view:state.view==='archive'?'feed':state.view,paper:''});
   else if (b.dataset.date) go({date:b.dataset.date,view:'feed',q:'',tag:'all',paper:''});
@@ -385,8 +414,8 @@ document.addEventListener('click', event => {
   else if (b.dataset.action === 'feed') go({view:'feed',q:'',tag:'all',date:'all'});
   else if (b.dataset.action === 'retry') init();
 });
-async function requestShare(id){
-  const paper=filterPapers(collection().papers,{date:state.date}).find(p=>p.id===id);if(!paper)return;
+async function requestShare(id,bulletinDate=''){
+  const paper=readingPaper(id,{date:bulletinDate||state.date});if(!paper)return;
   const request=++shareRequest;
   const url=publicPaperURL(location.href,paper);
   const result=await sharePaper({url,title:paper.title},{share:navigator.share?.bind(navigator),copy:navigator.clipboard?.writeText?.bind(navigator.clipboard)});
@@ -427,7 +456,7 @@ function applyLocalImport(text) {
     // Persist before changing the in-memory set. Failed imports preserve all existing bookmarks.
     localStorage.setItem(BOOKMARK_KEY,JSON.stringify([...result.ids]));
     bookmarks=result.ids; storageAvailable=true;
-    const knownIds=new Set(data ? [...data.real.papers,...data.demo.papers].map(p=>p.id) : []);
+    const knownIds=new Set(data ? [...data.real.papers,...data.demo.papers,...bulletinRecords()].map(p=>p.id) : []);
     const unknown=[...incoming].filter(id=>!knownIds.has(id)).length;
     $('transfer-status').classList.remove('error');
     $('transfer-status').textContent=`导入成功：新增 ${result.added} 条，已有 ${result.duplicates} 条，总计 ${bookmarks.size} 条。${unknown?`${unknown} 条 ID 暂未在本站收录，已保留。`:''}`;
@@ -497,7 +526,7 @@ function captureNote() {
   clearTimeout(noteTimer);noteTimer=setTimeout(flushNotes,350);
 }
 function openNotes(id,trigger) {
-  const paper=collection().papers.find(p=>p.id===id);if(!paper)return;
+  const paper=readingPaper(id);if(!paper)return;
   if(noteId===id&&$('notes-dialog').open){$('notes-text').focus();return;}
   if(noteId)closeNotes(false);
   shareRequest++;if($('share-dialog').open)$('share-dialog').close();

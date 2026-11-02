@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {ARXIV_BULLETIN_CATEGORIES,validateArxivBulletin,bulletinHTML} from '../lib/arxiv-bulletin.js';
+import {ARXIV_BULLETIN_CATEGORIES,bulletinPapers,validateArxivBulletin,bulletinHTML} from '../lib/arxiv-bulletin.js';
 const paper=()=>({id:'arxiv-2610-40473',arxivId:'2610.40473',version:2,titleEn:'Learning robot control',titleZh:'机器人控制学习',authors:['A Author','B Author'],publishedDate:'2026-10-29',updatedDate:'2026-11-02',change:'revised',categories:['cs.RO','cs.LG'],url:'https://arxiv.org/abs/2610.40473v2',topics:['操作','机器人学习'],announcements:[{category:'cs.RO',change:'revised'}]});
 const rows=(status='complete')=>ARXIV_BULLETIN_CATEGORIES.map(category=>({category,status,announcementDate:status==='complete'?'2026-11-02':null,listedCount:status==='complete'?210:null,checkedCount:status==='complete'?210:0,sourceUrl:`https://arxiv.org/list/${category}/new`}));
 const bulletin=()=>({version:1,date:'2026-11-02',announcementDate:'2026-11-02',checkedAt:'2026-11-02T05:30:00Z',status:'complete',coverage:{checkedCategories:[...ARXIV_BULLETIN_CATEGORIES],checkedCount:1260,includedCount:1,limitations:[],categoryStatus:rows()},entries:[paper()]});
@@ -60,4 +60,20 @@ test('Requires honest complete six-category announcement coverage and official s
 
 test('Complete status requires an identified announcement batch',()=>{
  const data=bulletin();data.announcementDate=null;data.coverage.categoryStatus.forEach(row=>row.announcementDate=null);assert.throws(()=>validateArxivBulletin(data));
+});
+
+const guide=()=>({titleZh:'机器人控制研究',summaryZh:'机器人控制方法基于作者摘要描述，关注数据利用与任务执行之间的关系。'.repeat(4),summaryEn:'This abstract-level guide discusses the reported robot control approach and its relation to task execution; claims have not been independently reproduced.',whyRead:'关注机器人控制方法',relation:'机器人任务执行',prerequisites:['控制基础'],difficulty:'intermediate',readRecommendation:'read',tags:['机器人'],limits:['结果来自作者报告'],assumptions:['未核读正文'],readingAdvice:['先读摘要与作者实验说明'],links:{code:null,project:null,video:null,data:null},evidence:[{url:'https://arxiv.org/abs/2610.40473v2',claim:'作者摘要与元数据',checkedAt:'2026-11-02'}]});
+
+test('Optional guides normalize stable shared paper identities without invented media or reading depth',()=>{
+ const data=bulletin();assert.deepEqual(bulletinPapers(data),[]);data.entries[0].guide=guide();
+ const [p]=bulletinPapers(data);assert.equal(p.id,data.entries[0].id);assert.equal(p.bulletin,true);assert.equal(p.readDepth,'abstract');assert.equal(p.paperType,null);assert.equal(p.publicationStatus,'preprint');assert.equal(p.publicationDate,'2026-10-29');assert.equal(p.date,data.date);assert.equal(p.summary,data.entries[0].guide.summaryZh);assert.deepEqual(p.profiles,['xun']);assert.equal(p.identity.arxiv,'2610.40473');assert.equal(Object.hasOwn(p,'visuals'),false);assert.match(p.sources[1].url,/40473v2$/);assert.match(p.researchNotes[0],/未进行正文/);
+ p.recommendations.xun.prerequisites.push('changed');assert.equal(data.entries[0].guide.prerequisites.length,1);
+ let calls=0;const html=bulletinHTML(data,(paper,index)=>{calls++;assert.equal(index,0);assert.equal(paper.id,p.id);return '<article>full safe card</article>';});assert.equal(calls,1);assert.match(html,/arxiv-bulletin-guided/);assert.match(html,/<article>full safe card/);assert.match(bulletinHTML(data),/arxiv-bulletin-meta/);
+});
+
+test('Guide validation enforces bilingual length, exact schema, and evidence for each resource',()=>{
+ for(const mutate of [g=>g.summaryZh='短文',g=>g.summaryZh='中'.repeat(201),g=>g.summaryEn='short',g=>g.titleZh='',g=>g.difficulty='expert',g=>g.readRecommendation='unknown',g=>g.links.code='javascript:alert(1)',g=>g.links.code='https://github.com/org/repo',g=>g.evidence=[],g=>g.evidence[0].url='https://arxiv.org/abs/2610.99999',g=>g.extra=true]){
+  const data=bulletin();data.entries[0].guide=guide();mutate(data.entries[0].guide);assert.throws(()=>validateArxivBulletin(data));
+ }
+ const data=bulletin();data.entries[0].guide=guide();data.entries[0].guide.links.code='https://github.com/org/repo';data.entries[0].guide.evidence.push({url:'https://github.com/org/repo',claim:'作者资源链接核验',checkedAt:'2026-11-02'});assert.doesNotThrow(()=>validateArxivBulletin(data));
 });

@@ -745,3 +745,9 @@ dialog::backdrop{background:#18263f38}
 .arxiv-bulletin-status,.arxiv-bulletin-coverage,.arxiv-bulletin-limitations{font-size:10px;line-height:1.7;color:#526787;margin:9px 0}.arxiv-bulletin-limitations{padding-left:17px}
 .arxiv-bulletin-list{list-style:none;padding:0;margin:12px 0 0}.arxiv-bulletin-item{padding:12px 0;border-top:1px solid #e0e8f5}.arxiv-bulletin-item>a{font-size:13px;line-height:1.6;color:#175cd3;font-weight:600}.arxiv-bulletin-meta,.arxiv-bulletin-authors,.arxiv-bulletin-topics{font-size:10px;line-height:1.7;margin:4px 0;color:#526787}.arxiv-bulletin-meta>span:first-child{color:#b42318}
 @media(max-width:600px){.arxiv-bulletin-body{max-height:360px}.arxiv-bulletin>summary>span{display:block;margin:5px 0 0}}
+
+/* Rich announcement cards reuse reading actions without reserving absent media. */
+#arxiv-updates{margin-top:22px}
+.bulletin-editorial-card .editorial-grid{grid-template-columns:minmax(0,1fr)}
+.arxiv-bulletin-item:has(.bulletin-editorial-card){padding:12px 0;border-top:0}
+.arxiv-bulletin-body:focus-visible{outline:2px solid var(--blue);outline-offset:2px}

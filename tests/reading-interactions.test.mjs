@@ -23,10 +23,10 @@ const read=p=>readFile(new URL('../'+p,import.meta.url),'utf8');
 
 // Exercise the real app event handlers and routing without a browser. This is
 // intentionally not a layout, native dialog focus-trap, or browser-history test.
-async function harness({navigator={},storageFailure=false}={}) {
+async function harness({navigator={},storageFailure=false,storageEntries=[],hash='',bulletinData=null}={}) {
   const bodyClasses=new Set();
-  const elements=new Map(),listeners=new Map(),windowEvents={},stored=new Map(),entries=[''];
-  const location={hash:'',href:'https://example.org/academic-paper-radar/?private=secret'};
+  const elements=new Map(),listeners=new Map(),windowEvents={},stored=new Map(storageEntries),entries=[hash];
+  const location={hash,href:'https://example.org/academic-paper-radar/?private=secret'};
   let position=0,context,timerId=0;
   const timers=new Map();
   const on=(key,fn)=>listeners.set(key,[...(listeners.get(key)||[]),fn]);
@@ -45,7 +45,7 @@ async function harness({navigator={},storageFailure=false}={}) {
     document:{title:'ZERO FIELD',getElementById:element,querySelectorAll:()=>[],querySelector:query,activeElement:make('body'),body:{classList:{toggle(name,on){if(on)bodyClasses.add(name);else bodyClasses.delete(name)}}},addEventListener:(type,fn)=>on(type,fn)},
     window:{confirm:()=>true,addEventListener:(type,fn)=>{windowEvents[type]=fn}},localStorage:{getItem:k=>stored.get(k)??null,setItem:(k,v)=>{if(storageFailure)throw Error('QuotaExceededError');stored.set(k,v)}},location,
     history:{pushState(_a,_b,hash){entries.splice(++position);entries.push(hash);location.hash=hash},replaceState(_a,_b,hash){entries[position]=hash;location.hash=hash}},
-    fetch:async url=>({ok:true,json:async()=>JSON.parse(await readFile(url,'utf8'))})});
+    fetch:async url=>({ok:true,json:async()=>bulletinData&&String(url).endsWith('/data/arxiv/days/2026-11-02.json')?structuredClone(bulletinData):JSON.parse(await readFile(url,'utf8'))})});
   const source=(await read('app.js')).replace(/^import .*;\n/gm,'').replaceAll('import.meta.url',JSON.stringify(new URL('../app.js',import.meta.url).href)).replace('\ninit();','\nglobalThis.boot=init();');
   vm.runInContext(source,context);await context.boot;
   const run=code=>vm.runInContext(code,context);
@@ -349,4 +349,42 @@ test('Xun bulletin is separate from curated routes and stale archive requests ca
  h.run("fetch=async()=>{throw Error('offline')}");await h.run('refreshArxivBulletin()');assert.match(h.run('arxivError'),/上次/);assert.equal(h.run('arxivDay.date'),'2026-11-03');
  for(const category of ['li','lv','all']){await h.click({category});assert.equal(h.element('arxiv-updates').hidden,true);}
  await h.click({category:'xun'});assert.equal(h.element('arxiv-updates').hidden,false);await h.click({view:'archive'});assert.equal(h.element('arxiv-updates').hidden,true);
+});
+
+function testBulletinGuide(entry){return {titleZh:'测试机器人研究',summaryZh:'该研究依据作者摘要讨论机器人任务中的方法设计与性能评估，关注任务假设及其适用范围。'.repeat(3),summaryEn:'This guide is based on the author abstract and discusses methods and reported evaluation in robot tasks, with attention to assumptions and the scope of applicability.',whyRead:'了解机器人方法',relation:'机器人研究',prerequisites:['控制基础'],difficulty:'intermediate',readRecommendation:'read',tags:['机器人'],limits:['摘要未给出完整实验设置'],assumptions:['尚未核读正文'],readingAdvice:['先读摘要，再核对正文实验设置'],links:{code:null,project:null,video:null,data:null},evidence:[{url:entry.url,claim:'作者摘要与官方元数据',checkedAt:'2026-11-02'}]};}
+async function installGuidedBulletin(h){const day=JSON.parse(await read('data/arxiv/days/2026-11-02.json'));day.entries.forEach(entry=>entry.guide=testBulletinGuide(entry));h.run(`arxivArchive.set(${JSON.stringify(day.date)},${JSON.stringify(day)});arxivDay=arxivArchive.get(${JSON.stringify(day.date)});arxivLoadedDate=${JSON.stringify(day.date)};arxivIndex={version:1,days:[{date:${JSON.stringify(day.date)},file:'days/2026-11-02.json',count:142,status:'complete'}]}`);return day;}
+
+test('Rich bulletin is below curated cards; all entries reuse bilingual cards without figure or logo placeholders',async()=>{
+ const html=await read('index.html');assert.ok(html.indexOf('id="arxiv-updates"')>html.indexOf('id="content"'));assert.ok(html.indexOf('id="arxiv-updates"')<html.indexOf('id="institution-gallery"'));
+ const h=await harness(),day=await installGuidedBulletin(h);await h.click({category:'xun'});const markup=h.element('arxiv-updates').innerHTML;
+ assert.equal((markup.match(/class="paper-card /g)||[]).length,142);assert.match(markup,/中文导读/);assert.match(markup,/ENGLISH GUIDE/);assert.match(markup,/data-note=/);assert.match(markup,/data-read=/);assert.match(markup,/data-share=/);assert.doesNotMatch(markup,/paper-figure|figure-fallback|institution-avatar|editorial-visual/);assert.match(markup,/bulletin-guide-/);assert.equal(h.run('collection().papers.length'),h.run('data.real.papers.length'));
+ const id=day.entries[0].id;await h.click({paper:id});assert.equal(h.element('detail-dialog').open,true);assert.match(h.element('dialog-content').innerHTML,/摘要级阅读/);assert.doesNotMatch(h.element('dialog-content').innerHTML,/paper-figure/);
+});
+
+test('Bulletin notes/read/bookmarks share stable IDs, survive archive selection, and do not inflate curated collections',async()=>{
+ const h=await harness(),day=await installGuidedBulletin(h),id=day.entries[0].id;await h.click({category:'xun'});const curated=h.run('data.real.papers.length');
+ await h.click({bookmark:id});await h.click({read:id});await h.click({note:id});assert.equal(h.element('notes-dialog').open,true);h.element('notes-text').value='Synthetic local bulletin note';await h.fire('notes-text:input');h.run('closeNotes(false)');assert.equal(h.run(`notes.get('${id}')`),'Synthetic local bulletin note');
+ await h.click({view:'bookmarks'});assert.match(h.element('content').innerHTML,/测试机器人研究/);assert.equal(h.run(`reads.has('${id}')`),true);assert.equal(h.run('data.real.papers.length'),curated);
+ h.run("arxivDay=null;arxivLoadedDate='2026-11-03'");await h.click({paper:id});assert.equal(h.element('detail-dialog').open,true);assert.equal(h.run(`readingPaper('${id}').id`),id);
+ // Curated identity is preferred in bookmarks, without duplicate records or new local IDs.
+ h.run(`data.real.papers.push({...readingPaper('${id}'),bulletin:false,date:'2026-10-31',title:'Canonical curated record'})`);assert.equal(h.run(`allReadingPapers().filter(p=>p.id==='${id}').length`),1);assert.equal(h.run(`allReadingPapers().find(p=>p.id==='${id}').title`),'Canonical curated record');assert.equal(h.run(`readingPaper('${id}',{date:'2026-11-02'}).title`),'Canonical curated record');assert.equal(h.run(`notes.get('${id}')`),'Synthetic local bulletin note');
+});
+
+
+test('Bookmarked bulletin records and shared deep links hydrate from public archive after reload',async()=>{
+ const day=JSON.parse(await read('data/arxiv/days/2026-11-02.json'));day.entries.forEach(entry=>entry.guide=testBulletinGuide(entry));const id=day.entries[0].id;
+ const first=await harness({bulletinData:day});await first.click({category:'xun'});await first.click({bookmark:id});await first.click({read:id});await first.click({note:id});first.element('notes-text').value='Local durable test';await first.fire('notes-text:input');first.run('closeNotes(false)');
+ const hash=first.run(`new URL(publicPaperURL(location.href,readingPaper('${id}'))).hash`);assert.match(hash,/category=xun/);
+ const reloaded=await harness({bulletinData:day,storageEntries:[...first.stored],hash});assert.equal(reloaded.element('detail-dialog').open,true);assert.equal(reloaded.run(`notes.get('${id}')`),'Local durable test');assert.equal(reloaded.run(`reads.has('${id}')`),true);
+ await reloaded.click({view:'bookmarks'});assert.match(reloaded.element('content').innerHTML,/测试机器人研究/);assert.equal(reloaded.element('bookmark-count').textContent,1);
+});
+
+
+test('Older bulletin actions preserve selected announcement date without moving the curated filter',async()=>{
+ const h=await harness(),day=await installGuidedBulletin(h),id=day.entries[0].id;await h.click({category:'xun'});
+ const old=structuredClone(day);old.date='2026-11-01';old.entries[0].guide.titleZh='较早公告的导读';old.entries[0].version=1;old.entries[0].url='https://arxiv.org/abs/'+old.entries[0].arxivId+'v1';old.entries[0].guide.evidence[0].url=old.entries[0].url;
+ h.run(`arxivArchive.set('2026-11-01',${JSON.stringify(old)});arxivDay=arxivArchive.get('2026-11-01');arxivLoadedDate='2026-11-01'`);const date=h.run('state.date');
+ await h.click({paper:id,bulletinDate:'2026-11-01'});assert.match(h.element('dialog-content').innerHTML,/较早公告的导读/);assert.equal(h.run('state.date'),date);assert.match(h.location.hash,/bulletin=2026-11-01/);
+ await h.click({paper:id,bulletinDate:'2026-11-02'});assert.doesNotMatch(h.element('dialog-content').innerHTML,/较早公告的导读/);await h.click({paper:id,bulletinDate:'2026-11-01'});assert.match(h.element('dialog-content').innerHTML,/较早公告的导读/);await h.fire('detail-close:click');await h.click({share:id,bulletinDate:'2026-11-01'});assert.match(h.element('share-url').value,/bulletin=2026-11-01/);assert.match(h.element('share-url').value,/date=2026-11-01/);assert.equal(h.run('state.date'),date);
+ h.run('data=null');assert.equal(h.run(`readingPaper('${id}')`),null);h.run('lastArxivMarkup="";renderArxivBulletin()');assert.doesNotMatch(h.element('arxiv-updates').innerHTML,/data-note=/);
 });

@@ -162,3 +162,5 @@ node scripts/ingest.mjs normalized.json --plan > commit-plan.json
 ### 迅的精选与每日 arXiv 更新
 
 迅未来每日精选3–5篇，优先有官方证据的Best Paper获奖、Oral、Spotlight及优质期刊文章；候选／入围不等同获奖，标签不替代相关性与质量。独立可展开的arXiv简报收录六类官方公告中全部机器人相关条目，不设Top N、不占精选名额，不把失败当零更新。数据归档在 `data/arxiv/`，输入与每日核验契约见 [ARXIV-BULLETIN.md](docs/ARXIV-BULLETIN.md)。简报不是完整导读卡，不要求科研插图或长摘要；论文身份与精选一致，但不写入精选注册表或改变原书签／笔记格式。
+
+迅的每日 arXiv 更新位于每日精选下方，使用独立折叠双语导读卡（不含主图/校徽），书签、已读与笔记沿用稳定论文ID和本机存储；公告不计入精选配额，详见 [公告合同](docs/ARXIV-BULLETIN.md)。
