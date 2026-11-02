@@ -2,9 +2,18 @@
 
 **核验快照：2026-11-02。此报告不构成机构授权或背书，也不声称所有缺口已经修复。**
 
-机构库共 252 项，105 项有已核验标识，147 项暂仅显示名称。本轮对原先 172 项逐项复核，新增 25 项真实官方标识；另将论文中可精确定位的 IMS 归入 Toronto，并加入新核实署名的 ARL 待处理记录。
+机构库共 252 项，107 项有来源与身份已核验标识，145 项暂仅显示名称。本轮对原先 172 项逐项复核，新增 25 项真实官方标识；另将论文中可精确定位的 IMS 归入 Toronto，并加入新核实署名的 ARL 待处理记录。
 
 142 篇 arXiv 论文中，139 篇机构署名完整核验、1 篇部分核验、2 篇尚无足够机构信息。85 篇至少有一项已核验标识，共 141 处标识引用；不能把“已有一个标识”误称为“所有机构标识都齐全”。
+
+## 已展示但未取得另行书面许可的两项
+
+2026-11-02 补充：JHU 与 Washington University in St. Louis 已采用可正常读取的官方原始标识，仅显示于有论文署名证据的卡片和详情，不在底部图库作装饰或表示合作。`verified` 指来源与身份核验，**不表示学校许可已获批**。两项均记录 `rightsStatus: not-separately-authorized`，没有接受新协议、登录下载门或规避访问控制。
+
+- JHU：[官方原图](https://universitycommunications.jhu.edu/assets/themes/generic/src/assets/images/logos/university-logo-small-horizontal-black-no-clear-space.png)、[来源页面](https://universitycommunications.jhu.edu/)、[原使用条款](https://brand.jhu.edu/resources/use-of-name/)。黑色原图原生透明，完整保留；此前403下载端点未重试，通过另一官方页面直接公开引用的素材取得。
+- WashU：[官方原图](https://marcomm.washu.edu/app/uploads/2024/02/WashU-RGB.jpg)、[来源页面](https://marcomm.washu.edu/washu-logo/)、[原使用条款](https://policies.washu.edu/policies/permission-to-use-university-names-logos-and-trademarks/)。原生白底完整保留，不与西雅图的University of Washington混淆。
+
+两所公开条款要求第三方书面许可；本项目没有取得或声称取得另行许可，公开展示用途限于论文单位识别，不作法律合规保证。来源可下载、用户要求展示与学校许可是不同事实。以上两项不再计入“尚未展示”145项，但其许可状态仍如实单列。
 
 ## 已修复的展示缺陷
 
@@ -13,14 +22,14 @@
 - 检查实际可见徽记而非透明画布大小；SUSTech、UiT、UW 等保留规定尺寸/留白。较大标识在自己的可滚动行内显示，不撑大日历地图。
 - 需要官网链接的标识保持图片链接；UW 只用于具体论文署名，不在底部图库作装饰。
 
-## 剩余原因分类
+## 尚未展示标识的原因分类
 
 | 类别 | 数量 |
 |---|---:|
 | 官方来源暂不可访问 | 43 |
 | 机构身份/对应标识未核实 | 12 |
 | 暂无符合完整性/来源条件的官方素材 | 14 |
-| 明确需要许可/官方审查 | 63 |
+| 明确需要许可/官方审查 | 61 |
 | 使用条件尚不明确 | 15 |
 
 以下保留具体核验结论及来源。来源暂不可用不等同机构不存在；未获适用许可不等同公开下载文件不存在；不会用相似学校或当前雇主标识替代。
@@ -73,7 +82,6 @@
 | JD.com | 暂无符合完整性/来源条件的官方素材 | Followed official investor site Media Resources to JD Corporate Blog gallery/media resources. Current public collection contains logistics/product photos and video, not standalone corporate mark. InvestorHTML fetch503 and corporate JoyGen shell supplies no logo. Retail-specific JD brand page not substituted for unverified corporate asset. | [来源1](https://jdcorporateblog.com/media-resources/) |
 | Jet Propulsion Laboratory | 明确需要许可/官方审查 | Fresh current JPL image-use policy broadly allows many photographs but specifically excludes JPL logo: prior written approval required. NASA insignia similarly excluded. No false inference from public-government-image policy. Prior exact finding: JPL image policy specifically requires prior written approval for JPL logo, excluding it from broad image reuse permission. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://www.jpl.nasa.gov/jpl-image-use-policy/ | [来源1](https://www.jpl.nasa.gov/jpl-image-use-policy/) |
 | Jiangsu JITRI Tsingunited Intelligent Control Technology Co., Ltd. | 机构身份/对应标识未核实 | Fresh exact English/Chinese company-name searches did not establish official logo-bearing page. Aggregator listings cannot validate exact mark; no parent substitution. | [来源1](https://arxiv.org/) |
-| Johns Hopkins University | 明确需要许可/官方审查 | Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Official standalone shield allowed as format, but use-of-name rules strictly prohibit third-party mark use without prior written permission. 核验：2026-11-02。 官方核验入口：https://brand.jhu.edu/resources/use-of-name/ | [来源1](https://brand.jhu.edu/resources/use-of-name/) |
 | Joint Laboratory of Embodied Intelligence, ZJU & Unitree Robotics | 暂无符合完整性/来源条件的官方素材 | Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Paper explicitly names joint ZJU/Unitree laboratory; targeted search did not locate a standalone official laboratory mark. No invented combined-parent mark. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://arxiv.org/html/2610.41877v1 | [来源1](https://arxiv.org/html/2610.41877v1) |
 | Joy Future Academy | 机构身份/对应标识未核实 | Matching official model organization establishes affiliation name but publishes no independently verified academy logo. JD association does not authorize substituting JD corporate identity; exact text retained. | [来源1](https://huggingface.co/JoyFutureAcademy) |
 | Karlsruhe Institute of Technology | 明确需要许可/官方审查 | Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Official guideline prohibits isolated word/symbol use and requires approval for use outside KIT official business; native favicon is not a licence exception. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://kit-cd.km.kit.edu/logo.php | [来源1](https://kit-cd.km.kit.edu/logo.php) |
@@ -168,7 +176,6 @@
 | Vector Institute for Artificial Intelligence | 官方来源暂不可访问 | Prior official403 remains restricted route; no repeated attempt or third-party replacement. No prior verified full asset to recover under expanded rendering. | [来源1](https://vectorinstitute.ai/) |
 | Vilnius University | 明确需要许可/官方审查 | Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Prior audit retained without bypass or duplicate download: 官方主页完整透明徽章已确认；校方名称及标识授予规则列有书面申请和合同程序，未核实本站展示授权，因此仅显示文字名称。 官方依据：https://www.vu.lt/site_files/Vardo_ir_%C5%BEenklo_suteikimo_ir_naudojimo_taisykl%C4%97s.pdf 核验：2026-11-02。 |  |
 | Waseda University | 明确需要许可/官方审查 | Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: All university symbols prohibited without express written permission. No permission asserted; not publishable. 核验：2026-11-02T07:37:27.009621+00:00。 官方核验入口：https://www.waseda.jp/top/en/about/work/logos | [来源1](https://www.waseda.jp/top/en/about/work/logos) |
-| Washington University in St. Louis | 明确需要许可/官方审查 | Full official WashU logo recovered; original compact-format blocker is solved. Current university policy expressly requires written authorization for third-party and not-for-profit use. Public brand JPG is not permission; no Washington-Seattle substitution. Prior exact finding: Shield must be solo, not combined with text as lockup; full-colour shield alone requires approval and seal requires permission. No compliant current compact card use verified. 核验：2026-11-02。 官方核验入口：https://marcomm.washu.edu/university-shield-seal/ | [来源1](https://policies.washu.edu/policies/permission-to-use-university-names-logos-and-trademarks/) · [来源2](https://marcomm.washu.edu/washu-logo/) · [来源3](https://marcomm.washu.edu/app/uploads/2024/02/WashU-RGB.jpg) |
 | xdof.ai | 官方来源暂不可访问 | Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. Official homepage access failed: HTTP Error 403: Forbidden No bypass attempted. 核验：2026-11-02T07:37:52.246754+00:00。 官方核验入口：https://xdof.ai/ | [来源1](https://xdof.ai/) |
 | Xense Robotics | 暂无符合完整性/来源条件的官方素材 | Reinspected genuine full183x28 SVG: all paths white. No separate positive logo or official brand instruction prescribing contrasting background verified; no recolor/filter or made-up backing. | [来源1](https://www.xenserobotics.com/static/index/images/logo.svg) |
 | Xiong’an Guochuang Lantian Technology Company Ltd. | 机构身份/对应标识未核实 | Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Paper provenance confirms name but targeted search did not establish the company official website or official mark. No similarly named company substituted. 核验：2026-11-02T07:36:26.329898+00:00。 官方核验入口：https://ojs.aaai.org/index.php/AAAI/article/download/39267/43228 |  |

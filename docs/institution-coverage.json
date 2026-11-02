@@ -1,13 +1,13 @@
 {
   "checkedAt": "2026-11-02",
-  "scope": "Public paper-affiliation mark audit, not permission grants or endorsement. Snapshot only.",
+  "scope": "Public paper-affiliation mark audit, not permission grants or endorsement. Snapshot only. verified refers to source/identity, not permission clearance; see displayedWithoutSeparatePermission.",
   "institutionCounts": {
     "total": 252,
-    "verified": 105,
-    "pending": 147
+    "verified": 107,
+    "pending": 145
   },
   "pendingReasonCounts": {
-    "permission-required": 63,
+    "permission-required": 61,
     "policy-uncertain": 15,
     "access-unavailable": 43,
     "no-compatible-official-asset": 14,
@@ -121,28 +121,6 @@
       "reasonCode": "permission-required",
       "reason": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Prior audit retained without bypass or duplicate download: 官方主页完整透明徽章已确认；校方名称及标识授予规则列有书面申请和合同程序，未核实本站展示授权，因此仅显示文字名称。 官方依据：https://www.vu.lt/site_files/Vardo_ir_%C5%BEenklo_suteikimo_ir_naudojimo_taisykl%C4%97s.pdf 核验：2026-11-02。",
       "sources": [],
-      "checkedAt": "2026-11-02"
-    },
-    {
-      "id": "pending-johns-hopkins-university",
-      "name": "Johns Hopkins University",
-      "reasonCode": "permission-required",
-      "reason": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Official standalone shield allowed as format, but use-of-name rules strictly prohibit third-party mark use without prior written permission. 核验：2026-11-02。 官方核验入口：https://brand.jhu.edu/resources/use-of-name/",
-      "sources": [
-        "https://brand.jhu.edu/resources/use-of-name/"
-      ],
-      "checkedAt": "2026-11-02"
-    },
-    {
-      "id": "pending-washington-university-in-st-louis",
-      "name": "Washington University in St. Louis",
-      "reasonCode": "permission-required",
-      "reason": "Full official WashU logo recovered; original compact-format blocker is solved. Current university policy expressly requires written authorization for third-party and not-for-profit use. Public brand JPG is not permission; no Washington-Seattle substitution. Prior exact finding: Shield must be solo, not combined with text as lockup; full-colour shield alone requires approval and seal requires permission. No compliant current compact card use verified. 核验：2026-11-02。 官方核验入口：https://marcomm.washu.edu/university-shield-seal/",
-      "sources": [
-        "https://policies.washu.edu/policies/permission-to-use-university-names-logos-and-trademarks/",
-        "https://marcomm.washu.edu/washu-logo/",
-        "https://marcomm.washu.edu/app/uploads/2024/02/WashU-RGB.jpg"
-      ],
       "checkedAt": "2026-11-02"
     },
     {
@@ -1487,6 +1465,38 @@
       "url": "https://arxiv.org/abs/2610.41844v1",
       "status": "unavailable",
       "reason": "Still unavailable: official HTML/PDF only names Jiaming Wang, no institutional block. Exact-title/author project searches yielded no matching official affiliation-bearing source; unrelated SketchMate projects excluded."
+    }
+  ],
+  "displayedWithoutSeparatePermission": [
+    {
+      "id": "pending-johns-hopkins-university",
+      "name": "Johns Hopkins University",
+      "reasonCode": "permission-required",
+      "reason": "Reviewed previous exact-source finding against expanded full-wordmark/native-background/display-size contract. These new presentation freedoms do not themselves establish missing third-party usage permission; retained precise source condition without repeating denied requests. Prior exact finding: Official standalone shield allowed as format, but use-of-name rules strictly prohibit third-party mark use without prior written permission. 核验：2026-11-02。 官方核验入口：https://brand.jhu.edu/resources/use-of-name/",
+      "sources": [
+        "https://brand.jhu.edu/resources/use-of-name/"
+      ],
+      "checkedAt": "2026-11-02",
+      "rightsStatus": "not-separately-authorized",
+      "displayScope": "paper-affiliation-only",
+      "sourceUrl": "https://universitycommunications.jhu.edu/assets/themes/generic/src/assets/images/logos/university-logo-small-horizontal-black-no-clear-space.png",
+      "policyUrl": "https://brand.jhu.edu/resources/use-of-name/"
+    },
+    {
+      "id": "pending-washington-university-in-st-louis",
+      "name": "Washington University in St. Louis",
+      "reasonCode": "permission-required",
+      "reason": "Full official WashU logo recovered; original compact-format blocker is solved. Current university policy expressly requires written authorization for third-party and not-for-profit use. Public brand JPG is not permission; no Washington-Seattle substitution. Prior exact finding: Shield must be solo, not combined with text as lockup; full-colour shield alone requires approval and seal requires permission. No compliant current compact card use verified. 核验：2026-11-02。 官方核验入口：https://marcomm.washu.edu/university-shield-seal/",
+      "sources": [
+        "https://policies.washu.edu/policies/permission-to-use-university-names-logos-and-trademarks/",
+        "https://marcomm.washu.edu/washu-logo/",
+        "https://marcomm.washu.edu/app/uploads/2024/02/WashU-RGB.jpg"
+      ],
+      "checkedAt": "2026-11-02",
+      "rightsStatus": "not-separately-authorized",
+      "displayScope": "paper-affiliation-only",
+      "sourceUrl": "https://marcomm.washu.edu/app/uploads/2024/02/WashU-RGB.jpg",
+      "policyUrl": "https://policies.washu.edu/policies/permission-to-use-university-names-logos-and-trademarks/"
     }
   ]
 }

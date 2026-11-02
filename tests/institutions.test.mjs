@@ -26,3 +26,14 @@ test('UW informational exception is confined to evidenced paper marks, with clea
  const css=await readFile(new URL('../styles.css',import.meta.url),'utf8');assert.match(css,/\.institution-avatar\.uw-affiliation-mark\{width:60px;height:44px;flex:0 0 60px;padding:6px;background:#fff;border:0;border-radius:0;box-shadow:none\}/);
  const bad=structuredClone(registry);resolveInstitution(bad,'University of Washington').displayScope='site-brand';assert.ok(validateInstitutions(bad).some(error=>error.includes('展示范围')));
 });
+
+test('WashU official paper mark is not UW and does not claim separate institutional permission',async()=>{
+ const {institutionRow}=await import('../lib/paper-media.js');const w=resolveInstitution(registry,'Washington University in St. Louis');assert.equal(w.rightsStatus,'not-separately-authorized');assert.equal(w.displayScope,'paper-affiliation-only');assert.match(w.logo.sourceUrl,/marcomm\.washu\.edu/);assert.match(w.logo.rights,/no separate institutional permission/i);assert.equal(w.logo.background,'light');assert.notEqual(w.logo.path,resolveInstitution(registry,'University of Washington').logo.path);
+ const p={visuals:{institutions:[{...w,name:w.officialName,institutionId:w.id}]}};assert.ok(institutionRow(p).includes(w.logo.path));assert.ok(!institutionGallery([p],registry).includes('<img'));
+ const bad=structuredClone(registry);delete resolveInstitution(bad,w.officialName).displayScope;assert.ok(validateInstitutions(bad).length);
+});
+
+test('JHU full transparent official mark is paper-only, accurately attributed and above minimum size',async()=>{
+ const {institutionRow}=await import('../lib/paper-media.js');const {institutionDisplayCSS}=await import('../lib/institution-display.js');const j=resolveInstitution(registry,'Johns Hopkins University');assert.equal(j.rightsStatus,'not-separately-authorized');assert.equal(j.alphaStatus,'transparent');assert.equal(j.logo.width,908);assert.equal(j.logo.height,172);assert.match(j.logo.sourceUrl,/universitycommunications\.jhu\.edu/);assert.match(j.logo.rights,/no separate institutional permission/i);
+ const p={visuals:{institutions:[{...j,name:j.officialName,institutionId:j.id}]}};assert.ok(institutionRow(p).includes(j.logo.path));assert.ok(!institutionGallery([p],registry).includes('<img'));assert.match(institutionDisplayCSS(registry),/width:275px;height:91px;flex:0 0 auto;padding:24px/);
+});
