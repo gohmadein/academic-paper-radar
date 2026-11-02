@@ -10,7 +10,8 @@
     "build": "node scripts/build.mjs",
     "preview": "node scripts/serve.mjs",
     "ingest": "node scripts/ingest.mjs",
-    "check": "npm test && npm run validate && npm run build"
+    "check": "npm test && npm run validate && npm run build",
+    "ingest:arxiv": "node scripts/arxiv-ingest.mjs"
   },
   "engines": {
     "node": ">=20"

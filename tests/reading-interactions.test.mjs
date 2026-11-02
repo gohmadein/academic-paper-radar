@@ -1,3 +1,4 @@
+import * as arxivBulletin from '../lib/arxiv-bulletin.js';
 import * as calendarTaskModule from '../lib/calendar-tasks.js';
 import * as calendar from '../lib/research-calendar.js';
 import * as liBackground from '../lib/li-background.js';
@@ -39,7 +40,7 @@ async function harness({navigator={},storageFailure=false}={}) {
   });
   const element=id=>{if(!elements.has(id))elements.set(id,make(id));return elements.get(id)};
   const query=selector=>{const match=selector.match(/\[data-([\w-]+)="([^"]+)"\]/);if(!match)return null;const key=match[1].replace(/-([a-z])/g,(_,c)=>c.toUpperCase());return make(selector,{[key]:match[2],paperControl:true})};
-  context=vm.createContext({...calendarTaskModule,...calendar,...liBackground,...sideArt,...researchMap,...profileIcons,...sources,...topics,...model,...digest,...institutions,...transfer,...sharing,...media,...notes,...notesView,
+  context=vm.createContext({...arxivBulletin,...calendarTaskModule,...calendar,...liBackground,...sideArt,...researchMap,...profileIcons,...sources,...topics,...model,...digest,...institutions,...transfer,...sharing,...media,...notes,...notesView,
     navigator,e:model.escapeHTML,updateHUD(){},console,URL,URLSearchParams,TextEncoder,CSS:{escape:x=>x},setTimeout:(fn)=>{timers.set(++timerId,fn);return timerId},clearTimeout:id=>timers.delete(id),
     document:{title:'ZERO FIELD',getElementById:element,querySelectorAll:()=>[],querySelector:query,activeElement:make('body'),body:{classList:{toggle(name,on){if(on)bodyClasses.add(name);else bodyClasses.delete(name)}}},addEventListener:(type,fn)=>on(type,fn)},
     window:{confirm:()=>true,addEventListener:(type,fn)=>{windowEvents[type]=fn}},localStorage:{getItem:k=>stored.get(k)??null,setItem:(k,v)=>{if(storageFailure)throw Error('QuotaExceededError');stored.set(k,v)}},location,
@@ -332,4 +333,20 @@ test('Calendar backup text and status stay within their owning profile',async()=
  const h=await harness();await h.click({category:'li'});h.element('calendar-task-backup-text').value='Li backup buffer';h.element('calendar-task-transfer-status').textContent='Li result';
  await h.click({category:'lv'});assert.equal(h.element('calendar-task-backup-text').value,'');assert.equal(h.element('calendar-task-transfer-status').textContent,'');
  h.element('calendar-task-backup-text').value='Lv buffer';await h.click({category:'li'});assert.equal(h.element('calendar-task-backup-text').value,'Li backup buffer');assert.equal(h.element('calendar-task-transfer-status').textContent,'Li result');
+});
+
+test('Xun bulletin is separate from curated routes and stale archive requests cannot replace newer choices',async()=>{
+ const h=await harness(),day=JSON.parse(await read('data/arxiv/days/2026-11-02.json'));await h.click({category:'xun'});const route=h.location.hash;
+ // Let any initial refresh settle before installing the deterministic transport.
+ await h.run('refreshArxivBulletin()');
+ const later=structuredClone(day);later.date='2026-11-03';const wait=deferred();
+ h.run('arxivLoading=false');h.run('arxivIndex=null');
+ h.run('globalThis.testTransport={};');h.run('testTransport').index={version:1,days:[{date:'2026-11-03',file:'days/2026-11-03.json',count:later.entries.length,status:later.status},{date:'2026-11-02',file:'days/2026-11-02.json',count:day.entries.length,status:day.status}]};
+ h.run('testTransport').later=later;h.run('testTransport').pending=wait.promise;
+ h.run("fetch=async url=>({ok:true,json:async()=>String(url).includes('index.json')?testTransport.index:String(url).endsWith('/2026-11-02.json')?await testTransport.pending:testTransport.later})");
+ const old=h.run("refreshArxivBulletin('2026-11-02')");await Promise.resolve();const newest=h.run("refreshArxivBulletin('2026-11-03')");await newest;wait.resolve(day);await old;
+ assert.equal(h.run('arxivLoadedDate'),'2026-11-03');assert.equal(h.run('arxivDay.date'),'2026-11-03');assert.equal(h.location.hash,route);
+ h.run("fetch=async()=>{throw Error('offline')}");await h.run('refreshArxivBulletin()');assert.match(h.run('arxivError'),/上次/);assert.equal(h.run('arxivDay.date'),'2026-11-03');
+ for(const category of ['li','lv','all']){await h.click({category});assert.equal(h.element('arxiv-updates').hidden,true);}
+ await h.click({category:'xun'});assert.equal(h.element('arxiv-updates').hidden,false);await h.click({view:'archive'});assert.equal(h.element('arxiv-updates').hidden,true);
 });

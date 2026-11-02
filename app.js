@@ -1,3 +1,4 @@
+import {bulletinHTML,validateArxivBulletin} from './lib/arxiv-bulletin.js';
 import {createCalendarTaskStore,calendarTaskKey,CALENDAR_TASKS_KEY,MAX_CALENDAR_TASKS_BYTES} from './lib/calendar-tasks.js';
 import {calendarDate,shiftCalendarMonth,calendarEventDay,researchCalendarHTML,validateCalendar,calendarForProfile} from './lib/research-calendar.js';
 import {liBackgroundClass} from './lib/li-background.js';
@@ -70,6 +71,7 @@ let mapRegion = '';
 let mapProfile = '';
 let mapPaper = '';
 let lastMapMarkup = '';
+let arxivError='',lastArxivMarkup='',arxivIndex=null,arxivSelected='',arxivLoadedDate='',arxivDay=null,arxivLoading=false,arxivAttempt=0,arxivToken=0;
 let calendarData=null,calendarMonth='',calendarSelected='',lastCalendarMarkup='',calendarTimer;
 let calendarTab='conference',calendarScope='main',calendarFetchedDay='',calendarFetching=false,calendarLastAttempt=0,calendarRefreshError='';
 let calendarEditingId='',calendarEditorOriginal='',calendarEditorOriginalDate='',calendarEditorDraft=null,calendarTaskTrigger=null;
@@ -149,6 +151,8 @@ function updateViewChrome() {
   $('profile-motto').setAttribute('data-profile',motto?state.category:'');
   $('profile-motto').setAttribute('lang',state.category==='li'?'en':'zh-CN');
   $('research-map').hidden = !isFeed || state.demo;
+  $('arxiv-updates').hidden=!isFeed||state.demo||state.category!=='xun';
+  renderArxivBulletin();
   if(PROFILES[state.category]&&calendarProfile!==state.category){calendarDrafts[calendarProfile]=calendarEditorDraft;calendarTransfers[calendarProfile]={text:$('calendar-task-backup-text').value,status:$('calendar-task-transfer-status').textContent};calendarProfile=state.category;calendarTasks=calendarTaskStores[calendarProfile];calendarEditorDraft=calendarDrafts[calendarProfile]||null;$('calendar-task-backup-text').value=calendarTransfers[calendarProfile]?.text||'';$('calendar-task-transfer-status').textContent=calendarTransfers[calendarProfile]?.status||'';$('calendar-task-import').value='';}
   $('research-calendar').hidden = !isFeed || state.demo || !PROFILES[state.category];
   $('reading-intro').setAttribute('data-calendar-profile',PROFILES[state.category]?state.category:'');
@@ -204,6 +208,31 @@ function emptyState(kind) {
   if (kind === 'bookmarks') return `<div class="empty-state no-results"><div class="empty-art" aria-hidden="true"><span>◇</span></div><h3>暂无书签</h3><p>点击论文卡片上的 ◇ 收藏。${state.demo?'当前只显示演示模式的书签。':'当前只显示真实论文的书签。'}</p><button class="secondary-button" data-action="feed">返回每日精选 →</button></div>`;
   return `<div class="empty-state no-results"><div class="empty-art" aria-hidden="true"><span>⌕</span></div><h3>没有匹配的论文</h3><p>调整关键词或清除筛选。</p><button class="secondary-button" data-action="clear">清除筛选 →</button></div>`;
 }
+
+function renderArxivBulletin(){
+ const root=$('arxiv-updates');if(root.hidden)return;
+ if(!arxivIndex&&!arxivLoading&&Date.now()-arxivAttempt>60000)refreshArxivBulletin();
+ const expanded=root.querySelector('details')?.open;
+ const selector=arxivIndex?.days?.length?`<label class="arxiv-bulletin-date">归档日期 <select id="arxiv-bulletin-date" aria-label="arXiv公告归档日期">${arxivIndex.days.map(row=>`<option value="${e(row.date)}"${row.date===arxivLoadedDate?' selected':''}>${e(row.date)}</option>`).join('')}</select></label>`:'';
+ const markup=bulletinHTML(arxivDay).replace('</summary>','</summary>'+selector+(arxivError?`<p class="arxiv-bulletin-status" role="status">${e(arxivError)}</p>`:''));
+ if(markup===lastArxivMarkup)return;lastArxivMarkup=markup;root.innerHTML=markup;
+ if(expanded)root.querySelector('details').open=true;
+}
+async function refreshArxivBulletin(date=''){
+ if(arxivLoading&&!date)return;arxivLoading=true;arxivAttempt=Date.now();const token=++arxivToken;
+ try{
+  const index=await getJSON('data/arxiv/index.json');
+  if(index.version!==1||!Array.isArray(index.days)||index.days.some(row=>!/^\d{4}-\d{2}-\d{2}$/.test(row.date)||row.file!==`days/${row.date}.json`))throw Error('invalid bulletin index');
+  if(token!==arxivToken)return;arxivIndex=index;const selected=date||arxivSelected||index.days[0]?.date||'';
+  const row=index.days.find(row=>row.date===selected);if(!row){arxivDay=null;arxivLoadedDate='';return;}
+  const next=await getJSON('data/arxiv/'+row.file);validateArxivBulletin(next);if(next.date!==row.date||next.entries.length!==row.count||next.status!==row.status)throw Error('invalid bulletin day');
+  if(token===arxivToken){arxivDay=next;arxivLoadedDate=selected;arxivError='';}
+ }catch{if(token===arxivToken){if(date&&date!==arxivLoadedDate){arxivDay=null;arxivLoadedDate=date;}arxivError=arxivDay?'刷新失败，当前仍为上次已发布资料。':'公告读取失败，未能确认更新。';}}
+ finally{if(token===arxivToken){arxivLoading=false;renderArxivBulletin();}}
+}
+window.addEventListener('focus',()=>{if(!$('arxiv-updates').hidden&&Date.now()-arxivAttempt>60000)refreshArxivBulletin();});
+document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!$('arxiv-updates').hidden&&Date.now()-arxivAttempt>60000)refreshArxivBulletin();});
+document.addEventListener('change',event=>{if(event.target?.id==='arxiv-bulletin-date'){arxivSelected=event.target.value;refreshArxivBulletin(arxivSelected);}});
 
 function renderCalendar() {
   clearTimeout(calendarTimer);

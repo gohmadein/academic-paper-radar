@@ -1,3 +1,4 @@
+import {validateArxivArchive} from './arxiv-ingest.mjs';
 import {profileSources} from '../lib/source-directory.js';
 import {validateCalendarProfiles} from '../lib/research-calendar.js';
 import {readFile, readdir} from 'node:fs/promises';
@@ -66,6 +67,7 @@ export async function validateAll(base = root,{assetBase=base}={}) {
     const expected=Object.fromEntries(['xun','li','lv'].map(profile=>[profile,profileSources(profile,{profiles,registry}).filter(source=>source.type==='conference').map(source=>source.name)]));
     errors.push(...validateCalendarProfiles(calendar,expected).map(error=>'data/conference-calendar.json: '+error));
   }catch(error){errors.push('data/conference-calendar.json: '+error.message);}
+  errors.push(...(await validateArxivArchive(base)).map(error=>'data/arxiv: '+error));
   return {errors,count,assets:[...assetPaths].sort()};
 }
 

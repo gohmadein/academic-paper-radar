@@ -1,0 +1,4545 @@
+{
+  "version": 1,
+  "date": "2026-11-02",
+  "announcementDate": "2026-11-02",
+  "checkedAt": "2026-11-02T05:48:07.807205Z",
+  "status": "complete",
+  "coverage": {
+    "checkedCategories": [
+      "cs.RO",
+      "cs.CV",
+      "cs.LG",
+      "cs.AI",
+      "eess.SY",
+      "eess.IV"
+    ],
+    "checkedCount": 992,
+    "includedCount": 142,
+    "limitations": [
+      "仅按官方列表标题与摘要相关性筛选；未声称阅读全文、验证实验或同行评审。",
+      "六分类当日公告均已逐项筛选；收录范围为机器人相关内容，不代表 arXiv 所有学科。",
+      "英文标题与全体作者来自官方元数据；未核实的中文译名不补写。",
+      "边界相关条目包括机器人硬件评估、感知、具身仿真与控制基础方法；不等于推荐或质量背书。",
+      "完整表示六分类公告抓取与逐项元数据筛选覆盖，不保证语义筛选零漏收或涵盖所有公开机器人论文。"
+    ],
+    "categoryStatus": [
+      {
+        "category": "cs.RO",
+        "status": "complete",
+        "announcementDate": "2026-11-02",
+        "listedCount": 110,
+        "checkedCount": 110,
+        "sourceUrl": "https://arxiv.org/list/cs.RO/new"
+      },
+      {
+        "category": "cs.CV",
+        "status": "complete",
+        "announcementDate": "2026-11-02",
+        "listedCount": 165,
+        "checkedCount": 165,
+        "sourceUrl": "https://arxiv.org/list/cs.CV/new"
+      },
+      {
+        "category": "cs.LG",
+        "status": "complete",
+        "announcementDate": "2026-11-02",
+        "listedCount": 337,
+        "checkedCount": 337,
+        "sourceUrl": "https://arxiv.org/list/cs.LG/new"
+      },
+      {
+        "category": "cs.AI",
+        "status": "complete",
+        "announcementDate": "2026-11-02",
+        "listedCount": 297,
+        "checkedCount": 297,
+        "sourceUrl": "https://arxiv.org/list/cs.AI/new"
+      },
+      {
+        "category": "eess.SY",
+        "status": "complete",
+        "announcementDate": "2026-11-02",
+        "listedCount": 61,
+        "checkedCount": 61,
+        "sourceUrl": "https://arxiv.org/list/eess.SY/new"
+      },
+      {
+        "category": "eess.IV",
+        "status": "complete",
+        "announcementDate": "2026-11-02",
+        "listedCount": 22,
+        "checkedCount": 22,
+        "sourceUrl": "https://arxiv.org/list/eess.IV/new"
+      }
+    ]
+  },
+  "entries": [
+    {
+      "id": "arxiv-2506-08630",
+      "arxivId": "2506.08630",
+      "version": 4,
+      "titleEn": "Shared Modular Recurrence in Contextual MDPs for Universal Morphology Control",
+      "titleZh": null,
+      "authors": [
+        "Laurens Engwegen",
+        "Max Weltevrede",
+        "Caroline Horsch",
+        "Daan Brinks",
+        "Wendelin Böhmer"
+      ],
+      "publishedDate": "2025-06-10",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.AI",
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2506.08630v4",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        },
+        {
+          "category": "cs.AI",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2507-10961",
+      "arxivId": "2507.10961",
+      "version": 5,
+      "titleEn": "EquiContact: A Hierarchical SE(3) Vision-to-Force Equivariant Framework for Spatially Generalizable Contact-rich Tasks",
+      "titleZh": null,
+      "authors": [
+        "Joohwan Seo",
+        "Arvind Kruthiventy",
+        "Soomi Lee",
+        "Megan Teng",
+        "Seoyeon Choi",
+        "Xiang Zhang",
+        "Jongeun Choi",
+        "Roberto Horowitz"
+      ],
+      "publishedDate": "2025-07-15",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2507.10961v5",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2510-24688",
+      "arxivId": "2510.24688",
+      "version": 2,
+      "titleEn": "MIC-BEV: Multi-Infrastructure Camera Bird's-Eye-View Transformer with Relation-Aware Fusion for 3D Object Detection",
+      "titleZh": null,
+      "authors": [
+        "Yun Zhang",
+        "Zhaoliang Zheng",
+        "Johnson Liu",
+        "Zhiyu Huang",
+        "Zewei Zhou",
+        "Zonglin Meng",
+        "Tianhui Cai",
+        "Jiaqi Ma"
+      ],
+      "publishedDate": "2025-10-28",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2510.24688v2",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.CV",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2511-17166",
+      "arxivId": "2511.17166",
+      "version": 4,
+      "titleEn": "Reflection-Based Relative Localization for Cooperative UAV Teams Using Active Markers",
+      "titleZh": null,
+      "authors": [
+        "Tim Lakemann",
+        "Daniel Bonilla Licea",
+        "Viktor Walter",
+        "Martin Saska"
+      ],
+      "publishedDate": "2025-11-21",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2511.17166v4",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2602-19308",
+      "arxivId": "2602.19308",
+      "version": 2,
+      "titleEn": "WildOS: Open-Vocabulary Object Search in the Wild",
+      "titleZh": null,
+      "authors": [
+        "Hardik Shah",
+        "Manthan Patel",
+        "Erica Tevere",
+        "Deegan Atha",
+        "Marcel Kaufmann",
+        "Shehryar Khattak",
+        "Marco Hutter",
+        "Jonas Frey",
+        "Patrick Spieler"
+      ],
+      "publishedDate": "2026-02-22",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2602.19308v2",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        },
+        {
+          "category": "cs.CV",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2603-02004",
+      "arxivId": "2603.02004",
+      "version": 2,
+      "titleEn": "CHOP: Counterfactual Human Preference Labels Improve Obstacle Avoidance in Visuomotor Navigation Policies",
+      "titleZh": null,
+      "authors": [
+        "Gershom Seneviratne",
+        "Jianyu An",
+        "Vaibhav Shende",
+        "Sahire Ellahy",
+        "Yaxita Amin",
+        "Kondapi Manasanjani",
+        "Samarth Chopra",
+        "Jonathan Deepak Kannan",
+        "Dinesh Manocha"
+      ],
+      "publishedDate": "2026-03-02",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2603.02004v2",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2603-02083",
+      "arxivId": "2603.02083",
+      "version": 3,
+      "titleEn": "$π$-StepNFT: Wider Space Needs Finer Steps in Online RL for Flow-based VLAs",
+      "titleZh": null,
+      "authors": [
+        "Siting Wang",
+        "Xiaofeng Wang",
+        "Zheng Zhu",
+        "Minnan Pei",
+        "Xinyu Cui",
+        "Cheng Deng",
+        "Jian Zhao",
+        "Guan Huang",
+        "Haifeng Zhang",
+        "Jun Wang"
+      ],
+      "publishedDate": "2026-03-02",
+      "updatedDate": "2026-10-29",
+      "change": "revised",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2603.02083v3",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        },
+        {
+          "category": "cs.CV",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2603-08255",
+      "arxivId": "2603.08255",
+      "version": 2,
+      "titleEn": "FlowTouch: View-Invariant Visuo-Tactile Prediction",
+      "titleZh": null,
+      "authors": [
+        "Seongjin Bien",
+        "Carlo Kneissl",
+        "Tobias Jülg",
+        "Frank Fundel",
+        "Thomas Ressler-Antal",
+        "Florian Walter",
+        "Björn Ommer",
+        "Gitta Kutyniok",
+        "Wolfram Burgard"
+      ],
+      "publishedDate": "2026-03-09",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2603.08255v2",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        },
+        {
+          "category": "cs.LG",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2603-17969",
+      "arxivId": "2603.17969",
+      "version": 2,
+      "titleEn": "Specification-Aware Distribution Shaping for Robotics Foundation Models",
+      "titleZh": null,
+      "authors": [
+        "Sadık Bera Yüksel",
+        "Derya Aksaray"
+      ],
+      "publishedDate": "2026-03-18",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2603.17969v2",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        },
+        {
+          "category": "cs.AI",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2603-21142",
+      "arxivId": "2603.21142",
+      "version": 2,
+      "titleEn": "Semantically Adaptive Control Barrier Functions with Vision-Language Models for Real-Time Robot Navigation",
+      "titleZh": null,
+      "authors": [
+        "Jeffrey Chen",
+        "Rohan Chandra"
+      ],
+      "publishedDate": "2026-03-22",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2603.21142v2",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2604-11811",
+      "arxivId": "2604.11811",
+      "version": 3,
+      "titleEn": "M$^\\star$: Every Task Deserves Its Own Memory Harness",
+      "titleZh": null,
+      "authors": [
+        "Wenbo Pan",
+        "Shujie Liu",
+        "Xiangyang Zhou",
+        "Xianlong Wang",
+        "Shiwei Zhang",
+        "Bingjing Xu",
+        "Wanlu Shi",
+        "Xiaohua Jia"
+      ],
+      "publishedDate": "2026-04-10",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.PL",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2604.11811v3",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.LG",
+          "change": "revised"
+        },
+        {
+          "category": "cs.AI",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2605-09342",
+      "arxivId": "2605.09342",
+      "version": 2,
+      "titleEn": "A Cross-Layered Multi-Drone Coordination for Medical Supply Delivery during Disaster Response Management",
+      "titleZh": null,
+      "authors": [
+        "Aneesh Calyam",
+        "Subrahmanya Chandra Bhamidipati",
+        "Zack Murry",
+        "Sharan Srinivas"
+      ],
+      "publishedDate": "2026-05-10",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.MA",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2605.09342v2",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.LG",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2605-21976",
+      "arxivId": "2605.21976",
+      "version": 2,
+      "titleEn": "TacO: Benchmarking Tactile Sensors for Object Manipulation",
+      "titleZh": null,
+      "authors": [
+        "Anya Zorin",
+        "Zilin Si",
+        "Sachin Bhadang",
+        "Myungsun Park",
+        "Junsung Park",
+        "Alexiy Buynitsky",
+        "Taejun Park",
+        "Sohee John Yoon",
+        "Yong-Lae Park",
+        "Oliver Kroemer",
+        "Zeynep Temel",
+        "Michael T. Tolley",
+        "Sha Yi",
+        "Xiaolong Wang"
+      ],
+      "publishedDate": "2026-05-21",
+      "updatedDate": "2026-10-29",
+      "change": "revised",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2605.21976v2",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2606-02432",
+      "arxivId": "2606.02432",
+      "version": 2,
+      "titleEn": "NDPP-Grasp: Non-Differentiable Physical Plausibility Constraint-Guided Task-Oriented Dexterous Grasp Generation",
+      "titleZh": null,
+      "authors": [
+        "Qiuchi Xiang",
+        "Haoxuan Qu",
+        "Hossein Rahmani",
+        "Jun Liu"
+      ],
+      "publishedDate": "2026-06-01",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2606.02432v2",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2606-07424",
+      "arxivId": "2606.07424",
+      "version": 2,
+      "titleEn": "Rapid co-design of Buoyancy-assisted robots for Challenging Locomotion using Gaussian Evolutionary Specialists",
+      "titleZh": null,
+      "authors": [
+        "Ankit Sinha",
+        "Nitish Sontakke",
+        "Dennis Hong",
+        "Yusuke Tanaka",
+        "Sehoon Ha"
+      ],
+      "publishedDate": "2026-06-05",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2606.07424v2",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2606-18426",
+      "arxivId": "2606.18426",
+      "version": 3,
+      "titleEn": "VEGA: Learning Navigation VLAs from In-the-Wild Egocentric Video with Geometric Trajectory Supervision",
+      "titleZh": null,
+      "authors": [
+        "Gershom Seneviratne",
+        "Yohan Abeysinghe",
+        "Jianyu An",
+        "Vaibhav Shende",
+        "Rahul Kumar",
+        "Dinesh Manocha"
+      ],
+      "publishedDate": "2026-06-16",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2606.18426v3",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2606-30613",
+      "arxivId": "2606.30613",
+      "version": 4,
+      "titleEn": "Sequential Planning via Anchored Robotic Keypoints",
+      "titleZh": null,
+      "authors": [
+        "Bryce Grant",
+        "Aryeh Rothenberg",
+        "Logan Senning",
+        "Zonghe Chua",
+        "Zach Patterson",
+        "Peng Wang"
+      ],
+      "publishedDate": "2026-06-29",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2606.30613v4",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2607-12130",
+      "arxivId": "2607.12130",
+      "version": 3,
+      "titleEn": "More than a Manipulator: Planning Propellant-Free Attitude Maneuvers for Free-Floating Spacecraft",
+      "titleZh": null,
+      "authors": [
+        "Harsh G. Bhundiya",
+        "Avi Soval",
+        "Keenan Albee"
+      ],
+      "publishedDate": "2026-07-13",
+      "updatedDate": "2026-10-29",
+      "change": "revised",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.12130v3",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2607-25397",
+      "arxivId": "2607.25397",
+      "version": 2,
+      "titleEn": "Decompose and Reorganize: Planning with Primitives and Visuomotor Policies Learned from Demonstrations",
+      "titleZh": null,
+      "authors": [
+        "Yizhou Chen",
+        "Hang Xu",
+        "Dongjie Yu",
+        "Yupu Lu",
+        "Tengye Xu",
+        "Zeqing Zhang",
+        "Wei Zhang",
+        "Yi Ren",
+        "Ben M. Chen",
+        "Jia Pan"
+      ],
+      "publishedDate": "2026-07-28",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.25397v2",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2607-28198",
+      "arxivId": "2607.28198",
+      "version": 3,
+      "titleEn": "UniCross: Unified Cross-Skill Dexterous Manipulation Synthesis",
+      "titleZh": null,
+      "authors": [
+        "Hui Zhang",
+        "Julian Ferchow",
+        "Jie Song",
+        "Mirko Meboldt"
+      ],
+      "publishedDate": "2026-07-30",
+      "updatedDate": "2026-10-29",
+      "change": "revised",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.28198v3",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        },
+        {
+          "category": "cs.CV",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2608-01205",
+      "arxivId": "2608.01205",
+      "version": 2,
+      "titleEn": "ReBRAC-v2: The Return of the King",
+      "titleZh": null,
+      "authors": [
+        "Denis Tarasov",
+        "Robert K. Katzschmann"
+      ],
+      "publishedDate": "2026-08-02",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.01205v2",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.LG",
+          "change": "revised"
+        },
+        {
+          "category": "cs.AI",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2608-06008",
+      "arxivId": "2608.06008",
+      "version": 2,
+      "titleEn": "Adaptive-WAM: Quality-Guided Early-Exit Planning from Intermediate Video-Diffusion Features",
+      "titleZh": null,
+      "authors": [
+        "Sining Ang",
+        "Yuguang Yang",
+        "Yan Wang"
+      ],
+      "publishedDate": "2026-08-06",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.06008v2",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2608-06192",
+      "arxivId": "2608.06192",
+      "version": 2,
+      "titleEn": "HOPE: Hand-Object Pressure Estimation from Monocular Videos",
+      "titleZh": null,
+      "authors": [
+        "Subin Jeon",
+        "Byungjun Kim",
+        "Hanbyul Joo"
+      ],
+      "publishedDate": "2026-08-06",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.06192v2",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.CV",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2608-19740",
+      "arxivId": "2608.19740",
+      "version": 2,
+      "titleEn": "Keeping the Franka Emika Panda alive: a ROS 2 stack with a reliable position interface",
+      "titleZh": null,
+      "authors": [
+        "Antonio Langella",
+        "Davide Risi",
+        "Vincenzo Petrone",
+        "Enrico Ferrentino",
+        "Pasquale Chiacchio"
+      ],
+      "publishedDate": "2026-08-20",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.19740v2",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2609-03602",
+      "arxivId": "2609.03602",
+      "version": 2,
+      "titleEn": "SV-WAM: An Efficient Surround-View World-Action Model for End-to-End Autonomous Driving",
+      "titleZh": null,
+      "authors": [
+        "Jinyang Wang",
+        "Shiwei Li",
+        "Junjian Wang",
+        "Zhiqiang Deng",
+        "Jianbin Gao",
+        "Yihang Zhao",
+        "Liu Liu",
+        "Yongjia Zhao",
+        "Jinlong Chen",
+        "Huirui Xu",
+        "Yifeng Pan",
+        "Kangwei Liu",
+        "Fan Ren",
+        "Ji Tao",
+        "Minghao Yang"
+      ],
+      "publishedDate": "2026-09-03",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.03602v2",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        },
+        {
+          "category": "cs.CV",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2609-19906",
+      "arxivId": "2609.19906",
+      "version": 3,
+      "titleEn": "Learning and Transferring Closed-Loop Robot Software",
+      "titleZh": null,
+      "authors": [
+        "So Kuroki",
+        "Kento Kawaharazuka",
+        "Yujin Tang"
+      ],
+      "publishedDate": "2026-09-17",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2609.19906v3",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        },
+        {
+          "category": "cs.AI",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2609-27439",
+      "arxivId": "2609.27439",
+      "version": 2,
+      "titleEn": "Compressed delayed-information projection for underwater navigation under acoustic measurement latency",
+      "titleZh": null,
+      "authors": [
+        "Shuyue Li",
+        "Miguel López-Benítez",
+        "Eng Gee Lim",
+        "Fei Ma",
+        "Qian Dong",
+        "Mengze Cao",
+        "Limin Yu",
+        "Xiaohui Qin"
+      ],
+      "publishedDate": "2026-09-23",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.27439v2",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2609-35651",
+      "arxivId": "2609.35651",
+      "version": 2,
+      "titleEn": "Denoising Multirobot Trajectories",
+      "titleZh": null,
+      "authors": [
+        "Yuhao Zhang",
+        "Keisuke Okumura",
+        "Ajay Shankar",
+        "Amanda Prorok"
+      ],
+      "publishedDate": "2026-09-28",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.RO",
+        "cs.MA"
+      ],
+      "url": "https://arxiv.org/abs/2609.35651v2",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-00329",
+      "arxivId": "2610.00329",
+      "version": 5,
+      "titleEn": "Non-Commutative Lie-Algebraic State-Space Models: Finite-Division Variety Laws, Semidirect Cascades, and Gradient Saddle Escape",
+      "titleZh": null,
+      "authors": [
+        "Zeyu Jia"
+      ],
+      "publishedDate": "2026-09-29",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2610.00329v5",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.LG",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-03498",
+      "arxivId": "2610.03498",
+      "version": 2,
+      "titleEn": "Detect and Suppress: A Mechanistic Defense against Adversarial Patches in VLA Models",
+      "titleZh": null,
+      "authors": [
+        "Yukiya Horiba",
+        "Koshiro Aoki",
+        "Shunsuke Yasuki",
+        "Bum Jun Kim",
+        "Taiki Miyanishi"
+      ],
+      "publishedDate": "2026-10-02",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2610.03498v2",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        },
+        {
+          "category": "cs.AI",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-17748",
+      "arxivId": "2610.17748",
+      "version": 2,
+      "titleEn": "I3L: Iterative Interactive Imitation Learning for Whole-Body Mobile Manipulation",
+      "titleZh": null,
+      "authors": [
+        "Wensi Ai",
+        "Christopher Luey",
+        "Karthik Dharmarajan",
+        "Evans Han",
+        "Yunfan Jiang",
+        "Stef Ren",
+        "Jianwen Xie",
+        "Jiajun Wu",
+        "Li Fei-Fei",
+        "Ruohan Zhang"
+      ],
+      "publishedDate": "2026-10-13",
+      "updatedDate": "2026-10-29",
+      "change": "revised",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2610.17748v2",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        },
+        {
+          "category": "cs.AI",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-20320",
+      "arxivId": "2610.20320",
+      "version": 2,
+      "titleEn": "TacClaw-Infinity: A Large-Scale Vision-Tactile-Language-Action Dataset for Dexterous Manipulation",
+      "titleZh": null,
+      "authors": [
+        "Fucai Zhu",
+        "Xidong Zhang",
+        "Yichi Zhang",
+        "Yipan Wang",
+        "Fubo Wang",
+        "Zibin Wu",
+        "Kaiqi Li",
+        "Jianhao Jiao",
+        "Shihan Lu",
+        "Di Hu",
+        "Mengdi Xu",
+        "Siyu Zhu",
+        "Xiaoxiao Long",
+        "Yao Yao",
+        "Xun Cao",
+        "Zhuo Xu",
+        "Koichi Hashimoto",
+        "Qifeng Chen",
+        "Zhe Li",
+        "Jianfei Yang",
+        "Haofei Lu",
+        "Danica Kragic",
+        "Shuicheng Yan",
+        "Jianghua Duan",
+        "Michael Yu Wang",
+        "Weihao Yuan"
+      ],
+      "publishedDate": "2026-10-14",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.20320v2",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-23826",
+      "arxivId": "2610.23826",
+      "version": 2,
+      "titleEn": "Self-Building Labs",
+      "titleZh": null,
+      "authors": [
+        "Jiaru Bai",
+        "Yuchi Zhao",
+        "Han Hao",
+        "Elia Savino",
+        "Miroslav Bogdanovic",
+        "Derk H.W. ten Klooster",
+        "Simone Pilon",
+        "Timothy Noël",
+        "Yang Cao",
+        "Varinia Bernales",
+        "Alán Aspuru-Guzik"
+      ],
+      "publishedDate": "2026-10-16",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.AI",
+        "cs.MA",
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.23826v2",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        },
+        {
+          "category": "cs.AI",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-25736",
+      "arxivId": "2610.25736",
+      "version": 3,
+      "titleEn": "Learning from Fleet Experience: Collective Experience Learning Across 96 Robots",
+      "titleZh": null,
+      "authors": [
+        "Chao Yu",
+        "Shu'ang Yu",
+        "Hao Lin",
+        "Hongzhi Zang",
+        "Yuxiang Yan",
+        "Chenxi Jiang",
+        "Zhen Guo",
+        "Chuankang Li",
+        "Yihao Chen",
+        "Xin Xu",
+        "Xu Fu",
+        "Jiakai Zhou",
+        "Liangzhi Shi",
+        "Hongyi Ren",
+        "Yiwei Liu",
+        "Jing Wu",
+        "Yuanqing Wang",
+        "Chen Wu",
+        "Bo Dai",
+        "Chunyu Yang",
+        "Hongliang Huang",
+        "Shuoyu Yue",
+        "Weiqi Yin",
+        "Yinuo Chen",
+        "Ruihua Chen",
+        "Chunyang Zhu",
+        "Han Xiao",
+        "Yanghao Li",
+        "Ruipu Wu",
+        "Zhikai Cai",
+        "Xiu Chen",
+        "Xu Tan",
+        "Si Liu",
+        "Yuchen Yan",
+        "Jialin Zhang",
+        "Wen Zeng",
+        "Yiming Zhou",
+        "Zixiao Huang",
+        "Xinlei Chen",
+        "Guanghui Ren",
+        "Quanlu Zhang",
+        "Boxun Li",
+        "Maoqing Yao",
+        "Yu Wang"
+      ],
+      "publishedDate": "2026-10-19",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.25736v3",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-26179",
+      "arxivId": "2610.26179",
+      "version": 4,
+      "titleEn": "Learning Goal-Conditioned Subgoals through Frozen Hierarchical World Models",
+      "titleZh": null,
+      "authors": [
+        "Xiang Kaibo",
+        "Liu Qingfeng"
+      ],
+      "publishedDate": "2026-10-19",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2610.26179v4",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.CV",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-30080",
+      "arxivId": "2610.30080",
+      "version": 2,
+      "titleEn": "Do Earth-Trained Humanoid Controllers Walk on the Moon? Gravity, Terrain, and Soil Transfer",
+      "titleZh": null,
+      "authors": [
+        "Guillem Casadesus Vila",
+        "Sri Aditya Deevi",
+        "Grace X. Gao"
+      ],
+      "publishedDate": "2026-10-21",
+      "updatedDate": "2026-10-29",
+      "change": "revised",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.30080v2",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-31540",
+      "arxivId": "2610.31540",
+      "version": 2,
+      "titleEn": "Dispersive Tree Agreements for Multi-Robot Coordination",
+      "titleZh": null,
+      "authors": [
+        "Shashank A. Deshpande",
+        "Blake T. Edwards",
+        "Jonathan P. How"
+      ],
+      "publishedDate": "2026-10-22",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.RO",
+        "cs.MA",
+        "math.OC"
+      ],
+      "url": "https://arxiv.org/abs/2610.31540v2",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-33546",
+      "arxivId": "2610.33546",
+      "version": 2,
+      "titleEn": "MOON: Learning When to Forget and How to Move On in Vision-and-Language Navigation",
+      "titleZh": null,
+      "authors": [
+        "Jingmeng Zhou",
+        "Seson Sun",
+        "Binyao Xu",
+        "Lingming Zhang",
+        "Hanshi Wang",
+        "Fudong Ge",
+        "Weiming Hu",
+        "Jin Gao",
+        "Zhipeng Zhang"
+      ],
+      "publishedDate": "2026-10-24",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.33546v2",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-37381",
+      "arxivId": "2610.37381",
+      "version": 2,
+      "titleEn": "PDRVLA: A Vision-Language-Action Model with Physical Dynamics Representations",
+      "titleZh": null,
+      "authors": [
+        "Hanqing Wang",
+        "Zhaotian Cai",
+        "Ruichuan An",
+        "Bohan Zeng",
+        "Tao Zhang",
+        "Yilin Chen",
+        "Xu Jiang",
+        "Kaiquan Chen",
+        "Chongyang Wu",
+        "Haoran Li",
+        "Fan Yang",
+        "Mingan Lin",
+        "Wentao Zhang",
+        "Zenan Zhou",
+        "Youzheng Wu"
+      ],
+      "publishedDate": "2026-10-27",
+      "updatedDate": "2026-10-29",
+      "change": "revised",
+      "categories": [
+        "cs.RO",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2610.37381v2",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        },
+        {
+          "category": "cs.CV",
+          "change": "revised"
+        },
+        {
+          "category": "cs.LG",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-38234",
+      "arxivId": "2610.38234",
+      "version": 2,
+      "titleEn": "SimRetract: Zero-Shot Sim-to-Real Robotic Assistance for Retractor Take-Over in Open Surgery",
+      "titleZh": null,
+      "authors": [
+        "Xucheng Wang",
+        "Zhizhou Yang",
+        "Sung Eun Kim",
+        "Romain Hardy",
+        "Michael P. Sampson",
+        "Aakash Reddy",
+        "Ankit Pal",
+        "Xiaoman Zhang",
+        "Luyang Luo",
+        "Pranav Rajpurkar"
+      ],
+      "publishedDate": "2026-10-28",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.38234v2",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-39126",
+      "arxivId": "2610.39126",
+      "version": 2,
+      "titleEn": "Actuator-Aware Observer Inputs for Cascade ADRC of Quadrotors Under Rotor Lag, Measurement Delay and Sensor Noise",
+      "titleZh": null,
+      "authors": [
+        "Xuan-Quy Dao",
+        "Ngoc-Bich Le",
+        "Le-Minh Nguyen"
+      ],
+      "publishedDate": "2026-10-29",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.39126v2",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-39232",
+      "arxivId": "2610.39232",
+      "version": 2,
+      "titleEn": "Seeing and Imagining as One: Unified Video Generation and 4D Perception for Embodied World Modeling",
+      "titleZh": null,
+      "authors": [
+        "Haitang Feng",
+        "Zhuoman Liu",
+        "Zhennan Wang",
+        "Sheng Wang",
+        "Juelin Li",
+        "Chengzhi Zhao",
+        "Hexiang Wei",
+        "Lin Shao"
+      ],
+      "publishedDate": "2026-10-29",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.39232v2",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        },
+        {
+          "category": "cs.CV",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-39287",
+      "arxivId": "2610.39287",
+      "version": 2,
+      "titleEn": "OpenFlyV2: An onboard vision-language-action model for aerial perception and navigation",
+      "titleZh": null,
+      "authors": [
+        "Junli Liu",
+        "Zhongrui You",
+        "Chenhui Li",
+        "Zhen Li",
+        "Yuyang Tian",
+        "Qizhen Chen",
+        "Delin Qu",
+        "Haoming Song",
+        "Dong Wang",
+        "Xuelong Li",
+        "Zhigang Wang",
+        "Bin Zhao"
+      ],
+      "publishedDate": "2026-10-29",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.39287v2",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-40016",
+      "arxivId": "2610.40016",
+      "version": 2,
+      "titleEn": "LOGIV: Graph-Verified Execution with Causal Local Repair for Long-Horizon Robot Tasks",
+      "titleZh": null,
+      "authors": [
+        "Enqiao Lu",
+        "Yuxiang Xie",
+        "Xingrui Yu",
+        "Yuyang Wang",
+        "Yipeng Gu",
+        "Zhirui Fang",
+        "Xinrun Xu",
+        "Zhenglin Wan",
+        "Pengfei Zhou",
+        "Wangbo Zhao",
+        "Yang You",
+        "Yuxiang Gao",
+        "Ivor Tsang"
+      ],
+      "publishedDate": "2026-10-29",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.40016v2",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-40285",
+      "arxivId": "2610.40285",
+      "version": 2,
+      "titleEn": "MUSBRIC: LEGO-Compatible Pneumatic Muscle Bricks for Reconfigurable Musculoskeletal Robots",
+      "titleZh": null,
+      "authors": [
+        "Qiyao Wang",
+        "Yinglei Zhu",
+        "Liang Zhou",
+        "Wenzhe Gong",
+        "Xin-Jun Liu",
+        "Huichan Zhao"
+      ],
+      "publishedDate": "2026-10-29",
+      "updatedDate": "2026-10-30",
+      "change": "revised",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.40285v2",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "revised"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-40723",
+      "arxivId": "2610.40723",
+      "version": 1,
+      "titleEn": "INLA for Adaptive UAV Sampling of Radio Environment Maps in IoT Networks: Prior Width Governs Accuracy and Calibration",
+      "titleZh": null,
+      "authors": [
+        "Changhao He",
+        "Kaichuang Yang",
+        "Xiaojuan Zhang"
+      ],
+      "publishedDate": "2026-10-29",
+      "updatedDate": "2026-10-29",
+      "change": "cross-list",
+      "categories": [
+        "stat.ML",
+        "cs.IT",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2610.40723v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.LG",
+          "change": "cross-list"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-40748",
+      "arxivId": "2610.40748",
+      "version": 1,
+      "titleEn": "WorldBridge: Bridging Video and Action for Task Generalization in World Action Models",
+      "titleZh": null,
+      "authors": [
+        "Jun Cen",
+        "Yubo Guo",
+        "Hao Li",
+        "Liangkai Li",
+        "Yaoxu Lyu",
+        "Meng Wei",
+        "Zeqi Xiao",
+        "Sizhe Yang",
+        "Yuqiang Yang",
+        "Yifan Ye",
+        "Shanghang Zhang",
+        "Duo Zheng"
+      ],
+      "publishedDate": "2026-10-29",
+      "updatedDate": "2026-10-29",
+      "change": "new",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.40748v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-40799",
+      "arxivId": "2610.40799",
+      "version": 1,
+      "titleEn": "CaPtain: A Pipeline for Post-Training Code-as-Policy Robot Agents",
+      "titleZh": null,
+      "authors": [
+        "Yijia Fan",
+        "Xilin He",
+        "Yilei Jiang",
+        "Dongming Wu",
+        "Jiaxu Wang",
+        "Xiangyu Yue"
+      ],
+      "publishedDate": "2026-10-29",
+      "updatedDate": "2026-10-29",
+      "change": "new",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.40799v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-40801",
+      "arxivId": "2610.40801",
+      "version": 1,
+      "titleEn": "Drone-PUR: From Visual Clue Discovery to Understanding and Reasoning in UAV Scenes",
+      "titleZh": null,
+      "authors": [
+        "Jiahe Wu",
+        "Bing Cao",
+        "Xingyue Guo",
+        "Ruipu Zhao",
+        "Beiming Yu",
+        "Jiekang Feng",
+        "Qinghua Hu",
+        "Pengfei Zhu"
+      ],
+      "publishedDate": "2026-10-29",
+      "updatedDate": "2026-10-29",
+      "change": "new",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2610.40801v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.CV",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-40828",
+      "arxivId": "2610.40828",
+      "version": 1,
+      "titleEn": "From Teleoperation to Long-Horizon Dexterity: Evaluating Visuomotor Skills and Offline Proxies for Dexterous Manipulation",
+      "titleZh": null,
+      "authors": [
+        "Ammar N. Abbas",
+        "Aayush Jain",
+        "Prashanth Viswanath",
+        "Nivesh Gadipudi",
+        "Giulia Vilone",
+        "Jim Gibbons"
+      ],
+      "publishedDate": "2026-10-29",
+      "updatedDate": "2026-10-29",
+      "change": "new",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.LG",
+        "eess.SY"
+      ],
+      "url": "https://arxiv.org/abs/2610.40828v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        },
+        {
+          "category": "cs.LG",
+          "change": "cross-list"
+        },
+        {
+          "category": "cs.AI",
+          "change": "cross-list"
+        },
+        {
+          "category": "eess.SY",
+          "change": "cross-list"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-40832",
+      "arxivId": "2610.40832",
+      "version": 1,
+      "titleEn": "EgoHSI3R: Online 4D Hand-Scene Interaction Reconstruction from Egocentric Video",
+      "titleZh": null,
+      "authors": [
+        "Mingzhi Pei",
+        "Zhangchen Ye",
+        "Ruoqu Chen",
+        "Liu Cao",
+        "Mengdi Xu"
+      ],
+      "publishedDate": "2026-10-29",
+      "updatedDate": "2026-10-29",
+      "change": "new",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2610.40832v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.CV",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-40900",
+      "arxivId": "2610.40900",
+      "version": 1,
+      "titleEn": "AquaProbe: Efficient Adaptation of Frozen Vision Models for Underwater Images",
+      "titleZh": null,
+      "authors": [
+        "Md Shihabul Islam Shovo",
+        "Nishi Kanta Paul",
+        "Trung Dong",
+        "Xiaomin Lin"
+      ],
+      "publishedDate": "2026-10-29",
+      "updatedDate": "2026-10-29",
+      "change": "new",
+      "categories": [
+        "cs.CV",
+        "cs.LG",
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.40900v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "cross-list"
+        },
+        {
+          "category": "cs.CV",
+          "change": "new"
+        },
+        {
+          "category": "cs.LG",
+          "change": "cross-list"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-40902",
+      "arxivId": "2610.40902",
+      "version": 1,
+      "titleEn": "FlapSim: A Composable MuJoCo Simulation Platform and Reduced-Order Aerodynamic Model Hierarchy for Flapping-Wing Robotics",
+      "titleZh": null,
+      "authors": [
+        "Mingshan He"
+      ],
+      "publishedDate": "2026-10-29",
+      "updatedDate": "2026-10-29",
+      "change": "new",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.40902v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-40921",
+      "arxivId": "2610.40921",
+      "version": 1,
+      "titleEn": "Robot Navigation and Canine Welfare: A Pilot Study Surfacing Challenges for Cross-Species Legibility and Proxy Validity in Animal-Machine Interaction",
+      "titleZh": null,
+      "authors": [
+        "Haoxiang Zhang",
+        "Nancy Smith"
+      ],
+      "publishedDate": "2026-10-29",
+      "updatedDate": "2026-10-29",
+      "change": "cross-list",
+      "categories": [
+        "cs.HC",
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.40921v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "cross-list"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-40922",
+      "arxivId": "2610.40922",
+      "version": 1,
+      "titleEn": "Confidence-Modulated Safety Filtering for End-to-End Policies",
+      "titleZh": null,
+      "authors": [
+        "Javier Borquez",
+        "Jaime F. Fisac"
+      ],
+      "publishedDate": "2026-10-29",
+      "updatedDate": "2026-10-29",
+      "change": "new",
+      "categories": [
+        "cs.RO",
+        "eess.SY"
+      ],
+      "url": "https://arxiv.org/abs/2610.40922v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        },
+        {
+          "category": "eess.SY",
+          "change": "cross-list"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-40931",
+      "arxivId": "2610.40931",
+      "version": 1,
+      "titleEn": "Learning Stabilizing Latent Feedback Controllers via Multi-Step Backward Losses",
+      "titleZh": null,
+      "authors": [
+        "Paul Lutkus",
+        "Lars Lindemann",
+        "Stephen Tu"
+      ],
+      "publishedDate": "2026-10-29",
+      "updatedDate": "2026-10-29",
+      "change": "cross-list",
+      "categories": [
+        "math.OC",
+        "cs.LG",
+        "eess.SY"
+      ],
+      "url": "https://arxiv.org/abs/2610.40931v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.LG",
+          "change": "cross-list"
+        },
+        {
+          "category": "eess.SY",
+          "change": "cross-list"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-40935",
+      "arxivId": "2610.40935",
+      "version": 1,
+      "titleEn": "Let LiDAR Decide Where to Look: Geometry-Measured Token Selection for Efficient Sparse Latent World Models",
+      "titleZh": null,
+      "authors": [
+        "Zeping Zhang",
+        "Zhuoya Zhao",
+        "Robert Laganière"
+      ],
+      "publishedDate": "2026-10-29",
+      "updatedDate": "2026-10-29",
+      "change": "new",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2610.40935v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.CV",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-40947",
+      "arxivId": "2610.40947",
+      "version": 1,
+      "titleEn": "UFMF: Radar-Guided Kinematic Priors for Real-Time 4D Occupancy Forecasting",
+      "titleZh": null,
+      "authors": [
+        "Zeping Zhang",
+        "Zhuoya Zhao",
+        "Robert Laganière"
+      ],
+      "publishedDate": "2026-10-29",
+      "updatedDate": "2026-10-29",
+      "change": "new",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2610.40947v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.CV",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-40949",
+      "arxivId": "2610.40949",
+      "version": 1,
+      "titleEn": "AVID: A Weakly Aligned RGB-Infrared Dataset and Perturbation Benchmark for Tiny Aerial Targets",
+      "titleZh": null,
+      "authors": [
+        "Dharini Raghavan",
+        "Vishnu Rao",
+        "Sethu Selvi S"
+      ],
+      "publishedDate": "2026-10-29",
+      "updatedDate": "2026-10-29",
+      "change": "new",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2610.40949v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.CV",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-40999",
+      "arxivId": "2610.40999",
+      "version": 1,
+      "titleEn": "A Robust Approach to Belief Mismatch in Non-cooperative Dynamic Games",
+      "titleZh": null,
+      "authors": [
+        "Ryan Park",
+        "Li-huan Shen",
+        "Jesse Milzman",
+        "Negar Mehr",
+        "David Fridovich-Keil"
+      ],
+      "publishedDate": "2026-10-29",
+      "updatedDate": "2026-10-29",
+      "change": "cross-list",
+      "categories": [
+        "cs.MA",
+        "eess.SY"
+      ],
+      "url": "https://arxiv.org/abs/2610.40999v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "eess.SY",
+          "change": "cross-list"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41009",
+      "arxivId": "2610.41009",
+      "version": 1,
+      "titleEn": "STAR: Steering Action Representations during Inference",
+      "titleZh": null,
+      "authors": [
+        "Guangyu Zhao",
+        "Yongchang Zhang",
+        "Haoxuan Ru",
+        "Kaichen He",
+        "Haoran Wen",
+        "Kun Zhan",
+        "Zeyu Zhang",
+        "Yin Li",
+        "Yiwu Zhong"
+      ],
+      "publishedDate": "2026-10-29",
+      "updatedDate": "2026-10-29",
+      "change": "new",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2610.41009v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        },
+        {
+          "category": "cs.AI",
+          "change": "cross-list"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41021",
+      "arxivId": "2610.41021",
+      "version": 1,
+      "titleEn": "CuPIQP: A Batched and Differentiable QP Solver on GPUs for Robot Learning and Control",
+      "titleZh": null,
+      "authors": [
+        "Fenglong Song",
+        "Roland Schwan",
+        "Yuwen Chen",
+        "Yuning Jiang",
+        "Colin N. Jones"
+      ],
+      "publishedDate": "2026-10-29",
+      "updatedDate": "2026-10-29",
+      "change": "cross-list",
+      "categories": [
+        "math.OC",
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41021v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "cross-list"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41028",
+      "arxivId": "2610.41028",
+      "version": 1,
+      "titleEn": "Contact Imitation Interface: Transferring Dexterous Skills by Showing How Contact Unfolds",
+      "titleZh": null,
+      "authors": [
+        "Zhixuan Xu",
+        "Yichen Li",
+        "Bingchen Wu",
+        "Rui Wang",
+        "Yiwen Hou",
+        "Zixuan Liu",
+        "Tianyu Qiu",
+        "Lin Shao"
+      ],
+      "publishedDate": "2026-10-29",
+      "updatedDate": "2026-10-29",
+      "change": "new",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41028v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41030",
+      "arxivId": "2610.41030",
+      "version": 1,
+      "titleEn": "Dreams Are Cheaper Than Flights: Curated World-Model Data Improves Aerial Detection",
+      "titleZh": null,
+      "authors": [
+        "Rugved Katole",
+        "Vedant Patil",
+        "Jenna Kline",
+        "Christopher Stewart"
+      ],
+      "publishedDate": "2026-10-29",
+      "updatedDate": "2026-10-29",
+      "change": "new",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2610.41030v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.CV",
+          "change": "new"
+        },
+        {
+          "category": "cs.AI",
+          "change": "cross-list"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41044",
+      "arxivId": "2610.41044",
+      "version": 1,
+      "titleEn": "Consensus Within, Competition Between: Decentralized LLM Teams for Perimeter Defense",
+      "titleZh": null,
+      "authors": [
+        "Khawaja Abaid Ullah",
+        "Ananya Acharya",
+        "Mohammad Javad Khojasteh"
+      ],
+      "publishedDate": "2026-10-29",
+      "updatedDate": "2026-10-29",
+      "change": "new",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41044v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "cross-list"
+        },
+        {
+          "category": "cs.LG",
+          "change": "cross-list"
+        },
+        {
+          "category": "cs.AI",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41053",
+      "arxivId": "2610.41053",
+      "version": 1,
+      "titleEn": "Veloxity: Towards Memory-Safe UAV Embedded Firmware using the Rust Programming Language",
+      "titleZh": null,
+      "authors": [
+        "Derek Ward",
+        "Brian Bascom",
+        "Tyler Larsen",
+        "James Usevitch",
+        "Phil Tokumaru",
+        "Tim McLain"
+      ],
+      "publishedDate": "2026-10-29",
+      "updatedDate": "2026-10-29",
+      "change": "new",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41053v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41127",
+      "arxivId": "2610.41127",
+      "version": 1,
+      "titleEn": "MotorSense: A Video-EMG Dataset of Motoric Representations for Action Understanding",
+      "titleZh": null,
+      "authors": [
+        "Eadom Dessalene",
+        "Michael Maynord",
+        "Amir-Hossein Shahidzadeh",
+        "Botao He",
+        "Yasamin Tabatabaee",
+        "Ruoshi Liu",
+        "Ruohan Gao",
+        "Paul Pu Liang",
+        "Yiannis Aloimonos"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41127v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "cross-list"
+        },
+        {
+          "category": "cs.CV",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41168",
+      "arxivId": "2610.41168",
+      "version": 1,
+      "titleEn": "ROSTrans: Empirically Benchmarking LLMs for ROS1-to-ROS2 Migration",
+      "titleZh": null,
+      "authors": [
+        "Yichen Zhao",
+        "Minghao Shao",
+        "Zhuoyan Yu",
+        "Yijun Shen",
+        "Boyuan Chen",
+        "Yik-Cheung Tam",
+        "Muhammad Shafique"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "cross-list",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2610.41168v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.AI",
+          "change": "cross-list"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41185",
+      "arxivId": "2610.41185",
+      "version": 1,
+      "titleEn": "Mechanistic Interpretability for End-to-End Self-Driving",
+      "titleZh": null,
+      "authors": [
+        "Manav Gagvani",
+        "Benjamin Namikas",
+        "Sivamurugan Velmurugan",
+        "Nysa Kumar",
+        "Shrey Sharma",
+        "Thomas Peterson",
+        "Pratyush Mathur",
+        "Hyunseo Chang",
+        "Rohan Paleja"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2610.41185v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        },
+        {
+          "category": "cs.CV",
+          "change": "cross-list"
+        },
+        {
+          "category": "cs.LG",
+          "change": "cross-list"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41188",
+      "arxivId": "2610.41188",
+      "version": 1,
+      "titleEn": "A Capability-Aware Backup-Recoverability Filter for Heterogeneous Multi-Robot Navigation",
+      "titleZh": null,
+      "authors": [
+        "Joonkyung Kim",
+        "Yanze Zhang",
+        "Wenhao Luo",
+        "Yiwei Lyu"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41188v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41190",
+      "arxivId": "2610.41190",
+      "version": 1,
+      "titleEn": "FlowMoDE: Coarse-to-fine Flow Matching for Detail-aware Sim-to-Real Monocular Depth Estimation",
+      "titleZh": null,
+      "authors": [
+        "Liangjing Shao",
+        "Wanhao Liu",
+        "Jinsong Lin",
+        "Zhiwei Fang",
+        "Hongliang Ren"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2610.41190v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.CV",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41214",
+      "arxivId": "2610.41214",
+      "version": 1,
+      "titleEn": "Capability-Conditioned Graph Control Barrier Functions for Zero-Shot Safe Navigation of Heterogeneous Mobile Robot Teams",
+      "titleZh": null,
+      "authors": [
+        "Joonkyung Kim",
+        "Janghyun Cho",
+        "Jeehyun Lee",
+        "Changjoo Nam",
+        "Yiwei Lyu"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41214v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41216",
+      "arxivId": "2610.41216",
+      "version": 1,
+      "titleEn": "TinyAstral: Transferring Self-Evolving Harnesses to Tiny Generalist Manipulation Agents",
+      "titleZh": null,
+      "authors": [
+        "Kehong Gong",
+        "Xiaoxu Zheng",
+        "Guanli Hou",
+        "Seunghun Lee",
+        "Mengqi Guo",
+        "Runjia Tan",
+        "Zhengyu Wen",
+        "Qi Wang",
+        "Xiaoyu He",
+        "Mingyuan Zhang",
+        "Michael Bi Mi"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2610.41216v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        },
+        {
+          "category": "cs.CV",
+          "change": "cross-list"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41235",
+      "arxivId": "2610.41235",
+      "version": 1,
+      "titleEn": "CONSORT: Uncertainty-Constrained Multi-Robot Planning for Cooperative Localization in GPS-Denied Environments",
+      "titleZh": null,
+      "authors": [
+        "Tony Zhang",
+        "Ryan Bartholomew",
+        "Kalliyan Velasco",
+        "Joshua Mangelson",
+        "Brady Moon"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41235v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41273",
+      "arxivId": "2610.41273",
+      "version": 1,
+      "titleEn": "SPT-Flow: One Integration, Many Futures in Continuous-Time World Models",
+      "titleZh": null,
+      "authors": [
+        "Mingyang Lyu",
+        "Yinqian Sun",
+        "Gongce Cao",
+        "Yuhao Zhang",
+        "Lu Jia",
+        "Qian Zhang",
+        "Bo Wang",
+        "Pin Lyu"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2610.41273v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.LG",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41275",
+      "arxivId": "2610.41275",
+      "version": 1,
+      "titleEn": "TRACE: Target-State Risk-Aligned Conditional Execution for Embodied Tracking",
+      "titleZh": null,
+      "authors": [
+        "Mingyang Lyu",
+        "Gongce Cao",
+        "Yiyang Jia",
+        "Lu Jia",
+        "Erliang Lin",
+        "Yuhao Zhang",
+        "Yinqian Sun",
+        "Pin Lyu",
+        "Feifei Zhao",
+        "Bo Wang"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41275v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41320",
+      "arxivId": "2610.41320",
+      "version": 1,
+      "titleEn": "Learning from Physical Experience:Context-Space Adaptation for Robotic Manipulation",
+      "titleZh": null,
+      "authors": [
+        "Yihan Zeng",
+        "Yisu Li",
+        "Kaixin Huang",
+        "Marc WuDunn",
+        "Amelia Kovacs",
+        "Mikael Harseno",
+        "Kimmy Lin",
+        "Porter Hunley",
+        "Fred Shentu",
+        "Philipp Wu",
+        "Zhongyu Li",
+        "Zike Yan"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41320v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41330",
+      "arxivId": "2610.41330",
+      "version": 1,
+      "titleEn": "Cross-Embodiment Motion Planning by Coupling Body-Agnostic World Model with Differentiable Ego-Dynamics",
+      "titleZh": null,
+      "authors": [
+        "Zhidong Wang",
+        "Zirui Li",
+        "Haoran Xu",
+        "Yujie Yan",
+        "Zitong Shan",
+        "Jingsong Liang",
+        "Han Yu",
+        "Chen Lv"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41330v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41334",
+      "arxivId": "2610.41334",
+      "version": 1,
+      "titleEn": "HIPC: Humanoid Iterative Planning and Control via Goal-Conditioned Motion Closure",
+      "titleZh": null,
+      "authors": [
+        "Yi Han",
+        "Xingyu Chen",
+        "Zixuan Lang",
+        "Qianyang Wu",
+        "Yuhang Lin",
+        "Ji Ma",
+        "Liang Li",
+        "Dongting Li",
+        "Xinpeng Liu",
+        "Ruoli Dai",
+        "Hesheng Wang",
+        "Renjing Xu",
+        "Lei Han"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO",
+        "eess.SY"
+      ],
+      "url": "https://arxiv.org/abs/2610.41334v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        },
+        {
+          "category": "eess.SY",
+          "change": "cross-list"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41336",
+      "arxivId": "2610.41336",
+      "version": 1,
+      "titleEn": "HandMimicX: Learning Human-Like Dexterous Manipulation via an Object-Centric Policy from Egocentric Videos",
+      "titleZh": null,
+      "authors": [
+        "Zihan Gao",
+        "Yufei Liu",
+        "Yuhong Zhang",
+        "Zhen Yu",
+        "Xinhao Huang",
+        "Zhinan You",
+        "Kai W. Ho",
+        "Zipeng Ye",
+        "Peng Jiao",
+        "Haoqian Wang"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41336v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41348",
+      "arxivId": "2610.41348",
+      "version": 1,
+      "titleEn": "Joint-Health-Aware Reinforcement Learning for Robust Robot Control Under Actuator Degradation",
+      "titleZh": null,
+      "authors": [
+        "Haifa Zhang",
+        "Yijing Wang",
+        "Zhiqiang Zuo"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2610.41348v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        },
+        {
+          "category": "cs.CV",
+          "change": "cross-list"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41349",
+      "arxivId": "2610.41349",
+      "version": 1,
+      "titleEn": "Geometry-Aware Humanoid Retargeting via Manifold ODEs",
+      "titleZh": null,
+      "authors": [
+        "Pengyu Zhu",
+        "Heye Wang",
+        "Xi Wang",
+        "Xuyang Wu",
+        "He Kong",
+        "Guodong Shi"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41349v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41352",
+      "arxivId": "2610.41352",
+      "version": 1,
+      "titleEn": "CalibSwitch: Observation-Driven Camera-LiDAR Extrinsic Recovery and Selective Maintenance for Multimodal Perception",
+      "titleZh": null,
+      "authors": [
+        "Haifa Zhang",
+        "Yijing Wang",
+        "Zhiqiang Zuo"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2610.41352v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        },
+        {
+          "category": "cs.CV",
+          "change": "cross-list"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41354",
+      "arxivId": "2610.41354",
+      "version": 1,
+      "titleEn": "DiffWBC: Unlocking Steerable General Humanoid Motion Tracking via One-Step Diffusion Whole-Body Control",
+      "titleZh": null,
+      "authors": [
+        "Yifei Huang",
+        "Yazhao Yang",
+        "Weijia Li",
+        "Zhiheng Ma",
+        "Dian Shen"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41354v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41373",
+      "arxivId": "2610.41373",
+      "version": 1,
+      "titleEn": "Queryable Gaussian View Index: Text Retrieval and Selective Camera Localization",
+      "titleZh": null,
+      "authors": [
+        "Tianyu Xiong",
+        "Rui Li",
+        "Jiaqi Yang"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2610.41373v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.CV",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41377",
+      "arxivId": "2610.41377",
+      "version": 1,
+      "titleEn": "MolmoSpaces-CommonSense: Evaluating Commonsense in Robotic Manipulation Policies",
+      "titleZh": null,
+      "authors": [
+        "Arjun Guru",
+        "Max Argus",
+        "Jae Sung Park",
+        "Jiafei Duan",
+        "Ali Farhadi",
+        "Ranjay Krishna"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41377v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41383",
+      "arxivId": "2610.41383",
+      "version": 1,
+      "titleEn": "BioAgent: Self-Directed Skill Acquisition and Capability Growth for Long-Horizon Laboratory Protocols",
+      "titleZh": null,
+      "authors": [
+        "Gaojing Zhang",
+        "Changwen Chen",
+        "Zichen Luo",
+        "Jialiang Li",
+        "Yuhan Wang",
+        "Yifei Xie",
+        "Wenzhao Lian"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41383v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41408",
+      "arxivId": "2610.41408",
+      "version": 1,
+      "titleEn": "SACQ: Structure-Aware Codebook Quantization for Ultra-Low-Bit Vision-Language-Action Models",
+      "titleZh": null,
+      "authors": [
+        "Haesung Lee",
+        "Insu Han"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.CV",
+        "cs.LG",
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41408v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "cross-list"
+        },
+        {
+          "category": "cs.CV",
+          "change": "new"
+        },
+        {
+          "category": "cs.LG",
+          "change": "cross-list"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41429",
+      "arxivId": "2610.41429",
+      "version": 1,
+      "titleEn": "Physically Constrained Kinematic Calibration for High-Precision Robotic Needle Guidance",
+      "titleZh": null,
+      "authors": [
+        "Prabhu Nithin Gollapudi",
+        "Andreas Maier",
+        "Franziska Mathis-Ullrich",
+        "Water Zhao",
+        "Jia Wang",
+        "Siming Bayer"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO",
+        "eess.SY",
+        "math.OC"
+      ],
+      "url": "https://arxiv.org/abs/2610.41429v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        },
+        {
+          "category": "eess.SY",
+          "change": "cross-list"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41446",
+      "arxivId": "2610.41446",
+      "version": 1,
+      "titleEn": "Beyond Trial-and-Error: A Geospatial-Guided Active Reasoning Framework for Robust Aerial Vision-and-Language Navigation",
+      "titleZh": null,
+      "authors": [
+        "Jiawei Ge",
+        "Wenkang Gong",
+        "Jiuxin Cao",
+        "Bo Liu",
+        "Lei Cui",
+        "Haoran Wang",
+        "Xuelin Zhu",
+        "Biwei Cao",
+        "Chang Liu",
+        "Chen Feng",
+        "Ioannis Patras"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2610.41446v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.CV",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41456",
+      "arxivId": "2610.41456",
+      "version": 1,
+      "titleEn": "SAFARI: Semantic- And Frontier-driven Autonomous Risk Inspection",
+      "titleZh": null,
+      "authors": [
+        "Ugur Kafkasyali",
+        "Mihnea Toader",
+        "Julia Richter",
+        "Turcan Tuna",
+        "Cesar Cadena",
+        "Marco Hutter"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41456v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41477",
+      "arxivId": "2610.41477",
+      "version": 1,
+      "titleEn": "AC-SMPC: Differentiable Actor--Critic MPC with State Constraints for Safe and Fast Robot Navigation",
+      "titleZh": null,
+      "authors": [
+        "Chaoran Wu",
+        "Jiayu Fan",
+        "Qichen Tan",
+        "Yuyi Liu",
+        "Jin Wang"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41477v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41501",
+      "arxivId": "2610.41501",
+      "version": 1,
+      "titleEn": "VoxLution: Evolving Voxels for High-Fidelity 3D Scene Generation",
+      "titleZh": null,
+      "authors": [
+        "Daoyi Gao",
+        "Xinyi Zhang",
+        "Alexey Bokhovkin",
+        "Lei Li",
+        "Angela Dai"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2610.41501v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.CV",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41530",
+      "arxivId": "2610.41530",
+      "version": 1,
+      "titleEn": "Koopman Greedy Spiking Control for Nonlinear Systems under Firing-Rate Limits",
+      "titleZh": null,
+      "authors": [
+        "Nader Meskin"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "eess.SY"
+      ],
+      "url": "https://arxiv.org/abs/2610.41530v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "eess.SY",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41540",
+      "arxivId": "2610.41540",
+      "version": 1,
+      "titleEn": "FOCUS: First-Order Control Using Optimal Transport Supervision for Imitation from Observations",
+      "titleZh": null,
+      "authors": [
+        "João A. Cândido Ramos",
+        "Lionel Blondé",
+        "Hugues Vinzant",
+        "Jacopo Castellini",
+        "Alexandros Kalousis"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.LG",
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41540v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "cross-list"
+        },
+        {
+          "category": "cs.LG",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41548",
+      "arxivId": "2610.41548",
+      "version": 1,
+      "titleEn": "Contact-based optimization for collision-free motion planning for a million robots",
+      "titleZh": null,
+      "authors": [
+        "Jan Kamm",
+        "Antonio Terpin",
+        "Raffaello D'Andrea"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO",
+        "eess.SY"
+      ],
+      "url": "https://arxiv.org/abs/2610.41548v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        },
+        {
+          "category": "eess.SY",
+          "change": "cross-list"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41558",
+      "arxivId": "2610.41558",
+      "version": 1,
+      "titleEn": "A complete analytical characterization of optimal collision-free motion for two robots",
+      "titleZh": null,
+      "authors": [
+        "Jan Kamm",
+        "Antonio Terpin",
+        "Raffaello D'Andrea"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO",
+        "eess.SY",
+        "math.OC"
+      ],
+      "url": "https://arxiv.org/abs/2610.41558v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        },
+        {
+          "category": "eess.SY",
+          "change": "cross-list"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41564",
+      "arxivId": "2610.41564",
+      "version": 1,
+      "titleEn": "Verify--Backtrack Loop: Structured Precondition Recovery for Long-Horizon Language Agents",
+      "titleZh": null,
+      "authors": [
+        "Mingyang Liu",
+        "Qingcan Kang",
+        "Shixiong Kai",
+        "Tao Zhong",
+        "Mingxuan Yuan",
+        "Xin Li",
+        "Linqi Song"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2610.41564v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.AI",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41602",
+      "arxivId": "2610.41602",
+      "version": 1,
+      "titleEn": "DrawSplat: Atlanta World-Guided Implicit Gaussian SLAM for Indoor Reconstruction",
+      "titleZh": null,
+      "authors": [
+        "Fan Zhu",
+        "Zhisong Xu",
+        "Ziyu Chen",
+        "Zhenjun Zhao",
+        "Takayuki Okatani"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41602v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "cross-list"
+        },
+        {
+          "category": "cs.CV",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41609",
+      "arxivId": "2610.41609",
+      "version": 1,
+      "titleEn": "VLA Policies Do Not Know When Not to Act: Unintended Task Execution and Start Suppression",
+      "titleZh": null,
+      "authors": [
+        "Minsu Jang",
+        "Jae-Woo Choi",
+        "Youngwoo Yoon",
+        "Dohyung Kim"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2610.41609v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        },
+        {
+          "category": "cs.AI",
+          "change": "cross-list"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41625",
+      "arxivId": "2610.41625",
+      "version": 1,
+      "titleEn": "RTPolicy: Real-Time (32.9 Hz) Multi-View Visuomotor Policy for Robotic Manipulation on Edge Devices",
+      "titleZh": null,
+      "authors": [
+        "Xianbao Hou",
+        "Zehao Ni",
+        "Yonghao He",
+        "Lingfeng Qian",
+        "Xin Shi",
+        "Hu Su",
+        "Wei Sui",
+        "Cong Yang"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41625v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41639",
+      "arxivId": "2610.41639",
+      "version": 1,
+      "titleEn": "Chance-Constrained Inspection Viewpoint Sequencing for On-Orbit Servicing via Safe Reinforcement Learning",
+      "titleZh": null,
+      "authors": [
+        "Chloé Carer",
+        "Adam Abdin"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.AI",
+        "math.OC"
+      ],
+      "url": "https://arxiv.org/abs/2610.41639v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.AI",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41643",
+      "arxivId": "2610.41643",
+      "version": 1,
+      "titleEn": "Direct Action-Manifold Modeling for Efficient and Robust Bimanual Manipulation",
+      "titleZh": null,
+      "authors": [
+        "Hongren Wang",
+        "Mingyu You",
+        "Zihan Li",
+        "Zhipeng Wang",
+        "Shuo Jiang",
+        "Bin He"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41643v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41647",
+      "arxivId": "2610.41647",
+      "version": 1,
+      "titleEn": "Risk-Sensitive Mission Planning for Multi-Target On-Orbit Inspection via Distributional Reinforcement Learning",
+      "titleZh": null,
+      "authors": [
+        "Adam Abdin"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.AI",
+        "math.OC"
+      ],
+      "url": "https://arxiv.org/abs/2610.41647v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.AI",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41654",
+      "arxivId": "2610.41654",
+      "version": 1,
+      "titleEn": "$\\nabla$Mimic: Ultra-Efficient Humanoid Control with Differentiable Simulation",
+      "titleZh": null,
+      "authors": [
+        "Weyl Lu",
+        "Yubei Chen"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2610.41654v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        },
+        {
+          "category": "cs.LG",
+          "change": "cross-list"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41663",
+      "arxivId": "2610.41663",
+      "version": 1,
+      "titleEn": "ResMerge: Residual Policy Learning and Merging for Continual Adaptation of Pre-trained Robot Policies",
+      "titleZh": null,
+      "authors": [
+        "Kefei Zhu",
+        "Lingyun Xu",
+        "Yue Xin",
+        "Xiaoqi Li",
+        "Caixin Guo",
+        "Xincheng Du",
+        "Yuanpei Chen",
+        "Yaodong Yang",
+        "Hao Dong"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41663v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41667",
+      "arxivId": "2610.41667",
+      "version": 1,
+      "titleEn": "GPU-accelerated Incremental Euclidean Distance Transform for Online Motion Planning of Mobile Robots",
+      "titleZh": null,
+      "authors": [
+        "Yizhou Chen",
+        "Shupeng Lai",
+        "Jinqiang Cui",
+        "Biao Wang",
+        "Ben M. Chen"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41667v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41671",
+      "arxivId": "2610.41671",
+      "version": 1,
+      "titleEn": "OpenVIO: A Versatile Open-Source Visual-Inertial Odometry System",
+      "titleZh": null,
+      "authors": [
+        "Seungwon Choi"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2610.41671v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        },
+        {
+          "category": "cs.CV",
+          "change": "cross-list"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41673",
+      "arxivId": "2610.41673",
+      "version": 1,
+      "titleEn": "A Self-Supervised Pose Estimation Approach for Construction Machines",
+      "titleZh": null,
+      "authors": [
+        "Alaa Alshubbak",
+        "Daniel Görges"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2610.41673v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.CV",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41676",
+      "arxivId": "2610.41676",
+      "version": 1,
+      "titleEn": "Interaction-Aware Sampling-Based Motion Planning for Autonomous Surface Vessels in Urban Waterways",
+      "titleZh": null,
+      "authors": [
+        "Elia Trevisan",
+        "Alejandro Gonzalez-Garcia",
+        "Jan Swevers",
+        "Javier Alonso-Mora"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41676v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41679",
+      "arxivId": "2610.41679",
+      "version": 1,
+      "titleEn": "Biomechanics do not predict perceptual and cognitive consequences of force augmentation",
+      "titleZh": null,
+      "authors": [
+        "Maria Molina-Sanchez",
+        "Francesco Missiroli",
+        "Viktorija Pavalkyte",
+        "Mabel Ziman",
+        "Julien Russ",
+        "Maggie Szymanska",
+        "Noham Wolpe",
+        "Rani Moran",
+        "Lorenzo Masia",
+        "Tamar R. Makin"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41679v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41688",
+      "arxivId": "2610.41688",
+      "version": 1,
+      "titleEn": "When the Past Shapes Action: Understanding Embodied Memory",
+      "titleZh": null,
+      "authors": [
+        "Siqi Li",
+        "Ziyi Bai",
+        "Xinrun Xu",
+        "Tinglei Huang",
+        "Börje F. Karlsson"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2610.41688v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        },
+        {
+          "category": "cs.LG",
+          "change": "cross-list"
+        },
+        {
+          "category": "cs.AI",
+          "change": "cross-list"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41702",
+      "arxivId": "2610.41702",
+      "version": 1,
+      "titleEn": "Flexibility-Aware Robotic Manipulation: Deformation Estimation, Kinematics, and Control via Distributed Inertial Measurement",
+      "titleZh": null,
+      "authors": [
+        "Amir Hossein Barjini",
+        "Sadeq Yaqubi",
+        "Pauli Mustalahti",
+        "Jouni Mattila"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41702v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41724",
+      "arxivId": "2610.41724",
+      "version": 1,
+      "titleEn": "When Architectural Spaces Start to Act",
+      "titleZh": null,
+      "authors": [
+        "Alex Binh Vinh Duc Nguyen"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO",
+        "cs.HC"
+      ],
+      "url": "https://arxiv.org/abs/2610.41724v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41752",
+      "arxivId": "2610.41752",
+      "version": 1,
+      "titleEn": "Higher-Order Kinematic Derivatives for Aspect-Preserving Real-Time Numerical Inverse Kinematics",
+      "titleZh": null,
+      "authors": [
+        "Steffan Lloyd"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41752v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41768",
+      "arxivId": "2610.41768",
+      "version": 1,
+      "titleEn": "Visual-Inertial RGB-D SLAM with Encoders for a Differential Wheeled Robot",
+      "titleZh": null,
+      "authors": [
+        "Zhanghao Zhu",
+        "Yutaka Kaizu",
+        "Kenichi Furuhashi",
+        "Kenji Imou"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41768v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41772",
+      "arxivId": "2610.41772",
+      "version": 1,
+      "titleEn": "WorkIng: A Real-World and Synthetic Highway Work-Zone Benchmark Dataset for Autonomous Navigation",
+      "titleZh": null,
+      "authors": [
+        "Xujun Xie",
+        "Dominik Rößle",
+        "Adithya Mohan",
+        "Daniel Cremers",
+        "Torsten Schön"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2610.41772v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.CV",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41833",
+      "arxivId": "2610.41833",
+      "version": 1,
+      "titleEn": "PGGT-Loc: Primitive-Grounded Geometry Transformer for Feed-Forward Camera Localization",
+      "titleZh": null,
+      "authors": [
+        "Hanqiao Ye",
+        "Yuzhou Liu",
+        "Mengqi Rong",
+        "Jian Liu",
+        "Yangdong Liu",
+        "Shuhan Shen"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41833v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "cross-list"
+        },
+        {
+          "category": "cs.CV",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41834",
+      "arxivId": "2610.41834",
+      "version": 1,
+      "titleEn": "ObjectGuidedMap: An Object-Aware Model for Robust Bird's Eye View Map Prediction in High-Occlusion Scenarios",
+      "titleZh": null,
+      "authors": [
+        "Christian Bohn",
+        "Harsh Yadav",
+        "Klaus Friedrichs",
+        "Hasan Tercan",
+        "Tobias Meisen"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2610.41834v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.CV",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41839",
+      "arxivId": "2610.41839",
+      "version": 1,
+      "titleEn": "Integrating Low-Thrust Transfer Dynamics into POMDP Planning for On-Orbit Servicing",
+      "titleZh": null,
+      "authors": [
+        "Susmitha Patnala",
+        "Vincent Mousseau",
+        "Adam Abdin"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO",
+        "math.OC"
+      ],
+      "url": "https://arxiv.org/abs/2610.41839v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41844",
+      "arxivId": "2610.41844",
+      "version": 1,
+      "titleEn": "SketchMate: Agentic Geometric Reasoning for Zero-Shot Precision Insertion",
+      "titleZh": null,
+      "authors": [
+        "Jiaming Wang"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41844v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41857",
+      "arxivId": "2610.41857",
+      "version": 1,
+      "titleEn": "When the Simulator Fails, Not the Policy: Auditing Contact Artifacts in Simulated Robot Benchmarks",
+      "titleZh": null,
+      "authors": [
+        "Alex Zhou",
+        "Junhao Wu",
+        "Xueyang Zhou",
+        "Yixiao Huo",
+        "Hongcheng Gao",
+        "Di Zhu",
+        "Zhenghao Zhang",
+        "Yongchao Chen"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41857v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41868",
+      "arxivId": "2610.41868",
+      "version": 1,
+      "titleEn": "META-Robot: Self-Cognition and Capability Scaling in Agentic Robots",
+      "titleZh": null,
+      "authors": [
+        "Xuanzhi Feng",
+        "Zeyu Liu",
+        "Weiheng Gao",
+        "Xinchen Li",
+        "Jiankun Tang",
+        "Fangqi Zhu",
+        "Quanxin Shou",
+        "Hao Chen",
+        "Zhengyang Yan",
+        "Hualei Zhang",
+        "Junhao Li",
+        "Zhiyao Wu",
+        "Jie Zhang",
+        "Song Guo"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41868v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41873",
+      "arxivId": "2610.41873",
+      "version": 1,
+      "titleEn": "Safe Planning for Black-Box Systems via MAP Inference with Truncated Diffusion Priors and CBF-Informed Gibbs Likelihoods",
+      "titleZh": null,
+      "authors": [
+        "Shanghan Liu",
+        "Jitao Sun",
+        "Junhui Zhang"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "eess.SY"
+      ],
+      "url": "https://arxiv.org/abs/2610.41873v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "eess.SY",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41877",
+      "arxivId": "2610.41877",
+      "version": 1,
+      "titleEn": "Movens-Zero: Scaling Humanoid Motion Foundation Models with Large-Scale Human Videos",
+      "titleZh": null,
+      "authors": [
+        "Wendong Bu",
+        "Tinghong Ye",
+        "Qizhou Wang",
+        "Jiacheng Li",
+        "Zhiqi Ge",
+        "Yuze Lin",
+        "Zhongqi Yue",
+        "Yi Su",
+        "Jingyu Wang",
+        "Kai Shen",
+        "Jingdong Liu",
+        "Chengyuan Deng",
+        "Xiaoxuan Chen",
+        "Xin Tan",
+        "Jiaming Ji",
+        "Wenqiao Zhang",
+        "Chenghong Jiang",
+        "Tuoyu Li",
+        "Siliang Tang",
+        "Jun Xiao",
+        "Tat-Seng Chua",
+        "Yueting Zhuang",
+        "Xingxing Wang",
+        "Juncheng Li"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2610.41877v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        },
+        {
+          "category": "cs.CV",
+          "change": "cross-list"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41892",
+      "arxivId": "2610.41892",
+      "version": 1,
+      "titleEn": "Online Learning of Heterogeneous Locomotion Dynamics under Reinforcement Learning Policies for Precise Loco-Manipulation",
+      "titleZh": null,
+      "authors": [
+        "Tianlin Zhang",
+        "Weipeng Xia",
+        "Lingwei Zhang",
+        "Yiyang Shao",
+        "Zhongyu Li",
+        "Yun-Hui Liu"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41892v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41936",
+      "arxivId": "2610.41936",
+      "version": 1,
+      "titleEn": "Adaptive Coverage Algorithms for Mobile Ad Hoc Networks in Dynamic Worlds",
+      "titleZh": null,
+      "authors": [
+        "Hugo Gandhi",
+        "Edwin Meriaux",
+        "Antonio Loría"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO",
+        "cs.MA"
+      ],
+      "url": "https://arxiv.org/abs/2610.41936v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41946",
+      "arxivId": "2610.41946",
+      "version": 1,
+      "titleEn": "Sensorium: An Open-Source Multimodal Data Collection and Curation Library for Embodied Surgical AI",
+      "titleZh": null,
+      "authors": [
+        "Lorenzo Mazza",
+        "Ariel Rodriguez",
+        "Stefanie Speidel"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.AI",
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41946v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "cross-list"
+        },
+        {
+          "category": "cs.AI",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41970",
+      "arxivId": "2610.41970",
+      "version": 1,
+      "titleEn": "When Does Test-Time Search Help World Action Models? An Empirical Audit of Candidate Selection and Simulator Integrity",
+      "titleZh": null,
+      "authors": [
+        "Jun Liu",
+        "Dajie Sun",
+        "Zhenglun Kong",
+        "Zhenjiang Fan",
+        "Peiyan Dong",
+        "Fan Yang",
+        "Wenbin Zhangg",
+        "Geng Yuan",
+        "Xue Lin",
+        "Yanzhi Wang",
+        "Dong Huang"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2610.41970v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.AI",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41978",
+      "arxivId": "2610.41978",
+      "version": 1,
+      "titleEn": "Language-Conditioned Behavioral Cloning for Autonomous Endoscope Guidance",
+      "titleZh": null,
+      "authors": [
+        "Ariel Rodriguez",
+        "Lorenzo Mazza",
+        "Ortrun Hellig",
+        "Alejandra Toscano",
+        "Rayan Younis",
+        "Stefanie Speidel"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41978v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41981",
+      "arxivId": "2610.41981",
+      "version": 1,
+      "titleEn": "Design and Validation of a Robotic Knee Exoskeleton with Musculoskeletal Simulation-Derived Biological Torque Control",
+      "titleZh": null,
+      "authors": [
+        "Rajiv V. Joshi",
+        "Jimin An",
+        "Ilseung Park",
+        "Dawit Lee",
+        "Inseung Kang"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41981v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41982",
+      "arxivId": "2610.41982",
+      "version": 1,
+      "titleEn": "Suspended-Fabric Robotic Manipulation Surfaces: Modelling, Design Space, and Multimodular Extensio",
+      "titleZh": null,
+      "authors": [
+        "Pratik Ingle",
+        "Jørn Lambertsen",
+        "Kasper Støy",
+        "Andres Faiña"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.41982v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-42021",
+      "arxivId": "2610.42021",
+      "version": 1,
+      "titleEn": "Nexus-VLA: Bridging Human and Robot Experiences via a Shared Hierarchical Semantic Latent Space",
+      "titleZh": null,
+      "authors": [
+        "Biaoliang Guan",
+        "Tingyu Yuan",
+        "Wen Ye",
+        "Ziming Ji",
+        "Xu Yang",
+        "Yan Huang",
+        "Jihua Zhu",
+        "Chaoyang Zhao"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.42021v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-42027",
+      "arxivId": "2610.42027",
+      "version": 1,
+      "titleEn": "A Neural Network Approach towards Real-Time Knot Point Density Estimates for the Nonlinear Quadrotor",
+      "titleZh": null,
+      "authors": [
+        "Jasmine Ratchford",
+        "Raffaele Romagnoli",
+        "Mark H. Klein"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "eess.SY",
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2610.42027v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.LG",
+          "change": "cross-list"
+        },
+        {
+          "category": "eess.SY",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-42043",
+      "arxivId": "2610.42043",
+      "version": 1,
+      "titleEn": "Proof-Carrying Evolution: Black-Box Search, White-Box Flight",
+      "titleZh": null,
+      "authors": [
+        "Amit Jain",
+        "Sergio Sanchez-Hurtado",
+        "Victor Rodriguez-Fernandez",
+        "Richard Linares"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO",
+        "cs.NE",
+        "eess.SY"
+      ],
+      "url": "https://arxiv.org/abs/2610.42043v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        },
+        {
+          "category": "eess.SY",
+          "change": "cross-list"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-42049",
+      "arxivId": "2610.42049",
+      "version": 1,
+      "titleEn": "A Hybrid Path Planning Framework for Assistive Wheelchair Navigation in Dynamic Pedestrian Environments",
+      "titleZh": null,
+      "authors": [
+        "Damla Leblebicioğlu",
+        "Rachel Barume",
+        "Taşkın Padır"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO",
+        "eess.SY"
+      ],
+      "url": "https://arxiv.org/abs/2610.42049v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        },
+        {
+          "category": "eess.SY",
+          "change": "cross-list"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-42053",
+      "arxivId": "2610.42053",
+      "version": 1,
+      "titleEn": "REA: A Routed Embodied Agent Runtime for Asynchronous Brain-Cerebellum Control",
+      "titleZh": null,
+      "authors": [
+        "Pengfei Zhou",
+        "Yixing Ma",
+        "Zhengfeiyang Zhang",
+        "Haoyuan Chen",
+        "Zhenglin Wan",
+        "Hexin Wang",
+        "Wangbo Zhao",
+        "Yang You"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2610.42053v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        },
+        {
+          "category": "cs.CV",
+          "change": "cross-list"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-42096",
+      "arxivId": "2610.42096",
+      "version": 1,
+      "titleEn": "CausalWAM: Learning the Causes of Actions in World Action Models",
+      "titleZh": null,
+      "authors": [
+        "Juntao Cheng",
+        "Jinzhou Tang",
+        "Fan Feng",
+        "Henrik I. Christensen",
+        "Yujia Zheng"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.AI",
+        "cs.RO",
+        "stat.ML"
+      ],
+      "url": "https://arxiv.org/abs/2610.42096v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "cross-list"
+        },
+        {
+          "category": "cs.AI",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-42097",
+      "arxivId": "2610.42097",
+      "version": 1,
+      "titleEn": "ROOF: Learning Humanoid Fall Recovery under Overhead Constraints",
+      "titleZh": null,
+      "authors": [
+        "Yidan Lu",
+        "Jiayuan Yu",
+        "Zongrui Cai",
+        "Jingwen Sun",
+        "Jinrui Han",
+        "Jing Wang",
+        "Ping Luo",
+        "Peng Lu"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.42097v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-42100",
+      "arxivId": "2610.42100",
+      "version": 1,
+      "titleEn": "Towards Understanding the Impact of Plasticity Loss on Reinforcement Learning in Stochastic Environments",
+      "titleZh": null,
+      "authors": [
+        "Philipp Bordne",
+        "André Biedenkapp"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2610.42100v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.LG",
+          "change": "new"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-42141",
+      "arxivId": "2610.42141",
+      "version": 1,
+      "titleEn": "RoboArchitect: Automating the Design of Robotic Agents with Persistent Memory",
+      "titleZh": null,
+      "authors": [
+        "Shengguang Wu",
+        "Suning Huang",
+        "Cherie Ho",
+        "Ria Doshi",
+        "Hao Zhu",
+        "Serena Yeung-Levy"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2610.42141v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        },
+        {
+          "category": "cs.CV",
+          "change": "cross-list"
+        },
+        {
+          "category": "cs.AI",
+          "change": "cross-list"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-42146",
+      "arxivId": "2610.42146",
+      "version": 1,
+      "titleEn": "Hierarchical World Models with Implicit Dynamics",
+      "titleZh": null,
+      "authors": [
+        "Gaoyue Zhou",
+        "Yvonne Wu",
+        "Zichen Jeff Cui",
+        "Nicolas Ballas",
+        "Mido Assran",
+        "Lerrel Pinto",
+        "Yann LeCun"
+      ],
+      "publishedDate": "2026-10-30",
+      "updatedDate": "2026-10-30",
+      "change": "new",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2610.42146v1",
+      "topics": [],
+      "announcements": [
+        {
+          "category": "cs.RO",
+          "change": "new"
+        },
+        {
+          "category": "cs.AI",
+          "change": "cross-list"
+        }
+      ]
+    }
+  ]
+}

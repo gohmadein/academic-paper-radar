@@ -30,11 +30,36 @@
     "xun": {
       "label": "迅",
       "border": "blue",
-      "targetMin": 5,
-      "targetMax": 8,
+      "targetMin": 3,
+      "targetMax": 5,
       "scope": "全部机器人相关方向，排除纯机械机构设计。来源层级只影响顺序，不限制主题。",
       "sourceRegistry": "config/source-registry.json",
-      "originalWatchlist": "config/xun-source-watchlist.md"
+      "originalWatchlist": "config/xun-source-watchlist.md",
+      "selectionPriority": [
+        "优先官方核验的会议Best Paper获奖论文、Oral、Spotlight及高质量期刊论文；均须与机器人研究直接相关。",
+        "获奖、候选、入围以及Oral/Spotlight是不同身份，分别按官方名单表述，不推断或伪造。",
+        "论文质量与相关性优先于标签；允许少于目标乃至0，不以arXiv简报补足精选名额。"
+      ],
+      "arxivBulletin": {
+        "separateFromCuratedQuota": true,
+        "categories": [
+          "cs.RO",
+          "cs.CV",
+          "cs.LG",
+          "cs.AI",
+          "eess.SY",
+          "eess.IV"
+        ],
+        "alias": {
+          "cs.SY": "eess.SY"
+        },
+        "scope": "按官方公告批次全量分页筛查全部机器人相关新增、修订与交叉列表；排除纯机械机构设计及与机器人无关的泛CV/LLM。",
+        "noTopN": true,
+        "identity": "arXiv base ID去重，版本与各分类公告类型单独保存；可与精选共享同一论文身份。",
+        "coverage": "只有全部六类完整分页和相关性筛查完成才能标完整；部分、失败和非公告日须据实标注，不能把失败写成零更新。",
+        "contract": "docs/ARXIV-BULLETIN.md",
+        "index": "data/arxiv/index.json"
+      }
     },
     "li": {
       "label": "李",

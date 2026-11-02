@@ -15,8 +15,8 @@
   "publicationPolicy": "Start collection at scheduled time; notify after verified deployment. Not an exact publication-time guarantee.",
   "profiles": {
     "xun": {
-      "dailyMin": 5,
-      "dailyMax": 8,
+      "dailyMin": 3,
+      "dailyMax": 5,
       "border": "blue"
     },
     "li": {

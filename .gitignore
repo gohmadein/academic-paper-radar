@@ -10,3 +10,5 @@ qa/
 .ingest-*/
 commit-plan.json
 draft-*.json
+
+.arxiv-stage-*/

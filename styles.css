@@ -737,3 +737,11 @@ dialog::backdrop{background:#18263f38}
 .with-calendar .map-regions button[aria-pressed="true"],.with-calendar .map-modes{background:var(--calendar-tint,#edf2fa)}
 .with-calendar .map-marker span,.with-calendar .map-key{background:var(--calendar-accent,#175cd3);box-shadow:0 0 0 4px color-mix(in srgb,var(--calendar-accent,#175cd3) 12%,transparent)}
 [data-calendar-profile="xun"] .map-today .map-marker span,[data-calendar-profile="xun"] .map-key.today{background:#b42318}
+/* Independent Xun arXiv bulletin; never participates in the aligned header grid. */
+#arxiv-updates{margin:0 0 18px;min-width:0}.arxiv-bulletin{border:1px solid #d8e4f6;border-radius:12px;background:#ffffffed;color:#173d74;padding:12px 15px}
+.arxiv-bulletin>summary{cursor:pointer;font-size:13px;font-weight:650}.arxiv-bulletin>summary>span{font-size:11px;font-weight:400;margin-left:8px;color:#526787}
+.arxiv-bulletin-body{max-height:440px;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable;padding-right:6px;overflow-wrap:anywhere}
+.arxiv-bulletin-date{display:block;font-size:11px;margin:10px 0}.arxiv-bulletin-date select{padding:5px;border:1px solid #d8e4f6;border-radius:6px;background:white;color:#173d74}
+.arxiv-bulletin-status,.arxiv-bulletin-coverage,.arxiv-bulletin-limitations{font-size:10px;line-height:1.7;color:#526787;margin:9px 0}.arxiv-bulletin-limitations{padding-left:17px}
+.arxiv-bulletin-list{list-style:none;padding:0;margin:12px 0 0}.arxiv-bulletin-item{padding:12px 0;border-top:1px solid #e0e8f5}.arxiv-bulletin-item>a{font-size:13px;line-height:1.6;color:#175cd3;font-weight:600}.arxiv-bulletin-meta,.arxiv-bulletin-authors,.arxiv-bulletin-topics{font-size:10px;line-height:1.7;margin:4px 0;color:#526787}.arxiv-bulletin-meta>span:first-child{color:#b42318}
+@media(max-width:600px){.arxiv-bulletin-body{max-height:360px}.arxiv-bulletin>summary>span{display:block;margin:5px 0 0}}
