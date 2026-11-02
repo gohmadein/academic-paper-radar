@@ -1,0 +1,1333 @@
+{
+  "version": 2,
+  "date": "2026-11-02",
+  "title": "2026-11-02 零域 · 迅5 / 李1+经典1 / 驴1+经典1",
+  "demo": false,
+  "timezone": "Asia/Shanghai",
+  "issueNote": "本期收录8篇不重复论文：普通推荐6篇，周一经典2篇；按方向计迅5、李1+经典1、驴1+经典1，其中人形操作论文由迅/驴共享。所查入口未证实11月1日后新增的目标机器人论文：5篇为近30日内未收录论文的首次发现，李1篇为2024年旧文首次发现，另补2篇基础经典。发现日不是发表日；近期标签仅表示已核验发表时间在30日内。正文均为限定章节重点核读，未独立复现或复核所有证明。会议日历已逐项核验14个关注来源，未确认日期继续保留冲突或未公布状态。",
+  "coverage": {
+    "checkedSources": [
+      "arXiv cs.RO recent/new（https://arxiv.org/list/cs.RO/recent；https://arxiv.org/list/cs.RO/new）：查看首页及新列表时间，最新仍标为2026-10-30；仅定向筛查，不声称逐条穷尽189条。",
+      "arXiv eess.SY recent/new（https://arxiv.org/list/eess.SY/recent；https://arxiv.org/list/eess.SY/new）：最新仍标为2026-10-30，筛查机器人控制/规划条目；cs.SY入口内容相同，不计作独立来源。",
+      "逐篇核验arXiv 2610.40473、2610.40427、2610.40429、2610.39378的摘要、版本日期、作者及HTML正文；四篇均为2026-10-29 v1的未收录补充。",
+      "RSS Online Proceedings（https://roboticsproceedings.org/）：目录确认RSS XXII为2026年7月会议，未据此宣称新论文更新。",
+      "RA-L官方入口（https://www.ieee-ras.org/publications/ra-l/）：可访问期刊说明页，未完成IEEE Xplore逐篇最新论文筛查。",
+      "UZH RPG（https://rpg.ifi.uzh.ch/）：读取主页及最新新闻，最新显示2026-10-21；未发现可据此确认11月1日以后新增的目标论文。",
+      "原文代码链接 https://github.com/JeanLew01/reachapprox 可访问；socx及定位规划的标题/代码定向搜索未验证到作者直接发布的代码，资源仍为null。",
+      "李：DROPS ICDT 2024出版页与正式PDF、arXiv 2311.18157 v3正文。",
+      "李：University of Edinburgh机构存档的PODS 2002论文与出版元数据。",
+      "李：以删除传播/视图更新/见证关键词检索PVLDB及arXiv；检查Ontop research/publications与release入口，已排除历史GDP/ILP、missing-answer repairs、GDPView和两篇已读种子。",
+      "arXiv原始条目与HTML：2610.26169、2610.22340；核对当前完整身份历史库。",
+      "RSS 2023官方会议/论文集、Diffusion Policy作者项目页、RSS原PDF、官方GitHub与实验材料目录。"
+    ],
+    "limitations": [
+      "迅来源目录的14会议、20期刊、6 arXiv分类、30实验室是候选目录，不是本日全源已核验声明。本次只对上述入口做定向中等深度检索，其他来源未逐一检查。",
+      "没有从所查入口证实11月1日之后新发布的机器人论文。本期4篇为近30日内、历史未收录论文的首次发现补充，另与驴共享1篇人形操作；不得把发现日改写成发表日。",
+      "正文为限定章节重点核读，不是完整审稿、完整证明核查或独立实验复现。无资源时保持null；未经纸面署名核验的作者机构不推断。",
+      "只有Georgia Tech复用机构库已核验标识；Johns Hopkins、Washington University in St. Louis、IISER Bhopal及Stony Brook仅以论文署名文字识别，已登记为待核验，暂无可展示标识。",
+      "李本期为1篇较早论文首次发现与1篇周一经典，近期新作0篇；未穷尽全部会议期刊目录，不以数量目标降低相关性。",
+      "同名TODS条目可检索，但出版社403，未确认期刊增量；不将其包装为近期成果。",
+      "理论正文重点核读；未独立完成所有证明复核、实现复现或用户研究。",
+      "PlayPolicy 2610.22340已在2026-10-31推送，排除重复；本次只收1篇驴近期论文和1篇周一经典，不凑满。",
+      "定向检索与重点正文核读，不声称穷尽70项来源目录或完成独立复现；机构库没有这些署名机构的可复用已核验标识，保留文字。"
+    ]
+  },
+  "papers": [
+    {
+      "id": "arxiv-2610-40473",
+      "title": "采样可达性分析的基本极限：几何与流畸变",
+      "titleEn": "Fundamental Limits of Sampling-Based Reachability: Geometry and Flow Distortion",
+      "authors": [
+        "Jixian Liu",
+        "Ihab Tabbara",
+        "Hussein Sibai",
+        "Enrique Mallada"
+      ],
+      "year": 2026,
+      "venue": "arXiv 预印本",
+      "tags": [
+        "安全验证",
+        "可达集",
+        "采样复杂度",
+        "控制理论"
+      ],
+      "summary": "用有限轨迹端点估计可达集，究竟需要多少样本？本文把问题写成受动力学流畸变影响的几何支撑估计，以局部体积密度和单侧Lipschitz常数刻画尖角与收缩。作者给出Hausdorff误差的样本上界及有条件的极小极大下界，并用平面系统和机械臂实验说明维度负担；结论不涵盖自适应或利用模型结构的估计器。",
+      "summaryEn": "How many samples are needed to estimate a reachable set from finitely many trajectory endpoints? The paper formulates this as geometric support estimation under dynamical flow distortion, using local volume density and a one-sided Lipschitz constant to characterize corners and contraction. The authors give a sample upper bound for Hausdorff error and a conditional minimax lower bound, with planar and robot-arm experiments illustrating the dimensional burden. The results do not cover adaptive or model-aware estimators.",
+      "whySelected": "为机器人安全验证提供失败边界：值得区分覆盖概率、凸包误差和真实可达集几何误差，而非只看采样数量。",
+      "sources": [
+        {
+          "label": "原始论文",
+          "url": "https://arxiv.org/abs/2610.40473"
+        },
+        {
+          "label": "正文 HTML",
+          "url": "https://arxiv.org/html/2610.40473v1"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "为机器人安全验证提供失败边界：值得区分覆盖概率、凸包误差和真实可达集几何误差，而非只看采样数量。",
+          "relation": "机器人可达集估计与安全验证；补充非学习型控制理论研究。",
+          "prerequisites": [
+            "Hausdorff距离",
+            "ODE流与单侧Lipschitz条件",
+            "概率界与极小极大下界"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.40473",
+        "other": null
+      },
+      "publicationStatus": "preprint",
+      "publicationDate": "2026-10-29",
+      "discoveredDate": "2026-11-02",
+      "verifiedAt": "2026-11-02",
+      "readDepth": "fulltext",
+      "paperType": "theory",
+      "classic": false,
+      "novelty": "recent",
+      "updateNote": "",
+      "links": {
+        "code": "https://github.com/JeanLew01/reachapprox",
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "下界针对独立同分布端点观测，并只在指定维度、局部密度、精度及状态域条件内成立，不是每个具体初始集合的逐点下界。",
+        "上下界还差维度相关因子及对数项；机械臂有限实验不认证渐近收敛率。",
+        "本稿为CoRL论文扩展并投稿TAC，不能写作TAC已录用。"
+      ],
+      "assumptions": [
+        "初始集合有统一局部体积密度下界，采样密度有下界，向量场满足单侧Lipschitz条件。"
+      ],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2610.40473",
+          "claim": "核验英文题名、完整作者名单、2026-10-29 v1提交日期及预印本身份；不是11月2日新发布。",
+          "checkedAt": "2026-11-02"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.40473v1",
+          "claim": "正文核读范围、方法、作者报告结果、限制和论文署名依据；详见researchNotes。",
+          "checkedAt": "2026-11-02"
+        },
+        {
+          "url": "https://github.com/JeanLew01/reachapprox",
+          "claim": "作者在论文中明确链接的代码仓库，网页可访问；未运行。",
+          "checkedAt": "2026-11-02"
+        }
+      ],
+      "researchNotes": [
+        "近30日内论文首次发现补充；未在10月31日/11月1日身份注册表出现。不是11月1日以后新发表。",
+        "重点核读摘要、引言、第四节平面实验设置/尖角实验及第五节局限；核验图2图注。第三节定理只核验条件与结论，附录证明未逐式复核。",
+        "建议先读第一节两种误差区别，再读图2及第五节，最后按需研究第三节上下界；不要把最坏情形下界当作单个实验曲线预测。",
+        "未独立复现、未运行代码、未完整逐式复核证明。除明确列出的代码外，原文中未核验到独立项目、视频或数据下载资源，不猜链接。"
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/reach-corners.webp",
+          "sha256": "8fd04866e422cc5efa65e7127156cbef694ef9c611503f023983920a13d83ef9",
+          "width": 1600,
+          "height": 687,
+          "sourceUrl": "https://arxiv.org/html/2610.40473v1/fig/corner_angle_scaling.png",
+          "evidenceUrl": "https://arxiv.org/html/2610.40473v1",
+          "verifiedAt": "2026-11-02",
+          "credit": "Jixian Liu et al. · Figure 2",
+          "rights": "原论文作者版权；arXiv非独占发布许可不等于开放再利用许可。仅作有出处的论文导读缩略图，保留完整图内容与比例，不声称开放许可。",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "light",
+          "altZh": "原论文图2：初始集合尖角、采样误差及上下界比较",
+          "altEn": "Jixian Liu et al. · Figure 2; complete original figure, proportionally rendered."
+        },
+        "figureNote": "使用论文真实原图，保留全部面板、图例与比例；仅优化文件格式/尺寸。",
+        "institutions": [
+          {
+            "name": "Johns Hopkins University",
+            "logo": null,
+            "authorNames": [
+              "Jixian Liu",
+              "Enrique Mallada"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.40473v1",
+                "claim": "正文作者脚注明确J. Liu和E. Mallada署名Johns Hopkins University。",
+                "checkedAt": "2026-11-02"
+              }
+            ],
+            "note": "仅据本篇署名识别机构，不表示背书。暂无已核验可展示标识，仅显示机构名称。",
+            "institutionType": "university",
+            "markType": "none",
+            "institutionId": "pending-johns-hopkins-university"
+          },
+          {
+            "name": "Washington University in St. Louis",
+            "logo": null,
+            "authorNames": [
+              "Ihab Tabbara",
+              "Hussein Sibai"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.40473v1",
+                "claim": "正文作者脚注明确I. Tabbara和H. Sibai署名Washington University in St. Louis。",
+                "checkedAt": "2026-11-02"
+              }
+            ],
+            "note": "仅据本篇署名识别机构，不表示背书。暂无已核验可展示标识，仅显示机构名称。",
+            "institutionType": "university",
+            "markType": "none",
+            "institutionId": "pending-washington-university-in-st-louis"
+          }
+        ],
+        "authors": []
+      }
+    },
+    {
+      "id": "arxiv-2610-40427",
+      "title": "socx：基于JAX的GPU加速机会约束随机最优控制",
+      "titleEn": "socx: GPU-Accelerated Chance-Constrained Stochastic Optimal Control using JAX",
+      "authors": [
+        "Tanmay Dokania",
+        "Yashwanth Kumar Nakka"
+      ],
+      "year": 2026,
+      "venue": "arXiv 预印本",
+      "tags": [
+        "随机最优控制",
+        "GPU",
+        "机会约束",
+        "轨迹优化"
+      ],
+      "summary": "机会约束随机控制的凸重构常受计算和内存开销限制。socx利用ADMM把问题拆成可并行的线性二次跟踪与集合投影，并在JAX中实现。悬停线性化四旋翼仿真中，作者报告相对MOSEK最高98倍加速，并求解1120步时域；计时排除JIT编译，优势依赖硬件、容差和问题结构，不等于真实飞行验证。",
+      "summaryEn": "Convex reformulations of chance-constrained stochastic control can be limited by computation and memory. socx uses ADMM to split the problem into parallel linear-quadratic tracking and set projections, implemented in JAX. In hover-linearized quadrotor simulations, the authors report up to 98-fold speedup over MOSEK and solve a 1,120-step horizon. Timing excludes JIT compilation; gains depend on hardware, tolerance and problem structure, and do not constitute real-flight validation.",
+      "whySelected": "适合关注机器人规划求解器与GPU并行化者；重点看结构分解如何降低单次求解成本，以及比较计时的边界。",
+      "sources": [
+        {
+          "label": "原始论文",
+          "url": "https://arxiv.org/abs/2610.40427"
+        },
+        {
+          "label": "正文 HTML",
+          "url": "https://arxiv.org/html/2610.40427v1"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "适合关注机器人规划求解器与GPU并行化者；重点看结构分解如何降低单次求解成本，以及比较计时的边界。",
+          "relation": "机器人随机轨迹优化与协方差控制，不以学习策略为前提。",
+          "prerequisites": [
+            "线性随机系统",
+            "机会约束与协方差转向",
+            "ADMM",
+            "LQT/Riccati递推"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.40427",
+        "other": null
+      },
+      "publicationStatus": "preprint",
+      "publicationDate": "2026-10-29",
+      "discoveredDate": "2026-11-02",
+      "verifiedAt": "2026-11-02",
+      "readDepth": "fulltext",
+      "paperType": "system",
+      "classic": false,
+      "novelty": "recent",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "实验为悬停线性化12维四旋翼模型，不能直接推出强非线性或实机性能。",
+        "报告硬件为Core Ultra 9 285K、64GB RAM、RTX 5080及16GB VRAM；socx计时不含JIT，基线比较内部求解时间。",
+        "最高加速比不适用于所有容差/时域，二次机会约束使用近似表述。"
+      ],
+      "assumptions": [
+        "线性动力学、高斯噪声和所述凸提升表述；利用共享结构的并行子问题。"
+      ],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2610.40427",
+          "claim": "核验英文题名、完整作者名单、2026-10-29 v1提交日期及预印本身份；不是11月2日新发布。",
+          "checkedAt": "2026-11-02"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.40427v1",
+          "claim": "正文核读范围、方法、作者报告结果、限制和论文署名依据；详见researchNotes。",
+          "checkedAt": "2026-11-02"
+        }
+      ],
+      "researchNotes": [
+        "近30日内论文首次发现补充；未在10月31日/11月1日身份注册表出现。不是11月1日以后新发表。",
+        "重点核读引言、第四节ADMM分解与第五节仿真/表III及第六节结论；图2保留三种轨迹与全部图例。完整推导与实现未验证。",
+        "建议先看图2、第五节计时口径与表III，再沿第四节区分LQT更新和投影更新；最后补第二、三节背景。",
+        "未独立复现、未运行代码、未完整逐式复核证明。除明确列出的代码外，原文中未核验到独立项目、视频或数据下载资源，不猜链接。"
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/socx-fig2.webp",
+          "sha256": "d3f4eb932983ff801d015428e8acde13265e1a7d9f140214afbe938ac04cfde4",
+          "width": 1288,
+          "height": 498,
+          "sourceUrl": "https://arxiv.org/pdf/2610.40427",
+          "evidenceUrl": "https://arxiv.org/html/2610.40427v1",
+          "verifiedAt": "2026-11-02",
+          "credit": "Tanmay Dokania and Yashwanth Kumar Nakka · Figure 2",
+          "rights": "CC BY 4.0，原作者保留署名；完整保留图内容与比例，仅转码/缩放。",
+          "displayPolicy": "open-license",
+          "background": "light",
+          "altZh": "原论文图2：三种四旋翼仿真轨迹、边界及协方差椭圆",
+          "altEn": "Tanmay Dokania and Yashwanth Kumar Nakka · Figure 2; complete original figure, proportionally rendered."
+        },
+        "figureNote": "使用论文真实原图，保留全部面板、图例与比例；仅优化文件格式/尺寸。",
+        "institutions": [
+          {
+            "name": "Georgia Institute of Technology",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/gatech-symbol.png",
+              "sha256": "33c89bd7e3478f65c2a8f818274c18d0075090f3a10ea733cf9e3c371f626edc",
+              "width": 48,
+              "height": 48,
+              "sourceUrl": "https://www.gatech.edu/themes/custom/gatech/favicon.ico",
+              "evidenceUrl": "https://brand.gatech.edu/our-look/logos",
+              "verifiedAt": "2026-10-31",
+              "credit": "Georgia Institute of Technology official compact identity symbol",
+              "rights": "官方首页身份符号，商标归原权利人；无开放许可声明。不是受限大学印章，不表示背书。",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "altZh": "Georgia Tech 官方交织 GT 身份符号",
+              "altEn": "Official Georgia Tech interlocking GT identity symbol"
+            },
+            "authorNames": [
+              "Tanmay Dokania",
+              "Yashwanth Kumar Nakka"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.40427v1",
+                "claim": "正文署名明确两位作者均属Georgia Institute of Technology航空航天工程学院。",
+                "checkedAt": "2026-11-02"
+              }
+            ],
+            "note": "仅据本篇署名识别机构，不表示背书。复用已核验机构库标识。",
+            "institutionType": "university",
+            "markType": "compact-symbol",
+            "institutionId": "georgia-tech"
+          }
+        ],
+        "authors": []
+      }
+    },
+    {
+      "id": "arxiv-2610-40429",
+      "title": "带定位约束的最优路径规划",
+      "titleEn": "Optimal Path Planning with Localization constraints",
+      "authors": [
+        "Chinmay Mundane",
+        "Manav Mishra",
+        "PB Sujit"
+      ],
+      "year": 2026,
+      "venue": "arXiv 预印本",
+      "tags": [
+        "路径规划",
+        "GPS拒止导航",
+        "A*",
+        "状态估计"
+      ],
+      "summary": "没有GPS时，最短几何路径可能使无人机定位不确定性过大。本文将EKF传播的协方差界作为A*搜索的硬约束，利用已知地标观测限制漂移。作者在蒙特卡洛与PyBullet仿真中报告比所比较RRT*、PRM更短的可行路径。最优性应限定在表示了信念状态的可行图内；协方差约束不等于真实环境中的无条件安全保证。",
+      "summaryEn": "Without GPS, the geometrically shortest path may produce excessive localization uncertainty. This paper makes an EKF-propagated covariance bound a hard constraint in A* search, using known landmark observations to limit drift. The authors report shorter feasible paths than the compared RRT* and PRM planners in Monte Carlo and PyBullet simulations. Optimality should be confined to the feasible graph that represents belief state; a covariance constraint is not an unconditional safety guarantee in the real world.",
+      "whySelected": "把定位质量纳入路径规划，适合对照学习几何最优与信念空间可行性的区别。",
+      "sources": [
+        {
+          "label": "原始论文",
+          "url": "https://arxiv.org/abs/2610.40429"
+        },
+        {
+          "label": "正文 HTML",
+          "url": "https://arxiv.org/html/2610.40429v1"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "把定位质量纳入路径规划，适合对照学习几何最优与信念空间可行性的区别。",
+          "relation": "机器人导航中的规划—估计耦合；重点不是机械设计或通用视觉。",
+          "prerequisites": [
+            "A*可采纳与一致启发式",
+            "EKF与协方差传播",
+            "信念空间规划"
+          ],
+          "difficulty": "intermediate",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.40429",
+        "other": null
+      },
+      "publicationStatus": "preprint",
+      "publicationDate": "2026-10-29",
+      "discoveredDate": "2026-11-02",
+      "verifiedAt": "2026-11-02",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "recent",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "已知环境、障碍与地标位置；实验为二维网格和固定高度PyBullet飞行，未核验实机试验。",
+        "最优性证明依赖含均值与协方差的增广图及整段边可行性；不能把位置节点合并后的实现或连续空间最优性视为已证明。",
+        "协方差模型一致性与真实定位误差安全性不同；未独立复核代码实现。"
+      ],
+      "assumptions": [
+        "运动和传感模型已知，地标观测更新按论文模型工作。"
+      ],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2610.40429",
+          "claim": "核验英文题名、完整作者名单、2026-10-29 v1提交日期及预印本身份；不是11月2日新发布。",
+          "checkedAt": "2026-11-02"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.40429v1",
+          "claim": "正文核读范围、方法、作者报告结果、限制和论文署名依据；详见researchNotes。",
+          "checkedAt": "2026-11-02"
+        }
+      ],
+      "researchNotes": [
+        "近30日内论文首次发现补充；未在10月31日/11月1日身份注册表出现。不是11月1日以后新发表。",
+        "重点核读第二节问题设定概览、第三节3.1增广图与3.2启发式证明、第四节4.2仿真及第五节限制；未逐项复算统计结果。",
+        "建议先读图1理解地标绕行，再读3.1检查信念状态定义，最后看4.2仿真和结论；不要只凭标题接受无条件最优。",
+        "arXiv元数据作者为PB Sujit，正文写作Sujit PB；机构仅记录正文明确显示的该作者IISER Bhopal署名，其余作者不凭邮箱推断。",
+        "未独立复现、未运行代码、未完整逐式复核证明。除明确列出的代码外，原文中未核验到独立项目、视频或数据下载资源，不猜链接。"
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/localization-problem.webp",
+          "sha256": "bba60e433665ed1a6d8d43a2dfc74e611158b47bdfe65e7d2ae524a81856a07d",
+          "width": 500,
+          "height": 500,
+          "sourceUrl": "https://arxiv.org/html/2610.40429v1/image/problem_new.png",
+          "evidenceUrl": "https://arxiv.org/html/2610.40429v1",
+          "verifiedAt": "2026-11-02",
+          "credit": "Chinmay Mundane, Manav Mishra and PB Sujit · Figure 1",
+          "rights": "CC BY 4.0，原作者保留署名；完整保留图内容与比例，仅转码/缩放。",
+          "displayPolicy": "open-license",
+          "background": "light",
+          "altZh": "原论文图1：障碍、地标与定位约束下的候选路径",
+          "altEn": "Chinmay Mundane, Manav Mishra and PB Sujit · Figure 1; complete original figure, proportionally rendered."
+        },
+        "figureNote": "使用论文真实原图，保留全部面板、图例与比例；仅优化文件格式/尺寸。",
+        "institutions": [
+          {
+            "name": "Indian Institute of Science Education and Research Bhopal",
+            "logo": null,
+            "authorNames": [
+              "PB Sujit"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.40429v1",
+                "claim": "正文标题区Sujit PB后明确标注organization=IISER Bhopal；未由邮箱推断其他作者机构。",
+                "checkedAt": "2026-11-02"
+              }
+            ],
+            "note": "仅据本篇署名识别机构，不表示背书。暂无已核验可展示标识，仅显示机构名称。",
+            "institutionType": "university",
+            "markType": "none",
+            "institutionId": "pending-indian-institute-of-science-education-and-research-bhopal"
+          }
+        ],
+        "authors": []
+      }
+    },
+    {
+      "id": "arxiv-2610-39378",
+      "title": "穿越泊松森林的群体飞行：极限定理与最优策略",
+      "titleEn": "Limit Theorems and Optimal Policies for Flock Flight through Poisson Forests",
+      "authors": [
+        "Lav R. Varshney"
+      ],
+      "year": 2026,
+      "venue": "arXiv 预印本",
+      "tags": [
+        "多机器人",
+        "群体导航",
+        "网络流",
+        "随机几何"
+      ],
+      "summary": "单机器人能否穿过森林，不等于群体每秒能通过多少。本文在泊松障碍场中构造有向走廊网络，以统一航点时间间隔约束交通，把最大通行率化为最小顶点割容量。作者证明重复使用顶点不相交路径可达到该协议下的容量，并研究尺度极限与准入队列稳定性；这不是任意连续轨迹的最优结论，也未提供实机群飞验证。",
+      "summaryEn": "Whether one robot can cross a forest does not determine how many can pass per second. This paper constructs a directed corridor network in a Poisson obstacle field and constrains traffic by a common waypoint headway, reducing maximum throughput to minimum vertex-cut capacity. The author proves that repeated use of vertex-disjoint paths attains capacity under this protocol, and studies scaling limits and admission-queue stability. This is not an optimality result for arbitrary continuous trajectories, nor a hardware swarm-flight validation.",
+      "whySelected": "从单体避障转向群体吞吐瓶颈；可用最大流/最小割概念理解多机器人交通容量，不必先通读概率极限定理。",
+      "sources": [
+        {
+          "label": "原始论文",
+          "url": "https://arxiv.org/abs/2610.39378"
+        },
+        {
+          "label": "正文 HTML",
+          "url": "https://arxiv.org/html/2610.39378v1"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "从单体避障转向群体吞吐瓶颈；可用最大流/最小割概念理解多机器人交通容量，不必先通读概率极限定理。",
+          "relation": "多机器人导航、拥塞与交通调度的理论基础。",
+          "prerequisites": [
+            "最大流最小割",
+            "顶点不相交路径",
+            "泊松点过程",
+            "排队稳定性"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.39378",
+        "other": null
+      },
+      "publicationStatus": "preprint",
+      "publicationDate": "2026-10-29",
+      "discoveredDate": "2026-11-02",
+      "verifiedAt": "2026-11-02",
+      "readDepth": "fulltext",
+      "paperType": "theory",
+      "classic": false,
+      "novelty": "recent",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "容量精确性仅对预设前向走廊库和共同航点headway协议成立；对不受限制的连续飞行仅给可达下界。",
+        "统一前向速度、相同穿越时长和几何分离是调度证明关键，不能直接泛化至任意交叉路网。",
+        "正文为理论分析与示意图，未核验机器人实机实验；长篇渐近定理证明未完整审计。"
+      ],
+      "assumptions": [
+        "齐次泊松圆盘障碍场、固定走廊几何与非碰撞间隔；入场前可排队，森林内不等待。"
+      ],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2610.39378",
+          "claim": "核验英文题名、完整作者名单、2026-10-29 v1提交日期及预印本身份；不是11月2日新发布。",
+          "checkedAt": "2026-11-02"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.39378v1",
+          "claim": "正文核读范围、方法、作者报告结果、限制和论文署名依据；详见researchNotes。",
+          "checkedAt": "2026-11-02"
+        }
+      ],
+      "researchNotes": [
+        "近30日内论文首次发现补充；未在10月31日/11月1日身份注册表出现。不是11月1日以后新发表。",
+        "重点核读第一节协议边界、第三节有限网络容量/定理2及第九节结论；第四至八节只核验摘要与章节主题，未完整复核渐近证明。",
+        "建议先看图1并手算最大顶点不相交路径数，再读第三节容量与发射间隔关系，最后按需读第六节准入队列；概率极限定理可稍后深入。",
+        "正文AI Use披露使用ChatGPT辅助数学发展、写作和绘图；本导读未另生成科学插图，使用作者论文原图并如实标明出处。",
+        "未独立复现、未运行代码、未完整逐式复核证明。除明确列出的代码外，原文中未核验到独立项目、视频或数据下载资源，不猜链接。"
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/flock-network.webp",
+          "sha256": "97ea084a2bee86383119f30848fb48d87a319a48499ae7ad9c223d367769b660",
+          "width": 383,
+          "height": 267,
+          "sourceUrl": "https://arxiv.org/html/2610.39378v1/forest_network.svg",
+          "evidenceUrl": "https://arxiv.org/html/2610.39378v1",
+          "verifiedAt": "2026-11-02",
+          "credit": "Lav R. Varshney · Figure 1",
+          "rights": "原论文作者版权；arXiv非独占发布许可不等于开放再利用许可。仅作有出处的论文导读缩略图，保留完整图内容与比例，不声称开放许可。",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "light",
+          "altZh": "原论文图1：泊松森林、两条顶点不相交路径与最小航点割",
+          "altEn": "Lav R. Varshney · Figure 1; complete original figure, proportionally rendered."
+        },
+        "figureNote": "使用论文真实原图，保留全部面板、图例与比例；仅优化文件格式/尺寸。",
+        "institutions": [
+          {
+            "name": "Stony Brook University",
+            "logo": null,
+            "authorNames": [
+              "Lav R. Varshney"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.39378v1",
+                "claim": "作者脚注明确署名Stony Brook University的AI Innovation Institute与ECE系。",
+                "checkedAt": "2026-11-02"
+              }
+            ],
+            "note": "仅据本篇署名识别机构，不表示背书。暂无已核验可展示标识，仅显示机构名称。",
+            "institutionType": "university",
+            "markType": "none",
+            "institutionId": "pending-stony-brook-university"
+          }
+        ],
+        "authors": []
+      }
+    },
+    {
+      "id": "arxiv-2610-26169",
+      "title": "通过同构遥操作与独立技能路由实现可组合人形操作",
+      "titleEn": "Compositional Humanoid Manipulation through Isomorphic Teleoperation and Independent Skill Routing",
+      "authors": [
+        "Yiming Wang",
+        "Peixian Yang",
+        "Lifeng Zhuo",
+        "Lai Wei",
+        "Xinling Du",
+        "Kun Song",
+        "Weiming Wang",
+        "Daolin Ma"
+      ],
+      "year": 2026,
+      "venue": "arXiv 预印本",
+      "tags": [
+        "扩散策略",
+        "模仿学习",
+        "双臂技能组合",
+        "人形操作"
+      ],
+      "summary": "双臂技能的所有组合难以逐一示范。本文让左右臂在共享扩散专家池中独立路由，并以同构外骨骼采集接触操作数据。作者在G1上报告，换用外骨骼示范后，完整柜体流程成功率由35%升至65%。每条件仅20次测试，移动与操作分阶段执行，不能据此推断连续全身协同或跨机器人泛化。",
+      "summaryEn": "Demonstrating every combination of two-arm skills is impractical. This work routes each arm independently through a shared pool of diffusion experts and collects contact-manipulation data with an isomorphic exoskeleton. On G1, the authors report that switching to exoskeleton demonstrations raises full cabinet-workflow success from 35% to 65%. Each condition has only 20 trials, and locomotion and manipulation are staged; these results do not establish continuous whole-body coordination or cross-robot generalization.",
+      "whySelected": "P0学习问题明确：把单臂技能组合与遥操作数据质量分开检验，而非只展示硬件。",
+      "sources": [
+        {
+          "label": "原始论文",
+          "url": "https://arxiv.org/abs/2610.26169"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun",
+        "lv"
+      ],
+      "recommendations": {
+        "lv": {
+          "whyRead": "建议现在读：用本期Diffusion Policy经典补齐动作去噪，再看独立路由如何避免双臂技能纠缠；难点是稀疏专家与对比对齐损失，不因数学难度跳过。",
+          "relation": "P0视觉操作/模仿学习：从分别示范的单臂技能迁移到未示范双臂组合；兼及P2人形接触操作。",
+          "prerequisites": [
+            "先补行为克隆与分布偏移",
+            "再读条件扩散、动作块与滚动时域执行",
+            "随后补MoE稀疏路由、对比损失和关节空间/末端空间区别"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        },
+        "xun": {
+          "whyRead": "把双臂技能组合与示范采集质量分开理解，值得关注人形接触操作的系统设计；不把演示成功等同于通用全身智能。",
+          "relation": "全部机器人范围中的人形操作、遥操作与学习型控制；贡献不止外骨骼机械设计，含独立技能路由和实机评估。",
+          "prerequisites": [
+            "行为克隆与条件扩散策略",
+            "双臂技能组合",
+            "稀疏专家路由",
+            "遥操作与关节空间控制"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.26169",
+        "other": null
+      },
+      "publicationStatus": "preprint",
+      "publicationDate": "2026-10-19",
+      "discoveredDate": "2026-11-02",
+      "verifiedAt": "2026-11-02",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "recent",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "单一G1平台；每任务/数据源20次策略测试，不能视为大规模可靠性证明。",
+        "共享负载协调仍有失败；正文指出振荡、干扰与目标未达成。",
+        "作者承诺评审后开放代码与硬件，本次未核验已发布资源，链接保持null。"
+      ],
+      "assumptions": [
+        "技能词表、冻结VLM与既有行走控制器预先给定；移动时手臂保持姿态，不是端到端同步行走操作。"
+      ],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2610.26169",
+          "claim": "核验题名、8位完整作者与首次提交2026-10-19；未发现正式录用证据。",
+          "checkedAt": "2026-11-02"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.26169v1",
+          "claim": "重点核读IV节、V节表I/II、消融与署名；表II给出20次测试及65%/35%，代码仍为未来发布承诺。",
+          "checkedAt": "2026-11-02"
+        }
+      ],
+      "researchNotes": [
+        "驴·前沿线阅读路线：先图3辨认冻结模块、两臂路由与共享专家；再IV-C/IV-D看路由式(5)(6)与训练目标(7)；最后V-A和表II核对示范数量、20次测试及来源控制。",
+        "驴·基础线阅读路线：并读本期Diffusion Policy的II-C与图3，先弄清动作块预测和只执行前缀，再比较本文IV-E的阶段调度。",
+        "结果边界路线：V-B失败分析、V-E消融和VI未来工作；不要把技能组合成功等同于任意全身协同。",
+        "实际核读摘要、IV方法、V实验与结论的重点段落；未逐式推导、未通读全部引用、未运行训练或复现。",
+        "2026-10-19提交的近期积压论文，本期首次发现；不是2026-11-02当天新发表。距日报14天，按接口30天窗口标记recent。"
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/arxiv-2610-26169-figure3.webp",
+          "sha256": "24d91ec6be30ce74072851cf2420648cc5d9d4abb9f338a0f65b17c24cd420e1",
+          "width": 1600,
+          "height": 425,
+          "sourceUrl": "https://arxiv.org/html/2610.26169v1/imgs/Fig3_MoE_no_sum.png",
+          "evidenceUrl": "https://arxiv.org/html/2610.26169v1",
+          "verifiedAt": "2026-11-02",
+          "credit": "Yiming Wang et al. · Figure 3",
+          "rights": "版权归原作者；未核实开放再利用许可，arXiv非独占发布许可不等于再利用授权。仅署名论文缩略图；保持完整图形与图例，不重绘。",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "light",
+          "altZh": "HS-MoDP冻结语义调度器、左右臂独立路由与共享专家概览",
+          "altEn": "HS-MoDP overview with a frozen semantic scheduler, independent arm routing and shared experts"
+        },
+        "figureNote": "真实论文插图已下载并视觉核验，保持完整图形及比例。",
+        "institutions": [
+          {
+            "name": "Shanghai Jiao Tong University",
+            "logo": null,
+            "authorNames": [
+              "Yiming Wang",
+              "Lifeng Zhuo",
+              "Weiming Wang",
+              "Daolin Ma"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.26169v1",
+                "claim": "论文署名页明确列出这些作者与该机构。",
+                "checkedAt": "2026-11-02"
+              }
+            ],
+            "note": "已查机构库，无已核验可复用标识；仅显示机构文字名称，不推断现任雇主。",
+            "institutionType": "university",
+            "markType": "none",
+            "institutionId": "pending-shanghai-jiao-tong-university"
+          },
+          {
+            "name": "The University of Hong Kong",
+            "logo": null,
+            "authorNames": [
+              "Peixian Yang",
+              "Kun Song"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.26169v1",
+                "claim": "论文署名页明确列出这些作者与该机构。",
+                "checkedAt": "2026-11-02"
+              }
+            ],
+            "note": "已查机构库，无已核验可复用标识；仅显示机构文字名称，不推断现任雇主。",
+            "institutionType": "university",
+            "markType": "none",
+            "institutionId": "pending-the-university-of-hong-kong"
+          },
+          {
+            "name": "Xense Robotics",
+            "logo": null,
+            "authorNames": [
+              "Lai Wei"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.26169v1",
+                "claim": "论文署名页明确列出这些作者与该机构。",
+                "checkedAt": "2026-11-02"
+              }
+            ],
+            "note": "已查机构库，无已核验可复用标识；仅显示机构文字名称，不推断现任雇主。",
+            "institutionType": "company",
+            "markType": "none",
+            "institutionId": "pending-xense-robotics"
+          },
+          {
+            "name": "Fudan University",
+            "logo": null,
+            "authorNames": [
+              "Xinling Du"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.26169v1",
+                "claim": "论文署名页明确列出这些作者与该机构。",
+                "checkedAt": "2026-11-02"
+              }
+            ],
+            "note": "已查机构库，无已核验可复用标识；仅显示机构文字名称，不推断现任雇主。",
+            "institutionType": "university",
+            "markType": "none",
+            "institutionId": "pending-fudan-university"
+          }
+        ],
+        "authors": []
+      }
+    },
+    {
+      "id": "doi-e0565df42cc283c7e285",
+      "title": "寻找合取查询的最小见证",
+      "titleEn": "Finding Smallest Witnesses for Conjunctive Queries",
+      "authors": [
+        "Xiao Hu",
+        "Stavros Sintos"
+      ],
+      "year": 2024,
+      "venue": "ICDT 2024 · LIPIcs 290, 24:1–24:20",
+      "tags": [
+        "最小见证",
+        "合取查询",
+        "provenance",
+        "近似算法",
+        "旧文首次发现"
+      ],
+      "summary": "较早论文首次发现。若要保住全部查询答案，最少应保留哪些源元组？本文研究无自连接合取查询，以头聚类性质刻画精确求解的多项式可解性，并以头支配性质区分常数近似与对数不可近似边界。它提供保留目标的理论基线，可辅助理解更新计划为何需要保留某些见证；但不直接解决带本体约束的更新，也未验证交互系统或用户接受度。",
+      "whySelected": "较早论文 · 首次发现；补齐GDP框架背后的“保留全部答案、最小化源数据”子问题，不重复推荐GDP实现。",
+      "sources": [
+        {
+          "label": "正式论文（ICDT 2024）",
+          "url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol290-icdt2024/LIPIcs.ICDT.2024.24/LIPIcs.ICDT.2024.24.pdf"
+        },
+        {
+          "label": "出版元数据",
+          "url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICDT.2024.24"
+        },
+        {
+          "label": "作者完整版本",
+          "url": "https://arxiv.org/abs/2311.18157"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "li"
+      ],
+      "recommendations": {
+        "li": {
+          "whyRead": "先读定义4、定理12、算法1与图2，再对照附录B的删除传播区分；不用先啃完所有归约。",
+          "relation": "研究迁移建议：把必须保留的答案与其候选见证列入更新计划解释。最小见证是保留任务，不是目标删除的因果责任，也不等于唯一恢复方案。若用于VKG，仍须另证映射展开、约束与本体推理下的正确性。",
+          "prerequisites": [
+            "集合语义合取查询与投影",
+            "查询超图、连通分量",
+            "NP困难归约与近似比"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "deep"
+        }
+      },
+      "identity": {
+        "doi": "10.4230/lipics.icdt.2024.24",
+        "arxiv": "2311.18157",
+        "other": null
+      },
+      "publicationStatus": "published",
+      "publicationDate": "2024-03-14",
+      "discoveredDate": "2026-11-02",
+      "verifiedAt": "2026-11-02",
+      "readDepth": "fulltext",
+      "paperType": "theory",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "不是带TBox、源约束或映射更新的端到端VKG实现；不提供用户偏好选择或交互验收实验。",
+        "复杂性定理与近似保证不能换成固定运行时间预算承诺；部分非头支配查询的近似上下界仍有差距。"
+      ],
+      "assumptions": [
+        "固定查询与schema的数据复杂度；集合语义、无自连接CQ。目标为Q(D′)=Q(D)，并最小化D′的元组数。",
+        "复杂性分界使用论文列明的复杂性假设；近似求解允许见证变大，不允许丢失查询答案。"
+      ],
+      "evidence": [
+        {
+          "url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICDT.2024.24",
+          "claim": "核验全部作者、ICDT 2024、DOI、页码与署名机构；正式论文为CC-BY 4.0。 正式出版日期2024-03-14。",
+          "checkedAt": "2026-11-02"
+        },
+        {
+          "url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol290-icdt2024/LIPIcs.ICDT.2024.24/LIPIcs.ICDT.2024.24.pdf",
+          "claim": "重点核读问题定义、图2、精确与近似二分、算法1及其正确性要点。",
+          "checkedAt": "2026-11-02"
+        },
+        {
+          "url": "https://arxiv.org/html/2311.18157v3",
+          "claim": "完整版本第1–4节、附录B区分最小见证与删除传播；不是独立证明复核。",
+          "checkedAt": "2026-11-02"
+        }
+      ],
+      "researchNotes": [
+        "正文重点核读而非逐条完整证明复核；未运行代码或做独立实验。",
+        "检索出现同名TODS DOI 10.1145/3786785；出版社正文访问403，未核验期刊增量。此记录仅依据ICDT正式版与arXiv v3，不宣称2026新成果；以arXiv身份用于未来版本合并。",
+        "未找到可归属于本篇且已核验的代码、项目、视频、数据资源；全部为null。",
+        "可做后续评测设计：分别报告答案保持率、源元组数、求解成本及用户理解成本；这是阅读迁移建议，非论文实验结果。"
+      ],
+      "summaryEn": "First discovery of an older paper. Which source tuples must be retained to preserve every query answer with minimum total size? For self-join-free conjunctive queries, the paper characterizes polynomial-time exact solvability using head-cluster structure and separates constant-factor approximation from logarithmic inapproximability using head domination. It offers a theoretical baseline for preservation goals and helps explain why update plans need certain witnesses, but does not directly solve ontology-constrained updates or validate an interactive system or user acceptance.",
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/swp-icdt2024-figure2.png",
+          "sha256": "1d4d34f100a225fd7b2bda463e6c2e0d1ed5684867ac60245a6b3595d6988408",
+          "width": 730,
+          "height": 324,
+          "sourceUrl": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol290-icdt2024/LIPIcs.ICDT.2024.24/LIPIcs.ICDT.2024.24.pdf",
+          "evidenceUrl": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICDT.2024.24",
+          "verifiedAt": "2026-11-02",
+          "credit": "Xiao Hu and Stavros Sintos · ICDT 2024 · Figure 2",
+          "rights": "CC BY 4.0. Extracted Figure 2 and its full caption from the official paper; no diagram content changed.",
+          "displayPolicy": "open-license",
+          "background": "light",
+          "altZh": "论文图2：不同合取查询类别的精确和近似求解结果总览。",
+          "altEn": "Paper Figure 2: overview of exact and approximate results for classes of conjunctive queries."
+        },
+        "figureNote": "实际论文图2，保留完整图例与图注；不是生成示意图。",
+        "institutions": [
+          {
+            "name": "University of Waterloo",
+            "logo": null,
+            "authorNames": [
+              "Xiao Hu"
+            ],
+            "evidence": [
+              {
+                "url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol290-icdt2024/LIPIcs.ICDT.2024.24/LIPIcs.ICDT.2024.24.pdf",
+                "claim": "论文首页署名机构。",
+                "checkedAt": "2026-11-02"
+              }
+            ],
+            "note": "仅表示论文发表时的署名关系；未新增未经核验的机构标志。",
+            "institutionType": "university",
+            "markType": "none",
+            "institutionId": "pending-university-of-waterloo"
+          },
+          {
+            "name": "University of Illinois Chicago",
+            "logo": null,
+            "authorNames": [
+              "Stavros Sintos"
+            ],
+            "evidence": [
+              {
+                "url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol290-icdt2024/LIPIcs.ICDT.2024.24/LIPIcs.ICDT.2024.24.pdf",
+                "claim": "论文首页署名机构。",
+                "checkedAt": "2026-11-02"
+              }
+            ],
+            "note": "仅表示论文发表时的署名关系；未新增未经核验的机构标志。",
+            "institutionType": "university",
+            "markType": "none",
+            "institutionId": "pending-university-of-illinois-chicago"
+          }
+        ],
+        "authors": []
+      }
+    },
+    {
+      "id": "doi-8e7569e2eaa42e1b337d",
+      "title": "删除与注释如何通过视图传播",
+      "titleEn": "On the Propagation of Deletions and Annotations through Views",
+      "authors": [
+        "Peter Buneman",
+        "Sanjeev Khanna",
+        "Wang-Chiew Tan"
+      ],
+      "year": 2002,
+      "venue": "PODS 2002 · pp. 150–158",
+      "tags": [
+        "周一经典",
+        "视图更新",
+        "副作用",
+        "why/where provenance",
+        "复杂性"
+      ],
+      "summary": "周一经典，非近期新作。删除一个视图答案时，少删源元组与少影响其他答案是不同目标。本文在单调关系查询片段上研究这两类最小化问题，并分析把视图注释放回源数据的位置选择，连接为何溯源与何处溯源。其复杂性分界和链式连接特例适合用来审视更新方案的正确性与必要副作用；它不是完整VKG更新系统，也没有替用户决定可接受代价。",
+      "whySelected": "周一经典独立计数：先厘清优化目标，再读GDP/ILP和VKG更新，避免把“源删除最少”误当“视图影响最小”。",
+      "sources": [
+        {
+          "label": "作者机构存档正文",
+          "url": "https://www.pure.ed.ac.uk/ws/portalfiles/portal/11934720/PODS2002.pdf"
+        },
+        {
+          "label": "正式出版元数据",
+          "url": "https://www.research.ed.ac.uk/en/publications/on-the-propagation-of-deletions-and-annotations-through-views/"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "li"
+      ],
+      "recommendations": {
+        "li": {
+          "whyRead": "深读引言两个目标定义、第2节复杂性表及定理2.6；再读第3节注释传播。可先手算一个同一答案有多条见证的连接例子。",
+          "relation": "研究迁移建议：候选计划应分列源代价与视图副作用，并说明没有零副作用方案究竟是已证明不可行还是求解超时；源恢复还要另加完整性约束与用户确认，不能由本篇定理自动推出。",
+          "prerequisites": [
+            "关系代数选择、投影、连接、并",
+            "NP困难与归约",
+            "最大流/最小割基础",
+            "数据溯源的why与where区别"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "deep"
+        }
+      },
+      "identity": {
+        "doi": "10.1145/543613.543633",
+        "arxiv": null,
+        "other": null
+      },
+      "publicationStatus": "published",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-02",
+      "verifiedAt": "2026-11-02",
+      "readDepth": "fulltext",
+      "paperType": "theory",
+      "classic": true,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "理论研究；不提供VKG端到端实现、交互候选计划排序或用户接受度评测。",
+        "零副作用可行性、最小源删除和最小视图损失是不同问题；困难性不等于每个实例都难，也不代表预算内求解器可以证明最优。"
+      ],
+      "assumptions": [
+        "单调关系查询与删除/注释任务；具体定理受其查询片段、正规形和连接结构限制。",
+        "定理2.6针对不同关系形成链式连接的正规形PJ查询，不能推广到任意连接或整个SPARQL。"
+      ],
+      "evidence": [
+        {
+          "url": "https://www.research.ed.ac.uk/en/publications/on-the-propagation-of-deletions-and-annotations-through-views/",
+          "claim": "核验2002年PODS正式论文、三名作者、页码与DOI。",
+          "checkedAt": "2026-11-02"
+        },
+        {
+          "url": "https://www.pure.ed.ac.uk/ws/portalfiles/portal/11934720/PODS2002.pdf",
+          "claim": "核验首页双机构署名；重点核读第1–3节、复杂性表、定理2.1与2.6、注释传播与provenance范围。",
+          "checkedAt": "2026-11-02"
+        }
+      ],
+      "researchNotes": [
+        "经典补基础，非新发现前沿、非近期发表；没有精确发表日可靠证据，publicationDate留null。",
+        "正文重点核读，阅读了归约构造与链式连接流网络证明要点；未独立复核全部证明。",
+        "未找到可核验的本篇代码、项目、视频、数据资源；不因无代码排除理论贡献。",
+        "原文有用于归约证明的关系表图1–3，但没有可作系统概览的主图；保留无主图，不生成替代图。"
+      ],
+      "summaryEn": "Monday classic, not recent work. When deleting a view answer, minimizing source deletions and minimizing damage to other answers are different objectives. The paper studies both optimization problems over fragments of monotone relational queries, and analyzes where to place source annotations requested through a view, connecting why- and where-provenance. Its complexity boundaries and chain-join special case help examine update-plan correctness and unavoidable side effects. It is not a complete VKG update system and does not decide acceptable costs for users.",
+      "visuals": {
+        "mainFigure": null,
+        "figureNote": "理论论文：图1–3是归约构造关系表，未提供系统主图或概览图；不以生成图替代。",
+        "institutions": [
+          {
+            "name": "University of Edinburgh",
+            "logo": null,
+            "authorNames": [
+              "Peter Buneman"
+            ],
+            "evidence": [
+              {
+                "url": "https://www.pure.ed.ac.uk/ws/portalfiles/portal/11934720/PODS2002.pdf",
+                "claim": "论文首页署名机构。",
+                "checkedAt": "2026-11-02"
+              }
+            ],
+            "note": "仅表示论文发表时的署名关系；未新增未经核验的机构标志。",
+            "institutionType": "university",
+            "markType": "none",
+            "institutionId": "pending-university-of-edinburgh"
+          },
+          {
+            "name": "University of Pennsylvania",
+            "logo": {
+              "path": "assets/institutions/penn-shield.png",
+              "sourceUrl": "https://www.upenn.edu/themes/custom/penn_global/assets/img/simplified-shield.ico",
+              "evidenceUrl": "https://branding.web-resources.upenn.edu/logos-and-branding/download-penn-logos",
+              "rights": "Penn requests permission for the simplified shield and intended web placement at ucomms-web@upenn.edu. Its logo download page authorizes community use supporting its mission; no permission or open license is asserted here. Editorial affiliation identification only, no endorsement.",
+              "kind": "institution-logo",
+              "verifiedAt": "2026-10-31",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "credit": "University of Pennsylvania official compact mark",
+              "altEn": "Official simplified Penn shield; not ceremonial seal",
+              "altZh": "Official simplified Penn shield; not ceremonial seal",
+              "width": 229,
+              "height": 256,
+              "sha256": "7492435842823ff354408fded2cb147415b194f6f10cbffb735ac15b624bdf86"
+            },
+            "authorNames": [
+              "Peter Buneman",
+              "Sanjeev Khanna",
+              "Wang-Chiew Tan"
+            ],
+            "evidence": [
+              {
+                "url": "https://www.pure.ed.ac.uk/ws/portalfiles/portal/11934720/PODS2002.pdf",
+                "claim": "论文首页署名机构。",
+                "checkedAt": "2026-11-02"
+              }
+            ],
+            "note": "仅表示论文发表时的署名关系；未新增未经核验的机构标志。",
+            "institutionType": "university",
+            "markType": "compact-symbol",
+            "institutionId": "pennsylvania"
+          }
+        ],
+        "authors": []
+      }
+    },
+    {
+      "id": "arxiv-2303-04137",
+      "title": "扩散策略：通过动作扩散学习视觉运动策略",
+      "titleEn": "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion",
+      "authors": [
+        "Cheng Chi",
+        "Siyuan Feng",
+        "Yilun Du",
+        "Zhenjia Xu",
+        "Eric Cousineau",
+        "Benjamin Burchfiel",
+        "Shuran Song"
+      ],
+      "year": 2023,
+      "venue": "Robotics: Science and Systems (RSS) 2023",
+      "tags": [
+        "周一基础经典",
+        "行为克隆",
+        "扩散策略",
+        "视觉运动控制"
+      ],
+      "summary": "这是2023年的基础经典，不是新论文。面对示范中多模态动作和时序一致性问题，扩散策略以视觉观测为条件，逐步去噪生成动作序列，再滚动执行前缀。作者在四类基准的12项任务上报告平均提升46.9%，但仍依赖示范覆盖，推理延迟也高于简单策略。适合用来理解本期双臂专家路由所沿用的动作生成基础。",
+      "summaryEn": "This is a foundational classic from 2023, not a new paper. To address multimodal actions and temporal consistency in demonstrations, Diffusion Policy conditions on visual observations, iteratively denoises an action sequence, and executes a prefix in a receding-horizon loop. The authors report an average improvement of 46.9% across 12 tasks from four benchmarks, but the method still depends on demonstration coverage and has higher inference latency than simpler policies. It provides the action-generation foundation for understanding this issue’s two-arm expert routing.",
+      "whySelected": "周一额外基础经典：明确区分动作扩散、图像生成和动力学规划，是阅读当前扩散操作策略的直接概念支点。",
+      "sources": [
+        {
+          "label": "原始论文（RSS 2023版）",
+          "url": "https://diffusion-policy.cs.columbia.edu/diffusion_policy_2023.pdf"
+        },
+        {
+          "label": "正式会议记录",
+          "url": "https://www.roboticsproceedings.org/rss19/p026.html"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "lv"
+      ],
+      "recommendations": {
+        "lv": {
+          "whyRead": "建议现在精读方法：先掌握条件去噪与动作块执行，再回看本期HS-MoDP。它不是入门科普；数学门槛集中在噪声预测目标及采样与控制的区别。",
+          "relation": "P0机器人模仿学习/视觉操作的基础线；解释后续扩散策略如何输出连续高维动作，而不是预测未来图像。",
+          "prerequisites": [
+            "监督学习与行为克隆",
+            "条件概率、Gaussian噪声与MSE",
+            "按DDPM训练→采样→滚动时域控制顺序补齐概念"
+          ],
+          "difficulty": "intermediate",
+          "readRecommendation": "deep"
+        }
+      },
+      "identity": {
+        "doi": "10.15607/rss.2023.xix.026",
+        "arxiv": "2303.04137",
+        "other": null
+      },
+      "publicationStatus": "published",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-02",
+      "verifiedAt": "2026-11-02",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": true,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": "https://github.com/real-stanford/diffusion_policy",
+        "project": "https://diffusion-policy.cs.columbia.edu/",
+        "video": null,
+        "data": "https://diffusion-policy.cs.columbia.edu/data/experiments/"
+      },
+      "limits": [
+        "作者第VIII节指出：示范不足仍影响行为克隆；多步去噪增加计算与延迟，高频控制仍有局限。",
+        "46.9%为论文指定基准与对照的作者汇总，不是绝对成功率或任意任务保证。"
+      ],
+      "assumptions": [
+        "本记录明确采用RSS 2023论文版本；不混入IJRR扩展版的作者、15项任务或新结果。"
+      ],
+      "evidence": [
+        {
+          "url": "https://www.roboticsproceedings.org/rss19/p026.html",
+          "claim": "正式RSS 2023论文及DOI；只给2023年7月而无精确发表日，因此publicationDate=null。",
+          "checkedAt": "2026-11-02"
+        },
+        {
+          "url": "https://diffusion-policy.cs.columbia.edu/diffusion_policy_2023.pdf",
+          "claim": "原论文署名7位作者与3家机构，核读II/III节、图1/3和VIII局限。",
+          "checkedAt": "2026-11-02"
+        },
+        {
+          "url": "https://diffusion-policy.cs.columbia.edu/",
+          "claim": "作者项目页区分RSS版与IJRR扩展版，并链接代码和实验材料。",
+          "checkedAt": "2026-11-02"
+        },
+        {
+          "url": "https://github.com/real-stanford/diffusion_policy",
+          "claim": "官方代码仓库可访问，提供仿真/真机实现与实验日志说明；未运行。",
+          "checkedAt": "2026-11-02"
+        },
+        {
+          "url": "https://diffusion-policy.cs.columbia.edu/data/experiments/",
+          "claim": "实验材料目录可访问，含image与low_dim子目录；此链接为实验日志/模型材料而非泛指新训练集。",
+          "checkedAt": "2026-11-02"
+        }
+      ],
+      "researchNotes": [
+        "驴·基础线阅读路线：图1对比显式/隐式/扩散动作表示；II-A/II-B读去噪与训练损失；II-C及图3区分观测窗口、预测窗口和实际执行窗口。",
+        "驴·前沿衔接：III-A比较CNN/Transformer骨干，再对照HS-MoDP图3中的专家层；不要把网络结构选择与扩散目标混为一谈。",
+        "证据路线：表I/II检查状态与视觉策略评估，VIII读示范覆盖及推理延迟边界；本次未重新计算平均提升。",
+        "实际核读RSS版本的摘要、II/III方法、图1/3、实验表标题和VIII局限，非全文逐行通读；未执行代码或独立复现。",
+        "版本核验：RSS官方索引把Benjamin姓名写作Benjamin CM Burchfiel，本文保留RSS论文PDF署名Benjamin Burchfiel；不可把后续IJRR版Russ Tedrake加入本版作者。"
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/arxiv-2303-04137-figure1.webp",
+          "sha256": "eb5de19f0329a3acc9d9d0e1e7ef4a6526daf8d5d6740e164f79628d07793755",
+          "width": 1548,
+          "height": 366,
+          "sourceUrl": "https://diffusion-policy.cs.columbia.edu/diffusion_policy_2023.pdf",
+          "evidenceUrl": "https://diffusion-policy.cs.columbia.edu/diffusion_policy_2023.pdf",
+          "verifiedAt": "2026-11-02",
+          "credit": "Cheng Chi et al. · RSS 2023 Figure 1",
+          "rights": "版权归原作者；未核实开放再利用许可，arXiv非独占发布许可不等于再利用授权。仅署名论文缩略图；保持完整图形与图例，不重绘。",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "light",
+          "altZh": "显式策略、隐式能量策略与扩散梯度场的动作表示比较",
+          "altEn": "Action representations of explicit policies, implicit energy policies and diffusion gradient fields"
+        },
+        "figureNote": "从RSS原始PDF首页提取完整图1图面，含全部面板与图例；未将周围正文纳入缩略图，未改动科学内容。",
+        "institutions": [
+          {
+            "name": "Columbia University",
+            "logo": null,
+            "authorNames": [
+              "Cheng Chi",
+              "Zhenjia Xu",
+              "Shuran Song"
+            ],
+            "evidence": [
+              {
+                "url": "https://diffusion-policy.cs.columbia.edu/diffusion_policy_2023.pdf",
+                "claim": "论文署名页明确列出这些作者与该机构。",
+                "checkedAt": "2026-11-02"
+              }
+            ],
+            "note": "已查机构库，无已核验可复用标识；仅显示机构文字名称，不推断现任雇主。",
+            "institutionType": "university",
+            "markType": "none",
+            "institutionId": "pending-columbia-university"
+          },
+          {
+            "name": "Toyota Research Institute",
+            "logo": null,
+            "authorNames": [
+              "Siyuan Feng",
+              "Eric Cousineau",
+              "Benjamin Burchfiel"
+            ],
+            "evidence": [
+              {
+                "url": "https://diffusion-policy.cs.columbia.edu/diffusion_policy_2023.pdf",
+                "claim": "论文署名页明确列出这些作者与该机构。",
+                "checkedAt": "2026-11-02"
+              }
+            ],
+            "note": "已查机构库，无已核验可复用标识；仅显示机构文字名称，不推断现任雇主。",
+            "institutionType": "research-institute",
+            "markType": "none",
+            "institutionId": "pending-toyota-research-institute"
+          },
+          {
+            "name": "Massachusetts Institute of Technology",
+            "logo": null,
+            "authorNames": [
+              "Yilun Du"
+            ],
+            "evidence": [
+              {
+                "url": "https://diffusion-policy.cs.columbia.edu/diffusion_policy_2023.pdf",
+                "claim": "论文署名页明确列出这些作者与该机构。",
+                "checkedAt": "2026-11-02"
+              }
+            ],
+            "note": "已查机构库，无已核验可复用标识；仅显示机构文字名称，不推断现任雇主。",
+            "institutionType": "university",
+            "markType": "none",
+            "institutionId": "pending-massachusetts-institute-of-technology"
+          }
+        ],
+        "authors": []
+      }
+    }
+  ]
+}

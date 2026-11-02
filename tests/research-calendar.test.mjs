@@ -3,7 +3,9 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {calendarDate,shiftCalendarMonth,calendarMonthDays,calendarEventDay,calendarEventOn,calendarEventStatus,upcomingCalendarEvents,validateCalendar,researchCalendarHTML} from '../lib/research-calendar.js';
 const read=p=>readFile(new URL('../'+p,import.meta.url),'utf8');
-const data=JSON.parse(await read('data/conference-calendar.json'));
+// Freeze behavioral examples; daily official updates must not rewrite time-bound test cases.
+const data=JSON.parse(await read('tests/fixtures/conference-calendar-2026-11-01.json'));
+const current=JSON.parse(await read('data/conference-calendar.json'));
 const deadline=data.events.find(e=>e.id==='cvpr-2027-enrollment');
 
 test('Verified calendar keeps source provenance, watched conferences and explicit precision',async()=>{
@@ -74,4 +76,12 @@ test('Daily source coverage, optional tracks, places and private markers are exp
 
 test('Invalid official timezone fails validation without breaking the paper page',()=>{
  assert.ok(validateCalendar({...data,events:[{...deadline,timeZone:'invalid'}]}).includes('日历时区无效'));
+});
+
+test('Current daily calendar covers the configured conferences with valid provenance',async()=>{
+ const registry=JSON.parse(await read('config/source-registry.json'));
+ const watched=registry.sources.filter(source=>source.type==='conference').map(source=>source.name);
+ assert.deepEqual(validateCalendar(current,watched),[]);
+ assert.equal(current.coverage.length,watched.length);
+ for(const event of current.events)assert.ok(event.verifiedAt<=current.checkedAt);
 });

@@ -922,6 +922,26 @@
       "profiles": [
         "lv"
       ]
+    },
+    "arxiv-2610-40427": {
+      "locationIds": [
+        "georgia-tech"
+      ],
+      "unresolvedInstitutionIds": [],
+      "evidenceUrls": [
+        "https://arxiv.org/html/2610.40427v1"
+      ]
+    },
+    "doi-8e7569e2eaa42e1b337d": {
+      "locationIds": [
+        "pennsylvania"
+      ],
+      "unresolvedInstitutionIds": [
+        "pending-university-of-edinburgh"
+      ],
+      "evidenceUrls": [
+        "https://www.pure.ed.ac.uk/ws/portalfiles/portal/11934720/PODS2002.pdf"
+      ]
     }
   },
   "unresolvedInstitutions": {
