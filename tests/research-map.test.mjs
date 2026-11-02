@@ -58,3 +58,20 @@ test('Strict CSP markers receive distinct projected positions through individual
  const html=await readFile(new URL('../index.html',import.meta.url),'utf8');assert.match(html,/style-src 'self';/);assert.ok(!html.includes("'unsafe-inline'"));
  const app=await readFile(new URL('../app.js',import.meta.url),'utf8');assert.match(app,/innerHTML=markup;\s+positionMapMarkers\(document\)/);
 });
+
+test('Xun region disclosure and selected results share a bounded keyboard-scrollable pane',async()=>{
+ const css=await readFile(new URL('../styles.css',import.meta.url),'utf8');
+ assert.match(css,/@media\(min-width:1101px\)\{\.with-calendar #research-map\{contain:size\}\}/);
+ assert.match(css,/\.with-calendar #research-map \.map-browser\{flex:1 1 0;min-height:0;overflow:auto;/);
+ assert.match(css,/@media\(max-width:1100px\)\{\.with-calendar #research-map\{height:580px\}\}/);
+ assert.match(css,/@media\(max-width:600px\)\{\.with-calendar #research-map\{height:480px\}\}/);
+ assert.match(css,/\.with-calendar #research-map \.map-surface\{flex:0 0 auto;aspect-ratio:2;margin:8px 0;min-height:0\}/);
+ const model=researchMapModel([{...p,date:'2026-10-31'}],geography);
+ for(const selected of ['', 'US:A']){
+  const html=researchMapHTML(model,selected);
+  assert.match(html,/<div class="map-browser" tabindex="0" role="region" aria-label="地区浏览与论文列表">/);
+  assert.ok(html.indexOf('class="map-browser"')>html.indexOf('class="map-surface'));
+  assert.ok(html.indexOf('class="map-browser"')<html.indexOf('<details id="map-regions"'));
+  assert.match(html,/<summary>按地区浏览/);assert.ok(html.endsWith('</details></div>'));
+ }
+});

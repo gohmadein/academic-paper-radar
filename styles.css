@@ -714,3 +714,13 @@ dialog::backdrop{background:#18263f38}
 .calendar-days{grid-template-rows:repeat(6,27px)}
 @media(max-width:1100px){.calendar-days{grid-template-rows:repeat(6,32px)}}
 @media(max-width:440px){.calendar-days{grid-template-rows:repeat(6,34px)}}
+
+/* Xun atlas: the aligned left column determines card size, not expanded regions. */
+.with-calendar #research-map{min-height:0;display:flex;flex-direction:column}
+.with-calendar #research-map .map-heading,.with-calendar #research-map .map-summary{flex-shrink:0}
+.with-calendar #research-map .map-surface{flex:0 0 auto;aspect-ratio:2;margin:8px 0;min-height:0}
+.with-calendar #research-map .map-browser{flex:1 1 0;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable;padding:2px}
+.with-calendar #research-map .map-browser:focus-visible{outline:2px solid #175cd3;outline-offset:-2px}
+@media(min-width:1101px){.with-calendar #research-map{contain:size}}
+@media(max-width:1100px){.with-calendar #research-map{height:580px}}
+@media(max-width:600px){.with-calendar #research-map{height:480px}}
