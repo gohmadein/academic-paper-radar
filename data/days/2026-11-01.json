@@ -669,7 +669,22 @@
         "institutions": [
           {
             "name": "International Institute of Information Technology Hyderabad",
-            "logo": null,
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/iiith-symbol.png",
+              "sha256": "a3216d706a850f339cf54e155bd0bfccdbbfd23a75db7132224e0e5fb6300f0d",
+              "width": 192,
+              "height": 192,
+              "sourceUrl": "https://www.iiit.ac.in/wp-content/uploads/2022/07/cropped-IIIT-Favicon-192x192.png",
+              "evidenceUrl": "https://www.iiit.ac.in/",
+              "verifiedAt": "2026-11-02",
+              "credit": "International Institute of Information Technology Hyderabad official emblem",
+              "rights": "Official IIIT Hyderabad website-published compact tree favicon, not a ceremonial seal. Original indexed PNG has native graded transparency. Trademark/copyright retained by IIIT Hyderabad; no blanket open licence asserted. Editorial paper-affiliation identity only; preserve original image and proportion, no endorsement.",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "altZh": "Official IIIT Hyderabad compact tree identity symbol",
+              "altEn": "Official IIIT Hyderabad compact tree identity symbol"
+            },
             "authorNames": [
               "Mathai Mathew Pulicken",
               "Laksh Nanwani",
@@ -684,12 +699,27 @@
             ],
             "note": "论文Robotics Research Center, IIIT Hyderabad署名；不混同其他IIIT。",
             "institutionType": "university",
-            "markType": "none",
+            "markType": "compact-symbol",
             "institutionId": "pending-international-institute-of-information-technology-hyderabad"
           },
           {
             "name": "University of Tartu",
-            "logo": null,
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/tartu-round.svg",
+              "sha256": "aa70995146be24fbf043f378f57156cd0301e5e54b5e886213a8e3e4662b8189",
+              "width": 130,
+              "height": 133,
+              "sourceUrl": "https://sisu.ut.ee/wp-content/themes/tu/public/images/UT-round-logo.d65254.svg",
+              "evidenceUrl": "https://sisu.ut.ee/cvi/logod/logo-tuubid/",
+              "verifiedAt": "2026-11-02",
+              "credit": "University of Tartu official emblem",
+              "rights": "Official University of Tartu circular mark. Style guide permits blue mark on white backgrounds; circular mark justified by compact affiliation context. Preserve geometry, original colour and clear space; do not combine with another Tartu primary/compact logo on same surface. Copyright/trademark retained by institution; no open licence asserted. Editorial affiliation identification, not endorsement.",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "altZh": "Official University of Tartu complete circular portico emblem",
+              "altEn": "Official University of Tartu complete circular portico emblem"
+            },
             "authorNames": [
               "Basant Sharma",
               "Arun Kumar Singh"
@@ -701,9 +731,9 @@
                 "checkedAt": "2026-11-01"
               }
             ],
-            "note": "论文署名已核验；标识由机构库解析，未核验时仅文字展示。",
+            "note": "论文署名已核验；复用机构库已核验的官方标识，不表示背书。",
             "institutionType": "university",
-            "markType": "none",
+            "markType": "emblem",
             "institutionId": "pending-university-of-tartu"
           },
           {

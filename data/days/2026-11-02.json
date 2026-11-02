@@ -458,7 +458,22 @@
         "institutions": [
           {
             "name": "Indian Institute of Science Education and Research Bhopal",
-            "logo": null,
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/iiserb-emblem.webp",
+              "sha256": "2496c2ecad2a2c684b86a6821af349f759eeb513de3f27a487692f2e48bdf669",
+              "width": 1200,
+              "height": 1200,
+              "sourceUrl": "https://www.iiserb.ac.in/assets/logo/images/1200x1200.png",
+              "evidenceUrl": "https://www.iiserb.ac.in/logo",
+              "verifiedAt": "2026-11-02",
+              "credit": "Indian Institute of Science Education and Research Bhopal official emblem",
+              "rights": "Official IISER Bhopal publicly distributed colour logo, intact. Trademark/copyright retained by IISER Bhopal; no blanket open reuse licence asserted. Preserve colours, complete emblem, proportion and clear space; editorial paper-affiliation identification only, no endorsement.",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "altZh": "Official Indian Institute of Science Education and Research Bhopal circular emblem",
+              "altEn": "Official Indian Institute of Science Education and Research Bhopal circular emblem"
+            },
             "authorNames": [
               "PB Sujit"
             ],
@@ -469,9 +484,9 @@
                 "checkedAt": "2026-11-02"
               }
             ],
-            "note": "仅据本篇署名识别机构，不表示背书。暂无已核验可展示标识，仅显示机构名称。",
+            "note": "仅据本篇署名识别机构，不表示背书。现已复用机构库核验的官方标识。",
             "institutionType": "university",
-            "markType": "none",
+            "markType": "emblem",
             "institutionId": "pending-indian-institute-of-science-education-and-research-bhopal"
           }
         ],
@@ -799,7 +814,22 @@
           },
           {
             "name": "Fudan University",
-            "logo": null,
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/fudan-university.webp",
+              "sha256": "af610ad26b79c1ef084f59c5bb1d3add9c8d271bcde045f536c3f369edbd7be8",
+              "width": 1000,
+              "height": 1000,
+              "sourceUrl": "https://ecology.fudan.edu.cn/_upload/article/images/1e/9c/3d5c8e924585b8db08bd3f555b9b/09ac58f7-a727-4dd2-bed2-1731c1bcf1aa.png",
+              "evidenceUrl": "https://ecology.fudan.edu.cn/gjxz/list.htm",
+              "verifiedAt": "2026-11-02",
+              "credit": "Fudan University official emblem",
+              "rights": "Complete standalone Fudan emblem publicly supplied by its official biodiversity/ecological engineering laboratory download page. Preserve exact supplied colour (orange-red), full circular inscription and original transparency; do not recolour. Institutional trademark/copyright retained; no blanket open licence asserted. Descriptive paper affiliation only, no endorsement. Central identity page: https://www.fudan.edu.cn/bsxt/",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "altZh": "Official Fudan University complete circular emblem, official laboratory download colour variant",
+              "altEn": "Official Fudan University complete circular emblem, official laboratory download colour variant"
+            },
             "authorNames": [
               "Xinling Du"
             ],
@@ -810,9 +840,9 @@
                 "checkedAt": "2026-11-02"
               }
             ],
-            "note": "已查机构库，无已核验可复用标识；仅显示机构文字名称，不推断现任雇主。",
+            "note": "复用机构库已核验的官方标识；单位仅依据本篇署名，不推断现任雇主。",
             "institutionType": "university",
-            "markType": "none",
+            "markType": "emblem",
             "institutionId": "pending-fudan-university"
           }
         ],

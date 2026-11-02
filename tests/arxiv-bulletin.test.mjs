@@ -1,6 +1,8 @@
+import {readFileSync} from 'node:fs';
+import {editorialCard,bilingualDetail} from '../lib/digest-view.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {ARXIV_BULLETIN_CATEGORIES,bulletinPapers,validateArxivBulletin,bulletinHTML} from '../lib/arxiv-bulletin.js';
+import {ARXIV_BULLETIN_CATEGORIES,bulletinPapers,validateArxivBulletin,validateArxivInstitutions,bulletinHTML} from '../lib/arxiv-bulletin.js';
 const paper=()=>({id:'arxiv-2610-40473',arxivId:'2610.40473',version:2,titleEn:'Learning robot control',titleZh:'机器人控制学习',authors:['A Author','B Author'],publishedDate:'2026-10-29',updatedDate:'2026-11-02',change:'revised',categories:['cs.RO','cs.LG'],url:'https://arxiv.org/abs/2610.40473v2',topics:['操作','机器人学习'],announcements:[{category:'cs.RO',change:'revised'}]});
 const rows=(status='complete')=>ARXIV_BULLETIN_CATEGORIES.map(category=>({category,status,announcementDate:status==='complete'?'2026-11-02':null,listedCount:status==='complete'?210:null,checkedCount:status==='complete'?210:0,sourceUrl:`https://arxiv.org/list/${category}/new`}));
 const bulletin=()=>({version:1,date:'2026-11-02',announcementDate:'2026-11-02',checkedAt:'2026-11-02T05:30:00Z',status:'complete',coverage:{checkedCategories:[...ARXIV_BULLETIN_CATEGORIES],checkedCount:1260,includedCount:1,limitations:[],categoryStatus:rows()},entries:[paper()]});
@@ -76,4 +78,20 @@ test('Guide validation enforces bilingual length, exact schema, and evidence for
   const data=bulletin();data.entries[0].guide=guide();mutate(data.entries[0].guide);assert.throws(()=>validateArxivBulletin(data));
  }
  const data=bulletin();data.entries[0].guide=guide();data.entries[0].guide.links.code='https://github.com/org/repo';data.entries[0].guide.evidence.push({url:'https://github.com/org/repo',claim:'作者资源链接核验',checkedAt:'2026-11-02'});assert.doesNotThrow(()=>validateArxivBulletin(data));
+});
+
+
+const affiliation=()=>({institutionId:'illinois',name:'University of Illinois Urbana-Champaign',institutionType:'university',authorNames:['A Author'],evidence:[{url:'https://arxiv.org/pdf/2610.40473v2',claim:'论文署名页明确列出单位及作者对应',checkedAt:'2026-11-02'}],note:'仅依论文署名，不推断当前雇主。'});
+const withAffiliation=()=>{const data=bulletin();data.entries[0].guide=guide();data.entries[0].affiliations=[affiliation()];data.entries[0].affiliationVerification={status:'complete',checkedAt:'2026-11-02',note:'核对本版本署名页。'};return data;};
+test('Verified bulletin affiliations reuse canonical registry logos without adding a paper figure',()=>{
+ const registry=JSON.parse(readFileSync(new URL('../data/institutions.json',import.meta.url))),data=withAffiliation();validateArxivBulletin(data);assert.deepEqual(validateArxivInstitutions(data,registry),[]);
+ const [p]=bulletinPapers(data,registry);const canonical=registry.institutions.find(i=>i.id==='illinois');assert.deepEqual(p.visuals.institutions[0].logo,canonical.logo);assert.notEqual(p.visuals.institutions[0].logo,canonical.logo);assert.deepEqual(p.visuals.institutions[0].authorNames,['A Author']);
+ const html=editorialCard(p,0);assert.match(html,/institution-avatar/);assert.match(html,/illinois.svg/);assert.doesNotMatch(html,/paper-figure|figure-fallback|editorial-visual/);assert.match(bilingualDetail(p),/图像与署名来源/);assert.match(bilingualDetail(p),/论文署名页明确/);
+ assert.match(bulletinHTML(data,editorialCard,registry),/illinois.svg/);assert.equal(bulletinPapers(data)[0].visuals.institutions[0].logo,null);
+ const wrong=structuredClone(registry);wrong.institutions.find(i=>i.id==='illinois').officialName='Different Institution';wrong.institutions.find(i=>i.id==='illinois').aliases=[];assert.ok(validateArxivInstitutions(data,wrong).length);assert.equal(bulletinPapers(data,wrong)[0].visuals.institutions[0].logo,null);
+});
+test('Affiliation evidence, author mapping and completeness are independent from logo availability',()=>{
+ for(const mutate of [d=>delete d.entries[0].affiliationVerification,d=>d.entries[0].affiliations[0].authorNames=['Current Employer Guess'],d=>d.entries[0].affiliations[0].evidence=[],d=>d.entries[0].affiliationVerification.status='unavailable',d=>d.entries[0].affiliations.push(affiliation()),d=>d.entries[0].affiliations[0].logo={}]){const data=withAffiliation();mutate(data);assert.throws(()=>validateArxivBulletin(data));}
+ const data=withAffiliation();data.entries[0].affiliations=[];data.entries[0].affiliationVerification.status='unavailable';assert.doesNotThrow(()=>validateArxivBulletin(data));assert.equal(bulletinPapers(data)[0].visuals.institutions.length,0);
+ const unknown=withAffiliation();unknown.entries[0].affiliations[0].authorNames=[];unknown.entries[0].affiliationVerification.status='partial';assert.doesNotThrow(()=>validateArxivBulletin(unknown));assert.ok(validateArxivInstitutions(unknown,{institutions:[]}).length);
 });

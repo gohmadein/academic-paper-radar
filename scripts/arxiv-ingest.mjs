@@ -2,18 +2,18 @@ import {readFile,writeFile,mkdir,readdir,cp,rename,rm} from 'node:fs/promises';
 import {resolve,join} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {randomUUID} from 'node:crypto';
-import {validateArxivBulletin} from '../lib/arxiv-bulletin.js';
+import {validateArxivBulletin,validateArxivInstitutions} from '../lib/arxiv-bulletin.js';
 const root=fileURLToPath(new URL('../',import.meta.url));
 const json=value=>JSON.stringify(value,null,2)+'\n';
-export async function validateArxivArchive(base=root){
+export async function validateArxivArchive(base=root,{registryBase=base}={}){
  const errors=[];const dir=join(base,'data/arxiv');
  try{
   const index=JSON.parse(await readFile(join(dir,'index.json'),'utf8'));
   if(index.version!==1||!Array.isArray(index.days))throw Error('arXiv索引格式无效');
-  const seen=new Set();
+  const seen=new Set();let institutions=null;try{institutions=JSON.parse(await readFile(join(registryBase,'data/institutions.json'),'utf8'));}catch{}
   for(const row of index.days){
    if(!/^\d{4}-\d{2}-\d{2}$/.test(row.date)||row.file!==`days/${row.date}.json`||seen.has(row.date))throw Error('arXiv索引日期/路径重复或无效');
-   seen.add(row.date);const day=JSON.parse(await readFile(join(dir,row.file),'utf8'));validateArxivBulletin(day);
+   seen.add(row.date);const day=JSON.parse(await readFile(join(dir,row.file),'utf8'));validateArxivBulletin(day);errors.push(...validateArxivInstitutions(day,institutions));
    if(day.date!==row.date||day.entries.length!==row.count||day.status!==row.status)throw Error('arXiv索引与公告不一致');
   }
   for(const file of await readdir(join(dir,'days')))if(!index.days.some(row=>row.file===`days/${file}`))throw Error('arXiv历史缺少索引');
@@ -22,13 +22,14 @@ export async function validateArxivArchive(base=root){
 }
 export async function prepareArxivBulletin(input,{base=root}={}){
  validateArxivBulletin(input);
+ if(input.entries.some(entry=>entry.affiliations?.length)){const institutions=JSON.parse(await readFile(join(base,'data/institutions.json'),'utf8'));const errors=validateArxivInstitutions(input,institutions);if(errors.length)throw Error(errors.join('\n'));}
  let index;try{index=JSON.parse(await readFile(join(base,'data/arxiv/index.json'),'utf8'));}catch(error){if(error.code!=='ENOENT')throw error;index={version:1,days:[]};}
  const prior=index.days.find(row=>row.date===input.date);
  if(prior){
   const old=JSON.parse(await readFile(join(base,'data/arxiv',prior.file),'utf8'));validateArxivBulletin(old);
   if(old.announcementDate&&(!input.announcementDate||input.announcementDate<old.announcementDate))throw Error('公告批次回退，保留上次有效资料');
   if(Date.parse(input.checkedAt)<Date.parse(old.checkedAt))throw Error('核验时刻回退，保留上次有效资料');
-  for(const entry of old.entries){const next=input.entries.find(item=>item.arxivId===entry.arxivId);if(entry.guide&&next&&!next.guide)throw Error('刷新会丢失已归档导读，保留上次有效资料');if(next&&((entry.version!==null&&(next.version===null||next.version<entry.version))||(entry.updatedDate&&(!next.updatedDate||next.updatedDate<entry.updatedDate))))throw Error('论文版本回退，保留上次有效资料');}
+  for(const entry of old.entries){const next=input.entries.find(item=>item.arxivId===entry.arxivId);if(entry.affiliations?.length&&next&&(!next.affiliations||entry.affiliations.some(row=>!next.affiliations.some(n=>n.institutionId===row.institutionId))))throw Error('刷新会丢失已核验署名机构，保留上次有效资料');if(entry.guide&&next&&!next.guide)throw Error('刷新会丢失已归档导读，保留上次有效资料');if(next&&((entry.version!==null&&(next.version===null||next.version<entry.version))||(entry.updatedDate&&(!next.updatedDate||next.updatedDate<entry.updatedDate))))throw Error('论文版本回退，保留上次有效资料');}
   if(old.status==='complete'&&input.status!=='complete')throw Error('刷新未完成，保留已发布的完整公告');
   if(old.entries.some(entry=>!input.entries.some(next=>next.arxivId===entry.arxivId)))throw Error('刷新会丢失已归档条目，保留上次有效资料');
  }
@@ -43,7 +44,7 @@ export async function ingestArxivBulletin(input,{base=root,planOnly=false}={}){
  try{
   await cp(target,join(stage,'data/arxiv'),{recursive:true}).catch(error=>{if(error.code!=='ENOENT')throw error;});
   for(const file of plan.files)await writeFile(join(stage,file.path),file.content);
-  const errors=await validateArxivArchive(stage);if(errors.length)throw Error(errors.join('\n'));
+  const errors=await validateArxivArchive(stage,{registryBase:base});if(errors.length)throw Error(errors.join('\n'));
   let previous=false;try{await rename(target,backup);previous=true;}catch(error){if(error.code!=='ENOENT')throw error;}
   try{await mkdir(join(base,'data'),{recursive:true});await rename(join(stage,'data/arxiv'),target);}catch(error){if(previous){try{await rename(backup,target);}catch(restoreError){preserveStage=true;throw new AggregateError([error,restoreError],`arXiv回滚失败，原资料保留于 ${backup}`);}}throw error;}
  }finally{if(!preserveStage)await rm(stage,{recursive:true,force:true});}

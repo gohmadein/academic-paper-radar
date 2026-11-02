@@ -9,7 +9,7 @@ import {researchMapModel,researchMapHTML,positionMapMarkers} from './lib/researc
 import {profileIcon} from './lib/profile-icons.js';
 import {sourceDirectory,sourceViewPatch,SOURCE_NAV} from './lib/source-directory.js';
 import {availableTopics,topicLabel,topicForProfile} from './lib/topics.js';
-import {institutionGallery,scrollInstitutions,institutionKeydown} from './lib/institutions.js';
+import {institutionGallery,scrollInstitutions,institutionKeydown,validateInstitutions} from './lib/institutions.js';
 import {publicPaperURL,sharePaper} from './lib/paper-share.js';
 import {handleMediaError} from './lib/paper-media.js';
 import {categoryClass,categoryRail,digestBadges,digestRecommendations,digestDetails,issueReport,editorialCard,bilingualDetail} from './lib/digest-view.js';
@@ -71,7 +71,7 @@ let mapRegion = '';
 let mapProfile = '';
 let mapPaper = '';
 let lastMapMarkup = '';
-const arxivArchive=new Map();
+const arxivArchive=new Map(),arxivPaperCache=new WeakMap();
 let arxivError='',lastArxivMarkup='',lastArxivRenderedDate='',arxivIndex=null,arxivSelected='',arxivLoadedDate='',arxivDay=null,arxivLoading=false,arxivAttempt=0,arxivToken=0;
 let calendarData=null,calendarMonth='',calendarSelected='',lastCalendarMarkup='',calendarTimer;
 let calendarTab='conference',calendarScope='main',calendarFetchedDay='',calendarFetching=false,calendarLastAttempt=0,calendarRefreshError='';
@@ -139,9 +139,13 @@ async function init() {
 }
 
 // Bulletin records are lookup/bookmark material, never daily-quota or map inputs.
+function papersForBulletin(day){
+ const registry=data?.institutions,cached=arxivPaperCache.get(day);if(cached&&cached.registry===registry)return cached.papers;
+ const papers=bulletinPapers(day,registry);arxivPaperCache.set(day,{registry,papers});return papers;
+}
 function bulletinRecords(){
  const seen=new Set(),papers=[];
- for(const day of [...arxivArchive.values()].sort((a,b)=>b.date.localeCompare(a.date)))for(const p of bulletinPapers(day))if(!seen.has(p.id)){seen.add(p.id);papers.push(p);}
+ for(const day of [...arxivArchive.values()].sort((a,b)=>b.date.localeCompare(a.date)))for(const p of papersForBulletin(day))if(!seen.has(p.id)){seen.add(p.id);papers.push(p);}
  return papers;
 }
 function allReadingPapers(){
@@ -155,7 +159,7 @@ function readingPaper(id,{date='all'}={}){
  const primary=filterPapers(curated,{date}).find(p=>p.id===id)||curated.find(p=>p.id===id);
  if(primary||state.demo)return primary;
  const days=[...arxivArchive.values()].sort((a,b)=>b.date.localeCompare(a.date));
- return days.filter(d=>date==='all'||d.date===date).flatMap(bulletinPapers).find(p=>p.id===id)||bulletinRecords().find(p=>p.id===id);
+ return days.filter(d=>date==='all'||d.date===date).flatMap(papersForBulletin).find(p=>p.id===id)||bulletinRecords().find(p=>p.id===id);
 }
 async function loadArxivArchive(){
  try{
@@ -241,7 +245,7 @@ function renderArxivBulletin(){
  if(!arxivIndex&&!arxivLoading&&Date.now()-arxivAttempt>60000)refreshArxivBulletin();
  const expanded=root.querySelector('details')?.open,scrollTop=lastArxivRenderedDate===arxivDay?.date?(root.querySelector('.arxiv-bulletin-body')?.scrollTop||0):0;
  const selector=arxivIndex?.days?.length?`<label class="arxiv-bulletin-date">归档日期 <select id="arxiv-bulletin-date" aria-label="arXiv公告归档日期">${arxivIndex.days.map(row=>`<option value="${e(row.date)}"${row.date===arxivLoadedDate?' selected':''}>${e(row.date)}</option>`).join('')}</select></label>`:'';
- const markup=bulletinHTML(arxivDay,data?paperCard:undefined).replace('</summary>','</summary>'+selector+(arxivError?`<p class="arxiv-bulletin-status" role="status">${e(arxivError)}</p>`:''));
+ const markup=bulletinHTML(arxivDay,data?paperCard:undefined,data?.institutions).replace('</summary>','</summary>'+selector+(arxivError?`<p class="arxiv-bulletin-status" role="status">${e(arxivError)}</p>`:''));
  if(markup===lastArxivMarkup)return;lastArxivMarkup=markup;lastArxivRenderedDate=arxivDay?.date||'';root.innerHTML=markup;
  if(expanded)root.querySelector('details').open=true;
  const body=root.querySelector('.arxiv-bulletin-body');if(body)body.scrollTop=scrollTop;
@@ -253,8 +257,8 @@ async function refreshArxivBulletin(date=''){
   if(index.version!==1||!Array.isArray(index.days)||index.days.some(row=>!/^\d{4}-\d{2}-\d{2}$/.test(row.date)||row.file!==`days/${row.date}.json`))throw Error('invalid bulletin index');
   if(token!==arxivToken)return;arxivIndex=index;const selected=date||arxivSelected||index.days[0]?.date||'';
   const row=index.days.find(row=>row.date===selected);if(!row){arxivDay=null;arxivLoadedDate='';return;}
-  const next=await getJSON('data/arxiv/'+row.file,{timeout:15000});validateArxivBulletin(next);if(next.date!==row.date||next.entries.length!==row.count||next.status!==row.status)throw Error('invalid bulletin day');
-  if(token===arxivToken){arxivDay=next;arxivArchive.set(next.date,next);arxivLoadedDate=selected;arxivError='';}
+  const [next,registry]=await Promise.all([getJSON('data/arxiv/'+row.file,{timeout:15000}),getJSON('data/institutions.json',{timeout:15000}).catch(()=>null)]);validateArxivBulletin(next);if(next.date!==row.date||next.entries.length!==row.count||next.status!==row.status)throw Error('invalid bulletin day');
+  if(token===arxivToken){if(data&&registry&&!validateInstitutions(registry).length)data.institutions=registry;arxivDay=next;arxivArchive.set(next.date,next);arxivLoadedDate=selected;arxivError='';}
  }catch{if(token===arxivToken){if(date&&date!==arxivLoadedDate){arxivDay=null;arxivLoadedDate=date;}arxivError=arxivDay?'刷新失败，当前仍为上次已发布资料。':'公告读取失败，未能确认更新。';}}
  finally{if(token===arxivToken){arxivLoading=false;renderArxivBulletin();}}
 }

@@ -40,3 +40,14 @@ test('Same-date enriched guides cannot be silently removed by metadata refresh',
   input.entries[0].guide.whyRead='更新后的方向关联';await ingestArxivBulletin(input,{base});assert.deepEqual(await validateArxivArchive(base),[]);
  }finally{await rm(base,{recursive:true,force:true});}
 });
+
+test('Affiliation imports require registry identities and preserve previously verified units',async()=>{
+ const base=await mkdtemp(join(tmpdir(),'arxiv-affiliations-'));try{
+  await mkdir(join(base,'data'),{recursive:true});const input=sample();input.entries[0].affiliations=[{institutionId:'test-university',name:'Test University',institutionType:'university',authorNames:['A'],evidence:[{url:'https://arxiv.org/pdf/2611.00001',claim:'论文署名页',checkedAt:'2026-11-02'}],note:'测试署名证据'}];input.entries[0].affiliationVerification={status:'complete',checkedAt:'2026-11-02',note:'已核对署名'};
+  await assert.rejects(ingestArxivBulletin(input,{base,planOnly:true}));
+  const {writeFile}=await import('node:fs/promises');await writeFile(join(base,'data/institutions.json'),JSON.stringify({version:1,institutions:[{id:'test-university',officialName:'Test University',aliases:[],institutionType:'university',markType:'none',status:'needs-verification',logo:null}]}));
+  await ingestArxivBulletin(input,{base});assert.deepEqual(await validateArxivArchive(base),[]);
+  const next=structuredClone(input);next.entries[0].affiliations=[];next.entries[0].affiliationVerification.status='unavailable';await assert.rejects(ingestArxivBulletin(next,{base}),/丢失已核验署名机构/);
+  const mismatch=structuredClone(input);mismatch.entries[0].affiliations[0].name='Other University';await assert.rejects(ingestArxivBulletin(mismatch,{base}),/机构库不一致/);
+ }finally{await rm(base,{recursive:true,force:true});}
+});
