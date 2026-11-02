@@ -158,7 +158,22 @@
         "institutions": [
           {
             "name": "University of Washington",
-            "logo": null,
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/uw-block-w.png",
+              "sha256": "517b9fc5f39e280e54759a49fc4cb2726bab77039b94ee2b528e71036fdebd47",
+              "width": 368,
+              "height": 247,
+              "sourceUrl": "https://cdn.uw.edu/wp-content/uploads/sites/230/2023/11/02134812/W-Logo_RegistrationMark_Purple_2685_HEX1.png",
+              "evidenceUrl": "https://cdn.uw.edu/wp-content/uploads/sites/65/2023/06/22155930/Revised-Policies-Jun23-APPROVED-MG.pdf",
+              "verifiedAt": "2026-11-02",
+              "credit": "University of Washington official purple Block W with registration mark",
+              "rights": "University of Washington trademark retained. Official June 2023 policy IV(c) permits informational publications only to the extent necessary. This small, unaltered mark identifies a paper-evidenced UW affiliation only; it is not site branding, sponsorship, co-branding, advertising, decoration or a blanket noncommercial licence. The publication uses a plain white clear field, at least one serif-height clearance, original purple colour and registration mark, and displayed width above the 18px web minimum. Gallery placement is excluded.",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "altZh": "华盛顿大学官方紫色W标识",
+              "altEn": "University of Washington official purple Block W"
+            },
             "authorNames": [
               "Yunchu Zhang",
               "Ray Song",
@@ -177,9 +192,9 @@
                 "checkedAt": "2026-11-01"
               }
             ],
-            "note": "论文署名已核验；标识由机构库解析，未核验时仅文字展示。",
+            "note": "论文署名已核验；UW标识仅用于此论文署名单位的信息说明，遵循官方政策IV(c)限定范围，不表示合作或背书。",
             "institutionType": "university",
-            "markType": "none",
+            "markType": "compact-symbol",
             "institutionId": "pending-university-of-washington"
           }
         ],

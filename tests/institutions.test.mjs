@@ -17,3 +17,12 @@ test('institution gallery sits at the page bottom after papers and sidebar, befo
  assert.ok(html.indexOf('id="institution-gallery"')<html.indexOf('<footer>'));
  assert.ok(app.includes("state.view==='feed'&&!state.demo?institutionGallery(filtered,data.institutions):''"));
 });
+
+test('UW informational exception is confined to evidenced paper marks, with clearspace and no gallery decoration',async()=>{
+ const {institutionRow}=await import('../lib/paper-media.js');const uw=resolveInstitution(registry,'University of Washington');assert.equal(uw.displayScope,'paper-affiliation-only');assert.equal(uw.status,'verified');assert.match(uw.logo.rights,/IV\(c\)/);
+ const p={id:'test',authors:[],visuals:{institutions:[{name:uw.officialName,institutionId:uw.id,institutionType:uw.institutionType,markType:uw.markType,logo:uw.logo,authorNames:[],evidence:[],note:'test'}]}};
+ const card=institutionRow(p);assert.match(card,/uw-block-w.png/);assert.match(card,/uw-affiliation-mark/);assert.match(card,/width:60px;height:44px/);
+ const gallery=institutionGallery([p],registry);assert.match(gallery,/University of Washington/);assert.match(gallery,/标识仅用于具体论文署名说明/);assert.doesNotMatch(gallery,/<img|标识待核验/);
+ const css=await readFile(new URL('../styles.css',import.meta.url),'utf8');assert.match(css,/\.institution-avatar\.uw-affiliation-mark\{padding:6px;background:#fff;border:0;border-radius:0;box-shadow:none\}/);
+ const bad=structuredClone(registry);resolveInstitution(bad,'University of Washington').displayScope='site-brand';assert.ok(validateInstitutions(bad).some(error=>error.includes('展示范围')));
+});
