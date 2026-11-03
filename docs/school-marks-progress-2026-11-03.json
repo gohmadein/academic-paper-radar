@@ -3,8 +3,8 @@
   "scope": "Existing paper-referenced university identities only; not QS ranking coverage. Verified means source and identity, not institutional permission or brand-size compliance.",
   "baselineUniversityCount": 165,
   "originalMissing": 84,
-  "completedCount": 67,
-  "remainingCount": 17,
+  "completedCount": 74,
+  "remainingCount": 10,
   "completed": [
     {
       "id": "pending-the-hong-kong-university-of-science-and-technology-guangzhou",
@@ -1747,6 +1747,188 @@
       "rightsPolicyUrl": "https://www.cityu.edu.hk/policies/corpid/university-policy-and-guidelines-for-the-use-of-the-universitys-name-artistic-related-intangible-and-tangible-assets-visual-identity-and-trade-marks.htm",
       "note": "Supersedes the prior resolution-only terminal gap. Exact full native32×32 RGBA frame decoded from the official Electrical Engineering homepage favicon, linked as rel=shortcut icon under shared CityUHK settings. Pixel bytes equal the ICO decoded RGBA frame. It is a complete orange-to-burgundy geometric CityU university symbol with white CityU lettering, not an EE-specific symbol, a fragment, full-name lockup, or Dongguan substitution. Native transparent padding is retained: alpha bounding box(0,6,32,26), alpha extrema0–255. No crop, upscaling, sharpening, redraw or recolour in delivered asset. Nearest-neighbour enlargement used only for inspection, not delivery. This verifies the university mark as actually served by the official EE site; no claim that its design version is the inaccessible2025 SVG.",
       "sha256": "27639a1590f0545dd42d59be26f0a65a3080c558b32fc700692bb2b64327d085"
+    },
+    {
+      "id": "pending-civil-aviation-university-of-china",
+      "name": "Civil Aviation University of China",
+      "status": "verified",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/compact-c797e13b851bdf0d.png",
+        "sha256": "c797e13b851bdf0de30280e0a3da42369b650cdccb0e25876555d671d0989c84",
+        "width": 140,
+        "height": 140,
+        "sourceUrl": "https://www.chinaschool.com.cn/i_region/i_2_tianjin/a_5/a_1_2.png",
+        "evidenceUrl": "https://www.moe.gov.cn/srcsite/A02/zfs_gdxxzc/201605/t20160518_245130.html",
+        "verifiedAt": "2026-11-03",
+        "credit": "Civil Aviation University of China · public mirror, independently corroborated identity",
+        "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied.",
+        "displayPolicy": "attributed-thumbnail",
+        "background": "transparent",
+        "altZh": "Civil Aviation University of China 完整真实机构标识",
+        "altEn": "Civil Aviation University of China complete compact institutional identity mark"
+      },
+      "markType": "emblem",
+      "alphaStatus": "transparent",
+      "rightsPolicyUrl": "https://www.moe.gov.cn/srcsite/A02/zfs_gdxxzc/201605/t20160518_245130.html",
+      "note": "Complete 140×140 standalone circular seal from university-directory public mirror; page https://www.chinaschool.com.cn/i_region/i_2_tianjin/a_5/2024/zixun-2024.html credits official university resources. Independent Ministry of Education approved charter Article79 describes the same globe, upward aircraft forming 中,1951 and bilingual name ring. Exact CAUC, not CAFUC. Native bytes preserved; no crop, background removal, recolor or upscaling. Visually inspected. True alpha range0–255 with6399 fully transparent pixels. SHA-256:c797e13b851bdf0de30280e0a3da42369b650cdccb0e25876555d671d0989c84.",
+      "sha256": "c797e13b851bdf0de30280e0a3da42369b650cdccb0e25876555d671d0989c84"
+    },
+    {
+      "id": "pending-mohammed-vi-polytechnic-university",
+      "name": "Mohammed VI Polytechnic University",
+      "status": "verified",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/compact-010563ee9bb94781.png",
+        "sha256": "010563ee9bb947817e3e668c7b6b79630092e25f2b5eb8026cee996bc12ef818",
+        "width": 277,
+        "height": 278,
+        "sourceUrl": "https://um6p.ma/images/logos/logo-4.png",
+        "evidenceUrl": "https://www.um6p.ma/en",
+        "verifiedAt": "2026-11-03",
+        "credit": "Mohammed VI Polytechnic University · official-source compact identity mark",
+        "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied.",
+        "displayPolicy": "attributed-thumbnail",
+        "background": "light",
+        "altZh": "Mohammed VI Polytechnic University 完整真实机构标识",
+        "altEn": "Mohammed VI Polytechnic University complete compact institutional identity mark"
+      },
+      "markType": "compact-symbol",
+      "alphaStatus": "opaque-light",
+      "rightsPolicyUrl": "https://www.um6p.ma/en",
+      "note": "Complete official native277×278 stacked four-square UM6P identity symbol, no full-name wordmark. Exact URL appears in official homepage serialized application content. Reconsidered prior over-strict generic-letter exclusion: this is the distinctive complete four-block institutional mark, not bare U favicon. Native opaque white background retained, all alpha255; no raster crop, redraw, recolor or upscaling. Visually inspected. Public brand portal https://um6pbrandgo.studio/logos independently depicts the four-block design; no official ownership or licence inferred from portal alone. SHA-256:010563ee9bb947817e3e668c7b6b79630092e25f2b5eb8026cee996bc12ef818.",
+      "sha256": "010563ee9bb947817e3e668c7b6b79630092e25f2b5eb8026cee996bc12ef818"
+    },
+    {
+      "id": "pending-university-of-science-and-technology-korea",
+      "name": "University of Science and Technology (Korea)",
+      "status": "verified",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/compact-4b3fb0da8b250e81.jpg",
+        "sha256": "4b3fb0da8b250e81d88000764960aa0bbc131abe37956cb8f74c673290a9526f",
+        "width": 946,
+        "height": 946,
+        "sourceUrl": "https://www.studyinkorea.go.kr/file/imgpreview3.do?filename=836&orgfilename=100077",
+        "evidenceUrl": "https://www.studyinkorea.go.kr/ko/search/universityInfo.do?tab=univ-basic-info&univCd=100077",
+        "verifiedAt": "2026-11-03",
+        "credit": "University of Science and Technology (Korea) · official-source compact identity mark",
+        "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied.",
+        "displayPolicy": "attributed-thumbnail",
+        "background": "light",
+        "altZh": "University of Science and Technology (Korea) 完整真实机构标识",
+        "altEn": "University of Science and Technology (Korea) complete compact institutional identity mark"
+      },
+      "markType": "emblem",
+      "alphaStatus": "opaque-light",
+      "rightsPolicyUrl": "https://www.studyinkorea.go.kr/ko/search/universityInfo.do?tab=univ-basic-info&univCd=100077",
+      "note": "Complete 946×946 UST circular seal published by Korean government StudyInKorea for university100077. Exact Korean UST verified by Korean name 과학기술연합대학원대학교, Daejeon address217 Gajeong-ro, official www.ust.ac.kr link and founding2003. Pixel-inspected seal has UST, KOREA2003, column, Pegasus and molecule. Native opaque white background retained, all alpha255; not falsely called transparent. No cropping, recoloring or invented transparency. SHA-256:4b3fb0da8b250e81d88000764960aa0bbc131abe37956cb8f74c673290a9526f.",
+      "sha256": "4b3fb0da8b250e81d88000764960aa0bbc131abe37956cb8f74c673290a9526f"
+    },
+    {
+      "id": "pending-queen-s-university-belfast",
+      "name": "Queen’s University Belfast",
+      "status": "verified",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/compact-074dc7b9066a7039.svg",
+        "sha256": "074dc7b9066a703911f231f872f782bd4d908e01762f1281a125571920422751",
+        "width": 920,
+        "height": 1030,
+        "sourceUrl": "https://www.freelogovectors.net/svg04/queens-university-belfast-logo.svg",
+        "evidenceUrl": "https://blogs.qub.ac.uk/wp-content/uploads/sites/27/2024/01/Annual-Fund-Logo-insertion-guidelines.pdf",
+        "verifiedAt": "2026-11-03",
+        "credit": "Queen’s University Belfast · institution artwork, publicly corroborated vector derivative",
+        "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. University brand policy requires permission for nonstaff use of marks; none obtained. Official guide retains lockup/exclusion-zone/minimum-width instructions; this compact crest does not claim compliance or separate approval. Policy: https://www.qub.ac.uk/brand/",
+        "displayPolicy": "attributed-thumbnail",
+        "background": "transparent",
+        "altZh": "Queen’s University Belfast 完整校徽图形",
+        "altEn": "Queen’s University Belfast complete institutional crest"
+      },
+      "markType": "emblem",
+      "alphaStatus": "transparent",
+      "rightsPolicyUrl": "https://www.qub.ac.uk/brand/",
+      "note": "Public vector mirror attributes author to qub.ac.uk. Exact current2017 shield identity independently corroborated against accessible official university Annual Fund logo-positioning PDF first page (2018; official2024-hosted copy), downloaded and visually inspected. Removed only separate wordmark and invisible unused layers; retained precisely original Layer_2/g final emblem group, including all inner paths and white details. Geometry/fills unchanged; viewBox90 990 920 1030, proportional920x1030. Complete book, hand, seahorse, harp, crown, saltire and ESTD1845 preserved. This is a documented derivative of publicly mirrored university artwork, not an official standalone download. Safe SVG: only static SVG/path/group elements, no script, event, embedded image, font or external dependency. Rendered and visually inspected; actual alpha includes transparent pixels and full visible colored mark. Independent geometry audit passed. No AI/redraw/recoloring. Source SHA256: 91dea91dbf3b8329979393f25a0ed974a3a21ef2861dd347f5926dee41a50576.",
+      "sha256": "074dc7b9066a703911f231f872f782bd4d908e01762f1281a125571920422751"
+    },
+    {
+      "id": "pending-university-of-toronto",
+      "name": "University of Toronto",
+      "status": "verified",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/compact-2bd230d379a9f161.svg",
+        "sha256": "2bd230d379a9f16160bc02bd9519883e129b4c139c319aebcffe134f7e503e1a",
+        "width": 260,
+        "height": 540,
+        "sourceUrl": "https://contact.mshri.on.ca/dba/files/image/logo/UofTLogo-1.pdf",
+        "evidenceUrl": "https://moleculargenetics.utoronto.ca/visual-identity",
+        "verifiedAt": "2026-11-03",
+        "credit": "University of Toronto · institution artwork, publicly corroborated vector derivative",
+        "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. University guidance requires crest and wordmark together, official dark-blue palette, digital crest height80px and clearspace; this compact derivative does not claim conformity with those original rules or separate approval. Policy: https://moleculargenetics.utoronto.ca/visual-identity",
+        "displayPolicy": "attributed-thumbnail",
+        "background": "transparent",
+        "altZh": "University of Toronto 完整校徽图形",
+        "altEn": "University of Toronto complete institutional crest"
+      },
+      "markType": "emblem",
+      "alphaStatus": "transparent",
+      "rightsPolicyUrl": "https://moleculargenetics.utoronto.ca/visual-identity",
+      "note": "Official-source identity corroborated against University of Toronto Molecular Genetics visual identity; vector PDF held on affiliated Mount Sinai research institute public site, Adobe Illustrator CS5 PDF metadata dated2012. Converted PDF to SVG using pdftocairo, then removed only separate wordmark group+unused clipping definition. All77 complete crest paths retain exact normalized original geometry/fills; only viewBox changed to7 3 26 54 and proportional260x540 dimensions. Tree, crown, books, beaver and complete VELUT ARBOR AEVO ribbon visibly intact. This is a documented vector derivative, not a standalone official download. Safe SVG: only static SVG/path/group elements, no script, event, embedded image, font or external dependency. Rendered and visually inspected; actual alpha includes transparent pixels and full visible colored mark. Independent geometry audit passed. No AI/redraw/recoloring. Source SHA256: cbf33a72d390c2728e75d761eefdd4c76fa4f5c04a259b18ef64f21f9bb1a2f0.",
+      "sha256": "2bd230d379a9f16160bc02bd9519883e129b4c139c319aebcffe134f7e503e1a"
+    },
+    {
+      "id": "pending-california-institute-of-technology",
+      "status": "verified",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/compact-b4a06471cee54f1e.jpg",
+        "sha256": "b4a06471cee54f1ef533b9cd65f9d11159ef6b503cdc4486b6616b2c86fb7995",
+        "width": 151,
+        "height": 150,
+        "sourceUrl": "https://indico.bnl.gov/event/17072/contributions/70369/attachments/44692/75401/ryz_221129_CPAD_crystals.pdf",
+        "evidenceUrl": "https://www.eas.caltech.edu/news/new-caltech-trustees",
+        "verifiedAt": "2026-11-03",
+        "credit": "California Institute of Technology · original seal embedded in Caltech-authored research presentation hosted by Brookhaven National Laboratory",
+        "rights": "Copyright and trademark remain with Caltech. Official guidance reserves seal for formal/ceremonial communications and says not to use it as a graphic element or on research posters/presentations. No separate institutional approval or open reuse licence obtained or asserted; source/identity verification is not legal clearance. Editorial paper-affiliation-only thumbnail, not site branding or endorsement. Native white backing retained; compact use does not claim compliance with original brand guidelines. Policy: https://identity.caltech.edu/officiallogomarks",
+        "displayPolicy": "attributed-thumbnail",
+        "background": "light",
+        "altZh": "California Institute of Technology 完整原版校徽",
+        "altEn": "California Institute of Technology complete original seal"
+      },
+      "markType": "emblem",
+      "alphaStatus": "opaque-light",
+      "note": "Complete orange Caltech seal extracted as the unchanged native JPEG stream, PDF object3444, first page, 151×150 RGB. No crop, recolor, alpha removal or redraw. Native white background retained honestly; no true alpha. Visually inspected full seal and native pixels. The paper presenter is Ren-Yuan Zhu, California Institute of Technology; host is Brookhaven National Laboratory official Indico. Source PDF SHA256 273687b8c6903d34b070380310278b4f05922fe11571a36b11d9d5710e703c99. JPEG has no SVG/script concerns. Official Caltech source article separately identifies same orange seal; its direct image returned403 and was not retried. Native white background is recorded as an opaque-light exception; not described as alpha transparent.",
+      "rightsPolicyUrl": "https://identity.caltech.edu/officiallogomarks",
+      "sha256": "b4a06471cee54f1ef533b9cd65f9d11159ef6b503cdc4486b6616b2c86fb7995",
+      "name": "California Institute of Technology"
+    },
+    {
+      "id": "pending-university-college-london",
+      "name": "University College London",
+      "status": "verified",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/compact-7b30860bb408ce33.png",
+        "sha256": "7b30860bb408ce3384c763ca171b610b2ac34a085b01937a8edce5a0f8e46e75",
+        "width": 200,
+        "height": 200,
+        "sourceUrl": "https://olopinst.sirv.com/content/projects/UCL_Symbol_01.gif?scale.option=noup&w=200&h=200&format=gif",
+        "evidenceUrl": "https://www.ucl.ac.uk/brand-and-experience/brand",
+        "verifiedAt": "2026-11-03",
+        "credit": "University College London · 2026 portico by Johnson Banks",
+        "rights": "Copyright and trademark remain with UCL and respective designer. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Original designer publicly supplies this standalone compact symbol for its UCL case-study thumbnail. UCL logo guidance and trademark restrictions remain applicable; compact editorial paper-affiliation use does not claim institutional approval, compliance with all original brand minimums, partnership or endorsement. Native opaque purple background preserved. Policy: https://www.ucl.ac.uk/brand-and-experience/brand/visual-guidelines/logo/logo-guidelines",
+        "displayPolicy": "attributed-thumbnail",
+        "background": "dark",
+        "altZh": "伦敦大学学院2026门廊图形标识，保留原生紫色背景",
+        "altEn": "University College London complete2026 portico symbol on its native purple background"
+      },
+      "markType": "compact-symbol",
+      "alphaStatus": "opaque-dark",
+      "rightsPolicyUrl": "https://www.ucl.ac.uk/brand-and-experience/brand/visual-guidelines/logo/logo-guidelines",
+      "note": "Complete current2026 standalone UCL portico identity symbol supplied as the compact UCL project thumbnail by the original designer Johnson Banks; public page https://www.johnsonbanks.co.uk/work/ucl and its linked API https://www.johnsonbanks.co.uk/api/work/ucl?offset=0&limit=50 identify this exact200x200 GIF thumbnail. Official UCL brand page confirms2026 refreshed portico design; designer describes architecture-derived varying-width pillars. Converted the complete native composited first frame of58-frame GIF to PNG without cropping, scaling, changing colors, geometry or background. First frame duration5070ms is the held complete symbol before animation. It has a native dark-purple opaque background and generous original spacing; alpha is entirely255 despite GIF transparency flag. No fake transparency claim, AI or redraw. Source SHA256: 17bd5424fba84cbc27b1d1973f8810a986feda71540e63ed67ad55854a43b765.",
+      "sha256": "7b30860bb408ce3384c763ca171b610b2ac34a085b01937a8edce5a0f8e46e75"
     }
   ],
   "remaining": [
@@ -1755,39 +1937,15 @@
       "name": "Université Paris-Saclay",
       "paperCount": 3,
       "status": "needs-verification",
-      "finding": "No genuine current standalone compact emblem verified. Official February2022 guide downloaded and all13pages inspected: current identity uses complete typographic Université Paris-Saclay lockups; no independent symbol supplied. The native32px plain lowercase-u tile was rejected, as was a tiny full-name wordmark. A historic badge mentioned in a2017 scholarly article is not proof of a current exact institutional asset. Source guide: https://www.universite-paris-saclay.fr/sites/default/files/2023-02/Charte-graphique-Universite-Paris-Saclay-fevrier-2022.pdf ; SHA256 b15324f513023983a08c60a1cc0e4141cea391331e80adf0824fdafff72e8977. This is a format/identity evidence gap, not a legal platform ban.",
+      "finding": "No genuine current standalone compact emblem verified. Official February2022 guide downloaded and all13pages inspected: current identity uses complete typographic Université Paris-Saclay lockups; no independent symbol supplied. The native32px plain lowercase-u tile was rejected, as was a tiny full-name wordmark. A historic badge mentioned in a2017 scholarly article is not proof of a current exact institutional asset. Source guide: https://www.universite-paris-saclay.fr/sites/default/files/2023-02/Charte-graphique-Universite-Paris-Saclay-fevrier-2022.pdf ; SHA256 b15324f513023983a08c60a1cc0e4141cea391331e80adf0824fdafff72e8977. This is a format/identity evidence gap, not a legal platform ban. Rechecked2026-11-03 with new official-brand, public identity and press-library searches. No proof of nonexistence is asserted; this remains an exact compact-artifact gap, not a blanket legal ban.",
       "sourceUrl": "https://www.universite-paris-saclay.fr/en/node/78758"
-    },
-    {
-      "id": "pending-university-college-london",
-      "name": "University College London",
-      "paperCount": 3,
-      "status": "needs-verification",
-      "finding": "Current official magazine archive supplies the complete 2026 UCL-plus-portico raster lockup (1394×391), but it remains too wide for the requested standalone compact graphic and was not raster-cropped. A single bounded favicon check found a native 512×512 white outlined portico on purple at https://magazine.ucl.ac.uk/archive/assets/favicon.ico, but that page is Portico Magazine and the drawing differs from the new university primary portico; university-wide identity was not independently established, so the publication icon was not substituted. Official brand/CDN asset endpoints previously returned 403 and were not retried. Need an accessible genuine university standalone portico or a complete identifiable vector graphic group. No recoloring, redraw, wordmark shrinkage, login or access workaround. Checked 2026-11-03.",
-      "sourceUrl": "https://www.ucl.ac.uk/brand-and-experience/brand/visual-guidelines/logo/logo-guidelines"
-    },
-    {
-      "id": "pending-california-institute-of-technology",
-      "name": "California Institute of Technology",
-      "paperCount": 2,
-      "status": "needs-verification",
-      "finding": "No usable genuine compact emblem obtained. The public official identity page and independently hosted official 2024/2025 catalog PDF requests returned HTTP 403; stopped without bypass or repeat. Regular Caltech wordmark is not a compact symbol, and the athletics beaver was not substituted. The formal seal exists but no independently verified original downloadable file was acquired. Unverified third-party redraws were not used. Formal/ceremonial source guidance is a recorded rights condition, not a platform ban. Checked 2026-11-03.",
-      "sourceUrl": "https://identity.caltech.edu/officiallogomarks"
-    },
-    {
-      "id": "pending-civil-aviation-university-of-china",
-      "name": "Civil Aviation University of China",
-      "paperCount": 1,
-      "status": "needs-verification",
-      "finding": "No verified compact source file acquired. Official homepage and known full-logo image returned HTTP 503. The public Urongda page identifies the correct school code 4112010059, but its exact public PNG asset also returned 503. No raster crop of the old seal-plus-name lockup and no substitution of Civil Aviation Flight University of China were made. Need an accessible original standalone seal or complete vector graphic with independently verified institution identity. Checked 2026-11-03.",
-      "sourceUrl": "https://www.cauc.edu.cn/"
     },
     {
       "id": "pending-clermont-auvergne-inp",
       "name": "Clermont Auvergne INP",
       "paperCount": 1,
       "status": "needs-verification",
-      "finding": "Terminal bounded source/artifact gap: Official documentation page accessible, but linked logo-blanc.svg and apple-touch-icon.png both returned403 and were not retried. University-wide UCA graphic guide page26 verifies only full Clermont Auvergne INP identity, separate legal entity. No exact distinct standalone compact symbol recovered; generic INP letters, UCA parent and member-school marks not substituted. No login or access bypass.",
+      "finding": "Rechecked distinct public Groupe INP homepage and the Clermont institutional presentation mirrored by partner Shibaura Institute of Technology: https://www.shibaura-it.ac.jp/assets/Pre%25CC%2581sentation%20CAINP%20anglais%20-%20Final_24.pdf . Downloaded975052-byte real PDF and visually inspected first page. Identity is a stacked Clermont Auvergne / INP / uca lockup, not a separate school seal. INP shared network letterform alone would lose exact institutional identity; UCA parent or member-school logos not substituted. Prior denied university SVG/icon endpoints not retried. No defensible independent compact emblem found.",
       "sourceUrl": "https://www.clermont-auvergne-inp.fr/base-documentation/"
     },
     {
@@ -1795,7 +1953,7 @@
       "name": "Industrial University of Ho Chi Minh City",
       "paperCount": 1,
       "status": "needs-verification",
-      "finding": "Current 2025/2026 identity confirmed, so older lotus/gear IUH artwork is intentionally not used. Main, English, brand and relevant standalone-image requests returned 503; an independent PDF mirror URL currently returned 404 despite an indexed copy. New-logo Wikimedia item is a full horizontal raster lockup, which would require a prohibited raster crop for a compact symbol. No authentic complete current standalone asset acquired in bounded research; no login/challenge/bypass attempted. Checked 2026-11-03.",
+      "finding": "Located an exact current standalone shortened 2025 symbol, not the obsolete gear/lotus or full wordmark: Wikimedia file Industrial University of HCMC (shortened logo).png, 3850×4267, attributed to IUH official brand page, corroborated by current official training article and brand guide description. Original image URL returned HTTP 403; stopped without retry or bypass. New independent mirror page also returned 403; official training page 503. No file bytes available for required pixel/hash/alpha verification. https://commons.wikimedia.org/wiki/File:Industrial_University_of_HCMC_(shortened_logo).png",
       "sourceUrl": "https://iuh.edu.vn/vi/nhan-dien-thuong-hieu.html"
     },
     {
@@ -1803,7 +1961,7 @@
       "name": "IT University of Copenhagen",
       "paperCount": 1,
       "status": "needs-verification",
-      "finding": "Official public logo page and homepage were inspected successfully. Available Danish and English institutional artwork is wordmark-only; the short version still spells the name/CPH rather than supplying a standalone symbol. Decorative triangles were not represented as an identity mark, and the unrelated International Telecommunication Union emblem was not used. Existing long institutional wordmark may remain as a fallback outside this compact-mark deliverable; no qualifying compact mark verified. Checked 2026-11-03.",
+      "finding": "Official public logo page and homepage were inspected successfully. Available Danish and English institutional artwork is wordmark-only; the short version still spells the name/CPH rather than supplying a standalone symbol. Decorative triangles were not represented as an identity mark, and the unrelated International Telecommunication Union emblem was not used. Existing long institutional wordmark may remain as a fallback outside this compact-mark deliverable; no qualifying compact mark verified. Checked 2026-11-03. Rechecked2026-11-03 with new official-brand, public identity and press-library searches. No proof of nonexistence is asserted; this remains an exact compact-artifact gap, not a blanket legal ban. New university-authored press-library entry https://via.ritzau.dk/nyhedsrum/13560183/it-universitetet-i-kobenhavn/mi?item=logo-13609093 also supplied only a full-name horizontal white-on-black wordmark, independently downloaded and pixel-inspected at itu-press.jpg. Official favicon request returned503; no repeated retry.",
       "sourceUrl": "https://www.itu.dk/om-itu/presse/logoer"
     },
     {
@@ -1811,7 +1969,7 @@
       "name": "King’s College London",
       "paperCount": 1,
       "status": "needs-verification",
-      "finding": "No exact institution-origin compact coat-of-arms asset verified in the bounded search. Current official red-box logo is a full-name wordmark and is not an acceptable compact-symbol substitute. Public branding-guide mirror was inaccessible403 and not retried; institutional high-resolution resource library is staff-only and was not entered. Commons shields inspected in search identify independent heraldic redraws or provenance-deficient older raster copies, so they were not misrepresented as original institutional artwork. Official image-library reference: https://www.kcl.ac.uk/library/collections/image-library . No agreement, login, outreach or permission claim made.",
+      "finding": "New university-source thesis candidate https://kclpure.kcl.ac.uk/ws/portalfiles/portal/250470179/2024_Solonenko_Ivan_19077922_ethesis.pdf returned403; stopped, no retry. Independent university alumni PDF https://www.kcl.ac.uk/alumni/assets/intouch-2017-autumn-pages.pdf downloaded5598429 bytes and inspected page24: image is historical pre1985 royal arms in a photographed/pinned layout, not the current complete institutional crest, so rejected. Commons current-vector candidates explicitly say own-work heraldic redraws. Current exact institution-origin usable compact arms remain unresolved; long red-box wordmark not substituted.",
       "sourceUrl": "https://www.kcl.ac.uk/sitehelp/linking"
     },
     {
@@ -1819,31 +1977,15 @@
       "name": "KU Leuven",
       "paperCount": 1,
       "status": "needs-verification",
-      "finding": "No usable current compact emblem file acquired. Official style site/logo asset and an independent official theology page/image for Sedes Sapientiae returned HTTP 503. Commons file access returned 403 and was not retried. The medieval 1425 university seal was not substituted for the present KU Leuven identity. Need an accessible original current Sedes Sapientiae emblem or an independently verified mirror; this is an asset-access/provenance gap, not a copyright platform prohibition. Checked 2026-11-03.",
+      "finding": "New official sources checked: releases/ttt/img/sedes-kuleuven.png, Law doctoral first-page DOCX, ESAT original sedes_transparant.gif and Kulak Sedes image all returned 503. Current Law guidance explicitly identifies Sedes as KU Leuven logo; no image bytes obtained. Avoided previously denied Commons URL and did not use UCLouvain or the 1425 predecessor seal. https://www.law.kuleuven.be/english/information-for-students/current/phd/phd-trajectory/end_phd",
       "sourceUrl": "https://stijl.kuleuven.be/releases/3.2/img/svg/"
-    },
-    {
-      "id": "pending-mohammed-vi-polytechnic-university",
-      "name": "Mohammed VI Polytechnic University",
-      "paperCount": 1,
-      "status": "needs-verification",
-      "finding": "Official page and full horizontal UM6P logo acquired. Its public favicon is a bare white U on orange tile (67×67), but no reliable source in this pass establishes that generic letter as the complete independent institutional symbol rather than a website convenience. The full branded UM6P lockup is unsuitable for this compact slot. um6pbrandgo.studio still lacks verified official-domain linkage. No invented or cropped acronym substitution. Checked 2026-11-03.",
-      "sourceUrl": "https://www.um6p.ma/en"
-    },
-    {
-      "id": "pending-queen-s-university-belfast",
-      "name": "Queen’s University Belfast",
-      "paperCount": 1,
-      "status": "needs-verification",
-      "finding": "No local usable crest asset acquired. Official homepage/brand PDF requests returned HTTP 403. A Commons SVG page independently identified the university artwork and VRT provenance ticket 2019030710007887, but the exact original upload returned HTTP 403 as well; no bypass/retry. Current crest drawing could therefore not be pixel-verified or hashed. The university permission requirement and mirror CC BY-SA attribution are separate rights facts, not technical access authority. Checked 2026-11-03.",
-      "sourceUrl": "https://www.qub.ac.uk/brand/"
     },
     {
       "id": "pending-sogang-university",
       "name": "Sogang University",
       "paperCount": 1,
       "status": "needs-verification",
-      "finding": "Official College of Engineering homepage and shared university signature verified. Both official icon candidates (180px and 32px) contain visible stray fragments of the adjacent wordmark at the right edge, and the 32px file also has damaged transparency/color detail; these are not clean standalone marks. Removing fragments would require forbidden raster editing. Main UI/page/PDF endpoints returned 503 or timeout; an older independent official brochure URL returned an unavailable-page HTML body, not a PDF. No unverified shield redraw or incorrectly substituted emblem. Checked 2026-11-03.",
+      "finding": "New official VDS 2025 seminar PDF downloaded and inspected: native image object9 contains complete shield plus Korean/English wordmark in one raster, so extracting shield would require forbidden raster crop. Object11 is unrelated generic icon, not shield. Brandfetch advertised SVG returned documentation HTML instead of image; Seeklogo, Namu, ZSEM brochure and Commons original returned 403; stopped those routes. No clean complete standalone mark yet. Official corroborating PDF: https://vds.sogang.ac.kr/wp-content/uploads/2025/06/2025_%EC%97%AC%EB%A6%84%EC%84%B8%EB%AF%B8%EB%82%98_%EB%AC%B8%EC%8A%B9%ED%9B%88.pdf Independently hosted Marefa SVG acquired (14264 bytes), rendered and inspected; it contains only the full SOGANG UNIVERSITY wordmark and no shield, so not usable as compact mark. https://www.marefa.org/w/images/3/3c/Sogang_University_-_logotype_%28en%29.svg",
       "sourceUrl": "https://www.sogang.ac.kr/ko/symbol/ui"
     },
     {
@@ -1851,7 +1993,7 @@
       "name": "University of Applied Sciences and Arts Western Switzerland",
       "paperCount": 1,
       "status": "needs-verification",
-      "finding": "Official homepage provides HES·SO acronym wordmarks and a 192px tile containing the same plain acronym, but no genuine independent seal/shield/pictorial symbol. Under the compact graphical-symbol requirement, the existing full acronym wordmark is not silently relabeled as an emblem. Keep name-only rather than downsize a full wordmark or invent a monogram. Checked 2026-11-03.",
+      "finding": "Official complete Hes·so short acronym logo verified at https://www.hes-so.ch/_assets/7e6a5725996f3bbfb6504a09487e3b74/HES-SO/img/logo_hesso_light.svg?1716288047 and original190×43 SVG archived as source-only. Parent pixel review finds ordinary horizontal typography rather than distinctive compact geometric symbol; at40px width it is9px high. Do not count every acronym as a compact symbol. Official192px tile is the same typography on blue, not a seal. Campus-specific HES-SO Genève/Valais symbols must not substitute for exact umbrella institution. Still no qualifying compact mark verified; not a claim no institutional logo exists.",
       "sourceUrl": "https://www.hes-so.ch/"
     },
     {
@@ -1859,7 +2001,7 @@
       "name": "University of California, Davis",
       "paperCount": 1,
       "status": "needs-verification",
-      "finding": "No verified usable compact seal downloaded. Official brand examples and the independent official Leadership seal image/page returned HTTP 403, with no access workaround. Full UC Davis wordmark is not a standalone compact symbol; a public file explicitly named UnofficialSeal was rejected. Do not substitute the parent University of California seal or another campus. Current official guidance reserves the approved Davis seal for chancellor-level uses and requires review for other uses; no approval is claimed. Checked 2026-11-03.",
+      "finding": "Correction to prior reason: official UC Davis guidance explicitly calls the approved campus mark its unofficial seal because all campus seals derive from UC Regents seal; UnofficialSeal filename alone is NOT evidence of incorrect identity. https://marketingtoolbox.ucdavis.edu/brand-guide/logos/uc-davis-seal verifies exact Davis-not1868 distinction. Newly linked campus seal image at https://marketingtoolbox.ucdavis.edu/sites/g/files/dgvnsk6246/files/styles/sf_thumbnail/public/media/images/UCDavisUnofficialSeal_Blue.png?h=04d92ac6&itok=FdYoewjQ returned403 and was not retried. Distinct Student Affairs brand page also403; chemistry homepage503. UCD spirit mark is documented but image unavailable and expressly internal/celebratory, not a formal seal. No usable verified file acquired. Official restrictions reserve seal for chancellor-level/approved uses and exclude websites; no permission claimed.",
       "sourceUrl": "https://communicationsguide.ucdavis.edu/uc-davis-logos-by-type"
     },
     {
@@ -1867,24 +2009,15 @@
       "name": "University of Georgia",
       "paperCount": 1,
       "status": "needs-verification",
-      "finding": "No current suitable compact source acquired. Official brand, CAES visual-style page, and 2025 Georgia logo-guide PDF returned HTTP 403; stopped. Current guidance describes an intact Georgia Top Shield, but no file could be inspected/downloaded. The sample-watermarked seal was not altered, pre-2022 artwork was not substituted, and the isolated arch-shield was not falsely described as an approved standalone logo. Need the genuine current complete Top Shield or independently verified compact seal asset. Rights restrictions were recorded rather than treated as platform prohibition. Checked 2026-11-03.",
+      "finding": "Current complete Top Shield located and visually confirmed through official public digital asset portal: GEORGIA, arch shield,1785 and registered trademark, exact file UGAlogo_TopShield_FC_MARCM.png. Share button opens explicit EULA acceptance gate requesting information; browser worker stopped without acceptance/submission or alternate download. No original file bytes acquired; do not bypass via signed previews. Download requires user authorization of linked EULA https://digitalarch.uga.edu/dl/eula/external . Portal https://digitalarch.uga.edu/portals/q973imi3/BrandUGA_Institutional_Logos . Read-only EULA review: permits internal UGA promotion/publications and one-time news use by news organizations; other uses including illustrative purposes require separate UGA permission, possibly a fee. Acceptance alone would not establish permission for recurring affiliation display. No resale/sublicensing; permission personal/nonassignable. No acceptance/download occurred.",
       "sourceUrl": "https://brand.uga.edu/visual-identity/logos/"
-    },
-    {
-      "id": "pending-university-of-science-and-technology-korea",
-      "name": "University of Science and Technology (Korea)",
-      "paperCount": 1,
-      "status": "needs-verification",
-      "finding": "Terminal bounded source/artifact gap: Exact Korean UST identity verified from official UST International Conference2026 page; its CDN PNG is genuine but a long Korean/English name lockup (local ust-logo.png), so not shrunk or raster-cropped. Main official identity page returned503; independently published GetLogo thumbnail403. No standalone compact native/vector mark retrieved during bounded checks. Not another institution also called UST.",
-      "sourceUrl": "https://ustic2026.ust.ac.kr/Overview"
-    },
-    {
-      "id": "pending-university-of-toronto",
-      "name": "University of Toronto",
-      "paperCount": 1,
-      "status": "needs-verification",
-      "finding": "No usable current compact crest acquired. Public institutional pages were checked, while source PDF/PNG URLs on Dalla Lana, Molecular Genetics, Lewis Kay lab and UTM domains returned HTTP 200 carrying only a 195-byte Site Unavailable HTML response, not image/PDF data. No fake successful downloads retained as assets. The primary brand portal/production files require UTORid and were not entered. University crest identity is documented, but a parent/campus crest was not inferred from names and no incomplete lockup was raster-cropped. Need an accessible genuine crest file; no separate use approval claimed. Checked 2026-11-03.",
-      "sourceUrl": "https://spacesandexperiences.utoronto.ca/logos-and-brand-identity/"
     }
-  ]
+  ],
+  "recheck": {
+    "date": "2026-11-03",
+    "targetCount": 17,
+    "resolved": 7,
+    "remaining": 10,
+    "scope": "Second requested source search; normal public official sources and independently corroborated public mirrors only. No gated agreement accepted or access controls bypassed."
+  }
 }
