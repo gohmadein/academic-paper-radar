@@ -555,8 +555,23 @@
             "name": "Massachusetts Institute of Technology",
             "institutionId": "pending-massachusetts-institute-of-technology",
             "institutionType": "university",
-            "markType": "none",
-            "logo": null,
+            "markType": "compact-symbol",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/mit-2023-red-logo.svg",
+              "sha256": "717f753937cb6c2383916b1a2ebda407902a73b347f861242a50bb0b552f11ab",
+              "width": 449,
+              "height": 252,
+              "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b8/MIT_2023_red_logo.svg",
+              "evidenceUrl": "https://brand.mit.edu/logos-marks/mit-logo",
+              "verifiedAt": "2026-11-03",
+              "credit": "MIT 2023 red logo, Wikimedia Commons copy sourced to MIT",
+              "rights": "MIT标识及商标归原权利人。Wikimedia Commons将此简单图形标为公有领域并提示商标限制；其现行SVG画布由Commons编辑裁切，项目原样保存未再修改。MIT政策要求向校方提交标识使用提案，未取得另行许可；仅用于对应论文已核实的署名识别，不表示许可、合作或背书。当前紧凑图盒不声称满足MIT标准标志30px以上及留白指导。",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "altZh": "麻省理工学院红色 MIT 图形标识",
+              "altEn": "Massachusetts Institute of Technology red MIT logo"
+            },
             "authorNames": [
               "Zhiyang Dou",
               "John U. Onyemelukwe",
@@ -577,7 +592,7 @@
                 "checkedAt": "2026-11-03"
               }
             ],
-            "note": "已核验论文署名；官方标志只复用现有机构注册表，不以其他组织替代。"
+            "note": "论文署名已核验；MIT图形采用公开来源副本，仅用于署名识别，未取得另行许可，不表示MIT背书。"
           },
           {
             "name": "Amazon Robotics",

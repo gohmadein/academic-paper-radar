@@ -3,12 +3,12 @@
   "scope": "Public paper-affiliation mark audit, not permission grants or endorsement. Snapshot only. verified refers to source/identity, not permission clearance; see displayedWithoutSeparatePermission.",
   "institutionCounts": {
     "total": 252,
-    "verified": 107,
-    "pending": 145
+    "verified": 108,
+    "pending": 144
   },
   "pendingReasonCounts": {
     "permission-required": 61,
-    "policy-uncertain": 15,
+    "policy-uncertain": 14,
     "access-unavailable": 43,
     "no-compatible-official-asset": 14,
     "identity-unverified": 12
@@ -206,16 +206,6 @@
       "reason": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Official TRI homepage returned403. No bypass; parent Toyota emblem is not TRI-specific and must not be substituted. 核验：2026-11-02。 官方核验入口：https://www.tri.global/",
       "sources": [],
       "checkedAt": "2026-11-02"
-    },
-    {
-      "id": "pending-massachusetts-institute-of-technology",
-      "name": "Massachusetts Institute of Technology",
-      "reasonCode": "policy-uncertain",
-      "reason": "Round 2: retained concrete prior source/policy outcome; relaxation of compact/transparent requirements alone does not clear this blocker. MIT communications official FAQ instructs outsiders to contact the Institute to request logo-file access. No external publication permission established; not substituting unofficial M icon. 核验：2026-11-02。 官方核验入口：https://comms.mit.edu/",
-      "sources": [
-        "https://comms.mit.edu/"
-      ],
-      "checkedAt": "2026-11-02T08:43:32.815186+00:00"
     },
     {
       "id": "pending-university-of-california-berkeley",
@@ -1497,6 +1487,22 @@
       "displayScope": "paper-affiliation-only",
       "sourceUrl": "https://marcomm.washu.edu/app/themes/antipasto/assets/img/favicon/safari-pinned-tab.svg",
       "policyUrl": "https://policies.washu.edu/policies/permission-to-use-university-names-logos-and-trademarks/"
+    },
+    {
+      "id": "pending-massachusetts-institute-of-technology",
+      "name": "Massachusetts Institute of Technology",
+      "reasonCode": "policy-uncertain",
+      "reason": "Current red MIT logo identified against MIT brand guide; public Commons copy cites MIT and records a canvas crop. MIT asks that proposed uses of marks be submitted for review. No separate authorization obtained. Identification of paper affiliation only; no endorsement.",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:MIT_2023_red_logo.svg",
+        "https://brand.mit.edu/logos-marks/mit-logo",
+        "https://policies.mit.edu/policies-procedures/120-relations-public-use-mit-name-and-facilities-use/123-use-institute-name"
+      ],
+      "checkedAt": "2026-11-03",
+      "rightsStatus": "not-separately-authorized",
+      "displayScope": "paper-affiliation-only",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b8/MIT_2023_red_logo.svg",
+      "policyUrl": "https://policies.mit.edu/policies-procedures/120-relations-public-use-mit-name-and-facilities-use/123-use-institute-name"
     }
   ],
   "compactPresentation": {
@@ -1505,8 +1511,8 @@
       "width": 40,
       "height": 32
     },
-    "sourceVerified": 107,
-    "compactDisplayable": 98,
+    "sourceVerified": 108,
+    "compactDisplayable": 99,
     "sourceOnly": [
       {
         "id": "pending-king-s-college-london",
