@@ -1032,7 +1032,22 @@
         "institutions": [
           {
             "name": "University of Waterloo",
-            "logo": null,
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-4a8a285793c0968c.png",
+              "sha256": "4a8a285793c0968cdb536bf9cf97708afcd9f840c1de0590ec90e537b47837e9",
+              "width": 512,
+              "height": 512,
+              "sourceUrl": "https://uwaterloo.ca/profiles/uw_base_profile/themes/uw_fdsu_theme_resp/icon-512.png",
+              "evidenceUrl": "https://uwaterloo.ca/",
+              "verifiedAt": "2026-11-03",
+              "credit": "University of Waterloo · official-source compact identity mark",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. Brand guide normally uses full academic signature and treats standalone shield as informal; this record does not assert full-signature compliance or permission. Policy: https://uwaterloo.ca/brand/uw-logos",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "University of Waterloo 官方独立校徽或图形标志",
+              "altEn": "Official compact institutional symbol of University of Waterloo"
+            },
             "authorNames": [
               "Xiao Hu"
             ],
@@ -1043,9 +1058,9 @@
                 "checkedAt": "2026-11-02"
               }
             ],
-            "note": "仅表示论文发表时的署名关系；未新增未经核验的机构标志。",
+            "note": "论文署名证据保持不变；真实紧凑学校图形用于署名识别，来源及未取得另行许可的说明保留，不表示合作或背书。",
             "institutionType": "university",
-            "markType": "none",
+            "markType": "emblem",
             "institutionId": "pending-university-of-waterloo"
           },
           {
@@ -1171,7 +1186,22 @@
         "institutions": [
           {
             "name": "University of Edinburgh",
-            "logo": null,
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-daf149498b72eeff.png",
+              "sha256": "daf149498b72eeff9f86705a3918bfbc8832902cf88cb427d79d293b19f659b5",
+              "width": 1773,
+              "height": 1773,
+              "sourceUrl": "https://apps.business-school.ed.ac.uk/pl/images/uoe-crest-colour.svg",
+              "evidenceUrl": "https://apps.business-school.ed.ac.uk/pl/patterns/02-basics-images-logos/02-basics-images-logos.rendered.html",
+              "verifiedAt": "2026-11-03",
+              "credit": "University of Edinburgh · official-source compact identity mark",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. Current university brand downloads require University login; no restricted resources were accessed and no institutional authorization or current minimum-size compliance is asserted. Policy: https://information-services.ed.ac.uk/design-system/brand",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "light",
+              "altZh": "University of Edinburgh 官方完整图形标识",
+              "altEn": "Complete official compact mark of University of Edinburgh"
+            },
             "authorNames": [
               "Peter Buneman"
             ],
@@ -1182,9 +1212,9 @@
                 "checkedAt": "2026-11-02"
               }
             ],
-            "note": "仅表示论文发表时的署名关系；未新增未经核验的机构标志。",
+            "note": "论文署名证据保持不变；真实紧凑学校图形用于署名识别，来源及未取得另行许可的说明保留，不表示合作或背书。",
             "institutionType": "university",
-            "markType": "none",
+            "markType": "emblem",
             "institutionId": "pending-university-of-edinburgh"
           },
           {

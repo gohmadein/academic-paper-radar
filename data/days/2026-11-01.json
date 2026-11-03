@@ -786,7 +786,22 @@
           },
           {
             "name": "Université de Lorraine",
-            "logo": null,
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-2a4f4f6ad8fe164d.png",
+              "sha256": "2a4f4f6ad8fe164de38dd5edd00eaadc9e3544732be1d360c8b1699efbcc43de",
+              "width": 32,
+              "height": 32,
+              "sourceUrl": "https://www.univ-lorraine.fr/wp-content/uploads/2020/12/favicon.png",
+              "evidenceUrl": "https://www.univ-lorraine.fr/",
+              "verifiedAt": "2026-11-03",
+              "credit": "Université de Lorraine · official-source compact identity mark",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. The official legal notice reserves public reproduction absent authorization; no express authorization is claimed. Policy: https://www.univ-lorraine.fr/welcome/en/legal-notice/",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "Université de Lorraine 官方独立图形标识",
+              "altEn": "Université de Lorraine complete official compact identity mark"
+            },
             "authorNames": [
               "Phani Teja Singamaneni"
             ],
@@ -797,9 +812,9 @@
                 "checkedAt": "2026-11-01"
               }
             ],
-            "note": "论文署名已核验；标识由机构库解析，未核验时仅文字展示。",
+            "note": "论文署名证据保持不变；真实紧凑学校图形用于署名识别，来源及未取得另行许可的说明保留，不表示合作或背书。",
             "institutionType": "university",
-            "markType": "none",
+            "markType": "compact-symbol",
             "institutionId": "pending-universit-de-lorraine"
           }
         ],
@@ -1342,7 +1357,22 @@
           },
           {
             "name": "The University of Texas at Austin",
-            "logo": null,
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-58f010a3370785fb.png",
+              "sha256": "58f010a3370785fb9ac9f88e12cb7275312dfdf2034f1d10d04de83d575507a1",
+              "width": 192,
+              "height": 192,
+              "sourceUrl": "https://umac.utexas.edu/wp-content/uploads/2024/09/cropped-cropped-cropped-favicon-192x192.png",
+              "evidenceUrl": "https://umac.utexas.edu/brand-center/supporting-marks/",
+              "verifiedAt": "2026-11-03",
+              "credit": "The University of Texas at Austin · official-source compact identity mark",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. Official supporting-mark guidance requires prior written permission for relevant outside use. No such permission or exemption is claimed. Policy: https://umac.utexas.edu/brand-center/supporting-marks/",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "The University of Texas at Austin 官方完整图形标识",
+              "altEn": "Complete official compact mark of The University of Texas at Austin"
+            },
             "authorNames": [
               "Yuke Zhu"
             ],
@@ -1353,9 +1383,9 @@
                 "checkedAt": "2026-11-01"
               }
             ],
-            "note": "机构库无现成记录；未核验可展示标识，仅显示机构名称。",
+            "note": "论文署名证据保持不变；真实紧凑学校图形用于署名识别，来源及未取得另行许可的说明保留，不表示合作或背书。",
             "institutionType": "university",
-            "markType": "none",
+            "markType": "emblem",
             "institutionId": "pending-the-university-of-texas-at-austin"
           }
         ],

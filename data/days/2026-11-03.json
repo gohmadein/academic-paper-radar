@@ -365,8 +365,23 @@
             "name": "KTH Royal Institute of Technology",
             "institutionId": "pending-kth-royal-institute-of-technology",
             "institutionType": "university",
-            "markType": "none",
-            "logo": null,
+            "markType": "emblem",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-cba399c54bd086f2.png",
+              "sha256": "cba399c54bd086f282e3860098de4468c9565cf79b9a5e86f2c5aabafb91d029",
+              "width": 180,
+              "height": 180,
+              "sourceUrl": "https://www.kth.se/polopoly_fs/1.1273722.1692876353!/image/apple-touch-icon-KTH-logo-180x180.png",
+              "evidenceUrl": "https://www.kth.se/en",
+              "verifiedAt": "2026-11-03",
+              "credit": "KTH Royal Institute of Technology · official-source compact identity mark",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. Official policy limits logo use to situations where KTH asserts ownership, authorship, production or operation; this record does not claim approval or compliance with those use conditions. Policy: https://intra.kth.se/en/administration/kommunikation/varumarke/grafiskprofil/logotyp-1.845049",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "dark",
+              "altZh": "KTH Royal Institute of Technology 官方独立校徽或图形标志",
+              "altEn": "Official compact institutional symbol of KTH Royal Institute of Technology"
+            },
             "authorNames": [
               "Florian Vogt",
               "Danica Kragic"
@@ -378,7 +393,7 @@
                 "checkedAt": "2026-11-03"
               }
             ],
-            "note": "已核验论文署名；官方标志只复用现有机构注册表，不以其他组织替代。"
+            "note": "论文署名证据保持不变；真实紧凑学校图形用于署名识别，来源及未取得另行许可的说明保留，不表示合作或背书。"
           },
           {
             "name": "German Research Center for AI (DFKI)",
@@ -1214,8 +1229,23 @@
             "name": "Bordeaux INP",
             "institutionId": "pending-bordeaux-inp",
             "institutionType": "university",
-            "markType": "none",
-            "logo": null,
+            "markType": "compact-symbol",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-b65bb443187f02a3.svg",
+              "sha256": "b65bb443187f02a3e8360ea88d73da16a4b92349076bbbea005d7ea9ac19c5d6",
+              "width": 1040,
+              "height": 640,
+              "sourceUrl": "https://www.bordeaux-inp.fr/themes/custom/inp/logo.svg",
+              "evidenceUrl": "https://www.bordeaux-inp.fr/",
+              "verifiedAt": "2026-11-03",
+              "credit": "Bordeaux INP · official-source compact identity mark",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. Official guidance reserves proportions and integrity of the logo; no permission to separate the current lockup is asserted. The extracted graphic is a shared INP family symbol explicitly present in the current Bordeaux INP official logo, not claimed exclusive to Bordeaux. Policy: https://www.bordeaux-inp.fr/fr/communication",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "Bordeaux INP 官方独立图形标识",
+              "altEn": "Bordeaux INP complete official compact identity mark"
+            },
             "authorNames": [
               "Meghyn Bienvenu",
               "Diego Figueira",
@@ -1228,7 +1258,7 @@
                 "checkedAt": "2026-11-03"
               }
             ],
-            "note": "仅表示本篇论文署名，不推断现雇主。CNRS复用机构库已核验素材；其余机构仅文字，不制作徽标。"
+            "note": "论文署名证据保持不变；真实紧凑学校图形用于署名识别，来源及未取得另行许可的说明保留，不表示合作或背书。"
           },
           {
             "name": "LaBRI (UMR 5800)",

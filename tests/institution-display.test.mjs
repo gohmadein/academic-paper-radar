@@ -49,5 +49,5 @@ test('November3 daily additions retain compact symbols and honest name-only fall
   const i=registry.institutions.find(x=>x.id===id);assert.ok(i);assert.ok(institutionMarkVisible(i.logo,i.markType));assert.equal(i.displayScope,'paper-affiliation-only');
   assert.ok(institutionRow({visuals:{institutions:[{...i,name:i.officialName,institutionId:id}]}}).includes('<img'));
  }
- for(const id of ['pending-bordeaux-inp','pending-labri-umr-5800']){const i=registry.institutions.find(x=>x.id===id);assert.ok(i);assert.equal(i.logo,null);}
+ for(const id of ['pending-labri-umr-5800']){const i=registry.institutions.find(x=>x.id===id);assert.ok(i);assert.equal(i.logo,null);}
 });
