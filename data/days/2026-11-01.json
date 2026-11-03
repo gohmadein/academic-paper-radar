@@ -969,7 +969,22 @@
           },
           {
             "name": "The Hong Kong University of Science and Technology",
-            "logo": null,
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-d0d4111d3f272415.svg",
+              "sha256": "d0d4111d3f2724153f80e6828c2121e4d8a554af5c3128f7989b787d1ab4fe04",
+              "width": 236,
+              "height": 317,
+              "sourceUrl": "https://brand.hkust.edu.hk/sites/default/files/bm_folder/HKUST_Brand_guideline.pdf",
+              "evidenceUrl": "https://brand.hkust.edu.hk/",
+              "verifiedAt": "2026-11-03",
+              "credit": "The Hong Kong University of Science and Technology · official complete mark",
+              "rights": "Official institutional mark; trademark/copyright retained by its owner. Public-source verification is not a blanket reuse licence or separate permission. For factual non-commercial paper-affiliation identification only, not endorsement. Preserve the complete mark, its native colours, aspect ratio and clear space; review linked university guidance.",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "altZh": "香港科技大学官方蓝金校徽",
+              "altEn": "HKUST official blue and gold university emblem"
+            },
             "authorNames": [
               "Yunjie Jia",
               "Yang Gao"
@@ -981,9 +996,9 @@
                 "checkedAt": "2026-11-01"
               }
             ],
-            "note": "论文署名已核验；标识由机构库解析，未核验时仅文字展示。",
+            "note": "论文署名证据保持不变；真实紧凑机构图形用于署名识别，来源与未取得另行许可的说明见标识记录，不表示合作或背书。",
             "institutionType": "university",
-            "markType": "none",
+            "markType": "emblem",
             "institutionId": "pending-the-hong-kong-university-of-science-and-technology"
           }
         ],
@@ -1461,7 +1476,22 @@
         "institutions": [
           {
             "name": "Carnegie Mellon University",
-            "logo": null,
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-733bc43cbef4fab8.png",
+              "sha256": "733bc43cbef4fab8fccfe56d00370bc6e33cae865f961281bf740c91707b5657",
+              "width": 570,
+              "height": 615,
+              "sourceUrl": "https://live-cmu-brand.pantheonsite.io/sites/default/files/cmu-brand-files/inline-images/Router%20Grid%20Image%20%2889%29_0.png",
+              "evidenceUrl": "https://brand.cmu.edu/visual-identity/carnegie-mellon-trademarks/university-seal",
+              "verifiedAt": "2026-11-03",
+              "credit": "Carnegie Mellon University · official-source compact identity mark",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. CMU states specific third-party commercial and noncommercial uses need a licence and written approval. Seal guidance requests upright proportional use, a ring-width safe zone, and approval for lockups. No such licence/approval or full-size guideline compliance is asserted. Policy: https://www.cmu.edu/policies/administrative-and-governance/use-carnegie-mellon-trademarks.html",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "light",
+              "altZh": "Carnegie Mellon University 官方红色完整校徽，保留原白底",
+              "altEn": "Complete official red Carnegie Mellon University seal with its native white field"
+            },
             "authorNames": [
               "Pranjal Aggarwal",
               "Sean Welleck"
@@ -1473,9 +1503,9 @@
                 "checkedAt": "2026-11-01"
               }
             ],
-            "note": "机构库无现成记录；未核验可展示标识，仅显示机构名称。",
+            "note": "论文署名证据保持不变；真实紧凑机构图形用于署名识别，来源与未取得另行许可的说明见标识记录，不表示合作或背书。",
             "institutionType": "university",
-            "markType": "none",
+            "markType": "emblem",
             "institutionId": "pending-carnegie-mellon-university"
           }
         ],

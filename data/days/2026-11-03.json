@@ -759,7 +759,22 @@
           {
             "name": "Peking University",
             "institutionId": "pending-peking-university",
-            "logo": null,
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-b328ed3c9e579ec8.png",
+              "sha256": "b328ed3c9e579ec8c2031ad8a5b6c244994fba5d1e93cc98901d1fcc3c306bdb",
+              "width": 360,
+              "height": 360,
+              "sourceUrl": "https://vim.pku.edu.cn/docs/20240527144201516364.zip",
+              "evidenceUrl": "https://vim.pku.edu.cn/xzzq/",
+              "verifiedAt": "2026-11-03",
+              "credit": "Peking University official red circular seal",
+              "rights": "Institutional trademark and copyright remain with their owners. No separate permission obtained, no open licence or legal clearance claimed. Use solely as a small descriptive paper-affiliation thumbnail, not endorsement; preserve the complete mark, geometry and native colors. The official downloads page provides noncommercial-use application and commitment forms. Official basic-usage PDF gives a 7×7mm minimum for standalone mark use. No separate application or institutional permission was obtained. Policy: https://vim.pku.edu.cn/xzzq/",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "北京大学官方红色圆形校徽",
+              "altEn": "Peking University official red circular seal"
+            },
             "authorNames": [
               "Kefei Zhu",
               "Lingyun Xu",
@@ -778,9 +793,9 @@
                 "checkedAt": "2026-11-03"
               }
             ],
-            "note": "复用现有机构注册表身份与素材状态；未取得额外标识授权。",
+            "note": "论文署名证据保持不变；真实紧凑机构图形用于署名识别，来源与未取得另行许可的说明见标识记录，不表示合作或背书。",
             "institutionType": "university",
-            "markType": "none"
+            "markType": "emblem"
           }
         ],
         "authors": []
@@ -960,7 +975,22 @@
           {
             "name": "University of Chinese Academy of Sciences",
             "institutionId": "pending-university-of-chinese-academy-of-sciences",
-            "logo": null,
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-76133485b54c6190.png",
+              "sha256": "76133485b54c6190eaae6d061a7e0a1b2a67f3ba2a49c825824d1e033dc4db34",
+              "width": 298,
+              "height": 298,
+              "sourceUrl": "https://onestop.ucas.ac.cn/Content/Upload/2020/9/1.zip",
+              "evidenceUrl": "https://onestop.ucas.ac.cn/home/info/6b9e95dc-5785-4eee-b25f-1f884698cfc3",
+              "verifiedAt": "2026-11-03",
+              "credit": "University of Chinese Academy of Sciences · official-source compact identity mark",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. The UCAS identity page reserves copyright to CAS and UCAS and states approval is required except stated personal-study/classroom circumstances. No claim is made that this public bulletin falls within those exceptions. Policy: https://onestop.ucas.ac.cn/home/info/6b9e95dc-5785-4eee-b25f-1f884698cfc3",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "国科大官方标识包提供并用于校名组合的共享中科院院徽",
+              "altEn": "Shared CAS emblem explicitly supplied in the UCAS identity kit and used in UCAS lockups"
+            },
             "authorNames": [
               "Di Zhu",
               "Zhenghao Zhang"
@@ -972,9 +1002,9 @@
                 "checkedAt": "2026-11-03"
               }
             ],
-            "note": "复用现有机构注册表身份与素材状态；未取得额外标识授权。",
+            "note": "论文署名证据保持不变；真实紧凑机构图形用于署名识别，来源与未取得另行许可的说明见标识记录，不表示合作或背书。",
             "institutionType": "university",
-            "markType": "none"
+            "markType": "emblem"
           }
         ],
         "authors": []

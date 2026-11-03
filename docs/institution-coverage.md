@@ -226,3 +226,11 @@ Still unavailable: official HTML/PDF only names Jiaming Wang, no institutional b
 Self-Building Labs 的 Institute of Medical Science：论文列出的名称、房间、街道与邮编和 [Toronto 官方研究生院校历](https://sgs.calendar.utoronto.ca/degree/Medical-Science) 一致，合并到该论文已列出的 University of Toronto，不创建通用 IMS 名称的全局推断。旧无引用机构条目移除，论文 ID 不变。
 
 [机器可读核验快照](institution-coverage.json)；所有用户个人事项、书签、已读和笔记均不在本报告中。
+
+## 11月3日高频大学标识增量（15所）
+
+按已收录论文中的出现频次补齐15个既有大学条目，不代表QS排名核验或全部QS院校覆盖。新增ETH、NUS、UCAS、CMU、Berkeley、Tokyo、Stanford、HKUST、SJTU、HKU、NTU、北航、天津大学、北京大学及CentraleSupélec的真实紧凑图形，机构名称和作者独立保留。
+
+UCAS使用其官方身份套件明确供应的共享CAS徽章，不称校方独有；天津大学采用经官方图形说明核对的存档镜像，不声称与当前不可读原站文件逐字节相同。透明素材优先，CMU、北航、天津大学的原生浅色底保留。完整矢量图形的提取逐项记录原路径、颜色和来源；未AI重绘。来源核验不表示已取得另行许可，也不声称40×32署名缩略图满足各学校原品牌指南的最小尺寸。新图仅用于具体论文署名识别，图库保留名称。
+
+当前262个机构中126项有已核验来源素材，117项可显示紧凑图形，9项仅有完整字标来源，136项尚无已采用素材。每项原图、证据、派生和使用边界见[本批核验记录](university-marks-batch-2026-11-03.json)。
