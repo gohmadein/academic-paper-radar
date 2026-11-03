@@ -7,6 +7,7 @@ import {root,validateAll} from './validate.mjs';
 import {normalizePapers,aliasesFor} from './identity.mjs';
 import {uniqueAssets,readAsset} from './media-assets.mjs';
 import {reuseInstitutions} from '../lib/institutions.js';
+import {validateXunSelection} from '../lib/xun-selection.js';
 import {reusePaperGeography,validateVerifiedGeography} from '../lib/geography-validation.js';
 const json=value=>JSON.stringify(value,null,2)+'\n';
 
@@ -38,7 +39,7 @@ export async function prepareDigest(input,base=root){
   try{rules=JSON.parse(await readFile(join(base,'config/digest-rules.json'),'utf8'));}catch(error){if(error.code!=='ENOENT')throw error;}
   const normalizedTitle=value=>value.toLowerCase().replace(/[^a-z0-9]/g,'');
   for(const p of day.papers)if(p.novelty!=='major-update'&&rules?.profiles.li.alreadyReadSeeds.some(title=>normalizedTitle(p.titleEn).includes(normalizedTitle(title))))throw new Error(`${p.id}: 已读种子不得作为普通新推荐`);
-  const errors=validateDay(day);if(errors.length)throw new Error(errors.join('\n'));
+  const errors=[...validateDay(day),...validateXunSelection(day,rules)];if(errors.length)throw new Error(errors.join('\n'));
   for(const record of registry.papers)record.appearances=record.appearances.filter(a=>a.date!==day.date);
   for(const p of day.papers){
     let entry=registry.papers.find(r=>r.id===p.id);
