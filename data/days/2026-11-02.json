@@ -637,7 +637,22 @@
         "institutions": [
           {
             "name": "Stony Brook University",
-            "logo": null,
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-e595879aafea17be.svg",
+              "sha256": "e595879aafea17beb72fee6e21f6af77e49676004abac66514e4a8c086d4581a",
+              "width": 560,
+              "height": 580,
+              "sourceUrl": "https://www.stonybrookmedicine.edu/sites/default/files/style.pdf",
+              "evidenceUrl": "https://www.stonybrook.edu/marcom/design-visual-identity/logos.html",
+              "verifiedAt": "2026-11-03",
+              "credit": "Stony Brook University · official-source compact identity mark",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. Current logo guidance prohibits separating shield and wordmark except rare pre-approved cases. No separation approval is claimed. Official source is a legacy 2012 identity guide; its shield-with-rays-and-star design is the version identified in current university logo history. Policy: https://www.stonybrook.edu/marcom/design-visual-identity/logos.html",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "Stony Brook University 官方完整独立图形标识",
+              "altEn": "Stony Brook University complete official compact identity mark"
+            },
             "authorNames": [
               "Lav R. Varshney"
             ],
@@ -648,9 +663,9 @@
                 "checkedAt": "2026-11-02"
               }
             ],
-            "note": "仅据本篇署名识别机构，不表示背书。暂无已核验可展示标识，仅显示机构名称。",
+            "note": "论文署名证据保持不变；真实紧凑学校图形用于署名识别，来源及未取得另行许可的说明保留，不表示合作或背书。",
             "institutionType": "university",
-            "markType": "none",
+            "markType": "emblem",
             "institutionId": "pending-stony-brook-university"
           }
         ],
@@ -1065,7 +1080,22 @@
           },
           {
             "name": "University of Illinois Chicago",
-            "logo": null,
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-9e43e094514a6159.png",
+              "sha256": "9e43e094514a6159a0a1f1952c750842a43fdcbb72c2e268e79db38021f78656",
+              "width": 196,
+              "height": 196,
+              "sourceUrl": "https://brand.uic.edu/favicon-196x196.png",
+              "evidenceUrl": "https://brand.uic.edu/visual-identity/logos/",
+              "verifiedAt": "2026-11-03",
+              "credit": "University of Illinois Chicago · source-verified institutional symbol",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. UIC trademarks are subject to university permission and licensing conditions. Current guidance favors the formal lockup externally and circle mark for internal audiences; no external-use exception or permission is claimed. Policy: https://brand.uic.edu/resources/trademarks-and-licensing/",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "University of Illinois Chicago 完整校徽或图形标志",
+              "altEn": "Complete institutional symbol of University of Illinois Chicago"
+            },
             "authorNames": [
               "Stavros Sintos"
             ],
@@ -1076,9 +1106,9 @@
                 "checkedAt": "2026-11-02"
               }
             ],
-            "note": "仅表示论文发表时的署名关系；未新增未经核验的机构标志。",
+            "note": "论文署名证据保持不变；真实紧凑学校图形用于署名识别，来源及未取得另行许可的说明保留，不表示合作或背书。",
             "institutionType": "university",
-            "markType": "none",
+            "markType": "compact-symbol",
             "institutionId": "pending-university-of-illinois-chicago"
           }
         ],
@@ -1389,7 +1419,22 @@
         "institutions": [
           {
             "name": "Columbia University",
-            "logo": null,
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-bbf6fc9a4147a36a.svg",
+              "sha256": "bbf6fc9a4147a36a061aa1468c0fe7bb0fc7afc30e36e7da67dbeaa2afe672ba",
+              "width": 480,
+              "height": 420,
+              "sourceUrl": "https://sps.columbia.edu/sites/default/files/2021-04/eps_-_vectors.zip",
+              "evidenceUrl": "https://sps.columbia.edu/visual-identity/logos",
+              "verifiedAt": "2026-11-03",
+              "credit": "Columbia University · source-verified institutional symbol",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. Columbia favicon guidance directs external users to request permission. No permission is claimed; use preserves native blue source color and complete modern cross crown. Policy: https://visualidentity.columbia.edu/content/favicons",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "Columbia University 完整校徽或图形标志",
+              "altEn": "Complete institutional symbol of Columbia University"
+            },
             "authorNames": [
               "Cheng Chi",
               "Zhenjia Xu",
@@ -1402,9 +1447,9 @@
                 "checkedAt": "2026-11-02"
               }
             ],
-            "note": "已查机构库，无已核验可复用标识；仅显示机构文字名称，不推断现任雇主。",
+            "note": "论文署名证据保持不变；真实紧凑学校图形用于署名识别，来源及未取得另行许可的说明保留，不表示合作或背书。",
             "institutionType": "university",
-            "markType": "none",
+            "markType": "emblem",
             "institutionId": "pending-columbia-university"
           },
           {

@@ -312,8 +312,23 @@
             "name": "TU Darmstadt",
             "institutionId": "pending-tu-darmstadt",
             "institutionType": "university",
-            "markType": "none",
-            "logo": null,
+            "markType": "emblem",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-0b11ff36f08c2409.svg",
+              "sha256": "0b11ff36f08c2409efe9f464bd8b34cbc9ce4a1234d2bbdae35931e4767648b5",
+              "width": 680,
+              "height": 810,
+              "sourceUrl": "https://www.tu-darmstadt.de/media/resources/images_1/tu_logo_web_h120.svg",
+              "evidenceUrl": "https://www.tu-darmstadt.de/",
+              "verifiedAt": "2026-11-03",
+              "credit": "TU Darmstadt · source-verified institutional symbol",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. Official brand rules require the combined Athena head, three-line wordmark and protection zone. This isolated symbol is source-verified but not claimed to satisfy those lockup rules or have independent-use permission. Policy: https://www.intern.tu-darmstadt.de/arbeitsmittel/corporate_design_vorlagen/",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "TU Darmstadt 完整校徽或图形标志",
+              "altEn": "Complete institutional symbol of TU Darmstadt"
+            },
             "authorNames": [
               "Daniel Palenicek",
               "Jan Peters"
@@ -325,7 +340,7 @@
                 "checkedAt": "2026-11-03"
               }
             ],
-            "note": "已核验论文署名；官方标志只复用现有机构注册表，不以其他组织替代。"
+            "note": "论文署名证据保持不变；真实紧凑学校图形用于署名识别，来源及未取得另行许可的说明保留，不表示合作或背书。"
           },
           {
             "name": "hessian.AI",

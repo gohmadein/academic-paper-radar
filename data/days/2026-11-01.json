@@ -360,7 +360,22 @@
           },
           {
             "name": "University of Bologna",
-            "logo": null,
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-b5d4127c373972cf.svg",
+              "sha256": "b5d4127c373972cf4517e4ab18b6152f875a25478178654a800e8031d9b3d46b",
+              "width": 800,
+              "height": 800,
+              "sourceUrl": "https://www.unibo.it/it/allegati/SistemaIdentitUniversitBologna.pdf/%40%40download/file/Sistema%20di%20identita%20di%20Ateneo.pdf",
+              "evidenceUrl": "https://www.unibo.it/it/allegati/SistemaIdentitUniversitBologna.pdf/%40%40download/file/Sistema%20di%20identita%20di%20Ateneo.pdf",
+              "verifiedAt": "2026-11-03",
+              "credit": "University of Bologna · official-source compact identity mark",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. University mark regulation Article 6 calls for third-party authorization. The identity guide permits seal-only on university social profiles as a specific exception, not a general external-use licence; no permission claimed. Policy: https://normateneo.unibo.it/regolamento-per-l2019uso-del-marchio-alma-mater-studiorum-2013-universita-di-bologna-1/@@download/testo_integrato/Regolamento%20marchio.pdf",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "University of Bologna 官方完整独立图形标识",
+              "altEn": "University of Bologna complete official compact identity mark"
+            },
             "authorNames": [
               "Alessio Caporali",
               "Gianluca Palli"
@@ -372,9 +387,9 @@
                 "checkedAt": "2026-11-01"
               }
             ],
-            "note": "论文署名已核验；标识由机构库解析，未核验时仅文字展示。",
+            "note": "论文署名证据保持不变；真实紧凑学校图形用于署名识别，来源及未取得另行许可的说明保留，不表示合作或背书。",
             "institutionType": "university",
-            "markType": "none",
+            "markType": "emblem",
             "institutionId": "pending-university-of-bologna"
           },
           {
@@ -1191,7 +1206,22 @@
           },
           {
             "name": "University of Massachusetts Amherst",
-            "logo": null,
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-8d8b811d03f03456.png",
+              "sha256": "8d8b811d03f0345626ac726f8e07000d39dfe998355236c3e79adf8c1bb016cc",
+              "width": 1070,
+              "height": 1026,
+              "sourceUrl": "https://www.amherstindy.org/wp-content/uploads/2023/03/Screen-Shot-2023-03-31-at-1.41.33-PM.png",
+              "evidenceUrl": "https://www.umass.edu/news/article/new-university-seal-and-brand-mark-unveiled-umass-amherst-providing-distinctive",
+              "verifiedAt": "2026-11-03",
+              "credit": "University of Massachusetts Amherst · source-verified institutional symbol",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. Current guidance reserves the seal for formal applications and requires Marcom approval. No approval, editorial exception or legal clearance is claimed. The separate Collegiate M candidate could not be acquired from accessible official asset endpoints. Policy: https://www.umass.edu/brand/visual-identity/marks-and-seal/official-marks-seal",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "light",
+              "altZh": "University of Massachusetts Amherst 完整校徽或图形标志",
+              "altEn": "Complete institutional symbol of University of Massachusetts Amherst"
+            },
             "authorNames": [
               "Neha Makhija"
             ],
@@ -1202,9 +1232,9 @@
                 "checkedAt": "2026-11-01"
               }
             ],
-            "note": "机构库尚无已核验标识；仅文字名称，不推断现雇主。",
+            "note": "论文署名证据保持不变；真实紧凑学校图形用于署名识别，来源及未取得另行许可的说明保留，不表示合作或背书。",
             "institutionType": "university",
-            "markType": "none",
+            "markType": "emblem",
             "institutionId": "pending-university-of-massachusetts-amherst"
           }
         ],
@@ -1672,7 +1702,22 @@
         "institutions": [
           {
             "name": "Vilnius University",
-            "logo": null,
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-5d5324dee44fbb0f.svg",
+              "sha256": "5d5324dee44fbb0f42dba0512b2f03a19c04dfee31e68259019f99bb4b37ae3f",
+              "width": 360,
+              "height": 400,
+              "sourceUrl": "https://www.vu.lt/en/",
+              "evidenceUrl": "https://www.vu.lt/stiliaus-knyga",
+              "verifiedAt": "2026-11-03",
+              "credit": "Vilnius University · official-source compact identity mark",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. Official name/mark rules describe written application and agreement processes. No institutional permission or brand-compliance approval asserted. Policy: https://www.vu.lt/site_files/Vardo_ir_%C5%BEenklo_suteikimo_ir_naudojimo_taisykl%C4%97s.pdf",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "Vilnius University 官方完整图形标识",
+              "altEn": "Complete official compact mark of Vilnius University"
+            },
             "authorNames": [
               "Kyrylo Kolesnichenko"
             ],
@@ -1683,9 +1728,9 @@
                 "checkedAt": "2026-11-01"
               }
             ],
-            "note": "机构库无现成记录；未核验可展示标识，仅显示机构名称。",
+            "note": "论文署名证据保持不变；真实紧凑学校图形用于署名识别，来源及未取得另行许可的说明保留，不表示合作或背书。",
             "institutionType": "university",
-            "markType": "none",
+            "markType": "emblem",
             "institutionId": "pending-vilnius-university"
           },
           {
