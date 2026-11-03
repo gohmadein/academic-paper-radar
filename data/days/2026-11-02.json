@@ -155,19 +155,19 @@
             "name": "Johns Hopkins University",
             "logo": {
               "kind": "institution-logo",
-              "path": "assets/institutions/jhu-official-logo.bc14a29b5524.png",
-              "sha256": "bc14a29b552443e2c3247833276e5e71ab2adeae8ab7cc6e9f2ba80f1094c369",
-              "width": 908,
-              "height": 172,
-              "sourceUrl": "https://universitycommunications.jhu.edu/assets/themes/generic/src/assets/images/logos/university-logo-small-horizontal-black-no-clear-space.png",
+              "path": "assets/institutions/jhu-shield.50edef99bdaf.svg",
+              "sha256": "50edef99bdafc26e7130a4ea368e994c15eb01e1a515b156328dd5aa0ba29d9b",
+              "width": 4025,
+              "height": 4302,
+              "sourceUrl": "https://universitycommunications.jhu.edu/assets/themes/generic/src/assets/images/logos/university-logo-small-horizontal-black-no-clear-space.svg",
               "evidenceUrl": "https://universitycommunications.jhu.edu/",
               "verifiedAt": "2026-11-02",
-              "credit": "Johns Hopkins University official University Communications website, complete original black horizontal logo",
-              "rights": "Official source and identity verified, not permission-cleared. Copyright and trademark remain with Johns Hopkins University. The published Use of Name guidelines request prior written approval for third-party uses; no separate institutional permission has been obtained or represented. Displayed solely to identify the evidenced paper affiliation, not endorsement, partnership, site branding or advertising. Original policy: https://brand.jhu.edu/resources/use-of-name/",
+              "credit": "Johns Hopkins University · shield",
+              "rights": "Official source and identity verified, not permission-cleared. Copyright and trademark remain with Johns Hopkins University. The published Use of Name guidelines request prior written approval for third-party uses; no separate institutional permission has been obtained or represented. Displayed solely to identify the evidenced paper affiliation, not endorsement, partnership, site branding or advertising. Original policy: https://brand.jhu.edu/resources/use-of-name/ Compact editorial thumbnail. Preserved all 29 shield path/polygon element source strings byte-for-byte (source child indexes 11 through 39 inclusive); removed wordmark paths; viewBox changed to 0 0 40.25 43.02. No path geometry or color changes. Original full SVG retained /workspace/shared/jhu-logo-public/jhu-official-black.svg. Not claimed as an official standalone shield download. Original guidance remains source context; no claim of satisfying full-wordmark minimum dimensions.",
               "displayPolicy": "attributed-thumbnail",
               "background": "transparent",
-              "altZh": "约翰斯·霍普金斯大学官方完整黑色标识（原生透明）",
-              "altEn": "Johns Hopkins University official complete black horizontal logo, native transparency"
+              "altZh": "Johns Hopkins University 完整盾徽",
+              "altEn": "Johns Hopkins University complete shield"
             },
             "authorNames": [
               "Jixian Liu",
@@ -180,28 +180,28 @@
                 "checkedAt": "2026-11-02"
               }
             ],
-            "note": "本篇论文署名已核验；展示JHU官方完整原图用于机构识别，不表示合作或背书。未取得学校另行书面许可，官方使用条款保留在素材来源说明中。",
+            "note": "论文署名单位已核验。紧凑完整盾徽用于机构识别，名称独立显示；官方素材来源与未取得另行书面许可的事实保留。盾徽从官方完整SVG提取，29个原路径/多边形不变，仅移除独立字标并调整viewBox，不冒称官方独立下载。",
             "institutionType": "university",
-            "markType": "wordmark",
+            "markType": "emblem",
             "institutionId": "pending-johns-hopkins-university"
           },
           {
             "name": "Washington University in St. Louis",
             "logo": {
               "kind": "institution-logo",
-              "path": "assets/institutions/washu-official-logo.e2f15e54ce8b.jpg",
-              "sha256": "e2f15e54ce8b6d0c2b73e3de6818ab86785ea37adc74599d129b821ca3a2b7cb",
-              "width": 950,
-              "height": 230,
-              "sourceUrl": "https://marcomm.washu.edu/app/uploads/2024/02/WashU-RGB.jpg",
-              "evidenceUrl": "https://marcomm.washu.edu/washu-logo/",
+              "path": "assets/institutions/washu-shield.f8363e7ca542.svg",
+              "sha256": "f8363e7ca5422824aef5e59479003b6f5dd507fb569da031d14dd1b086b2463d",
+              "width": 512,
+              "height": 512,
+              "sourceUrl": "https://marcomm.washu.edu/app/themes/antipasto/assets/img/favicon/safari-pinned-tab.svg",
+              "evidenceUrl": "https://marcomm.washu.edu/university-shield-seal/",
               "verifiedAt": "2026-11-02",
-              "credit": "Washington University in St. Louis official University Marketing & Communications logo image",
-              "rights": "Official source and identity verified, not permission-cleared. Copyright and trademark remain with Washington University in St. Louis. The published university policy requests written authorization for third-party and not-for-profit uses; no separate institutional permission has been obtained or represented. Displayed solely to identify the evidenced paper affiliation, not endorsement, partnership, site branding or advertising. Original policy: https://policies.washu.edu/policies/permission-to-use-university-names-logos-and-trademarks/",
+              "credit": "Washington University in St. Louis · shield",
+              "rights": "Official source and identity verified, not permission-cleared. Copyright and trademark remain with Washington University in St. Louis. The published university policy requests written authorization for third-party and not-for-profit uses; no separate institutional permission has been obtained or represented. Displayed solely to identify the evidenced paper affiliation, not endorsement, partnership, site branding or advertising. Original policy: https://policies.washu.edu/policies/permission-to-use-university-names-logos-and-trademarks/ Compact editorial thumbnail. Original public standalone pinned-tab SVG downloaded unchanged. Source includes its own potrace metadata; no tracing or AI performed by us. Original guidance remains source context; no claim of satisfying full-wordmark minimum dimensions.",
               "displayPolicy": "attributed-thumbnail",
-              "background": "light",
-              "altZh": "圣路易斯华盛顿大学官方完整WashU标识（原生白底）",
-              "altEn": "Washington University in St. Louis official complete WashU logo, original white background"
+              "background": "transparent",
+              "altZh": "Washington University in St. Louis 完整盾徽",
+              "altEn": "Washington University in St. Louis complete shield"
             },
             "authorNames": [
               "Ihab Tabbara",
@@ -214,9 +214,9 @@
                 "checkedAt": "2026-11-02"
               }
             ],
-            "note": "本篇论文署名已核验；展示WashU官方完整原图用于机构识别，不表示合作或背书。未取得学校另行书面许可，官方使用条款保留在素材来源说明中。",
+            "note": "论文署名单位已核验。紧凑完整盾徽用于机构识别，名称独立显示；官方素材来源与未取得另行书面许可的事实保留。使用官方独立盾徽原SVG，未重绘。",
             "institutionType": "university",
-            "markType": "wordmark",
+            "markType": "emblem",
             "institutionId": "pending-washington-university-in-st-louis"
           }
         ],

@@ -624,19 +624,19 @@
             "name": "Arizona State University",
             "logo": {
               "kind": "institution-logo",
-              "path": "assets/institutions/asu-vertical.png",
-              "sha256": "eed5fb0279cfad95f2b0b89011cc8646569abf1b098e54563f085b238ba751b4",
-              "width": 303,
-              "height": 234,
-              "sourceUrl": "https://www.asu.edu/profiles/contrib/webspark/modules/asu_brand/dist/assets/img/arizona-state-university-logo-vertical.png",
+              "path": "assets/institutions/compact-f08035be10571f00.png",
+              "sha256": "f08035be10571f00788b13996e19df279fe8cb1ef3f74fd4c963c7fc184fb105",
+              "width": 48,
+              "height": 48,
+              "sourceUrl": "https://www.asu.edu/themes/custom/asu_edu/favicon.ico",
               "evidenceUrl": "https://www.asu.edu/",
-              "verifiedAt": "2026-10-31",
-              "credit": "Arizona State University · official vertical mark",
-              "rights": "Official institutional mark; trademark/copyright retained by Arizona State University. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve the complete mark, aspect ratio and clear space. Display at least 48 CSS pixels wide.",
-              "displayPolicy": "official-brand",
-              "background": "transparent",
-              "altZh": "Arizona State University 官方完整竖版标志",
-              "altEn": "Official Arizona State University complete vertical mark"
+              "verifiedAt": "2026-11-02",
+              "credit": "Arizona State University · official-source compact symbol",
+              "rights": "ASU trademarks/copyright retained by owner. Official policy requires external users to contact Trademark Licensing and copyright page says reproduction requires permission. Source verification is not licensing authorization; no permission obtained or claimed. Preserve complete mark and native colors. No SVG fabrication; native PNG decoded from official ICO. Exact 48x48 largest native ICO frame losslessly decoded to PNG. Genuine official ASU sunburst monogram on native white square, full symbol retained. No cropping, recoloring or alpha removal. Official homepage directly references favicon source. Transparent source remains unverified. Compact40×32px editorial thumbnail; source identity verification is not a grant of institutional permission, and historical full-logo size guidance is not claimed satisfied.",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "light",
+              "altZh": "Arizona State University 官方来源紧凑图形",
+              "altEn": "Arizona State University official-source compact symbol"
             },
             "authorNames": [
               "Angelia Nedić"
@@ -648,7 +648,7 @@
                 "checkedAt": "2026-10-31"
               }
             ],
-            "note": "作者栏明确列出 Angelia Nedić 在 ASU 电气、计算机与能源工程学院。采用 ASU 官网发布的完整竖版官方标志，保留原始透明背景和比例；仅用于识别论文署名机构，不代表背书。",
+            "note": "机构署名证据不变；紧凑图形来源已核验，名称独立显示。不代表机构授权、合作或背书。Exact 48x48 largest native ICO frame losslessly decoded to PNG. Genuine official ASU sunburst monogram on native white square, full symbol retained. No cropping, recoloring or alpha removal. Official homepage directly references favicon source. Transparent source remains unverified.  原生不透明底色保留，不称为透明。",
             "institutionType": "university",
             "markType": "compact-symbol",
             "institutionId": "arizona-state"
@@ -776,19 +776,19 @@
             "name": "Amazon Frontier AI & Robotics (FAR)",
             "logo": {
               "kind": "institution-logo",
-              "path": "assets/institutions/amazon-parent.png",
-              "sha256": "5d26b516f9cf43e65c114ea65369c6fb209e4528678ad7c1d7d67623cbd3efab",
-              "width": 6110,
-              "height": 2047,
-              "sourceUrl": "https://assets.aboutamazon.com/2e/d7/ac71f1f344c39f8949f48fc89e71/amazon-logo-squid-ink-smile-orange.png",
+              "path": "assets/institutions/compact-44b973ee7af929f1.png",
+              "sha256": "44b973ee7af929f1fe2ea34da34f087e4929eae723ed06a38759b72b1feb3e92",
+              "width": 180,
+              "height": 180,
+              "sourceUrl": "https://press.aboutamazon.com/apple-touch-icon.png",
               "evidenceUrl": "https://press.aboutamazon.com/logos",
-              "verifiedAt": "2026-10-31",
-              "credit": "Amazon 母公司官方标志，非FAR专属标志",
-              "rights": "Amazon官方母公司商标，保留原色及完整比例；无开放复用许可声明，仅作团队所属关系的描述，不表示背书。",
-              "displayPolicy": "official-brand",
-              "background": "transparent",
-              "altZh": "Amazon 母公司官方标志，非FAR专属标志",
-              "altEn": "Official Amazon parent-company mark, not a FAR-specific logo"
+              "verifiedAt": "2026-11-02",
+              "credit": "Amazon Frontier AI & Robotics (FAR) · official-source compact symbol",
+              "rights": "Institutional trademark and copyright remain with owner. Official source verification is not licensing assurance or permission. No open license or endorsement asserted. Use solely for factual paper affiliation identification; preserve original identity, colors and clearspace. Exact official press-site touch icon; white smile on native navy tile. Parent Amazon identity only, not FAR-specific. Needs verified transparent standalone source. Compact40×32px editorial thumbnail; source identity verification is not a grant of institutional permission, and historical full-logo size guidance is not claimed satisfied.",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "light",
+              "altZh": "Amazon Frontier AI & Robotics (FAR) 官方来源紧凑图形",
+              "altEn": "Amazon Frontier AI & Robotics (FAR) official-source compact symbol"
             },
             "authorNames": [
               "Botao He",
@@ -809,7 +809,7 @@
                 "checkedAt": "2026-10-31"
               }
             ],
-            "note": "Amazon FAR是Amazon团队；此处使用官方Amazon母公司透明标志，不声称是FAR专属Logo。具体署名仍以本篇论文为准，不据当前雇主推断。",
+            "note": "机构署名证据不变；紧凑图形来源已核验，名称独立显示。不代表机构授权、合作或背书。Exact official press-site touch icon; white smile on native navy tile. Parent Amazon identity only, not FAR-specific. Needs verified transparent standalone source. 原生不透明底色保留，不称为透明。",
             "institutionType": "company",
             "markType": "organization-mark",
             "institutionId": "amazon-far"
@@ -991,19 +991,19 @@
             "name": "Mila – Quebec AI Institute",
             "logo": {
               "kind": "institution-logo",
-              "path": "assets/institutions/mila.svg",
-              "sha256": "89fc4145ed3b739c3eaf8b05753835a4653aec706129dce9df268611824dd007",
-              "width": 170,
-              "height": 50,
+              "path": "assets/institutions/compact-6e45d992ad3aef80.svg",
+              "sha256": "6e45d992ad3aef8089fd01a1531fc5409702267b5edbe64bde551510039d7249",
+              "width": 524,
+              "height": 521,
               "sourceUrl": "https://mila.quebec/sites/default/themes/mila_v1/logo.svg",
               "evidenceUrl": "https://mila.quebec/en",
-              "verifiedAt": "2026-10-31",
-              "credit": "Mila – Quebec AI Institute · official mark",
-              "rights": "Official institutional mark; trademark/copyright retained by its owner. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve aspect ratio, complete mark and clear space.",
-              "displayPolicy": "official-brand",
+              "verifiedAt": "2026-11-02",
+              "credit": "Mila – Quebec AI Institute · official-source compact symbol",
+              "rights": "Institutional trademark and copyright remain with owner. Official source verification is not licensing assurance or permission. No open license or endorsement asserted. Use solely for factual paper affiliation identification; preserve original identity, colors and clearspace. Exact independent network symbol comprising Path 5 through Path 45 of official SVG; paths, fill #662e7d, geometry unchanged. Paths 1–4 are wordmark letters and omitted; new viewBox -1 -1 52.4 52.1 adds whitespace only. Official touch icon independently corroborates standalone symbol. Compact40×32px editorial thumbnail; source identity verification is not a grant of institutional permission, and historical full-logo size guidance is not claimed satisfied.",
+              "displayPolicy": "attributed-thumbnail",
               "background": "transparent",
-              "altZh": "Mila – Quebec AI Institute 官方标志",
-              "altEn": "Official mark of Mila – Quebec AI Institute"
+              "altZh": "Mila – Quebec AI Institute 官方来源紧凑图形",
+              "altEn": "Mila – Quebec AI Institute official-source compact symbol"
             },
             "authorNames": [
               "Baptiste Bonin",
@@ -1017,7 +1017,7 @@
                 "checkedAt": "2026-10-31"
               }
             ],
-            "note": "论文作者栏列出的署名机构；标志仅作身份说明，不代表背书。",
+            "note": "机构署名证据不变；紧凑图形来源已核验，名称独立显示。不代表机构授权、合作或背书。Exact independent network symbol comprising Path 5 through Path 45 of official SVG; paths, fill #662e7d, geometry unchanged. Paths 1–4 are wordmark letters and omitted; new viewBox -1 -1 52.4 52.1 adds whitespace only. Official touch icon independently corroborates standalone symbol.",
             "institutionType": "research-institute",
             "markType": "organization-mark",
             "institutionId": "mila"
@@ -1026,19 +1026,19 @@
             "name": "CIFAR AI Chair",
             "logo": {
               "kind": "institution-logo",
-              "path": "assets/institutions/cifar.svg",
-              "sha256": "b22a2f3178ac2db4973ecfdd0029df70c707f25f962ef7392766fe9ca857d114",
-              "width": 140,
-              "height": 45,
-              "sourceUrl": "https://cifar.ca/wp-content/bb-icons/icon-brand/images/logo.svg",
+              "path": "assets/institutions/compact-301be0a70209813e.png",
+              "sha256": "301be0a70209813edbdad215868035e21df52559d59bc8613933593cf84a6fef",
+              "width": 180,
+              "height": 180,
+              "sourceUrl": "https://cifar.ca/apple-touch-icon.png",
               "evidenceUrl": "https://cifar.ca/",
-              "verifiedAt": "2026-10-31",
-              "credit": "CIFAR AI Chair · official mark",
-              "rights": "Official institutional mark; trademark/copyright retained by its owner. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve aspect ratio, complete mark and clear space.",
-              "displayPolicy": "official-brand",
-              "background": "transparent",
-              "altZh": "CIFAR AI Chair 官方标志",
-              "altEn": "Official mark of CIFAR AI Chair"
+              "verifiedAt": "2026-11-02",
+              "credit": "CIFAR AI Chair · official-source compact symbol",
+              "rights": "Institutional trademark and copyright remain with owner. Official source verification is not licensing assurance or permission. No open license or endorsement asserted. Use solely for factual paper affiliation identification; preserve original identity, colors and clearspace. Exact official homepage touch icon: white C on native red square. Not invented initials; verified official compact identity, but not transparent. Compact40×32px editorial thumbnail; source identity verification is not a grant of institutional permission, and historical full-logo size guidance is not claimed satisfied.",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "light",
+              "altZh": "CIFAR AI Chair 官方来源紧凑图形",
+              "altEn": "CIFAR AI Chair official-source compact symbol"
             },
             "authorNames": [
               "Audrey Durand"
@@ -1050,7 +1050,7 @@
                 "checkedAt": "2026-10-31"
               }
             ],
-            "note": "Audrey Durand另外列出CIFAR AI Chair；这是讲席身份，不推断为雇主。",
+            "note": "机构署名证据不变；紧凑图形来源已核验，名称独立显示。不代表机构授权、合作或背书。Exact official homepage touch icon: white C on native red square. Not invented initials; verified official compact identity, but not transparent. 原生不透明底色保留，不称为透明。",
             "institutionType": "chair",
             "markType": "organization-mark",
             "institutionId": "cifar-ai-chair"

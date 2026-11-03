@@ -168,7 +168,7 @@
               "evidenceUrl": "https://cdn.uw.edu/wp-content/uploads/sites/65/2023/06/22155930/Revised-Policies-Jun23-APPROVED-MG.pdf",
               "verifiedAt": "2026-11-02",
               "credit": "University of Washington official purple Block W with registration mark",
-              "rights": "University of Washington trademark retained. Official June 2023 policy IV(c) permits informational publications only to the extent necessary. This small, unaltered mark identifies a paper-evidenced UW affiliation only; it is not site branding, sponsorship, co-branding, advertising, decoration or a blanket noncommercial licence. The publication uses a plain white clear field, at least one serif-height clearance, original purple colour and registration mark, and displayed width above the 18px web minimum. Gallery placement is excluded.",
+              "rights": "University of Washington trademark retained. Official June 2023 policy IV(c) permits informational publications only to the extent necessary. This small, unaltered mark identifies a paper-evidenced UW affiliation only; it is not site branding, sponsorship, co-branding, advertising, decoration or a blanket noncommercial licence. Original guidance recommends a plain white clear field, serif-height clearance and18px minimum. Current user-requested40×32px compact thumbnail retains original purple colour and registration mark; it does not assert compliance with the previous60×44px reviewed clear-field layout. Gallery placement is excluded.",
               "displayPolicy": "official-brand",
               "background": "transparent",
               "altZh": "华盛顿大学官方紫色W标识",
@@ -192,7 +192,7 @@
                 "checkedAt": "2026-11-01"
               }
             ],
-            "note": "论文署名已核验；UW标识仅用于此论文署名单位的信息说明，遵循官方政策IV(c)限定范围，不表示合作或背书。",
+            "note": "依据官方2023年商标政策IV(c)的信息性出版物限定用途，仅识别具体论文中已核实的UW署名单位；不表示UW对本站的许可、合作或背书。图形不用于站点品牌、装饰或标识画廊。",
             "institutionType": "university",
             "markType": "compact-symbol",
             "institutionId": "pending-university-of-washington"
@@ -327,19 +327,19 @@
             "name": "University of Zaragoza",
             "logo": {
               "kind": "institution-logo",
-              "path": "assets/institutions/university-of-zaragoza-full.svg",
-              "sha256": "cb005d1bbfe7990924d3958db69c7731aab3d7e7d104d3901cadbb6b36db6827",
-              "width": 399,
-              "height": 112,
+              "path": "assets/institutions/compact-49b5a23c11c7e699.svg",
+              "sha256": "49b5a23c11c7e699c6c5ee0dcf84fae935a01b8992299832e286486dcd8adde5",
+              "width": 785,
+              "height": 1141,
               "sourceUrl": "https://gic.unizar.es/sites/gic/files/logosuz/logo_uz.zip",
               "evidenceUrl": "https://gic.unizar.es/identidad-corporativa/logotipo-de-la-universidad-de-zaragoza",
               "verifiedAt": "2026-11-02",
-              "credit": "University of Zaragoza official identity asset",
-              "rights": "Copyright and trademarks retained by institution. Exact official mark for factual paper-affiliation identification only, not endorsement. No open license asserted. Preserve complete geometry, colours and clear space. Official current complete academic/administrative/social-use logo from public ZIP, not ceremonial historical seal. SVG unchanged from official package.",
-              "displayPolicy": "official-brand",
+              "credit": "University of Zaragoza · official-source compact symbol",
+              "rights": "Institutional trademark and copyright remain with owner. Official source verification is not licensing assurance or permission. No open license or endorsement asserted. Use solely for factual paper affiliation identification; preserve original identity, colors and clearspace. Exact standalone building plus 1474 symbol nodes from official logo_uz.zip SVG. Retained defs and all complete path/polygon nodes whose geometric x-extent is under100; omitted separate right wordmark nodes. Original paths/colors unchanged. viewBox -1 -1 78.5 114.1 encloses entire 0..76.5 by0..112.1 symbol with whitespace. Official favicon independently corroborates same compact symbol. Not historical ceremonial seal. Compact40×32px editorial thumbnail; source identity verification is not a grant of institutional permission, and historical full-logo size guidance is not claimed satisfied.",
+              "displayPolicy": "attributed-thumbnail",
               "background": "transparent",
-              "altZh": "University of Zaragoza 官方完整标识",
-              "altEn": "University of Zaragoza official complete mark"
+              "altZh": "University of Zaragoza 官方来源紧凑图形",
+              "altEn": "University of Zaragoza official-source compact symbol"
             },
             "authorNames": [
               "Ignacio Cuiral-Zueco",
@@ -353,9 +353,9 @@
                 "checkedAt": "2026-11-01"
               }
             ],
-            "note": "论文署名已核验；复用机构库中的完整官方标识，保留原始比例和来源记录。",
+            "note": "机构署名证据不变；紧凑图形来源已核验，名称独立显示。不代表机构授权、合作或背书。Exact standalone building plus 1474 symbol nodes from official logo_uz.zip SVG. Retained defs and all complete path/polygon nodes whose geometric x-extent is under100; omitted separate right wordmark nodes. Original paths/colors unchanged. viewBox -1 -1 78.5 114.1 encloses entire 0..76.5 by0..112.1 symbol with whitespace. Official favicon independently corroborates same compact symbol. Not historical ceremonial seal.",
             "institutionType": "university",
-            "markType": "wordmark",
+            "markType": "compact-symbol",
             "institutionId": "pending-university-of-zaragoza"
           },
           {
@@ -535,19 +535,19 @@
             "name": "Arizona State University",
             "logo": {
               "kind": "institution-logo",
-              "path": "assets/institutions/asu-vertical.png",
-              "sha256": "eed5fb0279cfad95f2b0b89011cc8646569abf1b098e54563f085b238ba751b4",
-              "width": 303,
-              "height": 234,
-              "sourceUrl": "https://www.asu.edu/profiles/contrib/webspark/modules/asu_brand/dist/assets/img/arizona-state-university-logo-vertical.png",
+              "path": "assets/institutions/compact-f08035be10571f00.png",
+              "sha256": "f08035be10571f00788b13996e19df279fe8cb1ef3f74fd4c963c7fc184fb105",
+              "width": 48,
+              "height": 48,
+              "sourceUrl": "https://www.asu.edu/themes/custom/asu_edu/favicon.ico",
               "evidenceUrl": "https://www.asu.edu/",
-              "verifiedAt": "2026-10-31",
-              "credit": "Arizona State University · official vertical mark",
-              "rights": "Official institutional mark; trademark/copyright retained by Arizona State University. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve the complete mark, aspect ratio and clear space. Display at least 48 CSS pixels wide.",
-              "displayPolicy": "official-brand",
-              "background": "transparent",
-              "altZh": "Arizona State University 官方完整竖版标志",
-              "altEn": "Official Arizona State University complete vertical mark"
+              "verifiedAt": "2026-11-02",
+              "credit": "Arizona State University · official-source compact symbol",
+              "rights": "ASU trademarks/copyright retained by owner. Official policy requires external users to contact Trademark Licensing and copyright page says reproduction requires permission. Source verification is not licensing authorization; no permission obtained or claimed. Preserve complete mark and native colors. No SVG fabrication; native PNG decoded from official ICO. Exact 48x48 largest native ICO frame losslessly decoded to PNG. Genuine official ASU sunburst monogram on native white square, full symbol retained. No cropping, recoloring or alpha removal. Official homepage directly references favicon source. Transparent source remains unverified. Compact40×32px editorial thumbnail; source identity verification is not a grant of institutional permission, and historical full-logo size guidance is not claimed satisfied.",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "light",
+              "altZh": "Arizona State University 官方来源紧凑图形",
+              "altEn": "Arizona State University official-source compact symbol"
             },
             "authorNames": [
               "Parth K. Thaker",
@@ -560,7 +560,7 @@
                 "checkedAt": "2026-11-01"
               }
             ],
-            "note": "本篇署名已核验；标识复用既有机构库，既有权利边界保留。",
+            "note": "机构署名证据不变；紧凑图形来源已核验，名称独立显示。不代表机构授权、合作或背书。Exact 48x48 largest native ICO frame losslessly decoded to PNG. Genuine official ASU sunburst monogram on native white square, full symbol retained. No cropping, recoloring or alpha removal. Official homepage directly references favicon source. Transparent source remains unverified.  原生不透明底色保留，不称为透明。",
             "institutionType": "university",
             "markType": "compact-symbol",
             "institutionId": "arizona-state"
@@ -1631,20 +1631,20 @@
           {
             "name": "Kent State University",
             "logo": {
-              "path": "assets/institutions/kent-state-university.png",
-              "sourceUrl": "https://s3.amazonaws.com/undeniable.kent.edu/brand/kent-state-university-Horizontal.zip",
+              "path": "assets/institutions/compact-ad05f2618ff04b14.png",
+              "sourceUrl": "https://undeniable.kent.edu/files/K_Emblem26.zip",
               "evidenceUrl": "https://www.kent.edu/brand/logos",
-              "width": 1792,
-              "height": 523,
-              "sha256": "7e6bf9d729375819b741f338249d452bea47aa81a07ca566a50e355bc4b7b3dc",
-              "credit": "Kent State University official website identity asset",
+              "width": 1545,
+              "height": 1183,
+              "sha256": "ad05f2618ff04b14c942e51c317ec875845ffdb7361c5d2dc2ab3506932f7336",
+              "credit": "Kent State University · official-source compact symbol",
               "kind": "institution-logo",
               "verifiedAt": "2026-11-02",
               "background": "transparent",
-              "rights": "Official source; copyright/trademarks remain with owner. No blanket public-domain license or endorsement asserted. Intended solely for accurate editorial affiliation identification; preserve complete mark.",
-              "displayPolicy": "official-brand",
-              "altEn": "Kent State University complete official logo",
-              "altZh": "Kent State University 官方完整标识"
+              "rights": "Institutional trademark and copyright remain with owner. Official source verification is not licensing assurance or permission. No open license or endorsement asserted. Use solely for factual paper affiliation identification; preserve original identity, colors and clearspace. Unchanged K_Emblem26/K Emblem only/K Emblem PNGs/K_Emblem_RGB.png extracted from official K Emblem ZIP. Official non-seal institutional K emblem, not cropped full logo. Compact40×32px editorial thumbnail; source identity verification is not a grant of institutional permission, and historical full-logo size guidance is not claimed satisfied.",
+              "displayPolicy": "attributed-thumbnail",
+              "altEn": "Kent State University official-source compact symbol",
+              "altZh": "Kent State University 官方来源紧凑图形"
             },
             "authorNames": [
               "Kyrylo Kolesnichenko",
@@ -1657,9 +1657,9 @@
                 "checkedAt": "2026-11-01"
               }
             ],
-            "note": "论文署名已核验；复用机构库中的完整官方标识，保留原始比例和来源记录。",
+            "note": "机构署名证据不变；紧凑图形来源已核验，名称独立显示。不代表机构授权、合作或背书。Unchanged K_Emblem26/K Emblem only/K Emblem PNGs/K_Emblem_RGB.png extracted from official K Emblem ZIP. Official non-seal institutional K emblem, not cropped full logo.",
             "institutionType": "university",
-            "markType": "wordmark",
+            "markType": "compact-symbol",
             "institutionId": "pending-kent-state-university"
           }
         ],

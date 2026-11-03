@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51 42" width="51" height="42"><defs>
+    <clipPath id="clip-path">
+      <rect id="矩形_9" data-name="矩形 9" width="329.889" height="41.798" fill="#fff" />
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.327" y1="0.381" x2="1" y2="0.928" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff8d3b" />
+      <stop offset="1" stop-color="#ee4a13" />
+    </linearGradient>
+  </defs>
+  <path id="路径_44" data-name="路径 44" d="M39.152,29.639A15.249,15.249,0,0,0,49.851,15.2,15.4,15.4,0,0,0,34.255,0a15.769,15.769,0,0,0-9.983,3.525V.023H18.658V36.275H5.613V.023H0V41.646H24.271V26.884A15.764,15.764,0,0,0,33.719,30.4L36.35,41.578h13.2V36.207H40.7ZM24.469,15.2a9.789,9.789,0,0,1,19.572,0,9.789,9.789,0,0,1-19.572,0" transform="translate(0 0)" fill="url(#linear-gradient)" />
+      </svg>

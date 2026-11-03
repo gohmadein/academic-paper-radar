@@ -1479,7 +1479,7 @@
       "checkedAt": "2026-11-02",
       "rightsStatus": "not-separately-authorized",
       "displayScope": "paper-affiliation-only",
-      "sourceUrl": "https://universitycommunications.jhu.edu/assets/themes/generic/src/assets/images/logos/university-logo-small-horizontal-black-no-clear-space.png",
+      "sourceUrl": "https://universitycommunications.jhu.edu/assets/themes/generic/src/assets/images/logos/university-logo-small-horizontal-black-no-clear-space.svg",
       "policyUrl": "https://brand.jhu.edu/resources/use-of-name/"
     },
     {
@@ -1495,8 +1495,168 @@
       "checkedAt": "2026-11-02",
       "rightsStatus": "not-separately-authorized",
       "displayScope": "paper-affiliation-only",
-      "sourceUrl": "https://marcomm.washu.edu/app/uploads/2024/02/WashU-RGB.jpg",
+      "sourceUrl": "https://marcomm.washu.edu/app/themes/antipasto/assets/img/favicon/safari-pinned-tab.svg",
       "policyUrl": "https://policies.washu.edu/policies/permission-to-use-university-names-logos-and-trademarks/"
     }
-  ]
+  ],
+  "compactPresentation": {
+    "checkedAt": "2026-11-02",
+    "box": {
+      "width": 40,
+      "height": 32
+    },
+    "sourceVerified": 107,
+    "compactDisplayable": 98,
+    "sourceOnly": [
+      {
+        "id": "pending-king-s-college-london",
+        "name": "King’s College London",
+        "source": "https://www.kcl.ac.uk/sitehelp/linking",
+        "reason": "Only full wordmark currently verified; retained as source record, not shrunk/cropped into a fabricated standalone symbol."
+      },
+      {
+        "id": "pending-zhongguancun-academy",
+        "name": "Zhongguancun Academy",
+        "source": "https://www.bza.edu.cn/en/",
+        "reason": "Only full wordmark currently verified; retained as source record, not shrunk/cropped into a fabricated standalone symbol."
+      },
+      {
+        "id": "pending-xi-an-jiaotong-liverpool-university",
+        "name": "Xi’an Jiaotong-Liverpool University",
+        "source": "https://www.xjtlu.edu.cn/en/about/brand-resources",
+        "reason": "Only full wordmark currently verified; retained as source record, not shrunk/cropped into a fabricated standalone symbol."
+      },
+      {
+        "id": "pending-meituan",
+        "name": "Meituan",
+        "source": "https://www.meituan.com/media",
+        "reason": "Only full wordmark currently verified; retained as source record, not shrunk/cropped into a fabricated standalone symbol."
+      },
+      {
+        "id": "pending-university-of-applied-sciences-and-arts-western-switzerland",
+        "name": "University of Applied Sciences and Arts Western Switzerland",
+        "source": "https://www.hes-so.ch/",
+        "reason": "Only full wordmark currently verified; retained as source record, not shrunk/cropped into a fabricated standalone symbol."
+      },
+      {
+        "id": "pending-electronics-and-telecommunications-research-institute",
+        "name": "Electronics and Telecommunications Research Institute",
+        "source": "https://www.etri.re.kr/intro.html",
+        "reason": "Only full wordmark currently verified; retained as source record, not shrunk/cropped into a fabricated standalone symbol."
+      },
+      {
+        "id": "pending-universit-paris-saclay",
+        "name": "Université Paris-Saclay",
+        "source": "https://www.universite-paris-saclay.fr/en/node/78758",
+        "reason": "Only full wordmark currently verified; retained as source record, not shrunk/cropped into a fabricated standalone symbol."
+      },
+      {
+        "id": "pending-tel-aviv-university",
+        "name": "Tel Aviv University",
+        "source": "https://finance.tau.ac.il/graphics/gellery-TAU_logo_download_2493_2811",
+        "reason": "Only full wordmark currently verified; retained as source record, not shrunk/cropped into a fabricated standalone symbol."
+      },
+      {
+        "id": "pending-it-university-of-copenhagen",
+        "name": "IT University of Copenhagen",
+        "source": "https://www.itu.dk/om-itu/presse/logoer",
+        "reason": "Only full wordmark currently verified; retained as source record, not shrunk/cropped into a fabricated standalone symbol."
+      }
+    ],
+    "lowResolution": [
+      {
+        "id": "pending-inspire-ag",
+        "name": "inspire AG",
+        "width": 16,
+        "height": 16,
+        "note": "Native low-resolution image displayed without enlargement inside the compact box."
+      },
+      {
+        "id": "pending-universidad-antonio-de-nebrija",
+        "name": "Universidad Antonio de Nebrija",
+        "width": 16,
+        "height": 16,
+        "note": "Native low-resolution image displayed without enlargement inside the compact box."
+      }
+    ],
+    "arxiv": {
+      "entries": 142,
+      "cardsWithCompactMark": 79,
+      "compactReferences": 131
+    },
+    "note": "Native opaque backgrounds are retained and disclosed; the40×32 editorial thumbnails do not assert compliance with historical brand minimum-size/clearspace guidance or separate institutional permission."
+  },
+  "dailyAdditionSnapshot": {
+    "date": "2026-11-03",
+    "note": "Daily additions preserved when the compact presentation was rebased; the preceding detailed audit remains the November 2 snapshot. Source verification is not separate institutional permission.",
+    "institutionCounts": {
+      "total": 262,
+      "verified": 110,
+      "pending": 152
+    },
+    "compactDisplayable": 101,
+    "sourceOnly": 9,
+    "added": [
+      {
+        "id": "pending-holiday-robotics",
+        "name": "Holiday Robotics",
+        "hasCompactMark": true,
+        "note": "Official standalone green symbol served as favicon; SVG retains original 900 × 842.4 viewBox; integer display dimensions rounded to 900 × 842 without changing source bytes. 仅识别有论文证据的署名单位；来源核验不等于取得另行许可，不用于网站品牌或机构合作展示。"
+      },
+      {
+        "id": "pending-krafton",
+        "name": "KRAFTON",
+        "hasCompactMark": false,
+        "note": "https://press.krafton.com/About-KRAFTON/Focus/PUBG-Universe-Logo ; official press listing exposes horizontal wordmarks, not a verified compact symbol suitable for current 32px card. Main corporate page returned403. Asset policy https://press.krafton.com/PUBG-Asset-Usage-and-Video-Agreement restricts assets to noncommercial press use. No login, agreement acceptance or access bypass attempted; name-only. Checked2026-11-03."
+      },
+      {
+        "id": "pending-turing-inc",
+        "name": "Turing Inc",
+        "hasCompactMark": false,
+        "note": "https://tur.ing/en/ ; exact Japanese autonomous-driving company cross-checked against Takuma Seno personal page https://takuseno.github.io/ and self-authored LinkedIn employment https://jp.linkedin.com/in/takuseno . Official32px favicon is a tiny full TURING wordmark on opaque white and not a useful compact symbol at current32px.192px asset returned403; no substitution with US turing.com. Name-only. Checked2026-11-03."
+      },
+      {
+        "id": "pending-tu-darmstadt",
+        "name": "TU Darmstadt",
+        "hasCompactMark": false,
+        "note": "https://www.intern.tu-darmstadt.de/arbeitsmittel/corporate_design_vorlagen/ requires complete combined Athena head + three-line wordmark + white protection zone. Do not use standalone head favicon as replacement. Current32px compact slot has no verified compliant independent symbol. Original complete source https://www.tu-darmstadt.de/media/resources/images_1/tu_logo_web_h120.svg reviewed; no UI change in this daily task. Name-only. Checked2026-11-03."
+      },
+      {
+        "id": "pending-hessianai",
+        "name": "hessian.AI",
+        "hasCompactMark": true,
+        "note": "Original official standalone favicon symbol; no cropping or recoloring. Legal notice reserves copyright and says reuse requires agreement; no separate agreement obtained. Source/policy review only, not an authorization claim. 仅识别有论文证据的署名单位；来源核验不等于取得另行许可，不用于网站品牌或机构合作展示。"
+      },
+      {
+        "id": "pending-german-research-center-for-ai-dfki",
+        "name": "German Research Center for AI (DFKI)",
+        "hasCompactMark": false,
+        "note": "https://www.dfki.de/web/news-media/presse/presse-material ; official press material offers logos and requests prior coordination. Homepage favicon https://www.dfki.de/_assets/09b8bb81cf02ab8e11714471aa5ea59d/Images/favicon.ico is an opaque16px DFKI wordmark, visually too weak for32px presentation. No verified compact high-resolution symbol in bounded pass; name-only, no claim that copyright itself prevents research. Checked2026-11-03."
+      },
+      {
+        "id": "pending-amazon-robotics",
+        "name": "Amazon Robotics",
+        "hasCompactMark": false,
+        "note": "https://www.amazonrobotics.com/ returned403; https://www.amazon.science/research-areas/robotics has topic illustrations, not a verified Amazon Robotics compact identity. Search surfaced third-party logo mirrors/swag guide, which were not used. Existing Amazon FAR record is not this organization; no parent logo substitution in this bounded daily check. Name-only. Checked2026-11-03."
+      },
+      {
+        "id": "pending-university-of-bordeaux",
+        "name": "University of Bordeaux",
+        "hasCompactMark": true,
+        "note": "官方主页直接声明的32px紧凑U符号，非自造首字母徽章；完整ICO帧无裁剪转PNG。品牌规范入口：https://www.u-bordeaux.fr/universite/nous-decouvrir/identite-visuelle。"
+      },
+      {
+        "id": "pending-bordeaux-inp",
+        "name": "Bordeaux INP",
+        "hasCompactMark": false,
+        "note": "官方https://www.bordeaux-inp.fr/themes/custom/inp/favicon.svg已下载并视觉核验：它是BORDEAUX全名与INP字母组合的完整lockup，不是独立图形。官网https://www.bordeaux-inp.fr/fr/communication要求保持标志比例及元素整体；本轮未确认允许分离现版INP部分的官方规范。依照仅小图形与独立机构名称的要求，保留文字名称，不缩小完整字标或裁拆矢量。"
+      },
+      {
+        "id": "pending-labri-umr-5800",
+        "name": "LaBRI (UMR 5800)",
+        "hasCompactMark": false,
+        "note": "官方标志入口https://www.labri.fr/les-logos-labri-et-tutelles及主页https://www.labri.fr/本轮web访问超时；直接公开主页请求返回HTTP503。未获取可视觉核验的独立完整紧凑标识，保留文字名称；未登录或绕过限制。"
+      }
+    ]
+  }
 }

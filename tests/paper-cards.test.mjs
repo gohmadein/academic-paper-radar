@@ -41,16 +41,16 @@ test('大学仅接受校徽或官方紧凑身份符号，缺失机构标识不�
 });
 
 test('PlayPolicy分清机构标识和作者姓名，标识容器无灰色或深色底板',async()=>{
- const p=day.papers.find(p=>p.id==='arxiv-2610-22340');const html=editorialCard(p,0);assert.equal(p.visuals.institutions.filter(i=>i.logo).length,2);assert.ok(html.includes('Amazon 母公司官方标志，非FAR专属标志'));assert.ok(html.includes('University of Maryland 官方完整非正式校徽'));assert.ok(!html.includes('avatar-initial'));assert.ok(html.includes('Botao He')&&html.includes('Yiming Dou'));
+ const p=day.papers.find(p=>p.id==='arxiv-2610-22340');const html=editorialCard(p,0);assert.equal(p.visuals.institutions.filter(i=>i.logo).length,2);assert.ok(html.includes('Amazon Frontier AI &amp; Robotics (FAR)'));assert.match(p.visuals.institutions.find(i=>i.name.includes('Amazon')).logo.rights,/Parent Amazon identity only, not FAR-specific/);assert.ok(html.includes('University of Maryland 官方完整非正式校徽'));assert.ok(!html.includes('avatar-initial'));assert.ok(html.includes('Botao He')&&html.includes('Yiming Dou'));
  const css=await readFile(new URL('../styles.css',import.meta.url),'utf8');assert.match(css,/\.institution-avatar\{[^}]*background:transparent[^}]*box-shadow:none/);assert.ok(!css.includes('.avatar-dark'));assert.match(css,/\.institution-avatar img\{[^}]*background:transparent/);
 });
 
 
-test('ASU使用完整透明官方标志，至少48px宽；未核实标志只显示机构名称',async()=>{
+test('ASU保留真实来源的紧凑署名缩略图；未核实标志只显示机构名称',async()=>{
  const p=day.papers.find(p=>p.id==='arxiv-2610-28251');const inst=p.visuals.institutions.find(i=>i.name==='Arizona State University');
- assert.equal(inst.markType,'compact-symbol');assert.equal(inst.logo.background,'transparent');assert.equal(inst.logo.width,303);assert.equal(inst.logo.height,234);
- assert.equal(inst.logo.sourceUrl,'https://www.asu.edu/profiles/contrib/webspark/modules/asu_brand/dist/assets/img/arizona-state-university-logo-vertical.png');
+ assert.equal(inst.markType,'compact-symbol');assert.equal(inst.logo.background,'light');assert.equal(inst.logo.width,48);assert.equal(inst.logo.height,48);
+ assert.equal(inst.logo.sourceUrl,'https://www.asu.edu/themes/custom/asu_edu/favicon.ico');
  await readAsset(inst.logo,new URL('../',import.meta.url).pathname);
- const html=institutionRow(p);assert.ok(!html.includes('style='));const {institutionDisplayCSS}=await import('../lib/institution-display.js');const registry=JSON.parse(await readFile(new URL('../data/institutions.json',import.meta.url)));assert.match(institutionDisplayCSS(registry),/institution-mark-eed5fb0279cfad95\{width:48px;height:38px/);assert.ok(html.includes('asu-vertical.png?v='));assert.ok(html.includes('width="303" height="234"'));
+ const html=institutionRow(p);assert.ok(!html.includes('style='));const {institutionDisplayCSS}=await import('../lib/institution-display.js');const registry=JSON.parse(await readFile(new URL('../data/institutions.json',import.meta.url)));assert.match(institutionDisplayCSS(registry),/width:40px;height:32px/);assert.ok(html.includes(inst.logo.path));assert.ok(html.includes('width="48" height="48"'));
  for(const paper of day.papers){const row=institutionRow(paper);assert.ok(!row.includes('文字标识'));for(const i of paper.visuals.institutions.filter(i=>!i.logo))assert.ok(row.includes(i.name));}
 });

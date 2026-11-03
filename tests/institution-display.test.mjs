@@ -31,3 +31,23 @@ test('own-row wide and tall marks retain explicit height under column flex layou
   const css=institutionDisplayCSS(r,c);assert.match(css,/flex:0 0 auto/);assert.ok(css.includes(`width:${width+10}px;height:${height+10}px`));assert.ok(!css.includes(`flex:0 0 ${width+10}px`));
  }
 });
+
+test('compact mode unifies cards, details and gallery at40x32 without shrinking full wordmarks',async()=>{
+ const {institutionMarkVisible,institutionMarkNeedsOwnRow}=await import('../lib/institution-display.js');const {institutionRow}=await import('../lib/paper-media.js');const {institutionGallery}=await import('../lib/institutions.js');const css=institutionDisplayCSS(registry);
+ for(const i of registry.institutions.filter(x=>x.logo)){assert.equal(institutionMarkNeedsOwnRow(i.logo),false);assert.ok(css.includes(`.institution-avatar.${institutionMarkClass(i.logo)},.institution-library-mark.${institutionMarkClass(i.logo)}{width:40px;height:32px;flex:0 0 auto;padding:0`));}
+ const known=registry.institutions.find(x=>x.logo&&x.markType==='emblem'&&!x.displayScope),wide={...known,officialName:'Example institution',markType:'wordmark',logo:{...known.logo,width:1000,height:100,path:'assets/institutions/new-wordmark.png'}};
+ const p={visuals:{institutions:[{...wide,name:wide.officialName}]}};assert.equal(institutionMarkVisible(wide.logo,wide.markType),false);assert.doesNotMatch(institutionRow(p),/<img/);assert.match(institutionRow(p),/Example institution/);assert.doesNotMatch(institutionGallery([p],{institutions:[wide]}),/<img/);
+ assert.equal(institutionMarkVisible(known.logo,known.markType),true);assert.ok(!institutionRow({visuals:{institutions:[{...known,name:known.officialName}]}}).includes('institution-item-large'));
+});
+
+test('November3 daily additions retain compact symbols and honest name-only fallback',async()=>{
+ const {institutionMarkVisible}=await import('../lib/institution-display.js');
+ const {institutionRow}=await import('../lib/paper-media.js');
+ const day=JSON.parse(await readFile(new URL('../data/days/2026-11-03.json',import.meta.url)));
+ assert.equal(day.papers.length,5);
+ for(const id of ['pending-university-of-bordeaux','pending-holiday-robotics','pending-hessianai']){
+  const i=registry.institutions.find(x=>x.id===id);assert.ok(i);assert.ok(institutionMarkVisible(i.logo,i.markType));assert.equal(i.displayScope,'paper-affiliation-only');
+  assert.ok(institutionRow({visuals:{institutions:[{...i,name:i.officialName,institutionId:id}]}}).includes('<img'));
+ }
+ for(const id of ['pending-bordeaux-inp','pending-labri-umr-5800']){const i=registry.institutions.find(x=>x.id===id);assert.ok(i);assert.equal(i.logo,null);}
+});

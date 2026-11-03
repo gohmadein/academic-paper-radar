@@ -1,26 +1,39 @@
 # 署名机构标识核验与剩余缺口
 
-**核验快照：2026-11-02。此报告不构成机构授权或背书，也不声称所有缺口已经修复。**
+**核验快照：2026-11-02。来源核验不是机构许可或背书，不声称所有素材缺口已经修复。**
 
-机构库共 252 项，107 项有来源与身份已核验标识，145 项暂仅显示名称。本轮对原先 172 项逐项复核，新增 25 项真实官方标识；另将论文中可精确定位的 IMS 归入 Toronto，并加入新核实署名的 ARL 待处理记录。
+机构库共252项，107项有来源与身份已核验素材，145项尚无已采用素材。按最新“小图形＋独立名称”规则，其中98项可作紧凑图形展示，另9项仅有完整字标，保留名称及原来源记录而不缩小横幅冒充校徽。
 
-142 篇 arXiv 论文中，139 篇机构署名完整核验、1 篇部分核验、2 篇尚无足够机构信息。85 篇至少有一项已核验标识，共 141 处标识引用；不能把“已有一个标识”误称为“所有机构标识都齐全”。
+142篇arXiv中139篇署名完整核验、1篇部分、2篇暂无足够信息；79篇至少显示一个紧凑标识，共131处图形引用。不能把“至少一个”称为每个机构均已补齐。
 
-## 已展示但未取得另行书面许可的两项
+## 11月3日日报增量
 
-2026-11-02 补充：JHU 与 Washington University in St. Louis 已采用可正常读取的官方原始标识，仅显示于有论文署名证据的卡片和详情，不在底部图库作装饰或表示合作。`verified` 指来源与身份核验，**不表示学校许可已获批**。两项均记录 `rightsStatus: not-separately-authorized`，没有接受新协议、登录下载门或规避访问控制。
+本次发布保留11月3日新增的10个机构：Bordeaux、Holiday Robotics、hessian.AI采用已核验的官方独立小图形，其余7项保留名称及具体缺口。当前机构库262项，110项有已核验来源素材，其中101项可作紧凑图形展示、9项仅保留完整字标来源；152项暂无已采用素材。以上新增素材仅用于论文署名识别，不表示取得另行机构许可。11月2日142篇arXiv的核验和图形引用数不变。
 
-- JHU：[官方原图](https://universitycommunications.jhu.edu/assets/themes/generic/src/assets/images/logos/university-logo-small-horizontal-black-no-clear-space.png)、[来源页面](https://universitycommunications.jhu.edu/)、[原使用条款](https://brand.jhu.edu/resources/use-of-name/)。黑色原图原生透明，完整保留；此前403下载端点未重试，通过另一官方页面直接公开引用的素材取得。
-- WashU：[官方原图](https://marcomm.washu.edu/app/uploads/2024/02/WashU-RGB.jpg)、[来源页面](https://marcomm.washu.edu/washu-logo/)、[原使用条款](https://policies.washu.edu/policies/permission-to-use-university-names-logos-and-trademarks/)。原生白底完整保留，不与西雅图的University of Washington混淆。
+## 最新紧凑展示
 
-两所公开条款要求第三方书面许可；本项目没有取得或声称取得另行许可，公开展示用途限于论文单位识别，不作法律合规保证。来源可下载、用户要求展示与学校许可是不同事实。以上两项不再计入“尚未展示”145项，但其许可状态仍如实单列。
+- 卡片、详情、图库统一40×32px图盒，完整图形contain；名称和作者独立保留。没有大横幅、整行大标识或用字母临时生成的假校徽。
+- JHU完整盾徽从官方SVG的29个原path/polygon提取，保留全部几何/颜色，仅移除分离字标及调整viewBox；不声称它是官方独立下载。WashU采用官方独立盾徽SVG原字节，两所身份不混同西雅图UW。
+- 完整独立图形的矢量派生逐项记录原来源与操作；不对栅格组合字标任意裁字，不AI重绘。原生有底色的真实图标如Amazon/CIFAR/NYU仍如实保留，不声称透明。
+- 旧品牌最小尺寸及留白记录仍保留为来源指导；当前小尺寸署名缩略图不声称满足这些旧指导。低分辨率原生16px素材不放大成32px，也不冒称高分辨率。
+- JHU/WashU仍明确没有另行书面许可，只用于具体论文机构识别；图库保留名称，不作合作背书。原政策链接保留在数据与来源详情。
 
-## 已修复的展示缺陷
+## 尚无独立紧凑图形（已核验完整字标）
 
-- 尺寸由可信外部 CSS 按素材分别设置，不再依赖被 CSP 阻止的行内样式。
-- 完整字标、原生白底或官方完整彩色版本按真实类型记录，不裁字、不去底、不重绘。
-- 检查实际可见徽记而非透明画布大小；SUSTech、UiT、UW 等保留规定尺寸/留白。较大标识在自己的可滚动行内显示，不撑大日历地图。
-- 需要官网链接的标识保持图片链接；UW 只用于具体论文署名，不在底部图库作装饰。
+- King’s College London：[官方来源](https://www.kcl.ac.uk/sitehelp/linking)；保留名称，不展示缩小横幅。
+- Zhongguancun Academy：[官方来源](https://www.bza.edu.cn/en/)；保留名称，不展示缩小横幅。
+- Xi’an Jiaotong-Liverpool University：[官方来源](https://www.xjtlu.edu.cn/en/about/brand-resources)；保留名称，不展示缩小横幅。
+- Meituan：[官方来源](https://www.meituan.com/media)；保留名称，不展示缩小横幅。
+- University of Applied Sciences and Arts Western Switzerland：[官方来源](https://www.hes-so.ch/)；保留名称，不展示缩小横幅。
+- Electronics and Telecommunications Research Institute：[官方来源](https://www.etri.re.kr/intro.html)；保留名称，不展示缩小横幅。
+- Université Paris-Saclay：[官方来源](https://www.universite-paris-saclay.fr/en/node/78758)；保留名称，不展示缩小横幅。
+- Tel Aviv University：[官方来源](https://finance.tau.ac.il/graphics/gellery-TAU_logo_download_2493_2811)；保留名称，不展示缩小横幅。
+- IT University of Copenhagen：[官方来源](https://www.itu.dk/om-itu/presse/logoer)；保留名称，不展示缩小横幅。
+
+## 原生低分辨率例外
+
+- inspire AG：原生16×16px，完整保留且不放大。
+- Universidad Antonio de Nebrija：原生16×16px，完整保留且不放大。
 
 ## 尚未展示标识的原因分类
 
