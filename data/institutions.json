@@ -4408,6 +4408,174 @@
       "alphaStatus": "not-applicable",
       "logo": null,
       "note": "Exact DEVCOM Army Research Laboratory complete logo located in official DVIDS item dated2026-03-09,1775x511. DVIDS public-domain copyright label does not waive Army-specific trademark conditions. ATLP expressly includes research-laboratory marks, requires contact for non-product use, and FAQ requires Army review even for claimed incidental fair use. General DVIDS noncommercial/newsworthy VI permission does not clearly waive this specific requirement. No license/contact undertaken; no Army generic emblem substituted. 官方核验入口：https://www.army.mil/ATLP"
+    },
+    {
+      "id": "pending-holiday-robotics",
+      "officialName": "Holiday Robotics",
+      "aliases": [],
+      "institutionType": "company",
+      "markType": "organization-mark",
+      "status": "verified",
+      "alphaStatus": "transparent",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/holiday-robotics-official-symbol.7a0e74894933.svg",
+        "sha256": "7a0e7489493355a0b7de545aaefc3b55a819043b640c0509d85be311c5198e64",
+        "width": 900,
+        "height": 842,
+        "sourceUrl": "https://holiday-robotics.com/logos/logo-open.svg",
+        "evidenceUrl": "https://holiday-robotics.com/",
+        "verifiedAt": "2026-11-03",
+        "credit": "Holiday Robotics official compact symbol",
+        "rights": "Official artwork; copyright and trademark remain with the named institution. Source verification is not separate authorization. Editorial identification of the evidenced paper affiliation only, not website branding, partnership or endorsement. Preserve complete original artwork, colors and aspect ratio; no open licence claimed. No separate logo licence found on inspected official homepage.",
+        "displayPolicy": "attributed-thumbnail",
+        "background": "transparent",
+        "altZh": "Holiday Robotics 官方独立紧凑标识",
+        "altEn": "Official standalone compact symbol of Holiday Robotics"
+      },
+      "note": "Official standalone green symbol served as favicon; SVG retains original 900 × 842.4 viewBox; integer display dimensions rounded to 900 × 842 without changing source bytes. 仅识别有论文证据的署名单位；来源核验不等于取得另行许可，不用于网站品牌或机构合作展示。",
+      "rightsStatus": "not-separately-authorized",
+      "displayScope": "paper-affiliation-only",
+      "rightsPolicyUrl": "https://holiday-robotics.com/"
+    },
+    {
+      "id": "pending-krafton",
+      "officialName": "KRAFTON",
+      "aliases": [],
+      "institutionType": "company",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "https://press.krafton.com/About-KRAFTON/Focus/PUBG-Universe-Logo ; official press listing exposes horizontal wordmarks, not a verified compact symbol suitable for current 32px card. Main corporate page returned403. Asset policy https://press.krafton.com/PUBG-Asset-Usage-and-Video-Agreement restricts assets to noncommercial press use. No login, agreement acceptance or access bypass attempted; name-only. Checked2026-11-03."
+    },
+    {
+      "id": "pending-turing-inc",
+      "officialName": "Turing Inc",
+      "aliases": [],
+      "institutionType": "company",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "https://tur.ing/en/ ; exact Japanese autonomous-driving company cross-checked against Takuma Seno personal page https://takuseno.github.io/ and self-authored LinkedIn employment https://jp.linkedin.com/in/takuseno . Official32px favicon is a tiny full TURING wordmark on opaque white and not a useful compact symbol at current32px.192px asset returned403; no substitution with US turing.com. Name-only. Checked2026-11-03."
+    },
+    {
+      "id": "pending-tu-darmstadt",
+      "officialName": "TU Darmstadt",
+      "aliases": [],
+      "institutionType": "university",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "https://www.intern.tu-darmstadt.de/arbeitsmittel/corporate_design_vorlagen/ requires complete combined Athena head + three-line wordmark + white protection zone. Do not use standalone head favicon as replacement. Current32px compact slot has no verified compliant independent symbol. Original complete source https://www.tu-darmstadt.de/media/resources/images_1/tu_logo_web_h120.svg reviewed; no UI change in this daily task. Name-only. Checked2026-11-03."
+    },
+    {
+      "id": "pending-hessianai",
+      "officialName": "hessian.AI",
+      "aliases": [],
+      "institutionType": "research-institute",
+      "markType": "organization-mark",
+      "status": "verified",
+      "alphaStatus": "transparent",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/hessian-ai-official-symbol.faf13b80193c.png",
+        "sha256": "faf13b80193c9520b9ab86c52cd9074ee17802f1b6401872dadbe81bfbad0863",
+        "width": 192,
+        "height": 192,
+        "sourceUrl": "https://www.hessian.ai/wp-content/uploads/2022/02/cropped-hessian-ai-icon-192x192.png",
+        "evidenceUrl": "https://www.hessian.ai/",
+        "verifiedAt": "2026-11-03",
+        "credit": "hessian.AI official compact symbol",
+        "rights": "Official artwork; copyright and trademark remain with the named institution. Source verification is not separate authorization. Editorial identification of the evidenced paper affiliation only, not website branding, partnership or endorsement. Preserve complete original artwork, colors and aspect ratio; no open licence claimed. Policy: https://www.hessian.ai/legal-notice/ ; permission for reuse is not asserted.",
+        "displayPolicy": "attributed-thumbnail",
+        "background": "transparent",
+        "altZh": "hessian.AI 官方独立紧凑标识",
+        "altEn": "Official standalone compact symbol of hessian.AI"
+      },
+      "note": "Original official standalone favicon symbol; no cropping or recoloring. Legal notice reserves copyright and says reuse requires agreement; no separate agreement obtained. Source/policy review only, not an authorization claim. 仅识别有论文证据的署名单位；来源核验不等于取得另行许可，不用于网站品牌或机构合作展示。",
+      "rightsStatus": "not-separately-authorized",
+      "displayScope": "paper-affiliation-only",
+      "rightsPolicyUrl": "https://www.hessian.ai/legal-notice/"
+    },
+    {
+      "id": "pending-german-research-center-for-ai-dfki",
+      "officialName": "German Research Center for AI (DFKI)",
+      "aliases": [],
+      "institutionType": "research-institute",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "https://www.dfki.de/web/news-media/presse/presse-material ; official press material offers logos and requests prior coordination. Homepage favicon https://www.dfki.de/_assets/09b8bb81cf02ab8e11714471aa5ea59d/Images/favicon.ico is an opaque16px DFKI wordmark, visually too weak for32px presentation. No verified compact high-resolution symbol in bounded pass; name-only, no claim that copyright itself prevents research. Checked2026-11-03."
+    },
+    {
+      "id": "pending-amazon-robotics",
+      "officialName": "Amazon Robotics",
+      "aliases": [],
+      "institutionType": "company",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "https://www.amazonrobotics.com/ returned403; https://www.amazon.science/research-areas/robotics has topic illustrations, not a verified Amazon Robotics compact identity. Search surfaced third-party logo mirrors/swag guide, which were not used. Existing Amazon FAR record is not this organization; no parent logo substitution in this bounded daily check. Name-only. Checked2026-11-03."
+    },
+    {
+      "id": "pending-university-of-bordeaux",
+      "officialName": "University of Bordeaux",
+      "aliases": [
+        "Université de Bordeaux"
+      ],
+      "institutionType": "university",
+      "markType": "compact-symbol",
+      "status": "verified",
+      "alphaStatus": "transparent",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/bordeaux.e3357f16fb7d.png",
+        "sha256": "e3357f16fb7d84105b8df28570bf7c0bf7d5f159f16b5713940935b5e7e34cfb",
+        "width": 32,
+        "height": 32,
+        "sourceUrl": "https://www.u-bordeaux.fr/packages/ub/themes/ub/img/favicon.ico",
+        "evidenceUrl": "https://www.u-bordeaux.fr/",
+        "verifiedAt": "2026-11-03",
+        "credit": "University of Bordeaux official compact web identity",
+        "rights": "Official institutional artwork. Copyright and trademark retained by owner; no open licence or blanket permission asserted. Editorial paper-affiliation identification only, no endorsement. Preserve complete artwork, proportions, colors and clear space. No separate institutional authorization was obtained or claimed; source/identity verification is distinct from permission. The official visual-identity charter remains applicable. Restricted to evidenced paper affiliations, not site branding, decoration, partnership or endorsement.",
+        "displayPolicy": "attributed-thumbnail",
+        "background": "transparent",
+        "altZh": "University of Bordeaux 官方紧凑身份标志",
+        "altEn": "University of Bordeaux official compact identity mark"
+      },
+      "note": "官方主页直接声明的32px紧凑U符号，非自造首字母徽章；完整ICO帧无裁剪转PNG。品牌规范入口：https://www.u-bordeaux.fr/universite/nous-decouvrir/identite-visuelle。",
+      "rightsStatus": "not-separately-authorized",
+      "rightsPolicyUrl": "https://www.u-bordeaux.fr/universite/nous-decouvrir/identite-visuelle",
+      "displayScope": "paper-affiliation-only"
+    },
+    {
+      "id": "pending-bordeaux-inp",
+      "officialName": "Bordeaux INP",
+      "aliases": [],
+      "institutionType": "university",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "官方https://www.bordeaux-inp.fr/themes/custom/inp/favicon.svg已下载并视觉核验：它是BORDEAUX全名与INP字母组合的完整lockup，不是独立图形。官网https://www.bordeaux-inp.fr/fr/communication要求保持标志比例及元素整体；本轮未确认允许分离现版INP部分的官方规范。依照仅小图形与独立机构名称的要求，保留文字名称，不缩小完整字标或裁拆矢量。"
+    },
+    {
+      "id": "pending-labri-umr-5800",
+      "officialName": "LaBRI (UMR 5800)",
+      "aliases": [
+        "LaBRI"
+      ],
+      "institutionType": "research-institute",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "官方标志入口https://www.labri.fr/les-logos-labri-et-tutelles及主页https://www.labri.fr/本轮web访问超时；直接公开主页请求返回HTTP503。未获取可视觉核验的独立完整紧凑标识，保留文字名称；未登录或绕过限制。"
     }
   ]
 }

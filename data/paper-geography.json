@@ -942,6 +942,17 @@
       "evidenceUrls": [
         "https://www.pure.ed.ac.uk/ws/portalfiles/portal/11934720/PODS2002.pdf"
       ]
+    },
+    "arxiv-2610-41857": {
+      "locationIds": [
+        "tsinghua"
+      ],
+      "unresolvedInstitutionIds": [
+        "pending-university-of-chinese-academy-of-sciences"
+      ],
+      "evidenceUrls": [
+        "https://arxiv.org/pdf/2610.41857"
+      ]
     }
   },
   "unresolvedInstitutions": {

@@ -1,0 +1,1213 @@
+{
+  "version": 2,
+  "date": "2026-11-03",
+  "title": "2026-11-03 零域 · 迅4 / 李1 / 驴3",
+  "demo": false,
+  "timezone": "Asia/Shanghai",
+  "issueNote": "本期5篇唯一论文：迅4、李1、驴3（3篇跨方向共享），周二无额外经典。含两篇10月30日提交的预印本，以及RSS 2026两类正式获奖论文和ICDT 2026理论论文的较早文献首次发现；不冒称今天新发表。北京时间08:04核查arXiv六类仍为11月2日公告批次，保留已归档142条，不把尚未出现的新批次写成零更新。",
+  "coverage": {
+    "checkedSources": [
+      "arXiv cs.DB/recent的2026-11-02批次标题（5项）与cs.LO/recent同日批次标题（17项）；进一步核读2610.40812摘要后因与固定实例更新关系弱而未选。",
+      "ICDT 2026官方目录定向检索及Responsibility Measures for Conjunctive Queries with Negation正式记录/PDF。",
+      "Ontop研究团队入口；VKG updates与view update/lenses 2026定向搜索，以及责任度论文资源搜索。",
+      "arXiv cs.RO recent（https://arxiv.org/list/cs.RO/recent?show=100）：11月2日公告72项标题筛查；选择ResMerge和SimuGuard进行原始记录与限定章节全文核验，不声称72项全部阅读全文。",
+      "arXiv eess.SY recent（https://arxiv.org/list/eess.SY/recent）：查看11月2日批次入口及首页部分控制论文标题；未穷尽51项。",
+      "RSS 2026官方Awards与Accepted Papers（https://roboticsconference.org/2026/program/awards/）：核验FlashSAC与NeuralActuator具体获奖类别，再交叉核对作者项目及全文。",
+      "CoRL官方Accepted Papers（https://www.corl.org/program/accepted-papers）：页面仅返回嵌入入口，无法据此完整筛选Oral/Spotlight；未将第三方Explorer当官方录用证据。",
+      "NVIDIA Robotics Research（https://www.nvidia.com/en-us/research/robotics/）：已查看研究入口，未从该入口核验新候选，未声称穷尽论文列表。",
+      "作者项目和代码：ResMerge、SimuGuard、FlashSAC、NeuralActuator；代码未运行。已按data/registry.json历史28篇去重。",
+      "arXiv cs.RO 官方/new全页核查：https://arxiv.org/list/cs.RO/new?skip=0&show=2000；北京时间2026-11-03 08:04，公告日期仍2026-11-02，110项。",
+      "arXiv cs.CV 官方/new全页核查：https://arxiv.org/list/cs.CV/new?skip=0&show=2000；北京时间2026-11-03 08:04，公告日期仍2026-11-02，165项。",
+      "arXiv cs.LG 官方/new全页核查：https://arxiv.org/list/cs.LG/new?skip=0&show=2000；北京时间2026-11-03 08:04，公告日期仍2026-11-02，337项。",
+      "arXiv cs.AI 官方/new全页核查：https://arxiv.org/list/cs.AI/new?skip=0&show=2000；北京时间2026-11-03 08:04，公告日期仍2026-11-02，297项。",
+      "arXiv eess.SY 官方/new全页核查：https://arxiv.org/list/eess.SY/new?skip=0&show=2000；北京时间2026-11-03 08:04，公告日期仍2026-11-02，61项。",
+      "arXiv eess.IV 官方/new全页核查：https://arxiv.org/list/eess.IV/new?skip=0&show=2000；北京时间2026-11-03 08:04，公告日期仍2026-11-02，22项。"
+    ],
+    "limitations": [
+      "不是全部来源覆盖；cs.LO旧批次未完整分页，李方向未按相关性全量筛查cs.AI/cs.PL，各会议期刊未逐卷检查。",
+      "Calvanese papers.html直接访问失败；搜索结果中的已读VKG种子未重新推荐。",
+      "最新入口展示Nov2批次；没有把未出现的Nov3批次声称为零更新。",
+      "检索出现IJCAI 2026 VKG enrichment（改变规格/覆盖面）及ESOP lenses条目，未充分核验或不直接贴合固定实例更新，未凑入本期。",
+      "关注目录的14会议、20期刊、6类arXiv、30实验室是持续检索参考，不代表今日全源覆盖；本轮未逐一检索所有期刊与实验室。",
+      "两篇近期预印本于10月30日首次提交、11月2日公告，11月3日首次精选；未发现或声称11月3日新发表。两篇RSS获奖作是较早论文首次发现，非周二经典。",
+      "全部仅限定章节重点核读，未独立复现、未运行代码、未逐项复核所有附录。没有核实官方奖项的预印本不添加Best/Oral/Spotlight标签。",
+      "新机构只登记经论文/项目页核验的署名身份；无可用官方标识者保持文字与null素材，不以相似机构标识替代。",
+      "北京时间08:04尚未观察到11月3日arXiv公告批次，不代表今日零篇。继续提供11月2日已归档142条双语导读；旧公告、导读及机构核验时刻不刷新，未重新声称全文阅读或重做992条相关性筛查。",
+      "署名机构标识复用现有统一机构库；新机构找不到可核验素材时保留名称与实际缺口，不用相似图标补齐。"
+    ]
+  },
+  "papers": [
+    {
+      "id": "arxiv-2604-04539",
+      "title": "FlashSAC：面向高维机器人控制的快速稳定离策略强化学习",
+      "titleEn": "FlashSAC: Fast and Stable Off-Policy Reinforcement Learning for High-Dimensional Robot Control",
+      "authors": [
+        "Donghu Kim",
+        "Youngdo Lee",
+        "Minho Park",
+        "Kinam Kim",
+        "Takuma Seno",
+        "I Made Aswin Nahrendra",
+        "Sehee Min",
+        "Daniel Palenicek",
+        "Florian Vogt",
+        "Danica Kragic",
+        "Jan Peters",
+        "Jaegul Choo",
+        "Hojoon Lee"
+      ],
+      "year": 2026,
+      "venue": "RSS 2026 · Outstanding Paper Award",
+      "tags": [
+        "强化学习",
+        "SAC",
+        "灵巧操作",
+        "Sim2Real",
+        "获奖论文"
+      ],
+      "summary": "高维机器人控制为什么常在PPO的稳定性与SAC的数据效率间两难？FlashSAC用更大模型、批量和并行采样减少更新次数，再约束权重、特征与梯度尺度，抑制价值误差累积。作者在多类仿真任务及G1实机行走中验证效率收益。阅读时重点分清样本效率与墙钟时间，并核对硬件、基线预算和消融，不能把快速仿真训练等同于通用实机操作能力。",
+      "whySelected": "RSS官方Outstanding Paper Award获奖作；连接高维操作强化学习与可复用的训练稳定性设计。",
+      "sources": [
+        {
+          "label": "论文与版本",
+          "url": "https://arxiv.org/abs/2604.04539"
+        },
+        {
+          "label": "正文",
+          "url": "https://arxiv.org/html/2604.04539v2"
+        },
+        {
+          "label": "RSS官方奖项",
+          "url": "https://roboticsconference.org/2026/program/awards/"
+        },
+        {
+          "label": "作者项目与视频",
+          "url": "https://holiday-robot.github.io/FlashSAC/"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun",
+        "lv"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "RSS官方Outstanding Paper Award获奖作；连接高维操作强化学习与可复用的训练稳定性设计。",
+          "relation": "高维控制、灵巧手与人形Sim2Real，兼顾算法与系统吞吐。",
+          "prerequisites": [
+            "SAC与Bellman自举",
+            "经验回放和UTD比",
+            "归一化与分布式价值函数"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        },
+        "lv": {
+          "whyRead": "P0强化学习操作基础进阶：先理解critic为何发散，再将稳定化设计带回自己的操作基线。",
+          "relation": "P0机器人操作RL；P1 IsaacLab/MuJoCo仿真与Sim2Real。",
+          "prerequisites": [
+            "MDP和策略梯度",
+            "SAC双Q与最大熵目标",
+            "PyTorch训练循环"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2604.04539",
+        "other": null
+      },
+      "publicationStatus": "accepted",
+      "publicationDate": "2026-04-06",
+      "discoveredDate": "2026-11-03",
+      "verifiedAt": "2026-11-03",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": "https://github.com/Holiday-Robot/FlashSAC",
+        "project": "https://holiday-robot.github.io/FlashSAC/",
+        "video": "https://holiday-robot.github.io/FlashSAC/",
+        "data": null
+      },
+      "limits": [
+        "墙钟测量使用单张RTX 5090；并行仿真、批量和实现优化共同影响速度，不能视为纯算法的硬件无关加速。",
+        "真实机器人验证为G1行走；灵巧操作的仿真成绩不等同于真实灵巧操作迁移。",
+        "高维任务上的收益不意味着每个低维任务都明显优于PPO；获奖也不替代独立复现。"
+      ],
+      "assumptions": [
+        "训练具有可高吞吐采样的仿真环境，并提供任务奖励。"
+      ],
+      "evidence": [
+        {
+          "url": "https://roboticsconference.org/2026/program/awards/",
+          "claim": "官方明确列为RSS 2026 Outstanding Paper Award winner。",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "url": "https://roboticsconference.org/2026/program/papers/99/",
+          "claim": "RSS 2026录用及完整作者；作者顺序采用该会议页和项目页，Nahrendra拼写采用作者项目页。",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "url": "https://arxiv.org/abs/2604.04539",
+          "claim": "首次提交2026-04-06，v2为2026-05-15；publicationDate记录首次公开预印本日期，不推定会议论文集具体出版日。",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "url": "https://arxiv.org/html/2604.04539v2",
+          "claim": "重点核读第3、4、5.1、6、7节，核验图1、8、9及硬件/基线预算描述。",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "url": "https://holiday-robot.github.io/FlashSAC/",
+          "claim": "作者对应机构、代码及页面内实机视频已核验。",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "url": "https://github.com/Holiday-Robot/FlashSAC",
+          "claim": "直接打开官方FlashSAC代码仓库，题名相符，含flash_rl、configs、docs等目录；未运行。",
+          "checkedAt": "2026-11-03"
+        }
+      ],
+      "researchNotes": [
+        "旧文首次发现，非今日新发表，非周一经典；已与现有身份注册表核对未重复。",
+        "建议路线：第3.2节SAC基础→第4节三个设计→图1与第5.1节预算→第6节消融。先单独记录环境步数、梯度更新数、墙钟三种横轴。",
+        "限定章节重点核读，未运行代码、复现结果或逐项审阅全部附录。arXiv作者拼写/顺序与会议页存在差异，采用会议页顺序和作者项目页拼写。",
+        "arXiv页面v2标注5月15日，而HTML内部标题区另出现8月24日；日期以官方submission history为准，不将正文排版日期当新版本。"
+      ],
+      "summaryEn": "Why does high-dimensional robot control trade PPO stability against SAC data efficiency? FlashSAC uses larger models, batches and parallel sampling with fewer updates, while constraining weight, feature and gradient scales to curb value-error accumulation. The authors evaluate efficiency across simulated tasks and real G1 walking. Distinguish sample efficiency from wall-clock time and inspect hardware, baseline budgets and ablations; fast simulation training does not establish general real-world manipulation.",
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/flashsac-overview.webp",
+          "sha256": "d395d4668264d01580b18777031064c0cf6728326021c7de56cae06ca6737f94",
+          "width": 1600,
+          "height": 792,
+          "sourceUrl": "https://arxiv.org/html/2604.04539v2/overview.png",
+          "evidenceUrl": "https://arxiv.org/html/2604.04539v2",
+          "verifiedAt": "2026-11-03",
+          "credit": "Donghu Kim et al. · Figure 1",
+          "rights": "Paper distributed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), verified from arXiv licence link. Authors retain copyright. Original figure proportionally resized and converted to WebP; no content changed.",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "light",
+          "altZh": "FlashSAC原论文图1：低维、高维及实机行走结果概览",
+          "altEn": "Donghu Kim et al. · Figure 1; complete original figure, resized proportionally."
+        },
+        "figureNote": "完整原论文图1，已目视核验三组面板，等比缩小并转WebP。",
+        "institutions": [
+          {
+            "name": "Holiday Robotics",
+            "institutionId": "pending-holiday-robotics",
+            "institutionType": "company",
+            "markType": "organization-mark",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/holiday-robotics-official-symbol.7a0e74894933.svg",
+              "sha256": "7a0e7489493355a0b7de545aaefc3b55a819043b640c0509d85be311c5198e64",
+              "width": 900,
+              "height": 842,
+              "sourceUrl": "https://holiday-robotics.com/logos/logo-open.svg",
+              "evidenceUrl": "https://holiday-robotics.com/",
+              "verifiedAt": "2026-11-03",
+              "credit": "Holiday Robotics official compact symbol",
+              "rights": "Official artwork; copyright and trademark remain with the named institution. Source verification is not separate authorization. Editorial identification of the evidenced paper affiliation only, not website branding, partnership or endorsement. Preserve complete original artwork, colors and aspect ratio; no open licence claimed. No separate logo licence found on inspected official homepage.",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "Holiday Robotics 官方独立紧凑标识",
+              "altEn": "Official standalone compact symbol of Holiday Robotics"
+            },
+            "authorNames": [
+              "Donghu Kim",
+              "Sehee Min",
+              "Hojoon Lee"
+            ],
+            "evidence": [
+              {
+                "url": "https://holiday-robot.github.io/FlashSAC/",
+                "claim": "论文／作者项目页明确列出该机构与作者对应关系。",
+                "checkedAt": "2026-11-03"
+              }
+            ],
+            "note": "已核验论文署名；官方标志只复用现有机构注册表，不以其他组织替代。"
+          },
+          {
+            "name": "KAIST",
+            "institutionId": "pending-kaist",
+            "institutionType": "university",
+            "markType": "compact-symbol",
+            "logo": {
+              "kind": "institution-logo",
+              "sourceUrl": "https://www.kaist.ac.kr/favicon.ico",
+              "evidenceUrl": "https://www.kaist.ac.kr",
+              "verifiedAt": "2026-11-02",
+              "rights": "Official institutional artwork; trademark and copyright remain with owner. No open licence or blanket permission asserted. Editorial paper-affiliation identification only, no endorsement; preserve complete mark, aspect ratio, colors and clear space.",
+              "credit": "KAIST official identity",
+              "width": 48,
+              "height": 48,
+              "sha256": "a35f9d825694c0d537e54a4a0175b928db7db38e87639817b1f7e6163451774c",
+              "background": "transparent",
+              "displayPolicy": "official-brand",
+              "altEn": "Official KAIST institutional mark",
+              "altZh": "KAIST 官方机构标志",
+              "path": "assets/institutions/kaist.png"
+            },
+            "authorNames": [
+              "Youngdo Lee",
+              "Minho Park",
+              "Kinam Kim",
+              "Jaegul Choo"
+            ],
+            "evidence": [
+              {
+                "url": "https://holiday-robot.github.io/FlashSAC/",
+                "claim": "论文／作者项目页明确列出该机构与作者对应关系。",
+                "checkedAt": "2026-11-03"
+              }
+            ],
+            "note": "已核验论文署名；官方标志只复用现有机构注册表，不以其他组织替代。"
+          },
+          {
+            "name": "KRAFTON",
+            "institutionId": "pending-krafton",
+            "institutionType": "company",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Youngdo Lee",
+              "I Made Aswin Nahrendra"
+            ],
+            "evidence": [
+              {
+                "url": "https://holiday-robot.github.io/FlashSAC/",
+                "claim": "论文／作者项目页明确列出该机构与作者对应关系。",
+                "checkedAt": "2026-11-03"
+              }
+            ],
+            "note": "已核验论文署名；官方标志只复用现有机构注册表，不以其他组织替代。"
+          },
+          {
+            "name": "Turing Inc",
+            "institutionId": "pending-turing-inc",
+            "institutionType": "company",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Takuma Seno"
+            ],
+            "evidence": [
+              {
+                "url": "https://holiday-robot.github.io/FlashSAC/",
+                "claim": "论文／作者项目页明确列出该机构与作者对应关系。",
+                "checkedAt": "2026-11-03"
+              }
+            ],
+            "note": "已核验论文署名；官方标志只复用现有机构注册表，不以其他组织替代。"
+          },
+          {
+            "name": "TU Darmstadt",
+            "institutionId": "pending-tu-darmstadt",
+            "institutionType": "university",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Daniel Palenicek",
+              "Jan Peters"
+            ],
+            "evidence": [
+              {
+                "url": "https://holiday-robot.github.io/FlashSAC/",
+                "claim": "论文／作者项目页明确列出该机构与作者对应关系。",
+                "checkedAt": "2026-11-03"
+              }
+            ],
+            "note": "已核验论文署名；官方标志只复用现有机构注册表，不以其他组织替代。"
+          },
+          {
+            "name": "hessian.AI",
+            "institutionId": "pending-hessianai",
+            "institutionType": "research-institute",
+            "markType": "organization-mark",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/hessian-ai-official-symbol.faf13b80193c.png",
+              "sha256": "faf13b80193c9520b9ab86c52cd9074ee17802f1b6401872dadbe81bfbad0863",
+              "width": 192,
+              "height": 192,
+              "sourceUrl": "https://www.hessian.ai/wp-content/uploads/2022/02/cropped-hessian-ai-icon-192x192.png",
+              "evidenceUrl": "https://www.hessian.ai/",
+              "verifiedAt": "2026-11-03",
+              "credit": "hessian.AI official compact symbol",
+              "rights": "Official artwork; copyright and trademark remain with the named institution. Source verification is not separate authorization. Editorial identification of the evidenced paper affiliation only, not website branding, partnership or endorsement. Preserve complete original artwork, colors and aspect ratio; no open licence claimed. Policy: https://www.hessian.ai/legal-notice/ ; permission for reuse is not asserted.",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "hessian.AI 官方独立紧凑标识",
+              "altEn": "Official standalone compact symbol of hessian.AI"
+            },
+            "authorNames": [
+              "Daniel Palenicek",
+              "Jan Peters"
+            ],
+            "evidence": [
+              {
+                "url": "https://holiday-robot.github.io/FlashSAC/",
+                "claim": "论文／作者项目页明确列出该机构与作者对应关系。",
+                "checkedAt": "2026-11-03"
+              }
+            ],
+            "note": "已核验论文署名；官方标志只复用现有机构注册表，不以其他组织替代。"
+          },
+          {
+            "name": "KTH Royal Institute of Technology",
+            "institutionId": "pending-kth-royal-institute-of-technology",
+            "institutionType": "university",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Florian Vogt",
+              "Danica Kragic"
+            ],
+            "evidence": [
+              {
+                "url": "https://holiday-robot.github.io/FlashSAC/",
+                "claim": "论文／作者项目页明确列出该机构与作者对应关系。",
+                "checkedAt": "2026-11-03"
+              }
+            ],
+            "note": "已核验论文署名；官方标志只复用现有机构注册表，不以其他组织替代。"
+          },
+          {
+            "name": "German Research Center for AI (DFKI)",
+            "institutionId": "pending-german-research-center-for-ai-dfki",
+            "institutionType": "research-institute",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Jan Peters"
+            ],
+            "evidence": [
+              {
+                "url": "https://holiday-robot.github.io/FlashSAC/",
+                "claim": "论文／作者项目页明确列出该机构与作者对应关系。",
+                "checkedAt": "2026-11-03"
+              }
+            ],
+            "note": "已核验论文署名；官方标志只复用现有机构注册表，不以其他组织替代。"
+          }
+        ],
+        "authors": []
+      }
+    },
+    {
+      "id": "arxiv-2607-11734",
+      "title": "NeuralActuator：机器人动力学与外力感知的神经执行器建模",
+      "titleEn": "NeuralActuator: Neural Actuation Modeling for Robot Dynamics and External Force Perception",
+      "authors": [
+        "Zhiyang Dou",
+        "John U. Onyemelukwe",
+        "Hangxing Zhang",
+        "Heng Zhang",
+        "Minghao Guo",
+        "Yunsheng Tian",
+        "Michal Piotr Lipiec",
+        "Joshua Jacob",
+        "Chao Liu",
+        "Peter Yichen Chen",
+        "Yuri Ivanov",
+        "Wojciech Matusik"
+      ],
+      "year": 2026,
+      "venue": "RSS 2026 · Outstanding Systems Paper Award",
+      "tags": [
+        "动力学建模",
+        "外力感知",
+        "可微仿真",
+        "行为克隆",
+        "获奖论文"
+      ],
+      "summary": "低成本机械臂的电流并不可靠地等于关节力矩。NeuralActuator利用指令、状态和电机遥测历史，经Transformer预测仿真力矩替代量、接触外力和工况。力矩分支通过可微仿真从位姿轨迹学习，其余分支仍需标签；预测外力可辅助行为克隆。重点理解替代量与真实力矩的区别，以及跨平台、载荷范围和关节工况测试边界，而非将其当作无需标定的通用力传感器。",
+      "whySelected": "RSS官方Outstanding Systems Paper获奖作；将执行器建模、可微仿真和力反馈操作连成可检查的系统。",
+      "sources": [
+        {
+          "label": "论文与版本",
+          "url": "https://arxiv.org/abs/2607.11734"
+        },
+        {
+          "label": "正文",
+          "url": "https://arxiv.org/html/2607.11734v2"
+        },
+        {
+          "label": "RSS官方奖项",
+          "url": "https://roboticsconference.org/2026/program/awards/"
+        },
+        {
+          "label": "作者项目与视频",
+          "url": "https://people.csail.mit.edu/frankzydou/projects/NeuralActuator/index.html"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "RSS官方Outstanding Systems Paper获奖作；将执行器建模、可微仿真和力反馈操作连成可检查的系统。",
+          "relation": "机器人系统辨识、低成本操作与本体感知，不是纯机械结构设计。",
+          "prerequisites": [
+            "机械臂动力学与Jacobian",
+            "可微仿真",
+            "Transformer和多任务监督"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2607.11734",
+        "other": null
+      },
+      "publicationStatus": "accepted",
+      "publicationDate": "2026-07-13",
+      "discoveredDate": "2026-11-03",
+      "verifiedAt": "2026-11-03",
+      "readDepth": "fulltext",
+      "paperType": "system",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": "https://github.com/Frank-ZY-Dou/Dynamics-Modeling/tree/main/NeuralActuator",
+        "project": "https://people.csail.mit.edu/frankzydou/projects/NeuralActuator/index.html",
+        "video": "https://people.csail.mit.edu/frankzydou/projects/NeuralActuator/index.html",
+        "data": "https://github.com/Frank-ZY-Dou/Dynamics-Modeling/tree/main/NeuralActuator/data"
+      },
+      "limits": [
+        "隐式耦合的力矩替代量可能吸收外载荷与模型误差，不是可辨识的物理执行器力矩。",
+        "Franka部分为离线载荷力估计；下游BC测试位于预训练载荷范围内，不能宣称未见载荷泛化。",
+        "工况实验只监督评估Joint 3的机械受限状态，并非通用电机故障或健康诊断。"
+      ],
+      "assumptions": [
+        "需要同步本体状态、指令、平台相关遥测及训练外力标签；三维外力表述假设参考点残余力矩可忽略。"
+      ],
+      "evidence": [
+        {
+          "url": "https://roboticsconference.org/2026/program/awards/",
+          "claim": "官方明确列为RSS 2026 Outstanding Systems Paper in Memory of Seth Teller Award winner。",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "url": "https://arxiv.org/abs/2607.11734",
+          "claim": "完整作者；首次提交2026-07-13，v2为7月17日。publicationDate为首次公开预印本日期，RSS录用由官方会议页另行确认。",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "url": "https://arxiv.org/html/2607.11734v2",
+          "claim": "重点核读III-A/B方法与物理解释、IV-F/G/I实验边界，核验图3。",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "url": "https://people.csail.mit.edu/frankzydou/projects/NeuralActuator/index.html",
+          "claim": "MIT与Amazon Robotics署名及作者免责声明、方法、代码和项目视频核验。",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "url": "https://github.com/Frank-ZY-Dou/Dynamics-Modeling/tree/main/NeuralActuator",
+          "claim": "公开代码、数据目录、预训练权重说明和硬件目录可访问；未运行。",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "url": "https://github.com/Frank-ZY-Dou/Dynamics-Modeling/tree/main/NeuralActuator/data",
+          "claim": "直接打开NeuralActuator/data目录，核验force_sensor、force_unlabeled、franka/lift_hold、motor_condition、so101、weight子目录；未下载或检查全体数据。",
+          "checkedAt": "2026-11-03"
+        }
+      ],
+      "researchNotes": [
+        "旧文首次发现，非今日新发表，非周一经典；现有身份注册表未重复。",
+        "建议先看图3和III-B，明确哪些头靠位姿监督、哪些靠标签；再读IV-I对照设置，最后检查IV-F跨平台与IV-G工况边界。",
+        "限定章节重点核读，未独立复现、未核读所有附录。图3为高层示意，图注明确接触门控未画出，实际块细节以正文为准。"
+      ],
+      "summaryEn": "Motor current on low-cost arms is not a reliable proxy for joint torque. NeuralActuator uses command, state and motor-telemetry histories in a Transformer to predict a simulation torque surrogate, contact force and operating condition. The torque head learns through differentiable simulation from pose trajectories; other heads still require labels. Predicted force can augment behavior cloning. Focus on surrogate versus physical torque and the limits of platform, payload and joint-condition tests, rather than treating it as a calibration-free universal force sensor.",
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/neuralactuator-pipeline.webp",
+          "sha256": "23ede30288e039d45618096e6a86e1346162c8c1777053bbe3a0479fa6589cfc",
+          "width": 1600,
+          "height": 626,
+          "sourceUrl": "https://arxiv.org/html/2607.11734v2/Figs/fig_pipeline.png",
+          "evidenceUrl": "https://arxiv.org/html/2607.11734v2",
+          "verifiedAt": "2026-11-03",
+          "credit": "Zhiyang Dou et al. · Figure 3",
+          "rights": "Paper distributed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), verified from arXiv licence link. Authors retain copyright. Original figure proportionally resized and converted to WebP; no content changed.",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "light",
+          "altZh": "NeuralActuator原论文图3：历史输入、可微仿真与多头预测流程",
+          "altEn": "Zhiyang Dou et al. · Figure 3; complete original figure, resized proportionally."
+        },
+        "figureNote": "完整原论文图3，已目视核验，等比缩小并转WebP；图中预测力矩应结合正文理解为替代量。",
+        "institutions": [
+          {
+            "name": "Massachusetts Institute of Technology",
+            "institutionId": "pending-massachusetts-institute-of-technology",
+            "institutionType": "university",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Zhiyang Dou",
+              "John U. Onyemelukwe",
+              "Hangxing Zhang",
+              "Heng Zhang",
+              "Minghao Guo",
+              "Yunsheng Tian",
+              "Michal Piotr Lipiec",
+              "Joshua Jacob",
+              "Chao Liu",
+              "Peter Yichen Chen",
+              "Wojciech Matusik"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2607.11734v2",
+                "claim": "论文／作者项目页明确列出该机构与作者对应关系。",
+                "checkedAt": "2026-11-03"
+              }
+            ],
+            "note": "已核验论文署名；官方标志只复用现有机构注册表，不以其他组织替代。"
+          },
+          {
+            "name": "Amazon Robotics",
+            "institutionId": "pending-amazon-robotics",
+            "institutionType": "company",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Yuri Ivanov"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2607.11734v2",
+                "claim": "论文／作者项目页明确列出该机构与作者对应关系。",
+                "checkedAt": "2026-11-03"
+              }
+            ],
+            "note": "论文注明该作者的本研究与其Amazon职位无关；不暗示Amazon支持或参与研究。"
+          }
+        ],
+        "authors": []
+      }
+    },
+    {
+      "id": "arxiv-2610-41663",
+      "title": "ResMerge：通过残差策略学习与合并持续适配预训练机器人策略",
+      "titleEn": "ResMerge: Residual Policy Learning and Merging for Continual Adaptation of Pre-trained Robot Policies",
+      "authors": [
+        "Kefei Zhu",
+        "Lingyun Xu",
+        "Yue Xin",
+        "Xiaoqi Li",
+        "Caixin Guo",
+        "Xincheng Du",
+        "Yuanpei Chen",
+        "Yaodong Yang",
+        "Hao Dong"
+      ],
+      "year": 2026,
+      "venue": "arXiv 预印本",
+      "tags": [
+        "持续学习",
+        "残差强化学习",
+        "机器人操作",
+        "模型合并"
+      ],
+      "summary": "预训练策略遇到连续新任务，如何不为每个任务永久增加一个模块？ResMerge冻结基础策略，用强化学习训练低秩残差，再根据修正方向与幅值的一致性选择合并或扩容，并对合并后的策略继续训练。LIBERO和真实机械臂实验展示了技能保持与存储节省的权衡；无需新增专家示范不等于无需交互、重置或奖励。",
+      "whySelected": "把持续机器人学习的存储问题落到残差动作场，而不只按任务语义判断可合并性；适合对照昨天的残差策略路线继续读。",
+      "sources": [
+        {
+          "label": "原始论文与版本记录",
+          "url": "https://arxiv.org/abs/2610.41663"
+        },
+        {
+          "label": "正文 HTML",
+          "url": "https://arxiv.org/html/2610.41663v1"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun",
+        "lv"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "关注持续部署时技能保持、交互成本与参数增长的共同约束。",
+          "relation": "机器人学习与长期部署；与控制器修正、模型合并相接。",
+          "prerequisites": [
+            "MDP与SAC",
+            "残差控制",
+            "低秩矩阵因子分解"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        },
+        "lv": {
+          "whyRead": "P0：从已学会的操作技能继续适配，先理解基础动作加残差，再研究合并判据。",
+          "relation": "操作学习优先；连接模仿预训练、在线RL与持续学习。",
+          "prerequisites": [
+            "行为克隆与冻结预训练策略",
+            "SAC actor/critic",
+            "余弦相似度与低秩网络"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.41663",
+        "other": null
+      },
+      "publicationStatus": "preprint",
+      "publicationDate": "2026-10-30",
+      "discoveredDate": "2026-11-03",
+      "verifiedAt": "2026-11-03",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "recent",
+      "updateNote": "",
+      "links": {
+        "code": "https://github.com/zhucoffee/resmerge-official",
+        "project": "https://resmerge.github.io/",
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "基础策略须已有可用能力；仍需在线交互、重置、稀疏奖励及合并后的旧任务再训练。",
+        "仿真实验残差使用物体位姿等特权状态，真机改用冻结视觉特征；不能直接视作相同观测条件。",
+        "真机合并后平均成功率72.5%，未合并78.75%；专家数减半伴随6.25个百分点下降。",
+        "论文后合并指标包含RL再精炼，不是单独参数平均的收益；公开代码范围不含所有小模型及序贯SFT对照。"
+      ],
+      "assumptions": [
+        "任务描述及任务到专家映射可用；合并阈值按backbone固定，候选不兼容时允许专家池继续增长。"
+      ],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2610.41663",
+          "claim": "核验完整作者、题名、2026-10-30 v1提交日期及预印本身份；11月2日是cs.RO公告批次，不是提交日。",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.41663v1",
+          "claim": "重点核读正文和原图；具体范围见researchNotes，未独立复现。",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "url": "https://github.com/zhucoffee/resmerge-official",
+          "claim": "作者论文链接重定向到zhucoffee/resmerge-official；README列真机与OpenVLA-OFT仿真入口及未公开实验范围，未运行。",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "url": "https://resmerge.github.io/",
+          "claim": "作者项目页直接访问核验，包含题名、作者与方法展示；2026-11-03已保存HTML，网页工具复查有一次临时错误。",
+          "checkedAt": "2026-11-03"
+        }
+      ],
+      "researchNotes": [
+        "重点核读III问题、IV-A/B方法、V-C真机、V-D消融、VII限制，并核对图2、表II/III；附录未穷尽，代码未运行。",
+        "阅读顺序：图2→式1基础动作+残差→式2–4方向/幅值一致性→表II存储与成功率权衡；初学先补SAC，难度高但无需先掌握整个VLA训练栈。",
+        "2026-10-30提交、11月2日公告；11月3日首次精选，已对历史28篇身份去重。资源仅链接实际核验的项目/代码，未核验独立数据下载链接。"
+      ],
+      "summaryEn": "How can a pretrained policy adapt to successive tasks without permanently adding a module for each one? ResMerge freezes the base policy, trains low-rank residuals with reinforcement learning, then merges or expands according to agreement in correction direction and magnitude, followed by further training. LIBERO and real-arm experiments show a trade-off between skill retention and storage. No new expert demonstrations does not mean no interaction, resets, or rewards.",
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/resmerge-method.webp",
+          "sha256": "45348b324ee7773109ab5ce11ec0983493159940dd4df07503f0a3e07c4df462",
+          "width": 1800,
+          "height": 674,
+          "sourceUrl": "https://arxiv.org/html/2610.41663v1/Method_new_sliced.png",
+          "evidenceUrl": "https://arxiv.org/html/2610.41663v1",
+          "verifiedAt": "2026-11-03",
+          "credit": "Kefei Zhu et al. · Figure 2",
+          "rights": "原论文作者版权；arXiv非独占许可不是开放再利用许可。仅有出处的论文导读缩略图，不声称额外授权。",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "light",
+          "altZh": "ResMerge原图2：学习残差、比较修正场并选择合并或扩容",
+          "altEn": "Kefei Zhu et al. · Figure 2; complete original figure, proportionally resized."
+        },
+        "figureNote": "核验原论文图2与完整图注；保留全部面板及比例，仅缩放转WebP，非AI绘制。",
+        "institutions": [
+          {
+            "name": "Peking University",
+            "institutionId": "pending-peking-university",
+            "logo": null,
+            "authorNames": [
+              "Kefei Zhu",
+              "Lingyun Xu",
+              "Yue Xin",
+              "Xiaoqi Li",
+              "Caixin Guo",
+              "Xincheng Du",
+              "Yuanpei Chen",
+              "Yaodong Yang",
+              "Hao Dong"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/pdf/2610.41663",
+                "claim": "原论文首页署名逐项核验；只描述本论文机构，不推断现任雇主。",
+                "checkedAt": "2026-11-03"
+              }
+            ],
+            "note": "复用现有机构注册表身份与素材状态；未取得额外标识授权。",
+            "institutionType": "university",
+            "markType": "none"
+          }
+        ],
+        "authors": []
+      }
+    },
+    {
+      "id": "arxiv-2610-41857",
+      "title": "失败的是仿真器，而非策略：审计机器人仿真基准中的接触伪影",
+      "titleEn": "When the Simulator Fails, Not the Policy: Auditing Contact Artifacts in Simulated Robot Benchmarks",
+      "authors": [
+        "Alex Zhou",
+        "Junhao Wu",
+        "Xueyang Zhou",
+        "Yixiao Huo",
+        "Hongcheng Gao",
+        "Di Zhu",
+        "Zhenghao Zhang",
+        "Yongchao Chen"
+      ],
+      "year": 2026,
+      "venue": "arXiv 预印本",
+      "tags": [
+        "仿真评测",
+        "接触动力学",
+        "Isaac Sim",
+        "MuJoCo"
+      ],
+      "summary": "操作失败一定是策略不好吗？SimuGuard逐物理步记录接触与状态，用精确回放和单参数干预追查异常弹飞。作者在RoboTwin把一类错误定位到PhysX碰撞计算的固定阈值，并在有限闭环实验中修复；同时审计Isaac Sim与MuJoCo基准。读时应区分检测到的伪影、因果修复和成功率估计，不能把小规模结果推广为所有失败都源于仿真器。",
+      "whySelected": "将仿真器自身作为机器人学习评测的可审计变量；提供比单看成功率更有用的失效诊断链。",
+      "sources": [
+        {
+          "label": "原始论文与版本记录",
+          "url": "https://arxiv.org/abs/2610.41857"
+        },
+        {
+          "label": "正文 HTML",
+          "url": "https://arxiv.org/html/2610.41857v1"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun",
+        "lv"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "适合检查评测可信度与接触模型误差；尤其应读修复而非只调慢弹飞的区别。",
+          "relation": "机器人仿真、接触动力学与基准设计，不是纯机械设计。",
+          "prerequisites": [
+            "刚体接触与碰撞检测",
+            "闭环与开环回放",
+            "配对实验和显著性"
+          ],
+          "difficulty": "intermediate",
+          "readRecommendation": "read"
+        },
+        "lv": {
+          "whyRead": "P1：在Isaac/MuJoCo操作基准上做学习前，先掌握逐步记录、重放与单变量排错。",
+          "relation": "直接服务P0操作学习实验可信度；适合与ResMerge的LIBERO结果交叉阅读。",
+          "prerequisites": [
+            "仿真physics step与policy step",
+            "LIBERO或robosuite基本结构",
+            "成功率与置信判断"
+          ],
+          "difficulty": "intermediate",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.41857",
+        "other": null
+      },
+      "publicationStatus": "preprint",
+      "publicationDate": "2026-10-30",
+      "discoveredDate": "2026-11-03",
+      "verifiedAt": "2026-11-03",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "recent",
+      "updateNote": "",
+      "links": {
+        "code": "https://github.com/ALEXander22568/simuguard",
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "修复后的闭环验证仅两种策略、五个任务、每任务20种子；LingBot-VA共有83种子的成功率差异单独不显著（p=0.11）。",
+        "只替换PhysX 5.3.1内一个常数，未用完整新引擎重跑；RoboDojo的另一碰撞路径原因未定位。",
+        "检测精度仅在一个任务人工标注验证；MuJoCo审计规模较小，不能宣称某引擎全面优于另一引擎。"
+      ],
+      "assumptions": [
+        "检测阈值是操作性定义，不是能量守恒证明；异常候选仍需人工判断和干预定位。"
+      ],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2610.41857",
+          "claim": "核验完整作者、题名、2026-10-30 v1提交日期及预印本身份；11月2日是cs.RO公告批次，不是提交日。",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.41857v1",
+          "claim": "重点核读正文和原图；具体范围见researchNotes，未独立复现。",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "url": "https://github.com/ALEXander22568/simuguard",
+          "claim": "作者arXiv页面直接链接公开SimuGuard仓库，网页可访问；未执行任何代码。",
+          "checkedAt": "2026-11-03"
+        }
+      ],
+      "researchNotes": [
+        "重点核读第3节审计流程、第4.2–4.5节因果定位/闭环结果/跨平台/可靠性、第5节限制，核对图2和表2–4；未逐项核验全部附录、运行补丁或独立复现。",
+        "建议图2→第3.4精确回放→表2单常数修复→表3闭环→第5节。基础训练：先为一个简单任务保存逐步状态，理解为什么状态恢复不等于从头回放；前沿问题是修复与跨引擎有效性。",
+        "2026-10-30提交、11月2日公告；11月3日首次精选，已对历史身份去重。未核验到独立项目/视频/数据发布页，不猜资源链接。"
+      ],
+      "summaryEn": "Does a failed manipulation episode necessarily imply a poor policy? SimuGuard records contacts and states at every physics step, using exact replay and single-parameter interventions to investigate abnormal ejections. The authors trace one RoboTwin failure mode to a fixed threshold in PhysX collision computation and repair it in limited closed-loop experiments; they also audit Isaac Sim and MuJoCo benchmarks. Distinguish detected artifacts, causal repairs, and estimated success rates rather than attributing all failures to the simulator.",
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/simuguard-overview.webp",
+          "sha256": "ecca2a8eef79e00c3c402bc6be00007a6a7cdd053338aa8244c12755e4f66c8f",
+          "width": 1320,
+          "height": 615,
+          "sourceUrl": "https://arxiv.org/html/2610.41857v1/fig2_overview.png",
+          "evidenceUrl": "https://arxiv.org/html/2610.41857v1",
+          "verifiedAt": "2026-11-03",
+          "credit": "Alex Zhou et al. · Figure 2",
+          "rights": "原论文以CC BY 4.0发布（https://creativecommons.org/licenses/by/4.0/）；署名原作者，完整保留图内容，仅等比缩放与格式转换。",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "light",
+          "altZh": "SimuGuard原图2：记录、检测、回放、干预重跑与计分五步流程",
+          "altEn": "Alex Zhou et al. · Figure 2; complete original figure, proportionally resized."
+        },
+        "figureNote": "核验真实原图2及图注；图中不同计分口径不可混为单一成功率。完整保留面板，仅缩放转WebP。",
+        "institutions": [
+          {
+            "name": "Tsinghua University",
+            "institutionId": "tsinghua",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/tsinghua-emblem.jpg",
+              "sha256": "edb1c56f1d4399ef32430f418cb179169e04955e75d95eb57c001e5b2f069ade",
+              "width": 554,
+              "height": 385,
+              "sourceUrl": "https://www.tsinghua.edu.cn/__local/C/B6/1C/5682B1124834BFE4B7BB43744CF_C7C409E3_C2FAA.pdf",
+              "evidenceUrl": "https://www.env.tsinghua.edu.cn/qinghuadaxueerjidanweibiaozhiguifanshouce-shixing.pdf",
+              "verifiedAt": "2026-10-31",
+              "credit": "Tsinghua University official emblem",
+              "rights": "官方校徽；无开放复用许可声明，保持原几何、颜色及安全空间。来源为官方章程PDF及二级单位标志规范。",
+              "displayPolicy": "official-brand",
+              "background": "light",
+              "altZh": "清华大学官方紫色校徽",
+              "altEn": "Official purple Tsinghua University emblem"
+            },
+            "authorNames": [
+              "Alex Zhou",
+              "Junhao Wu",
+              "Xueyang Zhou",
+              "Yixiao Huo",
+              "Hongcheng Gao",
+              "Yongchao Chen"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/pdf/2610.41857",
+                "claim": "原论文首页署名逐项核验；只描述本论文机构，不推断现任雇主。",
+                "checkedAt": "2026-11-03"
+              }
+            ],
+            "note": "复用现有机构注册表身份与素材状态；未取得额外标识授权。",
+            "institutionType": "university",
+            "markType": "emblem"
+          },
+          {
+            "name": "University of Chinese Academy of Sciences",
+            "institutionId": "pending-university-of-chinese-academy-of-sciences",
+            "logo": null,
+            "authorNames": [
+              "Di Zhu",
+              "Zhenghao Zhang"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/pdf/2610.41857",
+                "claim": "原论文首页署名逐项核验；只描述本论文机构，不推断现任雇主。",
+                "checkedAt": "2026-11-03"
+              }
+            ],
+            "note": "复用现有机构注册表身份与素材状态；未取得额外标识授权。",
+            "institutionType": "university",
+            "markType": "none"
+          }
+        ],
+        "authors": []
+      }
+    },
+    {
+      "id": "doi-8be9a3e58ea6e51371b7",
+      "title": "带否定合取查询的责任度量",
+      "titleEn": "Responsibility Measures for Conjunctive Queries with Negation",
+      "authors": [
+        "Meghyn Bienvenu",
+        "Diego Figueira",
+        "Pierre Lafourcade"
+      ],
+      "year": 2026,
+      "venue": "ICDT 2026 · LIPIcs 365, 20:1–20:20",
+      "tags": [
+        "责任度",
+        "带否定查询",
+        "最小支持",
+        "可解释性",
+        "数据复杂度",
+        "较早论文 · 首次发现"
+      ],
+      "summary": "较早论文首次发现。带否定的查询中，删去事实可能让答案出现，传统最小见证未必是恰当解释。本文区分同时计入存在与缺失事实的带符号支持，以及固定缺失背景的正支持，并据此扩展责任度评分。两类最小支持加权和在固定查询下可多项式计算；但这不是最小副作用更新算法，闭世界否定也不能直接替代VKG开放世界推理。",
+      "summaryEn": "First discovery of an older paper. With negation, deleting facts can make a query answer appear, so conventional minimal witnesses may not provide appropriate explanations. The paper distinguishes signed supports that include present and absent facts from positive supports that keep the absence context fixed, and extends responsibility scores accordingly. Both weighted-minimal-support approaches are polynomial-time for fixed queries. This is not a minimum-side-effect update algorithm, however, and its closed-world negation cannot directly replace open-world VKG reasoning.",
+      "whySelected": "较早论文 · 首次发现；为更新副作用的解释层补上否定语义边界，避免把“缺失事实”与“被删掉的事实”混为一谈。",
+      "sources": [
+        {
+          "label": "正式论文（ICDT 2026）",
+          "url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol365-icdt2026/LIPIcs.ICDT.2026.20/LIPIcs.ICDT.2026.20.pdf"
+        },
+        {
+          "label": "官方出版记录",
+          "url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICDT.2026.20"
+        },
+        {
+          "label": "完整版本记录",
+          "url": "https://arxiv.org/abs/2601.04868"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "li"
+      ],
+      "recommendations": {
+        "li": {
+          "whyRead": "建议现在先读§1的食谱反例、§3.1与§4.1两种支持定义，再看命题3.9和4.10；用同一小数据库手算正支持与带符号支持。",
+          "relation": "与固定映射实例更新的联系是解释候选方案，而非直接执行更新。若源SQL含安全否定，可据此检查解释是否错误地把删除产生的缺失当成原数据库证据；迁移到OWL 2 QL、约束或SPARQL仍须另证语义对应。",
+          "prerequisites": [
+            "合取查询、并与安全否定",
+            "闭世界与开放世界语义",
+            "集合包含极小与基数最小的区别",
+            "Shapley值与数据/组合复杂度"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": "10.4230/lipics.icdt.2026.20",
+        "arxiv": "2601.04868",
+        "other": null
+      },
+      "publicationStatus": "published",
+      "publicationDate": "2026-03-18",
+      "discoveredDate": "2026-11-03",
+      "verifiedAt": "2026-11-03",
+      "readDepth": "fulltext",
+      "paperType": "theory",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "责任度解释查询结果，不生成满足用户更新要求的源事务，也不优化视图副作用。",
+        "多项式数据复杂度固定查询；组合复杂度可解类另有结构限制，不能宣称任意查询高效。",
+        "采用普通数据库、全部事实内生的设定；不能直接移植依赖外生事实的困难性结论。",
+        "未进行独立证明复核、代码运行或用户研究；未核验到本篇配套代码、项目、视频或数据。"
+      ],
+      "assumptions": [
+        "有限关系数据库、集合语义；UCQ¬允许否定原子及不等式，相关变量须出现在正原子中。",
+        "带符号数据库在活跃域上记录存在事实和不存在事实，采用闭世界解释；minimal始终指集合包含极小，不是基数最小。",
+        "带符号支持是转换后单调查询的支持；正支持只对存在事实评分，缺失背景固定为原数据库的缺失事实。",
+        "命题3.11的组合复杂度结论要求有界负原子元数、有界广义超树宽和有界自连接宽；正支持的对应结论还需核对无可合并原子等条件。"
+      ],
+      "evidence": [
+        {
+          "url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICDT.2026.20",
+          "claim": "完整作者、ICDT 2026、DOI、出版日2026-03-18及CC BY 4.0。",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol365-icdt2026/LIPIcs.ICDT.2026.20/LIPIcs.ICDT.2026.20.pdf",
+          "claim": "重点核读§1–2、§3.1–3.2、§4.1–4.2的定义与证明要点；首页机构和图2。",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "url": "https://arxiv.org/abs/2601.04868",
+          "claim": "预印本首发2026-01-08；v3修订2026-03-27；完整版本入口，未通读完整版本。",
+          "checkedAt": "2026-11-03"
+        }
+      ],
+      "researchNotes": [
+        "正文重点核读，不是全文通读：§1–2、§3.1–3.2及§4.1–4.2；浏览组合复杂度条件，未独立复核全部归约或扩展版附录。",
+        "定义/证明要点：命题4.10利用固定查询给出极小正支持的常数大小上界，枚举候选并累加逆支持大小；这不意味着查询作为输入时同样高效。",
+        "命题3.9与4.10给出MS-Shapley数据复杂度可解性；正文说明可扩展到权重函数可高效计算的WSMS，不能据此推广到所有Shapley变体。",
+        "论文未提供端到端VKG实验；阅读迁移建议属于研究设想，不是作者已实现能力。",
+        "已有Nov2最小见证论文保护全部答案；本篇量化单个答案中事实的贡献，问题身份和目标不同。",
+        "原始图2完整图形与图注已从正式PDF第7页提取并视觉核验；不生成科学图片。"
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/responsibility-negation-figure2.webp",
+          "sha256": "69f6a7ecf8b87d6a41d379473f3aa7d91898e293f3a57f0b880a8266439821dd",
+          "width": 1054,
+          "height": 224,
+          "sourceUrl": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol365-icdt2026/LIPIcs.ICDT.2026.20/LIPIcs.ICDT.2026.20.pdf",
+          "evidenceUrl": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICDT.2026.20",
+          "verifiedAt": "2026-11-03",
+          "credit": "Meghyn Bienvenu, Diego Figueira and Pierre Lafourcade · ICDT 2026 · Figure 2",
+          "rights": "CC BY 4.0. Figure 2 and its complete caption extracted from page 7 of the official paper, rasterized and losslessly encoded as WebP; no diagram content changed.",
+          "displayPolicy": "open-license",
+          "background": "light",
+          "altZh": "原文图2：带否定查询、数据库及两个极小带符号支持；实线为存在事实，红色虚线为缺失事实。",
+          "altEn": "Original Figure 2: query with negation, database and two minimal signed supports; solid edges denote positive facts and red dotted edges negative facts."
+        },
+        "figureNote": "原始理论例图及完整图注，不是系统架构图或生成插图。",
+        "institutions": [
+          {
+            "name": "University of Bordeaux",
+            "institutionId": "pending-university-of-bordeaux",
+            "institutionType": "university",
+            "markType": "compact-symbol",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/bordeaux.e3357f16fb7d.png",
+              "sha256": "e3357f16fb7d84105b8df28570bf7c0bf7d5f159f16b5713940935b5e7e34cfb",
+              "width": 32,
+              "height": 32,
+              "sourceUrl": "https://www.u-bordeaux.fr/packages/ub/themes/ub/img/favicon.ico",
+              "evidenceUrl": "https://www.u-bordeaux.fr/",
+              "verifiedAt": "2026-11-03",
+              "credit": "University of Bordeaux official compact web identity",
+              "rights": "Official institutional artwork. Copyright and trademark retained by owner; no open licence or blanket permission asserted. Editorial paper-affiliation identification only, no endorsement. Preserve complete artwork, proportions, colors and clear space. No separate institutional authorization was obtained or claimed; source/identity verification is distinct from permission. The official visual-identity charter remains applicable. Restricted to evidenced paper affiliations, not site branding, decoration, partnership or endorsement.",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "University of Bordeaux 官方紧凑身份标志",
+              "altEn": "University of Bordeaux official compact identity mark"
+            },
+            "authorNames": [
+              "Meghyn Bienvenu",
+              "Diego Figueira",
+              "Pierre Lafourcade"
+            ],
+            "evidence": [
+              {
+                "url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol365-icdt2026/LIPIcs.ICDT.2026.20/LIPIcs.ICDT.2026.20.pdf",
+                "claim": "论文首页三位作者均署名Univ. Bordeaux, CNRS, Bordeaux INP, LaBRI, UMR5800。",
+                "checkedAt": "2026-11-03"
+              }
+            ],
+            "note": "仅表示本篇论文署名，不推断现雇主。CNRS复用机构库已核验素材；其余机构仅文字，不制作徽标。"
+          },
+          {
+            "name": "CNRS",
+            "institutionId": "pending-cnrs",
+            "institutionType": "research-institute",
+            "markType": "organization-mark",
+            "logo": {
+              "kind": "institution-logo",
+              "sourceUrl": "https://www.cnrs.fr/sites/default/files/logo/logo.svg",
+              "evidenceUrl": "https://www.cnrs.fr/fr",
+              "verifiedAt": "2026-11-02",
+              "rights": "Official institutional artwork; trademark and copyright remain with owner. No open licence or blanket permission asserted. Editorial paper-affiliation identification only, no endorsement; preserve complete mark, aspect ratio, colors and clear space.",
+              "credit": "CNRS official identity",
+              "width": 55,
+              "height": 55,
+              "sha256": "8dac83c3ccf014ae53d5a0d94c299d8bba26824b21ef4318d3743dfcfbffa719",
+              "background": "transparent",
+              "displayPolicy": "official-brand",
+              "altEn": "Official CNRS institutional mark",
+              "altZh": "CNRS 官方机构标志",
+              "path": "assets/institutions/cnrs.svg"
+            },
+            "authorNames": [
+              "Meghyn Bienvenu",
+              "Diego Figueira",
+              "Pierre Lafourcade"
+            ],
+            "evidence": [
+              {
+                "url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol365-icdt2026/LIPIcs.ICDT.2026.20/LIPIcs.ICDT.2026.20.pdf",
+                "claim": "论文首页三位作者均署名Univ. Bordeaux, CNRS, Bordeaux INP, LaBRI, UMR5800。",
+                "checkedAt": "2026-11-03"
+              }
+            ],
+            "note": "仅表示本篇论文署名，不推断现雇主。CNRS复用机构库已核验素材；其余机构仅文字，不制作徽标。"
+          },
+          {
+            "name": "Bordeaux INP",
+            "institutionId": "pending-bordeaux-inp",
+            "institutionType": "university",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Meghyn Bienvenu",
+              "Diego Figueira",
+              "Pierre Lafourcade"
+            ],
+            "evidence": [
+              {
+                "url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol365-icdt2026/LIPIcs.ICDT.2026.20/LIPIcs.ICDT.2026.20.pdf",
+                "claim": "论文首页三位作者均署名Univ. Bordeaux, CNRS, Bordeaux INP, LaBRI, UMR5800。",
+                "checkedAt": "2026-11-03"
+              }
+            ],
+            "note": "仅表示本篇论文署名，不推断现雇主。CNRS复用机构库已核验素材；其余机构仅文字，不制作徽标。"
+          },
+          {
+            "name": "LaBRI (UMR 5800)",
+            "institutionId": "pending-labri-umr-5800",
+            "institutionType": "research-institute",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Meghyn Bienvenu",
+              "Diego Figueira",
+              "Pierre Lafourcade"
+            ],
+            "evidence": [
+              {
+                "url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol365-icdt2026/LIPIcs.ICDT.2026.20/LIPIcs.ICDT.2026.20.pdf",
+                "claim": "论文首页三位作者均署名Univ. Bordeaux, CNRS, Bordeaux INP, LaBRI, UMR5800。",
+                "checkedAt": "2026-11-03"
+              }
+            ],
+            "note": "仅表示本篇论文署名，不推断现雇主。CNRS复用机构库已核验素材；其余机构仅文字，不制作徽标。"
+          }
+        ],
+        "authors": []
+      }
+    }
+  ]
+}

@@ -26,6 +26,53 @@
       ]
     },
     {
+      "id": "arxiv-2604-04539",
+      "aliases": [
+        "arxiv:2604.04539"
+      ],
+      "identity": {
+        "doi": null,
+        "arxiv": "2604.04539",
+        "other": null
+      },
+      "firstSeen": "2026-11-03",
+      "lastSeen": "2026-11-03",
+      "appearances": [
+        {
+          "date": "2026-11-03",
+          "profiles": [
+            "xun",
+            "lv"
+          ],
+          "classic": false,
+          "novelty": "older-discovery"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2607-11734",
+      "aliases": [
+        "arxiv:2607.11734"
+      ],
+      "identity": {
+        "doi": null,
+        "arxiv": "2607.11734",
+        "other": null
+      },
+      "firstSeen": "2026-11-03",
+      "lastSeen": "2026-11-03",
+      "appearances": [
+        {
+          "date": "2026-11-03",
+          "profiles": [
+            "xun"
+          ],
+          "classic": false,
+          "novelty": "older-discovery"
+        }
+      ]
+    },
+    {
       "id": "arxiv-2610-12231",
       "aliases": [
         "arxiv:2610.12231"
@@ -533,6 +580,54 @@
       ]
     },
     {
+      "id": "arxiv-2610-41663",
+      "aliases": [
+        "arxiv:2610.41663"
+      ],
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.41663",
+        "other": null
+      },
+      "firstSeen": "2026-11-03",
+      "lastSeen": "2026-11-03",
+      "appearances": [
+        {
+          "date": "2026-11-03",
+          "profiles": [
+            "xun",
+            "lv"
+          ],
+          "classic": false,
+          "novelty": "recent"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-41857",
+      "aliases": [
+        "arxiv:2610.41857"
+      ],
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.41857",
+        "other": null
+      },
+      "firstSeen": "2026-11-03",
+      "lastSeen": "2026-11-03",
+      "appearances": [
+        {
+          "date": "2026-11-03",
+          "profiles": [
+            "xun",
+            "lv"
+          ],
+          "classic": false,
+          "novelty": "recent"
+        }
+      ]
+    },
+    {
       "id": "doi-259aaefa9d9fdb4b874f",
       "aliases": [
         "arxiv:2601.06764",
@@ -571,6 +666,30 @@
       "appearances": [
         {
           "date": "2026-11-01",
+          "profiles": [
+            "li"
+          ],
+          "classic": false,
+          "novelty": "older-discovery"
+        }
+      ]
+    },
+    {
+      "id": "doi-8be9a3e58ea6e51371b7",
+      "aliases": [
+        "arxiv:2601.04868",
+        "doi:10.4230/lipics.icdt.2026.20"
+      ],
+      "identity": {
+        "doi": "10.4230/lipics.icdt.2026.20",
+        "arxiv": "2601.04868",
+        "other": null
+      },
+      "firstSeen": "2026-11-03",
+      "lastSeen": "2026-11-03",
+      "appearances": [
+        {
+          "date": "2026-11-03",
           "profiles": [
             "li"
           ],
