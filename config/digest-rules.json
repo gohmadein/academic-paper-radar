@@ -18,7 +18,33 @@
     "noRepeatedFreshPush": true,
     "publicationStatusRequiresEvidence": true,
     "readDepthMustBeHonest": true,
-    "noReplicationClaim": true
+    "noReplicationClaim": true,
+    "institutionMarkPreflight": {
+      "requiredForEveryPublication": true,
+      "scope": [
+        "all-curated-profiles",
+        "all-arxiv-bulletin-entries"
+      ],
+      "paperAffiliationEvidenceRequired": true,
+      "reuseVerifiedMarksByStableId": true,
+      "searchMissingMarksBeforePublication": true,
+      "sources": [
+        "official-public",
+        "trustworthy-public-mirror-with-corroborated-provenance"
+      ],
+      "compactGraphicalMarksOnly": true,
+      "verify": [
+        "institution-identity",
+        "actual-pixels",
+        "native-background-and-alpha",
+        "dimensions",
+        "sha256",
+        "source-and-derivation",
+        "rights-boundaries"
+      ],
+      "unresolved": "保留已核实机构名称并记录具体未取得校徽的原因；不造图、不推断署名、不把尝试查找声称为全部成功。",
+      "preserveHistoricalResearchAndPrivateIds": true
+    }
   },
   "weeklyClassics": {
     "day": "Monday",
