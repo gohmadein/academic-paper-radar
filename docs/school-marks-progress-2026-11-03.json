@@ -3,8 +3,8 @@
   "scope": "Existing paper-referenced university identities only; not QS ranking coverage. Verified means source and identity, not institutional permission or brand-size compliance.",
   "baselineUniversityCount": 165,
   "originalMissing": 84,
-  "completedCount": 74,
-  "remainingCount": 10,
+  "completedCount": 77,
+  "remainingCount": 7,
   "completed": [
     {
       "id": "pending-the-hong-kong-university-of-science-and-technology-guangzhou",
@@ -22,7 +22,7 @@
         "credit": "The Hong Kong University of Science and Technology (Guangzhou) · official-source compact identity mark",
         "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. Campus-specific marks and names remain subject to respective University Name and Marks policies. Policy: https://brand.hkust.edu.hk/hkustgz-marks",
         "displayPolicy": "attributed-thumbnail",
-        "background": "transparent",
+        "background": "light",
         "altZh": "The Hong Kong University of Science and Technology (Guangzhou) 官方独立校徽或图形标志",
         "altEn": "Official compact institutional symbol of The Hong Kong University of Science and Technology (Guangzhou)"
       },
@@ -38,25 +38,25 @@
       "status": "verified",
       "logo": {
         "kind": "institution-logo",
-        "path": "assets/institutions/compact-cba399c54bd086f2.png",
-        "sha256": "cba399c54bd086f282e3860098de4468c9565cf79b9a5e86f2c5aabafb91d029",
-        "width": 180,
-        "height": 180,
-        "sourceUrl": "https://www.kth.se/polopoly_fs/1.1273722.1692876353!/image/apple-touch-icon-KTH-logo-180x180.png",
-        "evidenceUrl": "https://www.kth.se/en",
+        "path": "assets/institutions/transparent-b6f7053c87c67528.svg",
+        "sha256": "b6f7053c87c67528d6337124512b97ccae90093aa6e0f469b58fc26875aa29d3",
+        "width": 502,
+        "height": 502,
+        "sourceUrl": "https://intra.kth.se/img/logotype-blue-ff671d438dd60cb940a663d2fd5e0cf9.svg",
+        "evidenceUrl": "https://intra.kth.se/en/administration/kommunikation/varumarke/grafiskprofil/logotyp-1.845049",
         "verifiedAt": "2026-11-03",
-        "credit": "KTH Royal Institute of Technology · official-source compact identity mark",
-        "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. Official policy limits logo use to situations where KTH asserts ownership, authorship, production or operation; this record does not claim approval or compliance with those use conditions. Policy: https://intra.kth.se/en/administration/kommunikation/varumarke/grafiskprofil/logotyp-1.845049",
+        "credit": "KTH Royal Institute of Technology · official source",
+        "rights": "Copyright and trademark remain with the institution. No separate institutional permission or open reuse licence has been obtained or asserted. Source and identity verification is not permission or legal clearance. Editorial paper-affiliation identification only; no endorsement implied.",
         "displayPolicy": "attributed-thumbnail",
-        "background": "dark",
-        "altZh": "KTH Royal Institute of Technology 官方独立校徽或图形标志",
-        "altEn": "Official compact institutional symbol of KTH Royal Institute of Technology"
+        "background": "transparent",
+        "altZh": "KTH Royal Institute of Technology 完整真实机构标识",
+        "altEn": "KTH Royal Institute of Technology complete compact institutional identity mark"
       },
       "markType": "emblem",
-      "alphaStatus": "opaque-dark",
+      "alphaStatus": "transparent",
       "rightsPolicyUrl": "https://intra.kth.se/en/administration/kommunikation/varumarke/grafiskprofil/logotyp-1.845049",
-      "note": "Official homepage links complete crown-and-wreath KTH emblem as 180px touch icon. Native opaque blue background retained. Official policy limits logo use to situations where KTH asserts ownership, authorship, production or operation; this record does not claim approval or compliance with those use conditions. Original PNG bytes retained unchanged. Dimensions, SHA-256, native alpha and actual pixels verified; no AI generation or raster crop.",
-      "sha256": "cba399c54bd086f282e3860098de4468c9565cf79b9a5e86f2c5aabafb91d029"
+      "note": "Original full navy KTH crown and wreath SVG linked by official brand page; original paths and colors unchanged. Official page specifies minimum40px width. Public brand policy limits mark use to KTH-authored activities; permission not obtained. Verified native dimensions 502×502; rendered alpha (0, 255), fully transparent pixels 204109; SHA256 b6f7053c87c67528d6337124512b97ccae90093aa6e0f469b58fc26875aa29d3. No separate institutional permission or open reuse licence obtained; source verification is not legal clearance.",
+      "sha256": "b6f7053c87c67528d6337124512b97ccae90093aa6e0f469b58fc26875aa29d3"
     },
     {
       "id": "pending-tu-dresden",
@@ -64,25 +64,25 @@
       "status": "verified",
       "logo": {
         "kind": "institution-logo",
-        "path": "assets/institutions/compact-b326f65ea750af7a.png",
-        "sha256": "b326f65ea750af7a2ea495be3b0db16e3b3aa0efa4fbd37625535d40fb28554c",
-        "width": 300,
-        "height": 300,
-        "sourceUrl": "https://tu-dresden.de/touch_icon.png",
+        "path": "assets/institutions/transparent-7cb0b7e484b49c4d.png",
+        "sha256": "7cb0b7e484b49c4d2a34e26284ece9d57924299afc5b89368eb2abe64f77bd18",
+        "width": 48,
+        "height": 48,
+        "sourceUrl": "https://tu-dresden.de/favicon.ico",
         "evidenceUrl": "https://tu-dresden.de/",
         "verifiedAt": "2026-11-03",
-        "credit": "TU Dresden · official-source compact identity mark",
-        "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. Official external-use approval procedure exists; approval has not been obtained. Policy: https://tu-dresden.de/tu-dresden/organisation/zentrale-universitaetsverwaltung/dezernat-7/sachgebiet-7-1-corporate-design/cd/cd",
+        "credit": "TU Dresden · attributed original institution mark",
+        "rights": "Copyright and trademark remain with the institution. No separate institutional permission or open reuse licence obtained or asserted. Source verification is not legal clearance. Editorial paper-affiliation identification only; no endorsement.",
         "displayPolicy": "attributed-thumbnail",
-        "background": "light",
-        "altZh": "TU Dresden 官方独立校徽或图形标志",
-        "altEn": "Official compact institutional symbol of TU Dresden"
+        "background": "transparent",
+        "altZh": "TU Dresden 完整真实校徽或身份符号",
+        "altEn": "TU Dresden complete compact identity mark"
       },
       "markType": "compact-symbol",
-      "alphaStatus": "opaque-light",
-      "rightsPolicyUrl": "https://tu-dresden.de/tu-dresden/organisation/zentrale-universitaetsverwaltung/dezernat-7/sachgebiet-7-1-corporate-design/cd/cd",
-      "note": "Complete current geometric TU Dresden symbol linked as touch icon on official homepage and visually corroborated against the 2025 header mark. Native white square retained. Official external-use approval procedure exists; approval has not been obtained. Original PNG bytes retained unchanged. Dimensions, SHA-256, native alpha and actual pixels verified; no AI generation or raster crop.",
-      "sha256": "b326f65ea750af7a2ea495be3b0db16e3b3aa0efa4fbd37625535d40fb28554c"
+      "alphaStatus": "transparent",
+      "rightsPolicyUrl": "https://tu-dresden.de/",
+      "note": "Official complete current2025 emblem, lossless conversion of largest48px ICO frame toRGBA PNG; no crop, recolor or background modification. Copyright and trademark remain with the institution. No separate institutional permission or open reuse licence obtained or asserted. Source verification is not legal clearance. Editorial paper-affiliation identification only; no endorsement.",
+      "sha256": "7cb0b7e484b49c4d2a34e26284ece9d57924299afc5b89368eb2abe64f77bd18"
     },
     {
       "id": "pending-duquesne-university",
@@ -90,25 +90,25 @@
       "status": "verified",
       "logo": {
         "kind": "institution-logo",
-        "path": "assets/institutions/compact-2336578e27873b16.png",
-        "sha256": "2336578e27873b16cb63d64ad3117c307c71287cbd56942833af29ac8c0b9bff",
-        "width": 180,
-        "height": 180,
-        "sourceUrl": "https://templates.duq.edu/_resources/assets/favicons/apple-touch-icon.png",
+        "path": "assets/institutions/transparent-30bb785e95778fbb.svg",
+        "sha256": "30bb785e95778fbbf13657c6520f994c5ace8cef7dcfe711b00a8e699fd83355",
+        "width": 52,
+        "height": 62,
+        "sourceUrl": "https://www.duq.edu/_resources/assets/img/logos/duquesne.svg",
         "evidenceUrl": "https://www.duq.edu/",
         "verifiedAt": "2026-11-03",
-        "credit": "Duquesne University · official-source compact identity mark",
-        "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. University trademark policy calls for individual approval of branded products; no approval is claimed. Policy: https://www.duq.edu/about/policies-and-initiatives/the-administrative-policies/tap-35.php",
+        "credit": "Duquesne University · official source",
+        "rights": "Copyright and trademark remain with the institution. No separate institutional permission or open reuse licence has been obtained or asserted. Source and identity verification is not permission or legal clearance. Editorial paper-affiliation identification only; no endorsement implied.",
         "displayPolicy": "attributed-thumbnail",
-        "background": "light",
-        "altZh": "Duquesne University 官方独立校徽或图形标志",
-        "altEn": "Official compact institutional symbol of Duquesne University"
+        "background": "transparent",
+        "altZh": "Duquesne University 完整真实机构标识",
+        "altEn": "Duquesne University complete compact institutional identity mark"
       },
       "markType": "compact-symbol",
-      "alphaStatus": "opaque-light",
-      "rightsPolicyUrl": "https://www.duq.edu/about/policies-and-initiatives/the-administrative-policies/tap-35.php",
-      "note": "Complete official stylized white D within red octagonal shield, supplied as 180px touch icon by university homepage. Native white corners retained. University trademark policy calls for individual approval of branded products; no approval is claimed. Original PNG bytes retained unchanged. Dimensions, SHA-256, native alpha and actual pixels verified; no AI generation or raster crop.",
-      "sha256": "2336578e27873b16cb63d64ad3117c307c71287cbd56942833af29ac8c0b9bff"
+      "alphaStatus": "transparent",
+      "rightsPolicyUrl": "https://www.duq.edu/",
+      "note": "Exact whole octagonal red D shield isolated from full official vector: original path indexes0 and2 retained verbatim, including intrinsic white D; all removed paths are separate university lettering at x>=60.65. ViewBox0 0 52 62 encloses full shield. No redraw, raster background removal or recoloring. Verified native dimensions 52×62; rendered alpha (0, 255), fully transparent pixels 112; SHA256 30bb785e95778fbbf13657c6520f994c5ace8cef7dcfe711b00a8e699fd83355. No separate institutional permission or open reuse licence obtained; source verification is not legal clearance.",
+      "sha256": "30bb785e95778fbbf13657c6520f994c5ace8cef7dcfe711b00a8e699fd83355"
     },
     {
       "id": "pending-keio-university",
@@ -116,25 +116,25 @@
       "status": "verified",
       "logo": {
         "kind": "institution-logo",
-        "path": "assets/institutions/compact-00cd0f31b2dae03e.png",
-        "sha256": "00cd0f31b2dae03e26150f1bb404dd232b46c845300182fdad381abe70e08f6c",
-        "width": 180,
-        "height": 180,
-        "sourceUrl": "https://www.keio.ac.jp/apple-touch-icon.png",
+        "path": "assets/institutions/transparent-96e3a8a694c15c5b.svg",
+        "sha256": "96e3a8a694c15c5b2a74b1761ee8f5feef6ccb580e18dd4469abf292d761a93b",
+        "width": 21,
+        "height": 20,
+        "sourceUrl": "https://www.keio.ac.jp/favicon.svg",
         "evidenceUrl": "https://www.keio.ac.jp/en/",
         "verifiedAt": "2026-11-03",
-        "credit": "Keio University · official-source compact identity mark",
-        "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. Official production-data workflow requires application and credentials; this public independently linked website icon was acquired without entering that workflow or claiming use permission. Policy: https://www.keio.ac.jp/en/about/public-relations/logo/",
+        "credit": "Keio University · attributed original institution mark",
+        "rights": "Copyright and trademark remain with the institution. No separate institutional permission or open reuse licence obtained or asserted. Source verification is not legal clearance. Editorial paper-affiliation identification only; no endorsement.",
         "displayPolicy": "attributed-thumbnail",
-        "background": "light",
-        "altZh": "Keio University 官方独立校徽或图形标志",
-        "altEn": "Official compact institutional symbol of Keio University"
+        "background": "transparent",
+        "altZh": "Keio University 完整真实校徽或身份符号",
+        "altEn": "Keio University complete compact identity mark"
       },
-      "markType": "emblem",
-      "alphaStatus": "opaque-light",
-      "rightsPolicyUrl": "https://www.keio.ac.jp/en/about/public-relations/logo/",
-      "note": "Complete crossed-pen-nib symbol supplied as official 180px touch icon. Native yellow color and white square retained. Official production-data workflow requires application and credentials; this public independently linked website icon was acquired without entering that workflow or claiming use permission. Original PNG bytes retained unchanged. Dimensions, SHA-256, native alpha and actual pixels verified; no AI generation or raster crop.",
-      "sha256": "00cd0f31b2dae03e26150f1bb404dd232b46c845300182fdad381abe70e08f6c"
+      "markType": "compact-symbol",
+      "alphaStatus": "transparent",
+      "rightsPolicyUrl": "https://www.keio.ac.jp/en/",
+      "note": "Official homepage linked complete yellow pen mark. Native transparent SVG unchanged. Copyright and trademark remain with the institution. No separate institutional permission or open reuse licence obtained or asserted. Source verification is not legal clearance. Editorial paper-affiliation identification only; no endorsement.",
+      "sha256": "96e3a8a694c15c5b2a74b1761ee8f5feef6ccb580e18dd4469abf292d761a93b"
     },
     {
       "id": "pending-northwestern-university",
@@ -168,25 +168,25 @@
       "status": "verified",
       "logo": {
         "kind": "institution-logo",
-        "path": "assets/institutions/compact-5bcddc9204dbf468.png",
-        "sha256": "5bcddc9204dbf4684aad0b168839cc34601bd17318fe62e696274aec55271472",
-        "width": 192,
-        "height": 192,
-        "sourceUrl": "https://www.purdue.edu/home/wp-content/mu-plugins/boilerup-wp/favicon/android-icon-192x192.png",
-        "evidenceUrl": "https://www.purdue.edu/",
+        "path": "assets/institutions/transparent-f55eeb3f0691adc0.svg",
+        "sha256": "f55eeb3f0691adc06b807f85004c9ac562bb252d8fc7ce53c6b977aaf57a3b17",
+        "width": 850,
+        "height": 453,
+        "sourceUrl": "https://www.purdue.edu/home/wp-content/themes/purdue-home-theme-beta/imgs/PU-H.svg",
+        "evidenceUrl": "https://www.purdue.edu/brand-studio/brand/logos-usage/",
         "verifiedAt": "2026-11-03",
-        "credit": "Purdue University · official-source compact identity mark",
-        "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. Brand usage policy requires express permission/licence; none has been obtained or asserted. Policy: https://www.purdue.edu/brand-studio/brand/logos-usage/",
+        "credit": "Purdue University · complete official MotionP vector symbol",
+        "rights": "Copyright and trademark remain with the institution. No separate institutional permission or open reuse licence obtained or asserted. Source verification is not legal clearance. Editorial paper-affiliation identification only; no endorsement.",
         "displayPolicy": "attributed-thumbnail",
-        "background": "light",
-        "altZh": "Purdue University 官方独立校徽或图形标志",
-        "altEn": "Official compact institutional symbol of Purdue University"
+        "background": "transparent",
+        "altZh": "普渡大学完整官方MotionP符号",
+        "altEn": "Complete official Purdue MotionP symbol"
       },
       "markType": "compact-symbol",
-      "alphaStatus": "opaque-light",
-      "rightsPolicyUrl": "https://www.purdue.edu/brand-studio/brand/logos-usage/",
-      "note": "Complete official Purdue motion-P icon linked as 192px icon by university homepage. Native opaque white background retained; not a reduced full wordmark. Brand usage policy requires express permission/licence; none has been obtained or asserted. Original PNG bytes retained unchanged. Dimensions, SHA-256, native alpha and actual pixels verified; no AI generation or raster crop.",
-      "sha256": "5bcddc9204dbf4684aad0b168839cc34601bd17318fe62e696274aec55271472"
+      "alphaStatus": "transparent",
+      "rightsPolicyUrl": "https://www.purdue.edu/",
+      "note": "Exact complete MotionP threecontiguouspaths extracted from officialhomepage SVG. Original d attributes and style colors retained verbatim; detachedwordmark paths omitted. ViewBox0 0 85 45.3 fullycontains symbol; originalwordmark startsx94.5. No rastercrop, redraw,recolor or white removal. Copyright and trademark remain with the institution. No separate institutional permission or open reuse licence obtained or asserted. Source verification is not legal clearance. Editorial paper-affiliation identification only; no endorsement. Explicit root dimensions850×453 preserve the exact85×45.3 source viewBox ratio; no path, color or geometry changed.",
+      "sha256": "f55eeb3f0691adc06b807f85004c9ac562bb252d8fc7ce53c6b977aaf57a3b17"
     },
     {
       "id": "pending-university-of-waterloo",
@@ -386,7 +386,7 @@
         "credit": "University of Antwerp · official-source compact identity mark",
         "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. Full identity download packages require login; this public homepage artwork was used without login. No separate approval or exception to complete-lockup guidelines is asserted. Policy: https://www.uantwerpen.be/nl/projecten/huisstijlgids/logo/downloads/",
         "displayPolicy": "attributed-thumbnail",
-        "background": "transparent",
+        "background": "dark",
         "altZh": "University of Antwerp 官方完整图形标识",
         "altEn": "Complete official compact mark of University of Antwerp"
       },
@@ -610,25 +610,30 @@
       "status": "verified",
       "logo": {
         "kind": "institution-logo",
-        "path": "assets/institutions/compact-27b6b6f559b45849.svg",
-        "sha256": "27b6b6f559b45849ceced9df813f152fd47a4a8cc33791c42e5bb823bafb4b2c",
-        "width": 630,
-        "height": 635,
-        "sourceUrl": "https://marcomm.tamu.edu/wp-content/themes/aux-wordpress/images/tamu-icons/TAM-maroon.svg",
-        "evidenceUrl": "https://marcomm.tamu.edu/creative-platform/logos/",
+        "path": "assets/institutions/tamu-transparent.svg",
+        "sha256": "bd9f28e2afa0ad6b0b3f5bcba21b3200259e48d593bfb7c32f78cb590e2efd6a",
+        "width": 216,
+        "height": 216,
+        "sourceUrl": "https://marcomm.tamu.edu/downloads/?df=1085",
+        "evidenceUrl": "https://marcomm.tamu.edu/template/logo-downloads/",
         "verifiedAt": "2026-11-03",
-        "credit": "Texas A&M University · official-source compact identity mark",
-        "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Intended for factual paper-affiliation identification only; no partnership or endorsement implied. University trademark guidance requires express written approval; no such approval is asserted. Policy: https://www.tamu.edu/statements/trademark.html",
+        "credit": "Texas A&M University · official TAM Maroon SVG",
+        "rights": "Copyright and trademark remain with Texas A&M University. No separate institutional permission or open reuse licence has been obtained or asserted. Intended for factual paper-affiliation identification only; no partnership or endorsement implied. Official downloads page says external users must seek approval from Office of Business Development; no such approval is asserted.",
         "displayPolicy": "attributed-thumbnail",
-        "background": "dark",
-        "altZh": "得克萨斯农工大学官方白色 TAM 符号及原栗色方底",
-        "altEn": "Texas A&M University complete official compact-symbol"
+        "background": "transparent",
+        "altZh": "得克萨斯农工大学校标",
+        "altEn": "Texas A&M University mark"
       },
       "markType": "compact-symbol",
-      "alphaStatus": "opaque-dark",
-      "rightsPolicyUrl": "https://www.tamu.edu/statements/trademark.html",
-      "note": "Exact official mask-icon SVG linked by current university Marketing & Communications logo page. Complete TAM symbol with native gray bevel and maroon rectangular field. Original bytes, paths, colors and proportions retained. Visual render and SVG safety checks passed. Native opaque maroon field is intrinsic, not removed.",
-      "sha256": "27b6b6f559b45849ceced9df813f152fd47a4a8cc33791c42e5bb823bafb4b2c"
+      "alphaStatus": "transparent",
+      "rightsPolicyUrl": "https://marcomm.tamu.edu/template/logo-downloads/",
+      "note": "Unmodified official positive TAM Maroon SVG File (RGB), complete compact monogram plus registered trademark. Render verified alpha 0–255. No tracing, recoloring, raster crop or background deletion.",
+      "sha256": "bd9f28e2afa0ad6b0b3f5bcba21b3200259e48d593bfb7c32f78cb590e2efd6a",
+      "officialName": "Texas A&M University",
+      "aliases": [],
+      "institutionType": "university",
+      "rightsStatus": "not-separately-authorized",
+      "displayScope": "paper-affiliation-only"
     },
     {
       "id": "pending-university-of-southern-california",
@@ -844,25 +849,25 @@
       "status": "verified",
       "logo": {
         "kind": "institution-logo",
-        "path": "assets/institutions/compact-770ecfddffee3585.png",
-        "sha256": "770ecfddffee3585627070d7ae374a380c06fd79a9f3337d7ead5da87584d2f5",
-        "width": 297,
-        "height": 297,
-        "sourceUrl": "https://www.nwu.edu.cn/__local/3/63/A5/73750A799BDE7ED88E21F1A0A65_89AD1DD1_24F50.png",
+        "path": "assets/institutions/transparent-3ee283d36278840a.png",
+        "sha256": "3ee283d36278840a3b8be138ac0262dbbf21ee56bbed77f3ec4db9b2e3231a75",
+        "width": 374,
+        "height": 374,
+        "sourceUrl": "https://www.nwu.edu.cn/__local/2/B2/15/A05B5BA7CC03DE648F8341DA162_DAF758F0_1CA62.png",
         "evidenceUrl": "https://www.nwu.edu.cn/xxgk/xxbs/xb.htm",
         "verifiedAt": "2026-11-03",
-        "credit": "Northwest University · official-source compact identity mark",
-        "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. University owns the seal; no reuse licence or institutional permission asserted. Policy: https://www.nwu.edu.cn/xxgk/xxbs/xb.htm",
+        "credit": "Northwest University · attributed original institution mark",
+        "rights": "Copyright and trademark remain with the institution. No separate institutional permission or open reuse licence obtained or asserted. Source verification is not legal clearance. Editorial paper-affiliation identification only; no endorsement.",
         "displayPolicy": "attributed-thumbnail",
-        "background": "light",
-        "altZh": "Northwest University 官方完整图形标识",
-        "altEn": "Complete official compact mark of Northwest University"
+        "background": "transparent",
+        "altZh": "Northwest University 完整真实校徽或身份符号",
+        "altEn": "Northwest University complete compact identity mark"
       },
       "markType": "emblem",
-      "alphaStatus": "opaque-light",
+      "alphaStatus": "transparent",
       "rightsPolicyUrl": "https://www.nwu.edu.cn/xxgk/xxbs/xb.htm",
-      "note": "Exact 297×297 official 2019 new seal, native white field retained. Institution identity resolved using paper arXiv:2610.20320 v2 affiliation 9 and its official linked project https://tacclaw-infinity.github.io/: image https://tacclaw-infinity.github.io/assets/institutions/09.png has exactly the same SHA-256 as this university source, and seal explicitly says XIAN CHINA. Not Northwestern University or South African North-West University. No crop or modification.",
-      "sha256": "770ecfddffee3585627070d7ae374a380c06fd79a9f3337d7ead5da87584d2f5"
+      "note": "Official complete black/white seal with native transparent exterior. Preserve white interior ring and detail, not background to erase. Copyright and trademark remain with the institution. No separate institutional permission or open reuse licence obtained or asserted. Source verification is not legal clearance. Editorial paper-affiliation identification only; no endorsement.",
+      "sha256": "3ee283d36278840a3b8be138ac0262dbbf21ee56bbed77f3ec4db9b2e3231a75"
     },
     {
       "id": "pending-the-ohio-state-university",
@@ -1104,25 +1109,25 @@
       "status": "verified",
       "logo": {
         "kind": "institution-logo",
-        "path": "assets/institutions/compact-8d8b811d03f03456.png",
-        "sha256": "8d8b811d03f0345626ac726f8e07000d39dfe998355236c3e79adf8c1bb016cc",
-        "width": 1070,
-        "height": 1026,
-        "sourceUrl": "https://www.amherstindy.org/wp-content/uploads/2023/03/Screen-Shot-2023-03-31-at-1.41.33-PM.png",
+        "path": "assets/institutions/transparent-1ede4b461c4461a6.png",
+        "sha256": "1ede4b461c4461a6e1fdb17a452649c64a98b2179c5fad5cea4a0172369c29a5",
+        "width": 901,
+        "height": 901,
+        "sourceUrl": "https://www.umass.edu/sites/default/files/2023-03/UMass_Seal_Medium_PMS_202_0.png",
         "evidenceUrl": "https://www.umass.edu/news/article/new-university-seal-and-brand-mark-unveiled-umass-amherst-providing-distinctive",
         "verifiedAt": "2026-11-03",
-        "credit": "University of Massachusetts Amherst · source-verified institutional symbol",
-        "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. Current guidance reserves the seal for formal applications and requires Marcom approval. No approval, editorial exception or legal clearance is claimed. The separate Collegiate M candidate could not be acquired from accessible official asset endpoints. Policy: https://www.umass.edu/brand/visual-identity/marks-and-seal/official-marks-seal",
+        "credit": "University of Massachusetts Amherst · attributed original institution mark",
+        "rights": "Copyright and trademark remain with the institution. No separate institutional permission or open reuse licence obtained or asserted. Source verification is not legal clearance. Editorial paper-affiliation identification only; no endorsement.",
         "displayPolicy": "attributed-thumbnail",
-        "background": "light",
-        "altZh": "University of Massachusetts Amherst 完整校徽或图形标志",
-        "altEn": "Complete institutional symbol of University of Massachusetts Amherst"
+        "background": "transparent",
+        "altZh": "University of Massachusetts Amherst 完整真实校徽或身份符号",
+        "altEn": "University of Massachusetts Amherst complete compact identity mark"
       },
       "markType": "emblem",
-      "alphaStatus": "opaque-light",
-      "rightsPolicyUrl": "https://www.umass.edu/brand/visual-identity/marks-and-seal/official-marks-seal",
-      "note": "Complete 2023 Old Chapel seal specific to UMass Amherst, not former state-seal or UMass system logo. Source is the native standalone screenshot image republished with the university news release by Amherst Indy at https://www.amherstindy.org/2023/03/31/new-umass-seal-and-brand-mark-unveiled/ . Original screenshot bytes, full white canvas and complete seal retained; not cropped here. Exact identity corroborated by official launch article and current marks page. Several official asset endpoints returned 403; none retried or bypassed. Actual pixels, dimensions and SHA-256 verified.",
-      "sha256": "8d8b811d03f0345626ac726f8e07000d39dfe998355236c3e79adf8c1bb016cc"
+      "alphaStatus": "transparent",
+      "rightsPolicyUrl": "https://www.umass.edu/news/article/new-university-seal-and-brand-mark-unveiled-umass-amherst-providing-distinctive",
+      "note": "Official news-page original complete2023 seal. Native alpha retained, all internal details preserved. Copyright and trademark remain with the institution. No separate institutional permission or open reuse licence obtained or asserted. Source verification is not legal clearance. Editorial paper-affiliation identification only; no endorsement.",
+      "sha256": "1ede4b461c4461a6e1fdb17a452649c64a98b2179c5fad5cea4a0172369c29a5"
     },
     {
       "id": "pending-university-of-south-florida",
@@ -1130,25 +1135,25 @@
       "status": "verified",
       "logo": {
         "kind": "institution-logo",
-        "path": "assets/institutions/compact-f6b1283ed56c1939.png",
-        "sha256": "f6b1283ed56c1939f676037f355c07f9fdfc5efa92a9492051f03c72dc5f7512",
-        "width": 165,
-        "height": 218,
-        "sourceUrl": "https://www.usf.edu/marketplace/images/logo-4.png",
+        "path": "assets/institutions/transparent-b84c1ea94bb8e868.svg",
+        "sha256": "b84c1ea94bb8e8689646fd088305cd4cf045e577095075139beba4415d400bb8",
+        "width": 166,
+        "height": 132,
+        "sourceUrl": "https://www.stpetersburg.usf.edu/marketing-and-communications/documents/usf-visual-identity-quick-start-guide.pdf",
         "evidenceUrl": "https://www.usf.edu/marketplace/licensing/index.aspx",
         "verifiedAt": "2026-11-03",
-        "credit": "University of South Florida · source-verified institutional symbol",
-        "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. USF states organizations/individuals wishing to use trademarks must obtain a licence through CLC. Standalone Bull-U usage is also subject to brand approval; no licence or approval is claimed. Policy: https://www.usf.edu/marketplace/licensing/faqs.aspx",
+        "credit": "University of South Florida · official source",
+        "rights": "Copyright and trademark remain with the institution. No separate institutional permission or open reuse licence has been obtained or asserted. Source and identity verification is not permission or legal clearance. Editorial paper-affiliation identification only; no endorsement implied.",
         "displayPolicy": "attributed-thumbnail",
-        "background": "light",
-        "altZh": "University of South Florida 完整校徽或图形标志",
-        "altEn": "Complete institutional symbol of University of South Florida"
+        "background": "transparent",
+        "altZh": "University of South Florida 完整真实机构标识",
+        "altEn": "University of South Florida complete compact institutional identity mark"
       },
       "markType": "compact-symbol",
-      "alphaStatus": "opaque-light",
-      "rightsPolicyUrl": "https://www.usf.edu/marketplace/licensing/faqs.aspx",
-      "note": "Complete Bull-U symbol explicitly captioned Bull U logo on university licensing page. Original 165×218 white canvas retained. University-wide use of Bull-U, beyond athletics, is explicitly corroborated by https://www.usf.edu/news/2019/usf-brand-announcement.aspx and 2026 official logo history; no athletic-only or campus mark substitution. Actual pixels, dimensions and SHA-256 verified.",
-      "sha256": "f6b1283ed56c1939f676037f355c07f9fdfc5efa92a9492051f03c72dc5f7512"
+      "alphaStatus": "transparent",
+      "rightsPolicyUrl": "https://www.usf.edu/marketplace/licensing/index.aspx",
+      "note": "Exact complete Bull U with registered trademark extracted from official2024 visual guide PDF page5. MuPDF SVG conversion then retained original full graphic path indexes216–219, no path edits, colors preserved including native white interior and gold edge. Bounding viewBox320 148 166 132 encloses all four paths. Native PDF sha256 3973206573aa27dc2bbaf10d8f30f8a022dcb5a57ca8b0332ead751c640a4a87. Verified native dimensions 166×132; rendered alpha (0, 255), fully transparent pixels 12736; SHA256 b84c1ea94bb8e8689646fd088305cd4cf045e577095075139beba4415d400bb8. No separate institutional permission or open reuse licence obtained; source verification is not legal clearance.",
+      "sha256": "b84c1ea94bb8e8689646fd088305cd4cf045e577095075139beba4415d400bb8"
     },
     {
       "id": "pending-waseda-university",
@@ -1693,7 +1698,7 @@
       "markType": "emblem",
       "alphaStatus": "transparent",
       "rightsPolicyUrl": "https://www.proctors.cam.ac.uk/files/media/guidance_for_using_the_university_logo_-_student_societies.pdf",
-      "note": "Native official website favicon, 16×16 pixels only. Complete shield with no separate name or clipped wordmark fragments; original favicon image losslessly exported as PNG without resizing, recoloring, background removal or redrawing. Actual pixels inspected at native and nearest-neighbor enlarged QA view; low resolution is intrinsic. Must remain capped at native 16px display size; no claim that it is crisp at 32px. No higher-resolution suitable compact source was retrieved in this bounded pass.",
+      "note": "Native official website favicon, 16×16 pixels only. Complete shield with no separate name or clipped wordmark fragments; original favicon image losslessly exported as PNG without resizing, recoloring, background removal or redrawing. Actual pixels inspected at native and nearest-neighbor enlarged QA view; low resolution is intrinsic. Displayed proportionally by the browser in the uniform40×32 area; intrinsic16px resolution remains and crisp32px detail is not claimed. No higher-resolution suitable compact source was retrieved in this bounded pass.",
       "sha256": "6e64f20400a9555f5ef28ac4b9ff165b2bc33a37ace5f47daf3899ab8ba4caeb"
     },
     {
@@ -1710,7 +1715,7 @@
         "evidenceUrl": "https://www.qmul.ac.uk/",
         "verifiedAt": "2026-11-03",
         "credit": "Queen Mary University of London · exact official crown/Q website icon",
-        "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. Official brand page directs external users to request brand-resource access. No request or approval is claimed. Native blue square belongs to the official asset; do not recolor, remove its background or synthesize detail. This is a genuinely low-resolution 16×16 icon; prefer native-size display, not high-resolution presentation. Policy: https://www.qmul.ac.uk/our-brand/",
+        "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. Official brand page directs external users to request brand-resource access. No request or approval is claimed. Native blue square belongs to the official asset; do not recolor, remove its background or synthesize detail. This is a genuinely low-resolution 16×16 icon; now proportionally browser-scaled in the uniform40×32 area, without claiming high-resolution detail. Policy: https://www.qmul.ac.uk/our-brand/",
         "displayPolicy": "attributed-thumbnail",
         "background": "dark",
         "altZh": "Queen Mary University of London 官方完整皇冠Q图形，原生16像素",
@@ -1929,6 +1934,84 @@
       "rightsPolicyUrl": "https://www.ucl.ac.uk/brand-and-experience/brand/visual-guidelines/logo/logo-guidelines",
       "note": "Complete current2026 standalone UCL portico identity symbol supplied as the compact UCL project thumbnail by the original designer Johnson Banks; public page https://www.johnsonbanks.co.uk/work/ucl and its linked API https://www.johnsonbanks.co.uk/api/work/ucl?offset=0&limit=50 identify this exact200x200 GIF thumbnail. Official UCL brand page confirms2026 refreshed portico design; designer describes architecture-derived varying-width pillars. Converted the complete native composited first frame of58-frame GIF to PNG without cropping, scaling, changing colors, geometry or background. First frame duration5070ms is the held complete symbol before animation. It has a native dark-purple opaque background and generous original spacing; alpha is entirely255 despite GIF transparency flag. No fake transparency claim, AI or redraw. Source SHA256: 17bd5424fba84cbc27b1d1973f8810a986feda71540e63ed67ad55854a43b765.",
       "sha256": "7b30860bb408ce3384c763ca171b610b2ac34a085b01937a8edce5a0f8e46e75"
+    },
+    {
+      "id": "pending-sogang-university",
+      "name": "Sogang University",
+      "status": "verified",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/compact-db1a7fc7149d46c0.png",
+        "sha256": "db1a7fc7149d46c0ad67173207ccf1ffb87a71fc909260164f0b5ca6a89e7f08",
+        "width": 285,
+        "height": 406,
+        "sourceUrl": "https://www.insc.tohoku.ac.jp/english/wp-content/uploads/2018/09/13907092115b907d35239b4.pdf",
+        "evidenceUrl": "https://www.sogang.ac.kr/intro/symbol/data/Sogang_UI_renewal.pdf",
+        "verifiedAt": "2026-11-03",
+        "credit": "Sogang University · university-authored exchange handbook hosted by Tohoku University",
+        "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied.",
+        "displayPolicy": "attributed-thumbnail",
+        "background": "transparent",
+        "altZh": "Sogang University 完整真实机构标识",
+        "altEn": "Sogang University complete compact institutional identity mark"
+      },
+      "markType": "emblem",
+      "alphaStatus": "transparent",
+      "rightsPolicyUrl": "https://www.sogang.ac.kr/ko/symbol/ui",
+      "note": "Complete native285×406 standalone Sogang shield from Sogang-authored Fall2018 Exchange Student Handbook hosted by partner Tohoku University. Extracted page1 PDF image object9 and its existing soft mask, recombined without crop, recolor, white removal, redrawing or upscaling. Official current UI guide search description corroborates shield/IHS/silver chevron/crown/cardinal identity. Visually inspected. Alpha0–255;24087 fully transparent pixels and936 partial-alpha pixels. All internal gray details retained. Source PDF SHA256:821ce4df4cabd63f32037fcc598524cb3c2f25fc94c3e3ae2ebce4fada12e3f8. PNG SHA256:db1a7fc7149d46c0ad67173207ccf1ffb87a71fc909260164f0b5ca6a89e7f08.",
+      "sha256": "db1a7fc7149d46c0ad67173207ccf1ffb87a71fc909260164f0b5ca6a89e7f08"
+    },
+    {
+      "id": "pending-ku-leuven",
+      "name": "KU Leuven",
+      "status": "verified",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/compact-e47e61bef3b532b8.png",
+        "sha256": "e47e61bef3b532b80471facc783c56b2cabdd1c457a9d9e40f36d0b7c5c7a514",
+        "width": 717,
+        "height": 928,
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a4/KUL.gif",
+        "evidenceUrl": "https://commons.wikimedia.org/wiki/File:KUL.gif",
+        "verifiedAt": "2026-11-03",
+        "credit": "KU Leuven · genuine institutional mark from public source",
+        "rights": "Copyright and trademark remain with the institution. Public-source verification is not legal clearance. No separate institutional permission has been obtained or asserted. Editorial paper-affiliation identification only; no endorsement implied.",
+        "displayPolicy": "attributed-thumbnail",
+        "background": "transparent",
+        "altZh": "KU Leuven 完整真实机构标识",
+        "altEn": "KU Leuven complete compact institutional identity mark"
+      },
+      "markType": "emblem",
+      "alphaStatus": "transparent",
+      "rightsPolicyUrl": "https://commons.wikimedia.org/wiki/File:KUL.gif",
+      "note": "Complete genuine Sedes institutional seal traced by Commons original-file history to university ESAT http://tomcat.esat.kuleuven.be/GLYCENSIT/images/sedes_transparant.gif . Native717×928 GIF converted losslessly to PNG, exactRGBA pixel equality verified. Native alpha:552842 fully transparent pixels,112534 opaque pixels. Whole seal visually inspected; no crop, background removal, recolor, upscale or redraw. Exact KU Leuven identity corroborated by official Sedes history https://stories.kuleuven.be/en/stories/six-centuries-11-celebrations and current official references. Gothic and Roman inscription variants exist; no evidence established this Gothic version obsolete. Do not assert an exact1970-to1990 replacement chronology or that this is latest corporate mark. Commons describes source as public domain, but legal status not independently adjudicated.",
+      "sha256": "e47e61bef3b532b80471facc783c56b2cabdd1c457a9d9e40f36d0b7c5c7a514"
+    },
+    {
+      "id": "pending-university-of-georgia",
+      "name": "University of Georgia",
+      "status": "verified",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/compact-66fa17326c7c4ca6.svg",
+        "sha256": "66fa17326c7c4ca66c6c548caa9ac9e8c5ccf1c614ba0a613cf93973a1cf0879",
+        "width": 182,
+        "height": 117,
+        "sourceUrl": "https://brand.uga.edu/wp-content/uploads/25Georgia_logoguide.pdf",
+        "evidenceUrl": "https://brand.uga.edu/wp-content/uploads/25Georgia_logoguide.pdf",
+        "verifiedAt": "2026-11-03",
+        "credit": "University of Georgia · genuine institutional mark from public source",
+        "rights": "Copyright and trademark remain with the institution. Public-source verification is not legal clearance. No separate institutional permission has been obtained or asserted. Editorial paper-affiliation identification only; no endorsement implied.",
+        "displayPolicy": "attributed-thumbnail",
+        "background": "transparent",
+        "altZh": "University of Georgia 完整真实机构标识",
+        "altEn": "University of Georgia complete compact institutional identity mark"
+      },
+      "markType": "emblem",
+      "alphaStatus": "transparent",
+      "rightsPolicyUrl": "https://brand.uga.edu/wp-content/uploads/25Georgia_logoguide.pdf",
+      "note": "Complete Academic Mark UGA049 explicitly published on page2 of official February2025 guide: arch shield,1785,TM and GEORGIA underneath. Whole graphic extracted through pdftocairo SVG conversion with viewBox995 378 182 117; all original vector path geometry/colors preserved. Original full PDF and full page SVG retained. Render visually inspected; PNG preview182×117 alpha0–255 with15553 fully transparent pixels. SVG contains no scripts, foreignObject or external resources. This is the published Academic049 variant, not the separate Top Shield configuration on current brand website. There is no evidence it predates2022 or is obsolete. Keep whole lockup: guide explicitly says shield may never appear alone; no shield-only derivative made. Public guide source is independent of gated digitalarch portal; no agreement accepted or gated file used.",
+      "sha256": "66fa17326c7c4ca66c6c548caa9ac9e8c5ccf1c614ba0a613cf93973a1cf0879"
     }
   ],
   "remaining": [
@@ -1973,22 +2056,6 @@
       "sourceUrl": "https://www.kcl.ac.uk/sitehelp/linking"
     },
     {
-      "id": "pending-ku-leuven",
-      "name": "KU Leuven",
-      "paperCount": 1,
-      "status": "needs-verification",
-      "finding": "New official sources checked: releases/ttt/img/sedes-kuleuven.png, Law doctoral first-page DOCX, ESAT original sedes_transparant.gif and Kulak Sedes image all returned 503. Current Law guidance explicitly identifies Sedes as KU Leuven logo; no image bytes obtained. Avoided previously denied Commons URL and did not use UCLouvain or the 1425 predecessor seal. https://www.law.kuleuven.be/english/information-for-students/current/phd/phd-trajectory/end_phd",
-      "sourceUrl": "https://stijl.kuleuven.be/releases/3.2/img/svg/"
-    },
-    {
-      "id": "pending-sogang-university",
-      "name": "Sogang University",
-      "paperCount": 1,
-      "status": "needs-verification",
-      "finding": "New official VDS 2025 seminar PDF downloaded and inspected: native image object9 contains complete shield plus Korean/English wordmark in one raster, so extracting shield would require forbidden raster crop. Object11 is unrelated generic icon, not shield. Brandfetch advertised SVG returned documentation HTML instead of image; Seeklogo, Namu, ZSEM brochure and Commons original returned 403; stopped those routes. No clean complete standalone mark yet. Official corroborating PDF: https://vds.sogang.ac.kr/wp-content/uploads/2025/06/2025_%EC%97%AC%EB%A6%84%EC%84%B8%EB%AF%B8%EB%82%98_%EB%AC%B8%EC%8A%B9%ED%9B%88.pdf Independently hosted Marefa SVG acquired (14264 bytes), rendered and inspected; it contains only the full SOGANG UNIVERSITY wordmark and no shield, so not usable as compact mark. https://www.marefa.org/w/images/3/3c/Sogang_University_-_logotype_%28en%29.svg",
-      "sourceUrl": "https://www.sogang.ac.kr/ko/symbol/ui"
-    },
-    {
       "id": "pending-university-of-applied-sciences-and-arts-western-switzerland",
       "name": "University of Applied Sciences and Arts Western Switzerland",
       "paperCount": 1,
@@ -2003,14 +2070,6 @@
       "status": "needs-verification",
       "finding": "Correction to prior reason: official UC Davis guidance explicitly calls the approved campus mark its unofficial seal because all campus seals derive from UC Regents seal; UnofficialSeal filename alone is NOT evidence of incorrect identity. https://marketingtoolbox.ucdavis.edu/brand-guide/logos/uc-davis-seal verifies exact Davis-not1868 distinction. Newly linked campus seal image at https://marketingtoolbox.ucdavis.edu/sites/g/files/dgvnsk6246/files/styles/sf_thumbnail/public/media/images/UCDavisUnofficialSeal_Blue.png?h=04d92ac6&itok=FdYoewjQ returned403 and was not retried. Distinct Student Affairs brand page also403; chemistry homepage503. UCD spirit mark is documented but image unavailable and expressly internal/celebratory, not a formal seal. No usable verified file acquired. Official restrictions reserve seal for chancellor-level/approved uses and exclude websites; no permission claimed.",
       "sourceUrl": "https://communicationsguide.ucdavis.edu/uc-davis-logos-by-type"
-    },
-    {
-      "id": "pending-university-of-georgia",
-      "name": "University of Georgia",
-      "paperCount": 1,
-      "status": "needs-verification",
-      "finding": "Current complete Top Shield located and visually confirmed through official public digital asset portal: GEORGIA, arch shield,1785 and registered trademark, exact file UGAlogo_TopShield_FC_MARCM.png. Share button opens explicit EULA acceptance gate requesting information; browser worker stopped without acceptance/submission or alternate download. No original file bytes acquired; do not bypass via signed previews. Download requires user authorization of linked EULA https://digitalarch.uga.edu/dl/eula/external . Portal https://digitalarch.uga.edu/portals/q973imi3/BrandUGA_Institutional_Logos . Read-only EULA review: permits internal UGA promotion/publications and one-time news use by news organizations; other uses including illustrative purposes require separate UGA permission, possibly a fee. Acceptance alone would not establish permission for recurring affiliation display. No resale/sublicensing; permission personal/nonassignable. No acceptance/download occurred.",
-      "sourceUrl": "https://brand.uga.edu/visual-identity/logos/"
     }
   ],
   "recheck": {
@@ -2019,5 +2078,9 @@
     "resolved": 7,
     "remaining": 10,
     "scope": "Second requested source search; normal public official sources and independently corroborated public mirrors only. No gated agreement accepted or access controls bypassed."
+  },
+  "transparencyPhase": {
+    "date": "2026-11-03",
+    "scope": "Uniform40x32 university contain images, real transparent sources and exact separate SVG background removal. Intrinsic white detail retained; unresolved native backgrounds explicitly reported."
   }
 }

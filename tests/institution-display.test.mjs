@@ -51,3 +51,10 @@ test('November3 daily additions retain compact symbols and honest name-only fall
  }
  for(const id of ['pending-labri-umr-5800']){const i=registry.institutions.find(x=>x.id===id);assert.ok(i);assert.equal(i.logo,null);}
 });
+
+test('all university images use the same contain area including native low-resolution icons',()=>{
+ const r={institutions:[{institutionType:'university',logo:{path:'assets/institutions/native16.png',sha256:'d'.repeat(64),width:16,height:16}},{institutionType:'company',logo:{path:'assets/institutions/company16.png',sha256:'e'.repeat(64),width:16,height:16}}]};
+ const c={version:1,marks:{},presentation:{mode:'compact-affiliation',widthPx:40,heightPx:32,note:'Uniform university display',sourceOnlyPaths:{}}};const css=institutionDisplayCSS(r,c);
+ assert.ok(css.includes('.institution-mark-dddddddddddddddd img{width:40px;height:32px;object-fit:contain;max-width:40px;max-height:32px}'));
+ assert.ok(css.includes('.institution-mark-eeeeeeeeeeeeeeee img{max-width:16px;max-height:16px}'));
+});

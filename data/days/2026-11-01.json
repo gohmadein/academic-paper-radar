@@ -1208,19 +1208,19 @@
             "name": "University of Massachusetts Amherst",
             "logo": {
               "kind": "institution-logo",
-              "path": "assets/institutions/compact-8d8b811d03f03456.png",
-              "sha256": "8d8b811d03f0345626ac726f8e07000d39dfe998355236c3e79adf8c1bb016cc",
-              "width": 1070,
-              "height": 1026,
-              "sourceUrl": "https://www.amherstindy.org/wp-content/uploads/2023/03/Screen-Shot-2023-03-31-at-1.41.33-PM.png",
+              "path": "assets/institutions/transparent-1ede4b461c4461a6.png",
+              "sha256": "1ede4b461c4461a6e1fdb17a452649c64a98b2179c5fad5cea4a0172369c29a5",
+              "width": 901,
+              "height": 901,
+              "sourceUrl": "https://www.umass.edu/sites/default/files/2023-03/UMass_Seal_Medium_PMS_202_0.png",
               "evidenceUrl": "https://www.umass.edu/news/article/new-university-seal-and-brand-mark-unveiled-umass-amherst-providing-distinctive",
               "verifiedAt": "2026-11-03",
-              "credit": "University of Massachusetts Amherst · source-verified institutional symbol",
-              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. Current guidance reserves the seal for formal applications and requires Marcom approval. No approval, editorial exception or legal clearance is claimed. The separate Collegiate M candidate could not be acquired from accessible official asset endpoints. Policy: https://www.umass.edu/brand/visual-identity/marks-and-seal/official-marks-seal",
+              "credit": "University of Massachusetts Amherst · attributed original institution mark",
+              "rights": "Copyright and trademark remain with the institution. No separate institutional permission or open reuse licence obtained or asserted. Source verification is not legal clearance. Editorial paper-affiliation identification only; no endorsement.",
               "displayPolicy": "attributed-thumbnail",
-              "background": "light",
-              "altZh": "University of Massachusetts Amherst 完整校徽或图形标志",
-              "altEn": "Complete institutional symbol of University of Massachusetts Amherst"
+              "background": "transparent",
+              "altZh": "University of Massachusetts Amherst 完整真实校徽或身份符号",
+              "altEn": "University of Massachusetts Amherst complete compact identity mark"
             },
             "authorNames": [
               "Neha Makhija"

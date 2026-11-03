@@ -86,8 +86,8 @@ const withAffiliation=()=>{const data=bulletin();data.entries[0].guide=guide();d
 test('Verified bulletin affiliations reuse canonical registry logos without adding a paper figure',()=>{
  const registry=JSON.parse(readFileSync(new URL('../data/institutions.json',import.meta.url))),data=withAffiliation();validateArxivBulletin(data);assert.deepEqual(validateArxivInstitutions(data,registry),[]);
  const [p]=bulletinPapers(data,registry);const canonical=registry.institutions.find(i=>i.id==='illinois');assert.deepEqual(p.visuals.institutions[0].logo,canonical.logo);assert.notEqual(p.visuals.institutions[0].logo,canonical.logo);assert.deepEqual(p.visuals.institutions[0].authorNames,['A Author']);
- const html=editorialCard(p,0);assert.match(html,/institution-avatar/);assert.match(html,/illinois.svg/);assert.doesNotMatch(html,/paper-figure|figure-fallback|editorial-visual/);assert.match(bilingualDetail(p),/图像与署名来源/);assert.match(bilingualDetail(p),/论文署名页明确/);
- assert.match(bulletinHTML(data,editorialCard,registry),/illinois.svg/);assert.equal(bulletinPapers(data)[0].visuals.institutions[0].logo,null);
+ const html=editorialCard(p,0);assert.match(html,/institution-avatar/);assert.ok(html.includes(canonical.logo.path));assert.doesNotMatch(html,/paper-figure|figure-fallback|editorial-visual/);assert.match(bilingualDetail(p),/图像与署名来源/);assert.match(bilingualDetail(p),/论文署名页明确/);
+ assert.ok(bulletinHTML(data,editorialCard,registry).includes(canonical.logo.path));assert.equal(bulletinPapers(data)[0].visuals.institutions[0].logo,null);
  const wrong=structuredClone(registry);wrong.institutions.find(i=>i.id==='illinois').officialName='Different Institution';wrong.institutions.find(i=>i.id==='illinois').aliases=[];assert.ok(validateArxivInstitutions(data,wrong).length);assert.equal(bulletinPapers(data,wrong)[0].visuals.institutions[0].logo,null);
 });
 test('Affiliation evidence, author mapping and completeness are independent from logo availability',()=>{
