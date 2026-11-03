@@ -3,8 +3,8 @@
   "scope": "Existing paper-referenced university identities only; not QS ranking coverage. Verified means source and identity, not institutional permission or brand-size compliance.",
   "baselineUniversityCount": 165,
   "originalMissing": 84,
-  "completedCount": 65,
-  "remainingCount": 19,
+  "completedCount": 67,
+  "remainingCount": 17,
   "completed": [
     {
       "id": "pending-the-hong-kong-university-of-science-and-technology-guangzhou",
@@ -1695,6 +1695,58 @@
       "rightsPolicyUrl": "https://www.proctors.cam.ac.uk/files/media/guidance_for_using_the_university_logo_-_student_societies.pdf",
       "note": "Native official website favicon, 16×16 pixels only. Complete shield with no separate name or clipped wordmark fragments; original favicon image losslessly exported as PNG without resizing, recoloring, background removal or redrawing. Actual pixels inspected at native and nearest-neighbor enlarged QA view; low resolution is intrinsic. Must remain capped at native 16px display size; no claim that it is crisp at 32px. No higher-resolution suitable compact source was retrieved in this bounded pass.",
       "sha256": "6e64f20400a9555f5ef28ac4b9ff165b2bc33a37ace5f47daf3899ab8ba4caeb"
+    },
+    {
+      "id": "pending-queen-mary-university-of-london",
+      "name": "Queen Mary University of London",
+      "status": "verified",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/compact-d89fdf1c12a998be.png",
+        "sha256": "d89fdf1c12a998beddbda6b1976d9540f5fe53a7bf483fd00b1993971793b4f2",
+        "width": 16,
+        "height": 16,
+        "sourceUrl": "https://www.qmul.ac.uk/media/favicon/favicon.ico",
+        "evidenceUrl": "https://www.qmul.ac.uk/",
+        "verifiedAt": "2026-11-03",
+        "credit": "Queen Mary University of London · exact official crown/Q website icon",
+        "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. Official brand page directs external users to request brand-resource access. No request or approval is claimed. Native blue square belongs to the official asset; do not recolor, remove its background or synthesize detail. This is a genuinely low-resolution 16×16 icon; prefer native-size display, not high-resolution presentation. Policy: https://www.qmul.ac.uk/our-brand/",
+        "displayPolicy": "attributed-thumbnail",
+        "background": "dark",
+        "altZh": "Queen Mary University of London 官方完整皇冠Q图形，原生16像素",
+        "altEn": "Queen Mary University of London complete official crown/Q symbol, native 16px"
+      },
+      "markType": "compact-symbol",
+      "alphaStatus": "opaque-dark",
+      "rightsPolicyUrl": "https://www.qmul.ac.uk/our-brand/",
+      "note": "Explicit follow-up candidate superseding the prior resolution-only gap, without changing the frozen verified-3.json object. Authentic complete white crown/Q institutional symbol on its native blue field, not an unrelated app symbol or a fragment of the full-name lockup. The official homepage links both /favicon.ico and /media/favicon/favicon.ico; both independently retrieved files are byte-identical, each containing exactly one 16×16 frame. Exact ICO SHA256: 2f2e1c86d9044ba5906cefc6a45e30511b0a4b177862d65b53638d6b08304174. PNG is a lossless format conversion of that entire native frame; decoded RGBA pixels match the ICO exactly, including all-opaque alpha. No resizing, crop, sharpening, tracing, AI, background removal or invented detail. Crown/Q shape independently corroborated against the university-hosted Environmental Law PDF (2025-26 URL directory; document footer 2021-22 V1, not a claim of newly created artwork), whose top and bottom lockups contain the same crown/Q silhouette: https://www.qmul.ac.uk/governance-and-legal-services/media/dgls-media/quality/programme-specifications/2025-26/hss/ccls/Environmental-Law-LLM.pdf ; PDF SHA256 83232390ee5e34ed811e3a9f2eb65d1cebde99711651fb8114a906cd160a1f54. Native icon pixels visually inspected; genuine complete symbol with intrinsically low resolution. No denied source retried and no new external request made in this follow-up.",
+      "sha256": "d89fdf1c12a998beddbda6b1976d9540f5fe53a7bf483fd00b1993971793b4f2"
+    },
+    {
+      "id": "pending-city-university-of-hong-kong",
+      "name": "City University of Hong Kong",
+      "status": "verified",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/compact-27639a1590f0545d.png",
+        "sha256": "27639a1590f0545dd42d59be26f0a65a3080c558b32fc700692bb2b64327d085",
+        "width": 32,
+        "height": 32,
+        "sourceUrl": "https://www.ee.cityu.edu.hk/-/media/project/cityuhk/shared/settings/favicon.ico?rev=76479cdf9a794a2295fe48dedc0753a7",
+        "evidenceUrl": "https://www.ee.cityu.edu.hk/",
+        "verifiedAt": "2026-11-03",
+        "credit": "City University of Hong Kong · official-source compact identity mark",
+        "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. University name, visual identity and trademarks remain protected by the official policy. No institutional permission, open reuse licence or full brand-size compliance is asserted. Policy: https://www.cityu.edu.hk/policies/corpid/university-policy-and-guidelines-for-the-use-of-the-universitys-name-artistic-related-intangible-and-tangible-assets-visual-identity-and-trade-marks.htm",
+        "displayPolicy": "attributed-thumbnail",
+        "background": "transparent",
+        "altZh": "香港城市大学官方完整 CityU 图形标识",
+        "altEn": "Complete official CityU university symbol"
+      },
+      "markType": "compact-symbol",
+      "alphaStatus": "transparent",
+      "rightsPolicyUrl": "https://www.cityu.edu.hk/policies/corpid/university-policy-and-guidelines-for-the-use-of-the-universitys-name-artistic-related-intangible-and-tangible-assets-visual-identity-and-trade-marks.htm",
+      "note": "Supersedes the prior resolution-only terminal gap. Exact full native32×32 RGBA frame decoded from the official Electrical Engineering homepage favicon, linked as rel=shortcut icon under shared CityUHK settings. Pixel bytes equal the ICO decoded RGBA frame. It is a complete orange-to-burgundy geometric CityU university symbol with white CityU lettering, not an EE-specific symbol, a fragment, full-name lockup, or Dongguan substitution. Native transparent padding is retained: alpha bounding box(0,6,32,26), alpha extrema0–255. No crop, upscaling, sharpening, redraw or recolour in delivered asset. Nearest-neighbour enlargement used only for inspection, not delivery. This verifies the university mark as actually served by the official EE site; no claim that its design version is the inaccessible2025 SVG.",
+      "sha256": "27639a1590f0545dd42d59be26f0a65a3080c558b32fc700692bb2b64327d085"
     }
   ],
   "remaining": [
@@ -1721,14 +1773,6 @@
       "status": "needs-verification",
       "finding": "No usable genuine compact emblem obtained. The public official identity page and independently hosted official 2024/2025 catalog PDF requests returned HTTP 403; stopped without bypass or repeat. Regular Caltech wordmark is not a compact symbol, and the athletics beaver was not substituted. The formal seal exists but no independently verified original downloadable file was acquired. Unverified third-party redraws were not used. Formal/ceremonial source guidance is a recorded rights condition, not a platform ban. Checked 2026-11-03.",
       "sourceUrl": "https://identity.caltech.edu/officiallogomarks"
-    },
-    {
-      "id": "pending-city-university-of-hong-kong",
-      "name": "City University of Hong Kong",
-      "paperCount": 2,
-      "status": "needs-verification",
-      "finding": "Terminal bounded source/artifact gap: Current official CityU 2025 logo SVG linked from EE homepage resolves to an Incapsula challenge document, not SVG bytes. Official EE favicon was downloaded but only32×32 and not accepted as sufficient compact high-resolution artwork. Other central pages challenge or403. No challenge solved/retry/bypass. Dongguan-campus material not substituted. Independent mirror search did not establish a current high-resolution exact HK symbol.",
-      "sourceUrl": "https://www.ee.cityu.edu.hk/"
     },
     {
       "id": "pending-civil-aviation-university-of-china",
@@ -1785,14 +1829,6 @@
       "status": "needs-verification",
       "finding": "Official page and full horizontal UM6P logo acquired. Its public favicon is a bare white U on orange tile (67×67), but no reliable source in this pass establishes that generic letter as the complete independent institutional symbol rather than a website convenience. The full branded UM6P lockup is unsuitable for this compact slot. um6pbrandgo.studio still lacks verified official-domain linkage. No invented or cropped acronym substitution. Checked 2026-11-03.",
       "sourceUrl": "https://www.um6p.ma/en"
-    },
-    {
-      "id": "pending-queen-mary-university-of-london",
-      "name": "Queen Mary University of London",
-      "paperCount": 1,
-      "status": "needs-verification",
-      "finding": "Actual crown/Q symbol confirmed, but no suitable standalone asset at card resolution verified. Official favicons from homepage-linked root and media URLs both have only a16×16frame. That low-resolution opaque-blue genuine crown remains audit-only, not upscaled into a substitute. Current official homepage PNG and 2025-26 Environmental Law PDF contain complete raster lockups; no raster wordmark crop permitted. A public SVG mirror and independent logo mirrors returned403/503 and were not retried. Official public PDF inspected: https://www.qmul.ac.uk/governance-and-legal-services/media/dgls-media/quality/programme-specifications/2025-26/hss/ccls/Environmental-Law-LLM.pdf ; source SHA256 83232390ee5e34ed811e3a9f2eb65d1cebde99711651fb8114a906cd160a1f54. External brand-access request is available by email; no unrequested outreach sent. This is an asset/quality gap, not a blanket legal prohibition.",
-      "sourceUrl": "https://www.qmul.ac.uk/our-brand/"
     },
     {
       "id": "pending-queen-s-university-belfast",
