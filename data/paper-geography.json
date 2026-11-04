@@ -953,6 +953,29 @@
       "evidenceUrls": [
         "https://arxiv.org/pdf/2610.41857"
       ]
+    },
+    "arxiv-2605-09999": {
+      "locationIds": [
+        "illinois"
+      ],
+      "unresolvedInstitutionIds": [
+        "pending-florida-international-university",
+        "providence-college"
+      ],
+      "evidenceUrls": [
+        "https://www.roboticsproceedings.org/rss22/p160.pdf"
+      ]
+    },
+    "arxiv-2608-10600": {
+      "locationIds": [
+        "georgia-tech"
+      ],
+      "unresolvedInstitutionIds": [
+        "pending-seoul-national-university"
+      ],
+      "evidenceUrls": [
+        "https://arxiv.org/html/2608.10600v1"
+      ]
     }
   },
   "unresolvedInstitutions": {

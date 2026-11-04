@@ -227,6 +227,8 @@ test('Site copy stays concise without removing functional state or demo warnings
   assert.ok(html.includes('书签、已读与笔记仅保存在本机，不会自动同步。'));
   h.click({sourceProfile:'xun',sourceType:'lab'});assert.equal(h.element('result-bar').hidden,true);
   h.click({category:'xun'});assert.equal(h.element('result-bar').hidden,false);
+  // Historical preprint warnings remain visible; future Xun curated issues exclude preprint-only papers.
+  h.run("go({date:'2026-10-31'})");
   assert.match(h.element('content').innerHTML,/预印本/);
   h.click({view:'archive'});assert.match(h.element('content').innerHTML,/2026/);
   h.click({view:'bookmarks'});assert.equal(h.element('bookmark-transfer').hidden,false);

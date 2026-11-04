@@ -6231,6 +6231,80 @@
       "alphaStatus": "not-applicable",
       "logo": null,
       "note": "官方标志入口https://www.labri.fr/les-logos-labri-et-tutelles及主页https://www.labri.fr/本轮web访问超时；直接公开主页请求返回HTTP503。未获取可视觉核验的独立完整紧凑标识，保留文字名称；未登录或绕过限制。"
+    },
+    {
+      "id": "umea-university",
+      "officialName": "Umeå University",
+      "aliases": [
+        "Umeå Universitet",
+        "Umeå universitet",
+        "Umea University"
+      ],
+      "institutionType": "university",
+      "markType": "emblem",
+      "status": "verified",
+      "alphaStatus": "transparent",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/umu-emblem-2f9d9a8422f0ba94.svg",
+        "sha256": "2f9d9a8422f0ba949450643a535faf11685028b13ddee48ad20304eb21ae99fe",
+        "width": 103,
+        "height": 103,
+        "sourceUrl": "https://www.umu.se/Static/img/umu-logotyp-EN.svg",
+        "evidenceUrl": "https://www.umu.se/en/",
+        "verifiedAt": "2026-11-04",
+        "credit": "Umeå University · official emblem",
+        "rights": "Official university mark; rights retained by Umeå University. No separate permission or open licence claimed. Limited paper-affiliation identification, not endorsement. Derived from official SVG: retain complete emblem paths 14–58 unchanged, remove separate wordmark paths 60–86, adjust viewport only.",
+        "displayPolicy": "official-brand",
+        "background": "transparent",
+        "altZh": "于默奥大学完整圆形校徽",
+        "altEn": "Complete circular Umeå University emblem"
+      },
+      "note": "Official English homepage links the source SVG. Full emblem paths path14 through path58 retained with original geometry, transforms and colors; separate lower wordmark paths path60 through path86 removed. ViewBox bounds changed to contain the whole emblem. Rendered and visually verified at 103×103; no opaque canvas, no redrawing, no added details. Original favicon was only 16×16 and was not used.",
+      "rightsStatus": "not-separately-authorized",
+      "displayScope": "paper-affiliation-only",
+      "rightsPolicyUrl": "https://www.umu.se/en/"
+    },
+    {
+      "id": "free-university-bozen-bolzano",
+      "officialName": "Free University of Bozen-Bolzano",
+      "aliases": [
+        "Free University of Bolzano",
+        "Libera Università di Bolzano",
+        "Freie Universität Bozen"
+      ],
+      "institutionType": "university",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "2026-11-04 checked official homepage and corporate-design entry. Downloaded official favicon-194x194.png and inspected actual pixels: typographic unibz wordmark with horizontal strokes, not a standalone emblem. Did not shrink this wordmark or alter it into a crest. No suitable compact emblem verified in this bounded check; retain name only. Official sources: https://www.unibz.it/en/ ; https://www.unibz.it/it/services/press/corporate-design ; https://www.unibz.it/_resources/themes/unibz/images/fav/favicon-194x194.png"
+    },
+    {
+      "id": "providence-college",
+      "officialName": "Providence College",
+      "aliases": [],
+      "institutionType": "university",
+      "markType": "compact-symbol",
+      "status": "verified",
+      "alphaStatus": "opaque-light",
+      "logo": {
+        "kind": "institution-logo",
+        "path": "assets/institutions/providence-torch.jpg",
+        "sha256": "61251e454aa6024e16489a12210d715f6b76a35ed5199873d83f12e4c572a813",
+        "width": 488,
+        "height": 942,
+        "sourceUrl": "https://brand.providence.edu/wp-content/uploads/sites/1/sites/213/2023/01/PC-torch.jpg",
+        "evidenceUrl": "https://brand.providence.edu/our-brand/",
+        "verifiedAt": "2026-11-04",
+        "credit": "Providence College",
+        "rights": "Official Providence College torch, reproduced unchanged from its public brand site for affiliation identification only. Trademark/copyright retained; no blanket licence or endorsement claimed.",
+        "displayPolicy": "official-brand",
+        "background": "light",
+        "altZh": "Providence College官方火炬标志",
+        "altEn": "Official Providence College torch"
+      },
+      "note": "官方品牌页确认独立火炬；原始JPG白底，无alpha，不裁切字标生成；校印限正式文件，故不用校印。 / Official standalone torch; original opaque white JPG, no fabricated transparency. Formal-use seal not used."
     }
   ]
 }

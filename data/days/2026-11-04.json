@@ -1,0 +1,887 @@
+{
+  "version": 2,
+  "date": "2026-11-04",
+  "title": "2026-11-04 零域 · 迅3 / 李1 / 驴3",
+  "demo": false,
+  "timezone": "Asia/Shanghai",
+  "issueNote": "4篇唯一论文：迅3、李1、驴3，其中3篇机器人论文跨方向共享。迅为2篇正式会议/录用论文与1篇期刊，约3:2仅为软目标，不凑数；仅预印本留独立arXiv模块。正式发表日未知或较早首次发现均据实标记，今天不加周一经典。",
+  "coverage": {
+    "checkedSources": [
+      "读取当前规则、来源目录、论文注册表及2026-10-31至11-03历史日报，按标题/arXiv/DOI去重。",
+      "CoRL2026官网首页、程序、录用论文HTML，定位SuperMimic Poster217/OralO7；作者项目与arXiv全文。",
+      "RSS2026正式论文目录、Muninn记录和PDF；RSS官方获奖公告；作者代码库。",
+      "IEEE RA-L近期检索，包括Oct21 Standalone Robotics、BooST正式记录、作者全文及项目。",
+      "机构核验：原文首页；复用Berkeley/UIUC/FIU/SNU/GeorgiaTech现有标志，另查Providence官方品牌页与独立火炬原图。",
+      "Calvanese官方论文目录与本篇作者公开PDF",
+      "RuleML+RR 2024官方接收论文页",
+      "Springer本篇正式出版页",
+      "ICDT 2026官方目录相关检索",
+      "2026年VKG/view updates/deletion propagation定向检索"
+    ],
+    "limitations": [
+      "仅实际上述来源已查，未声称70项来源全部覆盖；独立arXiv公告不计入本次精选覆盖。",
+      "会议:期刊为2:1，3:2软目标未机械凑数。优先核验近期CoRL后补RSS获奖及RA-L较早首次发现。",
+      "Standalone Robotics虽近期正式RA-L且摘要有价值，本轮未取得完整作者/署名/正文证据，未精选。",
+      "SuperMimic录用日未公开；Muninn正式记录仅到月份，精确publicationDate均保留null而非以会期冒充。",
+      "未运行任何论文代码、硬件实验或独立复现；所有实验结果均作者报告。",
+      "未穷尽李方向全部会议、期刊或arXiv公告；当前检索未找到足以替代本条的近期未推荐工作。",
+      "本期仅提交1篇较早首次发现理论论文，避免重复与凑数。",
+      "本期精选发布时，已观察到2026-11-03的arXiv公告批次，但其全量相关性、导读和署名标识核验仍未完成；独立模块暂保留已发布2026-11-02档案，不将未完成或旧批次称为当天零更新。"
+    ]
+  },
+  "papers": [
+    {
+      "id": "doi-6e6ea2e3790d444b583c",
+      "title": "通过模式映射恢复实现虚拟知识图谱的本体层更新",
+      "titleEn": "Ontology-Based Update in Virtual Knowledge Graphs via Schema Mapping Recovery",
+      "authors": [
+        "Romuald Esdras Wandji",
+        "Diego Calvanese"
+      ],
+      "year": 2024,
+      "venue": "RuleML+RR 2024 · LNCS 15183, pp. 59–74",
+      "tags": [
+        "VKG",
+        "OBDA",
+        "DL-Lite",
+        "视图更新",
+        "数据来源",
+        "模式映射恢复"
+      ],
+      "summary": "在固定本体、映射和源模式下，如何把本体层的增删请求落实到关系数据？本文借助模式映射的最大恢复，连接数据来源分支与源更新候选，并按选定度量比较本体副作用。它分别处理批量删除和插入，为理解VKG更新提供理论基础；混合增删、源约束优化与工程实现仍是后续工作，最坏搜索成本呈指数增长。",
+      "whySelected": "较早论文 · 首次发现。直接对应固定规范下的VKG实例更新，可回溯后续补偿更新方法所依赖的最大恢复与lineage基础；不是已读种子论文的重复推荐。",
+      "sources": [
+        {
+          "label": "作者公开原文",
+          "url": "https://www.inf.unibz.it/~calvanese/papers/wand-calv-RuleML-RR-2024.pdf"
+        },
+        {
+          "label": "Springer正式出版记录",
+          "url": "https://link.springer.com/chapter/10.1007/978-3-031-72407-7_6"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "li"
+      ],
+      "recommendations": {
+        "li": {
+          "whyRead": "适合与已读的副作用补偿方法对照，先厘清“恢复映射”与“唯一逆映射”的区别。",
+          "relation": "固定TBox、映射和源模式，只改变源实例；将本体请求、witness式来源分支及副作用比较串联起来。",
+          "prerequisites": [
+            "DL-Lite_R与TBox/ABox",
+            "CQ/UCQ",
+            "R2RML IRI模板",
+            "集合包含与数据库来源"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "deep"
+        }
+      },
+      "identity": {
+        "doi": "10.1007/978-3-031-72407-7_6",
+        "arxiv": null,
+        "other": null
+      },
+      "publicationStatus": "published",
+      "publicationDate": "2024-09-11",
+      "discoveredDate": "2026-11-04",
+      "verifiedAt": "2026-11-04",
+      "readDepth": "fulltext",
+      "paperType": "theory",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "混合插入与删除不在本篇已完成范围；源约束优化及Ontop实现列为后续工作。",
+        "最坏情形为指数搜索；不把理论算法说成已验证的大规模系统。",
+        "第4节对同一目标概念或角色采用相同IRI模板，作者明确指出该条件在实践中较强。"
+      ],
+      "assumptions": [
+        "DL-Lite_R本体，源查询为UCQ；IRI模板可逆，采用标准名称假设。",
+        "相关蕴含先编译为饱和映射；插入翻译需满足不相交约束的一致性。"
+      ],
+      "evidence": [
+        {
+          "url": "https://link.springer.com/chapter/10.1007/978-3-031-72407-7_6",
+          "claim": "正式会议论文，完整作者、LNCS 15183、页59–74；First Online为2024-09-11。",
+          "checkedAt": "2026-11-04"
+        },
+        {
+          "url": "https://www.inf.unibz.it/~calvanese/papers/wand-calv-RuleML-RR-2024.pdf",
+          "claim": "重点核读第3–7节。定理6给出MR-os-mapping的最大恢复性质；命题11把实例恢复与lineage对应；算法1/2分别处理删除/插入，结论明确复杂度及未完成范围。",
+          "checkedAt": "2026-11-04"
+        }
+      ],
+      "researchNotes": [
+        "正文重点核读，并非逐项独立证明复核。建议顺序：第3节翻译语义→第4节恢复→第5节来源→第6节算法→第7节边界。",
+        "定理6适用本篇受限映射条件；命题11针对既有ABox事实，不能直接当作新插入事实已有来源。",
+        "未运行代码；未确认专属代码、项目、视频或数据资源，全部保留null。",
+        "已比对2026-10-31至11-03历史及已读种子；本条不是周一经典，不占经典额外名额。"
+      ],
+      "summaryEn": "With the ontology, mappings and source schema fixed, how can ontology-level insertion or deletion requests be realized in relational data? This paper uses maximum recovery of schema mappings to connect lineage branches with candidate source updates and compare ontology side effects under a chosen metric. It treats batches of deletions and insertions separately, providing a theoretical foundation for understanding VKG updates. Mixed updates, optimization using source constraints and implementation remain future work, and worst-case search cost grows exponentially.",
+      "visuals": {
+        "mainFigure": null,
+        "figureNote": "理论论文正文以定义、证明、示例表与算法为主，未采用可独立说明贡献的主图；不生成替代科学插图。",
+        "institutions": [
+          {
+            "name": "Umeå University",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/umu-emblem-2f9d9a8422f0ba94.svg",
+              "sha256": "2f9d9a8422f0ba949450643a535faf11685028b13ddee48ad20304eb21ae99fe",
+              "width": 103,
+              "height": 103,
+              "sourceUrl": "https://www.umu.se/Static/img/umu-logotyp-EN.svg",
+              "evidenceUrl": "https://www.umu.se/en/",
+              "verifiedAt": "2026-11-04",
+              "credit": "Umeå University · official emblem",
+              "rights": "Official university mark; rights retained by Umeå University. No separate permission or open licence claimed. Limited paper-affiliation identification, not endorsement. Derived from official SVG: retain complete emblem paths 14–58 unchanged, remove separate wordmark paths 60–86, adjust viewport only.",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "altZh": "于默奥大学完整圆形校徽",
+              "altEn": "Complete circular Umeå University emblem"
+            },
+            "authorNames": [
+              "Romuald Esdras Wandji",
+              "Diego Calvanese"
+            ],
+            "evidence": [
+              {
+                "url": "https://www.inf.unibz.it/~calvanese/papers/wand-calv-RuleML-RR-2024.pdf",
+                "claim": "首页署名：Department of Computing Science；Romuald Esdras Wandji, Diego Calvanese",
+                "checkedAt": "2026-11-04"
+              }
+            ],
+            "note": "首页署名已核实；复用官方SVG中完整独立校徽，未改几何或颜色。只标识论文署名，不表示背书。",
+            "institutionType": "university",
+            "markType": "emblem",
+            "institutionId": "umea-university"
+          },
+          {
+            "name": "Free University of Bozen-Bolzano",
+            "logo": null,
+            "authorNames": [
+              "Diego Calvanese"
+            ],
+            "evidence": [
+              {
+                "url": "https://www.inf.unibz.it/~calvanese/papers/wand-calv-RuleML-RR-2024.pdf",
+                "claim": "首页署名：Faculty of Engineering；Diego Calvanese",
+                "checkedAt": "2026-11-04"
+              }
+            ],
+            "note": "首页署名已核实。已检查官方主页、设计入口和194×194图标；取得的是unibz字标，未核实合适的独立紧凑校徽，保留名称。",
+            "institutionType": "university",
+            "markType": "none",
+            "institutionId": "free-university-bozen-bolzano"
+          }
+        ],
+        "authors": []
+      }
+    },
+    {
+      "id": "arxiv-2610-28480",
+      "title": "SuperMimic：用一个可微世界模型扩展人形全身控制",
+      "titleEn": "SuperMimic: Scaling Humanoid Whole-Body Control with One Differentiable World Model",
+      "authors": [
+        "Qiayuan Liao",
+        "Yiyang Shao",
+        "Junfeng Long",
+        "Kevin Zakka",
+        "Roberto Horowitz",
+        "Pieter Abbeel",
+        "Koushil Sreenath"
+      ],
+      "year": 2026,
+      "venue": "CoRL 2026 · Oral O7（已录用 / accepted）",
+      "tags": [
+        "人形机器人",
+        "世界模型",
+        "模型强化学习",
+        "CoRL 2026 Oral"
+      ],
+      "summary": "大规模人形动作跟踪通常依赖昂贵的无模型强化学习。SuperMimic从仿真转移学习一个共享可微动力学模型，通过短时想象轨迹反传来训练策略。作者报告单张H100训练三小时超过SONIC已发布策略的回报，并在129514段动作上失败25次，延长训练后为零。论文展示真机G1迁移，但硬件和数据量不同，且训练限于平地，不能把算力比直接当作同条件比较。",
+      "summaryEn": "Large-scale humanoid motion tracking usually relies on costly model-free reinforcement learning. SuperMimic learns shared differentiable dynamics from simulator transitions and trains a policy by backpropagating through short imagined trajectories. The authors report that three hours on one H100 exceed the return of the released SONIC policy, with 25 failures across 129,514 motions and none after longer training. The paper demonstrates transfer to a real G1, but hardware and data sizes differ and training is confined to flat ground, so the compute ratio is not a matched comparison.",
+      "whySelected": "正式会议录用论文·首次发现；CoRL官方名单明确Oral O7。正式录用日期未核实，不以预印本日期冒充。 / First discovery of an accepted conference paper in the official Oral O7 list; its acceptance date is unverified and is not replaced by the preprint date.",
+      "sources": [
+        {
+          "label": "论文全文 / Paper",
+          "url": "https://arxiv.org/pdf/2610.28480"
+        },
+        {
+          "label": "CoRL官方录用及Oral名单 / Official accepted and oral list",
+          "url": "https://2026.corl.org/program/accepted-papers"
+        },
+        {
+          "label": "作者项目页 / Project",
+          "url": "https://supermimic.github.io/"
+        },
+        {
+          "label": "OpenReview会议条目",
+          "url": "https://openreview.net/forum?id=psNqjklVOK"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun",
+        "lv"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "关注可微世界模型如何减少跟踪策略训练成本，先核对计算口径。 / Examine how a differentiable world model reduces training cost, checking the compute accounting first.",
+          "relation": "人形全身控制与机器人学习的近期交叉进展。 / Recent robot-learning and humanoid-control work.",
+          "prerequisites": [
+            "模型强化学习 / Model-based RL",
+            "时间反向传播 / BPTT",
+            "Actor–critic与动作跟踪 / Actor–critic and motion tracking"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        },
+        "lv": {
+          "whyRead": "P2前沿线，建议现在分段阅读；不必先通读推导，先理解图2训练循环。 / P2 frontier reading for now: start with Figure 2 rather than all derivations.",
+          "relation": "连接P1仿真迁移与P2人形控制；可与无模型PPO比较数据和梯度来源。 / Connects P1 sim-to-real with P2 humanoid control; compare data and gradient sources with PPO.",
+          "prerequisites": [
+            "马尔可夫决策过程与PPO / MDPs and PPO",
+            "动力学模型误差 / Dynamics-model error",
+            "短时展开及价值自举 / Short rollouts and value bootstrapping"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.28480",
+        "other": null
+      },
+      "publicationStatus": "accepted",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-04",
+      "verifiedAt": "2026-11-04",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": "https://supermimic.github.io/",
+        "video": "https://supermimic.github.io/media/real/film-1080.mp4",
+        "data": null
+      },
+      "limits": [
+        "SONIC使用L40与611小时动作，本方法使用H100与264.56小时；并非硬件数据匹配重跑。 / SONIC uses L40s and 611 motion hours versus H100s and 264.56 hours; not a matched rerun.",
+        "真机展示四种动作，不等于129514段动作全部真机验证。 / Four real-robot motions do not validate the entire motion set on hardware.",
+        "模型只学仿真动力学；训练无地形和物体交互，图中未报告多种子方差。 / Simulator-only dynamics, flat-ground training without object interaction, and no seed variance in plots."
+      ],
+      "assumptions": [
+        "依赖动作参考、仿真转移和运动跟踪密集奖励。 / Requires reference motions, simulator transitions and dense tracking rewards."
+      ],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/pdf/2610.28480",
+          "claim": "首页作者与Berkeley署名；§3方法、§4.1结果及不同硬件/数据口径、§6平地等局限。",
+          "checkedAt": "2026-11-04"
+        },
+        {
+          "url": "https://2026.corl.org/program/accepted-papers",
+          "claim": "官方HTML原文列SuperMimic为Poster217及Oral O7；链接OpenReview psNqjklVOK。",
+          "checkedAt": "2026-11-04"
+        },
+        {
+          "url": "https://supermimic.github.io/",
+          "claim": "作者项目确认CoRL2026、论文、演示视频。",
+          "checkedAt": "2026-11-04"
+        },
+        {
+          "url": "https://supermimic.github.io/media/real/film-1080.mp4",
+          "claim": "作者项目页明确链接的演示资源；未独立复现。 / Demo resource explicitly linked on the author project page; no independent replication.",
+          "checkedAt": "2026-11-04"
+        }
+      ],
+      "researchNotes": [
+        "前沿线：已核读正文§3训练方法、§4.1计算口径、§4.4真机与§6局限；非附录逐式审计。 / Frontier: read sections 3, 4.1, 4.4 and 6; no exhaustive appendix audit.",
+        "阅读顺序：图2与§3.1 → §4.1/图3 → §6；基础线再补§3.3的BPTT和critic自举。 / Read Figure 2 and 3.1, then 4.1/Figure 3 and 6; revisit BPTT and critic bootstrapping in 3.3 as foundations.",
+        "作者项目未提供可核验训练代码链接，code=null；未运行或复现。论文公开时间为2026-10-20；录用日未查明，publicationDate=null。 / No verified training-code link; no execution or replication. Public preprint date: 2026-10-20; acceptance date unverified."
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/supermimic-figure1.png",
+          "sha256": "24829290075d324a64f2a7c7c60a8ed8f1c5ac0d68d4c497911cf7237924afcb",
+          "width": 1188,
+          "height": 399,
+          "sourceUrl": "https://arxiv.org/pdf/2610.28480",
+          "evidenceUrl": "https://arxiv.org/pdf/2610.28480",
+          "verifiedAt": "2026-11-04",
+          "credit": "Original paper authors",
+          "rights": "Original copyrighted figure; attributed scholarly thumbnail only. No blanket reuse licence or endorsement claimed. Extracted from the cited original without scientific edits.",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "light",
+          "altZh": "SuperMimic原文图1：世界模型与算力比较",
+          "altEn": "SuperMimic Figure 1: world-model rollout and compute comparison"
+        },
+        "figureNote": "原论文图1，保留原始图意。 / Original Figure 1, meaning preserved.",
+        "institutions": [
+          {
+            "name": "University of California, Berkeley",
+            "institutionId": "pending-university-of-california-berkeley",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-b318cdbc811c92ba.png",
+              "sha256": "b318cdbc811c92bae4bfae4ffca2116e8074db225df6838e888f5c68f41a037e",
+              "width": 200,
+              "height": 200,
+              "sourceUrl": "https://bcbp.berkeley.edu/sites/default/files/styles/width_200/public/ucbseal_300%20x%20300_0.png?itok=IeSglXI9&timestamp=1399312558",
+              "evidenceUrl": "https://bcbp.berkeley.edu/use-name-policy",
+              "verifiedAt": "2026-11-03",
+              "credit": "University of California, Berkeley · official-source compact identity mark",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. The campus policy restricts Berkeley seal use on websites and asks written authorization for uses outside listed official purposes. Current brand guidance states a 215px screen minimum, which a compact 40×32px affiliation thumbnail does not meet. No exception or approval is claimed. Policy: https://bcbp.berkeley.edu/use-name-policy",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "加州大学伯克利分校官方蓝金色完整校徽",
+              "altEn": "Complete official blue and gold University of California, Berkeley seal"
+            },
+            "authorNames": [
+              "Qiayuan Liao",
+              "Yiyang Shao",
+              "Junfeng Long",
+              "Kevin Zakka",
+              "Roberto Horowitz",
+              "Pieter Abbeel",
+              "Koushil Sreenath"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/pdf/2610.28480",
+                "claim": "论文首页明确署名 / Explicit affiliation on the paper title page.",
+                "checkedAt": "2026-11-04"
+              }
+            ],
+            "note": "仅按论文当时署名；复用已核验标志。 / Paper-time affiliation; verified existing mark reused.",
+            "institutionType": "university",
+            "markType": "emblem"
+          }
+        ],
+        "authors": []
+      }
+    },
+    {
+      "id": "arxiv-2605-09999",
+      "title": "Muninn：让轨迹扩散模型更快",
+      "titleEn": "Muninn: Your Trajectory Diffusion Model But Faster",
+      "authors": [
+        "Gokul Puthumanaillam",
+        "Hao Jiang",
+        "Ruben Hernandez",
+        "Jose Fuentes",
+        "Paulo Padrao",
+        "Leonardo Bobadilla",
+        "Melkior Ornik"
+      ],
+      "year": 2026,
+      "venue": "RSS 2026 · Outstanding Student Paper Award",
+      "tags": [
+        "扩散策略",
+        "推理加速",
+        "轨迹规划",
+        "RSS 2026学生论文奖"
+      ],
+      "summary": "扩散轨迹规划的多步去噪拖慢实时控制。Muninn不重训模型，而用浅层特征变化及采样器敏感度估计复用去噪结果的误差，再按轨迹偏差预算决定缓存或重算。作者在离线强化学习、机械臂规划和视觉操作中报告最高4.6倍加速，并验证导航与操作硬件。保证约束的是相对原模型的轨迹偏差，依赖校准可交换性，不能等同于任意环境下无碰撞。",
+      "summaryEn": "Multistep denoising slows real-time diffusion trajectory planning. Without retraining, Muninn uses shallow-feature changes and sampler sensitivity to estimate the error from reusing denoiser outputs, then chooses caching or recomputation under a trajectory-deviation budget. The authors report up to 4.6× speedups in offline RL, arm planning and visuomotor tasks, with navigation and manipulation hardware tests. Its guarantee concerns deviation from the original model and depends on calibration exchangeability; it is not a universal collision-free guarantee.",
+      "whySelected": "较早论文·首次发现；正式RSS论文与官方学生论文奖可核验，补足扩散策略部署效率视角。 / Older first discovery: verified RSS paper and student-paper award, adding a deployment-efficiency perspective.",
+      "sources": [
+        {
+          "label": "论文全文 / Paper",
+          "url": "https://www.roboticsproceedings.org/rss22/p160.pdf"
+        },
+        {
+          "label": "RSS正式论文记录 / Proceedings",
+          "url": "https://www.roboticsproceedings.org/rss22/p160.html"
+        },
+        {
+          "label": "RSS官方获奖公告 / Official award announcement",
+          "url": "https://www.linkedin.com/posts/rss-conference-99b28823b_congratulations-to-the-winners-of-the-activity-7483464406870396928-YWI1"
+        },
+        {
+          "label": "作者代码 / Official code",
+          "url": "https://github.com/gokulp01/Muninn"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun",
+        "lv"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "阅读推理预算如何变成可校准轨迹误差约束；学生论文奖不是Outstanding Paper大奖。 / Read how compute budgets become calibrated trajectory-error bounds; the student award is distinct from Outstanding Paper.",
+          "relation": "机器人学习与实时规划交叉，适合审查扩散策略部署代价。 / Connects robot learning and real-time planning through diffusion-policy deployment costs.",
+          "prerequisites": [
+            "扩散采样与DDIM / Diffusion sampling and DDIM",
+            "Lipschitz误差传播 / Lipschitz error propagation",
+            "保形预测 / Conformal prediction"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        },
+        "lv": {
+          "whyRead": "P0优先，建议现在阅读概览与操作实验，再补校准理论。 / P0 priority: read the overview and manipulation experiments now, then the calibration theory.",
+          "relation": "直接延续Diffusion Policy基础阅读，关注不重训情况下的延迟与性能权衡。 / Directly extends Diffusion Policy foundations to latency–performance tradeoffs without retraining.",
+          "prerequisites": [
+            "行为克隆与动作块 / BC and action chunks",
+            "去噪网络与缓存 / Denoisers and caching",
+            "校准集、风险水平及分布偏移 / Calibration, risk level and distribution shift"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": "10.15607/rss.2026.xxii.160",
+        "arxiv": "2605.09999",
+        "other": null
+      },
+      "publicationStatus": "published",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-04",
+      "verifiedAt": "2026-11-04",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": "https://github.com/gokulp01/Muninn",
+        "project": "https://github.com/gokulp01/Muninn",
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "最高4.6倍是跨实验上限；表III操作延迟为25→15、30→18、45→27毫秒，不能把上限套到全部任务。 / The 4.6× value is a maximum; Table III reports 25→15, 30→18 and 45→27 ms for manipulation.",
+        "偏差风险不等于物理碰撞风险；任务指标存在小幅下降。 / Deviation risk is not collision risk, and task metrics can decline slightly.",
+        "公开仓库主要提供Diffuser/D4RL集成；没有核实所有论文硬件流程均可一键复现。 / The public repository focuses on Diffuser/D4RL; complete turnkey hardware reproduction is unverified."
+      ],
+      "assumptions": [
+        "§IV依赖采样器局部Lipschitz、度量兼容与校准/部署样本可交换性。 / Section IV assumes local sampler Lipschitzness, metric compatibility and calibration–deployment exchangeability."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.roboticsproceedings.org/rss22/p160.pdf",
+          "claim": "首页全作者与3所机构；§IV假设；§V表III/IV操作与硬件结果。",
+          "checkedAt": "2026-11-04"
+        },
+        {
+          "url": "https://www.roboticsproceedings.org/rss22/p160.html",
+          "claim": "RSS2026正式出版、DOI及2026年7月。",
+          "checkedAt": "2026-11-04"
+        },
+        {
+          "url": "https://www.linkedin.com/posts/rss-conference-99b28823b_congratulations-to-the-winners-of-the-activity-7483464406870396928-YWI1",
+          "claim": "RSS Conference官方公告明确Muninn获Outstanding Student Paper。",
+          "checkedAt": "2026-11-04"
+        },
+        {
+          "url": "https://github.com/gokulp01/Muninn",
+          "claim": "作者公开实现，README说明Diffuser与D4RL集成。",
+          "checkedAt": "2026-11-04"
+        }
+      ],
+      "researchNotes": [
+        "前沿线：核读正文§III–IV及Algorithm1、§V表I–IV和结论；未逐项审计附录证明或运行代码。 / Frontier: read III–IV and Algorithm 1, V/Tables I–IV and conclusion; no exhaustive proof audit or execution.",
+        "阅读顺序：图1 → 表III/IV → Algorithm1 → §IV-C；基础线补保形校准与相对轨迹偏差的含义。 / Read Figure 1, Tables III/IV, Algorithm 1, then IV-C; review conformal calibration and relative trajectory deviation.",
+        "正式记录只给2026年7月，未把会议开幕日伪装为精确出版日；publicationDate=null。 / Proceedings provide July 2026 only; no invented exact publication date."
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/muninn-figure1.png",
+          "sha256": "15bd777595047025fc9325430372a1b68f771a3a8bda4d9b21e534c72e45df99",
+          "width": 714,
+          "height": 495,
+          "sourceUrl": "https://www.roboticsproceedings.org/rss22/p160.pdf",
+          "evidenceUrl": "https://www.roboticsproceedings.org/rss22/p160.pdf",
+          "verifiedAt": "2026-11-04",
+          "credit": "Original paper authors",
+          "rights": "Original copyrighted figure; attributed scholarly thumbnail only. No blanket reuse licence or endorsement claimed. Extracted from the cited original without scientific edits.",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "light",
+          "altZh": "Muninn原文图1：缓存与完整去噪对比",
+          "altEn": "Muninn Figure 1: cached versus full denoising"
+        },
+        "figureNote": "原论文图1，保留原始图意。 / Original Figure 1, meaning preserved.",
+        "institutions": [
+          {
+            "name": "University of Illinois Urbana-Champaign",
+            "institutionId": "illinois",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-ef249802445ee515.svg",
+              "sha256": "ef249802445ee515e32afcbf69bd1f7d7f4add078ca5b16cff29c7c1169f8950",
+              "width": 180,
+              "height": 180,
+              "sourceUrl": "https://cdn.brand.illinois.edu/icon.svg",
+              "evidenceUrl": "https://illinois.edu/",
+              "verifiedAt": "2026-11-03",
+              "credit": "University of Illinois Urbana-Champaign · official mark",
+              "rights": "Official institutional mark; trademark/copyright retained by its owner. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve aspect ratio, complete mark and clear space. Transparent derivative removes only separate SVG canvas background; no emblem geometry or colors changed. No separate institutional permission claimed.",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "altZh": "Illinois 官方 Block I 身份符号",
+              "altEn": "Official Illinois Block I identity symbol"
+            },
+            "authorNames": [
+              "Gokul Puthumanaillam",
+              "Hao Jiang",
+              "Ruben Hernandez",
+              "Melkior Ornik"
+            ],
+            "evidence": [
+              {
+                "url": "https://www.roboticsproceedings.org/rss22/p160.pdf",
+                "claim": "论文首页明确署名 / Explicit affiliation on the paper title page.",
+                "checkedAt": "2026-11-04"
+              }
+            ],
+            "note": "仅按论文当时署名；复用已核验标志。 / Paper-time affiliation; verified existing mark reused.",
+            "institutionType": "university",
+            "markType": "compact-symbol"
+          },
+          {
+            "name": "Florida International University",
+            "institutionId": "pending-florida-international-university",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-3b23e733714e1382.png",
+              "sha256": "3b23e733714e138266f6fa854633b8d1e4a2a05ba23fb7ad68581212b72731b5",
+              "width": 800,
+              "height": 373,
+              "sourceUrl": "https://digicdn.fiu.edu/v1/_assets/images/fiu-main-logo.png",
+              "evidenceUrl": "https://www.fiu.edu/",
+              "verifiedAt": "2026-11-03",
+              "credit": "Florida International University · official-source compact identity mark",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. University trademark policy requires prior approval for proposed mark uses; none has been obtained. Policy: https://policies.fiu.edu/download/c9bb41336224cf90d12301ca512ab70b",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "Florida International University 官方独立图形标识",
+              "altEn": "Florida International University complete official compact identity mark"
+            },
+            "authorNames": [
+              "Jose Fuentes",
+              "Leonardo Bobadilla"
+            ],
+            "evidence": [
+              {
+                "url": "https://www.roboticsproceedings.org/rss22/p160.pdf",
+                "claim": "论文首页明确署名 / Explicit affiliation on the paper title page.",
+                "checkedAt": "2026-11-04"
+              }
+            ],
+            "note": "仅按论文当时署名；复用已核验标志。 / Paper-time affiliation; verified existing mark reused.",
+            "institutionType": "university",
+            "markType": "compact-symbol"
+          },
+          {
+            "name": "Providence College",
+            "institutionId": "providence-college",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/providence-torch.jpg",
+              "sha256": "61251e454aa6024e16489a12210d715f6b76a35ed5199873d83f12e4c572a813",
+              "width": 488,
+              "height": 942,
+              "sourceUrl": "https://brand.providence.edu/wp-content/uploads/sites/1/sites/213/2023/01/PC-torch.jpg",
+              "evidenceUrl": "https://brand.providence.edu/our-brand/",
+              "verifiedAt": "2026-11-04",
+              "credit": "Providence College",
+              "rights": "Official Providence College torch, reproduced unchanged from its public brand site for affiliation identification only. Trademark/copyright retained; no blanket licence or endorsement claimed.",
+              "displayPolicy": "official-brand",
+              "background": "light",
+              "altZh": "Providence College官方火炬标志",
+              "altEn": "Official Providence College torch"
+            },
+            "authorNames": [
+              "Paulo Padrao"
+            ],
+            "evidence": [
+              {
+                "url": "https://www.roboticsproceedings.org/rss22/p160.pdf",
+                "claim": "首页明确Paulo Padrao署名Providence College。",
+                "checkedAt": "2026-11-04"
+              }
+            ],
+            "note": "官方品牌页确认独立火炬；原始JPG白底，无alpha，不裁切字标生成；校印限正式文件，故不用校印。 / Official standalone torch; original opaque white JPG, no fabricated transparency. Formal-use seal not used.",
+            "institutionType": "university",
+            "markType": "compact-symbol"
+          }
+        ],
+        "authors": []
+      }
+    },
+    {
+      "id": "arxiv-2608-10600",
+      "title": "BooST：连接语义与动作，实现高效机器人技能迁移",
+      "titleEn": "BooST: Bridging Semantics and Motions for Efficient Skill Transfer",
+      "authors": [
+        "Jusuk Lee",
+        "Daesol Cho",
+        "Jonghun Shin",
+        "Seungyeon Yoo",
+        "Jonghae Park",
+        "Taekbeom Lee",
+        "H. Jin Kim"
+      ],
+      "year": 2026,
+      "venue": "IEEE Robotics and Automation Letters 11(10), 11713–11720 (2026)",
+      "tags": [
+        "机器人学习",
+        "技能迁移",
+        "跨具身",
+        "模仿学习"
+      ],
+      "summary": "机器人技能既要表达“做什么”，也要保留“怎么做”。BooST用跨模态VQ-VAE把视觉语言语义与动作轨迹压入共享技能码本，再蒸馏为轻量策略。作者在LIBERO和UR3上检验少样本适配，真实任务每项仅用五次示范，并测试动态视觉干扰。二维图像的深度精度及大视角变化仍是局限，结果不能直接外推为开放世界通用能力。",
+      "summaryEn": "Robot skills need to encode both intent and motion. BooST combines visual-language features and action trajectories in a shared VQ-VAE skill codebook, then distills it into a lightweight policy. The authors evaluate few-shot adaptation on LIBERO and a UR3, using five demonstrations per real-world task, and test dynamic visual distractions. Depth precision from 2D images and large viewpoint changes remain limitations; these experiments do not establish general open-world capability.",
+      "whySelected": "较早论文·首次发现：把语义、动作与部署效率放进同一框架，补充正式期刊视角。 / Older first discovery: a unified treatment of semantics, motion and deployment efficiency adds a formal-journal perspective.",
+      "sources": [
+        {
+          "label": "IEEE正式期刊记录",
+          "url": "https://ieeexplore.ieee.org/abstract/document/11668659/"
+        },
+        {
+          "label": "作者全文（arXiv v1）",
+          "url": "https://arxiv.org/html/2608.10600v1"
+        },
+        {
+          "label": "作者项目页及演示",
+          "url": "https://boost-robots.github.io/"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun",
+        "lv"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "重点看共享码本如何同时受语义和动作约束，以及蒸馏后部署端保留了什么。 / Examine how semantics and motion jointly constrain the codebook and what survives distillation.",
+          "relation": "与机器人操作、跨具身迁移和轻量策略研究直接相关。 / Directly relevant to manipulation, cross-embodiment skill transfer and lightweight policies.",
+          "prerequisites": [
+            "行为克隆 / Behavior cloning",
+            "VQ-VAE与向量量化 / VQ-VAE and vector quantization",
+            "CLIP与交叉注意力 / CLIP and cross-attention"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        },
+        "lv": {
+          "whyRead": "P0操作学习前沿线，建议现在按图2串联表征、蒸馏与实验，再读V-E局限。 / P0 manipulation frontier: read Figure 2 through representation, distillation and experiments, then V-E limitations.",
+          "relation": "直接关联P0学习操作与P2跨形态技能迁移，比较技能先验和端到端策略。 / Connects P0 learned manipulation with P2 cross-embodiment transfer; compare skill priors with end-to-end policies.",
+          "prerequisites": [
+            "神经网络基础 / Neural networks",
+            "模仿学习 / Imitation learning",
+            "注意力机制 / Attention"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": "10.1109/lra.2026.3728347",
+        "arxiv": "2608.10600",
+        "other": null
+      },
+      "publicationStatus": "published",
+      "publicationDate": "2026-08-28",
+      "discoveredDate": "2026-11-04",
+      "verifiedAt": "2026-11-04",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "近期正式期刊补充：IEEE在线发表2026-08-28，编入2026年10月卷期；作者预印本为2026-08-11，并非11月4日新论文。",
+      "links": {
+        "code": null,
+        "project": "https://boost-robots.github.io/",
+        "video": "https://boost-robots.github.io/static/videos/teaser.mp4",
+        "data": null
+      },
+      "limits": [
+        "原文指出二维视觉对相机深度方向精细控制及大视角变化存在限制。 / 2D visual input limits depth-axis precision and robustness to large viewpoint changes.",
+        "真实机器人仅四类任务；干扰实验采用统一下游架构比较预训练目标，不等于完整原始VLA系统排名。 / Four real-world task categories; distractor tests share a downstream architecture and do not rank complete original VLA systems.",
+        "项目页Code按钮指向GitHub组织；核验仅发现项目网站仓库，未确认训练或推理代码公开。 / The Code link leads to an organization with only the project website verified, not an implementation."
+      ],
+      "assumptions": [
+        "预训练需要带语言、图像和动作的轨迹；下游仍需目标任务示范。 / Pretraining requires language, images and actions; downstream target-task demonstrations are still needed."
+      ],
+      "evidence": [
+        {
+          "url": "https://ieeexplore.ieee.org/abstract/document/11668659/",
+          "claim": "正式出版日期2026-08-28；RA-L 11(10):11713–11720；DOI10.1109/LRA.2026.3728347。",
+          "checkedAt": "2026-11-04"
+        },
+        {
+          "url": "https://arxiv.org/html/2608.10600v1",
+          "claim": "作者稿提供全作者、署名机构、方法、实验与局限；标注2026-08-08接收。",
+          "checkedAt": "2026-11-04"
+        },
+        {
+          "url": "https://boost-robots.github.io/",
+          "claim": "作者项目页交叉确认RA-L归属、机构及演示资源。",
+          "checkedAt": "2026-11-04"
+        },
+        {
+          "url": "https://github.com/boost-robots",
+          "claim": "核验时组织仅列项目网站仓库；不把Code按钮当作实现已开源。",
+          "checkedAt": "2026-11-04"
+        },
+        {
+          "url": "https://boost-robots.github.io/static/videos/teaser.mp4",
+          "claim": "作者项目页明确链接的演示资源；未独立复现。 / Demo resource explicitly linked on the author project page; no independent replication.",
+          "checkedAt": "2026-11-04"
+        }
+      ],
+      "researchNotes": [
+        "前沿线：核读作者稿I–VI、图1–6及表I–IV，重点III、IV、V与V-E；未读IEEE付费版、未运行复现。 / Read author version I–VI, Figures 1–6 and Tables I–IV, focusing on III, IV, V and V-E; no IEEE paywalled full text or replication.",
+        "阅读顺序：图2 → V实验 → V-E局限；基础线补VQ-VAE码本与蒸馏。 / Read Figure 2, experiments V and limitations V-E; review VQ-VAE codebooks and distillation as foundations.",
+        "代码与数据未取得可验证实现链接，保持null。 / Code and data remain null without verified implementation links."
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/boost-framework.png",
+          "sha256": "1d71d6e15d8a24cb777569375770af42339359c3dfb3791b92642c6e093caba9",
+          "width": 2042,
+          "height": 545,
+          "sourceUrl": "https://arxiv.org/html/2608.10600v1/main_figure_long.png",
+          "evidenceUrl": "https://arxiv.org/html/2608.10600v1",
+          "verifiedAt": "2026-11-04",
+          "credit": "Jusuk Lee et al., BooST, arXiv:2608.10600v1, Fig. 2",
+          "rights": "作者arXiv v1页面标注CC BY 4.0；图2原图未改动。",
+          "displayPolicy": "open-license",
+          "background": "light",
+          "altZh": "BooST图2：共享技能预训练与蒸馏后下游适配的双阶段框架。",
+          "altEn": "BooST Figure 2: unified skill pretraining and distilled downstream adaptation."
+        },
+        "figureNote": "真实论文图2，来自作者arXiv全文；已视觉检查。",
+        "institutions": [
+          {
+            "name": "Seoul National University",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-f4e9b2b542d23871.png",
+              "sha256": "f4e9b2b542d23871235a99e8382e9d9fb0a55ddf1668ca9e5d495f336ed7c19b",
+              "width": 114,
+              "height": 114,
+              "sourceUrl": "https://en.snu.ac.kr/_skin/eng/layout/image/mobileicon.png",
+              "evidenceUrl": "https://en.snu.ac.kr/about/symbol/ui",
+              "verifiedAt": "2026-11-03",
+              "credit": "Seoul National University · official-source compact identity mark",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. Official UI page requires external parties to obtain prior approval and reserves high-resolution downloads for SNU members. This public website icon is not a permission or member-access substitute; no approval is claimed. Policy: https://en.snu.ac.kr/about/symbol/ui",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "light",
+              "altZh": "Seoul National University 官方完整独立图形标识",
+              "altEn": "Seoul National University complete official compact identity mark"
+            },
+            "authorNames": [
+              "Jusuk Lee",
+              "Jonghun Shin",
+              "Seungyeon Yoo",
+              "Jonghae Park",
+              "Taekbeom Lee",
+              "H. Jin Kim"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2608.10600v1",
+                "claim": "原文署名：Department of Aerospace Engineering, Automation and Systems Research Institute (ASRI), Seoul National University。",
+                "checkedAt": "2026-11-04"
+              }
+            ],
+            "note": "原文署名：Department of Aerospace Engineering, Automation and Systems Research Institute (ASRI), Seoul National University。 复用机构库已核验标识；来源核验不代表取得机构授权。",
+            "institutionType": "university",
+            "markType": "emblem",
+            "institutionId": "pending-seoul-national-university"
+          },
+          {
+            "name": "Georgia Institute of Technology",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/gatech-symbol.png",
+              "sha256": "33c89bd7e3478f65c2a8f818274c18d0075090f3a10ea733cf9e3c371f626edc",
+              "width": 48,
+              "height": 48,
+              "sourceUrl": "https://www.gatech.edu/themes/custom/gatech/favicon.ico",
+              "evidenceUrl": "https://brand.gatech.edu/our-look/logos",
+              "verifiedAt": "2026-10-31",
+              "credit": "Georgia Institute of Technology official compact identity symbol",
+              "rights": "官方首页身份符号，商标归原权利人；无开放许可声明。不是受限大学印章，不表示背书。",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "altZh": "Georgia Tech 官方交织 GT 身份符号",
+              "altEn": "Official Georgia Tech interlocking GT identity symbol"
+            },
+            "authorNames": [
+              "Daesol Cho"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2608.10600v1",
+                "claim": "原文署名：Georgia Institute of Technology, Atlanta, GA, USA。",
+                "checkedAt": "2026-11-04"
+              }
+            ],
+            "note": "原文署名：Georgia Institute of Technology, Atlanta, GA, USA。 复用机构库已核验标识；来源核验不代表取得机构授权。",
+            "institutionType": "university",
+            "markType": "compact-symbol",
+            "institutionId": "georgia-tech"
+          }
+        ],
+        "authors": [
+          {
+            "name": "Jusuk Lee",
+            "portrait": null,
+            "note": "作者姓名依论文署名；未使用未经核验的肖像。"
+          },
+          {
+            "name": "Daesol Cho",
+            "portrait": null,
+            "note": "作者姓名依论文署名；未使用未经核验的肖像。"
+          },
+          {
+            "name": "Jonghun Shin",
+            "portrait": null,
+            "note": "作者姓名依论文署名；未使用未经核验的肖像。"
+          },
+          {
+            "name": "Seungyeon Yoo",
+            "portrait": null,
+            "note": "作者姓名依论文署名；未使用未经核验的肖像。"
+          },
+          {
+            "name": "Jonghae Park",
+            "portrait": null,
+            "note": "作者姓名依论文署名；未使用未经核验的肖像。"
+          },
+          {
+            "name": "Taekbeom Lee",
+            "portrait": null,
+            "note": "作者姓名依论文署名；未使用未经核验的肖像。"
+          },
+          {
+            "name": "H. Jin Kim",
+            "portrait": null,
+            "note": "作者姓名依论文署名；未使用未经核验的肖像。"
+          }
+        ]
+      }
+    }
+  ]
+}
