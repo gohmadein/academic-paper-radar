@@ -56,14 +56,14 @@
     "xun": {
       "label": "迅",
       "border": "blue",
-      "targetMin": 3,
+      "targetMin": 5,
       "targetMax": 5,
       "scope": "机器人学习、具身智能优先，同时保留其他机器人相关方向，排除纯机械机构设计。来源层级只影响顺序，不将其他机器人主题排除。",
       "sourceRegistry": "config/source-registry.json",
       "originalWatchlist": "config/xun-source-watchlist.md",
       "selectionPriority": [
         "先筛选日期接近、尚未推荐的正式会议与期刊论文：优先官方核验的会议Best Paper获奖、Oral、Spotlight及高质量期刊文章；近期候选筛选后再补较早论文并标注首次发现。",
-        "会议:期刊约3:2是软目标，不是每日硬配额；3–5篇目标不变，质量不足可少推或0篇，不凑数、不为比例牺牲相关性。",
+        "每日精选5篇，固定会议3篇、期刊2篇；两类名额不互相替代，质量或核验证据不足时如实报告各类缺口，允许少推或0篇，不以预印本或未核实论文凑数。",
         "机器人学习、具身智能优先，其他机器人相关研究仍可推荐；排除纯机械机构设计。",
         "获奖、候选、入围以及Oral/Spotlight是不同身份，必须按官方名单、程序或出版社证据分别表述，记录会议年与track，不推断或伪造。",
         "仅arXiv预印本不进入迅每日精选，统一进入独立arXiv模块；已有官方证据的会议录用/正式会议或期刊版本可用arXiv原文链接，但按已核实正式出处登记。"
@@ -89,21 +89,25 @@
         "index": "data/arxiv/index.json"
       },
       "curatedPublicationPolicy": {
-        "effectiveFrom": "2026-11-04",
+        "effectiveFrom": "2026-11-06",
         "allowedStatuses": [
           "accepted",
-          "published",
-          "workshop"
+          "published"
         ],
         "preprintOnlyAllowed": false,
         "conferenceToJournalTarget": [
           3,
           2
         ],
-        "ratioIsSoft": true,
+        "ratioIsSoft": false,
         "recentUnseenFirst": true,
         "preserveHistoricalIssues": true,
-        "evidence": "正式会议/期刊身份及Best Paper、Oral、Spotlight分别保留官方证据；workshop须明确区分，不冒充主会。"
+        "evidence": "正式会议/期刊类型须用formalPublication登记，evidenceUrl指向同篇evidence中的官方录用/出版依据；不得用arXiv身份或更新时间替代。Best Paper、Oral、Spotlight另须官方证据。workshop不计入本次3篇正式会议名额。",
+        "dailyQuota": {
+          "conference": 3,
+          "journal": 2
+        },
+        "shortfallRequiresExplanation": true
       }
     },
     "li": {

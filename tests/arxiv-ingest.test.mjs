@@ -18,7 +18,7 @@ test('Bulletin plan, atomic import, idempotence and archive retention do not tou
 });
 test('Xun curated quota and priority change only future rules; historical issues remain valid',async()=>{
  const read=path=>readFile(new URL('../'+path,import.meta.url),'utf8');const rules=JSON.parse(await read('config/digest-rules.json')),automation=JSON.parse(await read('config/automation.json'));
- assert.deepEqual([rules.profiles.xun.targetMin,rules.profiles.xun.targetMax],[3,5]);assert.deepEqual([automation.profiles.xun.dailyMin,automation.profiles.xun.dailyMax],[3,5]);assert.ok(rules.profiles.xun.arxivBulletin.separateFromCuratedQuota);assert.ok(rules.profiles.xun.arxivBulletin.noTopN);assert.match(rules.profiles.xun.selectionPriority.join(' '),/候选.*入围/);
+ assert.deepEqual([rules.profiles.xun.targetMin,rules.profiles.xun.targetMax],[5,5]);assert.deepEqual([automation.profiles.xun.dailyMin,automation.profiles.xun.dailyMax],[5,5]);assert.ok(rules.profiles.xun.arxivBulletin.separateFromCuratedQuota);assert.ok(rules.profiles.xun.arxivBulletin.noTopN);assert.match(rules.profiles.xun.selectionPriority.join(' '),/候选.*入围/);
  const history=JSON.parse(await read('data/days/2026-10-31.json'));assert.equal(history.papers.filter(p=>p.profiles.includes('xun')).length,7);
 });
 

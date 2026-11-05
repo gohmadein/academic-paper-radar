@@ -1,3 +1,4 @@
+import {validateXunSelection} from '../lib/xun-selection.js';
 import {validateInstitutionDisplay} from '../lib/institution-display.js';
 import {validateArxivArchive} from './arxiv-ingest.mjs';
 import {profileSources} from '../lib/source-directory.js';
@@ -14,6 +15,8 @@ import {validateGeography} from '../lib/geography-validation.js';
 export const root = fileURLToPath(new URL('../', import.meta.url));
 export async function validateAll(base = root,{assetBase=base}={}) {
   const errors = [];
+  let rules;
+  try { rules=JSON.parse(await readFile(join(base,'config/digest-rules.json'),'utf8')); } catch(error) { if(error.code!=='ENOENT')throw error; }
   let count = 0;
   const assetPaths=new Set();
   for (const [directory,demo] of [['data',false],['data/demo',true]]) {
@@ -31,6 +34,7 @@ export async function validateAll(base = root,{assetBase=base}={}) {
       try { day = JSON.parse(await readFile(join(path,entry.file),'utf8')); }
       catch { errors.push(`${directory}/${entry.file}: 无法读取 JSON`); continue; }
       errors.push(...validateDay(day,{demo}).map(e => `${directory}/${entry.file}: ${e}`));
+      if(!demo)errors.push(...validateXunSelection(day,rules).map(e => `${directory}/${entry.file}: ${e}`));
       if (day.date !== entry.date || day.title !== entry.title || day.papers?.length !== entry.count) errors.push(`${directory}/${entry.file}: 日期、标题或数量与索引不一致`);
       if (Array.isArray(day.papers)) for (const p of day.papers) {
         if (ids.has(p.id) && !(day.version===2&&(p.classic||p.novelty==='major-update'))) errors.push(`${directory}: 跨日期重复 id ${p.id}`);

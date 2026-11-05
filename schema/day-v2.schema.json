@@ -598,6 +598,27 @@
         },
         "visuals": {
           "$ref": "#/$defs/visuals"
+        },
+        "formalPublication": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "type",
+            "evidenceUrl"
+          ],
+          "properties": {
+            "type": {
+              "enum": [
+                "conference",
+                "journal"
+              ]
+            },
+            "evidenceUrl": {
+              "type": "string",
+              "format": "uri",
+              "pattern": "^https?://"
+            }
+          }
         }
       },
       "allOf": [
