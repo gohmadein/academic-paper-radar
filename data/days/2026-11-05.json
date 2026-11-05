@@ -1,0 +1,940 @@
+{
+  "version": 2,
+  "date": "2026-11-05",
+  "title": "2026-11-05 零域 · 迅3 / 李1 / 驴3",
+  "demo": false,
+  "timezone": "Asia/Shanghai",
+  "issueNote": "本期4篇独立论文：迅3篇正式录用CoRL 2026 Oral，李1篇更新来源追踪演示，驴与迅共享3篇操作学习论文。三篇会议具体录用日期未核实，统一按较早论文首次发现登记；PACE的预印本首次公开于近30日内。会议:期刊3:2仅为软目标，本期未用未充分核验期刊凑数。新一批arXiv六类公告已抓取，但逐篇相关性、导读与署名核验尚未完成，独立公告继续处理；不是零更新，也不宣称完整覆盖。",
+  "coverage": {
+    "checkedSources": [
+      "最新规则、注册表及10月31日至11月4日历史去重",
+      "2026 VKG/OBDA、view update与provenance定向检索",
+      "作者公开PDF第3–5节、ACM正式记录检索、ProvSQL官方论文目录与当前文档",
+      "署名机构官方品牌/媒体页及现有标识库",
+      "最新GitHub config/digest-rules.json；干净仓库注册表及10月31日至11月4日历史去重。",
+      "CoRL2026官网首页、官方录用原始HTML及三篇Oral标记；PACE、TEMPO、OpenDexGrasp原文及作者项目。",
+      "TEMPO官方代码仓；OpenDexGrasp官方coming-soon仓。",
+      "近期会议/获奖入口检索：RSS2026目录、IROS2026候选线索及作者页；未将二手奖项说法写入精选。",
+      "机构：论文首页、现有PKU/BIGAI注册记录、UCI官方品牌页、PrimeBot及小米机器人独立身份检索。"
+    ],
+    "limitations": [
+      "非全量会刊/arXiv扫描；本轮未发现比本条更贴题且核验充分的近期未推工作。",
+      "仅1篇较早首次发现演示论文；未运行代码，论文局限与当前实现状态明确区分。",
+      "2项机构标识复用，其他已核实署名保留文字；原文图因未确认公开转载许可不复制。",
+      "仅覆盖列出的实际入口，未全源扫描；本轮精选3篇正式录用会议论文，不为3:2软比例凑期刊。",
+      "先查CoRL近期正式录用名单，PACE首次公开在30天内；TEMPO和OpenDexGrasp为较早首次发现。三篇具体正式录用日期均未知。",
+      "全部实验数字为作者报告，未独立复现；PACE和OpenDexGrasp尚无已验证可运行代码。",
+      "三项新机构缺少符合当前使用条件的已核验紧凑标志，保留名称并记录原因。",
+      "arXiv独立公告尚在处理；本期精选不覆盖其全部更新。"
+    ]
+  },
+  "papers": [
+    {
+      "id": "arxiv-2610-16308",
+      "title": "PACE：为分块插入策略分配触觉信号的不同时间角色",
+      "titleEn": "PACE: Temporal-Role Tactile Conditioning for Chunk-Based Insertion Policies",
+      "authors": [
+        "Zhiyuan Chen",
+        "Shixiong Xu",
+        "Shuai Chen",
+        "Yangwei You"
+      ],
+      "year": 2026,
+      "venue": "CoRL 2026 · Oral O6（已录用 / accepted）",
+      "tags": [
+        "机器人学习",
+        "CoRL 2026 Oral"
+      ],
+      "summary": "PACE将同一触觉流分别用于慢变接触状态、突发事件修正与训练时未来接触预测。作者在五类真机插入任务报告90.7%平均成功率，每任务30次测试；生成时触觉拼接基线为46.0%。该结果限于插入场景，不等于通用操作能力。",
+      "whySelected": "正式会议录用论文·首次发现；官方名单独立核实录用与Oral。精确录用日未知，不用预印本日期冒充。 / First discovery of an accepted conference paper; acceptance and oral status verified in the official list. Exact acceptance date remains unknown.",
+      "sources": [
+        {
+          "label": "原文 / Paper",
+          "url": "https://arxiv.org/html/2610.16308v1"
+        },
+        {
+          "label": "官方录用与Oral名单 / Official acceptance and oral list",
+          "url": "https://2026.corl.org/program/accepted-papers"
+        },
+        {
+          "label": "作者项目 / Author project",
+          "url": "https://pace-insertion.github.io/"
+        },
+        {
+          "label": "OpenReview",
+          "url": "https://openreview.net/forum?id=AIInkHZlvB"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun",
+        "lv"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "P0前沿线，建议现在读，比较触觉如何参与生成与执行修正。 / P0 frontier: read now to compare tactile conditioning and correction.",
+          "relation": "直接连接模仿学习、接触操作与动作分块控制。 / Connects imitation learning, contact-rich manipulation and chunked control.",
+          "prerequisites": [
+            "行为克隆 / Behavior cloning",
+            "ACT与动作分块 / ACT and action chunks",
+            "触觉与力反馈 / Tactile and force feedback"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        },
+        "lv": {
+          "whyRead": "P0前沿线，建议现在读，比较触觉如何参与生成与执行修正。 / P0 frontier: read now to compare tactile conditioning and correction.",
+          "relation": "直接连接模仿学习、接触操作与动作分块控制。 / Connects imitation learning, contact-rich manipulation and chunked control.",
+          "prerequisites": [
+            "行为克隆 / Behavior cloning",
+            "ACT与动作分块 / ACT and action chunks",
+            "触觉与力反馈 / Tactile and force feedback"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.16308",
+        "other": null
+      },
+      "publicationStatus": "accepted",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-05",
+      "verifiedAt": "2026-11-05",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": "https://pace-insertion.github.io/",
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "验证聚焦精密插入；弱抓握导致物体倾斜时仍会失败。 / Precision insertion only; weak grasps and accumulated tilt remain failure cases.",
+        "跨信号和跨架构测试只覆盖2-pin与Key两任务。 / Cross-signal and cross-backbone tests cover only 2-pin and Key."
+      ],
+      "assumptions": [
+        "依赖物理反馈质量及示范，约每任务160段。 / Depends on feedback quality and approximately 160 demonstrations per task."
+      ],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/html/2610.16308v1",
+          "claim": "核读首页署名、方法、实验及明确局限；阅读范围见研究记录。 / Read affiliations, methods, experiments and limitations; scope stated in notes.",
+          "checkedAt": "2026-11-05"
+        },
+        {
+          "url": "https://2026.corl.org/program/accepted-papers",
+          "claim": "官方原始HTML含本题及OpenReview AIInkHZlvB，列于已录用论文名单。 / Official raw HTML lists this accepted paper.",
+          "checkedAt": "2026-11-05"
+        },
+        {
+          "url": "https://2026.corl.org/program/accepted-papers",
+          "claim": "同一官方名单的展示类型明确为Oral O6，非获奖身份。 / Presentation explicitly Oral O6; no award inferred.",
+          "checkedAt": "2026-11-05"
+        },
+        {
+          "url": "https://pace-insertion.github.io/",
+          "claim": "作者项目及资源状态核验 / Author project and resource status checked.",
+          "checkedAt": "2026-11-05"
+        }
+      ],
+      "researchNotes": [
+        "前沿线：已核读§3、§4.1–4.3与§5，未逐式审计附录或运行实验。 / Frontier: read sections 3, 4.1–4.3 and 5; no exhaustive appendix audit or execution.",
+        "阅读顺序：图1 → §3/图2 → §4表1 → §5；基础线补ACT、动作分块和残差修正。 / Read Figure 1, section 3/Figure 2, section 4/Table 1, then section 5; review ACT, chunking and residual correction.",
+        "预印本首次公开2026-10-12；正式录用日未核实。项目声明代码、模型与数据将发布，当前链接保持null。 / First public preprint: 2026-10-12; acceptance date unverified. Code, models and data are promised but not released; links remain null."
+      ],
+      "summaryEn": "PACE separates tactile feedback into persistent-state conditioning, event correction and training-time consequence prediction. The authors report 90.7% average success over five insertion tasks with 30 trials each, versus 46.0% for tactile concatenation. This does not establish general manipulation ability.",
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/pace-figure1.webp",
+          "sha256": "7117d7af47266f39e769c20013c4e140ae600f029fd3bfda9d9cc5da222a09d9",
+          "width": 1600,
+          "height": 984,
+          "sourceUrl": "https://pace-insertion.github.io/static/images/teaser.png",
+          "evidenceUrl": "https://arxiv.org/html/2610.16308v1",
+          "verifiedAt": "2026-11-05",
+          "credit": "Original paper authors",
+          "rights": "Original author figure, attributed scholarly thumbnail only. No blanket reuse permission or endorsement claimed. Resized without scientific edits. Encoded as WebP at unchanged dimensions for same-origin display.",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "light",
+          "altZh": "PACE：为分块插入策略分配触觉信号的不同时间角色：原文图1",
+          "altEn": "PACE: Temporal-Role Tactile Conditioning for Chunk-Based Insertion Policies: original Figure 1"
+        },
+        "figureNote": "核验作者原图；仅等比例缩小，未改变科学内容。 / Verified author figure, proportionally resized without scientific edits.",
+        "institutions": [
+          {
+            "name": "Beijing Xiaomi Robot Technology Co., Ltd.",
+            "institutionId": "pending-beijing-xiaomi-robot-technology-co-ltd",
+            "logo": null,
+            "authorNames": [
+              "Zhiyuan Chen",
+              "Shixiong Xu",
+              "Shuai Chen",
+              "Yangwei You"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2610.16308v1",
+                "claim": "论文首页明确署名 / Explicit paper-time affiliation.",
+                "checkedAt": "2026-11-05"
+              }
+            ],
+            "note": "已查作者项目与机构检索；项目使用小米母品牌图，未核实机器人公司独立标志，不以母品牌替代。 / Project uses the Xiaomi parent brand; no verified distinct subsidiary mark, so text only.",
+            "institutionType": "company",
+            "markType": "none"
+          }
+        ],
+        "authors": []
+      }
+    },
+    {
+      "id": "arxiv-2609-16864",
+      "title": "TEMPO：为动态机器人操作学习时间上下文",
+      "titleEn": "TEMPO: Learning Temporal Context for Dynamic Robot Manipulation",
+      "authors": [
+        "Zhenyang Feng",
+        "Jimin Heo",
+        "Erik B. Sudderth",
+        "Unnat Jain"
+      ],
+      "year": 2026,
+      "venue": "CoRL 2026 · Oral O2（已录用 / accepted）",
+      "tags": [
+        "机器人学习",
+        "CoRL 2026 Oral"
+      ],
+      "summary": "单帧策略难区分运动方向和相似画面下的任务阶段。TEMPO加入视频运动表示与本体历史。作者报告递瓶成功率由RTC的44%提高到74%；但Drop Catch为66%，低于RTC的80%。倒液实验实际使用珠子，指标是保留质量比例，不是二元成功率。",
+      "whySelected": "正式会议录用论文·首次发现；官方名单独立核实录用与Oral。精确录用日未知，不用预印本日期冒充。 / First discovery of an accepted conference paper; acceptance and oral status verified in the official list. Exact acceptance date remains unknown.",
+      "sources": [
+        {
+          "label": "原文 / Paper",
+          "url": "https://arxiv.org/html/2609.16864v1"
+        },
+        {
+          "label": "官方录用与Oral名单 / Official acceptance and oral list",
+          "url": "https://2026.corl.org/program/accepted-papers"
+        },
+        {
+          "label": "作者项目 / Author project",
+          "url": "https://tempo-robot.github.io/"
+        },
+        {
+          "label": "OpenReview",
+          "url": "https://openreview.net/forum?id=FVZKpmPHV8"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun",
+        "lv"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "P0/P2前沿线，建议现在读，重点区分低延迟与缺少历史信息两类问题。 / P0/P2 frontier: read now, distinguishing latency from missing history.",
+          "relation": "将视觉运动策略、VLA与动态操作中的部分可观测性联系起来。 / Links visuomotor policies and VLAs to partial observability in dynamic manipulation.",
+          "prerequisites": [
+            "行为克隆与VLA / Behavior cloning and VLA",
+            "历史条件策略 / History-conditioned policies",
+            "异步推理 / Asynchronous inference"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        },
+        "lv": {
+          "whyRead": "P0/P2前沿线，建议现在读，重点区分低延迟与缺少历史信息两类问题。 / P0/P2 frontier: read now, distinguishing latency from missing history.",
+          "relation": "将视觉运动策略、VLA与动态操作中的部分可观测性联系起来。 / Links visuomotor policies and VLAs to partial observability in dynamic manipulation.",
+          "prerequisites": [
+            "行为克隆与VLA / Behavior cloning and VLA",
+            "历史条件策略 / History-conditioned policies",
+            "异步推理 / Asynchronous inference"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2609.16864",
+        "other": null
+      },
+      "publicationStatus": "accepted",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-05",
+      "verifiedAt": "2026-11-05",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": "https://github.com/tempo-robot/TEMPO",
+        "project": "https://tempo-robot.github.io/",
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "四个任务、每方法每任务50次真机测试；不能推断所有动态任务均提升。 / Four tasks and 50 trials per method/task; not universal improvement.",
+        "主结果中Wine Pour与Flick Catch裁去release-and-retract阶段，完整任务结果另列。 / Main results trim release-and-retract phases for two tasks; full-task results are separate."
+      ],
+      "assumptions": [
+        "依赖视频编码器、本体历史和任务示范。 / Requires a video encoder, proprioceptive history and demonstrations."
+      ],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/html/2609.16864v1",
+          "claim": "核读首页署名、方法、实验及明确局限；阅读范围见研究记录。 / Read affiliations, methods, experiments and limitations; scope stated in notes.",
+          "checkedAt": "2026-11-05"
+        },
+        {
+          "url": "https://2026.corl.org/program/accepted-papers",
+          "claim": "官方原始HTML含本题及OpenReview FVZKpmPHV8，列于已录用论文名单。 / Official raw HTML lists this accepted paper.",
+          "checkedAt": "2026-11-05"
+        },
+        {
+          "url": "https://2026.corl.org/program/accepted-papers",
+          "claim": "同一官方名单的展示类型明确为Oral O2，非获奖身份。 / Presentation explicitly Oral O2; no award inferred.",
+          "checkedAt": "2026-11-05"
+        },
+        {
+          "url": "https://tempo-robot.github.io/",
+          "claim": "作者项目及资源状态核验 / Author project and resource status checked.",
+          "checkedAt": "2026-11-05"
+        },
+        {
+          "url": "https://github.com/tempo-robot/TEMPO",
+          "claim": "官方实现README及代码目录已核验，未运行。 / Official implementation README and source tree checked; not executed.",
+          "checkedAt": "2026-11-05"
+        }
+      ],
+      "researchNotes": [
+        "前沿线：核读§3–5及§6消融表；非全文逐式审计，未运行代码。 / Frontier: checked sections 3–5 and section 6 ablation table; no exhaustive audit or execution.",
+        "阅读顺序：图1 → §3失败模式 → §4/图3 → 表1与表4对照；基础线补状态混淆与部分可观测性。 / Read Figure 1, section 3, section 4/Figure 3, then compare Tables 1 and 4; review state aliasing and partial observability.",
+        "较早论文·首次发现：预印本2026-09-15，正式录用日未核实；官方代码仓存在，未验证可运行性。 / Older first discovery: preprint 2026-09-15, acceptance date unknown; official implementation exists but was not executed."
+      ],
+      "summaryEn": "TEMPO adds video motion features and proprioceptive history to resolve motion ambiguity and task-phase aliasing. The authors report Bottle Handover improving from RTC’s 44% to 74%, but Drop Catch reaches 66% versus RTC’s 80%. Wine Pour uses beads and measures retained mass, not binary success.",
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/tempo-figure1.webp",
+          "sha256": "534018a5cb6aeae28efdc3da23bc4ef42e2663ebd8c595b40c7696a3525bc4cb",
+          "width": 1600,
+          "height": 571,
+          "sourceUrl": "https://arxiv.org/html/2609.16864v1/teaser.png",
+          "evidenceUrl": "https://arxiv.org/html/2609.16864v1",
+          "verifiedAt": "2026-11-05",
+          "credit": "Original paper authors",
+          "rights": "Original author figure, attributed scholarly thumbnail only. No blanket reuse permission or endorsement claimed. Resized without scientific edits. Encoded as WebP at unchanged dimensions for same-origin display.",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "light",
+          "altZh": "TEMPO：为动态机器人操作学习时间上下文：原文图1",
+          "altEn": "TEMPO: Learning Temporal Context for Dynamic Robot Manipulation: original Figure 1"
+        },
+        "figureNote": "核验作者原图；仅等比例缩小，未改变科学内容。 / Verified author figure, proportionally resized without scientific edits.",
+        "institutions": [
+          {
+            "name": "University of California, Irvine",
+            "institutionId": "pending-university-of-california-irvine",
+            "logo": null,
+            "authorNames": [
+              "Zhenyang Feng",
+              "Jimin Heo",
+              "Erik B. Sudderth",
+              "Unnat Jain"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2609.16864v1",
+                "claim": "论文首页明确署名 / Explicit paper-time affiliation.",
+                "checkedAt": "2026-11-05"
+              }
+            ],
+            "note": "官方品牌页对传统徽网页使用及简化徽尺寸有限制；本轮未核实适合32px的获准标志，保留名称。 / Official seal and size restrictions; no verified permitted 32px mark, so text only.",
+            "institutionType": "university",
+            "markType": "none"
+          }
+        ],
+        "authors": []
+      }
+    },
+    {
+      "id": "arxiv-2609-18117",
+      "title": "OpenDexGrasp：开放词汇任务导向灵巧抓取",
+      "titleEn": "OpenDexGrasp: Open-vocabulary Task-Oriented Dexterous Grasping",
+      "authors": [
+        "Jiyao Zhang",
+        "Junhan Wang",
+        "Tianyu Wang",
+        "Zeyuan Chen",
+        "Anthony Bolton",
+        "Yitong Peng",
+        "Hao Dong"
+      ],
+      "year": 2026,
+      "venue": "CoRL 2026 · Oral O5（已录用 / accepted）",
+      "tags": [
+        "机器人学习",
+        "CoRL 2026 Oral"
+      ],
+      "summary": "OpenDexGrasp将语言、视觉与几何映射到共享潜在空间，用功能区域监督辅助直接生成抓姿，结合合成覆盖与遥操作对齐。作者在十种真机物体上报告72.0%平均成功率，对照改造后的DexGraspNet 2.0为59.0%；仍是无触觉闭环的开环执行。",
+      "whySelected": "正式会议录用论文·首次发现；官方名单独立核实录用与Oral。精确录用日未知，不用预印本日期冒充。 / First discovery of an accepted conference paper; acceptance and oral status verified in the official list. Exact acceptance date remains unknown.",
+      "sources": [
+        {
+          "label": "原文 / Paper",
+          "url": "https://arxiv.org/html/2609.18117v2"
+        },
+        {
+          "label": "官方录用与Oral名单 / Official acceptance and oral list",
+          "url": "https://2026.corl.org/program/accepted-papers"
+        },
+        {
+          "label": "作者项目 / Author project",
+          "url": "https://opendexgrasp.github.io/"
+        },
+        {
+          "label": "OpenReview",
+          "url": "https://openreview.net/forum?id=wLgEYxjqid"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun",
+        "lv"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "P0前沿线，建议现在读，先区分抓住物体与保留工具功能。 / P0 frontier: read now, distinguishing stable grasping from functional use.",
+          "relation": "连接灵巧操作、三维感知与任务条件生成。 / Connects dexterity, 3D perception and task-conditioned generation.",
+          "prerequisites": [
+            "点云表示 / Point-cloud representations",
+            "流匹配 / Flow matching",
+            "功能可供性 / Functional affordances"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        },
+        "lv": {
+          "whyRead": "P0前沿线，建议现在读，先区分抓住物体与保留工具功能。 / P0 frontier: read now, distinguishing stable grasping from functional use.",
+          "relation": "连接灵巧操作、三维感知与任务条件生成。 / Connects dexterity, 3D perception and task-conditioned generation.",
+          "prerequisites": [
+            "点云表示 / Point-cloud representations",
+            "流匹配 / Flow matching",
+            "功能可供性 / Functional affordances"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2609.18117",
+        "other": null
+      },
+      "publicationStatus": "accepted",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-05",
+      "verifiedAt": "2026-11-05",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": "https://opendexgrasp.github.io/",
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "基线加入CLIP并用相同数据重训，不是原版开箱结果。 / Baseline is CLIP-augmented and retrained, not an off-the-shelf comparison.",
+        "部件定位错误会传入抓姿；未验证长时程操作。 / Part-grounding errors propagate; long-horizon manipulation is unvalidated."
+      ],
+      "assumptions": [
+        "输入需要多视图RGB、物体点云与语言。 / Requires multi-view RGB, object point clouds and language."
+      ],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/html/2609.18117v2",
+          "claim": "核读首页署名、方法、实验及明确局限；阅读范围见研究记录。 / Read affiliations, methods, experiments and limitations; scope stated in notes.",
+          "checkedAt": "2026-11-05"
+        },
+        {
+          "url": "https://2026.corl.org/program/accepted-papers",
+          "claim": "官方原始HTML含本题及OpenReview wLgEYxjqid，列于已录用论文名单。 / Official raw HTML lists this accepted paper.",
+          "checkedAt": "2026-11-05"
+        },
+        {
+          "url": "https://2026.corl.org/program/accepted-papers",
+          "claim": "同一官方名单的展示类型明确为Oral O5，非获奖身份。 / Presentation explicitly Oral O5; no award inferred.",
+          "checkedAt": "2026-11-05"
+        },
+        {
+          "url": "https://opendexgrasp.github.io/",
+          "claim": "作者项目及资源状态核验 / Author project and resource status checked.",
+          "checkedAt": "2026-11-05"
+        },
+        {
+          "url": "https://github.com/opendexgrasp/OpenDexGrasp",
+          "claim": "仓库仅README coming soon，未有可用实现。 / Only a coming-soon README, not an available implementation.",
+          "checkedAt": "2026-11-05"
+        }
+      ],
+      "researchNotes": [
+        "前沿线：核读§4–6、表1–4与§7–8局限；未审计全部附录或复现。 / Frontier: checked sections 4–6, Tables 1–4 and limitations in 7–8; no full appendix audit or replication.",
+        "阅读顺序：图1 → §4数据 → §5/图4 → 表4与局限；基础线补流匹配和功能可供性。 / Read Figure 1, section 4, section 5/Figure 4, then Table 4 and limitations; review flow matching and affordances.",
+        "较早论文·首次发现：预印本2026-09-16，录用日未知。作者仓库只有coming soon README，code=null。 / Older first discovery: preprint 2026-09-16, acceptance date unknown. Repository contains only a coming-soon README; code=null.",
+        "署名按v2正文：PKU、BIGAI、PrimeBot；项目页简化署名不覆盖正文。Anthony姓氏正文为Bolton，摘要元数据为Bolten，采用正文。 / Use v2 paper affiliations and spelling Bolton; project omissions and abstract spelling Bolten are not substituted."
+      ],
+      "summaryEn": "OpenDexGrasp combines synthetic coverage with teleoperated alignment, using affordance supervision to support direct grasp generation. The authors report 72.0% real-world success over ten objects versus 59.0% for an adapted DexGraspNet 2.0 baseline. Execution remains open-loop without tactile correction.",
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/opendexgrasp-figure1.webp",
+          "sha256": "51060c82c2edcc428fef5c05f37cb44df377b4eed88729fd66924e54c6f407fc",
+          "width": 1600,
+          "height": 652,
+          "sourceUrl": "https://opendexgrasp.github.io/static/assets/figures/teaser.png",
+          "evidenceUrl": "https://arxiv.org/html/2609.18117v2",
+          "verifiedAt": "2026-11-05",
+          "credit": "Original paper authors",
+          "rights": "Original author figure, attributed scholarly thumbnail only. No blanket reuse permission or endorsement claimed. Resized without scientific edits. Encoded as WebP at unchanged dimensions for same-origin display.",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "light",
+          "altZh": "OpenDexGrasp：开放词汇任务导向灵巧抓取：原文图1",
+          "altEn": "OpenDexGrasp: Open-vocabulary Task-Oriented Dexterous Grasping: original Figure 1"
+        },
+        "figureNote": "核验作者原图；仅等比例缩小，未改变科学内容。 / Verified author figure, proportionally resized without scientific edits.",
+        "institutions": [
+          {
+            "name": "Peking University",
+            "institutionId": "pending-peking-university",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-b328ed3c9e579ec8.png",
+              "sha256": "b328ed3c9e579ec8c2031ad8a5b6c244994fba5d1e93cc98901d1fcc3c306bdb",
+              "width": 360,
+              "height": 360,
+              "sourceUrl": "https://vim.pku.edu.cn/docs/20240527144201516364.zip",
+              "evidenceUrl": "https://vim.pku.edu.cn/xzzq/",
+              "verifiedAt": "2026-11-03",
+              "credit": "Peking University official red circular seal",
+              "rights": "Institutional trademark and copyright remain with their owners. No separate permission obtained, no open licence or legal clearance claimed. Use solely as a small descriptive paper-affiliation thumbnail, not endorsement; preserve the complete mark, geometry and native colors. The official downloads page provides noncommercial-use application and commitment forms. Official basic-usage PDF gives a 7×7mm minimum for standalone mark use. No separate application or institutional permission was obtained. Policy: https://vim.pku.edu.cn/xzzq/",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "北京大学官方红色圆形校徽",
+              "altEn": "Peking University official red circular seal"
+            },
+            "authorNames": [
+              "Jiyao Zhang",
+              "Junhan Wang",
+              "Tianyu Wang",
+              "Zeyuan Chen",
+              "Anthony Bolton",
+              "Yitong Peng",
+              "Hao Dong"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2609.18117v2",
+                "claim": "论文首页明确署名 / Explicit paper-time affiliation.",
+                "checkedAt": "2026-11-05"
+              }
+            ],
+            "note": "复用机构库已核验原标；仅论文署名。 / Verified registry mark reused for paper affiliation.",
+            "institutionType": "university",
+            "markType": "emblem"
+          },
+          {
+            "name": "BIGAI",
+            "institutionId": "pending-bigai",
+            "logo": {
+              "path": "assets/institutions/bigai.png",
+              "sourceUrl": "https://www.bigai.ai/wp-content/uploads/2022/10/cropped-80x80-1-192x192.png",
+              "evidenceUrl": "https://www.bigai.ai/",
+              "width": 192,
+              "height": 192,
+              "sha256": "a6e6c65ea989757760118ffd69a7d0bb4b438882d047608854b21337b873b93d",
+              "credit": "BIGAI official website identity asset",
+              "kind": "institution-logo",
+              "verifiedAt": "2026-11-02",
+              "background": "transparent",
+              "rights": "Official institutional identity asset; copyright and trademarks remain with owner. No blanket reuse license or endorsement asserted. Preserve complete mark, proportions and clear space. Intended only for accurate editorial identification of paper affiliation.",
+              "displayPolicy": "official-brand",
+              "altEn": "Official compact identity mark of BIGAI",
+              "altZh": "BIGAI 官方标识"
+            },
+            "authorNames": [
+              "Zeyuan Chen"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2609.18117v2",
+                "claim": "论文首页明确署名 / Explicit paper-time affiliation.",
+                "checkedAt": "2026-11-05"
+              }
+            ],
+            "note": "论文署名State Key Laboratory of General Artificial Intelligence, BIGAI；复用既有标志。 / Paper names this BIGAI lab; reuse verified mark.",
+            "institutionType": "research-institute",
+            "markType": "organization-mark"
+          },
+          {
+            "name": "PrimeBot",
+            "institutionId": "pending-primebot",
+            "logo": null,
+            "authorNames": [
+              "Anthony Bolton"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2609.18117v2",
+                "claim": "论文首页明确署名 / Explicit paper-time affiliation.",
+                "checkedAt": "2026-11-05"
+              }
+            ],
+            "note": "已检索PrimeBot公开身份与品牌，但未将同名公司/第三方logo确认为本篇署名的官方图；保留名称。 / Public identity search did not establish a verified official asset matching this affiliation; text only.",
+            "institutionType": "company",
+            "markType": "none"
+          }
+        ],
+        "authors": []
+      }
+    },
+    {
+      "id": "doi-4b173796e62637c1ffc5",
+      "title": "ProvSQL更新来源追踪：以时态数据库展示历史查询与撤销",
+      "titleEn": "Demonstration of ProvSQL Update Provenance through Temporal Databases",
+      "authors": [
+        "Albert Ariel Widiaatmaja",
+        "Belkis Djeffal",
+        "Ashish Dandekar",
+        "Pierre Senellart"
+      ],
+      "year": 2025,
+      "venue": "ProvenanceWeek 2025 · Demonstration · pp. 71–76",
+      "tags": [
+        "provenance",
+        "实例更新",
+        "PostgreSQL",
+        "时态数据库",
+        "撤销",
+        "m-semiring"
+      ],
+      "summary": "关系数据库发生增删改后，怎样保留更新来源并撤销指定操作？本文用语句级触发器把修改记入来源电路，再用区间并集半环解释有效时间，展示历史查询与撤销。它可为VKG源实例更新提供审计思路，但并不解决本体到源的更新翻译，也不保证最小副作用；论文版本仅支持受限更新，尚未处理事务与并发。",
+      "whySelected": "较早论文 · 首次发现。为VKG更新之后的来源解释、审计与撤销提供可实现参照；不是更新翻译或最小副作用算法。",
+      "sources": [
+        {
+          "label": "作者公开原文",
+          "url": "https://pierre.senellart.com/publications/widiaatmaja2025demonstration.pdf"
+        },
+        {
+          "label": "ACM正式出版记录",
+          "url": "https://doi.org/10.1145/3736229.3736253"
+        },
+        {
+          "label": "项目官方论文目录",
+          "url": "https://provsql.org/publications/"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "li"
+      ],
+      "recommendations": {
+        "li": {
+          "whyRead": "建议现在读第3节，把“选择源更新”与“记录、解释、撤销更新”区分开；适合为更新系统设计审计层。",
+          "relation": "可借鉴为固定本体和映射下的源实例更新记录操作来源；与VKG补偿更新存在联系，但撤销历史操作不等于寻找最小副作用补偿。",
+          "prerequisites": [
+            "关系代数",
+            "来源电路",
+            "半环与monus",
+            "SQL触发器"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": "10.1145/3736229.3736253",
+        "arxiv": null,
+        "other": null
+      },
+      "publicationStatus": "published",
+      "publicationDate": "2025-09-02",
+      "discoveredDate": "2026-11-05",
+      "verifiedAt": "2026-11-05",
+      "readDepth": "fulltext",
+      "paperType": "system",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": "https://github.com/PierreSenellart/provsql",
+        "project": "https://provsql.org/",
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "论文第5节：仅支持hyperplane update queries，不支持来源依赖外部元组的更新。",
+        "论文版本不支持事务和并发控制；不能将此历史局限直接视作当前软件仍然如此。",
+        "这是演示论文，未独立运行或复现；不提供VKG更新翻译或最小副作用保证。"
+      ],
+      "assumptions": [
+        "以PostgreSQL来源电路表示元组及更新操作，并用m-semiring解释其结果。",
+        "本文讨论关系实例上的更新追踪；本体推理、映射反向翻译与源约束优化不在本文任务范围。"
+      ],
+      "evidence": [
+        {
+          "url": "https://doi.org/10.1145/3736229.3736253",
+          "claim": "ACM检索记录核验四位完整作者、Demonstration身份、PW’25、页71–76及正式发布日期2025-09-02；直接打开DOI遇403，未将访问失败当作全文读取。",
+          "checkedAt": "2026-11-05"
+        },
+        {
+          "url": "https://pierre.senellart.com/publications/widiaatmaja2025demonstration.pdf",
+          "claim": "核读首页及第3–5节：语句级触发器、更新电路、Algorithm 4撤销、区间并集m-semiring、演示场景及明确局限。首页核验全部作者署名机构；作者PDF页数为5，与正式页码口径不同，引用正式记录页码。",
+          "checkedAt": "2026-11-05"
+        },
+        {
+          "url": "https://provsql.org/publications/",
+          "claim": "官方项目目录收录本演示论文，关联作者PDF与DOI。",
+          "checkedAt": "2026-11-05"
+        },
+        {
+          "url": "https://github.com/PierreSenellart/provsql",
+          "claim": "官方项目Source链接到此仓库，公开代码；未运行。",
+          "checkedAt": "2026-11-05"
+        },
+        {
+          "url": "https://provsql.org/",
+          "claim": "官方项目主页可访问；只将其作为当前项目入口，不将其后来功能倒写为2025论文贡献。",
+          "checkedAt": "2026-11-05"
+        },
+        {
+          "url": "https://provsql.org/docs/user/data-modification.html",
+          "claim": "当前文档已列事务及并发行为，且仍称更新追踪为实验性；因此历史论文无事务支持的边界明确限定为论文版本。",
+          "checkedAt": "2026-11-05"
+        }
+      ],
+      "researchNotes": [
+        "正文重点核读而非独立证明或复现。顺序：3.1更新电路→3.2/Algorithm 4撤销→3.3区间解释→第5节局限。",
+        "正式记录第一作者全名为Albert Ariel Widiaatmaja；作者PDF署Albert Widiaatmaja，按正式完整姓名登记。",
+        "已比对最新注册表及2026-10-31至11-04全部历史标题和两篇已读种子，无重复。11月5日非周一，本条不是经典额外名额。",
+        "近年VKG、OBDA与view-update定向检索未取得更贴近且完整核验的近期未推条目；选1篇旧文而非凑数。"
+      ],
+      "summaryEn": "After inserts, deletions and modifications in a relational database, how can update provenance be retained and a chosen operation undone? This paper uses statement-level triggers to record modifications in provenance circuits, then interprets validity time with a union-of-intervals semiring to demonstrate historical queries and undo. It offers an auditing idea for VKG source-instance updates, but does not solve ontology-to-source update translation or guarantee minimal side effects. The paper version supports restricted updates and does not yet handle transactions or concurrency.",
+      "visuals": {
+        "mainFigure": null,
+        "figureNote": "已核读原文Figure 1（撤销操作的来源电路重写）。作者PDF的复制条款限定个人/课堂等用途，未确认公开站点重发许可，因此未复制图像；可从原文第3页查看，不生成替代科学图。",
+        "institutions": [
+          {
+            "name": "National University of Singapore",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-11b39992d20ae439.png",
+              "sha256": "11b39992d20ae43911bade1a154c0bab154b779820fea8318f0a7dbfa01155eb",
+              "width": 192,
+              "height": 192,
+              "sourceUrl": "https://www.comp.nus.edu.sg/wp-content/uploads/2023/09/cropped-favicon-192x192.png",
+              "evidenceUrl": "https://www.comp.nus.edu.sg/",
+              "verifiedAt": "2026-11-03",
+              "credit": "National University of Singapore · official-source compact identity mark",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. Official logo guidance says the modernised coat of arms and NUS namestyle should appear together; the independently supplied official site icon does not establish an external-use exception or authorization. Policy: https://www.nus.edu.sg/identity/guidelines/logo-guideline",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "NUS 官方网站提供的完整狮子盾徽",
+              "altEn": "Complete NUS coat of arms supplied as an official university website icon"
+            },
+            "authorNames": [
+              "Albert Ariel Widiaatmaja",
+              "Ashish Dandekar"
+            ],
+            "evidence": [
+              {
+                "url": "https://pierre.senellart.com/publications/widiaatmaja2025demonstration.pdf",
+                "claim": "论文首页署名机构。",
+                "checkedAt": "2026-11-05"
+              }
+            ],
+            "note": "首页署名已核实，复用现有已核验官方完整盾徽；保留既有使用边界。",
+            "institutionType": "university",
+            "markType": "emblem",
+            "institutionId": "pending-national-university-of-singapore"
+          },
+          {
+            "name": "CNRS",
+            "logo": {
+              "kind": "institution-logo",
+              "sourceUrl": "https://www.cnrs.fr/sites/default/files/logo/logo.svg",
+              "evidenceUrl": "https://www.cnrs.fr/fr",
+              "verifiedAt": "2026-11-02",
+              "rights": "Official institutional artwork; trademark and copyright remain with owner. No open licence or blanket permission asserted. Editorial paper-affiliation identification only, no endorsement; preserve complete mark, aspect ratio, colors and clear space.",
+              "credit": "CNRS official identity",
+              "width": 55,
+              "height": 55,
+              "sha256": "8dac83c3ccf014ae53d5a0d94c299d8bba26824b21ef4318d3743dfcfbffa719",
+              "background": "transparent",
+              "displayPolicy": "official-brand",
+              "altEn": "Official CNRS institutional mark",
+              "altZh": "CNRS 官方机构标志",
+              "path": "assets/institutions/cnrs.svg"
+            },
+            "authorNames": [
+              "Belkis Djeffal",
+              "Pierre Senellart"
+            ],
+            "evidence": [
+              {
+                "url": "https://pierre.senellart.com/publications/widiaatmaja2025demonstration.pdf",
+                "claim": "论文首页署名机构。",
+                "checkedAt": "2026-11-05"
+              }
+            ],
+            "note": "首页署名已核实；Pierre另署CNRS@CREATE与IPAL。复用现有官方完整标识。",
+            "institutionType": "research-institute",
+            "markType": "organization-mark",
+            "institutionId": "pending-cnrs"
+          },
+          {
+            "name": "Inria",
+            "logo": null,
+            "authorNames": [
+              "Belkis Djeffal",
+              "Pierre Senellart"
+            ],
+            "evidence": [
+              {
+                "url": "https://pierre.senellart.com/publications/widiaatmaja2025demonstration.pdf",
+                "claim": "论文首页署名机构。",
+                "checkedAt": "2026-11-05"
+              },
+              {
+                "url": "https://new.inria.cl/fr/charte-dutilisation-de-lidentite-visuelle-dinria",
+                "claim": "机构标识预检入口；未取得符合展示及使用条件且完成像素核验的新素材，保留名称。",
+                "checkedAt": "2026-11-05"
+              }
+            ],
+            "note": "沿用现有待核验记录；官方字标最低45px且素材未完成验证，不以字标冒充紧凑图徽。",
+            "institutionType": "research-institute",
+            "markType": "none",
+            "institutionId": "pending-inria"
+          },
+          {
+            "name": "Université de Lille",
+            "logo": null,
+            "authorNames": [
+              "Belkis Djeffal"
+            ],
+            "evidence": [
+              {
+                "url": "https://pierre.senellart.com/publications/widiaatmaja2025demonstration.pdf",
+                "claim": "论文首页署名机构。",
+                "checkedAt": "2026-11-05"
+              },
+              {
+                "url": "https://identite.univ-lille.fr/",
+                "claim": "机构标识预检入口；未取得符合展示及使用条件且完成像素核验的新素材，保留名称。",
+                "checkedAt": "2026-11-05"
+              }
+            ],
+            "note": "首页CRIStAL联合署名；已检索官方身份站，未取得独立紧凑图徽的已核验像素，保留名称。",
+            "institutionType": "university",
+            "markType": "none",
+            "institutionId": "pending-universit-de-lille"
+          },
+          {
+            "name": "Centrale Lille",
+            "logo": null,
+            "authorNames": [
+              "Belkis Djeffal"
+            ],
+            "evidence": [
+              {
+                "url": "https://pierre.senellart.com/publications/widiaatmaja2025demonstration.pdf",
+                "claim": "论文首页署名机构。",
+                "checkedAt": "2026-11-05"
+              },
+              {
+                "url": "https://centralelille.fr/centrale-lille/communiquer/",
+                "claim": "机构标识预检入口；未取得符合展示及使用条件且完成像素核验的新素材，保留名称。",
+                "checkedAt": "2026-11-05"
+              }
+            ],
+            "note": "首页CRIStAL联合署名；已查官方品牌下载入口，未完成独立紧凑标识字节/像素核验，保留名称。",
+            "institutionType": "university",
+            "markType": "none",
+            "institutionId": "pending-centrale-lille"
+          },
+          {
+            "name": "École normale supérieure",
+            "logo": null,
+            "authorNames": [
+              "Pierre Senellart"
+            ],
+            "evidence": [
+              {
+                "url": "https://pierre.senellart.com/publications/widiaatmaja2025demonstration.pdf",
+                "claim": "论文首页署名机构。",
+                "checkedAt": "2026-11-05"
+              },
+              {
+                "url": "https://www-preview.ens.psl.eu/logotype-de-l-ens",
+                "claim": "机构标识预检入口；未取得符合展示及使用条件且完成像素核验的新素材，保留名称。",
+                "checkedAt": "2026-11-05"
+              }
+            ],
+            "note": "首页DI ENS署名；官方logotype页明确须通信部门同意，未获得，保留名称。",
+            "institutionType": "university",
+            "markType": "none",
+            "institutionId": "pending-cole-normale-sup-rieure"
+          },
+          {
+            "name": "PSL University",
+            "logo": null,
+            "authorNames": [
+              "Pierre Senellart"
+            ],
+            "evidence": [
+              {
+                "url": "https://pierre.senellart.com/publications/widiaatmaja2025demonstration.pdf",
+                "claim": "论文首页署名机构。",
+                "checkedAt": "2026-11-05"
+              },
+              {
+                "url": "https://psl.eu/universite/media-et-communication",
+                "claim": "机构标识预检入口；未取得符合展示及使用条件且完成像素核验的新素材，保留名称。",
+                "checkedAt": "2026-11-05"
+              }
+            ],
+            "note": "首页署名已核实；官方2026新身份说明与媒体页已查，未核验符合展示的独立紧凑符号，保留名称。",
+            "institutionType": "university",
+            "markType": "none",
+            "institutionId": "pending-psl-university"
+          },
+          {
+            "name": "Institut universitaire de France",
+            "logo": null,
+            "authorNames": [
+              "Pierre Senellart"
+            ],
+            "evidence": [
+              {
+                "url": "https://pierre.senellart.com/publications/widiaatmaja2025demonstration.pdf",
+                "claim": "论文首页署名机构。",
+                "checkedAt": "2026-11-05"
+              }
+            ],
+            "note": "首页署IUF；已检索官方品牌资料但未取得可核验独立标识，保留名称。",
+            "institutionType": "research-institute",
+            "markType": "none",
+            "institutionId": "pending-institut-universitaire-de-france"
+          }
+        ],
+        "authors": []
+      }
+    }
+  ]
+}

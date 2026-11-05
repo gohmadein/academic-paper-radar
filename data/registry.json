@@ -123,6 +123,54 @@
       ]
     },
     {
+      "id": "arxiv-2609-16864",
+      "aliases": [
+        "arxiv:2609.16864"
+      ],
+      "identity": {
+        "doi": null,
+        "arxiv": "2609.16864",
+        "other": null
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "appearances": [
+        {
+          "date": "2026-11-05",
+          "profiles": [
+            "xun",
+            "lv"
+          ],
+          "classic": false,
+          "novelty": "older-discovery"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2609-18117",
+      "aliases": [
+        "arxiv:2609.18117"
+      ],
+      "identity": {
+        "doi": null,
+        "arxiv": "2609.18117",
+        "other": null
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "appearances": [
+        {
+          "date": "2026-11-05",
+          "profiles": [
+            "xun",
+            "lv"
+          ],
+          "classic": false,
+          "novelty": "older-discovery"
+        }
+      ]
+    },
+    {
       "id": "arxiv-2610-12231",
       "aliases": [
         "arxiv:2610.12231"
@@ -142,6 +190,30 @@
           ],
           "classic": false,
           "novelty": "recent"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-16308",
+      "aliases": [
+        "arxiv:2610.16308"
+      ],
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.16308",
+        "other": null
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "appearances": [
+        {
+          "date": "2026-11-05",
+          "profiles": [
+            "xun",
+            "lv"
+          ],
+          "classic": false,
+          "novelty": "older-discovery"
         }
       ]
     },
@@ -717,6 +789,29 @@
       "appearances": [
         {
           "date": "2026-10-31",
+          "profiles": [
+            "li"
+          ],
+          "classic": false,
+          "novelty": "older-discovery"
+        }
+      ]
+    },
+    {
+      "id": "doi-4b173796e62637c1ffc5",
+      "aliases": [
+        "doi:10.1145/3736229.3736253"
+      ],
+      "identity": {
+        "doi": "10.1145/3736229.3736253",
+        "arxiv": null,
+        "other": null
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "appearances": [
+        {
+          "date": "2026-11-05",
           "profiles": [
             "li"
           ],

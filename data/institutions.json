@@ -551,7 +551,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "Round2 retained after reviewing full-wordmark/native-background eligibility; underlying exact-identity, access or explicit-use condition persists. Round2 review: full-wordmark/white-background support does not by itself resolve the following prior source, identity or permission finding. Official brand page returned Anubis Access Denied error9e4edb5b6b850c41. No challenge bypass. Indexed guide requires minimum45px width; downloadable official bytes not verified. 核验：2026-11-02。 官方核验入口：https://www.inria.fr/fr/charte-dutilisation-de-lidentite-visuelle-dinria 核验：2026-11-02。"
+      "note": "沿用现有待核验记录；官方字标最低45px且素材未完成验证，不以字标冒充紧凑图徽。"
     },
     {
       "id": "pending-universit-de-lorraine",
@@ -6305,6 +6305,94 @@
         "altEn": "Official Providence College torch"
       },
       "note": "官方品牌页确认独立火炬；原始JPG白底，无alpha，不裁切字标生成；校印限正式文件，故不用校印。 / Official standalone torch; original opaque white JPG, no fabricated transparency. Formal-use seal not used."
+    },
+    {
+      "id": "pending-beijing-xiaomi-robot-technology-co-ltd",
+      "officialName": "Beijing Xiaomi Robot Technology Co., Ltd.",
+      "aliases": [],
+      "institutionType": "company",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "已查作者项目与机构检索；项目使用小米母品牌图，未核实机器人公司独立标志，不以母品牌替代。 / Project uses the Xiaomi parent brand; no verified distinct subsidiary mark, so text only."
+    },
+    {
+      "id": "pending-university-of-california-irvine",
+      "officialName": "University of California, Irvine",
+      "aliases": [],
+      "institutionType": "university",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "官方品牌页对传统徽网页使用及简化徽尺寸有限制；本轮未核实适合32px的获准标志，保留名称。 / Official seal and size restrictions; no verified permitted 32px mark, so text only."
+    },
+    {
+      "id": "pending-primebot",
+      "officialName": "PrimeBot",
+      "aliases": [],
+      "institutionType": "company",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "已检索PrimeBot公开身份与品牌，但未将同名公司/第三方logo确认为本篇署名的官方图；保留名称。 / Public identity search did not establish a verified official asset matching this affiliation; text only."
+    },
+    {
+      "id": "pending-universit-de-lille",
+      "officialName": "Université de Lille",
+      "aliases": [],
+      "institutionType": "university",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "首页CRIStAL联合署名；已检索官方身份站，未取得独立紧凑图徽的已核验像素，保留名称。"
+    },
+    {
+      "id": "pending-centrale-lille",
+      "officialName": "Centrale Lille",
+      "aliases": [],
+      "institutionType": "university",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "首页CRIStAL联合署名；已查官方品牌下载入口，未完成独立紧凑标识字节/像素核验，保留名称。"
+    },
+    {
+      "id": "pending-cole-normale-sup-rieure",
+      "officialName": "École normale supérieure",
+      "aliases": [],
+      "institutionType": "university",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "首页DI ENS署名；官方logotype页明确须通信部门同意，未获得，保留名称。"
+    },
+    {
+      "id": "pending-psl-university",
+      "officialName": "PSL University",
+      "aliases": [],
+      "institutionType": "university",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "首页署名已核实；官方2026新身份说明与媒体页已查，未核验符合展示的独立紧凑符号，保留名称。"
+    },
+    {
+      "id": "pending-institut-universitaire-de-france",
+      "officialName": "Institut universitaire de France",
+      "aliases": [],
+      "institutionType": "research-institute",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "首页署IUF；已检索官方品牌资料但未取得可核验独立标识，保留名称。"
     }
   ]
 }
