@@ -1,1 +1,647 @@
-m´ÎÜ´∆+Á¢˝:¶ÊÂä»±»^ôØ⁄ØØnÈezÿß±»^ô®Ï¢sh≤Á!~)^¢∑b≠Á-¢º
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ËøÖÊØèÊó•arXivÂÖ¨Âëä‰∏éÂèØÈÄâÊëòË¶ÅÁ∫ßÂØºËØª",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "date",
+    "announcementDate",
+    "checkedAt",
+    "status",
+    "coverage",
+    "entries"
+  ],
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "announcementDate": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "checkedAt": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date"
+        },
+        {
+          "type": "string",
+          "format": "date-time"
+        }
+      ]
+    },
+    "status": {
+      "enum": [
+        "complete",
+        "partial",
+        "unavailable"
+      ]
+    },
+    "coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "checkedCategories",
+        "checkedCount",
+        "includedCount",
+        "limitations",
+        "categoryStatus"
+      ],
+      "properties": {
+        "checkedCategories": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "cs.RO",
+              "cs.CV",
+              "cs.LG",
+              "cs.AI",
+              "eess.SY",
+              "eess.IV"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "checkedCount": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "includedCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "categoryStatus": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "category",
+              "status",
+              "announcementDate",
+              "listedCount",
+              "checkedCount",
+              "sourceUrl"
+            ],
+            "properties": {
+              "category": {
+                "enum": [
+                  "cs.RO",
+                  "cs.CV",
+                  "cs.LG",
+                  "cs.AI",
+                  "eess.SY",
+                  "eess.IV"
+                ]
+              },
+              "status": {
+                "enum": [
+                  "complete",
+                  "partial",
+                  "unavailable"
+                ]
+              },
+              "announcementDate": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "listedCount": {
+                "anyOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "checkedCount": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "sourceUrl": {
+                "type": "string",
+                "pattern": "^https://(www\\.|export\\.)?arxiv\\.org/"
+              }
+            }
+          },
+          "minItems": 6,
+          "maxItems": 6
+        }
+      }
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "arxivId",
+          "version",
+          "titleEn",
+          "titleZh",
+          "authors",
+          "publishedDate",
+          "updatedDate",
+          "change",
+          "categories",
+          "url",
+          "topics",
+          "announcements"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^arxiv-\\d{4}-\\d{4,5}$"
+          },
+          "arxivId": {
+            "type": "string",
+            "pattern": "^\\d{4}\\.\\d{4,5}$"
+          },
+          "version": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "titleEn": {
+            "type": "string",
+            "minLength": 1
+          },
+          "titleZh": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "authors": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "publishedDate": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "updatedDate": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "change": {
+            "enum": [
+              "new",
+              "revised",
+              "cross-list"
+            ]
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true,
+            "minItems": 1
+          },
+          "url": {
+            "type": "string",
+            "pattern": "^https://arxiv\\.org/abs/\\d{4}\\.\\d{4,5}(v[1-9]\\d*)?$"
+          },
+          "topics": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "announcements": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "category",
+                "change"
+              ],
+              "properties": {
+                "category": {
+                  "enum": [
+                    "cs.RO",
+                    "cs.CV",
+                    "cs.LG",
+                    "cs.AI",
+                    "eess.SY",
+                    "eess.IV"
+                  ]
+                },
+                "change": {
+                  "enum": [
+                    "new",
+                    "revised",
+                    "cross-list"
+                  ]
+                }
+              }
+            },
+            "minItems": 1
+          },
+          "guide": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "titleZh",
+              "summaryZh",
+              "summaryEn",
+              "whyRead",
+              "relation",
+              "prerequisites",
+              "tags",
+              "limits",
+              "assumptions",
+              "readingAdvice",
+              "difficulty",
+              "readRecommendation",
+              "links",
+              "evidence"
+            ],
+            "properties": {
+              "titleZh": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 10000
+              },
+              "summaryZh": {
+                "type": "string",
+                "minLength": 100,
+                "maxLength": 200,
+                "pattern": "[\\u3400-\\u9fff]"
+              },
+              "summaryEn": {
+                "type": "string",
+                "minLength": 40,
+                "maxLength": 5000,
+                "pattern": "[A-Za-z]"
+              },
+              "whyRead": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 10000
+              },
+              "relation": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 10000
+              },
+              "prerequisites": {
+                "type": "array",
+                "maxItems": 100,
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 10000
+                }
+              },
+              "tags": {
+                "type": "array",
+                "maxItems": 100,
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 10000
+                },
+                "minItems": 1
+              },
+              "limits": {
+                "type": "array",
+                "maxItems": 100,
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 10000
+                }
+              },
+              "assumptions": {
+                "type": "array",
+                "maxItems": 100,
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 10000
+                }
+              },
+              "readingAdvice": {
+                "type": "array",
+                "maxItems": 100,
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 10000
+                }
+              },
+              "difficulty": {
+                "enum": [
+                  "beginner",
+                  "intermediate",
+                  "advanced"
+                ]
+              },
+              "readRecommendation": {
+                "enum": [
+                  "skim",
+                  "read",
+                  "deep",
+                  "save"
+                ]
+              },
+              "links": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "code",
+                  "project",
+                  "video",
+                  "data"
+                ],
+                "properties": {
+                  "code": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "format": "uri",
+                        "pattern": "^https?://"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "project": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "format": "uri",
+                        "pattern": "^https?://"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "video": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "format": "uri",
+                        "pattern": "^https?://"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "data": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "format": "uri",
+                        "pattern": "^https?://"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                }
+              },
+              "evidence": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 100,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "url",
+                    "claim",
+                    "checkedAt"
+                  ],
+                  "properties": {
+                    "url": {
+                      "type": "string",
+                      "format": "uri",
+                      "pattern": "^https?://"
+                    },
+                    "claim": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 10000
+                    },
+                    "checkedAt": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "format": "date"
+                        },
+                        {
+                          "type": "string",
+                          "format": "date-time"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "affiliations": {
+            "type": "array",
+            "maxItems": 100,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "institutionId",
+                "name",
+                "institutionType",
+                "authorNames",
+                "evidence",
+                "note"
+              ],
+              "properties": {
+                "institutionId": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9][a-z0-9-]{0,99}$"
+                },
+                "name": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "institutionType": {
+                  "enum": [
+                    "university",
+                    "research-institute",
+                    "company",
+                    "chair"
+                  ]
+                },
+                "authorNames": {
+                  "type": "array",
+                  "uniqueItems": true,
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "evidence": {
+                  "type": "array",
+                  "minItems": 1,
+                  "maxItems": 100,
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "url",
+                      "claim",
+                      "checkedAt"
+                    ],
+                    "properties": {
+                      "url": {
+                        "type": "string",
+                        "format": "uri",
+                        "pattern": "^https?://"
+                      },
+                      "claim": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 10000
+                      },
+                      "checkedAt": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "format": "date"
+                          },
+                          {
+                            "type": "string",
+                            "format": "date-time"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                },
+                "note": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          },
+          "affiliationVerification": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status",
+              "checkedAt",
+              "note"
+            ],
+            "properties": {
+              "status": {
+                "enum": [
+                  "complete",
+                  "partial",
+                  "unavailable"
+                ]
+              },
+              "checkedAt": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  {
+                    "type": "string",
+                    "format": "date-time"
+                  }
+                ]
+              },
+              "note": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        "dependentRequired": {
+          "affiliations": [
+            "affiliationVerification"
+          ],
+          "affiliationVerification": [
+            "affiliations"
+          ]
+        }
+      }
+    }
+  }
+}
