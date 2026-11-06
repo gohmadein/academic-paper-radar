@@ -26,6 +26,78 @@
       ]
     },
     {
+      "id": "arxiv-2602-15010",
+      "aliases": [
+        "arxiv:2602.15010",
+        "doi:10.15607/rss.2026.xxii.201"
+      ],
+      "identity": {
+        "doi": "10.15607/rss.2026.xxii.201",
+        "arxiv": "2602.15010",
+        "other": null
+      },
+      "firstSeen": "2026-11-06",
+      "lastSeen": "2026-11-06",
+      "appearances": [
+        {
+          "date": "2026-11-06",
+          "profiles": [
+            "xun"
+          ],
+          "classic": false,
+          "novelty": "older-discovery"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2602-21302",
+      "aliases": [
+        "arxiv:2602.21302",
+        "doi:10.15607/rss.2026.xxii.126"
+      ],
+      "identity": {
+        "doi": "10.15607/rss.2026.xxii.126",
+        "arxiv": "2602.21302",
+        "other": null
+      },
+      "firstSeen": "2026-11-06",
+      "lastSeen": "2026-11-06",
+      "appearances": [
+        {
+          "date": "2026-11-06",
+          "profiles": [
+            "xun"
+          ],
+          "classic": false,
+          "novelty": "older-discovery"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2604-02523",
+      "aliases": [
+        "arxiv:2604.02523",
+        "doi:10.15607/rss.2026.xxii.139"
+      ],
+      "identity": {
+        "doi": "10.15607/rss.2026.xxii.139",
+        "arxiv": "2604.02523",
+        "other": null
+      },
+      "firstSeen": "2026-11-06",
+      "lastSeen": "2026-11-06",
+      "appearances": [
+        {
+          "date": "2026-11-06",
+          "profiles": [
+            "xun"
+          ],
+          "classic": false,
+          "novelty": "older-discovery"
+        }
+      ]
+    },
+    {
       "id": "arxiv-2604-04539",
       "aliases": [
         "arxiv:2604.04539"
@@ -774,6 +846,53 @@
       ]
     },
     {
+      "id": "arxiv-2611-01729",
+      "aliases": [
+        "arxiv:2611.01729"
+      ],
+      "identity": {
+        "doi": null,
+        "arxiv": "2611.01729",
+        "other": null
+      },
+      "firstSeen": "2026-11-06",
+      "lastSeen": "2026-11-06",
+      "appearances": [
+        {
+          "date": "2026-11-06",
+          "profiles": [
+            "lv"
+          ],
+          "classic": false,
+          "novelty": "recent"
+        }
+      ]
+    },
+    {
+      "id": "doi-0dea7cada49002f3d91f",
+      "aliases": [
+        "arxiv:2507.00343",
+        "doi:10.14778/3748191.3748206"
+      ],
+      "identity": {
+        "doi": "10.14778/3748191.3748206",
+        "arxiv": "2507.00343",
+        "other": null
+      },
+      "firstSeen": "2026-11-06",
+      "lastSeen": "2026-11-06",
+      "appearances": [
+        {
+          "date": "2026-11-06",
+          "profiles": [
+            "li"
+          ],
+          "classic": false,
+          "novelty": "older-discovery"
+        }
+      ]
+    },
+    {
       "id": "doi-259aaefa9d9fdb4b874f",
       "aliases": [
         "arxiv:2601.06764",
@@ -958,6 +1077,29 @@
           ],
           "classic": false,
           "novelty": "older-discovery"
+        }
+      ]
+    },
+    {
+      "id": "doi-eff7333912a63405ab7d",
+      "aliases": [
+        "doi:10.1038/s41598-026-76821-1"
+      ],
+      "identity": {
+        "doi": "10.1038/s41598-026-76821-1",
+        "arxiv": null,
+        "other": null
+      },
+      "firstSeen": "2026-11-06",
+      "lastSeen": "2026-11-06",
+      "appearances": [
+        {
+          "date": "2026-11-06",
+          "profiles": [
+            "xun"
+          ],
+          "classic": false,
+          "novelty": "recent"
         }
       ]
     }

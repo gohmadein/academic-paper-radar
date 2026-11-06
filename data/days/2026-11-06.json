@@ -1,0 +1,1102 @@
+{
+  "version": 2,
+  "date": "2026-11-06",
+  "title": "2026-11-06 零域 · 迅4 / 李1 / 驴1",
+  "demo": false,
+  "timezone": "Asia/Shanghai",
+  "issueNote": "迅3篇正式会议论文与1篇期刊论文，期刊缺1篇不凑数；李1篇依赖下删除研究；驴1篇近期机器人学习预印本。较早首次发现均单独标注，正文仅重点核读，未独立复现。arXiv冬令时当日公告通常在北京时间09:00出现，本轮精选与日历先行，不把未取得公告写成零新增。",
+  "coverage": {
+    "checkedSources": [
+      "最新迅3会议+2期刊契约；截至11月5日历史日报去重",
+      "CoRL2026录用页、RSS2026正式目录及三篇PDF/作者项目",
+      "Scientific Reports October机器人论文定向检索及两篇官方HTML/PDF",
+      "论文署名、现有机构库、Cardiff与广州华商官网（后者候选未入选）；Google DeepMind官网",
+      "VKG/OBDA update、deletion propagation及provenance定向公开检索",
+      "PVLDB正式全文与出版记录",
+      "作者P2E2-Erasure仓库",
+      "5所论文署名机构的官方品牌/版权入口",
+      "历史2026-10-31至11-05身份去重及当前驴研究规则。",
+      "近期机器人学习线索检索；arXiv ODE Policy摘要、全文、作者项目和官方代码。",
+      "CoRL2026录用入口网页读取未给出可用列表，未据此推断身份。",
+      "机构库NTU稳定身份及已有标志来源/权利说明复核；论文首页与作者项目核对署名。"
+    ],
+    "limitations": [
+      "迅精选不足：会议 3/3，期刊 1/2；第二篇近期候选虽有正式出版和真机流程，但缺充分定量基线且真正端到端优化仍属未来工作，本期不为配额纳入。",
+      "三个RSS会议为较早首次发现，未冒充近30日新文。",
+      "三所学校复用既有标识；Cardiff与DeepMind缺口单独记录；不声称已获机构许可。",
+      "有限定向检索，不宣称全源覆盖；CoRL当前页面内容抓取不完整，没有据此宣称未有更新。",
+      "李精选1篇；近期定向检索未取得更直接且完成核验的未推论文，选较早论文首次发现，不凑数。",
+      "并非所有来源目录全量检索；图像与5个机构标识均未新增复制，具体原因见visuals。",
+      "本轮1篇近期P0预印本，满足1–3篇目标，不为凑满而增加未经充分核读的候选。",
+      "不是全源扫描；不声称正式录用或获奖；代码未运行、结论未复现。"
+    ]
+  },
+  "papers": [
+    {
+      "id": "arxiv-2604-02523",
+      "title": "为可学习性调参：控制器增益如何影响机器人策略学习",
+      "titleEn": "Tune to Learn: How Controller Gains Shape Robot Policy Learning",
+      "authors": [
+        "Antonia Bronars",
+        "Younghyo Park",
+        "Pulkit Agrawal"
+      ],
+      "year": 2026,
+      "venue": "RSS 2026 · 正式会议论文",
+      "tags": [
+        "机器人学习",
+        "RSS 2026"
+      ],
+      "summary": "机器人学习常沿用默认位置控制增益，或只按任务刚柔性调参。本文比较行为克隆、从零强化学习与仿真迁移，发现它们偏好的增益区间不同：模仿学习受益于柔顺且过阻尼的设置，而过硬且过阻尼会损害迁移。重点是联合检查策略反应和底层控制，不将实验观察当成通用稳定性定理。",
+      "summaryEn": "Robot learning often uses default position-controller gains or tunes them only for task stiffness. This study compares behavior cloning, reinforcement learning from scratch and sim-to-real transfer, finding different preferred regimes: compliant overdamped settings favor imitation, whereas stiff overdamped settings hurt transfer. Read it to examine policy reactions jointly with low-level control, rather than treating empirical findings as a universal stability theorem.",
+      "whySelected": "较早论文首次发现；把常被忽略的控制接口作为学习变量，适合实验设计前核读。 / Older first discovery: treat controller gains as learning-design variables.",
+      "sources": [
+        {
+          "label": "原文 / Paper",
+          "url": "https://www.roboticsproceedings.org/rss22/p139.pdf"
+        },
+        {
+          "label": "正式出版记录 / Official publication",
+          "url": "https://www.roboticsproceedings.org/rss22/p139.html"
+        },
+        {
+          "label": "作者项目 / Project",
+          "url": "https://younghyopark.me/tune-to-learn/"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "较早论文首次发现；把常被忽略的控制接口作为学习变量，适合实验设计前核读。 / Older first discovery: treat controller gains as learning-design variables.",
+          "relation": "连接模仿学习、强化学习和真实机器人控制；先读Fig.1，再比较三种学习范式。 / Connects imitation, RL and hardware control; start with Fig.1.",
+          "prerequisites": [
+            "PD/阻抗控制 / PD and impedance control",
+            "行为克隆 / Behavior cloning"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": "10.15607/rss.2026.xxii.139",
+        "arxiv": "2604.02523",
+        "other": null
+      },
+      "formalPublication": {
+        "type": "conference",
+        "evidenceUrl": "https://www.roboticsproceedings.org/rss22/p139.html"
+      },
+      "publicationStatus": "published",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-06",
+      "verifiedAt": "2026-11-06",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "project": "https://younghyopark.me/tune-to-learn/",
+        "code": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "结论来自文中任务、机器人和调参范围，不构成任意系统的保证。 / Findings are empirical and setup-specific."
+      ],
+      "assumptions": [
+        "策略根据状态闭环反应，不能将控制增益直接等同于任务刚度。 / State-conditioned reactive policies."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.roboticsproceedings.org/rss22/p139.html",
+          "claim": "官方正式出版记录，题名、作者、DOI和期刊/会议出处一致 / Official published record.",
+          "checkedAt": "2026-11-06"
+        },
+        {
+          "url": "https://www.roboticsproceedings.org/rss22/p139.pdf",
+          "claim": "已核读正文方法、实验及局限；结论为作者报告，未复现 / Methods, experiments and limitations checked; not independently reproduced.",
+          "checkedAt": "2026-11-06"
+        },
+        {
+          "url": "https://younghyopark.me/tune-to-learn/",
+          "claim": "作者项目页面已打开核验 / Verified author project.",
+          "checkedAt": "2026-11-06"
+        }
+      ],
+      "researchNotes": [
+        "正式会议目录仅给出July 2026，具体出版日未知；不以arXiv日期代替。",
+        "项目中的ICRA workshop奖项不计作RSS主会奖项，本卡不使用Best Paper/Oral标签。",
+        "正文为重点段落核读，不声称逐行通读；未运行代码或独立复现实验。 / Targeted full-text reading, not line-by-line reading; no code execution or replication."
+      ],
+      "visuals": {
+        "mainFigure": null,
+        "figureNote": "已查看论文原图；本次未确认可再发布许可，保留原文入口，不以生成图替代。 / Original figures inspected; redistribution permission not established, so link to paper only.",
+        "institutions": [
+          {
+            "institutionId": "pending-massachusetts-institute-of-technology",
+            "name": "Massachusetts Institute of Technology",
+            "institutionType": "university",
+            "markType": "compact-symbol",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/mit-2023-red-logo.svg",
+              "sha256": "717f753937cb6c2383916b1a2ebda407902a73b347f861242a50bb0b552f11ab",
+              "width": 449,
+              "height": 252,
+              "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b8/MIT_2023_red_logo.svg",
+              "evidenceUrl": "https://brand.mit.edu/logos-marks/mit-logo",
+              "verifiedAt": "2026-11-03",
+              "credit": "MIT 2023 red logo, Wikimedia Commons copy sourced to MIT",
+              "rights": "MIT标识及商标归原权利人。Wikimedia Commons将此简单图形标为公有领域并提示商标限制；其现行SVG画布由Commons编辑裁切，项目原样保存未再修改。MIT政策要求向校方提交标识使用提案，未取得另行许可；仅用于对应论文已核实的署名识别，不表示许可、合作或背书。当前紧凑图盒不声称满足MIT标准标志30px以上及留白指导。",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "altZh": "麻省理工学院红色 MIT 图形标识",
+              "altEn": "Massachusetts Institute of Technology red MIT logo"
+            },
+            "authorNames": [
+              "Antonia Bronars",
+              "Younghyo Park",
+              "Pulkit Agrawal"
+            ],
+            "evidence": [
+              {
+                "url": "https://www.roboticsproceedings.org/rss22/p139.pdf",
+                "claim": "论文首页署名明确列出上述作者及本单位 / Paper first-page affiliation.",
+                "checkedAt": "2026-11-06"
+              }
+            ],
+            "note": "标识身份参考MIT官方品牌指南，文件为Wikimedia Commons公开副本，当前画布由Commons编辑裁切；未取得另行许可，仅用于论文署名识别，不表示MIT背书。"
+          }
+        ],
+        "authors": []
+      }
+    },
+    {
+      "id": "arxiv-2602-15010",
+      "title": "聚焦关键历史帧的长上下文机器人模仿学习",
+      "titleEn": "Long-Context Robot Imitation Learning by Focusing on Key History Frames",
+      "authors": [
+        "Max Sobol Mark",
+        "Maria Attarian",
+        "Chuyuan Fu",
+        "Debidatta Dwibedi",
+        "Jacky Liang",
+        "Dhruv Shah",
+        "Aviral Kumar"
+      ],
+      "year": 2026,
+      "venue": "RSS 2026 · 正式会议论文",
+      "tags": [
+        "机器人学习",
+        "RSS 2026"
+      ],
+      "summary": "长任务需要记忆，但把所有历史观测直接交给策略容易学到偶然关联。BPP用视觉语言模型挑选少量任务关键帧，缩小训练与执行时的历史分布差异。在四个真机和三个仿真任务中作者报告优于历史条件基线；项目表格真机均值为53.6%，对照最佳为31.8%。代价是关键帧检测错误与外部模型延迟。",
+      "summaryEn": "Long tasks need memory, but directly conditioning on observation histories can encourage spurious correlations. BPP uses a vision-language model to select a few task-relevant keyframes, reducing history distribution shift between training and deployment. Across four real-world and three simulation tasks, the authors report improvements over history-conditioned baselines; the project table gives real-world averages of 53.6% versus 31.8% for the strongest comparator. Keyframe errors and external-model latency remain limitations.",
+      "whySelected": "较早论文首次发现；用事件摘要而非无限堆叠历史，适合长程模仿学习的设计比较。 / Older first discovery: compare event summaries with raw histories.",
+      "sources": [
+        {
+          "label": "原文 / Paper",
+          "url": "https://www.roboticsproceedings.org/rss22/p201.pdf"
+        },
+        {
+          "label": "正式出版记录 / Official publication",
+          "url": "https://www.roboticsproceedings.org/rss22/p201.html"
+        },
+        {
+          "label": "作者项目 / Project",
+          "url": "https://bigpicturepolicies.github.io/"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "较早论文首次发现；用事件摘要而非无限堆叠历史，适合长程模仿学习的设计比较。 / Older first discovery: compare event summaries with raw histories.",
+          "relation": "先看历史覆盖不足分析，再检查关键帧检测与延迟遮蔽消融。 / Read history coverage analysis, then detector and latency ablations.",
+          "prerequisites": [
+            "模仿学习 / Imitation learning",
+            "分布偏移 / Distribution shift"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": "10.15607/rss.2026.xxii.201",
+        "arxiv": "2602.15010",
+        "other": null
+      },
+      "formalPublication": {
+        "type": "conference",
+        "evidenceUrl": "https://www.roboticsproceedings.org/rss22/p201.html"
+      },
+      "publicationStatus": "published",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-06",
+      "verifiedAt": "2026-11-06",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "project": "https://bigpicturepolicies.github.io/",
+        "code": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "依赖任务特定VLM提示、关键帧准确性与推理速度。 / Depends on task-specific prompts, detection accuracy and VLM latency.",
+        "53.6%与31.8%不是70个百分点增益；官方摘要70%为相对改善的近似表述。 / Do not confuse relative improvement with percentage points."
+      ],
+      "assumptions": [
+        "任务存在可由视觉识别的行为关键事件。 / Visually detectable task milestones."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.roboticsproceedings.org/rss22/p201.html",
+          "claim": "官方正式出版记录，题名、作者、DOI和期刊/会议出处一致 / Official published record.",
+          "checkedAt": "2026-11-06"
+        },
+        {
+          "url": "https://www.roboticsproceedings.org/rss22/p201.pdf",
+          "claim": "已核读正文方法、实验及局限；结论为作者报告，未复现 / Methods, experiments and limitations checked; not independently reproduced.",
+          "checkedAt": "2026-11-06"
+        },
+        {
+          "url": "https://bigpicturepolicies.github.io/",
+          "claim": "作者项目页面已打开核验 / Verified author project.",
+          "checkedAt": "2026-11-06"
+        }
+      ],
+      "researchNotes": [
+        "作者顺序采用正式目录；PDF顺序不同，身份未新增或删除。",
+        "Aviral Kumar的项目页还列Google DeepMind，而正式PDF仅标CMU；机构映射以正式PDF为准。",
+        "正文重点：历史覆盖分析、方法、真机结果、Limitations。",
+        "正文为重点段落核读，不声称逐行通读；未运行代码或独立复现实验。 / Targeted full-text reading, not line-by-line reading; no code execution or replication."
+      ],
+      "visuals": {
+        "mainFigure": null,
+        "figureNote": "已查看论文原图；本次未确认可再发布许可，保留原文入口，不以生成图替代。 / Original figures inspected; redistribution permission not established, so link to paper only.",
+        "institutions": [
+          {
+            "institutionId": "pending-carnegie-mellon-university",
+            "name": "Carnegie Mellon University",
+            "institutionType": "university",
+            "markType": "emblem",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-733bc43cbef4fab8.png",
+              "sha256": "733bc43cbef4fab8fccfe56d00370bc6e33cae865f961281bf740c91707b5657",
+              "width": 570,
+              "height": 615,
+              "sourceUrl": "https://live-cmu-brand.pantheonsite.io/sites/default/files/cmu-brand-files/inline-images/Router%20Grid%20Image%20%2889%29_0.png",
+              "evidenceUrl": "https://brand.cmu.edu/visual-identity/carnegie-mellon-trademarks/university-seal",
+              "verifiedAt": "2026-11-03",
+              "credit": "Carnegie Mellon University · official-source compact identity mark",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. CMU states specific third-party commercial and noncommercial uses need a licence and written approval. Seal guidance requests upright proportional use, a ring-width safe zone, and approval for lockups. No such licence/approval or full-size guideline compliance is asserted. Policy: https://www.cmu.edu/policies/administrative-and-governance/use-carnegie-mellon-trademarks.html",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "light",
+              "altZh": "Carnegie Mellon University 官方红色完整校徽，保留原白底",
+              "altEn": "Complete official red Carnegie Mellon University seal with its native white field"
+            },
+            "authorNames": [
+              "Max Sobol Mark",
+              "Aviral Kumar"
+            ],
+            "evidence": [
+              {
+                "url": "https://www.roboticsproceedings.org/rss22/p201.pdf",
+                "claim": "论文首页署名明确列出上述作者及本单位 / Paper first-page affiliation.",
+                "checkedAt": "2026-11-06"
+              }
+            ],
+            "note": "Exact image under One-Color Seal on official brand page. Complete red CMU university seal, not a full-name wordmark or athletics mascot. PNG has a native opaque white rectangular field and a thin transparent top/bottom border; classified opaque-light rather than advertised as a fully transparent mark. No crop, recoloring, background removal or redraw. Native 570×615 bytes retained."
+          },
+          {
+            "institutionId": "pending-deepmind",
+            "name": "DeepMind",
+            "institutionType": "company",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Max Sobol Mark",
+              "Jacky Liang",
+              "Maria Attarian",
+              "Chuyuan Fu",
+              "Debidatta Dwibedi",
+              "Dhruv Shah"
+            ],
+            "evidence": [
+              {
+                "url": "https://www.roboticsproceedings.org/rss22/p201.pdf",
+                "claim": "论文首页署名明确列出上述作者及本单位 / Paper first-page affiliation.",
+                "checkedAt": "2026-11-06"
+              }
+            ],
+            "note": "Google’s current public guidance positively permits Google wordmark/G for nonmarketing news/teaching with accurate attribution, clearspace and correct colors. This does not establish permission or identity for a distinct DeepMind symbol, and parent Google G must not silently substitute for exact affiliation. Official DeepMind homepage checked; no explicit compact-mark editorial license established. Prior exact finding: Native transparent Google DeepMind symbol obtained and inspected; Google brand guidance says many graphical brand uses require permission while media page explicitly allows plain-text reference. External logo-use authorization not established; keep text rather than assert permission. 核验：2026-11-02T07:37:07.485144+00:00。 官方核验入口：https://about.google/brand-resource-center/guidance/media/ 核验：2026-11-02。 官方核验入口：https://partnermarketinghub.withgoogle.com/brands/google/branding-guidelines/how-to-show-googles-brand/"
+          },
+          {
+            "institutionId": "pending-princeton-university",
+            "name": "Princeton University",
+            "institutionType": "university",
+            "markType": "emblem",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-ff6693cf3f1d26cc.svg",
+              "sha256": "ff6693cf3f1d26cce3d4a75cd5a437a8e8c9d21004da251c9561f98c5299e1b1",
+              "width": 200,
+              "height": 270,
+              "sourceUrl": "https://www.cs.princeton.edu/",
+              "evidenceUrl": "https://www.cs.princeton.edu/",
+              "verifiedAt": "2026-11-03",
+              "credit": "Princeton University · official-source compact identity mark",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. Princeton trademark policies distinguish authorized institutional activity and licensing of outside uses; no licence/permission or minimum display-size compliance is claimed. Policy: https://communications.princeton.edu/guides-tools/intellectual-property",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "Princeton University 官方完整图形标识",
+              "altEn": "Complete official compact mark of Princeton University"
+            },
+            "authorNames": [
+              "Dhruv Shah"
+            ],
+            "evidence": [
+              {
+                "url": "https://www.roboticsproceedings.org/rss22/p201.pdf",
+                "claim": "论文首页署名明确列出上述作者及本单位 / Paper first-page affiliation.",
+                "checkedAt": "2026-11-06"
+              }
+            ],
+            "note": "Complete standalone inline SVG aria-describedby=logo-princeton-shield from official Computer Science footer, explicitly titled Princeton Shield. ViewBox 0 0 20 27 and all paths/fills unchanged; width/height set to 200×270 for intrinsic rendering. Native white outline, black/orange shield, open-book inscription preserved. Does not substitute a Computer Science-specific logo."
+          }
+        ],
+        "authors": []
+      }
+    },
+    {
+      "id": "arxiv-2602-21302",
+      "title": "用任务级迭代学习控制学习可变形物体操作",
+      "titleEn": "Learning Deformable Object Manipulation Using Task-Level Iterative Learning Control",
+      "authors": [
+        "Krishna Suresh",
+        "Christopher G. Atkeson"
+      ],
+      "year": 2026,
+      "venue": "RSS 2026 · 正式会议论文",
+      "tags": [
+        "机器人学习",
+        "RSS 2026"
+      ],
+      "summary": "动态绳索打结难以靠精确模型或海量示教解决。本文从一次人工示教出发，将绳索关键碰撞时刻的误差通过局部逆模型和二次规划转成动作修正，在真实硬件上迭代学习。作者报告七类绳索均能在十次试验内学会任务，多数材料间迁移需二至五次；这依赖关键时刻标注与稳定的绳索跟踪。",
+      "summaryEn": "Dynamic rope knotting is difficult to solve with precise models or large demonstration collections. Starting from one human demonstration, this method maps errors at a critical rope-collision instant into action updates using a local inverse model and quadratic programming, learning directly on hardware. The authors report learning on seven rope types within ten trials and transfer between most types in two to five trials. It depends on critical-point annotation and reliable rope tracking.",
+      "whySelected": "较早论文首次发现；少样本真机学习的控制路线，补充大模型操作之外的可解释选择。 / Older first discovery: an interpretable, data-efficient control alternative.",
+      "sources": [
+        {
+          "label": "原文 / Paper",
+          "url": "https://www.roboticsproceedings.org/rss22/p126.pdf"
+        },
+        {
+          "label": "正式出版记录 / Official publication",
+          "url": "https://www.roboticsproceedings.org/rss22/p126.html"
+        },
+        {
+          "label": "作者项目 / Project",
+          "url": "https://flying-knots.github.io/"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "较早论文首次发现；少样本真机学习的控制路线，补充大模型操作之外的可解释选择。 / Older first discovery: an interpretable, data-efficient control alternative.",
+          "relation": "先读关键点目标，再核对等权时序损失对照与碰撞失败案例。 / Read the critical-point objective and equal-weight baseline, then collision failures.",
+          "prerequisites": [
+            "迭代学习控制 / Iterative learning control",
+            "二次规划 / Quadratic programming"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": "10.15607/rss.2026.xxii.126",
+        "arxiv": "2602.21302",
+        "other": null
+      },
+      "formalPublication": {
+        "type": "conference",
+        "evidenceUrl": "https://www.roboticsproceedings.org/rss22/p126.html"
+      },
+      "publicationStatus": "published",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-06",
+      "verifiedAt": "2026-11-06",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "project": "https://flying-knots.github.io/",
+        "code": "https://github.com/krish-suresh/flying_knots_public",
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "模型不处理碰撞，命令修正可能不可恢复；关键点满足并不保证最终结收紧。 / Unmodeled collisions can corrupt updates; the critical point is not sufficient for completion.",
+        "固定时刻跟踪误差和局部极小值可能导致学习失败。 / Timing errors and local minima can cause failure."
+      ],
+      "assumptions": [
+        "示教关键时刻人工标注；任务重复执行且可跟踪绳索状态。 / Manual critical-point annotation and repeatable tracked trials."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.roboticsproceedings.org/rss22/p126.html",
+          "claim": "官方正式出版记录，题名、作者、DOI和期刊/会议出处一致 / Official published record.",
+          "checkedAt": "2026-11-06"
+        },
+        {
+          "url": "https://www.roboticsproceedings.org/rss22/p126.pdf",
+          "claim": "已核读正文方法、实验及局限；结论为作者报告，未复现 / Methods, experiments and limitations checked; not independently reproduced.",
+          "checkedAt": "2026-11-06"
+        },
+        {
+          "url": "https://flying-knots.github.io/",
+          "claim": "作者项目页面已打开核验 / Verified author project.",
+          "checkedAt": "2026-11-06"
+        },
+        {
+          "url": "https://github.com/krish-suresh/flying_knots_public",
+          "claim": "作者项目链接代码仓，已打开核验；未运行 / Author-linked repository checked; not run.",
+          "checkedAt": "2026-11-06"
+        }
+      ],
+      "researchNotes": [
+        "正式目录题名与PDF的Learning Dynamic Rope Manipulation有差异；项目BibTeX确认同一DOI，按目录保留规范题名。",
+        "Chris Atkeson与Christopher G. Atkeson为本文来源中的姓名写法；作者字段沿正式目录。",
+        "正文为重点段落核读，不声称逐行通读；未运行代码或独立复现实验。 / Targeted full-text reading, not line-by-line reading; no code execution or replication."
+      ],
+      "visuals": {
+        "mainFigure": null,
+        "figureNote": "已查看论文原图；本次未确认可再发布许可，保留原文入口，不以生成图替代。 / Original figures inspected; redistribution permission not established, so link to paper only.",
+        "institutions": [
+          {
+            "institutionId": "pending-carnegie-mellon-university",
+            "name": "Carnegie Mellon University",
+            "institutionType": "university",
+            "markType": "emblem",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-733bc43cbef4fab8.png",
+              "sha256": "733bc43cbef4fab8fccfe56d00370bc6e33cae865f961281bf740c91707b5657",
+              "width": 570,
+              "height": 615,
+              "sourceUrl": "https://live-cmu-brand.pantheonsite.io/sites/default/files/cmu-brand-files/inline-images/Router%20Grid%20Image%20%2889%29_0.png",
+              "evidenceUrl": "https://brand.cmu.edu/visual-identity/carnegie-mellon-trademarks/university-seal",
+              "verifiedAt": "2026-11-03",
+              "credit": "Carnegie Mellon University · official-source compact identity mark",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. CMU states specific third-party commercial and noncommercial uses need a licence and written approval. Seal guidance requests upright proportional use, a ring-width safe zone, and approval for lockups. No such licence/approval or full-size guideline compliance is asserted. Policy: https://www.cmu.edu/policies/administrative-and-governance/use-carnegie-mellon-trademarks.html",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "light",
+              "altZh": "Carnegie Mellon University 官方红色完整校徽，保留原白底",
+              "altEn": "Complete official red Carnegie Mellon University seal with its native white field"
+            },
+            "authorNames": [
+              "Krishna Suresh",
+              "Christopher G. Atkeson"
+            ],
+            "evidence": [
+              {
+                "url": "https://www.roboticsproceedings.org/rss22/p126.pdf",
+                "claim": "论文首页署名明确列出上述作者及本单位 / Paper first-page affiliation.",
+                "checkedAt": "2026-11-06"
+              }
+            ],
+            "note": "Exact image under One-Color Seal on official brand page. Complete red CMU university seal, not a full-name wordmark or athletics mascot. PNG has a native opaque white rectangular field and a thin transparent top/bottom border; classified opaque-light rather than advertised as a fully transparent mark. No crop, recoloring, background removal or redraw. Native 570×615 bytes retained."
+          }
+        ],
+        "authors": []
+      }
+    },
+    {
+      "id": "doi-eff7333912a63405ab7d",
+      "title": "审计观测字段约定，让机器人操作的模态比较有效",
+      "titleEn": "Observation-contract auditing for valid modality comparison in robot manipulation benchmarks",
+      "authors": [
+        "Yuanzhi He",
+        "Qiming Wang",
+        "Jiayu Xu"
+      ],
+      "year": 2026,
+      "venue": "Scientific Reports · Article in Press（正式期刊在线发表）",
+      "tags": [
+        "机器人学习",
+        "控制与评测"
+      ],
+      "summary": "比较状态、图像和点云策略时，观测通道可能悄然丢掉不同状态字段，导致不公平比较。本文提出字段约定差分和四步静态审计，并在三个ManiSkill3任务中控制状态完整性与点云输入。删除物体几何后平均成功率由0.606降至0.016，点云未补回性能；结论仅限该训练预算与特权状态设定。",
+      "summaryEn": "When comparing state, image and point-cloud policies, observation pathways may silently drop different state fields, confounding the comparison. This work proposes contract diffs and a four-step static audit, then controls state completeness and point-cloud inputs on three ManiSkill3 tasks. Removing object geometry reduces mean success from 0.606 to 0.016, and point clouds do not recover performance. The result is limited to the tested training budget and privileged-state setting.",
+      "whySelected": "近期正式期刊在线发表；优先读，能直接用于检查机器人学习实验的隐性混杂。 / Recent journal publication: directly useful for auditing experimental confounds.",
+      "sources": [
+        {
+          "label": "原文 / Paper",
+          "url": "https://www.nature.com/articles/s41598-026-76821-1_reference.pdf"
+        },
+        {
+          "label": "正式出版记录 / Official publication",
+          "url": "https://www.nature.com/articles/s41598-026-76821-1"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "近期正式期刊在线发表；优先读，能直接用于检查机器人学习实验的隐性混杂。 / Recent journal publication: directly useful for auditing experimental confounds.",
+          "relation": "按四步审计列出字段、顺序、丢失项，再看2×2对照；不据此否定视觉。 / Audit fields, order and losses before the factorial comparison.",
+          "prerequisites": [
+            "模仿学习基准 / Imitation-learning benchmarks",
+            "受控实验 / Controlled experiments"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": "10.1038/s41598-026-76821-1",
+        "arxiv": null,
+        "other": null
+      },
+      "formalPublication": {
+        "type": "journal",
+        "evidenceUrl": "https://www.nature.com/articles/s41598-026-76821-1"
+      },
+      "publicationStatus": "published",
+      "publicationDate": "2026-10-20",
+      "discoveredDate": "2026-11-06",
+      "verifiedAt": "2026-11-06",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "recent",
+      "updateNote": "",
+      "links": {
+        "project": null,
+        "code": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "仅三个ManiSkill3任务、一种扩散骨干、每格三种种子、10000次迭代。 / Three tasks, one diffusion backbone, three seeds and 10,000 iterations.",
+        "RLBench和robomimic只做静态差分，未重新训练验证性能代价。 / Other benchmark audits are static, not retraining studies."
+      ],
+      "assumptions": [
+        "低维状态包含特权物体几何；不可外推到遮挡、变形或新物体场景。 / State contains privileged object geometry."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.nature.com/articles/s41598-026-76821-1",
+          "claim": "官方正式出版记录，题名、作者、DOI和期刊/会议出处一致 / Official published record.",
+          "checkedAt": "2026-11-06"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41598-026-76821-1_reference.pdf",
+          "claim": "已核读正文方法、实验及局限；结论为作者报告，未复现 / Methods, experiments and limitations checked; not independently reproduced.",
+          "checkedAt": "2026-11-06"
+        }
+      ],
+      "researchNotes": [
+        "Article in Press，2026-10-20正式在线发布，非预印本；最终编辑版仍可能替换。",
+        "已核读定义、四步审计、实验协议、Discussion与未来工作。",
+        "正文为重点段落核读，不声称逐行通读；未运行代码或独立复现实验。 / Targeted full-text reading, not line-by-line reading; no code execution or replication."
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/observation-contract-figure1.png",
+          "sha256": "0e635c0def01dddbf1a9a69a7e9c76e165c818c5cfa4946db50897462ebda3d4",
+          "width": 996,
+          "height": 494,
+          "sourceUrl": "https://www.nature.com/articles/s41598-026-76821-1_reference.pdf",
+          "evidenceUrl": "https://www.nature.com/articles/s41598-026-76821-1",
+          "verifiedAt": "2026-11-06",
+          "credit": "He, Wang & Xu (2026), Fig. 1 · CC BY 4.0",
+          "rights": "© The Author(s) 2026. CC BY 4.0: https://creativecommons.org/licenses/by/4.0/. Figure and complete caption rendered from PDF page 3; surrounding article text excluded; scientific content and aspect ratio unchanged.",
+          "displayPolicy": "open-license",
+          "background": "light",
+          "altZh": "图1：状态与点云观测通道所保留字段不同的示意图，附完整原图注。",
+          "altEn": "Figure 1: differing state fields retained by state and point-cloud pathways, with full original caption."
+        },
+        "figureNote": "CC BY 4.0原图与完整图注，来自论文第3页；仅排除外围正文。",
+        "institutions": [
+          {
+            "name": "Cardiff University",
+            "institutionType": "university",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Yuanzhi He",
+              "Qiming Wang",
+              "Jiayu Xu"
+            ],
+            "evidence": [
+              {
+                "url": "https://www.nature.com/articles/s41598-026-76821-1",
+                "claim": "期刊作者单位栏明确对应全部列出作者 / Publisher author affiliations.",
+                "checkedAt": "2026-11-06"
+              }
+            ],
+            "note": "已查官网与官方数字身份新闻入口；现主品牌为双语文字标识，旧数字C介绍入口重定向至新闻列表，未得到可核实完整透明紧凑图形。保留名称，不用字标缩图或猜测校徽。",
+            "institutionId": "pending-cardiff-university"
+          }
+        ],
+        "authors": []
+      }
+    },
+    {
+      "id": "doi-0dea7cada49002f3d91f",
+      "title": "依赖关系下的有意义数据擦除",
+      "titleEn": "Meaningful Data Erasure in the Presence of Dependencies",
+      "authors": [
+        "Vishal Chakraborty",
+        "Youri Kaminsky",
+        "Sharad Mehrotra",
+        "Felix Naumann",
+        "Faisal Nawab",
+        "Primal Pappachan",
+        "Mohammad Sadoghi",
+        "Nalini Venkatasubramanian"
+      ],
+      "year": 2025,
+      "venue": "PVLDB 18(10): 3435–3448 (2025)",
+      "tags": [
+        "删除传播",
+        "实例更新",
+        "依赖规则",
+        "ILP",
+        "隐私",
+        "最小额外删除"
+      ],
+      "summary": "删除单元格后，依赖关系仍可能泄露原值。本文提出插入前与删除后的推断等价原则P2E2，用关系依赖规则比较历史状态，并以整数规划、超图算法和近似策略选择额外删除。它帮助区分“让查询答案消失”与“限制删除后的推断”；最优性有明确结构条件，不能直接当作VKG反向更新算法或普遍隐私保证。",
+      "summaryEn": "After a cell is deleted, dependencies may still leak its former value. This paper introduces P2E2, a principle relating pre-insertion and post-erasure inference, and compares historical states using relational dependency rules. Integer programming, hypergraph algorithms and an approximation choose additional erasures. It helps distinguish making a query answer disappear from limiting inference after deletion. Optimality requires explicit structural conditions; the method is not directly a VKG reverse-update algorithm or a universal privacy guarantee.",
+      "whySelected": "较早论文 · 首次发现。补足依赖下删除的目标定义与优化边界，适合与最小视图副作用、来源及修复问题对照。",
+      "sources": [
+        {
+          "label": "正式论文全文",
+          "url": "https://www.vldb.org/pvldb/vol18/p3435-chakraborty.pdf"
+        },
+        {
+          "label": "正式出版记录",
+          "url": "https://doi.org/10.14778/3748191.3748206"
+        },
+        {
+          "label": "作者代码",
+          "url": "https://github.com/HPI-Information-Systems/P2E2-Erasure"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "li"
+      ],
+      "recommendations": {
+        "li": {
+          "whyRead": "建议现在读：先用第1节例1.1辨认历史状态为何重要，再读第3.3节定义与第4.3–4.4节保证条件。",
+          "relation": "固定本体和映射下选择源实例删除时，可借鉴其显式依赖和额外删除代价；但P2E2优化推断泄漏，不是VKG目标三元组消失或视图副作用最小化。",
+          "prerequisites": [
+            "关系数据库与NULL",
+            "依赖约束",
+            "整数线性规划",
+            "超图",
+            "最优性与近似保证"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": "10.14778/3748191.3748206",
+        "arxiv": "2507.00343",
+        "other": null
+      },
+      "publicationStatus": "published",
+      "publicationDate": "2025-06-01",
+      "discoveredDate": "2026-11-06",
+      "verifiedAt": "2026-11-06",
+      "readDepth": "fulltext",
+      "paperType": "system",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": "https://github.com/HPI-Information-Systems/P2E2-Erasure",
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "Opt-P2E2为NP-hard；Algorithm 2的最优性论证假设无环依赖超图，有环时不能沿用最优保证（第3.3、4.3节及脚注5）。",
+        "第4.4节贪心策略一般加权成本比可无界；不能宣传为任意输入的固定比例近似。",
+        "第3.3节不考虑数据库拥有者秘密留副本；结论相对于给定RDR依赖，不等于覆盖未知外部推断或法律合规认证。",
+        "未运行代码、求解器或复现实验，也未独立验证证明。"
+      ],
+      "assumptions": [
+        "输入包含指定的关系依赖规则、单元格插入/到期信息及删除成本；擦除在模型中表现为赋NULL。",
+        "第6节实验的RDR集合均无环；实现为Java 11、PostgreSQL 12.20、Gurobi 11.03、单线程。"
+      ],
+      "evidence": [
+        {
+          "url": "https://doi.org/10.14778/3748191.3748206",
+          "claim": "正式出版记录核验8位作者、PVLDB 18(10)、3435–3448及2025-06-01发布日期。",
+          "checkedAt": "2026-11-06"
+        },
+        {
+          "url": "https://www.vldb.org/pvldb/vol18/p3435-chakraborty.pdf",
+          "claim": "本地下载并核读首页、例1.1、第3.3节定义/NP-hard结论、第4.3–4.4节保证条件、第6.1节设置及第8节局限；首页核验论文署名机构。",
+          "checkedAt": "2026-11-06"
+        },
+        {
+          "url": "https://arxiv.org/abs/2507.00343",
+          "claim": "同题同作者预印本对应2025-07-01提交；此日不替代正式出版日期。",
+          "checkedAt": "2026-11-06"
+        },
+        {
+          "url": "https://github.com/HPI-Information-Systems/P2E2-Erasure",
+          "claim": "论文首页链接到此公开仓库；核验README及Java源目录，未运行。",
+          "checkedAt": "2026-11-06"
+        }
+      ],
+      "researchNotes": [
+        "重点核读范围：第1节例1.1→第3.3节Definitions 3.5/3.6与Theorem 3.7→第4.3节Algorithm 2及脚注5→第4.4节近似边界→第6.1节实验设置→第8节。非完整逐页通读，不声称复现。",
+        "已比对线上主分支注册表、2026-10-31至11-05李历史条目及两篇已读种子，DOI/arXiv/title无重复。11月6日非周一，本条不是额外经典名额。",
+        "定向检索2026 VKG/OBDA更新、删除传播、近期provenance；GDPView已推荐，近期Consist工作流来源工具直接相关性较弱，未为凑数纳入。"
+      ],
+      "visuals": {
+        "mainFigure": null,
+        "figureNote": "原文含Figure 1示例与Figure 2依赖超图。全文为CC BY-NC-ND 4.0；本次未确认站点重发及图像提取适用条件，故不复制，保留原文链接；未生成替代科学图。",
+        "institutions": [
+          {
+            "name": "University of California, Irvine",
+            "institutionId": "pending-university-of-california-irvine",
+            "logo": null,
+            "authorNames": [
+              "Vishal Chakraborty",
+              "Sharad Mehrotra",
+              "Faisal Nawab",
+              "Nalini Venkatasubramanian"
+            ],
+            "evidence": [
+              {
+                "url": "https://www.vldb.org/pvldb/vol18/p3435-chakraborty.pdf",
+                "claim": "论文首页明确署名该机构。",
+                "checkedAt": "2026-11-06"
+              },
+              {
+                "url": "https://brand.uci.edu/identity/graphics.php",
+                "claim": "机构素材预检入口；已查官方品牌页；传统徽章不用于网页，简化徽使用及许可边界未完成核验，复用现有名称项。",
+                "checkedAt": "2026-11-06"
+              }
+            ],
+            "note": "已查官方品牌页；传统徽章不用于网页，简化徽使用及许可边界未完成核验，复用现有名称项。",
+            "institutionType": "university",
+            "markType": "none"
+          },
+          {
+            "name": "Hasso Plattner Institute",
+            "institutionId": "pending-hasso-plattner-institute",
+            "logo": null,
+            "authorNames": [
+              "Youri Kaminsky",
+              "Felix Naumann"
+            ],
+            "evidence": [
+              {
+                "url": "https://www.vldb.org/pvldb/vol18/p3435-chakraborty.pdf",
+                "claim": "论文首页明确署名该机构。",
+                "checkedAt": "2026-11-06"
+              },
+              {
+                "url": "https://hpi.de/en/imprint/",
+                "claim": "机构素材预检入口；已查官方站与imprint；复制图示材料要求预先同意，未取得，不复制标识、不以Potsdam图徽替代。",
+                "checkedAt": "2026-11-06"
+              }
+            ],
+            "note": "已查官方站与imprint；复制图示材料要求预先同意，未取得，不复制标识、不以Potsdam图徽替代。",
+            "institutionType": "research-institute",
+            "markType": "none"
+          },
+          {
+            "name": "University of Potsdam",
+            "institutionId": "pending-university-of-potsdam",
+            "logo": null,
+            "authorNames": [
+              "Youri Kaminsky",
+              "Felix Naumann"
+            ],
+            "evidence": [
+              {
+                "url": "https://www.vldb.org/pvldb/vol18/p3435-chakraborty.pdf",
+                "claim": "论文首页明确署名该机构。",
+                "checkedAt": "2026-11-06"
+              },
+              {
+                "url": "https://www.uni-potsdam.de/en/presse/press/information-for-employees/corporate-design",
+                "claim": "机构素材预检入口；已查官方设计页和logo入口；详细设计资源指向内网，未完成可公开使用图徽的像素/许可核验，保留名称。",
+                "checkedAt": "2026-11-06"
+              }
+            ],
+            "note": "已查官方设计页和logo入口；详细设计资源指向内网，未完成可公开使用图徽的像素/许可核验，保留名称。",
+            "institutionType": "university",
+            "markType": "none"
+          },
+          {
+            "name": "Portland State University",
+            "institutionId": "pending-portland-state-university",
+            "logo": null,
+            "authorNames": [
+              "Primal Pappachan"
+            ],
+            "evidence": [
+              {
+                "url": "https://www.vldb.org/pvldb/vol18/p3435-chakraborty.pdf",
+                "claim": "论文首页明确署名该机构。",
+                "checkedAt": "2026-11-06"
+              },
+              {
+                "url": "https://www.pdx.edu/university-communications/tools-and-templates/university-logos",
+                "claim": "机构素材预检入口；已查官方标识指南；独立logomark限特定用途，素材下载需学校登录，未取得适用素材，保留名称。",
+                "checkedAt": "2026-11-06"
+              }
+            ],
+            "note": "已查官方标识指南；独立logomark限特定用途，素材下载需学校登录，未取得适用素材，保留名称。",
+            "institutionType": "university",
+            "markType": "none"
+          },
+          {
+            "name": "University of California, Davis",
+            "institutionId": "pending-university-of-california-davis",
+            "logo": null,
+            "authorNames": [
+              "Mohammad Sadoghi"
+            ],
+            "evidence": [
+              {
+                "url": "https://www.vldb.org/pvldb/vol18/p3435-chakraborty.pdf",
+                "claim": "论文首页明确署名该机构。",
+                "checkedAt": "2026-11-06"
+              },
+              {
+                "url": "https://communicationsguide.ucdavis.edu/brand-guide/logos",
+                "claim": "机构素材预检入口；已查官方logo目录，复用现有待核验名称项；未取得完成像素与展示适配核验的新素材。",
+                "checkedAt": "2026-11-06"
+              }
+            ],
+            "note": "已查官方logo目录，复用现有待核验名称项；未取得完成像素与展示适配核验的新素材。",
+            "institutionType": "university",
+            "markType": "none"
+          }
+        ],
+        "authors": []
+      }
+    },
+    {
+      "id": "arxiv-2611-01729",
+      "title": "ODE Policy：学习动作如何变化，而非直接预测动作",
+      "titleEn": "ODE Policy: Robot Learning via Action Dynamics, Not Actions",
+      "authors": [
+        "Jindou Jia",
+        "Jingliang Li",
+        "Kuangji Zuo",
+        "Tuo An",
+        "Yuxuan Hu",
+        "Mengfei Zhao",
+        "Bofan Lyu",
+        "Jiaqi Bai",
+        "Daoyuan Zhu",
+        "Hengyu Dai",
+        "Junpeng Zhang",
+        "Jianfei Yang"
+      ],
+      "year": 2026,
+      "venue": "arXiv 预印本 / preprint",
+      "tags": [
+        "机器人学习",
+        "模仿学习",
+        "强化学习",
+        "动作分块",
+        "神经ODE"
+      ],
+      "summary": "分块策略独立预测动作，块间可能跳变。ODE Policy学习动作随物理时间变化的向量场，从上一动作积分生成下一动作，以短段路径损失和起点扰动训练，再用多样性头保留多种行为。作者在LIBERO报告训练一轮成功率79.2%，六种基线最高43.2%；真机覆盖14项任务。优势主要体现早期学习与平滑性，换相机仍会失败，连续指令也不等于闭环安全保证。",
+      "whySelected": "P0近期未推荐研究：用同一动作表示连接IL与RL，适合比较动作分块、流匹配和世界模型中的actor；仅核实预印本身份，不计迅的正式会议/期刊配额。 / Recent unseen P0 study connecting IL and RL through action representation; verified only as a preprint and excluded from Xun’s formal-publication quota.",
+      "sources": [
+        {
+          "label": "版本与摘要 / Version and abstract",
+          "url": "https://arxiv.org/abs/2611.01729"
+        },
+        {
+          "label": "原文 / Full text",
+          "url": "https://arxiv.org/html/2611.01729v1"
+        },
+        {
+          "label": "作者项目 / Author project",
+          "url": "https://ntumars.github.io/ODE/"
+        },
+        {
+          "label": "官方代码 / Official code",
+          "url": "https://github.com/NTUMARS/ODE-POLICY"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "lv"
+      ],
+      "recommendations": {
+        "lv": {
+          "whyRead": "P0前沿线，建议现在读：它改变的是动作输出的表示，不是再加一个大视觉模型。先看积分如何跨块延续，再判断更快学会与最终更强是否是同一个结论。 / P0 frontier, read now: it changes the action representation, not the visual backbone. Trace continuity across chunks, then distinguish faster early learning from better final performance.",
+          "relation": "直接关联视觉运动模仿学习、接触操作与RL actor设计；在仿真中还可检查控制频率、动作平滑与策略成功率的关系。 / Directly connects visuomotor imitation, contact manipulation and RL actors, with simulation tests of control rate, smoothness and success.",
+          "prerequisites": [
+            "先补行为克隆、观测与控制器目标的区别：动作是希望到达的参考，不是实际测量状态。 / First: behavior cloning and commanded references versus measured states.",
+            "再补动作分块与误差累积：上一块的预测如何成为下一块的起点。 / Next: action chunking and compounding errors.",
+            "再用欧拉积分理解向量场；区分物理时间与flow matching的生成时间。 / Then: Euler integration and physical time versus flow-matching generation time.",
+            "RL支线补actor/critic、世界模型短滚动及通过模型反传回报；可在读懂IL后再看。 / RL branch: actor/critic, short world-model rollouts and differentiating returns; read after the IL path."
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2611.01729",
+        "other": null
+      },
+      "publicationStatus": "preprint",
+      "publicationDate": "2026-11-01",
+      "discoveredDate": "2026-11-06",
+      "verifiedAt": "2026-11-06",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "recent",
+      "updateNote": "",
+      "links": {
+        "code": "https://github.com/NTUMARS/ODE-POLICY",
+        "project": "https://ntumars.github.io/ODE/",
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "仿真视觉策略主实验为三随机种子；VLA/WAM曲线仅一种子，带状区间来自四套任务而非随机种子方差。 / Main visuomotor simulation uses three seeds; VLA/WAM curves use one seed and bands across four suites, not seed uncertainty.",
+        "真机每方法每任务20次测试；跨实验室迁移使用相同机器人和手，并非跨形态迁移。 / Real-world tests use 20 trials per method/task; cross-lab transfer uses the same robot and hand, not a different embodiment.",
+        "§6.3报告改变相机仍难倒全部视觉运动方法；部分泛化优势主要在早期训练，不能概括为全面更强。 / Section 6.3 reports camera changes defeating all visuomotor methods; some generalization gains are early-training gains, not universal superiority.",
+        "作者报告，未独立复现；连续控制目标不等于实际关节轨迹安全或稳定性证明。 / Author-reported, not independently replicated; continuous references are not a safety or stability proof for the physical robot."
+      ],
+      "assumptions": [
+        "IL默认每8步更新一次观测条件和本体状态，块内保持不变；更快生成动作不代表每步获得新的感知反馈。 / Default IL refreshes observation and proprioception every eight steps and holds them within a chunk; faster action generation is not fresh perception at every step.",
+        "二值夹爪在LIBERO用独立分类头；RL用单步欧拉积分且限制动作及变化幅度。 / LIBERO uses a separate binary-gripper head; RL uses one Euler step with bounds on actions and changes."
+      ],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2611.01729",
+          "claim": "题名、12位作者、2026-11-01 v1及预印本状态。 / Title, 12 authors, v1 submission and preprint status.",
+          "checkedAt": "2026-11-06"
+        },
+        {
+          "url": "https://arxiv.org/html/2611.01729v1",
+          "claim": "§5实验条件、§6.1.1的79.2%及§1的基线最高43.2%、§6.3泛化边界、§7真机、§8消融；首页NTU署名。 / Experimental conditions, main comparison, generalization boundaries, real robots, ablations and paper-time NTU affiliation.",
+          "checkedAt": "2026-11-06"
+        },
+        {
+          "url": "https://ntumars.github.io/ODE/",
+          "claim": "作者与MARS Lab/NTU、项目演示及代码链接一致。 / Authors, MARS Lab/NTU, demonstrations and code link corroborated.",
+          "checkedAt": "2026-11-06"
+        },
+        {
+          "url": "https://github.com/NTUMARS/ODE-POLICY",
+          "claim": "官方README、ode_policy及scripts目录存在；未执行实现。 / Official README and source directories exist; implementation not executed.",
+          "checkedAt": "2026-11-06"
+        }
+      ],
+      "researchNotes": [
+        "驴·阅读路线（前沿线）：先图2与§3分清预测动作和积分动作 → §4.1–4.3、算法1/2看训练与执行 → §5核对共同实验条件 → 图4/§6.1.1区分早期与最终成功率 → §7.1与图11看单臂任务 → §8图17理解起点扰动与无缝分块消融。 / Frontier route: Figure 2/section 3, sections 4.1–4.3 and Algorithms 1/2, section 5, Figure 4/6.1.1, section 7.1/Figure 11, then section 8/Figure 17.",
+        "驴·基础线：先手算一次“上一参考动作+变化率×步长”，再比较从上次预测和从测量状态重新出发的差异；读图3/§4.4理解平均两条可行路线为何可能撞障碍，最后读§4.5/图6理解RL中替换actor而不替换算法。 / Foundation route: work through one Euler step, compare restarting from the predicted reference versus measured state, use Figure 3/4.4 to understand mode averaging, then section 4.5/Figure 6 for replacing the RL actor without replacing the algorithm.",
+        "核读正文§3–8及§9开头、图1–18图注与作者代码README；未逐式审计附录、安装依赖、运行代码或复现。 / Read sections 3–8, the opening of section 9, captions 1–18 and the code README; no exhaustive appendix audit, installation, execution or replication.",
+        "初学者自检：能否说明目标动作与测量状态的区别、为什么不能只比较一轮训练、为何平滑性只在成功片段测量会有选择偏差？先回答这三问，再看更大模型结果。 / Self-check: distinguish commanded from measured states, explain why one-epoch comparisons are insufficient, and identify selection bias in smoothness measured on successful episodes before scaling up.",
+        "代码目录与训练/评估说明可见；README列main、real-r1lite和vla-pi05范围，未核验所有分支或权重；独立数据和视频链接保持null。 / Source tree and training/evaluation instructions are visible; README lists main, real-r1lite and vla-pi05, but not all branches or weights were verified; standalone data/video links remain null."
+      ],
+      "summaryEn": "Independently predicted action chunks can jump at their boundaries. ODE Policy learns an action vector field over physical time and integrates each action from the previous one, using short-path losses, start perturbations and a diversity head. The authors report 79.2% LIBERO success after one epoch versus at most 43.2% for six baselines, and test 14 real-robot tasks. Benefits center on early learning and smoothness; changed cameras remain difficult, and continuous commands do not guarantee closed-loop safety.",
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/ode-policy-figure1.png",
+          "sha256": "7c73df2632e062f4f487cf5ee8fcde3cd0c1dbf9c468de32735f58668e641cc2",
+          "width": 785,
+          "height": 497,
+          "sourceUrl": "https://arxiv.org/html/2611.01729v1/teaser.png",
+          "evidenceUrl": "https://arxiv.org/html/2611.01729v1",
+          "verifiedAt": "2026-11-06",
+          "credit": "Jindou Jia et al. · Figure 1",
+          "rights": "Original author copyright; arXiv non-exclusive licence is not a general reuse licence. Attributed scholarly thumbnail only; no additional permission claimed.",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "light",
+          "altZh": "ODE Policy原图1：单臂、双臂、灵巧手、运动与移动操作实验",
+          "altEn": "ODE Policy original Figure 1: unimanual, bimanual, dexterous, locomotion and loco-manipulation experiments"
+        },
+        "figureNote": "已目视核验原图1全部面板；保留785×497原始像素，无生成或科学内容编辑。 / Visually checked all panels of original Figure 1, preserving original pixels without generated or scientific edits.",
+        "institutions": [
+          {
+            "name": "Nanyang Technological University",
+            "institutionId": "pending-nanyang-technological-university",
+            "institutionType": "university",
+            "markType": "emblem",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-88bb77c7989b3a5d.svg",
+              "sha256": "88bb77c7989b3a5d875f60b368179fb7f5dedcdb10b4643d121cdd57eb68d0b6",
+              "width": 260,
+              "height": 330,
+              "sourceUrl": "https://www3.ntu.edu.sg/CorpComms2/NTU%20Quick%20Brand%20Guide%202018.pdf",
+              "evidenceUrl": "https://www.ntu.edu.sg/about-us/history/coat-of-arms",
+              "verifiedAt": "2026-11-03",
+              "credit": "NTU Singapore official-source complete shield",
+              "rights": "Institutional trademark and copyright remain with their owners. No separate permission obtained, no open licence or legal clearance claimed. Use solely as a small descriptive paper-affiliation thumbnail, not endorsement; preserve the complete mark, geometry and native colors. NTU current Terms of Use requires prior written consent for its name, logo and crest. 2018 master-logo instructions require the master logo to remain unaltered and specify minimum 106px digital width and crest-based clear space. This is source verification, not a permission grant. Policy: https://www.ntu.edu.sg/legal/terms-of-use",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "南洋理工大学官方来源完整盾徽",
+              "altEn": "NTU Singapore official-source complete shield"
+            },
+            "authorNames": [
+              "Jindou Jia",
+              "Jingliang Li",
+              "Kuangji Zuo",
+              "Tuo An",
+              "Yuxuan Hu",
+              "Mengfei Zhao",
+              "Bofan Lyu",
+              "Jiaqi Bai",
+              "Daoyuan Zhu",
+              "Hengyu Dai",
+              "Junpeng Zhang",
+              "Jianfei Yang"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2611.01729v1",
+                "claim": "论文首页全体作者署名MARS Lab, Nanyang Technological University。 / Paper header affiliates all authors with MARS Lab, NTU.",
+                "checkedAt": "2026-11-06"
+              }
+            ],
+            "note": "复用机构库已核验完整盾徽与原权利说明；仅论文署名，不代表背书或新增授权。 / Reuse the registry-verified complete shield and original rights statement for affiliation only, not endorsement or new permission."
+          }
+        ],
+        "authors": []
+      }
+    }
+  ]
+}

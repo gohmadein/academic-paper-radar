@@ -6393,6 +6393,50 @@
       "alphaStatus": "not-applicable",
       "logo": null,
       "note": "首页署IUF；已检索官方品牌资料但未取得可核验独立标识，保留名称。"
+    },
+    {
+      "id": "pending-hasso-plattner-institute",
+      "officialName": "Hasso Plattner Institute",
+      "aliases": [],
+      "institutionType": "research-institute",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "已查官方站与imprint；复制图示材料要求预先同意，未取得，不复制标识、不以Potsdam图徽替代。 官方入口：https://hpi.de/en/imprint/"
+    },
+    {
+      "id": "pending-university-of-potsdam",
+      "officialName": "University of Potsdam",
+      "aliases": [],
+      "institutionType": "university",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "已查官方设计页和logo入口；详细设计资源指向内网，未完成可公开使用图徽的像素/许可核验，保留名称。 官方入口：https://www.uni-potsdam.de/en/presse/press/information-for-employees/corporate-design"
+    },
+    {
+      "id": "pending-portland-state-university",
+      "officialName": "Portland State University",
+      "aliases": [],
+      "institutionType": "university",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "已查官方标识指南；独立logomark限特定用途，素材下载需学校登录，未取得适用素材，保留名称。 官方入口：https://www.pdx.edu/university-communications/tools-and-templates/university-logos"
+    },
+    {
+      "id": "pending-cardiff-university",
+      "officialName": "Cardiff University",
+      "aliases": [],
+      "institutionType": "university",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "已查官网与官方数字身份新闻入口；现主品牌为双语文字标识，旧数字C介绍入口重定向至新闻列表，未得到可核实完整透明紧凑图形。保留名称，不用字标缩图或猜测校徽。 官方入口：https://www.cardiff.ac.uk/"
     }
   ]
 }
