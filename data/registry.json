@@ -26,6 +26,54 @@
       ]
     },
     {
+      "id": "arxiv-2505-20683",
+      "aliases": [
+        "arxiv:2505.20683",
+        "doi:10.48786/edbt.2026.05"
+      ],
+      "identity": {
+        "doi": "10.48786/edbt.2026.05",
+        "arxiv": "2505.20683",
+        "other": null
+      },
+      "firstSeen": "2026-11-07",
+      "lastSeen": "2026-11-07",
+      "appearances": [
+        {
+          "date": "2026-11-07",
+          "profiles": [
+            "li"
+          ],
+          "classic": false,
+          "novelty": "older-discovery"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2510-02298",
+      "aliases": [
+        "arxiv:2510.02298",
+        "doi:10.1109/lra.2026.3709635"
+      ],
+      "identity": {
+        "doi": "10.1109/lra.2026.3709635",
+        "arxiv": "2510.02298",
+        "other": null
+      },
+      "firstSeen": "2026-11-07",
+      "lastSeen": "2026-11-07",
+      "appearances": [
+        {
+          "date": "2026-11-07",
+          "profiles": [
+            "xun"
+          ],
+          "classic": false,
+          "novelty": "older-discovery"
+        }
+      ]
+    },
+    {
       "id": "arxiv-2602-15010",
       "aliases": [
         "arxiv:2602.15010",
@@ -147,6 +195,76 @@
       ]
     },
     {
+      "id": "arxiv-2606-12406",
+      "aliases": [
+        "arxiv:2606.12406"
+      ],
+      "identity": {
+        "doi": null,
+        "arxiv": "2606.12406",
+        "other": null
+      },
+      "firstSeen": "2026-11-07",
+      "lastSeen": "2026-11-07",
+      "appearances": [
+        {
+          "date": "2026-11-07",
+          "profiles": [
+            "xun"
+          ],
+          "classic": false,
+          "novelty": "older-discovery"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2606-19590",
+      "aliases": [
+        "arxiv:2606.19590",
+        "doi:10.1109/lra.2026.3747586"
+      ],
+      "identity": {
+        "doi": "10.1109/lra.2026.3747586",
+        "arxiv": "2606.19590",
+        "other": null
+      },
+      "firstSeen": "2026-11-07",
+      "lastSeen": "2026-11-07",
+      "appearances": [
+        {
+          "date": "2026-11-07",
+          "profiles": [
+            "xun"
+          ],
+          "classic": false,
+          "novelty": "older-discovery"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2606-26428",
+      "aliases": [
+        "arxiv:2606.26428"
+      ],
+      "identity": {
+        "doi": null,
+        "arxiv": "2606.26428",
+        "other": null
+      },
+      "firstSeen": "2026-11-07",
+      "lastSeen": "2026-11-07",
+      "appearances": [
+        {
+          "date": "2026-11-07",
+          "profiles": [
+            "xun"
+          ],
+          "classic": false,
+          "novelty": "older-discovery"
+        }
+      ]
+    },
+    {
       "id": "arxiv-2607-11734",
       "aliases": [
         "arxiv:2607.11734"
@@ -161,6 +279,29 @@
       "appearances": [
         {
           "date": "2026-11-03",
+          "profiles": [
+            "xun"
+          ],
+          "classic": false,
+          "novelty": "older-discovery"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2607-15275",
+      "aliases": [
+        "arxiv:2607.15275"
+      ],
+      "identity": {
+        "doi": null,
+        "arxiv": "2607.15275",
+        "other": null
+      },
+      "firstSeen": "2026-11-07",
+      "lastSeen": "2026-11-07",
+      "appearances": [
+        {
+          "date": "2026-11-07",
           "profiles": [
             "xun"
           ],
@@ -791,6 +932,29 @@
           "date": "2026-11-01",
           "profiles": [
             "xun"
+          ],
+          "classic": false,
+          "novelty": "recent"
+        }
+      ]
+    },
+    {
+      "id": "arxiv-2610-40828",
+      "aliases": [
+        "arxiv:2610.40828"
+      ],
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.40828",
+        "other": null
+      },
+      "firstSeen": "2026-11-07",
+      "lastSeen": "2026-11-07",
+      "appearances": [
+        {
+          "date": "2026-11-07",
+          "profiles": [
+            "lv"
           ],
           "classic": false,
           "novelty": "recent"

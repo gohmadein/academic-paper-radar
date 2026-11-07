@@ -6437,6 +6437,75 @@
       "alphaStatus": "not-applicable",
       "logo": null,
       "note": "已查官网与官方数字身份新闻入口；现主品牌为双语文字标识，旧数字C介绍入口重定向至新闻列表，未得到可核实完整透明紧凑图形。保留名称，不用字标缩图或猜测校徽。 官方入口：https://www.cardiff.ac.uk/"
+    },
+    {
+      "id": "pending-illinois-institute-of-technology",
+      "officialName": "Illinois Institute of Technology",
+      "aliases": [],
+      "institutionType": "university",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "已查官方logo入口；搜索摘要要求其他用途书面许可，打开页面返回403，未取得许可或可核验紧凑原图，保留名称。 / Official logo entry searched; indexed guidance requires permission for other uses, direct access returned 403. No permission or verified compact asset obtained; retain name. 核验：2026-11-06 https://www.iit.edu/marketing-communications/resources/logos"
+    },
+    {
+      "id": "pending-oracle-corporation",
+      "officialName": "Oracle Corporation",
+      "aliases": [],
+      "institutionType": "company",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "官方明确Oracle logo及O Tag需书面许可，下载需账号；未获许可，不下载、不以Java或MySQL标志替代。 / Oracle logo and O Tag require written authorization and downloads require an account; no permission obtained, no substitute marks used. 核验：2026-11-06 https://www.oracle.com/legal/logos/"
+    },
+    {
+      "id": "pending-shanghai-innovation-institute",
+      "officialName": "Shanghai Innovation Institute",
+      "aliases": [],
+      "institutionType": "research-institute",
+      "markType": "none",
+      "status": "needs-verification",
+      "logo": null,
+      "alphaStatus": "not-applicable",
+      "note": "本轮已检索并核对官方机构入口 https://www.sii.edu.cn/ 与英文页版权名称确认机构身份；未取得完成像素、尺寸与权利核验的独立紧凑图徽。保留论文确认的名称，无新增图像。",
+      "evidence": [
+        {
+          "url": "https://www.sii.edu.cn/",
+          "claim": "本轮官方机构标识预检检索入口。",
+          "checkedAt": "2026-11-07"
+        }
+      ]
+    },
+    {
+      "id": "pending-noematrix-ltd",
+      "officialName": "Noematrix Ltd.",
+      "aliases": [],
+      "institutionType": "company",
+      "markType": "none",
+      "status": "needs-verification",
+      "logo": null,
+      "alphaStatus": "not-applicable",
+      "note": "本轮已检索并核对官方机构入口 https://www.noematrix.ai/en/about 与官网；未取得完成像素、尺寸与权利核验的独立紧凑图形，不将文字字标裁切作图徽。保留论文确认的名称，无新增图像。",
+      "evidence": [
+        {
+          "url": "https://www.noematrix.ai/en/about",
+          "claim": "本轮官方机构标识预检检索入口。",
+          "checkedAt": "2026-11-07"
+        }
+      ]
+    },
+    {
+      "id": "pending-analog-devices-inc",
+      "officialName": "Analog Devices, Inc.",
+      "aliases": [],
+      "institutionType": "company",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "新机构等待官方标识与使用条件核验；不接受未经核验的输入图片。"
     }
   ]
 }

@@ -1,0 +1,1344 @@
+{
+  "version": 2,
+  "date": "2026-11-07",
+  "title": "2026-11-07 零域论文精选",
+  "demo": false,
+  "timezone": "Asia/Shanghai",
+  "issueNote": "本期7篇：迅3篇正式会议论文、2篇正式期刊论文，李与驴各1篇。仅列实际检查来源，未穷尽全目录；较早首次发现明确标注，不宣称独立复现。",
+  "coverage": {
+    "checkedSources": [
+      "Ontop官方文档与项目入口",
+      "UIC Database Group论文列表",
+      "EDBT 2026 OpenProceedings正式论文",
+      "arXiv 2505.20683摘要与扩展全文",
+      "IITDBGroup/IMP_EDBT26 README",
+      "CoRL 2026官方录用HTML全部Oral条目及历史去重 / All CoRL oral entries in official HTML and archive deduplication",
+      "近期RA-L检索、IEEE出版记录、作者机构接受稿；T2R-Swarm因完整作者/署名未核验而暂缓 / Recent RA-L search, IEEE records and institutional accepted manuscripts; T2R-Swarm deferred for incomplete author/affiliation verification",
+      "五篇正文指定段落、项目及机构标识库 / Specified body sections, project pages and institution registry",
+      "arXiv recent robot manipulation search",
+      "arXiv 2610.40828 HTML/PDF/abstract",
+      "arXiv 2610.41336 HTML candidate",
+      "current GitHub data/registry.json",
+      "Analog Devices official media/logo policy"
+    ],
+    "limitations": [
+      "李仅入选1篇较早正式论文，未穷尽cs.DB/cs.LO或全部会议期刊；不凑数。",
+      "非全源扫描；三篇会议均较早首次发现，精确录用日未知。 / Not an exhaustive source scan; conference papers are older first discoveries with unknown acceptance dates.",
+      "两篇期刊中一篇仅确证录用，在线出版日期未知；不以预印本修订日期冒充正式出版。 / One journal entry is verified accepted with unknown online publication date; preprint revisions are not formal publication dates.",
+      "本轮原图未完成素材核验，暂不嵌图；未执行或复现任何代码。 / Figures are not embedded because asset verification is incomplete; no code executed or replicated.",
+      "驴仅精选1篇；未穷尽全部来源。"
+    ]
+  },
+  "papers": [
+    {
+      "id": "arxiv-2606-12406",
+      "title": "FACTR 2：从电机电流估计外力，并重采样关键接触片段",
+      "titleEn": "FACTR 2: Learning External Force Sensing for Commodity Robot Arms Improves Policy Learning",
+      "authors": [
+        "Steven Oh",
+        "Jason Jingzhou Liu",
+        "Tony Tao",
+        "Philip Han",
+        "Kenneth Shaw",
+        "Satoshi Funabashi",
+        "Ruslan Salakhutdinov",
+        "Deepak Pathak"
+      ],
+      "year": 2026,
+      "venue": "CoRL 2026 · Oral O6（已录用 / accepted）",
+      "tags": [
+        "机器人学习"
+      ],
+      "summary": "NEXT用自由运动数据学习内部力矩，再从测量力矩中减去预测值得到外力矩。FIRST据此增加行为克隆中接触前与接触片段的采样权重。作者报告五项长程任务的任务进度较既有力感知策略提高超过17%；这不是成功率百分点。",
+      "summaryEn": "NEXT learns internal torque from free-motion data and subtracts it from measured torque to estimate external torque. FIRST then up-samples pre-contact and contact segments during behavior cloning. The authors report over 17% higher task progress on five long-horizon tasks than prior force-aware policies, not a success-rate percentage-point gain.",
+      "whySelected": "较早论文·首次发现；正式出处单独核验，不将预印本修订日当作录用或出版日。 / Older paper, first discovery; formal venue checked independently, without treating preprint revisions as acceptance/publication dates.",
+      "sources": [
+        {
+          "label": "原文 / Full text",
+          "url": "https://arxiv.org/html/2606.12406v1"
+        },
+        {
+          "label": "正式出处证据 / Formal venue evidence",
+          "url": "https://2026.corl.org/program/accepted-papers"
+        },
+        {
+          "label": "作者项目 / Author project",
+          "url": "https://jasonjzliu.com/factr2/"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "建议现在读方法与局限，对照主张和实际验证范围。 / Read methods and limitations now, checking claims against evaluation scope.",
+          "relation": "连接机器人学习、部署可靠性与控制条件；重点检查实际任务而非模型标签。 / Connects robot learning, deployment reliability and control assumptions; prioritize actual tasks over model labels.",
+          "prerequisites": [
+            "行为克隆与强化学习 / Behavior cloning and reinforcement learning",
+            "闭环反馈与实验指标 / Closed-loop feedback and evaluation metrics"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2606.12406",
+        "other": null
+      },
+      "publicationStatus": "accepted",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-07",
+      "verifiedAt": "2026-11-07",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "formalPublication": {
+        "type": "conference",
+        "evidenceUrl": "https://2026.corl.org/program/accepted-papers"
+      },
+      "links": {
+        "code": null,
+        "project": "https://jasonjzliu.com/factr2/",
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "电机力矩常数不准时，绝对力矩尺度仍需外部传感器标定；跨机械臂可能需重训。 / An inaccurate motor torque constant requires external calibration for absolute scale; other arms may require retraining."
+      ],
+      "assumptions": [
+        "可读取关节状态与电流，并采集无接触运动。 / Requires joint state/current access and free-motion data."
+      ],
+      "evidence": [
+        {
+          "url": "https://2026.corl.org/program/accepted-papers",
+          "claim": "正式会议录用及Oral身份。 / Formal conference acceptance and oral presentation.",
+          "checkedAt": "2026-11-07"
+        },
+        {
+          "url": "https://arxiv.org/html/2606.12406v1",
+          "claim": "核读摘要、指定正文与局限，范围见研究记录。 / Read abstract and specified body sections and limitations; see research notes for scope.",
+          "checkedAt": "2026-11-07"
+        },
+        {
+          "url": "https://jasonjzliu.com/factr2/",
+          "claim": "已打开作者项目，题名及方法与原文匹配；未运行演示。 / Opened the author project and matched title/method to the paper; demos not executed.",
+          "checkedAt": "2026-11-07"
+        }
+      ],
+      "researchNotes": [
+        "核读摘要、作者项目NEXT/FIRST解释和正文§9。建议先图1理解两部分，再§9检查标定边界；未完整审计实验与附录，未运行代码。 / Read the abstract, project NEXT/FIRST explanations and section 9. Start with Figure 1, then section 9 for calibration limits; no complete experimental/appendix audit or execution.",
+        "官方CoRL原始HTML核实Oral；精确录用日期未公开核实，首次发现按较早论文标注，不称近期首次发表。 / Official CoRL raw HTML verifies oral status; exact acceptance date is unverified, so this is an older first discovery, not a recent first publication."
+      ],
+      "visuals": {
+        "mainFigure": null,
+        "figureNote": "本轮未完成原图字节、像素与转载条件核验，不复制、不生成替代科学图。 / Original figure bytes, pixels and reuse conditions were not fully verified; no copy or synthetic substitute.",
+        "institutions": [
+          {
+            "name": "Carnegie Mellon University",
+            "institutionId": "pending-carnegie-mellon-university",
+            "institutionType": "university",
+            "markType": "emblem",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-733bc43cbef4fab8.png",
+              "sha256": "733bc43cbef4fab8fccfe56d00370bc6e33cae865f961281bf740c91707b5657",
+              "width": 570,
+              "height": 615,
+              "sourceUrl": "https://live-cmu-brand.pantheonsite.io/sites/default/files/cmu-brand-files/inline-images/Router%20Grid%20Image%20%2889%29_0.png",
+              "evidenceUrl": "https://brand.cmu.edu/visual-identity/carnegie-mellon-trademarks/university-seal",
+              "verifiedAt": "2026-11-03",
+              "credit": "Carnegie Mellon University · official-source compact identity mark",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. CMU states specific third-party commercial and noncommercial uses need a licence and written approval. Seal guidance requests upright proportional use, a ring-width safe zone, and approval for lockups. No such licence/approval or full-size guideline compliance is asserted. Policy: https://www.cmu.edu/policies/administrative-and-governance/use-carnegie-mellon-trademarks.html",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "light",
+              "altZh": "Carnegie Mellon University 官方红色完整校徽，保留原白底",
+              "altEn": "Complete official red Carnegie Mellon University seal with its native white field"
+            },
+            "authorNames": [
+              "Steven Oh",
+              "Jason Jingzhou Liu",
+              "Tony Tao",
+              "Philip Han",
+              "Kenneth Shaw",
+              "Ruslan Salakhutdinov",
+              "Deepak Pathak"
+            ],
+            "evidence": [
+              {
+                "url": "https://jasonjzliu.com/factr2/",
+                "claim": "该论文署名机构及作者对应。 / Paper-specific affiliation and author mapping.",
+                "checkedAt": "2026-11-07"
+              }
+            ],
+            "note": "复用机构库原始标识及权利说明，仅用于论文署名。 / Reuse the registry mark and rights statement for paper affiliation only."
+          },
+          {
+            "name": "Waseda University",
+            "institutionId": "pending-waseda-university",
+            "institutionType": "university",
+            "markType": "compact-symbol",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-b68c568cdd5e5038.png",
+              "sha256": "b68c568cdd5e50387fcd164cb69547eeae1a656b5f3780f64898d3cbb034c132",
+              "width": 63,
+              "height": 63,
+              "sourceUrl": "https://wnpspt.waseda.jp/teacher/wac-guide/wp-content/uploads/sites/25/2026/10/waseda_symbol.png",
+              "evidenceUrl": "https://wnpspt.waseda.jp/teacher/wac-guide/contracts/",
+              "verifiedAt": "2026-11-03",
+              "credit": "Waseda University · source-verified institutional symbol",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. University policy prohibits public use of these trademarks without express written permission; none has been obtained or asserted. Policy: https://www.waseda.jp/top/en/about/work/logos",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "light",
+              "altZh": "Waseda University 完整校徽或图形标志",
+              "altEn": "Complete institutional symbol of Waseda University"
+            },
+            "authorNames": [
+              "Steven Oh",
+              "Satoshi Funabashi"
+            ],
+            "evidence": [
+              {
+                "url": "https://jasonjzliu.com/factr2/",
+                "claim": "该论文署名机构及作者对应。 / Paper-specific affiliation and author mapping.",
+                "checkedAt": "2026-11-07"
+              }
+            ],
+            "note": "复用机构库原始标识及权利说明，仅用于论文署名。 / Reuse the registry mark and rights statement for paper affiliation only."
+          }
+        ],
+        "authors": []
+      }
+    },
+    {
+      "id": "arxiv-2607-15275",
+      "title": "RoboTTT：用快速权重压缩长历史，而非堆叠历史画面",
+      "titleEn": "RoboTTT: Context Scaling for Robot Policies",
+      "authors": [
+        "Yunfan Jiang",
+        "Yevgen Chebotar",
+        "Ruijie Zheng",
+        "Fengyuan Hu",
+        "Yunhao Ge",
+        "Jimmy Wu",
+        "Tianyuan Dai",
+        "Scott Reed",
+        "Li Fei-Fei",
+        "Yuke Zhu",
+        "Linxi \"Jim\" Fan"
+      ],
+      "year": 2026,
+      "venue": "CoRL 2026 · Oral O1（已录用 / accepted）",
+      "tags": [
+        "机器人学习"
+      ],
+      "summary": "RoboTTT将视觉运动历史写入测试时更新的快速权重，并将训练上下文扩展到8K步。在三项双臂装配任务中，作者报告平均任务完成度79%，单步基线42%；这是完成度评分。五分钟Gear Bot任务完整成功仅2/10，不能把长程演示理解成稳定解决。",
+      "summaryEn": "RoboTTT stores visuomotor history in fast weights updated at test time and scales training context to 8K steps. Across three bimanual assembly tasks, the authors report 79% average completion score versus 42% for the single-step baseline. Gear Bot fully succeeds in only 2/10 trials, so the five-minute demonstration does not establish reliable task mastery.",
+      "whySelected": "较早论文·首次发现；正式出处单独核验，不将预印本修订日当作录用或出版日。 / Older paper, first discovery; formal venue checked independently, without treating preprint revisions as acceptance/publication dates.",
+      "sources": [
+        {
+          "label": "原文 / Full text",
+          "url": "https://arxiv.org/html/2607.15275v1"
+        },
+        {
+          "label": "正式出处证据 / Formal venue evidence",
+          "url": "https://2026.corl.org/program/accepted-papers"
+        },
+        {
+          "label": "作者项目 / Author project",
+          "url": "https://research.nvidia.com/labs/gear/robottt/"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "建议现在读方法与局限，对照主张和实际验证范围。 / Read methods and limitations now, checking claims against evaluation scope.",
+          "relation": "连接机器人学习、部署可靠性与控制条件；重点检查实际任务而非模型标签。 / Connects robot learning, deployment reliability and control assumptions; prioritize actual tasks over model labels.",
+          "prerequisites": [
+            "行为克隆与强化学习 / Behavior cloning and reinforcement learning",
+            "闭环反馈与实验指标 / Closed-loop feedback and evaluation metrics"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2607.15275",
+        "other": null
+      },
+      "publicationStatus": "accepted",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-07",
+      "verifiedAt": "2026-11-07",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "formalPublication": {
+        "type": "conference",
+        "evidenceUrl": "https://2026.corl.org/program/accepted-papers"
+      },
+      "links": {
+        "code": null,
+        "project": "https://research.nvidia.com/labs/gear/robottt/",
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "更长训练上下文增加训练成本，部署仍有未解决失败模式。 / Longer training context costs more; deployment failure modes remain.",
+        "主要实验仅三项双臂装配，20次/任务，Gear Bot为10次。 / Main evaluation covers three bimanual assemblies, 20 trials each except 10 for Gear Bot."
+      ],
+      "assumptions": [
+        "依赖四相机YAM双臂和对应任务数据，不能据此断言跨平台通用。 / Uses a four-camera YAM bimanual setup and task data; cross-platform generality is not established."
+      ],
+      "evidence": [
+        {
+          "url": "https://2026.corl.org/program/accepted-papers",
+          "claim": "正式会议录用及Oral身份。 / Formal conference acceptance and oral presentation.",
+          "checkedAt": "2026-11-07"
+        },
+        {
+          "url": "https://arxiv.org/html/2607.15275v1",
+          "claim": "核读摘要、指定正文与局限，范围见研究记录。 / Read abstract and specified body sections and limitations; see research notes for scope.",
+          "checkedAt": "2026-11-07"
+        },
+        {
+          "url": "https://research.nvidia.com/labs/gear/robottt/",
+          "claim": "已打开作者项目，题名及方法与原文匹配；未运行演示。 / Opened the author project and matched title/method to the paper; demos not executed.",
+          "checkedAt": "2026-11-07"
+        }
+      ],
+      "researchNotes": [
+        "核读正文§4实验设置、表1及§6局限；先分清完成度与完整成功，再看图8上下文扩展。未审计全部训练实现及附录，未复现。 / Read section 4 setup/Table 1 and section 6. Distinguish completion score from full success before Figure 8 context scaling; no complete implementation/appendix audit or replication.",
+        "官方CoRL原始HTML核实Oral；精确录用日期未公开核实，首次发现按较早论文标注，不称近期首次发表。 / Official CoRL raw HTML verifies oral status; exact acceptance date is unverified, so this is an older first discovery, not a recent first publication."
+      ],
+      "visuals": {
+        "mainFigure": null,
+        "figureNote": "本轮未完成原图字节、像素与转载条件核验，不复制、不生成替代科学图。 / Original figure bytes, pixels and reuse conditions were not fully verified; no copy or synthetic substitute.",
+        "institutions": [
+          {
+            "name": "NVIDIA",
+            "institutionId": "pending-nvidia",
+            "institutionType": "company",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Yunfan Jiang",
+              "Yevgen Chebotar",
+              "Ruijie Zheng",
+              "Fengyuan Hu",
+              "Yunhao Ge",
+              "Jimmy Wu",
+              "Tianyuan Dai",
+              "Scott Reed",
+              "Yuke Zhu",
+              "Linxi \"Jim\" Fan"
+            ],
+            "evidence": [
+              {
+                "url": "https://research.nvidia.com/labs/gear/robottt/",
+                "claim": "该论文署名机构及作者对应。 / Paper-specific affiliation and author mapping.",
+                "checkedAt": "2026-11-07"
+              },
+              {
+                "url": "https://www.nvidia.com/en-gb/about-nvidia/legal-info/logo-brand-usage/",
+                "claim": "本轮机构标识预检入口。 / Institution-mark preflight source checked this run.",
+                "checkedAt": "2026-11-07"
+              }
+            ],
+            "note": "已查官方品牌/机构入口；未完成可用于紧凑展示的独立图形、像素及权利核验，保留名称，不用母机构或字标替代。 / Checked official brand/institution sources; no independently verified compact mark with checked pixels and rights, so retain text without substitution."
+          },
+          {
+            "name": "Stanford University",
+            "institutionId": "pending-stanford-university",
+            "institutionType": "university",
+            "markType": "compact-symbol",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-2ceebac173ad7d21.png",
+              "sha256": "2ceebac173ad7d219be7f061661b6d9118efe9080e696b0add9a563e4cfd8294",
+              "width": 400,
+              "height": 400,
+              "sourceUrl": "https://identity.stanford.edu/wp-content/uploads/sites/3/2020/07/block-s-right.png",
+              "evidenceUrl": "https://identity.stanford.edu/visual-identity/stanford-logos/block-s/",
+              "verifiedAt": "2026-11-03",
+              "credit": "Stanford University · official complete mark",
+              "rights": "Official institutional mark; trademark/copyright retained by its owner. Public-source verification is not a blanket reuse licence or separate permission. For factual non-commercial paper-affiliation identification only, not endorsement. Preserve the complete mark, its native colours, aspect ratio and clear space; review linked university guidance.",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "altZh": "斯坦福大学官方红色 S 与绿树符号",
+              "altEn": "Stanford University official Block S with Tree"
+            },
+            "authorNames": [
+              "Yunfan Jiang",
+              "Li Fei-Fei"
+            ],
+            "evidence": [
+              {
+                "url": "https://research.nvidia.com/labs/gear/robottt/",
+                "claim": "该论文署名机构及作者对应。 / Paper-specific affiliation and author mapping.",
+                "checkedAt": "2026-11-07"
+              }
+            ],
+            "note": "复用机构库原始标识及权利说明，仅用于论文署名。 / Reuse the registry mark and rights statement for paper affiliation only."
+          },
+          {
+            "name": "The University of Texas at Austin",
+            "institutionId": "pending-the-university-of-texas-at-austin",
+            "institutionType": "university",
+            "markType": "emblem",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-58f010a3370785fb.png",
+              "sha256": "58f010a3370785fb9ac9f88e12cb7275312dfdf2034f1d10d04de83d575507a1",
+              "width": 192,
+              "height": 192,
+              "sourceUrl": "https://umac.utexas.edu/wp-content/uploads/2024/09/cropped-cropped-cropped-favicon-192x192.png",
+              "evidenceUrl": "https://umac.utexas.edu/brand-center/supporting-marks/",
+              "verifiedAt": "2026-11-03",
+              "credit": "The University of Texas at Austin · official-source compact identity mark",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. Official supporting-mark guidance requires prior written permission for relevant outside use. No such permission or exemption is claimed. Policy: https://umac.utexas.edu/brand-center/supporting-marks/",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "The University of Texas at Austin 官方完整图形标识",
+              "altEn": "Complete official compact mark of The University of Texas at Austin"
+            },
+            "authorNames": [
+              "Tianyuan Dai",
+              "Yuke Zhu"
+            ],
+            "evidence": [
+              {
+                "url": "https://research.nvidia.com/labs/gear/robottt/",
+                "claim": "该论文署名机构及作者对应。 / Paper-specific affiliation and author mapping.",
+                "checkedAt": "2026-11-07"
+              }
+            ],
+            "note": "复用机构库原始标识及权利说明，仅用于论文署名。 / Reuse the registry mark and rights statement for paper affiliation only."
+          }
+        ],
+        "authors": []
+      }
+    },
+    {
+      "id": "arxiv-2606-26428",
+      "title": "Play2Perfect：先学手内操作，再以稀疏奖励微调精密装配",
+      "titleEn": "Play2Perfect: What Matters in Dexterous Play Pretraining for Precise Assembly?",
+      "authors": [
+        "Tyler Ga Wei Lum",
+        "Kushal Kedia",
+        "C. Karen Liu",
+        "Jeannette Bohg"
+      ],
+      "year": 2026,
+      "venue": "CoRL 2026 · Oral O5（已录用 / accepted）",
+      "tags": [
+        "机器人学习"
+      ],
+      "summary": "Play2Perfect先在仿真中操纵多样物体学习通用先验，再按CAD装配目标微调。研究强调真正用手指重定向物体，而非固定抓握移动。作者报告0.5毫米间隙插入成功率60%。任务排序、选件与目标姿态仍由外部指定，并非端到端自主装配系统。",
+      "summaryEn": "Play2Perfect learns a manipulation prior with diverse objects in simulation and finetunes it on CAD-defined assembly goals. The study emphasizes finger-driven in-hand reorientation rather than fixed-grasp transport. The authors report 60% success at 0.5 mm insertion clearance. Sequencing, part selection and goal poses remain externally specified; this is not an end-to-end autonomous assembly system.",
+      "whySelected": "较早论文·首次发现；正式出处单独核验，不将预印本修订日当作录用或出版日。 / Older paper, first discovery; formal venue checked independently, without treating preprint revisions as acceptance/publication dates.",
+      "sources": [
+        {
+          "label": "原文 / Full text",
+          "url": "https://arxiv.org/html/2606.26428v2"
+        },
+        {
+          "label": "正式出处证据 / Formal venue evidence",
+          "url": "https://2026.corl.org/program/accepted-papers"
+        },
+        {
+          "label": "作者项目 / Author project",
+          "url": "https://play2perfect.github.io/"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "建议现在读方法与局限，对照主张和实际验证范围。 / Read methods and limitations now, checking claims against evaluation scope.",
+          "relation": "连接机器人学习、部署可靠性与控制条件；重点检查实际任务而非模型标签。 / Connects robot learning, deployment reliability and control assumptions; prioritize actual tasks over model labels.",
+          "prerequisites": [
+            "行为克隆与强化学习 / Behavior cloning and reinforcement learning",
+            "闭环反馈与实验指标 / Closed-loop feedback and evaluation metrics"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2606.26428",
+        "other": null
+      },
+      "publicationStatus": "accepted",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-07",
+      "verifiedAt": "2026-11-07",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "formalPublication": {
+        "type": "conference",
+        "evidenceUrl": "https://2026.corl.org/program/accepted-papers"
+      },
+      "links": {
+        "code": null,
+        "project": "https://play2perfect.github.io/",
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "按任务或基准族微调；遮挡、快速运动会破坏位姿估计，策略不直接观察夹具或周围几何。 / Finetuned per task/family; occlusion and fast motion challenge pose estimates, and policies do not directly observe fixtures or surrounding geometry."
+      ],
+      "assumptions": [
+        "需要CAD模型和物体/夹具位姿追踪，使用仿真随机化。 / Requires CAD models and object/fixture pose tracking, with simulation randomization."
+      ],
+      "evidence": [
+        {
+          "url": "https://2026.corl.org/program/accepted-papers",
+          "claim": "正式会议录用及Oral身份。 / Formal conference acceptance and oral presentation.",
+          "checkedAt": "2026-11-07"
+        },
+        {
+          "url": "https://arxiv.org/html/2606.26428v2",
+          "claim": "核读摘要、指定正文与局限，范围见研究记录。 / Read abstract and specified body sections and limitations; see research notes for scope.",
+          "checkedAt": "2026-11-07"
+        },
+        {
+          "url": "https://play2perfect.github.io/",
+          "claim": "已打开作者项目，题名及方法与原文匹配；未运行演示。 / Opened the author project and matched title/method to the paper; demos not executed.",
+          "checkedAt": "2026-11-07"
+        }
+      ],
+      "researchNotes": [
+        "核读§3方法与§5局限、图1–3图注；阅读顺序为图1→§3→§5。实验主结论取摘要，未逐项审计统计或附录，未运行代码。 / Read section 3, section 5 and captions 1–3; follow Figure 1, section 3, then section 5. Main result comes from the abstract; no exhaustive statistical/appendix audit or execution.",
+        "正文首页可核实Stanford和Cornell，HTML未可靠保留逐作者上标，作者对应留空而不推断。 / The header confirms Stanford and Cornell, but HTML does not reliably preserve per-author superscripts; mappings are left empty rather than inferred.",
+        "官方CoRL原始HTML核实Oral；精确录用日期未公开核实，首次发现按较早论文标注，不称近期首次发表。 / Official CoRL raw HTML verifies oral status; exact acceptance date is unverified, so this is an older first discovery, not a recent first publication."
+      ],
+      "visuals": {
+        "mainFigure": null,
+        "figureNote": "本轮未完成原图字节、像素与转载条件核验，不复制、不生成替代科学图。 / Original figure bytes, pixels and reuse conditions were not fully verified; no copy or synthetic substitute.",
+        "institutions": [
+          {
+            "name": "Stanford University",
+            "institutionId": "pending-stanford-university",
+            "institutionType": "university",
+            "markType": "compact-symbol",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-2ceebac173ad7d21.png",
+              "sha256": "2ceebac173ad7d219be7f061661b6d9118efe9080e696b0add9a563e4cfd8294",
+              "width": 400,
+              "height": 400,
+              "sourceUrl": "https://identity.stanford.edu/wp-content/uploads/sites/3/2020/07/block-s-right.png",
+              "evidenceUrl": "https://identity.stanford.edu/visual-identity/stanford-logos/block-s/",
+              "verifiedAt": "2026-11-03",
+              "credit": "Stanford University · official complete mark",
+              "rights": "Official institutional mark; trademark/copyright retained by its owner. Public-source verification is not a blanket reuse licence or separate permission. For factual non-commercial paper-affiliation identification only, not endorsement. Preserve the complete mark, its native colours, aspect ratio and clear space; review linked university guidance.",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "altZh": "斯坦福大学官方红色 S 与绿树符号",
+              "altEn": "Stanford University official Block S with Tree"
+            },
+            "authorNames": [],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2606.26428v2",
+                "claim": "该论文署名机构及作者对应。 / Paper-specific affiliation and author mapping.",
+                "checkedAt": "2026-11-07"
+              }
+            ],
+            "note": "复用机构库原始标识及权利说明，仅用于论文署名。 / Reuse the registry mark and rights statement for paper affiliation only."
+          },
+          {
+            "name": "Cornell University",
+            "institutionId": "pending-cornell-university",
+            "institutionType": "university",
+            "markType": "emblem",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-30a0cdf2f889c47e.svg",
+              "sha256": "30a0cdf2f889c47ef654bd7bf3193679ff6f3e3d41c1c60ff586a6a486569d9b",
+              "width": 614,
+              "height": 614,
+              "sourceUrl": "https://brand.cornell.edu/assets/images/downloads/logos/bold_cornell_seal/bold_cornell_seal.svg",
+              "evidenceUrl": "https://brand.cornell.edu/logos/",
+              "verifiedAt": "2026-11-03",
+              "credit": "Cornell University · official-source compact identity mark",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. Official Policy 4.10 limits use of university names and marks; no approval is claimed. The brand website supplies this exact bold standalone seal as a distinct asset. Policy: https://policy.cornell.edu/policy-library/use-cornells-name-logos-trademarks-and-insignias",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "Cornell University 官方独立图形标识",
+              "altEn": "Cornell University complete official compact identity mark"
+            },
+            "authorNames": [],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2606.26428v2",
+                "claim": "该论文署名机构及作者对应。 / Paper-specific affiliation and author mapping.",
+                "checkedAt": "2026-11-07"
+              }
+            ],
+            "note": "复用机构库原始标识及权利说明，仅用于论文署名。 / Reuse the registry mark and rights statement for paper affiliation only."
+          }
+        ],
+        "authors": []
+      }
+    },
+    {
+      "id": "arxiv-2606-19590",
+      "title": "安全主动故障诊断：用可微可达集选择辨别性控制",
+      "titleEn": "Safe, Real-Time Active Model Discrimination and Fault Diagnosis for Nonlinear Systems via Differentiable Reachability",
+      "authors": [
+        "Xinpei Ni",
+        "Melkior Ornik",
+        "Glen Chou",
+        "Samuel Coogan"
+      ],
+      "year": 2026,
+      "venue": "IEEE Robotics and Automation Letters · 2026（已录用 / accepted）",
+      "tags": [
+        "机器人",
+        "正式期刊"
+      ],
+      "summary": "该方法用区间外包逼近不同故障模型的可达输出，优化控制以减少模型间重叠。作者在仿真与真机案例报告50毫秒内找到辨别性输入。但实现中仅输入约束是硬约束，其余约束为软惩罚，代价归零才保证满足；“安全”不能脱离优化结果理解。",
+      "summaryEn": "The method overapproximates reachable outputs under candidate faults with intervals and optimizes controls to reduce overlap. The authors report finding discriminating inputs within 50 ms in simulation and hardware cases. Crucially, only input constraints are hard in the implementation; other constraints use soft penalties and are guaranteed only at zero cost. Safety claims must therefore be conditional on the optimization result.",
+      "whySelected": "较早论文·首次发现；正式出处单独核验，不将预印本修订日当作录用或出版日。 / Older paper, first discovery; formal venue checked independently, without treating preprint revisions as acceptance/publication dates.",
+      "sources": [
+        {
+          "label": "原文 / Full text",
+          "url": "https://mornik.web.illinois.edu/wp-content/uploads/NOCC26.pdf"
+        },
+        {
+          "label": "正式出处证据 / Formal venue evidence",
+          "url": "https://coogan.ece.gatech.edu/papers/ni2026safe.html"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "建议现在读方法与局限，对照主张和实际验证范围。 / Read methods and limitations now, checking claims against evaluation scope.",
+          "relation": "连接机器人学习、部署可靠性与控制条件；重点检查实际任务而非模型标签。 / Connects robot learning, deployment reliability and control assumptions; prioritize actual tasks over model labels.",
+          "prerequisites": [
+            "行为克隆与强化学习 / Behavior cloning and reinforcement learning",
+            "闭环反馈与实验指标 / Closed-loop feedback and evaluation metrics"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": "10.1109/lra.2026.3747586",
+        "arxiv": "2606.19590",
+        "other": null
+      },
+      "publicationStatus": "accepted",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-07",
+      "verifiedAt": "2026-11-07",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "formalPublication": {
+        "type": "journal",
+        "evidenceUrl": "https://coogan.ece.gatech.edu/papers/ni2026safe.html"
+      },
+      "links": {
+        "code": null,
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "§V-B明确其他安全约束是软约束；求解仅局部最优，区间外包有保守性。 / Section V-B explicitly makes other safety constraints soft; optimization is local and interval bounds are conservative."
+      ],
+      "assumptions": [
+        "真实故障模式与扰动须落在有限候选模型和给定不确定性范围内。 / The true fault and disturbances must lie within the candidate models and specified uncertainty bounds."
+      ],
+      "evidence": [
+        {
+          "url": "https://coogan.ece.gatech.edu/papers/ni2026safe.html",
+          "claim": "作者机构官方出版记录明确RA-L及DOI；录用日期另见作者接受稿首页。 / Official institutional publication record identifies RA-L and DOI; acceptance date is in the author accepted manuscript.",
+          "checkedAt": "2026-11-07"
+        },
+        {
+          "url": "https://mornik.web.illinois.edu/wp-content/uploads/NOCC26.pdf",
+          "claim": "核读摘要、指定正文与局限，范围见研究记录。 / Read abstract and specified body sections and limitations; see research notes for scope.",
+          "checkedAt": "2026-11-07"
+        }
+      ],
+      "researchNotes": [
+        "核读接受稿首页、§V-B及§VI开头。首页录用日2026-10-07；在线出版日未核实，保持null，不把DOI存在等同出版日期。建议先§III问题→§V-B约束→§VI测试条件。未审计全部证明或复现。 / Read accepted-manuscript header, section V-B and the start of VI. Acceptance: 2026-10-07; online publication date unverified and null. Read III, V-B, then VI; no exhaustive proof audit or replication."
+      ],
+      "visuals": {
+        "mainFigure": null,
+        "figureNote": "本轮未完成原图字节、像素与转载条件核验，不复制、不生成替代科学图。 / Original figure bytes, pixels and reuse conditions were not fully verified; no copy or synthetic substitute.",
+        "institutions": [
+          {
+            "name": "Georgia Institute of Technology",
+            "institutionId": "georgia-tech",
+            "institutionType": "university",
+            "markType": "compact-symbol",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/gatech-symbol.png",
+              "sha256": "33c89bd7e3478f65c2a8f818274c18d0075090f3a10ea733cf9e3c371f626edc",
+              "width": 48,
+              "height": 48,
+              "sourceUrl": "https://www.gatech.edu/themes/custom/gatech/favicon.ico",
+              "evidenceUrl": "https://brand.gatech.edu/our-look/logos",
+              "verifiedAt": "2026-10-31",
+              "credit": "Georgia Institute of Technology official compact identity symbol",
+              "rights": "官方首页身份符号，商标归原权利人；无开放许可声明。不是受限大学印章，不表示背书。",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "altZh": "Georgia Tech 官方交织 GT 身份符号",
+              "altEn": "Official Georgia Tech interlocking GT identity symbol"
+            },
+            "authorNames": [
+              "Xinpei Ni",
+              "Glen Chou",
+              "Samuel Coogan"
+            ],
+            "evidence": [
+              {
+                "url": "https://mornik.web.illinois.edu/wp-content/uploads/NOCC26.pdf",
+                "claim": "该论文署名机构及作者对应。 / Paper-specific affiliation and author mapping.",
+                "checkedAt": "2026-11-07"
+              }
+            ],
+            "note": "复用机构库原始标识及权利说明，仅用于论文署名。 / Reuse the registry mark and rights statement for paper affiliation only."
+          },
+          {
+            "name": "University of Illinois Urbana-Champaign",
+            "institutionId": "illinois",
+            "institutionType": "university",
+            "markType": "compact-symbol",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-ef249802445ee515.svg",
+              "sha256": "ef249802445ee515e32afcbf69bd1f7d7f4add078ca5b16cff29c7c1169f8950",
+              "width": 180,
+              "height": 180,
+              "sourceUrl": "https://cdn.brand.illinois.edu/icon.svg",
+              "evidenceUrl": "https://illinois.edu/",
+              "verifiedAt": "2026-11-03",
+              "credit": "University of Illinois Urbana-Champaign · official mark",
+              "rights": "Official institutional mark; trademark/copyright retained by its owner. No blanket reuse licence verified. Identify the paper affiliation only, not endorsement; preserve aspect ratio, complete mark and clear space. Transparent derivative removes only separate SVG canvas background; no emblem geometry or colors changed. No separate institutional permission claimed.",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "altZh": "Illinois 官方 Block I 身份符号",
+              "altEn": "Official Illinois Block I identity symbol"
+            },
+            "authorNames": [
+              "Melkior Ornik"
+            ],
+            "evidence": [
+              {
+                "url": "https://mornik.web.illinois.edu/wp-content/uploads/NOCC26.pdf",
+                "claim": "该论文署名机构及作者对应。 / Paper-specific affiliation and author mapping.",
+                "checkedAt": "2026-11-07"
+              }
+            ],
+            "note": "复用机构库原始标识及权利说明，仅用于论文署名。 / Reuse the registry mark and rights statement for paper affiliation only."
+          }
+        ],
+        "authors": []
+      }
+    },
+    {
+      "id": "arxiv-2510-02298",
+      "title": "ARMADA：让故障检测触发人工接管，而非全程盯守",
+      "titleEn": "ARMADA: Autonomous Online Failure Detection and Human Shared Control Empower Scalable Real-World Deployment and Adaptation",
+      "authors": [
+        "Wenye Yu",
+        "Jun Lv",
+        "Zixi Ying",
+        "Yang Jin",
+        "Chuan Wen",
+        "Cewu Lu"
+      ],
+      "year": 2026,
+      "venue": "IEEE Robotics and Automation Letters 11(10):11150–11157 · 2026",
+      "tags": [
+        "机器人",
+        "正式期刊"
+      ],
+      "summary": "ARMADA以FLOAT检测轨迹偏离，按需请求人工接管，再用在域数据改进策略。作者在四项真机任务报告接近95%的检测准确率。该指标并非提前预知失败的概率：FLOAT没有动作预测，可能迟报早期失败，异常长阶段也会误报，场景复位仍需人。",
+      "summaryEn": "ARMADA uses FLOAT to detect trajectory deviations, request human intervention and collect in-domain data for policy improvement. The authors report nearly 95% detection accuracy across four real-robot tasks. This is not a probability of anticipating failure: FLOAT lacks action prediction, can detect early failures late, may flag unusually long phases, and still needs human scene resets.",
+      "whySelected": "较早论文·首次发现；正式出处单独核验，不将预印本修订日当作录用或出版日。 / Older paper, first discovery; formal venue checked independently, without treating preprint revisions as acceptance/publication dates.",
+      "sources": [
+        {
+          "label": "原文 / Full text",
+          "url": "https://arxiv.org/html/2510.02298v2"
+        },
+        {
+          "label": "正式出处证据 / Formal venue evidence",
+          "url": "https://ieeexplore.ieee.org/abstract/document/11593121/authors"
+        },
+        {
+          "label": "作者项目 / Author project",
+          "url": "https://virlus.github.io/armada/"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "建议现在读方法与局限，对照主张和实际验证范围。 / Read methods and limitations now, checking claims against evaluation scope.",
+          "relation": "连接机器人学习、部署可靠性与控制条件；重点检查实际任务而非模型标签。 / Connects robot learning, deployment reliability and control assumptions; prioritize actual tasks over model labels.",
+          "prerequisites": [
+            "行为克隆与强化学习 / Behavior cloning and reinforcement learning",
+            "闭环反馈与实验指标 / Closed-loop feedback and evaluation metrics"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": "10.1109/lra.2026.3709635",
+        "arxiv": "2510.02298",
+        "other": null
+      },
+      "publicationStatus": "published",
+      "publicationDate": "2026-07-02",
+      "discoveredDate": "2026-11-07",
+      "verifiedAt": "2026-11-07",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "formalPublication": {
+        "type": "journal",
+        "evidenceUrl": "https://ieeexplore.ieee.org/abstract/document/11593121/authors"
+      },
+      "links": {
+        "code": null,
+        "project": "https://virlus.github.io/armada/",
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "专家示范是参考，不能自然泛化到新任务/形态；人仍负责物理复位。 / Expert demonstrations provide references; novel tasks/embodiments do not follow automatically, and humans still reset scenes."
+      ],
+      "assumptions": [
+        "可获得任务参考示范与按需人工协助。 / Requires task reference demonstrations and human help on demand."
+      ],
+      "evidence": [
+        {
+          "url": "https://ieeexplore.ieee.org/abstract/document/11593121/authors",
+          "claim": "IEEE出版社记录确认2026-07-02正式出版、RA-L卷期页码、DOI及逐作者机构。 / IEEE publisher record confirms July 2 publication, RA-L issue/pages, DOI and author affiliations.",
+          "checkedAt": "2026-11-07"
+        },
+        {
+          "url": "https://arxiv.org/html/2510.02298v2",
+          "claim": "核读摘要、指定正文与局限，范围见研究记录。 / Read abstract and specified body sections and limitations; see research notes for scope.",
+          "checkedAt": "2026-11-07"
+        },
+        {
+          "url": "https://virlus.github.io/armada/",
+          "claim": "已打开作者项目，题名及方法与原文匹配；未运行演示。 / Opened the author project and matched title/method to the paper; demos not executed.",
+          "checkedAt": "2026-11-07"
+        }
+      ],
+      "researchNotes": [
+        "核读摘要、署名及§VI局限。先理解检测与预测的区别，再读§VI；未逐表审计实验，未运行代码。项目所称workshop奖不作为正式会议获奖证据，本条仅按期刊登记。 / Read abstract, affiliations and section VI. Distinguish detection from prediction, then read VI; no table-by-table audit or execution. The project’s workshop-award claim is not used as a formal-conference award; this entry is journal-only."
+      ],
+      "visuals": {
+        "mainFigure": null,
+        "figureNote": "本轮未完成原图字节、像素与转载条件核验，不复制、不生成替代科学图。 / Original figure bytes, pixels and reuse conditions were not fully verified; no copy or synthetic substitute.",
+        "institutions": [
+          {
+            "name": "Shanghai Jiao Tong University",
+            "institutionId": "pending-shanghai-jiao-tong-university",
+            "institutionType": "university",
+            "markType": "emblem",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-112aa440081904cd.png",
+              "sha256": "112aa440081904cd37125ccd9b4f383d631461bc570551497ef04afeb41292da",
+              "width": 2805,
+              "height": 2806,
+              "sourceUrl": "https://130.sjtu.edu.cn/storage/dwxcb/anniversary/en/file/2025/12/78b54bdb90d11870709ae5904835d012.rar",
+              "evidenceUrl": "https://130.sjtu.edu.cn/en/service",
+              "verifiedAt": "2026-11-03",
+              "credit": "Shanghai Jiao Tong University · official complete mark",
+              "rights": "Official institutional mark; trademark/copyright retained by its owner. Public-source verification is not a blanket reuse licence or separate permission. For factual non-commercial paper-affiliation identification only, not endorsement. Preserve the complete mark, its native colours, aspect ratio and clear space; review linked university guidance.",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "altZh": "上海交通大学官方红色圆形校徽",
+              "altEn": "Shanghai Jiao Tong University official red circular emblem"
+            },
+            "authorNames": [
+              "Wenye Yu",
+              "Jun Lv",
+              "Yang Jin",
+              "Chuan Wen",
+              "Cewu Lu"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2510.02298v2",
+                "claim": "该论文署名机构及作者对应。 / Paper-specific affiliation and author mapping.",
+                "checkedAt": "2026-11-07"
+              }
+            ],
+            "note": "复用机构库原始标识及权利说明，仅用于论文署名。 / Reuse the registry mark and rights statement for paper affiliation only."
+          },
+          {
+            "name": "Shanghai Innovation Institute",
+            "institutionId": "pending-shanghai-innovation-institute",
+            "institutionType": "research-institute",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Wenye Yu",
+              "Cewu Lu"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2510.02298v2",
+                "claim": "该论文署名机构及作者对应。 / Paper-specific affiliation and author mapping.",
+                "checkedAt": "2026-11-07"
+              },
+              {
+                "url": "https://www.sii.edu.cn/",
+                "claim": "本轮机构标识预检入口。 / Institution-mark preflight source checked this run.",
+                "checkedAt": "2026-11-07"
+              }
+            ],
+            "note": "已查官方品牌/机构入口；未完成可用于紧凑展示的独立图形、像素及权利核验，保留名称，不用母机构或字标替代。 / Checked official brand/institution sources; no independently verified compact mark with checked pixels and rights, so retain text without substitution."
+          },
+          {
+            "name": "Noematrix Ltd.",
+            "institutionId": "pending-noematrix-ltd",
+            "institutionType": "company",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Jun Lv",
+              "Zixi Ying",
+              "Cewu Lu"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2510.02298v2",
+                "claim": "该论文署名机构及作者对应。 / Paper-specific affiliation and author mapping.",
+                "checkedAt": "2026-11-07"
+              },
+              {
+                "url": "https://www.noematrix.ai/en/about",
+                "claim": "本轮机构标识预检入口。 / Institution-mark preflight source checked this run.",
+                "checkedAt": "2026-11-07"
+              }
+            ],
+            "note": "已查官方品牌/机构入口；未完成可用于紧凑展示的独立图形、像素及权利核验，保留名称，不用母机构或字标替代。 / Checked official brand/institution sources; no independently verified compact mark with checked pixels and rights, so retain text without substitution."
+          }
+        ],
+        "authors": []
+      }
+    },
+    {
+      "id": "arxiv-2505-20683",
+      "title": "溯源草图的内存增量维护",
+      "titleEn": "In-memory Incremental Maintenance of Provenance Sketches",
+      "authors": [
+        "Pengyuan Li",
+        "Boris Glavic",
+        "Dieter Gawlick",
+        "Vasudha Krishnaswamy",
+        "Zhen Hua Liu",
+        "Danica Porobic",
+        "Xing Niu"
+      ],
+      "year": 2026,
+      "venue": "EDBT 2026 · pp. 56–68",
+      "tags": [
+        "provenance",
+        "增量维护",
+        "数据跳过",
+        "查询优化"
+      ],
+      "summary": "数据更新会使溯源草图失效，直接重算又可能抵消跳过无关数据的收益。IMP把插入、删除差量连同范围标注送入内存引擎，增量维护用于查询加速的草图，并允许安全的过近似。作者在Postgres上比较全量维护与不用草图的基线，报告小差量下的维护优势；但更新密集时收益可能消失。它补充更新后的依赖维护，不直接求解VKG反向更新或最小副作用。",
+      "whySelected": "较早论文 · 首次发现。把理论上的安全过近似与系统的更新代价连起来，适合在删除传播之后思考依赖索引如何持续有效。 / Older first discovery connecting safe over-approximation to practical update cost.",
+      "sources": [
+        {
+          "label": "正式论文 / Published paper",
+          "url": "https://openproceedings.org/2026/conf/edbt/paper-18.pdf"
+        },
+        {
+          "label": "扩展正文 / Extended full text",
+          "url": "https://arxiv.org/html/2505.20683v1"
+        },
+        {
+          "label": "代码与实验说明 / Code and experiments",
+          "url": "https://github.com/IITDBGroup/IMP_EDBT26"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "li"
+      ],
+      "recommendations": {
+        "li": {
+          "whyRead": "建议现在读，重点区分精确元组结果与允许过近似的草图。 / Read now, distinguishing exact tuple results from over-approximated sketches.",
+          "relation": "对应provenance与实例更新后的维护；并非固定映射下从RDF更新反推SQL更新的算法。 / Relevant to provenance maintenance after instance updates, not RDF-to-SQL update inversion.",
+          "prerequisites": [
+            "关系代数与bag语义 / Relational algebra and bag semantics",
+            "增量视图维护与差量 / Incremental view maintenance and deltas",
+            "provenance、范围分区与安全数据跳过 / Provenance, range partitions and safe data skipping"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": "10.48786/edbt.2026.05",
+        "arxiv": "2505.20683",
+        "other": null
+      },
+      "publicationStatus": "published",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-07",
+      "verifiedAt": "2026-11-06",
+      "readDepth": "fulltext",
+      "paperType": "system",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": "https://github.com/IITDBGroup/IMP_EDBT26",
+        "project": null,
+        "data": null,
+        "video": null
+      },
+      "limits": [
+        "不是精确lineage、最小修复或反向视图更新求解器。 / Not a solver for exact lineage, minimum repair or reverse view updates.",
+        "正式版§7.1在5次更新/1次查询、每次差量2000元组时并未优于全部基线，不能把小差量维护优势泛化为所有工作负载。 / Published section 7.1 does not beat both baselines at five updates per query and 2000 tuples per update; small-delta gains do not generalize to every workload.",
+        "快照一致性与历史差量可获取性影响接入；statement-level快照需要额外集成或重演。 / Snapshot consistency and access to historical deltas matter; statement-level snapshots need further integration or reenactment.",
+        "作者报告，未运行代码、未独立复现或逐步复核证明。 / Author-reported; code was not run, experiments not replicated and proofs not independently checked."
+      ],
+      "assumptions": [
+        "输入包括带标注插入/删除差量、原算子状态、查询和范围分区；输出是草图差量及新状态。 / Inputs are annotated insertion/deletion deltas, prior operator state, query and partition; outputs are sketch deltas and updated state.",
+        "安全分区与有效初始草图是前提；扩展版定理6.1针对文中支持的代数算子，以元组正确性及片段正确性进行结构归纳。 / Safe partitions and a valid initial sketch are required; extended Theorem 6.1 covers the supported algebra through structural induction on tuple and fragment correctness."
+      ],
+      "evidence": [
+        {
+          "url": "https://openproceedings.org/2026/conf/edbt/paper-18.pdf",
+          "claim": "正式EDBT 2026题名、全体作者、署名、页码、DOI，§7实验与参考文献29代码入口。 / Published identity, authors, affiliations, pages, DOI, experiments and code citation.",
+          "checkedAt": "2026-11-06"
+        },
+        {
+          "url": "https://arxiv.org/html/2505.20683v1",
+          "claim": "扩展版§4–6定义、增量语义和定理6.1；§7系统；§8实验；图2架构。 / Extended definitions, incremental semantics, Theorem 6.1, implementation, experiments and Figure 2.",
+          "checkedAt": "2026-11-06"
+        },
+        {
+          "url": "https://arxiv.org/abs/2505.20683",
+          "claim": "核实arXiv v1提交于2025-05-27，仅作为同篇扩展版身份，不把它冒充2026发表日。 / v1 submitted 2025-05-27, identifying the extended version, not the 2026 publication date.",
+          "checkedAt": "2026-11-06"
+        },
+        {
+          "url": "https://github.com/IITDBGroup/IMP_EDBT26",
+          "claim": "README列出IMP_ENGINE、数据库、数据生成脚本和实验查询；未执行。 / README lists engine information, databases, dataset generators and experiment queries; not executed.",
+          "checkedAt": "2026-11-06"
+        }
+      ],
+      "researchNotes": [
+        "核读正式PDF首页、§7.1–7.4与Artifacts，及扩展HTML §1–2、§6定理陈述与证明结构、§7.3–7.4、§8.1–8.3；并非通篇证明审计。 / Read the published title page, sections 7.1–7.4 and Artifacts, plus extended sections 1–2, section 6 theorem and proof structure, 7.3–7.4 and 8.1–8.3; not a full proof audit.",
+        "阅读路线：图2看输入输出 → 例1.2理解旧草图为何漏结果 → 扩展版§4/§6分清有效草图与精确草图 → 正式版§7.1/图6检查查询更新比例。章节编号按版本分别标记。 / Route: Figure 2, Example 1.2, extended sections 4/6, then published section 7.1/Figure 6; section numbers are version-specific.",
+        "实验条件：Postgres 16.2、128GB RAM、双AMD Opteron 4238，共12核；重复至少10次取中位数。TPC-H选了适合草图的查询，不是所有22条查询的统一加速结论。 / Postgres 16.2, 128GB RAM, two Opteron 4238 CPUs totaling 12 cores, at least ten repetitions and median runtimes; TPC-H queries were selected for sketch suitability, not a uniform claim over all 22 queries.",
+        "日期只核实会议2026-03-24至27日，精确出版日未核实故null；不使用作者页的获奖标签作官方奖项结论。 / Conference dates verified, exact publication day unknown and left null; no award claim based solely on the author page."
+      ],
+      "summaryEn": "Data updates can invalidate provenance sketches, while recomputation may erase the benefit of skipping irrelevant data. IMP feeds insertion and deletion deltas with range annotations into an in-memory engine that incrementally maintains query-acceleration sketches and permits safe over-approximation. The authors compare full maintenance and a no-sketch baseline on Postgres, reporting maintenance benefits for small deltas; update-heavy workloads can lose those benefits. This complements dependency maintenance after updates, rather than directly solving reverse VKG updates or minimum side effects.",
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/imp-2505-20683-figure2.png",
+          "sha256": "5f80356d6a13f89b6d8b6614f96bd126fbe668c5e918c98e4f23f4e02c19c892",
+          "width": 2619,
+          "height": 543,
+          "sourceUrl": "https://arxiv.org/html/2505.20683v1/figs/imp_overview.png",
+          "evidenceUrl": "https://arxiv.org/html/2505.20683v1",
+          "verifiedAt": "2026-11-06",
+          "credit": "Pengyuan Li et al. · Figure 2",
+          "rights": "Original author copyright. Published paper states CC BY-NC-ND 4.0; arXiv grants only a non-exclusive distribution licence. Original unmodified attributed scholarly thumbnail; no endorsement or additional permission claimed.",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "transparent",
+          "altZh": "IMP原图2：查询重写、草图捕获和增量维护架构",
+          "altEn": "IMP original Figure 2: query rewriting, sketch capture and incremental maintenance"
+        },
+        "figureNote": "已目视核验原图，保留2619×543原始字节、全部箭头和图例。 / Visually checked original image, retaining original bytes, arrows and legend.",
+        "institutions": [
+          {
+            "name": "Illinois Institute of Technology",
+            "institutionId": "pending-illinois-institute-of-technology",
+            "institutionType": "university",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Pengyuan Li"
+            ],
+            "evidence": [
+              {
+                "url": "https://openproceedings.org/2026/conf/edbt/paper-18.pdf",
+                "claim": "论文首页明确署名该机构。 / Paper title page explicitly affiliates these authors.",
+                "checkedAt": "2026-11-06"
+              },
+              {
+                "url": "https://www.iit.edu/marketing-communications/resources/logos",
+                "claim": "已查官方logo入口；搜索摘要要求其他用途书面许可，打开页面返回403，未取得许可或可核验紧凑原图，保留名称。 / Official logo entry searched; indexed guidance requires permission for other uses, direct access returned 403. No permission or verified compact asset obtained; retain name.",
+                "checkedAt": "2026-11-06"
+              }
+            ],
+            "note": "已查官方logo入口；搜索摘要要求其他用途书面许可，打开页面返回403，未取得许可或可核验紧凑原图，保留名称。 / Official logo entry searched; indexed guidance requires permission for other uses, direct access returned 403. No permission or verified compact asset obtained; retain name."
+          },
+          {
+            "name": "University of Illinois Chicago",
+            "institutionId": "pending-university-of-illinois-chicago",
+            "institutionType": "university",
+            "markType": "compact-symbol",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-9e43e094514a6159.png",
+              "sha256": "9e43e094514a6159a0a1f1952c750842a43fdcbb72c2e268e79db38021f78656",
+              "width": 196,
+              "height": 196,
+              "sourceUrl": "https://brand.uic.edu/favicon-196x196.png",
+              "evidenceUrl": "https://brand.uic.edu/visual-identity/logos/",
+              "verifiedAt": "2026-11-03",
+              "credit": "University of Illinois Chicago · source-verified institutional symbol",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. UIC trademarks are subject to university permission and licensing conditions. Current guidance favors the formal lockup externally and circle mark for internal audiences; no external-use exception or permission is claimed. Policy: https://brand.uic.edu/resources/trademarks-and-licensing/",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "University of Illinois Chicago 完整校徽或图形标志",
+              "altEn": "Complete institutional symbol of University of Illinois Chicago"
+            },
+            "authorNames": [
+              "Boris Glavic"
+            ],
+            "evidence": [
+              {
+                "url": "https://openproceedings.org/2026/conf/edbt/paper-18.pdf",
+                "claim": "论文首页明确署名该机构。 / Paper title page explicitly affiliates these authors.",
+                "checkedAt": "2026-11-06"
+              },
+              {
+                "url": "https://brand.uic.edu/resources/trademarks-and-licensing/",
+                "claim": "复用机构库已核验原图与权利说明；UIC政策要求许可，此处不声称已获额外授权。 / Reuse registry-verified original and rights statement; UIC requires permission and no additional authorization is claimed.",
+                "checkedAt": "2026-11-06"
+              }
+            ],
+            "note": "复用机构库已核验原图与权利说明；UIC政策要求许可，此处不声称已获额外授权。 / Reuse registry-verified original and rights statement; UIC requires permission and no additional authorization is claimed."
+          },
+          {
+            "name": "Oracle Corporation",
+            "institutionId": "pending-oracle-corporation",
+            "institutionType": "company",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Dieter Gawlick",
+              "Vasudha Krishnaswamy",
+              "Zhen Hua Liu",
+              "Danica Porobic",
+              "Xing Niu"
+            ],
+            "evidence": [
+              {
+                "url": "https://openproceedings.org/2026/conf/edbt/paper-18.pdf",
+                "claim": "论文首页明确署名该机构。 / Paper title page explicitly affiliates these authors.",
+                "checkedAt": "2026-11-06"
+              },
+              {
+                "url": "https://www.oracle.com/legal/logos/",
+                "claim": "官方明确Oracle logo及O Tag需书面许可，下载需账号；未获许可，不下载、不以Java或MySQL标志替代。 / Oracle logo and O Tag require written authorization and downloads require an account; no permission obtained, no substitute marks used.",
+                "checkedAt": "2026-11-06"
+              }
+            ],
+            "note": "官方明确Oracle logo及O Tag需书面许可，下载需账号；未获许可，不下载、不以Java或MySQL标志替代。 / Oracle logo and O Tag require written authorization and downloads require an account; no permission obtained, no substitute marks used."
+          }
+        ],
+        "authors": []
+      }
+    },
+    {
+      "id": "arxiv-2610-40828",
+      "title": "从遥操作到长时程灵巧操作：什么决定视觉运动策略的真机表现？",
+      "titleEn": "From Teleoperation to Long-Horizon Dexterity: Evaluating Visuomotor Skills and Offline Proxies for Dexterous Manipulation",
+      "authors": [
+        "Ammar N. Abbas",
+        "Aayush Jain",
+        "Prashanth Viswanath",
+        "Nivesh Gadipudi",
+        "Giulia Vilone",
+        "Jim Gibbons"
+      ],
+      "year": 2026,
+      "venue": "arXiv 2026 · 预印本 / preprint",
+      "tags": [
+        "机器人学习",
+        "灵巧操作",
+        "点云",
+        "真机评估"
+      ],
+      "summary": "作者在RJ45抓取与插入场景比较281个策略、七类方法及约1,700次真机试验。配对消融显示点云裁剪、坐标系与动作表示影响显著。67种离线指标中，仅五种运动平滑性或直接性指标在21个iDP3插入检查点内通过可靠性筛选；不能跨策略家族排名，也不能替代真机测试。",
+      "whySelected": "近30天首次发现，P0操作学习与P1机器人感知直接相关；已与当前仓库论文身份索引去重。研究重点是实机消融与评价，不以无代码为由排除。 / First discovery within 30 days, directly relevant to P0 manipulation learning and P1 robot perception; deduplicated against the current repository identity registry. Selected for physical-robot ablations and evaluation despite no verified code release.",
+      "sources": [
+        {
+          "label": "原文HTML / Paper HTML",
+          "url": "https://arxiv.org/html/2610.40828v1"
+        },
+        {
+          "label": "原文PDF / Paper PDF",
+          "url": "https://arxiv.org/pdf/2610.40828v1"
+        },
+        {
+          "label": "日期与作者备注 / Date and author comment",
+          "url": "https://arxiv.org/abs/2610.40828"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "lv"
+      ],
+      "recommendations": {
+        "lv": {
+          "whyRead": "建议现在读。先用20分钟读图1、§2与§3，弄清输入、动作和成功条件，再深入§4；不必一开始推导扩散模型。最值得带走的是“同一变量的改变”与“多个因素一起改变”的区别。 / Read now. Spend an initial 20 minutes on Figure 1 and sections 2–3 to identify observations, actions and success criteria, then study section 4. Diffusion derivations are not the first prerequisite. Focus on distinguishing a single changed variable from several simultaneous changes.",
+          "relation": "P0：行为克隆、动作分块与接触丰富插入；P1：RGB与点云、坐标系、关注区域以及双相机。P2：以小型iDP3与π0.5的同任务比较理解基础模型成本；不是VLA通用能力排行榜。 / P0: behavior cloning, action chunks and contact-rich insertion. P1: RGB versus point clouds, coordinate frames, ROIs and two-camera inputs. P2: a same-task iDP3 versus π0.5 comparison illustrates foundation-model cost, not a ranking of general VLA capability.",
+          "prerequisites": [
+            "行为克隆：从示范中的观察预测动作；离线误差低不保证执行后仍处于示范分布。 / Behavior cloning predicts actions from demonstration observations; low offline error does not ensure the executed robot remains in that distribution.",
+            "动作分块：一次预测未来多个动作；区分预测长度与实际执行步数。 / Action chunking predicts several future actions; distinguish prediction horizon from executed steps.",
+            "坐标系：同一空间点可用移动相机或固定机器人基座描述；变换依赖手眼标定。 / Coordinate frames describe the same point relative to a moving camera or fixed robot base; conversion requires hand–eye calibration.",
+            "条件概率与置信区间：成功插入次数／所有试验，与成功插入次数／成功取出次数，分母不同。 / Conditional probability and confidence intervals: insertions divided by all trials differs from insertions divided by successful picks."
+          ],
+          "difficulty": "intermediate",
+          "readRecommendation": "deep"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2610.40828",
+        "other": null
+      },
+      "publicationStatus": "preprint",
+      "publicationDate": "2026-10-29",
+      "discoveredDate": "2026-11-07",
+      "verifiedAt": "2026-11-07",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "recent",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "单个RJ45操作场景、指定机械臂／手／夹具；不是跨物体、跨本体或端到端长时程通用性证明。 / One RJ45 task with specified arm, hand and jigs; not evidence of cross-object, cross-embodiment or general end-to-end long-horizon competence.",
+        "“100%”是有限实测中的点估计。表1多项插入给定取出的95%区间为69–100%，不同检查点试验数不等，不能把281个策略都当作同样充分评估。 / The reported 100% is a finite-sample estimate. Several Table 1 insertion-given-pick intervals are 69–100%; checkpoints have unequal trial counts and are not equally well evaluated.",
+        "技能拆分、双视角和恢复示范的最佳组合含混杂因素；不能把组合增益全部归因于某一项。更紧公差插座令iDP3插入成功降到0–40%。 / Best combinations of skill splitting, multiple views and recovery demonstrations contain confounds; do not assign the entire gain to one component. Tighter socket tolerance reduces iDP3 insertion to 0–40%.",
+        "五种离线指标高度相关，只在一个策略家族的插入子集成立；没有指标可靠预测取出率。作者结果未独立复现。 / The five offline metrics are highly correlated and only work for one family’s insertion subset; none reliably predicts pick rate. Results were not independently reproduced."
+      ],
+      "assumptions": [
+        "经典控制负责已知位姿之间的移动，FoundationPose辨认夹具，学习策略负责抓取和插入；不是全部动作由一个网络完成。 / Classical control handles moves between known poses, FoundationPose identifies the jig, and learned policies grasp and insert; one network does not control the entire pipeline.",
+        "策略10Hz运行，示范30Hz录制；测试主要是中心与左侧两个夹具位置。点云裁剪和基坐标转换依赖预处理与标定。 / Policies run at 10 Hz with 30 Hz demonstrations; tests mainly use center and left jig positions. ROI cropping and base-frame conversion depend on preprocessing and calibration."
+      ],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/html/2610.40828v1",
+          "claim": "核读方法、配对消融、结果表与统计范围；详见研究记录。 / Methods, paired ablations, result table and statistical scope checked.",
+          "checkedAt": "2026-11-07"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2610.40828v1",
+          "claim": "首页确认六名作者与Analog Devices, Inc., EdgeAI Robotics, Limerick, Ireland署名；HTML作者区排版损坏，采用PDF。 / PDF verifies six authors and shared affiliation; HTML author layout is malformed.",
+          "checkedAt": "2026-11-07"
+        },
+        {
+          "url": "https://arxiv.org/abs/2610.40828",
+          "claim": "v1提交2026-10-29；workshop录用为作者自报，未独立核实。 / v1 submitted 2026-10-29; workshop acceptance is author-reported and not independently verified.",
+          "checkedAt": "2026-11-07"
+        }
+      ],
+      "researchNotes": [
+        "前沿线／实际核读范围：HTML正文§1–5、表1与附录A–F的设置和统计说明；PDF首页核对作者顺序与统一机构署名。未运行代码、未重新计算显著性、未独立复现。 / Frontier / checked scope: HTML sections 1–5, Table 1 and setup/statistical details in appendices A–F; PDF first page verifies author order and shared affiliation. No code execution, significance recomputation or independent replication.",
+        "第一遍看图1与§2：把流水线画成“经典移动→学抓取→经典移动→学插入”。写下观察是什么、输出是什么；不要将整条流水线成功当成单个插入技能质量。 / First pass, Figure 1 and section 2: sketch classical move → learned grasp → classical move → learned insert. Identify observations and outputs; do not confuse full-pipeline success with insertion-skill quality.",
+        "第二遍读§3与图2a：ROI裁剪的0→100%指iDP3取出率；基坐标系20→100%指PointNet取出率；编码器逐层归一化0→70%指插入率。先核对指标和配对变化，再比较大小。绝对动作对π0.5的收益还取决于旋转表示，不能泛化成统一规则。 / Second pass, section 3 and Figure 2a: ROI cropping changes iDP3 pick rate from 0 to 100%; base coordinates change PointNet pick rate from 20 to 100%; per-layer normalization changes insertion from 0 to 70%. Check outcomes and paired changes before comparing gains. Absolute-action gains for π0.5 also depend on rotation representation, so this is not a universal rule.",
+        "第三遍读§4、图2b和附录F：先弄懂“相关不是因果”，再看多重检验校正和移除任一检查点后符号是否稳定。用笔记记录五种指标只适用于21个iDP3插入检查点，防止以后误用作跨模型排名。 / Third pass, section 4, Figure 2b and appendix F: understand correlation versus causation, then multiple-testing correction and sign stability under removal of any checkpoint. Record that the five metrics apply only to 21 iDP3 insertion checkpoints, not cross-model ranking.",
+        "基础线小练习（阅读练习，非作者实验）：假设10次试验中取出8次、插入6次，取出率80%，给定取出的插入率75%，整条流程插入率60%。再回看表1，解释为什么相同的条件插入率可以对应不同整流程成功率。 / Foundation exercise, not an author experiment: with 8 picks and 6 insertions in 10 trials, pick rate is 80%, insertion-given-pick is 75%, and pipeline insertion is 60%. Return to Table 1 and explain why equal conditional insertion rates can coexist with different pipeline success.",
+        "资源与身份：arXiv作者备注自报Accepted at CoRL 2026 Workshop；尚未核实具体workshop官方名单，故本条仍按预印本登记，不标主会、奖项或口头报告。未核实作者代码、项目、视频或数据发布，链接保持null。 / Resources and status: the arXiv author comment says Accepted at CoRL 2026 Workshop, but no specific workshop official list has been verified. This entry remains a preprint and claims no main-conference, award or oral status. No author code, project, video or dataset release was verified; links remain null."
+      ],
+      "summaryEn": "The authors compare 281 policies from seven families in approximately 1,700 real-robot RJ45 grasping and insertion trials. Paired ablations show large effects from point-cloud cropping, coordinate frames and action representations. Of 67 offline metrics, only five measures of motion smoothness or directness pass reliability checks within 21 iDP3 insertion checkpoints; they neither rank different policy families nor replace robot testing.",
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/teleoperation-dexterity-figure1.png",
+          "sha256": "4b39b13115080249661e9ac839b0e6cee1061773b1343741bdc50e8109524d2a",
+          "width": 1994,
+          "height": 554,
+          "sourceUrl": "https://arxiv.org/html/2610.40828v1/fig_system.png",
+          "evidenceUrl": "https://arxiv.org/html/2610.40828v1",
+          "verifiedAt": "2026-11-07",
+          "credit": "Ammar N. Abbas et al., Figure 1",
+          "rights": "Original author figure; attributed scholarly thumbnail only. No blanket reuse permission or endorsement claimed. Scientific content unchanged.",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "light",
+          "altZh": "原文图1：遥操作采集、技能拆分与机器人执行流水线",
+          "altEn": "Original Figure 1: teleoperation, skill segmentation and robot execution"
+        },
+        "figureNote": "实际检查原文图1，保留原图，不生成科学插图。 / Original Figure 1 visually inspected and preserved; no generated scientific image.",
+        "institutions": [
+          {
+            "name": "Analog Devices, Inc.",
+            "institutionId": "pending-analog-devices-inc",
+            "logo": null,
+            "authorNames": [
+              "Ammar N. Abbas",
+              "Aayush Jain",
+              "Prashanth Viswanath",
+              "Nivesh Gadipudi",
+              "Giulia Vilone",
+              "Jim Gibbons"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/pdf/2610.40828v1",
+                "claim": "PDF首页全部作者共享该机构署名。 / All authors share this affiliation on the PDF first page.",
+                "checkedAt": "2026-11-07"
+              }
+            ],
+            "note": "沿用机构注册ID；官方媒体授权页要求商标许可，未取得许可，按名称显示，不造图或以首字母替代。 / Reuses the registry ID. Official media policy requires trademark permission; none obtained, so display the name without an invented mark or initials.",
+            "institutionType": "company",
+            "markType": "none"
+          }
+        ],
+        "authors": []
+      }
+    }
+  ]
+}
