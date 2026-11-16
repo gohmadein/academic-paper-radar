@@ -1,0 +1,555 @@
+{
+  "version": 2,
+  "date": "2026-11-16",
+  "title": "2026-11-16 零域论文精选",
+  "demo": false,
+  "timezone": "Asia/Shanghai",
+  "issueNote": "本期迅1篇正式会议，李1篇近期论文另加1篇周一经典，驴1篇与迅共用TARC记录；共3篇独立论文。11月15日延迟档案独立补发，不重复计入本日。仅发布证据充分项，不凑数或声称全源覆盖。",
+  "coverage": {
+    "checkedSources": [
+      "OpenReview 官方作者检索的TARC录用/Spotlight记录，作者项目及arXiv正文署名",
+      "ACM/CIKM近期概率查询候选、作者论文；PODS经典来源核查",
+      "三方向25会议官网/CFP/重要日期页面，具体成功/冲突/失败记录见科研日历coverage",
+      "arXiv六分类11月16日北京时间08:00附近复核：仍为11月13日批次1792分类记录、1408去重ID",
+      "仓库规则、来源目录与历史注册表",
+      "Calvanese作者目录及VKG/修复关键词检索",
+      "ProvSQL与Senellart作者出版目录、CIKM演示全文及代码",
+      "PODS经典原文及官方Test-of-Time奖项",
+      "VLDB 2026官方奖项页（数据库补充候选核查）"
+    ],
+    "limitations": [
+      "来源仅限本轮实际访问，不宣称全量会议/期刊/团队覆盖。",
+      "arXiv入口抓取完成不等于全部相关论文核验完成；本轮未完成整批导读和署名标识，保留历史公告，不报告为0篇新稿或挪用批次日期。",
+      "仅列实际补查入口，不声称全量覆盖；30日内固定映射VKG更新候选不足。",
+      "本期李1篇近期直接相关演示论文，另1篇周一经典；未用数据库拓展补齐至3篇。",
+      "TraceProv仅核验近期讲座/海报，未确认正式论文身份，暂不入选；GEV作为较早Demo候选未加入本期。",
+      "新论文精确在线出版日与全部主图素材未完成核验；机构缺失标识原因逐项记录。",
+      "迅精选不足：会议 1/3，期刊 0/2；本轮仅TARC完成正式会议、完整作者及署名核验；其他近期会议和期刊候选核验不足，11月15日待补发期刊不作11月16日重复推荐，各类名额不互补。"
+    ]
+  },
+  "papers": [
+    {
+      "id": "arxiv-2510-23176",
+      "title": "TARC：时间自适应机器人控制",
+      "titleEn": "TARC: Time-Adaptive Robotic Control",
+      "authors": [
+        "Arnav Sukhija",
+        "Lenart Treven",
+        "Jin Cheng",
+        "Florian Dörfler",
+        "Stelian Coros",
+        "Andreas Krause"
+      ],
+      "year": 2026,
+      "venue": "CoRL 2026 · Spotlight（已录用 / accepted）",
+      "tags": [
+        "机器人学习",
+        "自适应控制",
+        "Sim2Real"
+      ],
+      "summary": "TARC让策略同时选择控制动作及保持时长，以查询预算约束学习何时重新决策。作者在遥控车、Go1实机和LIBERO中的冻结VLA上报告较少策略查询而保持任务表现。值得关注的是按状态分配反馈频率，而非统一降频；VLA结果仅在仿真验证，查询次数与油门指令变化也不能直接当作实测节能。",
+      "whySelected": "较早论文·首次发现；以正式会议身份核验，关注反馈频率与部署成本。 / Older first discovery; verified conference status and a focus on feedback frequency and deployment cost.",
+      "sources": [
+        {
+          "label": "原文 / Full text",
+          "url": "https://arxiv.org/html/2510.23176v2"
+        },
+        {
+          "label": "正式会议身份 / Formal venue",
+          "url": "https://openreview.net/search?content=authors&group=all&sort=cdate%3Adesc&source=forum&term=~Florian_Dorfler1"
+        },
+        {
+          "label": "作者项目 / Author project",
+          "url": "https://arnavsukhija.github.io/projects/tarc/"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun",
+        "lv"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "正式会议Spotlight；建议阅读自适应控制与零样本实机迁移证据。 / A conference Spotlight; read its adaptive-control and zero-shot hardware-transfer evidence.",
+          "relation": "连接机器人强化学习、闭环反馈与推理预算。 / Connects robotic RL, feedback and inference budgets.",
+          "prerequisites": [
+            "强化学习 / Reinforcement learning",
+            "反馈控制 / Feedback control"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        },
+        "lv": {
+          "whyRead": "P0/P1前沿线：先看动作保持机制，再辨别VLA仿真与实机证据。 / P0/P1 frontier: start with action holding, then distinguish simulated VLA evidence from hardware evidence.",
+          "relation": "学习何时重规划，联系视觉运动策略的动作分块与仿真迁移。 / Relates learned replanning to visuomotor action chunks and sim-to-real transfer.",
+          "prerequisites": [
+            "约束MDP与拉格朗日乘子 / Constrained MDPs and Lagrange multipliers",
+            "动作分块 / Action chunking"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2510.23176",
+        "other": null
+      },
+      "publicationStatus": "accepted",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-16",
+      "verifiedAt": "2026-11-16",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": "https://github.com/arnavsukhija/TARC",
+        "project": "https://arnavsukhija.github.io/projects/tarc/",
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "保持时段内无法即时响应新扰动，且没有显式安全约束。 / Mid-hold disturbances wait until the next decision; no explicit safety constraint.",
+        "全部自由度共用一个保持时长。 / All degrees of freedom share one hold duration.",
+        "短时实机实验不构成能耗实测；VLA仅在仿真验证。 / Short hardware trials do not measure energy savings; VLA evaluation is simulation-only."
+      ],
+      "assumptions": [
+        "可训练动作及持续时间策略，并设定最大保持时长与查询预算。 / Requires training an action-duration policy with a maximum hold duration and query budget."
+      ],
+      "evidence": [
+        {
+          "url": "https://openreview.net/search?content=authors&group=all&sort=cdate%3Adesc&source=forum&term=~Florian_Dorfler1",
+          "claim": "官方检索明确列出CoRL 2026 Spotlight；显示Published 2026-09-04，不把修改日或会议日视为首次发表日。 / Official index identifies CoRL 2026 Spotlight, with Published 2026-09-04; modification/event dates are not first-publication dates.",
+          "checkedAt": "2026-11-16"
+        },
+        {
+          "url": "https://arxiv.org/html/2510.23176v2",
+          "claim": "作者、ETH署名、方法与实验边界。 / Authors, ETH affiliation, method and evaluation boundaries.",
+          "checkedAt": "2026-11-16"
+        },
+        {
+          "url": "https://arnavsukhija.github.io/projects/tarc/",
+          "claim": "作者项目核对代码与视频链接；未运行、未观看完整视频。 / Author project verifies code/video links; no execution or full video viewing.",
+          "checkedAt": "2026-11-16"
+        },
+        {
+          "url": "https://github.com/arnavsukhija/TARC",
+          "claim": "公开代码仓库在上一轮核验，本轮不声称复现。 / Public repository verified in the prior pass; no replication claimed.",
+          "checkedAt": "2026-11-15"
+        }
+      ],
+      "researchNotes": [
+        "正文重点核读§3–5与§7；先读图2和约束公式，再对照实验平台及局限。未完整审计附录或运行代码。 / Targeted reading of sections 3–5 and 7; start with Figure 2 and constraints, then compare platforms and limitations. No complete appendix audit or execution.",
+        "官方OpenReview索引可读，直接forum仍有验证墙。publicationDate留空，避免将平台Published字段解释为精确录用日；按较早论文标记。 / Official OpenReview index is readable but the forum is gated. publicationDate remains null rather than treating platform Published as an exact acceptance date; marked older discovery.",
+        "项目页提供视频入口，但独立视频本轮未核验，资源字段留空。 / The project offers a video link; its independent destination was not verified in this run and is left unset."
+      ],
+      "summaryEn": "TARC jointly selects a control action and its hold duration, learning when to decide again under a query budget. The authors report fewer policy queries while preserving task performance on an RC car, Go1 hardware, and a frozen VLA in LIBERO. The key idea is allocating feedback frequency by state rather than uniformly lowering it. VLA results are simulation-only, and query counts and throttle-command travel are not direct energy measurements.",
+      "visuals": {
+        "mainFigure": null,
+        "figureNote": "已查论文与作者项目实际图，未取得转载授权或完成原图字节核验，留空而不生成科学替代图。 / Actual paper/project figures located; reuse permission and byte verification are incomplete, so no copied or generated substitute.",
+        "institutions": [
+          {
+            "name": "ETH Zurich",
+            "institutionId": "pending-eth-zurich",
+            "institutionType": "university",
+            "markType": "compact-symbol",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-ea11b99fc4e77c95.svg",
+              "sha256": "ea11b99fc4e77c95717d6a60c0180cfeac9b28b03503f9c5361dea801fd3806a",
+              "width": 570,
+              "height": 240,
+              "sourceUrl": "https://ait.ethz.ch/assets/images/eth_logo.svg",
+              "evidenceUrl": "https://ait.ethz.ch/",
+              "verifiedAt": "2026-11-03",
+              "credit": "ETH Zurich · official-source compact identity mark",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. The May 2026 official guidelines reserve acronym-only use and external use for advance Corporate Communications approval; that approval is not claimed. This is the complete predefined ETH acronym element, not the complete ETH zürich lockup. Policy: https://ethz.ch/staffnet/en/news-and-events/internal-news/archive/2026/05/new-logo-guidelines-if-it-s-eth-zurich-inside-it-should-say-eth-zurich-outside.html",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "ETH Zurich 官方 SVG 中的完整 ETH 图形字母符号",
+              "altEn": "Complete stylized ETH acronym extracted unchanged from official ETH Zurich SVG"
+            },
+            "authorNames": [
+              "Arnav Sukhija",
+              "Lenart Treven",
+              "Jin Cheng",
+              "Florian Dörfler",
+              "Stelian Coros",
+              "Andreas Krause"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2510.23176v2",
+                "claim": "原文头部六作者均署名ETH Zurich。 / All six authors list ETH Zurich in the paper header.",
+                "checkedAt": "2026-11-16"
+              }
+            ],
+            "note": "复用已核验机构库标识与权利说明，仅表示论文署名。 / Reuses the verified registry mark and rights statement for affiliation only."
+          }
+        ],
+        "authors": []
+      },
+      "formalPublication": {
+        "type": "conference",
+        "evidenceUrl": "https://openreview.net/search?content=authors&group=all&sort=cdate%3Adesc&source=forum&term=~Florian_Dorfler1"
+      }
+    },
+    {
+      "id": "doi-5f960ef85d99eb13e8db",
+      "title": "保留语言模型输出分布以进行概率查询求值",
+      "titleEn": "Preserving LLM Output Distributions for Probabilistic Query Evaluation",
+      "authors": [
+        "Angelo Saadeh",
+        "Pierre Senellart"
+      ],
+      "year": 2026,
+      "venue": "CIKM 2026 · Demonstration（同行评审演示论文，非主研究长文）",
+      "tags": [
+        "provenance",
+        "概率数据库",
+        "LLM不确定性"
+      ],
+      "summary": "把语言模型补充的属性直接压成一个答案，会丢失查询所需的不确定性。本文用ProvSQL将候选值及概率编码为互斥溯源事件，支持文本比较与连接，并以音乐商品和评论演示概率SQL。适合结合经典半环论文阅读；模型分数未经校准，不能把结果概率当作事实正确率。",
+      "whySelected": "近期正式演示论文；直接关联溯源与概率查询，非数据库拓展凑数。",
+      "sources": [
+        {
+          "label": "作者全文",
+          "url": "https://pierre.senellart.com/publications/saadeh2026preserving.pdf"
+        },
+        {
+          "label": "作者出版与资源记录",
+          "url": "https://pierre.senellart.com/publications/"
+        },
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.1145/3799682.3840264"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "li"
+      ],
+      "recommendations": {
+        "li": {
+          "whyRead": "现在读：把溯源语义落实为不确定数据查询接口。",
+          "relation": "直接关联provenance；不解决固定映射下VKG逆向更新。",
+          "prerequisites": [
+            "关系代数",
+            "溯源半环",
+            "概率数据库"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": "10.1145/3799682.3840264",
+        "arxiv": null,
+        "other": null
+      },
+      "publicationStatus": "published",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-16",
+      "verifiedAt": "2026-11-16",
+      "readDepth": "fulltext",
+      "paperType": "system",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": "https://github.com/angelosaadeh/musical-demo",
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "演示研究，不是跨数据集性能基准。",
+        "概率依赖输入分布质量；不提供事实正确性保证。"
+      ],
+      "assumptions": [
+        "候选输出按互斥事件建模。"
+      ],
+      "evidence": [
+        {
+          "url": "https://pierre.senellart.com/publications/saadeh2026preserving.pdf",
+          "claim": "标题、作者、署名、CIKM 2026会期11月7–11日、正文§2–4与Figure 1；精确在线出版日未核定。",
+          "checkedAt": "2026-11-16"
+        },
+        {
+          "url": "https://pierre.senellart.com/publications/",
+          "claim": "明确列为CIKM 2026同行评审Demonstration并链接DOI和代码。",
+          "checkedAt": "2026-11-16"
+        },
+        {
+          "url": "https://github.com/angelosaadeh/musical-demo",
+          "claim": "作者链接仓库含Streamlit演示、SQL和数据文件；未运行。",
+          "checkedAt": "2026-11-16"
+        }
+      ],
+      "researchNotes": [
+        "正文重点核读§2编码与操作、§3演示、§4校准局限；未独立复现。",
+        "CIKM为本轮实际补查入口，并非原来源目录已覆盖声明。",
+        "出版月份为2026-11；不把会议开幕日冒充在线出版日，publicationDate留空。",
+        "Figure 1已定位，但未完成独立图片提取与视觉校验，不嵌图。",
+        "CIKM 2026会议在11月7–11日举行；精确文章出版日未核实，publicationDate保留null，不伪造日期。为满足recent日期证据要求，暂保守归入older-discovery，非声称论文是久远经典。 / Exact article publication date unverified: keep null and conservatively use older-discovery, not the recent-date class."
+      ],
+      "summaryEn": "Collapsing model-generated attributes into one answer loses uncertainty needed by queries. This work encodes candidate values and probabilities as mutually exclusive provenance events in ProvSQL, supporting text comparisons and joins, and demonstrates probabilistic SQL on musical products and reviews. Read alongside the classic semiring paper; uncalibrated model scores do not make result probabilities factual correctness rates.",
+      "visuals": {
+        "mainFigure": null,
+        "figureNote": "已定位原文Figure 1；未完成素材提取及视觉校验，不嵌图。",
+        "institutions": [
+          {
+            "name": "CNRS",
+            "institutionId": "pending-cnrs",
+            "institutionType": "research-institute",
+            "markType": "organization-mark",
+            "logo": {
+              "kind": "institution-logo",
+              "sourceUrl": "https://www.cnrs.fr/sites/default/files/logo/logo.svg",
+              "evidenceUrl": "https://www.cnrs.fr/fr",
+              "verifiedAt": "2026-11-02",
+              "rights": "Official institutional artwork; trademark and copyright remain with owner. No open licence or blanket permission asserted. Editorial paper-affiliation identification only, no endorsement; preserve complete mark, aspect ratio, colors and clear space.",
+              "credit": "CNRS official identity",
+              "width": 55,
+              "height": 55,
+              "sha256": "8dac83c3ccf014ae53d5a0d94c299d8bba26824b21ef4318d3743dfcfbffa719",
+              "background": "transparent",
+              "displayPolicy": "official-brand",
+              "altEn": "Official CNRS institutional mark",
+              "altZh": "CNRS 官方机构标志",
+              "path": "assets/institutions/cnrs.svg"
+            },
+            "authorNames": [
+              "Angelo Saadeh",
+              "Pierre Senellart"
+            ],
+            "evidence": [
+              {
+                "url": "https://pierre.senellart.com/publications/saadeh2026preserving.pdf",
+                "claim": "论文首页署名。 / Paper-specific title-page affiliation.",
+                "checkedAt": "2026-11-16"
+              }
+            ],
+            "note": "复用机构库核验标识，不表示背书。 / Reused registry-verified mark, not endorsement."
+          },
+          {
+            "name": "Inria",
+            "institutionId": "pending-inria",
+            "institutionType": "research-institute",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Angelo Saadeh",
+              "Pierre Senellart"
+            ],
+            "evidence": [
+              {
+                "url": "https://pierre.senellart.com/publications/saadeh2026preserving.pdf",
+                "claim": "论文首页署名。 / Paper-specific title-page affiliation.",
+                "checkedAt": "2026-11-16"
+              },
+              {
+                "url": "https://new.inria.cl/fr/charte-dutilisation-de-lidentite-visuelle-dinria",
+                "claim": "官方规范要求字标至少45px且不得拆分；不缩成40px图徽，保留名称。",
+                "checkedAt": "2026-11-16"
+              }
+            ],
+            "note": "官方规范要求字标至少45px且不得拆分；不缩成40px图徽，保留名称。"
+          },
+          {
+            "name": "PSL University",
+            "institutionId": "pending-psl-university",
+            "institutionType": "university",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Angelo Saadeh",
+              "Pierre Senellart"
+            ],
+            "evidence": [
+              {
+                "url": "https://pierre.senellart.com/publications/saadeh2026preserving.pdf",
+                "claim": "论文首页署名。 / Paper-specific title-page affiliation.",
+                "checkedAt": "2026-11-16"
+              },
+              {
+                "url": "https://psl.eu/universite/media-et-communication",
+                "claim": "已查官方媒体页；logo ZIP浏览工具不支持，未核验独立紧凑符号，保留名称。",
+                "checkedAt": "2026-11-16"
+              }
+            ],
+            "note": "已查官方媒体页；logo ZIP浏览工具不支持，未核验独立紧凑符号，保留名称。"
+          },
+          {
+            "name": "École normale supérieure (Paris)",
+            "institutionId": "pending-cole-normale-sup-rieure-paris",
+            "institutionType": "university",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Angelo Saadeh",
+              "Pierre Senellart"
+            ],
+            "evidence": [
+              {
+                "url": "https://pierre.senellart.com/publications/saadeh2026preserving.pdf",
+                "claim": "两位作者署名DI ENS, ENS, CNRS, PSL University, Inria。",
+                "checkedAt": "2026-11-16"
+              },
+              {
+                "url": "https://www.ens.psl.eu/logotype-de-l-ens",
+                "claim": "官方要求传播部门同意后使用logo；未取得许可，保留名称。",
+                "checkedAt": "2026-11-16"
+              }
+            ],
+            "note": "官方logo使用需传播部门同意，未取得许可，不以其他ENS学校标志替代。"
+          }
+        ],
+        "authors": []
+      }
+    },
+    {
+      "id": "doi-88a672532b37a18d1030",
+      "title": "溯源半环",
+      "titleEn": "Provenance Semirings",
+      "authors": [
+        "Todd J. Green",
+        "Grigoris Karvounarakis",
+        "Val Tannen"
+      ],
+      "year": 2007,
+      "venue": "PODS 2007 · 周一基础经典",
+      "tags": [
+        "provenance",
+        "半环",
+        "关系代数"
+      ],
+      "summary": "为什么同一个查询能同时计算重复次数、可能世界和数据来源？本文把元组标注统一为交换半环：并与投影累加，连接相乘，再用多项式保存推导结构。先读例子与正关系代数，建立理解当日ProvSQL论文的语言；这不是完整SQL或更新修复算法，递归部分需另读其固定点条件。",
+      "whySelected": "周一独立经典；获2017 PODS Alberto O. Mendelzon Test-of-Time Award，不计每日新文数量。",
+      "sources": [
+        {
+          "label": "作者全文",
+          "url": "https://web.cs.ucdavis.edu/~green/papers/pods07.pdf"
+        },
+        {
+          "label": "PODS官方经典影响力证据",
+          "url": "https://www-old.sigmod.org/pods-home/acm-pods-alberto-o-mendelzon-test-of-time-award/"
+        },
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.1145/1265530.1265535"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "li"
+      ],
+      "recommendations": {
+        "li": {
+          "whyRead": "基础线：先建立溯源代数，再理解当日不确定查询系统。",
+          "relation": "直接支撑lineage/provenance阅读；不是VKG更新算法。",
+          "prerequisites": [
+            "正关系代数",
+            "交换半环",
+            "多项式"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "deep"
+        }
+      },
+      "identity": {
+        "doi": "10.1145/1265530.1265535",
+        "arxiv": null,
+        "other": null
+      },
+      "publicationStatus": "published",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-16",
+      "verifiedAt": "2026-11-16",
+      "readDepth": "fulltext",
+      "paperType": "theory",
+      "classic": true,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "本文不提供一般SQL差集、聚合和更新修复的统一现成实现。"
+      ],
+      "assumptions": [
+        "正关系代数的元组标注使用交换半环。"
+      ],
+      "evidence": [
+        {
+          "url": "https://web.cs.ucdavis.edu/~green/papers/pods07.pdf",
+          "claim": "核验题名、三位作者、Penn署名、PODS 2007，重点阅读§1–3及例图。",
+          "checkedAt": "2026-11-16"
+        },
+        {
+          "url": "https://www-old.sigmod.org/pods-home/acm-pods-alberto-o-mendelzon-test-of-time-award/",
+          "claim": "官方2017年度奖项条目明确表彰Provenance semirings。",
+          "checkedAt": "2026-11-16"
+        },
+        {
+          "url": "https://web.cs.ucdavis.edu/~green/INPROCEEDINGS.html",
+          "claim": "作者目录确认PODS 2007身份及全文链接。",
+          "checkedAt": "2026-11-16"
+        }
+      ],
+      "researchNotes": [
+        "正文重点核读§1–3及例图；后续递归算法与证明未完整复核；无复现声明。",
+        "2007经典，与2026新文严格分开；精确在线出版日未核定。",
+        "原图未完成独立素材校验，保留原文阅读入口。"
+      ],
+      "summaryEn": "Why can one query calculate multiplicities, possible worlds, and provenance? This paper unifies tuple annotations through commutative semirings: union and projection add, joins multiply, and polynomials preserve derivation structure. Start with examples and positive relational algebra to prepare for today’s ProvSQL paper. This is not a complete SQL or update-repair algorithm; recursion requires separate study of its fixed-point conditions.",
+      "visuals": {
+        "mainFigure": null,
+        "figureNote": "已读正文例图；未完成独立素材提取和视觉校验，不嵌图。",
+        "institutions": [
+          {
+            "name": "University of Pennsylvania",
+            "institutionId": "pennsylvania",
+            "institutionType": "university",
+            "markType": "compact-symbol",
+            "logo": {
+              "path": "assets/institutions/penn-shield.png",
+              "sourceUrl": "https://www.upenn.edu/themes/custom/penn_global/assets/img/simplified-shield.ico",
+              "evidenceUrl": "https://branding.web-resources.upenn.edu/logos-and-branding/download-penn-logos",
+              "rights": "Penn requests permission for the simplified shield and intended web placement at ucomms-web@upenn.edu. Its logo download page authorizes community use supporting its mission; no permission or open license is asserted here. Editorial affiliation identification only, no endorsement.",
+              "kind": "institution-logo",
+              "verifiedAt": "2026-10-31",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "credit": "University of Pennsylvania official compact mark",
+              "altEn": "Official simplified Penn shield; not ceremonial seal",
+              "altZh": "Official simplified Penn shield; not ceremonial seal",
+              "width": 229,
+              "height": 256,
+              "sha256": "7492435842823ff354408fded2cb147415b194f6f10cbffb735ac15b624bdf86"
+            },
+            "authorNames": [
+              "Todd J. Green",
+              "Grigoris Karvounarakis",
+              "Val Tannen"
+            ],
+            "evidence": [
+              {
+                "url": "https://web.cs.ucdavis.edu/~green/papers/pods07.pdf",
+                "claim": "论文首页署名。 / Paper-specific title-page affiliation.",
+                "checkedAt": "2026-11-16"
+              }
+            ],
+            "note": "复用机构库核验标识，不表示背书。 / Reused registry-verified mark, not endorsement."
+          }
+        ],
+        "authors": []
+      }
+    }
+  ]
+}

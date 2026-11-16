@@ -976,6 +976,27 @@
       "evidenceUrls": [
         "https://arxiv.org/html/2608.10600v1"
       ]
+    },
+    "doi-dd034839ba35fe7b82e0": {
+      "locationIds": [
+        "tsinghua"
+      ],
+      "unresolvedInstitutionIds": [
+        "pending-institute-for-infocomm-research-a-star",
+        "pending-nanyang-technological-university"
+      ],
+      "evidenceUrls": [
+        "https://wkguo.github.io/REMA/"
+      ]
+    },
+    "doi-88a672532b37a18d1030": {
+      "locationIds": [
+        "pennsylvania"
+      ],
+      "unresolvedInstitutionIds": [],
+      "evidenceUrls": [
+        "https://web.cs.ucdavis.edu/~green/papers/pods07.pdf"
+      ]
     }
   },
   "unresolvedInstitutions": {

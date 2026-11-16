@@ -326,7 +326,8 @@ test('Research calendar is available on all three profile feeds; month/date inte
  h.click({calendarMonth:'1'});h.click({calendarMonth:'-1'});h.click({calendarToday:'true'});
  assert.equal(h.run('JSON.stringify(state)'),before);
  h.click({calendarEvent:'cvpr-2027-enrollment'});
- assert.equal(h.run('calendarSelected'),'2026-11-11');assert.equal(h.run('calendarMonth'),'2026-11');
+ // Official enrollment is date-only; do not invent an AoE time or shift its date.
+ assert.equal(h.run('calendarSelected'),'2026-11-10');assert.equal(h.run('calendarMonth'),'2026-11');
  assert.match(h.element('research-calendar').innerHTML,/论文登记/);
  h.click({calendarUpcoming:'true'});assert.equal(h.run('calendarSelected'),'');
  for(const category of ['li','lv']){h.click({category});assert.equal(h.element('research-calendar').hidden,false);}

@@ -551,7 +551,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "沿用现有待核验记录；官方字标最低45px且素材未完成验证，不以字标冒充紧凑图徽。"
+      "note": "官方规范要求字标至少45px且不得拆分；不缩成40px图徽，保留名称。"
     },
     {
       "id": "pending-universit-de-lorraine",
@@ -6381,7 +6381,7 @@
       "status": "needs-verification",
       "alphaStatus": "not-applicable",
       "logo": null,
-      "note": "首页署名已核实；官方2026新身份说明与媒体页已查，未核验符合展示的独立紧凑符号，保留名称。"
+      "note": "已查官方媒体页；logo ZIP浏览工具不支持，未核验独立紧凑符号，保留名称。"
     },
     {
       "id": "pending-institut-universitaire-de-france",
@@ -6506,6 +6506,50 @@
       "alphaStatus": "not-applicable",
       "logo": null,
       "note": "新机构等待官方标识与使用条件核验；不接受未经核验的输入图片。"
+    },
+    {
+      "id": "pending-institute-for-infocomm-research-a-star",
+      "officialName": "Institute for Infocomm Research, A*STAR",
+      "aliases": [],
+      "institutionType": "research-institute",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "已主动搜索I2R标识；官方https://www.a-star.edu.sg/i2r与条款页均返回JavaScript机器人验证，未取得可核验紧凑素材。保留文字，不用A*STAR母机构或IAIC标识替代。 / Institute-specific logo search completed; official pages bot-gated, retain text instead of parent or IAIC marks."
+    },
+    {
+      "id": "pending-technion-israel-institute-of-technology",
+      "officialName": "Technion – Israel Institute of Technology",
+      "aliases": [],
+      "institutionType": "university",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "已打开官方品牌页，独立Technion symbol标为不可下载；不拆分组合标识，保留名称。"
+    },
+    {
+      "id": "pending-hebrew-university-of-jerusalem",
+      "officialName": "Hebrew University of Jerusalem",
+      "aliases": [],
+      "institutionType": "university",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "已搜索并打开官方logo页，其下载入口指向Drive；未获得并核验紧凑独立原图及权利，保留名称，不裁剪字标。"
+    },
+    {
+      "id": "pending-cole-normale-sup-rieure-paris",
+      "officialName": "École normale supérieure (Paris)",
+      "aliases": [],
+      "institutionType": "university",
+      "markType": "none",
+      "status": "needs-verification",
+      "alphaStatus": "not-applicable",
+      "logo": null,
+      "note": "官方logo使用需传播部门同意，未取得许可，不以其他ENS学校标志替代。"
     }
   ]
 }

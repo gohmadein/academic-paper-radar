@@ -1,0 +1,555 @@
+{
+  "version": 2,
+  "date": "2026-11-15",
+  "title": "2026-11-15 零域论文精选",
+  "demo": false,
+  "timezone": "Asia/Shanghai",
+  "issueNote": "本期3篇独立论文：迅2篇期刊、会议缺3篇，李1篇，驴1篇与迅共用记录。近期与较早首次发现分别标记；有限检索，不宣称全源覆盖或独立复现。",
+  "coverage": {
+    "checkedSources": [
+      "IEEE T-RO/RA-L 官方出版搜索索引与论文页（直接访问分别受418限制）",
+      "ALORE arXiv HTML 摘要、方法、实验与限制、署名及Figure 1",
+      "REMA 作者项目页摘要、结果、限制、署名和资源状态",
+      "SIGMOD 2026 官方论文名单、ACM DOI出版索引、数据库修复论文HTML摘要和第1/8节",
+      "CoRL 2026 官方accepted-papers入口及SPARK候选：嵌入内容尚未取得可用录用证据，OpenReview验证墙",
+      "既有机构库本地资产与本期每篇署名；新增机构官方素材主动查找",
+      "arXiv 六分类11月13日批次：1792分类记录、1408去重ID；仅完成抓取与初筛，未完成全量导读和署名核验"
+    ],
+    "limitations": [
+      "迅精选不足：会议 0/3，期刊 2/2；近期会议候选的官方录用、完整署名及素材核验未完整通过，本轮不以预印本或workshop补位。",
+      "李与驴各1篇，不凑数；REMA仅摘要和项目页导读，ALORE和数据库修复为重点章节阅读，均未复现。",
+      "未穷尽配置中的全部会议、期刊和团队；不把有限检索称为全源覆盖。",
+      "独立arXiv模块11月13日批次尚未完成全量相关性筛选、导读与署名校徽核验；本次保留已验证历史，不将未完成报告成0篇或11月15日新稿。",
+      "I2R、Technion与Hebrew University紧凑标识仍待核验，仅显示真实名称；清华及HKUST(Guangzhou)既有非全透明素材保留背景例外。"
+    ]
+  },
+  "papers": [
+    {
+      "id": "arxiv-2602-04214",
+      "title": "ALORE：足式机械臂的大型物体自主重排",
+      "titleEn": "ALORE: Autonomous Large-Object Rearrangement with a Legged Manipulator",
+      "authors": [
+        "Zhihai Bi",
+        "Yushan Zhang",
+        "Kai Chen",
+        "Guoyang Zhao",
+        "Yulin Li",
+        "Jun Ma"
+      ],
+      "year": 2026,
+      "venue": "IEEE Transactions on Robotics (Early Access)",
+      "tags": [
+        "移动操作",
+        "分层强化学习",
+        "任务与运动规划"
+      ],
+      "summary": "搬动桌椅需要同时协调行走、抓持与多物体排序。ALORE用分层强化学习控制物体速度，以交互图表示和速度估计统一不同物体，再用任务与运动规划安排访问顺序。作者报告约40分钟连续重排32把椅子和约40米移动演示；但需预先给定近似位置、目标与可抓区域，未见摩擦条件下的泛化仍有限。",
+      "whySelected": "近期正式期刊工作；将学习控制与多物体规划结合，展示超越桌面小物体操作的系统能力。",
+      "sources": [
+        {
+          "label": "正式期刊",
+          "url": "https://ieeexplore.ieee.org/abstract/document/11754044"
+        },
+        {
+          "label": "开放全文",
+          "url": "https://arxiv.org/html/2602.04214v1"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "关注物体中心控制、全身运动与任务规划的接口。",
+          "relation": "机器人学习与大型物体移动操作，非纯机构设计。",
+          "prerequisites": [
+            "分层强化学习",
+            "全身控制",
+            "任务与运动规划"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": "10.1109/tro.2026.3747611",
+        "arxiv": "2602.04214",
+        "other": null
+      },
+      "publicationStatus": "published",
+      "publicationDate": "2026-10-26",
+      "discoveredDate": "2026-11-15",
+      "verifiedAt": "2026-11-15",
+      "readDepth": "fulltext",
+      "paperType": "system",
+      "classic": false,
+      "novelty": "recent",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "正文重点核读，不是通读、复现或安全认证。",
+        "泛化主要限于相似交互构型；未覆盖的摩擦模型可能降低性能。"
+      ],
+      "assumptions": [
+        "对象近似初始位置、目标位姿与可抓区域预先给定。"
+      ],
+      "evidence": [
+        {
+          "url": "https://ieeexplore.ieee.org/abstract/document/11754044",
+          "claim": "IEEE官方索引核实T-RO Early Access、DOI和2026-10-26出版日期；直接打开返回418，未绕过访问限制。",
+          "checkedAt": "2026-11-15"
+        },
+        {
+          "url": "https://arxiv.org/html/2602.04214v1",
+          "claim": "核读作者署名、摘要、系统总览、真机连续重排及局限；论文图1为系统概览。",
+          "checkedAt": "2026-11-15"
+        }
+      ],
+      "researchNotes": [
+        "核读预印本正文第III节、第VII-G节和第VIII节，期刊正式身份另由IEEE出版记录核实；两者版本差异未全面比较。",
+        "论文给出的项目页 https://zhihaibi.github.io/Alore/ 本轮404，代码、数据和视频独立链接未核验，不把作者开源声明当作已验证可下载。",
+        "2026-11-15补查 https://brand.hkust.edu.hk/hkustgz-marks ：仅发现单位组合标识，未确认可替换的透明独立广州校徽；复用原已核验192px原生白底图，仍待透明版本。"
+      ],
+      "summaryEn": "Moving furniture requires coordinated walking, grasping and multi-object ordering. ALORE controls object velocity with hierarchical reinforcement learning, unifies different objects through an interaction graph and velocity estimation, and schedules visits with task-and-motion planning. The authors report 32 chair rearrangements over roughly 40 minutes and a roughly 40-metre demonstration. Approximate positions, targets and graspable regions must be provided, and generalization to unseen friction conditions remains limited.",
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/alore-5743dec362ea6bf7.webp",
+          "sha256": "5743dec362ea6bf7a03ca14906466028e90789cc5e54bc6c1c98b263c0e55bbc",
+          "width": 1400,
+          "height": 597,
+          "sourceUrl": "https://arxiv.org/html/2602.04214v1/images/head.png",
+          "evidenceUrl": "https://arxiv.org/html/2602.04214v1",
+          "verifiedAt": "2026-11-15",
+          "credit": "Zhihai Bi et al. · Figure 1",
+          "rights": "Copyright retained by the paper authors/rightsholders. Attributed editorial thumbnail; no separate reuse permission or open licence asserted. arXiv hosting licence is not a general reuse licence.",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "transparent",
+          "altZh": "ALORE图1：系统模块、不同物体交互、连续椅子重排与长距离路线",
+          "altEn": "ALORE Figure 1: system modules, object interactions, continuous chair rearrangement and a long-distance route"
+        },
+        "figureNote": "论文原始图1完整等比例缩至1400×597，WebP优化，无裁切、重绘或内容生成；保留原图核验记录。",
+        "institutions": [
+          {
+            "name": "The Hong Kong University of Science and Technology (Guangzhou)",
+            "institutionId": "pending-the-hong-kong-university-of-science-and-technology-guangzhou",
+            "institutionType": "university",
+            "markType": "emblem",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-14122e0f5f95538c.png",
+              "sha256": "14122e0f5f95538cfaf475e1bb42c2d72202d5bfee7024eef2fc712c63310b65",
+              "width": 192,
+              "height": 192,
+              "sourceUrl": "https://material.hkust-gz.edu.cn/wp-content/uploads/2023/04/cropped-favicon-1-1-192x192.png",
+              "evidenceUrl": "https://www.hkust-gz.edu.cn/",
+              "verifiedAt": "2026-11-03",
+              "credit": "The Hong Kong University of Science and Technology (Guangzhou) · official-source compact identity mark",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. Campus-specific marks and names remain subject to respective University Name and Marks policies. Policy: https://brand.hkust.edu.hk/hkustgz-marks",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "light",
+              "altZh": "The Hong Kong University of Science and Technology (Guangzhou) 官方独立校徽或图形标志",
+              "altEn": "Official compact institutional symbol of The Hong Kong University of Science and Technology (Guangzhou)"
+            },
+            "authorNames": [
+              "Zhihai Bi",
+              "Yushan Zhang",
+              "Kai Chen",
+              "Guoyang Zhao",
+              "Yulin Li",
+              "Jun Ma"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2602.04214v1",
+                "claim": "首页明确六位作者均署名HKUST(Guangzhou) Robotics and Autonomous Systems Thrust。",
+                "checkedAt": "2026-11-15"
+              }
+            ],
+            "note": "按本文署名复用现有稳定机构ID及原SHA；原生白底非全透明，不替换为香港校区标识。"
+          }
+        ],
+        "authors": []
+      },
+      "formalPublication": {
+        "type": "journal",
+        "evidenceUrl": "https://ieeexplore.ieee.org/abstract/document/11754044"
+      }
+    },
+    {
+      "id": "doi-dd034839ba35fe7b82e0",
+      "title": "REMA：用显式流形对齐提高机器人在线强化学习效率",
+      "titleEn": "Efficient Online Robotic Reinforcement Learning With Explicit Manifold Alignment",
+      "authors": [
+        "Wenkai Guo",
+        "Peizhi Tang",
+        "Yukun Bai",
+        "Ziming Yan",
+        "Haoyuan Deng",
+        "Guanxing Lu",
+        "Shijie Li",
+        "Ziwei Wang"
+      ],
+      "year": 2026,
+      "venue": "IEEE Robotics and Automation Letters 11(11)",
+      "tags": [
+        "机器人学习",
+        "在线强化学习",
+        "操作"
+      ],
+      "summary": "REMA从成功轨迹构建参考流形，对偏离流形的失败样本施加小惩罚，以校准在线强化学习。作者报告所测真人干预机器人任务的自主成功率从62.5%提高到80.6%，干预率从60.8%降至29.9%；不构成普遍性能保证。",
+      "whySelected": "较早论文 · 首次发现；研究操作学习中失败样本的利用。 / Older first discovery: using failures in manipulation learning.",
+      "sources": [
+        {
+          "label": "正式出版 / Publication",
+          "url": "https://ieeexplore.ieee.org/abstract/document/11668937/"
+        },
+        {
+          "label": "作者项目 / Project",
+          "url": "https://wkguo.github.io/REMA/"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun",
+        "lv"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "较早首次发现；先读摘要与项目概览。 / Older first discovery; start with abstract and overview.",
+          "relation": "P0机器人操作及在线强化学习。 / P0 manipulation and online RL.",
+          "prerequisites": [
+            "经验回放与奖励塑形 / Replay and reward shaping"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "skim"
+        },
+        "lv": {
+          "whyRead": "较早首次发现；先读摘要与项目概览。 / Older first discovery; start with abstract and overview.",
+          "relation": "P0机器人操作及在线强化学习。 / P0 manipulation and online RL.",
+          "prerequisites": [
+            "经验回放与奖励塑形 / Replay and reward shaping"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "skim"
+        }
+      },
+      "identity": {
+        "doi": "10.1109/lra.2026.3728323",
+        "arxiv": null,
+        "other": null
+      },
+      "publicationStatus": "published",
+      "publicationDate": "2026-08-28",
+      "discoveredDate": "2026-11-15",
+      "verifiedAt": "2026-11-15",
+      "readDepth": "abstract",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "project": "https://wkguo.github.io/REMA/",
+        "code": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "单峰参考偏好既有策略，多种解法需扩展。 / A unimodal reference favors known strategies; multiple solutions need extensions.",
+        "全局距离可能误判空间偏差或局部停顿；主要适合准静态操作。 / Global distance may misclassify spatial deviations or local hesitation; mainly suited to quasi-static manipulation."
+      ],
+      "assumptions": [
+        "需要成功轨迹作为参考。 / Successful reference trajectories are needed."
+      ],
+      "evidence": [
+        {
+          "url": "https://ieeexplore.ieee.org/abstract/document/11668937/",
+          "claim": "IEEE官方索引元数据：RA-L 11(11):12703–12710、DOI、在线日期和摘要；直接抓取418，搜索索引可读。 / IEEE indexed metadata and abstract; direct fetch returned 418.",
+          "checkedAt": "2026-11-15"
+        },
+        {
+          "url": "https://wkguo.github.io/REMA/",
+          "claim": "完整作者、本文单位、方法、结果和局限；代码未发布。 / Complete authors, paper affiliations, method, results, limitations; code unavailable.",
+          "checkedAt": "2026-11-15"
+        }
+      ],
+      "researchNotes": [
+        "前沿线：已核验出版社摘要、元数据和项目Method、Results、Failure cases and limitations。正文具体章节/图号未核验，未执行代码或复现。 / Frontier: publisher abstract, metadata and project Method, Results, Failure cases and limitations checked; paper section/figure numbers unverified; no execution or replication.",
+        "在线发表2026-08-28；November是卷期，不冒充近期论文。代码coming soon，留空。 / Online publication: 2026-08-28; November is the issue date, not recent publication. Code is coming soon and left null.",
+        "阅读顺序：项目摘要→方法→结果→局限。 / Read project abstract, method, results, then limitations."
+      ],
+      "summaryEn": "REMA builds a reference manifold from successful trajectories and mildly penalizes off-manifold failures to calibrate online RL. The authors report autonomous success increasing from 62.5% to 80.6% and intervention decreasing from 60.8% to 29.9% on the evaluated human-in-the-loop robotic tasks; these are not universal guarantees.",
+      "visuals": {
+        "mainFigure": null,
+        "figureNote": "已查看真实项目流程图https://wkguo.github.io/REMA/assets/images/pipeline.png；未确认再发布许可，保留项目入口，不生成替代图。 / Original project pipeline inspected; redistribution permission unverified, link only.",
+        "institutions": [
+          {
+            "institutionId": "pending-nanyang-technological-university",
+            "name": "Nanyang Technological University",
+            "institutionType": "university",
+            "markType": "emblem",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-88bb77c7989b3a5d.svg",
+              "sha256": "88bb77c7989b3a5d875f60b368179fb7f5dedcdb10b4643d121cdd57eb68d0b6",
+              "width": 260,
+              "height": 330,
+              "sourceUrl": "https://www3.ntu.edu.sg/CorpComms2/NTU%20Quick%20Brand%20Guide%202018.pdf",
+              "evidenceUrl": "https://www.ntu.edu.sg/about-us/history/coat-of-arms",
+              "verifiedAt": "2026-11-03",
+              "credit": "NTU Singapore official-source complete shield",
+              "rights": "Institutional trademark and copyright remain with their owners. No separate permission obtained, no open licence or legal clearance claimed. Use solely as a small descriptive paper-affiliation thumbnail, not endorsement; preserve the complete mark, geometry and native colors. NTU current Terms of Use requires prior written consent for its name, logo and crest. 2018 master-logo instructions require the master logo to remain unaltered and specify minimum 106px digital width and crest-based clear space. This is source verification, not a permission grant. Policy: https://www.ntu.edu.sg/legal/terms-of-use",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "南洋理工大学官方来源完整盾徽",
+              "altEn": "NTU Singapore official-source complete shield"
+            },
+            "authorNames": [
+              "Wenkai Guo",
+              "Peizhi Tang",
+              "Yukun Bai",
+              "Ziming Yan",
+              "Haoyuan Deng",
+              "Ziwei Wang"
+            ],
+            "evidence": [
+              {
+                "url": "https://wkguo.github.io/REMA/",
+                "claim": "本文作者署名 / Paper-specific author affiliation",
+                "checkedAt": "2026-11-15"
+              }
+            ],
+            "note": "复用已核验盾徽，文件哈希一致。 / Existing verified shield; hash matches."
+          },
+          {
+            "institutionId": "tsinghua",
+            "name": "Tsinghua University",
+            "institutionType": "university",
+            "markType": "emblem",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/tsinghua-emblem.jpg",
+              "sha256": "edb1c56f1d4399ef32430f418cb179169e04955e75d95eb57c001e5b2f069ade",
+              "width": 554,
+              "height": 385,
+              "sourceUrl": "https://www.tsinghua.edu.cn/__local/C/B6/1C/5682B1124834BFE4B7BB43744CF_C7C409E3_C2FAA.pdf",
+              "evidenceUrl": "https://www.env.tsinghua.edu.cn/qinghuadaxueerjidanweibiaozhiguifanshouce-shixing.pdf",
+              "verifiedAt": "2026-10-31",
+              "credit": "Tsinghua University official emblem",
+              "rights": "官方校徽；无开放复用许可声明，保持原几何、颜色及安全空间。来源为官方章程PDF及二级单位标志规范。",
+              "displayPolicy": "official-brand",
+              "background": "light",
+              "altZh": "清华大学官方紫色校徽",
+              "altEn": "Official purple Tsinghua University emblem"
+            },
+            "authorNames": [
+              "Guanxing Lu"
+            ],
+            "evidence": [
+              {
+                "url": "https://wkguo.github.io/REMA/",
+                "claim": "本文作者署名 / Paper-specific author affiliation",
+                "checkedAt": "2026-11-15"
+              }
+            ],
+            "note": "本文单位Shenzhen International Graduate School, Tsinghua University；保留分院全称，展示学校校徽。 / Paper affiliation: Shenzhen International Graduate School, Tsinghua University."
+          },
+          {
+            "institutionId": "pending-institute-for-infocomm-research-a-star",
+            "name": "Institute for Infocomm Research, A*STAR",
+            "institutionType": "research-institute",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Shijie Li"
+            ],
+            "evidence": [
+              {
+                "url": "https://wkguo.github.io/REMA/",
+                "claim": "本文作者署名 / Paper-specific author affiliation",
+                "checkedAt": "2026-11-15"
+              }
+            ],
+            "note": "已主动搜索I2R标识；官方https://www.a-star.edu.sg/i2r与条款页均返回JavaScript机器人验证，未取得可核验紧凑素材。保留文字，不用A*STAR母机构或IAIC标识替代。 / Institute-specific logo search completed; official pages bot-gated, retain text instead of parent or IAIC marks."
+          }
+        ],
+        "authors": []
+      },
+      "formalPublication": {
+        "type": "journal",
+        "evidenceUrl": "https://ieeexplore.ieee.org/abstract/document/11668937/"
+      }
+    },
+    {
+      "id": "arxiv-2512-08526",
+      "title": "通过数据库修复分析单调趋势偏离",
+      "titleEn": "Analyzing Deviations from Monotonic Trends through Database Repair",
+      "authors": [
+        "Shunit Agmon",
+        "Jonathan Gal",
+        "Amir Gilad",
+        "Ester Livshits",
+        "Or Mutay",
+        "Brit Youngmann",
+        "Benny Kimelfeld"
+      ],
+      "year": 2026,
+      "venue": "PACMMOD 4(1) / SIGMOD 2026",
+      "tags": [
+        "约束修复",
+        "聚合查询",
+        "可解释更新"
+      ],
+      "summary": "当分组聚合结果偏离预期单调趋势时，能否用最少删除量衡量偏离程度？论文提出聚合顺序依赖，将问题化为最大保留子表，并给出动态规划、聚合专用优化与启发式。它为约束修复提供了可解释的量化视角，但删除不代表原数据错误，更不证明因果关系；平均值仍计算昂贵，启发式也不保证最优。",
+      "whySelected": "较早论文 · 首次发现；原方向约束修复，不以会议声望替代贡献核验。",
+      "sources": [
+        {
+          "label": "正式出版",
+          "url": "https://doi.org/10.1145/3786624"
+        },
+        {
+          "label": "开放正文",
+          "url": "https://arxiv.org/html/2512.08526v1"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "li"
+      ],
+      "recommendations": {
+        "li": {
+          "whyRead": "建议现在阅读：比较精确最小删除与快速启发式，关注修复代价和解释可靠性。",
+          "relation": "直接关联约束修复与最小改动；不是固定本体映射下VKG反向更新算法。",
+          "prerequisites": [
+            "SQL分组聚合",
+            "基数修复",
+            "动态规划与NP难性"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": "10.1145/3786624",
+        "arxiv": "2512.08526",
+        "other": null
+      },
+      "publicationStatus": "published",
+      "publicationDate": "2026-04-07",
+      "discoveredDate": "2026-11-15",
+      "verifiedAt": "2026-11-15",
+      "readDepth": "fulltext",
+      "paperType": "theory",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "SUM与AVG一般情形NP-hard，文中相应算法为弱多项式；AVG仍计算昂贵。",
+        "启发式不保证修复质量；本文不是因果推断或实际数据删除建议。",
+        "多个AOD、连接、单元格更新及插入是未来方向；未复现或完整审计证明。"
+      ],
+      "assumptions": [
+        "用元组删除恢复单个聚合顺序依赖，以删除基数度量偏离。"
+      ],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/html/2512.08526v1",
+          "claim": "核读摘要、§1、§8及首页作者署名；明确方法和限制。",
+          "checkedAt": "2026-11-15"
+        },
+        {
+          "url": "https://arxiv.org/abs/2512.08526",
+          "claim": "核实完整作者、题名及2025-12-09预印本日期。",
+          "checkedAt": "2026-11-15"
+        },
+        {
+          "url": "https://2026.sigmod.org/sigmod_papers.shtml",
+          "claim": "SIGMOD官方录用名单列出同题名、全体作者及机构。",
+          "checkedAt": "2026-11-15"
+        },
+        {
+          "url": "https://doi.org/10.1145/3786624",
+          "claim": "ACM公开搜索记录列出Published 07 April 2026及PACMMOD 4(1)；直接打开403。",
+          "checkedAt": "2026-11-15"
+        }
+      ],
+      "researchNotes": [
+        "只核读正文摘要、§1及§8，未完整证明复核或运行实验。建议先看AOD与C-repair定义，再比较精确/启发式边界。",
+        "arXiv v1保留未填写ACM模板的2018和占位DOI，未采用这些占位字段；正式出版日期依据ACM索引，期号February 2026不等同文章出版日。",
+        "代码与项目未核实，保持null。原方向检索未发现本轮可核实的近30日未推新作；本篇明确较早首次发现。",
+        "与更新任务的关系：研究固定关系数据上的删除修复，不恢复VKG源模式或映射；方案是满足单个聚合顺序依赖的元组删除集合。最少删除是优化目标，不等于已证明所有副作用必要；未研究交互式用户接受。精确算法与无质量保证的启发式须区分；实验评估作者实现的效率与修复质量，不构成独立复现或因果效应证明。 / Relation to updates: tuple-deletion repair on fixed relational data, not VKG source or mapping recovery. Minimum deletion is the objective, not a guarantee that every side effect is necessary. Interactive user acceptance is not studied. Exact algorithms differ from heuristics without quality guarantees; author experiments do not constitute independent replication or causal evidence."
+      ],
+      "summaryEn": "When grouped aggregates violate an expected monotonic trend, can minimum deletion quantify the deviation? This paper introduces aggregate order dependencies and seeks the largest retained subtable, using dynamic programming, aggregate-specific optimizations and heuristics. It offers an interpretable measure for constraint repair, but deletion does not establish erroneous data or causality. Average remains expensive and the heuristic has no optimality guarantee.",
+      "visuals": {
+        "mainFigure": null,
+        "figureNote": "已查开放正文Figure 1标题和作者PDF入口 https://amirgilad.github.io/publication/sigmod26_2/deviations.pdf ，未取得并目视核验独立原图字节及再分发依据，主图保留null，不生成科学图。",
+        "institutions": [
+          {
+            "name": "Technion – Israel Institute of Technology",
+            "institutionType": "university",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Shunit Agmon",
+              "Jonathan Gal",
+              "Ester Livshits",
+              "Or Mutay",
+              "Brit Youngmann",
+              "Benny Kimelfeld"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2512.08526v1",
+                "claim": "正文首页明确署名该机构及相应作者。",
+                "checkedAt": "2026-11-15"
+              },
+              {
+                "url": "https://www.technion.ac.il/brand/",
+                "claim": "已打开官方品牌页，独立Technion symbol标为不可下载；不拆分组合标识，保留名称。",
+                "checkedAt": "2026-11-15"
+              }
+            ],
+            "note": "已打开官方品牌页，独立Technion symbol标为不可下载；不拆分组合标识，保留名称。",
+            "institutionId": "pending-technion-israel-institute-of-technology"
+          },
+          {
+            "name": "Hebrew University of Jerusalem",
+            "institutionType": "university",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Amir Gilad"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2512.08526v1",
+                "claim": "正文首页明确署名该机构及相应作者。",
+                "checkedAt": "2026-11-15"
+              },
+              {
+                "url": "https://brand.huji.ac.il/university-logo",
+                "claim": "已搜索并打开官方logo页，其下载入口指向Drive；未获得并核验紧凑独立原图及权利，保留名称，不裁剪字标。",
+                "checkedAt": "2026-11-15"
+              }
+            ],
+            "note": "已搜索并打开官方logo页，其下载入口指向Drive；未获得并核验紧凑独立原图及权利，保留名称，不裁剪字标。",
+            "institutionId": "pending-hebrew-university-of-jerusalem"
+          }
+        ],
+        "authors": []
+      }
+    }
+  ]
+}
