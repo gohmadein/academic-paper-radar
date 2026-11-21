@@ -1,0 +1,1349 @@
+{
+  "version": 2,
+  "date": "2026-11-17",
+  "title": "2026-11-17 零域论文精选",
+  "demo": false,
+  "timezone": "Asia/Shanghai",
+  "issueNote": "2026-11-17 积压补建档案（于 2026-11-21 按原真实日期核验重建，与已发布历史去重）。本期迅 3 篇正式会议 + 2 篇正式期刊（满额）、李 1 篇核心理论、驴 2 篇与迅共用记录，共 6 篇独立论文；不含周一经典。",
+  "coverage": {
+    "checkedSources": [
+      "RSS 2026 官方录用论文页面（roboticsconference.org/2026/program/papers/75/）与 CoRL 2026 OpenReview 官方录用记录",
+      "Crossref 官方 DOI 元数据（IEEE T-RO Vol. 42、ACM PACMMOD / PODS 2026）",
+      "arXiv 官方正文 HTML、许可声明、原始图 1 与历史注册表去重核查"
+    ],
+    "limitations": [
+      "本日期为 2026-11-21 积压补建，原日无预存候选包，已按原日期与历史注册表严格去重并如实标注核验日为 2026-11-21。",
+      "来源仅限本轮实际访问核验的会议、期刊与公开全文，不宣称全源覆盖。",
+      "未能确定精确在线首刊日的会议/期刊论文 publicationDate 留空并标注较早发现，不猜测日期。"
+    ]
+  },
+  "papers": [
+    {
+      "id": "arxiv-2602-04215",
+      "title": "OAT：面向自回归机器人策略的有序动作分词",
+      "titleEn": "OAT: Ordered Action Tokenization",
+      "authors": [
+        "Chaoqi Liu",
+        "Xiaoshen Han",
+        "Jiawei Gao",
+        "Yue Zhao",
+        "Haonan Chen",
+        "Yilun Du"
+      ],
+      "year": 2026,
+      "venue": "RSS 2026（已录用 / accepted）",
+      "tags": [
+        "机器人学习",
+        "动作分词",
+        "自回归策略"
+      ],
+      "summary": "把连续机器人动作交给自回归策略时，现有分词器要么序列过长，要么缺乏因果顺序。OAT通过嵌套dropout与寄存器机制，将动作块压缩为从粗到细、任意前缀均可解码的离散词元，在20余项仿真任务与真实操作上优于扩散和流匹配基线。它在推理时支持按需调节词元数以权衡精度与延迟，但离散重建误差和跨本体通用性仍待验证。",
+      "summaryEn": "When feeding continuous robot actions to autoregressive policies, existing tokenizers yield overly long sequences or lack causal ordering. OAT uses nested dropout and registers to compress action chunks into coarse-to-fine discrete tokens whose prefixes are all decodable, outperforming diffusion and flow-matching baselines across 20+ simulated and real manipulation tasks. It trades accuracy for latency via variable prefix decoding, though discretization error and cross-embodiment transfer remain open.",
+      "whySelected": "RSS 2026 正式主会录用论文；用有序离散词元打通自回归动作生成与按需解码，对 VLA 动作表征设计极具参考价值。",
+      "sources": [
+        {
+          "label": "原文 / Full text",
+          "url": "https://arxiv.org/html/2602.04215v2"
+        },
+        {
+          "label": "正式会议身份 / Formal venue",
+          "url": "https://roboticsconference.org/2026/program/papers/75/"
+        },
+        {
+          "label": "项目主页 / Project page",
+          "url": "https://ordered-action-tokenization.github.io/"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun",
+        "lv"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "RSS 2026 正式论文；重点看有序动作分词如何同时兼顾压缩率、全前缀可解码与自回归建模效率。",
+          "relation": "直接连接连续动作分块、离散词元化（FAST/VQ-VAE）与自回归机器人策略。",
+          "prerequisites": [
+            "动作分块 / Action chunking",
+            "矢量量化 / Vector quantization",
+            "自回归序列建模 / Autoregressive modeling"
+          ],
+          "difficulty": "intermediate",
+          "readRecommendation": "deep"
+        },
+        "lv": {
+          "whyRead": "P0/P2 核心动作表征线：理解为什么连续控制动作需要“从粗到细”排序才能被 Transformer 高效预测。",
+          "relation": "衔接视觉运动模仿学习与 VLA 离散动作头设计，适合与扩散策略对照阅读。",
+          "prerequisites": [
+            "模仿学习基础 / Imitation learning basics",
+            "Transformer 序列预测 / Transformer sequence modeling"
+          ],
+          "difficulty": "intermediate",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2602.04215",
+        "other": null
+      },
+      "publicationStatus": "accepted",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-17",
+      "verifiedAt": "2026-11-21",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": "https://ordered-action-tokenization.github.io/",
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "离散分词本质上引入重建量化误差，超高精度接触任务下可能需更长前缀词元。 / Discrete tokenization introduces quantization error and may need longer prefixes for fine contact tasks.",
+        "当前主要在单臂桌面与仿真基准验证，尚未系统检验双臂高自由度灵巧手的跨本体词表复用。 / Primarily evaluated on single-arm tabletop and simulation benchmarks; cross-embodiment bimanual dexterous reuse is untested."
+      ],
+      "assumptions": [
+        "动作块存在可由低维到高维分层表达的时空相关性，且训练分布覆盖目标任务动作空间。 / Assumes action chunks exhibit coarse-to-fine spatiotemporal structure covered by training data."
+      ],
+      "evidence": [
+        {
+          "url": "https://roboticsconference.org/2026/program/papers/75/",
+          "claim": "RSS 2026 官方录用论文页面确认 OAT: Ordered Action Tokenization 为正式主会录用论文。 / Official RSS 2026 papers page confirms formal acceptance of OAT: Ordered Action Tokenization.",
+          "checkedAt": "2026-11-21"
+        },
+        {
+          "url": "https://arxiv.org/html/2602.04215v2",
+          "claim": "正文 HTML 核验作者、论文署名机构、方法结构与实验边界。 / Full-text HTML verified authors, affiliations, method, and evaluation boundaries.",
+          "checkedAt": "2026-11-21"
+        },
+        {
+          "url": "https://ordered-action-tokenization.github.io/",
+          "claim": "项目主页已于本轮实测 HTTP 200 可访问；不声称完整复现实验。 / Project page verified reachable (HTTP 200); no reproduction claimed.",
+          "checkedAt": "2026-11-21"
+        }
+      ],
+      "researchNotes": [
+        "正文重点核读 §III–V：先看嵌套 dropout 诱导词元左到右因果排序的机理，再对照 LIBERO/真机消融。",
+        "驴·阅读路线：先读摘要与图1直觉，再对照 §III 动作分词三类方案（分箱/频域/潜变量），最后精读 §IV-B 有序化训练与前缀截断推理实验。"
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/oat-822849ebd7.png",
+          "sha256": "822849ebd7db4896890d1a21bc92629b899ee9680f805a05e45324bf76f26e86",
+          "width": 551,
+          "height": 495,
+          "sourceUrl": "https://arxiv.org/html/2602.04215v2/figures/iiwa_rollout_ghosted/1tok.png",
+          "evidenceUrl": "https://arxiv.org/html/2602.04215v2",
+          "verifiedAt": "2026-11-21",
+          "credit": "Chaoqi Liu et al. · Original paper figure",
+          "rights": "Paper distributed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), verified from arXiv license link. Authors retain copyright. Original figure used unmodified as scholarly preview.",
+          "displayPolicy": "open-license",
+          "background": "light",
+          "altZh": "OAT 原论文图：仅用少量有序动作词元即可从粗到细重建机械臂动作轨迹",
+          "altEn": "OAT original figure illustrating coarse-to-fine robot trajectory reconstruction from ordered action tokens"
+        },
+        "figureNote": "",
+        "institutions": [
+          {
+            "name": "Harvard University",
+            "institutionId": "harvard",
+            "institutionType": "university",
+            "markType": "emblem",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/harvard-shield.png",
+              "sha256": "2cb61f339af6d378bccaba83fe1636151c5d7e421a720f7781305f9171a4eff8",
+              "width": 192,
+              "height": 192,
+              "sourceUrl": "https://www.harvard.edu/wp-content/uploads/2020/10/cropped-logo-branding-compressed.png?w=192",
+              "evidenceUrl": "https://www.harvard.edu/",
+              "verifiedAt": "2026-10-31",
+              "credit": "Harvard University official emblem",
+              "rights": "Harvard商标归原权利人，未核实开放复用许可；仅作论文署名身份说明，不表示背书。Gazette内容转载规则另有标志许可要求。",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "altZh": "Harvard University 官方 Veritas 盾徽",
+              "altEn": "Official Harvard University Veritas shield"
+            },
+            "authorNames": [
+              "Chaoqi Liu",
+              "Xiaoshen Han",
+              "Jiawei Gao",
+              "Haonan Chen",
+              "Yilun Du"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2602.04215v2",
+                "claim": "核验本文作者署名机构：Harvard University（Chaoqi Liu、Xiaoshen Han、Jiawei Gao、Haonan Chen 等）。 / Paper-specific affiliation verified: Harvard University.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "Stanford University",
+            "institutionId": "pending-stanford-university",
+            "institutionType": "university",
+            "markType": "compact-symbol",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-2ceebac173ad7d21.png",
+              "sha256": "2ceebac173ad7d219be7f061661b6d9118efe9080e696b0add9a563e4cfd8294",
+              "width": 400,
+              "height": 400,
+              "sourceUrl": "https://identity.stanford.edu/wp-content/uploads/sites/3/2020/07/block-s-right.png",
+              "evidenceUrl": "https://identity.stanford.edu/visual-identity/stanford-logos/block-s/",
+              "verifiedAt": "2026-11-03",
+              "credit": "Stanford University · official complete mark",
+              "rights": "Official institutional mark; trademark/copyright retained by its owner. Public-source verification is not a blanket reuse licence or separate permission. For factual non-commercial paper-affiliation identification only, not endorsement. Preserve the complete mark, its native colours, aspect ratio and clear space; review linked university guidance.",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "altZh": "斯坦福大学官方红色 S 与绿树符号",
+              "altEn": "Stanford University official Block S with Tree"
+            },
+            "authorNames": [
+              "Yue Zhao"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2602.04215v2",
+                "claim": "核验本文作者署名机构：Stanford University（Yue Zhao）。 / Paper-specific affiliation verified: Stanford University.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          }
+        ],
+        "authors": []
+      },
+      "formalPublication": {
+        "type": "conference",
+        "evidenceUrl": "https://roboticsconference.org/2026/program/papers/75/"
+      }
+    },
+    {
+      "id": "arxiv-2602-02481",
+      "title": "FPO++：面向机器人控制的流匹配策略梯度",
+      "titleEn": "Flow Policy Gradients for Robot Control",
+      "authors": [
+        "Brent Yi",
+        "Hongsuk Choi",
+        "Himanshu Gaurav Singh",
+        "Xiaoyu Huang",
+        "Takara E. Truong",
+        "Carmelo Sferrazza",
+        "Yi Ma",
+        "Rocky Duan",
+        "Pieter Abbeel",
+        "Guanya Shi",
+        "Karen Liu",
+        "Angjoo Kanazawa"
+      ],
+      "year": 2026,
+      "venue": "CoRL 2026 · Oral（已录用 / accepted）",
+      "tags": [
+        "机器人强化学习",
+        "流匹配策略",
+        "人形机器人"
+      ],
+      "summary": "传统策略梯度依赖高斯等显式似然分布，限制了多模态动作表达。FPO++改进流匹配策略梯度目标，无需精确计算动作似然即可直接从奖励训练和微调高表达力流策略，在足式行走、人形动作跟踪与操作任务中实现双平台零样本真机迁移。它为强化学习引入生成式动作分布提供了实用方案，但多步采样开销与超参敏感性仍需权衡。",
+      "summaryEn": "Likelihood-based policy gradients restrict policies to simple Gaussians, limiting multimodal action expressiveness. FPO++ refines flow-matching policy gradients to train and fine-tune expressive flow policies directly from rewards without exact action likelihoods, achieving zero-shot sim-to-real transfer across quadrupeds, two humanoid robots, and manipulation tasks. It offers a practical generative RL recipe, though multi-step sampling overhead and hyperparameter sensitivity remain trade-offs.",
+      "whySelected": "CoRL 2026 Oral；将流匹配生成式策略直接接入在线强化学习并跑通两台人形真机迁移，代表控制策略分布的重要演进。",
+      "sources": [
+        {
+          "label": "原文 / Full text",
+          "url": "https://arxiv.org/html/2602.02481v2"
+        },
+        {
+          "label": "正式会议身份 / Formal venue",
+          "url": "https://openreview.net/forum?id=acslhrig33"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun",
+        "lv"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "CoRL 2026 Oral；重点看 FPO++ 如何消除似然约束并稳定训练高维流匹配控制策略。",
+          "relation": "打通流匹配生成模型与 PPO 类机器人在线强化学习及 Sim2Real 控制。",
+          "prerequisites": [
+            "策略梯度与 PPO / Policy gradients and PPO",
+            "流匹配基础 / Flow matching basics"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "deep"
+        },
+        "lv": {
+          "whyRead": "P0/P1 核心控制线：理解“为什么高斯 PPO 表达受限”以及生成式流策略如何直接做 RL 微调。",
+          "relation": "连接模仿学习中的流匹配策略与强化学习中的真机迁移微调。",
+          "prerequisites": [
+            "强化学习基础 / Reinforcement learning basics",
+            "扩散或流生成模型直觉 / Diffusion or flow policy intuition"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2602.02481",
+        "other": null
+      },
+      "publicationStatus": "accepted",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-17",
+      "verifiedAt": "2026-11-21",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "流策略推理需多步 ODE 积分，高频实时控制下需在采样步数与计算延迟间折中。 / Multi-step ODE sampling adds inference latency in high-frequency real-time control loops.",
+        "相比标准高斯 PPO，FPO++ 的流损失裁剪与噪声调度仍需针对任务稳定性仔细调参。 / Flow loss clipping and noise schedules still require careful tuning compared with standard Gaussian PPO."
+      ],
+      "assumptions": [
+        "环境仿真可提供大规模并行交互采样，且动力学随机化覆盖真机物理偏差。 / Assumes massively parallel simulation with domain randomization covering hardware dynamics."
+      ],
+      "evidence": [
+        {
+          "url": "https://openreview.net/forum?id=acslhrig33",
+          "claim": "OpenReview 官方页面确认 Flow Policy Gradients for Robot Control 录用为 CoRL 2026 Oral。 / Official OpenReview record confirms CoRL 2026 Oral acceptance.",
+          "checkedAt": "2026-11-21"
+        },
+        {
+          "url": "https://arxiv.org/html/2602.02481v2",
+          "claim": "正文 HTML 核验作者、论文署名机构、方法结构与实验边界。 / Full-text HTML verified authors, affiliations, method, and evaluation boundaries.",
+          "checkedAt": "2026-11-21"
+        }
+      ],
+      "researchNotes": [
+        "正文重点核读 §3.2–3.3 FPO++ 目标函数与 §4.2 人形真机及 §4.5 与高斯 PPO 对比消融。",
+        "驴·阅读路线：先读图1与 §1 明确似然瓶颈，再读 §3 理解流匹配代理目标，最后看 §4.3 操作微调与 §4.5 探索行为分析。"
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/fpo-plus-ca73fdd2f5.png",
+          "sha256": "ca73fdd2f58490614b83bf9dfbabd6678c3bc0c06390299515ecdec7165f8ef4",
+          "width": 1164,
+          "height": 1440,
+          "sourceUrl": "https://arxiv.org/html/2602.02481v2/fig/20260129_t1.png",
+          "evidenceUrl": "https://arxiv.org/html/2602.02481v2",
+          "verifiedAt": "2026-11-21",
+          "credit": "Brent Yi et al. · Original paper figure",
+          "rights": "Paper distributed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), verified from arXiv license link. Authors retain copyright. Original figure used unmodified as scholarly preview.",
+          "displayPolicy": "open-license",
+          "background": "light",
+          "altZh": "FPO++ 原论文图1：通过流匹配策略梯度训练四足、人形与机械臂控制策略概览",
+          "altEn": "FPO++ original Figure 1 showing flow policies trained with reinforcement learning for quadrupeds, humanoids, and manipulators"
+        },
+        "figureNote": "",
+        "institutions": [
+          {
+            "name": "Amazon Frontier AI & Robotics (FAR)",
+            "institutionId": "amazon-far",
+            "institutionType": "company",
+            "markType": "organization-mark",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-44b973ee7af929f1.png",
+              "sha256": "44b973ee7af929f1fe2ea34da34f087e4929eae723ed06a38759b72b1feb3e92",
+              "width": 180,
+              "height": 180,
+              "sourceUrl": "https://press.aboutamazon.com/apple-touch-icon.png",
+              "evidenceUrl": "https://press.aboutamazon.com/logos",
+              "verifiedAt": "2026-11-02",
+              "credit": "Amazon Frontier AI & Robotics (FAR) · official-source compact symbol",
+              "rights": "Institutional trademark and copyright remain with owner. Official source verification is not licensing assurance or permission. No open license or endorsement asserted. Use solely for factual paper affiliation identification; preserve original identity, colors and clearspace. Exact official press-site touch icon; white smile on native navy tile. Parent Amazon identity only, not FAR-specific. Needs verified transparent standalone source. Compact40×32px editorial thumbnail; source identity verification is not a grant of institutional permission, and historical full-logo size guidance is not claimed satisfied.",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "light",
+              "altZh": "Amazon Frontier AI & Robotics (FAR) 官方来源紧凑图形",
+              "altEn": "Amazon Frontier AI & Robotics (FAR) official-source compact symbol"
+            },
+            "authorNames": [
+              "Brent Yi",
+              "Hongsuk Choi",
+              "Himanshu Gaurav Singh",
+              "Xiaoyu Huang",
+              "Takara E. Truong",
+              "Carmelo Sferrazza",
+              "Rocky Duan",
+              "Pieter Abbeel",
+              "Guanya Shi",
+              "Karen Liu",
+              "Angjoo Kanazawa"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2602.02481v2",
+                "claim": "核验本文作者署名机构：Amazon Frontier AI & Robotics (FAR)（Brent Yi、Hongsuk Choi、Himanshu Gaurav Singh、Xiaoyu Huang 等）。 / Paper-specific affiliation verified: Amazon Frontier AI & Robotics (FAR).",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "University of California, Berkeley",
+            "institutionId": "pending-university-of-california-berkeley",
+            "institutionType": "university",
+            "markType": "emblem",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-b318cdbc811c92ba.png",
+              "sha256": "b318cdbc811c92bae4bfae4ffca2116e8074db225df6838e888f5c68f41a037e",
+              "width": 200,
+              "height": 200,
+              "sourceUrl": "https://bcbp.berkeley.edu/sites/default/files/styles/width_200/public/ucbseal_300%20x%20300_0.png?itok=IeSglXI9&timestamp=1399312558",
+              "evidenceUrl": "https://bcbp.berkeley.edu/use-name-policy",
+              "verifiedAt": "2026-11-03",
+              "credit": "University of California, Berkeley · official-source compact identity mark",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. The campus policy restricts Berkeley seal use on websites and asks written authorization for uses outside listed official purposes. Current brand guidance states a 215px screen minimum, which a compact 40×32px affiliation thumbnail does not meet. No exception or approval is claimed. Policy: https://bcbp.berkeley.edu/use-name-policy",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "加州大学伯克利分校官方蓝金色完整校徽",
+              "altEn": "Complete official blue and gold University of California, Berkeley seal"
+            },
+            "authorNames": [
+              "Brent Yi",
+              "Hongsuk Choi",
+              "Himanshu Gaurav Singh",
+              "Xiaoyu Huang",
+              "Yi Ma",
+              "Pieter Abbeel",
+              "Angjoo Kanazawa"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2602.02481v2",
+                "claim": "核验本文作者署名机构：University of California, Berkeley（Brent Yi、Hongsuk Choi、Himanshu Gaurav Singh、Xiaoyu Huang 等）。 / Paper-specific affiliation verified: University of California, Berkeley.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "Stanford University",
+            "institutionId": "pending-stanford-university",
+            "institutionType": "university",
+            "markType": "compact-symbol",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-2ceebac173ad7d21.png",
+              "sha256": "2ceebac173ad7d219be7f061661b6d9118efe9080e696b0add9a563e4cfd8294",
+              "width": 400,
+              "height": 400,
+              "sourceUrl": "https://identity.stanford.edu/wp-content/uploads/sites/3/2020/07/block-s-right.png",
+              "evidenceUrl": "https://identity.stanford.edu/visual-identity/stanford-logos/block-s/",
+              "verifiedAt": "2026-11-03",
+              "credit": "Stanford University · official complete mark",
+              "rights": "Official institutional mark; trademark/copyright retained by its owner. Public-source verification is not a blanket reuse licence or separate permission. For factual non-commercial paper-affiliation identification only, not endorsement. Preserve the complete mark, its native colours, aspect ratio and clear space; review linked university guidance.",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "altZh": "斯坦福大学官方红色 S 与绿树符号",
+              "altEn": "Stanford University official Block S with Tree"
+            },
+            "authorNames": [
+              "Takara E. Truong",
+              "Karen Liu"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2602.02481v2",
+                "claim": "核验本文作者署名机构：Stanford University（Takara E. Truong、Karen Liu）。 / Paper-specific affiliation verified: Stanford University.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "The University of Hong Kong",
+            "institutionId": "pending-the-university-of-hong-kong",
+            "institutionType": "university",
+            "markType": "emblem",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-4f85ae033c34de96.svg",
+              "sha256": "4f85ae033c34de965b4a18ae3f84821eccece2d17394f36747982ff6293745d1",
+              "width": 308,
+              "height": 336,
+              "sourceUrl": "https://www.hku.hk/adobe/dynamicmedia/deliver/dm-aid--afc8d43c-587a-43f0-b93c-26f8bd397e0e/logo-hku.svg",
+              "evidenceUrl": "https://www.hku.hk/tc/about-hku/university-identity/basic-specifications",
+              "verifiedAt": "2026-11-03",
+              "credit": "The University of Hong Kong · official complete mark",
+              "rights": "Official institutional mark; trademark/copyright retained by its owner. Public-source verification is not a blanket reuse licence or separate permission. For factual non-commercial paper-affiliation identification only, not endorsement. Preserve the complete mark, its native colours, aspect ratio and clear space; review linked university guidance.",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "altZh": "香港大学官方彩色盾形校徽",
+              "altEn": "The University of Hong Kong complete official full-color shield"
+            },
+            "authorNames": [
+              "Yi Ma"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2602.02481v2",
+                "claim": "核验本文作者署名机构：The University of Hong Kong（Yi Ma）。 / Paper-specific affiliation verified: The University of Hong Kong.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "Carnegie Mellon University",
+            "institutionId": "pending-carnegie-mellon-university",
+            "institutionType": "university",
+            "markType": "emblem",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-733bc43cbef4fab8.png",
+              "sha256": "733bc43cbef4fab8fccfe56d00370bc6e33cae865f961281bf740c91707b5657",
+              "width": 570,
+              "height": 615,
+              "sourceUrl": "https://live-cmu-brand.pantheonsite.io/sites/default/files/cmu-brand-files/inline-images/Router%20Grid%20Image%20%2889%29_0.png",
+              "evidenceUrl": "https://brand.cmu.edu/visual-identity/carnegie-mellon-trademarks/university-seal",
+              "verifiedAt": "2026-11-03",
+              "credit": "Carnegie Mellon University · official-source compact identity mark",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. CMU states specific third-party commercial and noncommercial uses need a licence and written approval. Seal guidance requests upright proportional use, a ring-width safe zone, and approval for lockups. No such licence/approval or full-size guideline compliance is asserted. Policy: https://www.cmu.edu/policies/administrative-and-governance/use-carnegie-mellon-trademarks.html",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "light",
+              "altZh": "Carnegie Mellon University 官方红色完整校徽，保留原白底",
+              "altEn": "Complete official red Carnegie Mellon University seal with its native white field"
+            },
+            "authorNames": [
+              "Guanya Shi"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2602.02481v2",
+                "claim": "核验本文作者署名机构：Carnegie Mellon University（Guanya Shi）。 / Paper-specific affiliation verified: Carnegie Mellon University.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          }
+        ],
+        "authors": []
+      },
+      "formalPublication": {
+        "type": "conference",
+        "evidenceUrl": "https://openreview.net/forum?id=acslhrig33"
+      }
+    },
+    {
+      "id": "arxiv-2604-06589",
+      "title": "BiDexGrasp：跨物体几何与尺度的双臂灵巧手协同抓取",
+      "titleEn": "BiDexGrasp: Coordinated Bimanual Dexterous Grasps across Object Geometries and Sizes",
+      "authors": [
+        "Mu Lin",
+        "Yi-Lin Wei",
+        "Jiaxuan Chen",
+        "Yuhao Lin",
+        "Shuoyu Chen",
+        "Zhizhao Liang",
+        "Jiangran Lyu",
+        "Jiayi Chen",
+        "Xiaoyi Fan",
+        "Chengyi Xing",
+        "Yansong Tang",
+        "He Wang",
+        "Wei-Shi Zheng"
+      ],
+      "year": 2026,
+      "venue": "CoRL 2026 · Spotlight（已录用 / accepted）",
+      "tags": [
+        "双臂操作",
+        "灵巧手抓取",
+        "数据集"
+      ],
+      "summary": "双臂多指灵巧抓取维度极高，长期缺乏跨尺度高质量数据与协同生成模型。BiDexGrasp提出区域约束初始化与解耦力闭合优化的两阶段合成管线，构建覆盖6351个不同几何与尺寸物体的数据集，并设计尺寸自适应协同抓取生成框架。它在跨尺度物体上显著提升物理稳定性，但目前以静态力闭合抓取为主，动态重抓与闭环触觉反馈尚未纳入。",
+      "summaryEn": "High-dimensional bimanual dexterous grasping lacks diverse multi-scale datasets and coordinated generators. BiDexGrasp introduces a two-stage synthesis pipeline combining region-constrained initialization and decoupled force-closure optimization to build a dataset over 6,351 objects of varied geometries and sizes, paired with a geometry-size-adaptive bimanual generator. It boosts physical grasp stability across scales, though dynamic regrasping and closed-loop tactile feedback remain unaddressed.",
+      "whySelected": "CoRL 2026 Spotlight；系统补齐双臂灵巧手跨尺度数据合成与协同抓取生成框架，适合关注灵巧操作与数据管线的读者。",
+      "sources": [
+        {
+          "label": "原文 / Full text",
+          "url": "https://arxiv.org/html/2604.06589v2"
+        },
+        {
+          "label": "正式会议身份 / Formal venue",
+          "url": "https://openreview.net/forum?id=ODnu3ohjEQ"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "CoRL 2026 Spotlight；重点看解耦力闭合合成管线如何高效生成高自由度双臂可行构型。",
+          "relation": "直接衔接灵巧手抓取合成、运动学约束与双臂协同操作数据构建。",
+          "prerequisites": [
+            "力闭合抓取基础 / Force-closure grasping",
+            "运动学与点云处理 / Kinematics and point clouds"
+          ],
+          "difficulty": "intermediate",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2604.06589",
+        "other": null
+      },
+      "publicationStatus": "accepted",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-17",
+      "verifiedAt": "2026-11-21",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "数据合成侧重刚性物体静态双臂力闭合抓取，未覆盖柔性形变物体或后续操作中的动态换手。 / Synthesis targets static rigid-object force-closure grasps and does not cover deformable objects or dynamic in-hand regrasp.",
+        "缺少真实触觉闭环误差恢复，对物体质量分布与摩擦系数的未知偏移较敏感。 / Lacks closed-loop tactile error recovery and remains sensitive to unmodeled mass or friction shifts."
+      ],
+      "assumptions": [
+        "待抓取物体的三维几何点云可获取，且双臂灵巧手运动学模型精确已知。 / Assumes observable 3D object geometry and known bimanual arm-hand kinematics."
+      ],
+      "evidence": [
+        {
+          "url": "https://openreview.net/forum?id=ODnu3ohjEQ",
+          "claim": "OpenReview 官方页面确认 BiDexGrasp 录用为 CoRL 2026 Spotlight。 / Official OpenReview record confirms CoRL 2026 Spotlight acceptance.",
+          "checkedAt": "2026-11-21"
+        },
+        {
+          "url": "https://arxiv.org/html/2604.06589v2",
+          "claim": "正文 HTML 核验作者、论文署名机构、方法结构与实验边界。 / Full-text HTML verified authors, affiliations, method, and evaluation boundaries.",
+          "checkedAt": "2026-11-21"
+        }
+      ],
+      "researchNotes": [
+        "正文重点核读 §4.2–4.4 两阶段双臂抓取合成与 §5 双臂协同模块及尺寸自适应策略。"
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/bidexgrasp-073bed6bed.png",
+          "sha256": "073bed6bed46bfeed161dcf4a0d58e39ae8fd3449bf4651823d04fe6cfec7e79",
+          "width": 1205,
+          "height": 709,
+          "sourceUrl": "https://arxiv.org/html/2604.06589v2/setting3.png",
+          "evidenceUrl": "https://arxiv.org/html/2604.06589v2",
+          "verifiedAt": "2026-11-21",
+          "credit": "Mu Lin et al. · Original paper figure",
+          "rights": "Paper distributed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), verified from arXiv license link. Authors retain copyright. Original figure used unmodified as scholarly preview.",
+          "displayPolicy": "open-license",
+          "background": "light",
+          "altZh": "BiDexGrasp 原论文图1：跨几何与尺度的双臂灵巧手协同抓取数据集与框架概览",
+          "altEn": "BiDexGrasp original Figure 1 overview of the coordinated bimanual dexterous grasp dataset and framework"
+        },
+        "figureNote": "",
+        "institutions": [
+          {
+            "name": "Sun Yat-sen University",
+            "institutionId": "pending-sun-yat-sen-university",
+            "institutionType": "university",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Mu Lin",
+              "Yi-Lin Wei",
+              "Jiaxuan Chen",
+              "Yuhao Lin",
+              "Shuoyu Chen",
+              "Zhizhao Liang",
+              "Wei-Shi Zheng"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2604.06589v2",
+                "claim": "核验本文作者署名机构：Sun Yat-sen University（Mu Lin、Yi-Lin Wei、Jiaxuan Chen、Yuhao Lin 等）。 / Paper-specific affiliation verified: Sun Yat-sen University.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "Tsinghua University",
+            "institutionId": "tsinghua",
+            "institutionType": "university",
+            "markType": "emblem",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/tsinghua-emblem.jpg",
+              "sha256": "edb1c56f1d4399ef32430f418cb179169e04955e75d95eb57c001e5b2f069ade",
+              "width": 554,
+              "height": 385,
+              "sourceUrl": "https://www.tsinghua.edu.cn/__local/C/B6/1C/5682B1124834BFE4B7BB43744CF_C7C409E3_C2FAA.pdf",
+              "evidenceUrl": "https://www.env.tsinghua.edu.cn/qinghuadaxueerjidanweibiaozhiguifanshouce-shixing.pdf",
+              "verifiedAt": "2026-10-31",
+              "credit": "Tsinghua University official emblem",
+              "rights": "官方校徽；无开放复用许可声明，保持原几何、颜色及安全空间。来源为官方章程PDF及二级单位标志规范。",
+              "displayPolicy": "official-brand",
+              "background": "light",
+              "altZh": "清华大学官方紫色校徽",
+              "altEn": "Official purple Tsinghua University emblem"
+            },
+            "authorNames": [
+              "Mu Lin",
+              "Yansong Tang"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2604.06589v2",
+                "claim": "核验本文作者署名机构：Tsinghua University（Mu Lin、Yansong Tang）。 / Paper-specific affiliation verified: Tsinghua University.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "Peking University",
+            "institutionId": "pending-peking-university",
+            "institutionType": "university",
+            "markType": "emblem",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-b328ed3c9e579ec8.png",
+              "sha256": "b328ed3c9e579ec8c2031ad8a5b6c244994fba5d1e93cc98901d1fcc3c306bdb",
+              "width": 360,
+              "height": 360,
+              "sourceUrl": "https://vim.pku.edu.cn/docs/20240527144201516364.zip",
+              "evidenceUrl": "https://vim.pku.edu.cn/xzzq/",
+              "verifiedAt": "2026-11-03",
+              "credit": "Peking University official red circular seal",
+              "rights": "Institutional trademark and copyright remain with their owners. No separate permission obtained, no open licence or legal clearance claimed. Use solely as a small descriptive paper-affiliation thumbnail, not endorsement; preserve the complete mark, geometry and native colors. The official downloads page provides noncommercial-use application and commitment forms. Official basic-usage PDF gives a 7×7mm minimum for standalone mark use. No separate application or institutional permission was obtained. Policy: https://vim.pku.edu.cn/xzzq/",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "北京大学官方红色圆形校徽",
+              "altEn": "Peking University official red circular seal"
+            },
+            "authorNames": [
+              "Jiangran Lyu",
+              "Jiayi Chen",
+              "He Wang"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2604.06589v2",
+                "claim": "核验本文作者署名机构：Peking University（Jiangran Lyu、Jiayi Chen、He Wang）。 / Paper-specific affiliation verified: Peking University.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "Stanford University",
+            "institutionId": "pending-stanford-university",
+            "institutionType": "university",
+            "markType": "compact-symbol",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-2ceebac173ad7d21.png",
+              "sha256": "2ceebac173ad7d219be7f061661b6d9118efe9080e696b0add9a563e4cfd8294",
+              "width": 400,
+              "height": 400,
+              "sourceUrl": "https://identity.stanford.edu/wp-content/uploads/sites/3/2020/07/block-s-right.png",
+              "evidenceUrl": "https://identity.stanford.edu/visual-identity/stanford-logos/block-s/",
+              "verifiedAt": "2026-11-03",
+              "credit": "Stanford University · official complete mark",
+              "rights": "Official institutional mark; trademark/copyright retained by its owner. Public-source verification is not a blanket reuse licence or separate permission. For factual non-commercial paper-affiliation identification only, not endorsement. Preserve the complete mark, its native colours, aspect ratio and clear space; review linked university guidance.",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "altZh": "斯坦福大学官方红色 S 与绿树符号",
+              "altEn": "Stanford University official Block S with Tree"
+            },
+            "authorNames": [
+              "Chengyi Xing"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2604.06589v2",
+                "claim": "核验本文作者署名机构：Stanford University（Chengyi Xing）。 / Paper-specific affiliation verified: Stanford University.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "Jiangxing Intelligence (Guizhou) Technology Inc.",
+            "institutionId": "pending-jiangxing-intelligence-guizhou-technology-inc",
+            "institutionType": "company",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Xiaoyi Fan"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2604.06589v2",
+                "claim": "核验本文作者署名机构：Jiangxing Intelligence (Guizhou) Technology Inc.（Xiaoyi Fan）。 / Paper-specific affiliation verified: Jiangxing Intelligence (Guizhou) Technology Inc..",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          }
+        ],
+        "authors": []
+      },
+      "formalPublication": {
+        "type": "conference",
+        "evidenceUrl": "https://openreview.net/forum?id=ODnu3ohjEQ"
+      }
+    },
+    {
+      "id": "doi-maskplanner",
+      "title": "MaskPlanner：面向自由曲面喷涂的3D物体中心运动生成框架",
+      "titleEn": "MaskPlanner: A Framework for 3D Learning-Based Object-Centric Motion Generation and Applications to Robotic Spray Painting",
+      "authors": [
+        "Gabriele Tiboni",
+        "Raffaello Camoriano",
+        "Tatiana Tommasi"
+      ],
+      "year": 2026,
+      "venue": "IEEE Transactions on Robotics（T-RO 2026 · Vol. 42 · 正式发表）",
+      "tags": [
+        "工业机器人",
+        "3D点云规划",
+        "运动生成"
+      ],
+      "summary": "工业喷涂、焊接等任务需要在自由曲面上生成多条无序长时程轨迹，传统启发式与优化方法泛化性差。MaskPlanner直接以3D点云为输入，联合预测局部路径段与掩码分组再拼接成完整可执行轨迹，并扩展PaintNet数据集。该工作把工业曲面路径规划抽象为3D集合预测问题，但在强遮挡点云和动态障碍避碰场景下仍需结合传统约束求解。",
+      "summaryEn": "Industrial spray painting and welding require planning multiple long-horizon trajectories over free-form 3D surfaces where heuristics generalize poorly. MaskPlanner takes 3D point clouds directly, jointly predicting local path segments and mask groupings that concatenate into executable trajectories, alongside an extended PaintNet dataset. It frames surface coverage planning as 3D set prediction, though heavy point-cloud occlusion and dynamic obstacle avoidance still require downstream constraint handling.",
+      "whySelected": "IEEE T-RO 2026 正式期刊论文；以学习式3D集合预测统一自由曲面轨迹规划，对工业操作泛化与数据集建设有扎实工程价值。",
+      "sources": [
+        {
+          "label": "原文 / Full text",
+          "url": "https://arxiv.org/html/2502.18745v1"
+        },
+        {
+          "label": "正式期刊 DOI / Formal journal DOI",
+          "url": "https://doi.org/10.1109/TRO.2026.3699455"
+        },
+        {
+          "label": "项目主页 / Project page",
+          "url": "https://gabrieletiboni.github.io/MaskPlanner/"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "T-RO 2026 正式期刊；重点看如何将多条无序曲面轨迹转化为局部段预测+掩码聚类问题。",
+          "relation": "衔接3D点云表征学习、物体中心轨迹生成与工业喷涂/焊接自动化。",
+          "prerequisites": [
+            "3D点云网络 / 3D point cloud networks",
+            "集合预测 / Set prediction"
+          ],
+          "difficulty": "intermediate",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": "10.1109/tro.2026.3699455",
+        "arxiv": "2502.18745",
+        "other": null
+      },
+      "publicationStatus": "published",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-17",
+      "verifiedAt": "2026-11-21",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": "https://gabrieletiboni.github.io/MaskPlanner/",
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "后处理段拼接依赖预测掩码质量，面对极端复杂拓扑或自遮挡点云时可能出现断连。 / Postprocessing segment concatenation depends on mask quality and may break on complex or occluded topologies.",
+        "主要面向表面覆盖类非接触路径，未显式建模关节碰撞约束与实时力控接触。 / Focuses on non-contact surface coverage without explicit joint-space collision or force-contact constraints."
+      ],
+      "assumptions": [
+        "目标自由曲面物体的完整或高覆盖率3D点云在规划前已扫描配准。 / Assumes pre-scanned, registered 3D point clouds of the target free-form objects."
+      ],
+      "evidence": [
+        {
+          "url": "https://doi.org/10.1109/TRO.2026.3699455",
+          "claim": "Crossref 官方 DOI 记录确认 MaskPlanner 正式发表于 IEEE Transactions on Robotics Vol. 42 (2026)。 / Official Crossref DOI record confirms publication in IEEE T-RO Vol. 42 (2026).",
+          "checkedAt": "2026-11-21"
+        },
+        {
+          "url": "https://arxiv.org/html/2502.18745v1",
+          "claim": "正文 HTML 核验作者、论文署名机构、方法结构与实验边界。 / Full-text HTML verified authors, affiliations, method, and evaluation boundaries.",
+          "checkedAt": "2026-11-21"
+        },
+        {
+          "url": "https://gabrieletiboni.github.io/MaskPlanner/",
+          "claim": "项目主页已于本轮实测 HTTP 200 可访问；不声称完整复现实验。 / Project page verified reachable (HTTP 200); no reproduction claimed.",
+          "checkedAt": "2026-11-21"
+        }
+      ],
+      "researchNotes": [
+        "正文重点核读 §III-B–E 局部段与掩码联合预测及拼接算法，以及 §IV Extended PaintNet 数据集构建。"
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/maskplanner-235077ffed.png",
+          "sha256": "235077ffedec3b75a728e70aad52f18dd1c177b51be7f9263c79b61869fc0180",
+          "width": 1136,
+          "height": 1017,
+          "sourceUrl": "https://arxiv.org/html/2502.18745v1/intro_figure_v11.png",
+          "evidenceUrl": "https://arxiv.org/html/2502.18745v1",
+          "verifiedAt": "2026-11-21",
+          "credit": "Gabriele Tiboni et al. · Original paper figure",
+          "rights": "Copyright retained by the paper authors/rightsholders. Attributed editorial thumbnail extracted unmodified from the cited arXiv HTML figure; arXiv non-exclusive distribution licence is not a general reuse licence and no endorsement is implied.",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "light",
+          "altZh": "MaskPlanner 原论文图1：面向自由曲面喷涂等物体中心机器人任务的统一3D轨迹规划示意",
+          "altEn": "MaskPlanner original Figure 1 unifying object-centric 3D trajectory generation across industrial surface-coverage tasks"
+        },
+        "figureNote": "",
+        "institutions": [
+          {
+            "name": "Politecnico di Torino",
+            "institutionId": "pending-politecnico-di-torino",
+            "institutionType": "university",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Gabriele Tiboni",
+              "Raffaello Camoriano",
+              "Tatiana Tommasi"
+            ],
+            "evidence": [
+              {
+                "url": "https://doi.org/10.1109/TRO.2026.3699455",
+                "claim": "核验本文作者署名机构：Politecnico di Torino（Gabriele Tiboni、Raffaello Camoriano、Tatiana Tommasi）。 / Paper-specific affiliation verified: Politecnico di Torino.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "Istituto Italiano di Tecnologia",
+            "institutionId": "pending-istituto-italiano-di-tecnologia",
+            "institutionType": "research-institute",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Raffaello Camoriano"
+            ],
+            "evidence": [
+              {
+                "url": "https://doi.org/10.1109/TRO.2026.3699455",
+                "claim": "核验本文作者署名机构：Istituto Italiano di Tecnologia（Raffaello Camoriano）。 / Paper-specific affiliation verified: Istituto Italiano di Tecnologia.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          }
+        ],
+        "authors": []
+      },
+      "formalPublication": {
+        "type": "journal",
+        "evidenceUrl": "https://doi.org/10.1109/TRO.2026.3699455"
+      }
+    },
+    {
+      "id": "doi-dexrepnet-pp",
+      "title": "DexRepNet++：基于几何与空间手物表征的灵巧操作学习",
+      "titleEn": "DexRepNet++: Learning Dexterous Robotic Manipulation With Geometric and Spatial Hand-Object Representations",
+      "authors": [
+        "Qingtao Liu",
+        "Zhengnan Sun",
+        "Yu Cui",
+        "Haoming Li",
+        "Gaofeng Li",
+        "Lin Shao",
+        "Jiming Chen",
+        "Qi Ye"
+      ],
+      "year": 2026,
+      "venue": "IEEE Transactions on Robotics（T-RO 2026 · Vol. 42 · 正式发表）",
+      "tags": [
+        "灵巧手操作",
+        "手物几何表征",
+        "强化学习"
+      ],
+      "summary": "多指灵巧手强化学习常聚焦动作空间采样效率，却忽视手与物体交互输入表征对跨物体泛化的决定作用。DexRepNet++设计融合占据、表面特征与局部几何关系的DexRep表征，在抓取、手内重定位与双臂协作三类任务上显著提升未见物体泛化能力。该表征思路清晰，但对精确物体三维几何先验的依赖在真实部分观测下仍是瓶颈。",
+      "summaryEn": "Multi-fingered dexterous RL often focuses on action-space efficiency while overlooking input representations of hand-object interaction. DexRepNet++ introduces DexRep, combining occupancy, surface, and local geometric features to substantially boost unseen-object generalization across grasping, in-hand reorientation, and bimanual tasks. While conceptually clean, its reliance on accurate 3D object geometry remains a bottleneck under noisy partial real-world observations.",
+      "whySelected": "IEEE T-RO 2026 正式期刊论文；系统验证手物局部几何表征在三类高自由度灵巧操作中的跨物体泛化收益。",
+      "sources": [
+        {
+          "label": "原文 / Full text",
+          "url": "https://arxiv.org/html/2602.21811v1"
+        },
+        {
+          "label": "正式期刊 DOI / Formal journal DOI",
+          "url": "https://doi.org/10.1109/TRO.2026.3651669"
+        },
+        {
+          "label": "项目主页 / Project page",
+          "url": "https://lqts.github.io/DexRepNet2/"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "T-RO 2026 正式期刊；重点对照三种手物特征在抓取、手内旋转与双臂任务上的消融贡献。",
+          "relation": "连接几何3D表征学习、多指灵巧操作 RL 与手物接触泛化。",
+          "prerequisites": [
+            "深度强化学习 / Deep reinforcement learning",
+            "3D几何与点云特征 / 3D geometric features"
+          ],
+          "difficulty": "intermediate",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": "10.1109/tro.2026.3651669",
+        "arxiv": "2602.21811",
+        "other": null
+      },
+      "publicationStatus": "published",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-17",
+      "verifiedAt": "2026-11-21",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": "https://lqts.github.io/DexRepNet2/",
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "几何表征计算依赖较准确的物体表面与手物相对位姿估计，真机遮挡下存在感知退化风险。 / Geometric representation relies on accurate object surface and hand-object pose estimates that degrade under real-world occlusion.",
+        "主要针对刚体物体操作，未扩展到柔性或铰接物体的连续形变表征。 / Targets rigid-body manipulation and does not model deformable or articulated object states."
+      ],
+      "assumptions": [
+        "训练与测试阶段均可构建物体局部几何采样及手部关节点空间坐标。 / Assumes availability of object local geometry samples and hand joint spatial coordinates."
+      ],
+      "evidence": [
+        {
+          "url": "https://doi.org/10.1109/TRO.2026.3651669",
+          "claim": "Crossref 官方 DOI 记录确认 DexRepNet++ 正式发表于 IEEE Transactions on Robotics Vol. 42 (2026)。 / Official Crossref DOI record confirms publication in IEEE T-RO Vol. 42 (2026).",
+          "checkedAt": "2026-11-21"
+        },
+        {
+          "url": "https://arxiv.org/html/2602.21811v1",
+          "claim": "正文 HTML 核验作者、论文署名机构、方法结构与实验边界。 / Full-text HTML verified authors, affiliations, method, and evaluation boundaries.",
+          "checkedAt": "2026-11-21"
+        },
+        {
+          "url": "https://lqts.github.io/DexRepNet2/",
+          "claim": "项目主页已于本轮实测 HTTP 200 可访问；不声称完整复现实验。 / Project page verified reachable (HTTP 200); no reproduction claimed.",
+          "checkedAt": "2026-11-21"
+        }
+      ],
+      "researchNotes": [
+        "正文重点核读 §IV DexRep 三类几何/空间特征定义与 §VI 跨抓取/手内重定位任务实验对比。"
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/dexrepnet-pp-759fcc436f.jpg",
+          "sha256": "759fcc436f8c9d7f0caa94630068d21779562856426e70c2df47938ceb8fd070",
+          "width": 7739,
+          "height": 3910,
+          "sourceUrl": "https://arxiv.org/html/2602.21811v1/fig/pipeline.jpg",
+          "evidenceUrl": "https://arxiv.org/html/2602.21811v1",
+          "verifiedAt": "2026-11-21",
+          "credit": "Qingtao Liu et al. · Original paper figure",
+          "rights": "Copyright retained by the paper authors/rightsholders. Attributed editorial thumbnail extracted unmodified from the cited arXiv HTML figure; arXiv non-exclusive distribution licence is not a general reuse licence and no endorsement is implied.",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "light",
+          "altZh": "DexRepNet++ 原论文图2：占据、表面与局部几何三类手物表征融入灵巧操作强化学习流程",
+          "altEn": "DexRepNet++ original Figure 2 showing occupancy, surface, and local-geometry DexRep features integrated into dexterous RL"
+        },
+        "figureNote": "",
+        "institutions": [
+          {
+            "name": "Zhejiang University",
+            "institutionId": "pending-zhejiang-university",
+            "institutionType": "university",
+            "markType": "emblem",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-dc914cc634bdcd9b.png",
+              "sha256": "dc914cc634bdcd9b871c84686817c12287c6bafd309f083a1054040aee806fca",
+              "width": 318,
+              "height": 253,
+              "sourceUrl": "https://www.zju.edu.cn/_upload/article/images/c3/98/1fb1d281492eb477a098ef7a2901/05966b26-ab45-470d-94c1-99b1e02d12f4.png",
+              "evidenceUrl": "https://www.zju.edu.cn/572/main.htm",
+              "verifiedAt": "2026-11-03",
+              "credit": "Zhejiang University · source-verified institutional symbol",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. University policy requires written authorization for logo display; none has been obtained or asserted. Policy: https://my.zju.edu.cn/_s4/2019/0104/c4a2/page.psp",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "light",
+              "altZh": "Zhejiang University 完整校徽或图形标志",
+              "altEn": "Complete institutional symbol of Zhejiang University"
+            },
+            "authorNames": [
+              "Qingtao Liu",
+              "Zhengnan Sun",
+              "Yu Cui",
+              "Haoming Li",
+              "Gaofeng Li",
+              "Jiming Chen",
+              "Qi Ye"
+            ],
+            "evidence": [
+              {
+                "url": "https://doi.org/10.1109/TRO.2026.3651669",
+                "claim": "核验本文作者署名机构：Zhejiang University（Qingtao Liu、Zhengnan Sun、Yu Cui、Haoming Li 等）。 / Paper-specific affiliation verified: Zhejiang University.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "National University of Singapore",
+            "institutionId": "pending-national-university-of-singapore",
+            "institutionType": "university",
+            "markType": "emblem",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-11b39992d20ae439.png",
+              "sha256": "11b39992d20ae43911bade1a154c0bab154b779820fea8318f0a7dbfa01155eb",
+              "width": 192,
+              "height": 192,
+              "sourceUrl": "https://www.comp.nus.edu.sg/wp-content/uploads/2023/09/cropped-favicon-192x192.png",
+              "evidenceUrl": "https://www.comp.nus.edu.sg/",
+              "verifiedAt": "2026-11-03",
+              "credit": "National University of Singapore · official-source compact identity mark",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. Official logo guidance says the modernised coat of arms and NUS namestyle should appear together; the independently supplied official site icon does not establish an external-use exception or authorization. Policy: https://www.nus.edu.sg/identity/guidelines/logo-guideline",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "NUS 官方网站提供的完整狮子盾徽",
+              "altEn": "Complete NUS coat of arms supplied as an official university website icon"
+            },
+            "authorNames": [
+              "Lin Shao"
+            ],
+            "evidence": [
+              {
+                "url": "https://doi.org/10.1109/TRO.2026.3651669",
+                "claim": "核验本文作者署名机构：National University of Singapore（Lin Shao）。 / Paper-specific affiliation verified: National University of Singapore.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          }
+        ],
+        "authors": []
+      },
+      "formalPublication": {
+        "type": "journal",
+        "evidenceUrl": "https://doi.org/10.1109/TRO.2026.3651669"
+      }
+    },
+    {
+      "id": "doi-codd-semirings",
+      "title": "半环注解数据库上的 Codd 定理",
+      "titleEn": "Codd's Theorem for Databases over Semirings",
+      "authors": [
+        "Guillermo Badia",
+        "Phokion G. Kolaitis",
+        "Carles Noguera"
+      ],
+      "year": 2025,
+      "venue": "PODS 2026 / PACMMOD Vol. 3 No. 5（正式发表）",
+      "tags": [
+        "provenance",
+        "半环数据库",
+        "关系代数与演算"
+      ],
+      "summary": "经典 Codd 定理确立了关系代数与关系演算的等价性，但在溯源半环注解数据库上该等价性不再自动成立。作者面向带单调减（monus）的半环数据库，分别对五种基本关系代数运算及引入除法运算的情形建立了两版半环 Codd 定理，揭示除法在半环语义下不再可由基本运算表达。结果奠定了带否定溯源查询语言设计的理论边界，聚焦表达力而非工程求值。",
+      "summaryEn": "Classical Codd’s theorem equates relational algebra and calculus, yet this equivalence breaks over provenance semiring-annotated databases. Using semirings with monus, the authors establish two semiring versions of Codd’s theorem—one for the five basic algebra operators and one adding division—showing that division is no longer definable from basic operators over semirings. This sharpens the theoretical boundary of provenance query languages with negation, focusing on expressiveness rather than engine execution.",
+      "whySelected": "PODS/PACMMOD 核心理论成果；直接拓展 Green-Karvounarakis-Tannen 溯源半环框架下的代数/演算等价理论，与李的溯源与逻辑主线高度契合。",
+      "sources": [
+        {
+          "label": "原文 / Full text",
+          "url": "https://arxiv.org/html/2501.16543v2"
+        },
+        {
+          "label": "正式会议身份 / Formal venue",
+          "url": "https://doi.org/10.1145/3767713"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "li"
+      ],
+      "recommendations": {
+        "li": {
+          "whyRead": "必读核心理论：厘清带 monus 减法的溯源半环下，关系代数与一阶演算何时等价、为何除法独立。",
+          "relation": "直接深化 provenance semirings 与带否定查询语义理论，支撑理解视图/溯源代数重写边界。",
+          "prerequisites": [
+            "关系代数与一阶逻辑 / Relational algebra and FOL",
+            "溯源半环 / Provenance semirings"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "deep"
+        }
+      },
+      "identity": {
+        "doi": "10.1145/3767713",
+        "arxiv": "2501.16543",
+        "other": null
+      },
+      "publicationStatus": "published",
+      "publicationDate": "2025-11-10",
+      "discoveredDate": "2026-11-17",
+      "verifiedAt": "2026-11-21",
+      "readDepth": "fulltext",
+      "paperType": "theory",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "纯理论表达力刻画，未涉及半环注解查询在数据库引擎中的物理执行与索引优化。 / Purely an expressiveness characterization without physical execution or indexing strategies.",
+        "结果依赖于带 monus 与 support 算子的特定半环类及受限否定片段，不覆盖任意非交换或无 monus 半环。 / Applies to semirings with monus and support under restricted negation, not arbitrary non-commutative or monus-free semirings."
+      ],
+      "assumptions": [
+        "注解结构满足带单调减法（m-semiring）及支持度算子的代数公理。 / Assumes annotation structures satisfy m-semiring axioms with a support operator."
+      ],
+      "evidence": [
+        {
+          "url": "https://doi.org/10.1145/3767713",
+          "claim": "ACM PACMMOD (PODS 2026) 官方 DOI 记录确认发表日期为 2025-11-10。 / Official ACM PACMMOD DOI record confirms publication on 2025-11-10.",
+          "checkedAt": "2026-11-21"
+        },
+        {
+          "url": "https://arxiv.org/html/2501.16543v2",
+          "claim": "正文 HTML 核验作者、论文署名机构、方法结构与实验边界。 / Full-text HTML verified authors, affiliations, method, and evaluation boundaries.",
+          "checkedAt": "2026-11-21"
+        }
+      ],
+      "researchNotes": [
+        "正文重点核读 §2 monus 与 support 定义、§3 基本关系代数与受限否定演算等价证明，以及 §4 除法与全称量词版本。",
+        "无结构示意图：纯理论论文未含适合缩略展示的主架构图，遵循规则诚实留空。"
+      ],
+      "visuals": {
+        "mainFigure": null,
+        "figureNote": "纯理论数学证明论文，arXiv HTML 正文不含架构主图，遵循零伪造原则留空。 / Pure theoretical paper without an architectural main figure in arXiv HTML; left blank honestly.",
+        "institutions": [
+          {
+            "name": "University of Queensland",
+            "institutionId": "pending-university-of-queensland",
+            "institutionType": "university",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Guillermo Badia"
+            ],
+            "evidence": [
+              {
+                "url": "https://doi.org/10.1145/3767713",
+                "claim": "核验本文作者署名机构：University of Queensland（Guillermo Badia）。 / Paper-specific affiliation verified: University of Queensland.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "University of California, Santa Cruz",
+            "institutionId": "pending-university-of-california-santa-cruz",
+            "institutionType": "university",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Phokion G. Kolaitis"
+            ],
+            "evidence": [
+              {
+                "url": "https://doi.org/10.1145/3767713",
+                "claim": "核验本文作者署名机构：University of California, Santa Cruz（Phokion G. Kolaitis）。 / Paper-specific affiliation verified: University of California, Santa Cruz.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "IBM Research",
+            "institutionId": "pending-ibm-research",
+            "institutionType": "company",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Phokion G. Kolaitis"
+            ],
+            "evidence": [
+              {
+                "url": "https://doi.org/10.1145/3767713",
+                "claim": "核验本文作者署名机构：IBM Research（Phokion G. Kolaitis）。 / Paper-specific affiliation verified: IBM Research.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "University of Siena",
+            "institutionId": "pending-university-of-siena",
+            "institutionType": "university",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Carles Noguera"
+            ],
+            "evidence": [
+              {
+                "url": "https://doi.org/10.1145/3767713",
+                "claim": "核验本文作者署名机构：University of Siena（Carles Noguera）。 / Paper-specific affiliation verified: University of Siena.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          }
+        ],
+        "authors": []
+      },
+      "formalPublication": {
+        "type": "conference",
+        "evidenceUrl": "https://doi.org/10.1145/3767713"
+      }
+    }
+  ]
+}

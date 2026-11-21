@@ -1,0 +1,1087 @@
+{
+  "version": 2,
+  "date": "2026-11-19",
+  "title": "2026-11-19 零域论文精选",
+  "demo": false,
+  "timezone": "Asia/Shanghai",
+  "issueNote": "2026-11-19 积压补建档案（于 2026-11-21 按原真实日期核验重建，与已发布历史去重）。本期迅 3 篇 CoRL 2026 正式会议 + 2 篇 RA-L 11 月期正式期刊（满额）、李 1 篇 PVLDB 2026 属性图修复、驴 2 篇与迅共用记录，共 6 篇独立论文。",
+  "coverage": {
+    "checkedSources": [
+      "CoRL 2026 OpenReview 官方录用记录",
+      "Crossref 官方 DOI 元数据（IEEE RA-L Vol. 11 No. 11、PVLDB Vol. 19 No. 6）",
+      "arXiv 官方正文 HTML、许可声明、原始主图及公开项目/代码仓库核验"
+    ],
+    "limitations": [
+      "本日期为 2026-11-21 积压补建，与已发布及同批其他日期严格去重，核验日如实标注 2026-11-21。",
+      "来源仅限本轮实际访问核验的正式出版记录与公开全文，不宣称全源覆盖。",
+      "部分论文 arXiv HTML 不含可直接校验的位图主图，按规范诚实留空。"
+    ]
+  },
+  "papers": [
+    {
+      "id": "arxiv-2606-04233",
+      "title": "机器人操作基准测试究竟在测什么？四类失效模式系统审计",
+      "titleEn": "What Are We Actually Benchmarking in Robot Manipulation?",
+      "authors": [
+        "Tianchong Jiang",
+        "Xiangshan Tan",
+        "Samuel Wheeler",
+        "Luzhe Sun",
+        "Tewodros W. Ayalew",
+        "Matthew Walter"
+      ],
+      "year": 2026,
+      "venue": "CoRL 2026 · Oral（已录用 / accepted）",
+      "tags": [
+        "操作基准审计",
+        "统计显著性",
+        "评测方法论"
+      ],
+      "summary": "固定设置下的操作基准得分常被直接当成通用操作能力的证明。本文系统识别四类基准失效模式——捷径可解、缺乏统计显著性、渐进过拟合与数据源依赖，并对LIBERO、CALVIN、SimplerEnv、RoboCasa与RoboTwin 2.0开展诊断审计。研究发现0.09B无语言编码器探针即可在LIBERO逼近SOTA，多数报告涨幅缺乏统计显著性；该审计警醒意义极大，但真机基准尚未纳入同等量化审计。",
+      "summaryEn": "Single-setup manipulation benchmark scores are routinely cited as proof of general capability. This paper identifies four failure modes—shortcut solvability, weak statistical significance, creeping overfitting, and data-source dependence—and audits LIBERO, CALVIN, SimplerEnv, RoboCasa, and RoboTwin 2.0. On LIBERO, a 0.09B probe without a language encoder nears reported SOTA while many claimed gains lack statistical significance; the audit is eye-opening, though real-world benchmarks await similar rigor.",
+      "whySelected": "CoRL 2026 Oral；用严谨诊断戳破当前主流操作基准的虚高 SOTA 幻觉，是每位机器人研究者与入门者的必读防坑指南。",
+      "sources": [
+        {
+          "label": "原文 / Full text",
+          "url": "https://arxiv.org/html/2606.04233v1"
+        },
+        {
+          "label": "正式会议身份 / Formal venue",
+          "url": "https://openreview.net/forum?id=RdvH11pAfJ"
+        },
+        {
+          "label": "项目主页 / Project page",
+          "url": "https://ripl.github.io/manipulation_benchmark_audit/"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun",
+        "lv"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "CoRL 2026 Oral；直接重塑你看待 LIBERO/CALVIN 等榜单数字的标准，务必精读四项诊断协议。",
+          "relation": "直接影响全方向操作策略论文的实验可信度评估与基准选型。",
+          "prerequisites": [
+            "主流操作仿真基准 / Manipulation benchmarks",
+            "假设检验基础 / Statistical testing basics"
+          ],
+          "difficulty": "beginner",
+          "readRecommendation": "deep"
+        },
+        "lv": {
+          "whyRead": "P0 操作学习必读防坑文：学会分辨论文里“刷榜涨点”究竟是真泛化还是基准捷径与随机波动。",
+          "relation": "帮助你建立科学读实验表与设计消融的底层判断力，避免被单一仿真分数误导。",
+          "prerequisites": [
+            "基本实验评测概念 / Basic evaluation concepts"
+          ],
+          "difficulty": "beginner",
+          "readRecommendation": "deep"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2606.04233",
+        "other": null
+      },
+      "publicationStatus": "accepted",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-19",
+      "verifiedAt": "2026-11-21",
+      "readDepth": "fulltext",
+      "paperType": "benchmark",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": "https://ripl.github.io/manipulation_benchmark_audit/",
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "审计对象集中在五大开源仿真操作基准，未同等规模量化评估异构真机评测协议。 / Audits five open-source simulation benchmarks and does not yet quantify real-world evaluation protocols at equal scale.",
+        "诊断探针揭示了基准脆弱性，但未直接给出能彻底替代现有体系的统一新一代标准基准。 / Exposes benchmark vulnerabilities via diagnostics without proposing a single drop-in replacement benchmark."
+      ],
+      "assumptions": [
+        "公开发布的仿真任务套件、训练示范与历史论文汇报分数可代表当前社区主流评测实践。 / Assumes public simulation suites and published paper scores represent prevailing community evaluation practice."
+      ],
+      "evidence": [
+        {
+          "url": "https://openreview.net/forum?id=RdvH11pAfJ",
+          "claim": "OpenReview 官方页面确认 What Are We Actually Benchmarking in Robot Manipulation? 录用为 CoRL 2026 Oral。 / Official OpenReview record confirms CoRL 2026 Oral acceptance.",
+          "checkedAt": "2026-11-21"
+        },
+        {
+          "url": "https://arxiv.org/html/2606.04233v1",
+          "claim": "正文 HTML 核验作者、论文署名机构、方法结构与实验边界。 / Full-text HTML verified authors, affiliations, method, and evaluation boundaries.",
+          "checkedAt": "2026-11-21"
+        },
+        {
+          "url": "https://ripl.github.io/manipulation_benchmark_audit/",
+          "claim": "项目主页已于本轮实测 HTTP 200 可访问；不声称完整复现实验。 / Project page verified reachable (HTTP 200); no reproduction claimed.",
+          "checkedAt": "2026-11-21"
+        }
+      ],
+      "researchNotes": [
+        "正文重点核读 §3–6 四大诊断实验及 §7 面向作者与审稿人的基准评测建议。",
+        "驴·阅读路线：按四类失效模式逐节精读（§3 捷径、§4 显著性、§5 过拟合、§6 数据源依赖），今后看任何 VLA/扩散策略论文时直接拿这四条做体检清单。"
+      ],
+      "visuals": {
+        "mainFigure": null,
+        "figureNote": "arXiv HTML 文本版未嵌入位图主图，遵循零伪造原则留空，统计诊断图表可查阅原文 PDF 与项目页。 / No raster main figure embedded in the arXiv HTML text; left blank honestly. Full diagnostic plots are in the paper PDF and project site.",
+        "institutions": [
+          {
+            "name": "Toyota Technological Institute at Chicago",
+            "institutionId": "pending-toyota-technological-institute-at-chicago",
+            "institutionType": "research-institute",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Tianchong Jiang",
+              "Xiangshan Tan",
+              "Luzhe Sun",
+              "Matthew Walter"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2606.04233v1",
+                "claim": "核验本文作者署名机构：Toyota Technological Institute at Chicago（Tianchong Jiang、Xiangshan Tan、Luzhe Sun、Matthew Walter）。 / Paper-specific affiliation verified: Toyota Technological Institute at Chicago.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "Argonne National Laboratory",
+            "institutionId": "pending-argonne-national-laboratory",
+            "institutionType": "research-institute",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Samuel Wheeler"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2606.04233v1",
+                "claim": "核验本文作者署名机构：Argonne National Laboratory（Samuel Wheeler）。 / Paper-specific affiliation verified: Argonne National Laboratory.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "University of Chicago",
+            "institutionId": "pending-university-of-chicago",
+            "institutionType": "university",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Tewodros W. Ayalew"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2606.04233v1",
+                "claim": "核验本文作者署名机构：University of Chicago（Tewodros W. Ayalew）。 / Paper-specific affiliation verified: University of Chicago.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          }
+        ],
+        "authors": []
+      },
+      "formalPublication": {
+        "type": "conference",
+        "evidenceUrl": "https://openreview.net/forum?id=RdvH11pAfJ"
+      }
+    },
+    {
+      "id": "arxiv-2606-05160",
+      "title": "GRAIL：基于3D锚定视频世界模型生成人形全身移动操作数据",
+      "titleEn": "GRAIL: Generating Humanoid Loco-Manipulation from World Models",
+      "authors": [
+        "Tianyi Xie",
+        "Haotian Zhang",
+        "Jinhyung Park",
+        "Zi Wang",
+        "Bowen Wen",
+        "Jiefeng Li",
+        "Xueting Li",
+        "Qingwei Ben",
+        "Haoyang Weng",
+        "Yufei Ye",
+        "David Minor",
+        "Tingwu Wang",
+        "Chenfanfu Jiang",
+        "Sanja Fidler",
+        "Jan Kautz",
+        "Linxi Fan",
+        "Yuke Zhu",
+        "Zhengyi Luo",
+        "Umar Iqbal",
+        "Ye Yuan"
+      ],
+      "year": 2026,
+      "venue": "CoRL 2026 · Oral（已录用 / accepted）",
+      "tags": [
+        "世界模型",
+        "人形移动操作",
+        "虚拟数据生成"
+      ],
+      "summary": "人形全身移动操作受制于遥操作与动捕成本极高。GRAIL提出全虚拟生成管线：先在已知物体几何、相机参数、真实尺度与机器人比例角色的3D仿真场景中做条件化，再调用视频世界模型合成人机交互视频并重建为物理可追踪的全身轨迹，实现无需物理搭建场景即可训练并零样本真机部署。它规避了野生视频尺度歧义，但生成物理幻觉与精细手指接触仍需过滤。",
+      "summaryEn": "Scaling humanoid loco-manipulation is bottlenecked by physical teleoperation and mocap setups. GRAIL builds a fully digital pipeline that grounds video world models in metric 3D scenes with known object geometry, cameras, and robot-proportioned characters, synthesizing interactions and reconstructing physically trackable whole-body motions for sim-to-real deployment. Grounding avoids unconstrained video scale ambiguity, though video physics hallucinations and fine finger contacts still require filtering.",
+      "whySelected": "CoRL 2026 Oral；用“3D场景先验+视频世界模型”打通人形全身移动操作虚拟数据合成与真机迁移闭环。",
+      "sources": [
+        {
+          "label": "原文 / Full text",
+          "url": "https://arxiv.org/html/2606.05160v2"
+        },
+        {
+          "label": "正式会议身份 / Formal venue",
+          "url": "https://openreview.net/forum?id=2dEfANeQL7"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun",
+        "lv"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "CoRL 2026 Oral；重点看为何把视频世界模型锚定在已知3D仿真场景中能大幅降低轨迹重建歧义。",
+          "relation": "连接视频生成世界模型、人机交互重建与人形全身移动操作 Sim2Real。",
+          "prerequisites": [
+            "视频生成/世界模型基础 / Video world models",
+            "人形全身控制与跟踪 / Humanoid whole-body tracking"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "deep"
+        },
+        "lv": {
+          "whyRead": "P2 世界模型与人形前沿线：理解世界模型不只是“生成好看视频”，还能借3D条件变成物理可用的动作数据生成器。",
+          "relation": "衔接仿真数据合成与全身动作跟踪控制，适合与 MolmoB0T 对照“规则规划 vs 世界模型合成”。",
+          "prerequisites": [
+            "机器人仿真与重定向概念 / Simulation and motion retargeting"
+          ],
+          "difficulty": "intermediate",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2606.05160",
+        "other": null
+      },
+      "publicationStatus": "accepted",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-19",
+      "verifiedAt": "2026-11-21",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "视频世界模型仍可能生成穿透、悬浮等违反物理规律的片段，需依赖重建与仿真跟踪阶段筛选。 / Video world models can hallucinate penetration or non-physical motion, relying on reconstruction and physics tracking to filter artifacts.",
+        "当前重点在全身移搬与大尺度交互，灵巧手指微操作细节尚受视频分辨率与重建精度限制。 / Targets whole-body loco-manipulation rather than fine multi-fingered dexterity limited by video and reconstruction resolution."
+      ],
+      "assumptions": [
+        "目标交互物体与环境的3D资产及公制尺度在视频生成前已配置在仿真场景中。 / Assumes metric 3D object and environment assets are specified prior to video world-model synthesis."
+      ],
+      "evidence": [
+        {
+          "url": "https://openreview.net/forum?id=2dEfANeQL7",
+          "claim": "OpenReview 官方页面确认 GRAIL 录用为 CoRL 2026 Oral。 / Official OpenReview record confirms CoRL 2026 Oral acceptance.",
+          "checkedAt": "2026-11-21"
+        },
+        {
+          "url": "https://arxiv.org/html/2606.05160v2",
+          "claim": "正文 HTML 核验作者、论文署名机构、方法结构与实验边界。 / Full-text HTML verified authors, affiliations, method, and evaluation boundaries.",
+          "checkedAt": "2026-11-21"
+        }
+      ],
+      "researchNotes": [
+        "正文重点核读 §3.1–3.4 全虚拟数据生成到仿真跟踪及真机部署四步管线，以及 §4.3 真机成功率。",
+        "驴·阅读路线：先读图1与 §1 搞清 GRAIL 相比直接重建野生视频的优势，再看 §3 管线图与 §4.3 真机测试。"
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/grail-889c4701dc.jpg",
+          "sha256": "889c4701dca279bc891e0acf84e0d8da12cebe115efd12ac4c35f63c79f958ae",
+          "width": 1802,
+          "height": 1453,
+          "sourceUrl": "https://arxiv.org/html/2606.05160v2/figures/teaser_v8.jpeg",
+          "evidenceUrl": "https://arxiv.org/html/2606.05160v2",
+          "verifiedAt": "2026-11-21",
+          "credit": "Tianyi Xie et al. · Original paper figure",
+          "rights": "Copyright retained by the paper authors/rightsholders. Attributed editorial thumbnail extracted unmodified from the cited arXiv HTML figure; arXiv non-exclusive distribution licence is not a general reuse licence and no endorsement is implied.",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "light",
+          "altZh": "GRAIL 原论文图1：将视频世界模型锚定在3D仿真场景中生成人形移动操作数据并部署真机",
+          "altEn": "GRAIL original Figure 1 illustrating digital humanoid loco-manipulation data generation from 3D-grounded video world models to hardware deployment"
+        },
+        "figureNote": "",
+        "institutions": [
+          {
+            "name": "NVIDIA",
+            "institutionId": "pending-nvidia",
+            "institutionType": "company",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Tianyi Xie",
+              "Haotian Zhang",
+              "Jinhyung Park",
+              "Zi Wang",
+              "Bowen Wen",
+              "Jiefeng Li",
+              "Xueting Li",
+              "Qingwei Ben",
+              "Haoyang Weng",
+              "Yufei Ye",
+              "David Minor",
+              "Tingwu Wang",
+              "Sanja Fidler",
+              "Jan Kautz",
+              "Linxi Fan",
+              "Yuke Zhu",
+              "Zhengyi Luo",
+              "Umar Iqbal",
+              "Ye Yuan"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2606.05160v2",
+                "claim": "核验本文作者署名机构：NVIDIA（Tianyi Xie、Haotian Zhang、Jinhyung Park、Zi Wang 等）。 / Paper-specific affiliation verified: NVIDIA.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "University of California, Los Angeles",
+            "institutionId": "pending-university-of-california-los-angeles",
+            "institutionType": "university",
+            "markType": "compact-symbol",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-b03be85d2578d855.png",
+              "sha256": "b03be85d2578d855abd9025af2b6555cfbf4b127b9557cffcb62f10c34132a5b",
+              "width": 56,
+              "height": 56,
+              "sourceUrl": "https://www.ucla.edu/img/apple-touch-icon.png",
+              "evidenceUrl": "https://www.ucla.edu/",
+              "verifiedAt": "2026-11-03",
+              "credit": "University of California, Los Angeles · official-source compact identity mark",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. UCLA Policy 110 governs campus marks; brand guidance requires approvals for external use. No approval is claimed. The UCLA letters are the university custom campus mark, not newly typeset initials. Policy: https://www.adminpolicies.ucla.edu/APP/Number/110.0",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "dark",
+              "altZh": "University of California, Los Angeles 官方完整独立图形标识",
+              "altEn": "University of California, Los Angeles complete official compact identity mark"
+            },
+            "authorNames": [
+              "Tianyi Xie",
+              "Chenfanfu Jiang"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2606.05160v2",
+                "claim": "核验本文作者署名机构：University of California, Los Angeles（Tianyi Xie、Chenfanfu Jiang）。 / Paper-specific affiliation verified: University of California, Los Angeles.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          }
+        ],
+        "authors": []
+      },
+      "formalPublication": {
+        "type": "conference",
+        "evidenceUrl": "https://openreview.net/forum?id=2dEfANeQL7"
+      }
+    },
+    {
+      "id": "arxiv-2609-06061",
+      "title": "SCoCaT：面向终端安全导航的成功条件化终止约束强化学习",
+      "titleEn": "SCoCaT: Success Conditioned Constrained Reinforcement Learning for Spacecraft Docking",
+      "authors": [
+        "Aman Arora",
+        "Ricard Marsal I Castan",
+        "Matteo El-Hariry",
+        "Miguel Olivares-Mendez"
+      ],
+      "year": 2026,
+      "venue": "CoRL 2026 · Spotlight（已录用 / accepted）",
+      "tags": [
+        "安全强化学习",
+        "约束控制",
+        "终端对接导航"
+      ],
+      "summary": "基于违规终止的约束强化学习部署轻量，无需在线求解优化器，但在终端高精度对接等安全走廊不断收窄的任务中会出现“策略停在安全边界外不敢进目标”的结构性失效。SCoCaT揭示该机理并引入成功条件化终止约束，通过双评论家机制在保证安全约束的同时消除过度保守滞留，并在气浮平台对接实验上验证。该方法原理优雅，但复杂多障碍非凸任务泛化仍需考察。",
+      "summaryEn": "Termination-based constrained RL is lightweight at inference, yet suffers a structural failure mode on terminal navigation tasks where tightening safety corridors make dwelling outside the goal preferable to approaching it. SCoCaT diagnoses this survival-bias trap and introduces success-conditioned termination constraints via a two-critic formulation, validated on an air-bearing spacecraft docking testbed. While theoretically clean, generalization to complex multi-obstacle non-convex tasks needs further study.",
+      "whySelected": "CoRL 2026 Spotlight；精准定位终止型安全 RL 的“过保守拒近目标”病灶并给出有理论证明与实物平台验证的解法。",
+      "sources": [
+        {
+          "label": "原文 / Full text",
+          "url": "https://arxiv.org/html/2609.06061v2"
+        },
+        {
+          "label": "正式会议身份 / Formal venue",
+          "url": "https://openreview.net/forum?id=SUV5PudsyI"
+        },
+        {
+          "label": "项目主页 / Project page",
+          "url": "https://snt-spacer.github.io/scocat-cstr-RL-docking/"
+        },
+        {
+          "label": "开源代码 / Code repository",
+          "url": "https://github.com/snt-spacer/scocat-cstr-RL-docking"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "CoRL 2026 Spotlight；安全敏感机器人部署中非常值得看懂的一个终止约束理论陷阱与修复。",
+          "relation": "连接安全强化学习、约束控制与高精度末端接近/对接任务。",
+          "prerequisites": [
+            "约束马尔可夫决策过程 / Constrained MDPs",
+            "Actor-Critic 基础 / Actor-Critic basics"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2609.06061",
+        "other": null
+      },
+      "publicationStatus": "accepted",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-19",
+      "verifiedAt": "2026-11-21",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": "https://github.com/snt-spacer/scocat-cstr-RL-docking",
+        "project": "https://snt-spacer.github.io/scocat-cstr-RL-docking/",
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "硬件验证聚焦低维平面气浮对接平台，尚未在高维机械臂或复杂动态障碍环境中开展实机测试。 / Hardware validation focuses on a planar air-bearing docking testbed rather than high-DoF manipulators or dynamic clutter.",
+        "仍依赖明确的终端成功判定区域与可量化的约束违规函数。 / Requires well-defined terminal success regions and explicit constraint-violation indicators."
+      ],
+      "assumptions": [
+        "安全约束函数与目标终端走廊在训练仿真中可准确评估。 / Assumes safety constraints and terminal goal corridors are accurately evaluable during training."
+      ],
+      "evidence": [
+        {
+          "url": "https://openreview.net/forum?id=SUV5PudsyI",
+          "claim": "OpenReview 官方页面确认 SCoCaT 录用为 CoRL 2026 Spotlight。 / Official OpenReview record confirms CoRL 2026 Spotlight acceptance.",
+          "checkedAt": "2026-11-21"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.06061v2",
+          "claim": "正文 HTML 核验作者、论文署名机构、方法结构与实验边界。 / Full-text HTML verified authors, affiliations, method, and evaluation boundaries.",
+          "checkedAt": "2026-11-21"
+        },
+        {
+          "url": "https://snt-spacer.github.io/scocat-cstr-RL-docking/",
+          "claim": "项目主页已于本轮实测 HTTP 200 可访问；不声称完整复现实验。 / Project page verified reachable (HTTP 200); no reproduction claimed.",
+          "checkedAt": "2026-11-21"
+        },
+        {
+          "url": "https://github.com/snt-spacer/scocat-cstr-RL-docking",
+          "claim": "公开代码仓库已于本轮实测 HTTP 200 可访问；未运行复现。 / Public code repository verified reachable (HTTP 200); not executed.",
+          "checkedAt": "2026-11-21"
+        }
+      ],
+      "researchNotes": [
+        "正文重点核读 §3.2–3.3 终止约束失效命题与 SCoCaT 双 Critic 机制，以及附录 A 证明。"
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/scocat-dcf645ecc7.png",
+          "sha256": "dcf645ecc7a5718b4abe6d68353140b0cbeda4130a20910eee97d0ecc58b57ca",
+          "width": 1280,
+          "height": 720,
+          "sourceUrl": "https://arxiv.org/html/2609.06061v2/docking_cstr_v3.png",
+          "evidenceUrl": "https://arxiv.org/html/2609.06061v2",
+          "verifiedAt": "2026-11-21",
+          "credit": "Aman Arora et al. · Original paper figure",
+          "rights": "Paper distributed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), verified from arXiv license link. Authors retain copyright. Original figure used unmodified as scholarly preview.",
+          "displayPolicy": "open-license",
+          "background": "light",
+          "altZh": "SCoCaT 原论文图1：气浮对接实验平台上满足收窄安全走廊约束的成功接近轨迹",
+          "altEn": "SCoCaT original Figure 1 showing a successful constrained approach trajectory on an air-bearing docking testbed"
+        },
+        "figureNote": "",
+        "institutions": [
+          {
+            "name": "University of Luxembourg",
+            "institutionId": "pending-university-of-luxembourg",
+            "institutionType": "university",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Aman Arora",
+              "Ricard Marsal I Castan",
+              "Matteo El-Hariry",
+              "Miguel Olivares-Mendez"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2609.06061v2",
+                "claim": "核验本文作者署名机构：University of Luxembourg（Aman Arora、Ricard Marsal I Castan、Matteo El-Hariry、Miguel Olivares-Mendez）。 / Paper-specific affiliation verified: University of Luxembourg.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          }
+        ],
+        "authors": []
+      },
+      "formalPublication": {
+        "type": "conference",
+        "evidenceUrl": "https://openreview.net/forum?id=SUV5PudsyI"
+      }
+    },
+    {
+      "id": "doi-sadp",
+      "title": "SADP：利用基础模型生成子目标示范的长时程扩散策略",
+      "titleEn": "SADP: Subgoal-Aware Diffusion Policy for Long-Horizon Manipulation Learned From Foundation Model Generated Demonstrations",
+      "authors": [
+        "Site Hu",
+        "Takato Horii"
+      ],
+      "year": 2026,
+      "venue": "IEEE Robotics and Automation Letters（RA-L 2026 · Vol. 11 No. 11 · 正式发表）",
+      "tags": [
+        "扩散策略",
+        "长时程操作",
+        "子目标规划"
+      ],
+      "summary": "多数模仿学习仅依赖整段任务示范，缺乏对当前活跃子目标与阶段切换时机的显式建模，长时程任务极易中途漂移。SADP先借助基础模型自动生成带结构化子目标与延续标签的示范，再训练带延续预测头的子目标感知扩散策略，在线判定何时推进至下一子目标。该设计把高层语义进度显式融入低层扩散控制，但对基础模型自动生成的子目标切分质量较敏感。",
+      "summaryEn": "Standard imitation learning trains on task-level demonstrations without modeling active subgoals or stage transitions, causing drift on long-horizon tasks. SADP leverages foundation models to autonomously generate demonstrations annotated with structured subgoals and continuation labels, training a subgoal-aware diffusion policy with a continuation head to decide online when to advance stages. This bridges semantic progress and low-level diffusion control, though quality depends on automated subgoal segmentation.",
+      "whySelected": "IEEE RA-L 2026 年 11 月期正式发表；将子目标延续预测头引入扩散策略并自动化采集子目标示范，切中长时程漂移痛点。",
+      "sources": [
+        {
+          "label": "原文 / Full text",
+          "url": "https://arxiv.org/html/2605.16871v3"
+        },
+        {
+          "label": "正式期刊 DOI / Formal journal DOI",
+          "url": "https://doi.org/10.1109/LRA.2026.3742285"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "RA-L 2026 正式期刊；重点看子目标延续预测头如何稳定多阶段扩散策略的状态切换。",
+          "relation": "连接扩散策略、长时程分层任务分解与基础模型辅助数据标注。",
+          "prerequisites": [
+            "扩散策略 / Diffusion Policy",
+            "长时程操作规划 / Long-horizon manipulation"
+          ],
+          "difficulty": "intermediate",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": "10.1109/lra.2026.3742285",
+        "arxiv": "2605.16871",
+        "other": null
+      },
+      "publicationStatus": "published",
+      "publicationDate": "2026-10-09",
+      "discoveredDate": "2026-11-19",
+      "verifiedAt": "2026-11-21",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "子目标示范采集质量受基础模型任务规划与状态判定误差影响，复杂遮挡下易产生错误切分。 / Automated subgoal demonstration quality depends on foundation-model accuracy and can mis-segment under occlusion.",
+        "当前主要在结构化多步桌面任务验证，面对非预定义异常回退仍需额外恢复机制。 / Evaluated mainly on structured multi-step tabletop tasks; unmodeled failure recovery requires additional mechanisms."
+      ],
+      "assumptions": [
+        "长时程操作任务可线性或有序分解为可由基础模型清晰描述的中间子目标序列。 / Assumes long-horizon tasks decompose cleanly into foundation-model-describable subgoal sequences."
+      ],
+      "evidence": [
+        {
+          "url": "https://doi.org/10.1109/LRA.2026.3742285",
+          "claim": "Crossref 官方 DOI 记录与论文脚注确认 SADP 于 2026-10-09 在线发表于 IEEE RA-L Vol. 11 No. 11 (2026-11)。 / Official Crossref DOI record and paper footnote confirm online publication on 2026-10-09 in IEEE RA-L Vol. 11 No. 11.",
+          "checkedAt": "2026-11-21"
+        },
+        {
+          "url": "https://arxiv.org/html/2605.16871v3",
+          "claim": "正文 HTML 核验作者、论文署名机构、方法结构与实验边界。 / Full-text HTML verified authors, affiliations, method, and evaluation boundaries.",
+          "checkedAt": "2026-11-21"
+        }
+      ],
+      "researchNotes": [
+        "正文重点核读 §III-A 自动子目标示范采集与 §III-B 延续预测头结构及 §IV-C 切换准确率消融。"
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/sadp-52d85d4c9e.png",
+          "sha256": "52d85d4c9eb469ed5bdbe19b295bb3eaad02699cd38ab6a10cbc0a1ed679d107",
+          "width": 2016,
+          "height": 979,
+          "sourceUrl": "https://arxiv.org/html/2605.16871v3/concept.png",
+          "evidenceUrl": "https://arxiv.org/html/2605.16871v3",
+          "verifiedAt": "2026-11-21",
+          "credit": "Site Hu et al. · Original paper figure",
+          "rights": "Copyright retained by the paper authors/rightsholders. Attributed editorial thumbnail extracted unmodified from the cited arXiv HTML figure; arXiv non-exclusive distribution licence is not a general reuse licence and no endorsement is implied.",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "light",
+          "altZh": "SADP 原论文图1：利用基础模型自动生成子目标与延续标签并训练子目标感知扩散策略",
+          "altEn": "SADP original Figure 1 overview of foundation-model subgoal demonstration generation and subgoal-aware diffusion policy"
+        },
+        "figureNote": "",
+        "institutions": [
+          {
+            "name": "Osaka University",
+            "institutionId": "pending-osaka-university",
+            "institutionType": "university",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Site Hu",
+              "Takato Horii"
+            ],
+            "evidence": [
+              {
+                "url": "https://doi.org/10.1109/LRA.2026.3742285",
+                "claim": "核验本文作者署名机构：Osaka University（Site Hu、Takato Horii）。 / Paper-specific affiliation verified: Osaka University.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          }
+        ],
+        "authors": []
+      },
+      "formalPublication": {
+        "type": "journal",
+        "evidenceUrl": "https://doi.org/10.1109/LRA.2026.3742285"
+      }
+    },
+    {
+      "id": "doi-contact-guided",
+      "title": "面向非抓握移动操作的多评论家接触引导强化学习探索",
+      "titleEn": "Contact-Guided Exploration for Non-Prehensile Locomanipulation With Multi-Critic RL",
+      "authors": [
+        "Simone Tolomei",
+        "Mayank Mittal",
+        "Franco Angelini",
+        "Manolo Garabini",
+        "Paolo Salaris",
+        "Marco Hutter"
+      ],
+      "year": 2026,
+      "venue": "IEEE Robotics and Automation Letters（RA-L 2026 · Vol. 11 No. 11 · 正式发表）",
+      "tags": [
+        "移动操作",
+        "非抓握推搬",
+        "多评论家RL"
+      ],
+      "summary": "推搬大型沉重物体等非抓握移动操作接触稀疏、动力学混杂，标准强化学习极难探索到有效接触点。本文提出多评论家RL框架：用通用抓取算法生成物体候选接触先验，训练独立探索评论家提供稠密寻接触奖励，并随训练衰减其权重以恢复任务最优策略，在四足移动操作平台上实现真机推搬与铰接物体交互。方法通用性强，但强摩擦未知表面与视觉遮挡下仍受限于物体位姿估计。",
+      "summaryEn": "Non-prehensile locomanipulation of heavy or bulky objects suffers from hybrid dynamics and sparse contacts that stall standard RL exploration. This paper proposes a Multi-Critic RL framework that extracts candidate object contact points from a general grasping model to train a dedicated exploration critic whose influence decays over time to recover task-optimal policies, validated on real legged locomanipulation hardware. While versatile across geometries, real deployment still depends on object pose estimation.",
+      "whySelected": "IEEE RA-L 2026 年 11 月期正式发表；ETH 与比萨大学团队用衰减式独立探索评论家破解非抓握移动操作稀疏接触难题。",
+      "sources": [
+        {
+          "label": "原文 / Full text",
+          "url": "https://arxiv.org/html/2608.28140v1"
+        },
+        {
+          "label": "正式期刊 DOI / Formal journal DOI",
+          "url": "https://doi.org/10.1109/LRA.2026.3733608"
+        },
+        {
+          "label": "项目主页 / Project page",
+          "url": "https://tolomeis.github.io/contact-guided-exp/"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "RA-L 2026 正式期刊；重点看“多评论家解耦探索奖励与任务奖励”如何避免稠密塑造奖励扭曲最终策略。",
+          "relation": "连接足式移动操作、非抓握推搬控制与多评论家强化学习。",
+          "prerequisites": [
+            "强化学习与奖励塑形 / RL and reward shaping",
+            "足式移动操作 / Legged locomanipulation"
+          ],
+          "difficulty": "intermediate",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": "10.1109/lra.2026.3733608",
+        "arxiv": "2608.28140",
+        "other": null
+      },
+      "publicationStatus": "published",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-19",
+      "verifiedAt": "2026-11-21",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": "https://tolomeis.github.io/contact-guided-exp/",
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "真机执行需持续跟踪目标物体位姿，在复杂杂乱环境或大面积自遮挡下存在感知挑战。 / Real-world execution requires reliable object pose tracking, which can degrade in cluttered or occluded scenes.",
+        "接触先验由通用抓取模型离线生成，未在线根据实时力反馈动态重算最优施力点。 / Contact priors are generated from grasping models rather than online force-feedback re-estimation."
+      ],
+      "assumptions": [
+        "通用抓取算法能在目标大物体几何上提供合理候选接触区域，且仿真接触动力学近似真机。 / Assumes general grasping algorithms yield valid contact priors and simulation captures key contact dynamics."
+      ],
+      "evidence": [
+        {
+          "url": "https://doi.org/10.1109/LRA.2026.3733608",
+          "claim": "Crossref 官方 DOI 记录确认该论文正式发表于 IEEE RA-L Vol. 11 No. 11 (2026-11)。 / Official Crossref DOI record confirms publication in IEEE RA-L Vol. 11 No. 11 (Nov 2026).",
+          "checkedAt": "2026-11-21"
+        },
+        {
+          "url": "https://arxiv.org/html/2608.28140v1",
+          "claim": "正文 HTML 核验作者、论文署名机构、方法结构与实验边界。 / Full-text HTML verified authors, affiliations, method, and evaluation boundaries.",
+          "checkedAt": "2026-11-21"
+        },
+        {
+          "url": "https://tolomeis.github.io/contact-guided-exp/",
+          "claim": "项目主页已于本轮实测 HTTP 200 可访问；不声称完整复现实验。 / Project page verified reachable (HTTP 200); no reproduction claimed.",
+          "checkedAt": "2026-11-21"
+        }
+      ],
+      "researchNotes": [
+        "正文重点核读 §III-A 接触先验采样、§III-B 多评论家衰减调度与 §IV-C/D 硬件及铰接物体部署。"
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/contact-guided-6700bfaf0b.png",
+          "sha256": "6700bfaf0bd5554169000cc66971f6fbc3a74aa37d9059427902579db59f3f08",
+          "width": 951,
+          "height": 537,
+          "sourceUrl": "https://arxiv.org/html/2608.28140v1/teaser_comp.png",
+          "evidenceUrl": "https://arxiv.org/html/2608.28140v1",
+          "verifiedAt": "2026-11-21",
+          "credit": "Simone Tolomei et al. · Original paper figure",
+          "rights": "Paper distributed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), verified from arXiv license link. Authors retain copyright. Original figure used unmodified as scholarly preview.",
+          "displayPolicy": "open-license",
+          "background": "light",
+          "altZh": "Contact-Guided Exploration 原论文图1：以物体中心接触先验引导多评论家RL学习非抓握移动操作",
+          "altEn": "Contact-Guided Exploration original Figure 1 showing object-centric contact priors guiding multi-critic RL for non-prehensile locomanipulation"
+        },
+        "figureNote": "",
+        "institutions": [
+          {
+            "name": "Università di Pisa",
+            "institutionId": "pending-universit-di-pisa",
+            "institutionType": "university",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Simone Tolomei",
+              "Franco Angelini",
+              "Manolo Garabini",
+              "Paolo Salaris"
+            ],
+            "evidence": [
+              {
+                "url": "https://doi.org/10.1109/LRA.2026.3733608",
+                "claim": "核验本文作者署名机构：Università di Pisa（Simone Tolomei、Franco Angelini、Manolo Garabini、Paolo Salaris）。 / Paper-specific affiliation verified: Università di Pisa.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "ETH Zurich",
+            "institutionId": "pending-eth-zurich",
+            "institutionType": "university",
+            "markType": "compact-symbol",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-ea11b99fc4e77c95.svg",
+              "sha256": "ea11b99fc4e77c95717d6a60c0180cfeac9b28b03503f9c5361dea801fd3806a",
+              "width": 570,
+              "height": 240,
+              "sourceUrl": "https://ait.ethz.ch/assets/images/eth_logo.svg",
+              "evidenceUrl": "https://ait.ethz.ch/",
+              "verifiedAt": "2026-11-03",
+              "credit": "ETH Zurich · official-source compact identity mark",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. The May 2026 official guidelines reserve acronym-only use and external use for advance Corporate Communications approval; that approval is not claimed. This is the complete predefined ETH acronym element, not the complete ETH zürich lockup. Policy: https://ethz.ch/staffnet/en/news-and-events/internal-news/archive/2026/05/new-logo-guidelines-if-it-s-eth-zurich-inside-it-should-say-eth-zurich-outside.html",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "ETH Zurich 官方 SVG 中的完整 ETH 图形字母符号",
+              "altEn": "Complete stylized ETH acronym extracted unchanged from official ETH Zurich SVG"
+            },
+            "authorNames": [
+              "Mayank Mittal",
+              "Marco Hutter"
+            ],
+            "evidence": [
+              {
+                "url": "https://doi.org/10.1109/LRA.2026.3733608",
+                "claim": "核验本文作者署名机构：ETH Zurich（Mayank Mittal、Marco Hutter）。 / Paper-specific affiliation verified: ETH Zurich.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "NVIDIA",
+            "institutionId": "pending-nvidia",
+            "institutionType": "company",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Mayank Mittal"
+            ],
+            "evidence": [
+              {
+                "url": "https://doi.org/10.1109/LRA.2026.3733608",
+                "claim": "核验本文作者署名机构：NVIDIA（Mayank Mittal）。 / Paper-specific affiliation verified: NVIDIA.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          }
+        ],
+        "authors": []
+      },
+      "formalPublication": {
+        "type": "journal",
+        "evidenceUrl": "https://doi.org/10.1109/LRA.2026.3733608"
+      }
+    },
+    {
+      "id": "doi-pg-repair",
+      "title": "PG-Constraints 约束下的属性图修复算法与管线",
+      "titleEn": "Repairing Property Graphs under PG-Constraints",
+      "authors": [
+        "Christopher Spinrath",
+        "Angela Bonifati",
+        "Rachid Echahed"
+      ],
+      "year": 2026,
+      "venue": "PVLDB Vol. 19 No. 6（2026 · 正式发表）",
+      "tags": [
+        "属性图修复",
+        "约束修复",
+        "图数据库"
+      ],
+      "summary": "随着 GQL 与 SQL/PGQ 图查询及 PG-Constraints 约束标准化，属性图数据不一致时的自动修复成为关键缺口。本文界定了一类支持递归且可做自动机结构错误分析的否定型 PG-Constraints 子集，提出结合节点/边及可选标签删除的完整修复管线，并系统评估 ILP、朴素贪心与 LP 引导贪心三种策略。工作兼顾图约束理论与系统可扩展性，但暂不支持值修改或增边修复。",
+      "summaryEn": "As GQL, SQL/PGQ, and PG-Constraints standardize graph databases, repairing inconsistent property graphs becomes essential. This paper identifies a recursive denial subset of PG-Constraints amenable to automata-based error analysis, builds a repair pipeline over node, edge, and optional label deletions, and compares ILP, naive greedy, and LP-guided greedy algorithms. It balances graph constraint theory and scalability, though value-update and insertion repairs remain outside scope.",
+      "whySelected": "PVLDB 2026 正式期刊长文；Angela Bonifati 团队面向最新图约束标准的属性图自动修复系统，直击李的图/约束修复核心方向。",
+      "sources": [
+        {
+          "label": "原文 / Full text",
+          "url": "https://arxiv.org/html/2602.05503v1"
+        },
+        {
+          "label": "正式期刊 DOI / Formal journal DOI",
+          "url": "https://doi.org/10.14778/3797919.3797929"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "li"
+      ],
+      "recommendations": {
+        "li": {
+          "whyRead": "必看图修复代表作：看懂递归图约束如何结合自动机分析与 ILP/LP 贪心做最小代价修复。",
+          "relation": "将关系数据库 constraint repair 拓展至标准化属性图与递归模式约束。",
+          "prerequisites": [
+            "属性图与路径查询 / Property graphs and RPQs",
+            "整数线性规划基础 / ILP basics"
+          ],
+          "difficulty": "intermediate",
+          "readRecommendation": "deep"
+        }
+      },
+      "identity": {
+        "doi": "10.14778/3797919.3797929",
+        "arxiv": "2602.05503",
+        "other": null
+      },
+      "publicationStatus": "published",
+      "publicationDate": "2026-05-08",
+      "discoveredDate": "2026-11-19",
+      "verifiedAt": "2026-11-21",
+      "readDepth": "fulltext",
+      "paperType": "system",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "修复动作聚焦节点、边及可选标签删除，尚未支持属性值更新或补全缺失边以消除违约。 / Repair operations focus on node, edge, and optional label deletions rather than property updates or edge insertions.",
+        "所支持约束限于特定否定型 PG-Constraints 片段，不覆盖含全称存在依赖的生成型图约束。 / Targets a denial subset of PG-Constraints rather than general tuple-generating graph dependencies."
+      ],
+      "assumptions": [
+        "属性图违规模式可表示为所定义的正则图模式否定约束，且可为图元素赋予删除重要度权重。 / Assumes violations are expressible in the supported recursive denial PG-Constraint fragment with deletion weights."
+      ],
+      "evidence": [
+        {
+          "url": "https://doi.org/10.14778/3797919.3797929",
+          "claim": "PVLDB 官方 DOI 记录确认 Repairing Property Graphs under PG-Constraints 在线发表日期为 2026-05-08。 / Official PVLDB DOI record confirms online publication on 2026-05-08.",
+          "checkedAt": "2026-11-21"
+        },
+        {
+          "url": "https://arxiv.org/html/2602.05503v1",
+          "claim": "正文 HTML 核验作者、论文署名机构、方法结构与实验边界。 / Full-text HTML verified authors, affiliations, method, and evaluation boundaries.",
+          "checkedAt": "2026-11-21"
+        }
+      ],
+      "researchNotes": [
+        "正文重点核读 §3 递归 PG-Constraints 定义、§4.2–4.4 基础及标签/邻域修复管线，以及 §5 ILP 与 LP 引导贪心对比。"
+      ],
+      "visuals": {
+        "mainFigure": null,
+        "figureNote": "arXiv HTML 正文未提取到独立位图主图，遵循零伪造原则留空，完整管线图与实验曲线见原论文 PDF。 / No standalone raster main figure extracted from arXiv HTML; left blank honestly.",
+        "institutions": [
+          {
+            "name": "Université Claude Bernard Lyon 1",
+            "institutionId": "pending-universit-claude-bernard-lyon-1",
+            "institutionType": "university",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Christopher Spinrath",
+              "Angela Bonifati"
+            ],
+            "evidence": [
+              {
+                "url": "https://doi.org/10.14778/3797919.3797929",
+                "claim": "核验本文作者署名机构：Université Claude Bernard Lyon 1（Christopher Spinrath、Angela Bonifati）。 / Paper-specific affiliation verified: Université Claude Bernard Lyon 1.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "CNRS",
+            "institutionId": "pending-cnrs",
+            "institutionType": "research-institute",
+            "markType": "organization-mark",
+            "logo": {
+              "kind": "institution-logo",
+              "sourceUrl": "https://www.cnrs.fr/sites/default/files/logo/logo.svg",
+              "evidenceUrl": "https://www.cnrs.fr/fr",
+              "verifiedAt": "2026-11-02",
+              "rights": "Official institutional artwork; trademark and copyright remain with owner. No open licence or blanket permission asserted. Editorial paper-affiliation identification only, no endorsement; preserve complete mark, aspect ratio, colors and clear space.",
+              "credit": "CNRS official identity",
+              "width": 55,
+              "height": 55,
+              "sha256": "8dac83c3ccf014ae53d5a0d94c299d8bba26824b21ef4318d3743dfcfbffa719",
+              "background": "transparent",
+              "displayPolicy": "official-brand",
+              "altEn": "Official CNRS institutional mark",
+              "altZh": "CNRS 官方机构标志",
+              "path": "assets/institutions/cnrs.svg"
+            },
+            "authorNames": [
+              "Christopher Spinrath",
+              "Angela Bonifati",
+              "Rachid Echahed"
+            ],
+            "evidence": [
+              {
+                "url": "https://doi.org/10.14778/3797919.3797929",
+                "claim": "核验本文作者署名机构：CNRS（Christopher Spinrath、Angela Bonifati、Rachid Echahed）。 / Paper-specific affiliation verified: CNRS.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "Institut universitaire de France",
+            "institutionId": "pending-institut-universitaire-de-france",
+            "institutionType": "research-institute",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Angela Bonifati"
+            ],
+            "evidence": [
+              {
+                "url": "https://doi.org/10.14778/3797919.3797929",
+                "claim": "核验本文作者署名机构：Institut universitaire de France（Angela Bonifati）。 / Paper-specific affiliation verified: Institut universitaire de France.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "Université Grenoble Alpes",
+            "institutionId": "pending-universit-grenoble-alpes",
+            "institutionType": "university",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Rachid Echahed"
+            ],
+            "evidence": [
+              {
+                "url": "https://doi.org/10.14778/3797919.3797929",
+                "claim": "核验本文作者署名机构：Université Grenoble Alpes（Rachid Echahed）。 / Paper-specific affiliation verified: Université Grenoble Alpes.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          }
+        ],
+        "authors": []
+      },
+      "formalPublication": {
+        "type": "journal",
+        "evidenceUrl": "https://doi.org/10.14778/3797919.3797929"
+      }
+    }
+  ]
+}

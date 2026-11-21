@@ -1,0 +1,1159 @@
+{
+  "version": 2,
+  "date": "2026-11-20",
+  "title": "2026-11-20 零域论文精选",
+  "demo": false,
+  "timezone": "Asia/Shanghai",
+  "issueNote": "2026-11-20 积压补建档案（于 2026-11-21 按原真实日期核验重建，与已发布历史去重）。本期迅 3 篇 CoRL/NeurIPS 2026 正式会议 + 2 篇 RA-L 11–12 月期正式期刊（满额）、李 1 篇 KR 2026 溯源核心理论、驴 2 篇与迅共用记录，共 6 篇独立论文。",
+  "coverage": {
+    "checkedSources": [
+      "CoRL 2026 与 NeurIPS 2026 OpenReview 官方录用记录",
+      "Crossref 官方 DOI 元数据（IEEE RA-L Vol. 11 No. 11/12）与 KR 2026 官方论文集（proceedings.kr.org/2026/19/）",
+      "arXiv 官方正文 HTML、许可声明、原始主图与公开代码/项目页核验"
+    ],
+    "limitations": [
+      "本日期为 2026-11-21 积压补建，与历史注册表及前后各期严格去重，核验日如实标注 2026-11-21。",
+      "KR 2026 论文仅据官方论文集元数据与摘要完成摘要级核验，已如实标注 readDepth=abstract。",
+      "来源仅限本轮实际核验范围，不宣称全源覆盖。"
+    ]
+  },
+  "papers": [
+    {
+      "id": "arxiv-2609-14156",
+      "title": "Visible Touch：将触觉接触信号渲染进视觉空间以赋能视觉运动策略",
+      "titleEn": "Visible Touch: Rendering Contact for Visuomotor Policies",
+      "authors": [
+        "Metin Alp Dogan",
+        "Edward Sun",
+        "Feng Xu",
+        "Daniel Wu",
+        "Allen Peng",
+        "Dennis Hong",
+        "Yuchen Cui"
+      ],
+      "year": 2026,
+      "venue": "CoRL 2026 · Spotlight（已录用 / accepted）",
+      "tags": [
+        "触觉操作",
+        "视觉运动策略",
+        "VLA多模态融合"
+      ],
+      "summary": "触觉对精密操作至关重要，但多数预训练VLA与视觉运动策略只接受图像与本体状态，强行外挂触觉编码器往往破坏原有视觉骨干。Visible Touch提出把低成本磁触觉传感器的逐单元接触信号直接投影渲染到RGB图像同一空间坐标系中，使任意图像条件策略（含微调VLA）无需改结构即可利用触觉信息。思路简洁通用，但依赖相机与指尖标定精度且难以表达复杂剪切力矩。",
+      "summaryEn": "Touch is critical for robust manipulation, yet modern pretrained VLAs accept only images and proprioception, and bolting on separate tactile encoders breaks image-conditioned backbones. Visible Touch renders per-taxel readings from a low-cost magnetic contact sensor directly as spatial overlays in the policy’s RGB frame, letting any image-conditioned policy or fine-tuned VLA exploit contact without architectural changes. It is clean and plug-and-play, though sensitive to camera-finger calibration and limited for complex shear torques.",
+      "whySelected": "CoRL 2026 Spotlight；用“把触觉画进图像空间”的巧妙接口设计，零改动赋能主流视觉运动与 VLA 策略。",
+      "sources": [
+        {
+          "label": "原文 / Full text",
+          "url": "https://arxiv.org/html/2609.14156v2"
+        },
+        {
+          "label": "正式会议身份 / Formal venue",
+          "url": "https://openreview.net/forum?id=ult1vxdeUb"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun",
+        "lv"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "CoRL 2026 Spotlight；重点看为何空间对齐的视觉叠层比独立触觉编码器更易被预训练 VLA 吸收。",
+          "relation": "直接连接低成本触觉传感、跨模态空间对齐与预训练 VLA 微调。",
+          "prerequisites": [
+            "相机投影标定基础 / Camera projection calibration",
+            "视觉运动策略 / Visuomotor policies"
+          ],
+          "difficulty": "beginner",
+          "readRecommendation": "deep"
+        },
+        "lv": {
+          "whyRead": "P0/P1 触觉感知入门绝佳读物：理解“多模态接口对齐”有时比堆复杂网络结构更有效。",
+          "relation": "将视触觉融合拉回熟悉的2D图像空间，非常适合结合预训练 VLA 微调实践理解。",
+          "prerequisites": [
+            "基本2D视觉策略概念 / Basic 2D visuomotor policies"
+          ],
+          "difficulty": "beginner",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2609.14156",
+        "other": null
+      },
+      "publicationStatus": "accepted",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-20",
+      "verifiedAt": "2026-11-21",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "接触点像素投影依赖外参标定与指尖运动学精度，腕部或外部相机被严重遮挡时叠层信号会丢失上下文。 / Pixel projection relies on accurate camera-to-finger calibration and degrades when severe occlusion hides contact context.",
+        "颜色/几何叠加难以完整编码高维六维力/力矩与细微切向滑移趋势。 / Visual overlays struggle to encode full 6-DoF wrenches or subtle tangential incipient slip."
+      ],
+      "assumptions": [
+        "机器人相机内外参及运动学模型已标定，能够实时将指尖触觉单元投影到 RGB 图像平面。 / Assumes calibrated camera intrinsics/extrinsics and kinematics for real-time taxel-to-image projection."
+      ],
+      "evidence": [
+        {
+          "url": "https://openreview.net/forum?id=ult1vxdeUb",
+          "claim": "OpenReview 官方页面确认 Visible Touch 录用为 CoRL 2026 Spotlight，且 CoRL 2026 官网录用清单一致列出。 / Official OpenReview and CoRL 2026 accepted-papers list confirm CoRL 2026 Spotlight acceptance.",
+          "checkedAt": "2026-11-21"
+        },
+        {
+          "url": "https://arxiv.org/html/2609.14156v2",
+          "claim": "正文 HTML 核验作者、论文署名机构、方法结构与实验边界。 / Full-text HTML verified authors, affiliations, method, and evaluation boundaries.",
+          "checkedAt": "2026-11-21"
+        }
+      ],
+      "researchNotes": [
+        "正文重点核读 §3 触觉投影渲染流程、§4 LIBERO 与真机 π0.5/miniVLA 消融实验及附录 A 投影推导。",
+        "驴·阅读路线：先看图1一眼明白核心想法，再读 §3 投影编码设计，最后看 §4 中对比独立触觉编码器的消融结果。"
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/visible-touch-af84cb2837.png",
+          "sha256": "af84cb2837116d55421b1c2531212609527829ed9fe876113636f4176e82fcd9",
+          "width": 2530,
+          "height": 1056,
+          "sourceUrl": "https://arxiv.org/html/2609.14156v2/figures/overview_postrebuttal_v3.png",
+          "evidenceUrl": "https://arxiv.org/html/2609.14156v2",
+          "verifiedAt": "2026-11-21",
+          "credit": "Metin Alp Dogan et al. · Original paper figure",
+          "rights": "Paper distributed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), verified from arXiv license link. Authors retain copyright. Original figure used unmodified as scholarly preview.",
+          "displayPolicy": "open-license",
+          "background": "light",
+          "altZh": "Visible Touch 原论文图1：将低成本磁触觉传感器的逐单元接触信号叠加渲染到策略RGB图像中",
+          "altEn": "Visible Touch original Figure 1 illustrating per-taxel magnetic contact signals rendered as spatial RGB overlays for visuomotor policies"
+        },
+        "figureNote": "",
+        "institutions": [
+          {
+            "name": "University of California, Los Angeles",
+            "institutionId": "pending-university-of-california-los-angeles",
+            "institutionType": "university",
+            "markType": "compact-symbol",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-b03be85d2578d855.png",
+              "sha256": "b03be85d2578d855abd9025af2b6555cfbf4b127b9557cffcb62f10c34132a5b",
+              "width": 56,
+              "height": 56,
+              "sourceUrl": "https://www.ucla.edu/img/apple-touch-icon.png",
+              "evidenceUrl": "https://www.ucla.edu/",
+              "verifiedAt": "2026-11-03",
+              "credit": "University of California, Los Angeles · official-source compact identity mark",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. UCLA Policy 110 governs campus marks; brand guidance requires approvals for external use. No approval is claimed. The UCLA letters are the university custom campus mark, not newly typeset initials. Policy: https://www.adminpolicies.ucla.edu/APP/Number/110.0",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "dark",
+              "altZh": "University of California, Los Angeles 官方完整独立图形标识",
+              "altEn": "University of California, Los Angeles complete official compact identity mark"
+            },
+            "authorNames": [
+              "Metin Alp Dogan",
+              "Edward Sun",
+              "Feng Xu",
+              "Daniel Wu",
+              "Allen Peng",
+              "Dennis Hong",
+              "Yuchen Cui"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2609.14156v2",
+                "claim": "核验本文作者署名机构：University of California, Los Angeles（Metin Alp Dogan、Edward Sun、Feng Xu、Daniel Wu 等）。 / Paper-specific affiliation verified: University of California, Los Angeles.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          }
+        ],
+        "authors": []
+      },
+      "formalPublication": {
+        "type": "conference",
+        "evidenceUrl": "https://openreview.net/forum?id=ult1vxdeUb"
+      }
+    },
+    {
+      "id": "arxiv-2605-25829",
+      "title": "OASIS：通过 SE(3) 轨迹预测对齐视觉运动策略的观测与动作空间",
+      "titleEn": "OASIS: Observation-Action Space Alignment via SE(3) Trajectory Prediction for Robotic Manipulation",
+      "authors": [
+        "Xinzhe Chen",
+        "Sihua Ren",
+        "Liqi Huang",
+        "Haowen Sun",
+        "Mingyang Li",
+        "Zeyang Liu",
+        "Xingyu Chen",
+        "Xuguang Lan"
+      ],
+      "year": 2026,
+      "venue": "NeurIPS 2026 · Spotlight（已录用 / accepted）",
+      "tags": [
+        "3D操作策略",
+        "SE(3)轨迹预测",
+        "观测动作对齐"
+      ],
+      "summary": "现有VLA和世界动作模型虽引入视觉特征或未来图像预测，但中间表征仍停留在观测空间，迫使动作解码器隐式恢复刚体几何。OASIS融合视觉语言与公制深度构建3D感知编码器，并以相机坐标系下末端SE(3)轨迹预测作为显式中间任务，再用姿态监督隐状态引导动作解码，在仿真与真机操作上均取得稳健增益。该设计几何直觉扎实，但高度依赖深度估计精度与刚体末端假设。",
+      "summaryEn": "Existing VLAs and world action models enrich representations in observation space without matching the rigid-body geometry of action space. OASIS fuses vision-language and metric-depth features into a 3D-aware encoder paired with an explicit camera-frame SE(3) end-effector trajectory predictor whose pose-supervised hidden states condition the action decoder, improving simulation and real manipulation. The geometric alignment is principled, though dependent on metric depth quality and rigid end-effector assumptions.",
+      "whySelected": "NeurIPS 2026 Spotlight；清晰剖析观测空间与动作空间几何失配问题，用相机系 SE(3) 轨迹预测做强结构桥梁。",
+      "sources": [
+        {
+          "label": "原文 / Full text",
+          "url": "https://arxiv.org/html/2605.25829v2"
+        },
+        {
+          "label": "正式会议身份 / Formal venue",
+          "url": "https://openreview.net/forum?id=PGq5jFALJa"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun",
+        "lv"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "NeurIPS 2026 Spotlight；重点看 SE(3) 中间表征如何优于纯2D视觉特征或像素级未来帧预测。",
+          "relation": "连接3D深度感知、世界动作模型与几何对齐的末端执行器动作解码。",
+          "prerequisites": [
+            "SE(3) 刚体变换基础 / SE(3) rigid-body geometry",
+            "视觉运动策略 / Visuomotor policies"
+          ],
+          "difficulty": "intermediate",
+          "readRecommendation": "read"
+        },
+        "lv": {
+          "whyRead": "P1 机器人3D感知与操作策略衔接线：理解为什么“预测末端3D位姿轨迹”比直接预测下一帧像素更贴近控制需求。",
+          "relation": "承接2D视觉策略向3D空间几何表征升级，与同日 Visible Touch 互补视角。",
+          "prerequisites": [
+            "相机坐标系与3D位姿概念 / Camera frames and 3D poses"
+          ],
+          "difficulty": "intermediate",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2605.25829",
+        "other": null
+      },
+      "publicationStatus": "accepted",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-20",
+      "verifiedAt": "2026-11-21",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "依赖公制深度估计或深度相机输入，面对反光、透明物体或严重噪声时几何特征质量会下降。 / Relies on metric depth features that degrade on reflective, transparent, or noisy surfaces.",
+        "以单末端执行器刚体 SE(3) 轨迹为主要桥梁，拓展至多指灵巧手高维关节动作需进一步设计。 / Uses rigid end-effector SE(3) trajectories; extension to high-DoF multi-fingered hand kinematics requires additional modeling."
+      ],
+      "assumptions": [
+        "相机标定与公制深度可支持将末端执行器位姿轨迹准确映射至相机坐标系。 / Assumes camera calibration and metric depth suffice for camera-frame SE(3) trajectory prediction."
+      ],
+      "evidence": [
+        {
+          "url": "https://openreview.net/forum?id=PGq5jFALJa",
+          "claim": "OpenReview 官方页面确认 OASIS 录用为 NeurIPS 2026 Spotlight。 / Official OpenReview record confirms NeurIPS 2026 Spotlight acceptance.",
+          "checkedAt": "2026-11-21"
+        },
+        {
+          "url": "https://arxiv.org/html/2605.25829v2",
+          "claim": "正文 HTML 核验作者、论文署名机构、方法结构与实验边界。 / Full-text HTML verified authors, affiliations, method, and evaluation boundaries.",
+          "checkedAt": "2026-11-21"
+        }
+      ],
+      "researchNotes": [
+        "正文重点核读 §3.2 观测-动作空间对齐分析、§4.3 SE(3) 轨迹预测模块与 §5.3–5.4 消融及真机评测。",
+        "驴·阅读路线：先看图1对比 VLA、WAM 与 OASIS 三种中间表征的差异，再读 §4.1–4.4 架构模块与 §5.3 深度/SE(3) 消融。"
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/oasis-4cb150a142.png",
+          "sha256": "4cb150a142b1553d03addcb51b6c74ba0f6594c6f6b0642b52df9dd6084b1dc7",
+          "width": 1600,
+          "height": 615,
+          "sourceUrl": "https://arxiv.org/html/2605.25829v2/Figure1_v4.png",
+          "evidenceUrl": "https://arxiv.org/html/2605.25829v2",
+          "verifiedAt": "2026-11-21",
+          "credit": "Xinzhe Chen et al. · Original paper figure",
+          "rights": "Copyright retained by the paper authors/rightsholders. Attributed editorial thumbnail extracted unmodified from the cited arXiv HTML figure; arXiv non-exclusive distribution licence is not a general reuse licence and no endorsement is implied.",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "light",
+          "altZh": "OASIS 原论文图1：对比现有VLA/世界动作模型与OASIS基于SE(3)轨迹预测的观测动作空间对齐",
+          "altEn": "OASIS original Figure 1 comparing observation-space VLA/WAM representations with OASIS SE(3) trajectory alignment"
+        },
+        "figureNote": "",
+        "institutions": [
+          {
+            "name": "Xi’an Jiaotong University",
+            "institutionId": "pending-xi-an-jiaotong-university",
+            "institutionType": "university",
+            "markType": "emblem",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-352f5526f8ba5bee.png",
+              "sha256": "352f5526f8ba5beee3d21392c6d8eede36efbd15bd2a50914c7e68ed6b8b1eb7",
+              "width": 1757,
+              "height": 1757,
+              "sourceUrl": "https://vi.xjtu.edu.cn/img/a1-3jdxhred.png",
+              "evidenceUrl": "https://vi.xjtu.edu.cn/ksxz/ksxz1.htm",
+              "verifiedAt": "2026-11-03",
+              "credit": "Xi’an Jiaotong University · official-source compact identity mark",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. Official alumni guidance describes an approval process for emblem/name uses including web/news/publicity; no approval or applicability of an exception is asserted. Policy: https://alumni.xjtu.edu.cn/info/1230/4197.htm",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "Xi’an Jiaotong University 官方完整图形标识",
+              "altEn": "Complete official compact mark of Xi’an Jiaotong University"
+            },
+            "authorNames": [
+              "Xinzhe Chen",
+              "Sihua Ren",
+              "Liqi Huang",
+              "Haowen Sun",
+              "Mingyang Li",
+              "Zeyang Liu",
+              "Xingyu Chen",
+              "Xuguang Lan"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2605.25829v2",
+                "claim": "核验本文作者署名机构：Xi’an Jiaotong University（Xinzhe Chen、Sihua Ren、Liqi Huang、Haowen Sun 等）。 / Paper-specific affiliation verified: Xi’an Jiaotong University.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          }
+        ],
+        "authors": []
+      },
+      "formalPublication": {
+        "type": "conference",
+        "evidenceUrl": "https://openreview.net/forum?id=PGq5jFALJa"
+      }
+    },
+    {
+      "id": "arxiv-2606-18558",
+      "title": "MolmoMotion：语言指令引导的世界坐标系3D点轨迹预测",
+      "titleEn": "MolmoMotion: Forecasting Point Trajectories in 3D with Language Instruction",
+      "authors": [
+        "Jianing Zhang",
+        "Chenhao Zheng",
+        "Yajun Yang",
+        "Max Argus",
+        "Rustin Soraki",
+        "Winson Han",
+        "Taira Anderson",
+        "Chun-Liang Li",
+        "Shuo Liu",
+        "Jiafei Duan",
+        "Zhongzheng Ren",
+        "Jieyu Zhang",
+        "Ranjay Krishna"
+      ],
+      "year": 2026,
+      "venue": "NeurIPS 2026 · Spotlight（已录用 / accepted）",
+      "tags": [
+        "3D点流预测",
+        "具身规划先验",
+        "语言条件运动"
+      ],
+      "summary": "让智能体预测物体在未来如何随指令运动是规划与物理推理的基础。MolmoMotion将任务形式化为目标条件3D点轨迹预测：输入短视觉历史、物体3D查询点与语言指令，预测各点在公制世界坐标下的未来运动，并开源百万级数据集MolmoMotion-1M与评测集PointMotionBench。该本体无关3D运动先验能有效迁移至机器人规划与视频可控生成，但复杂遮挡与接触力建模仍较薄弱。",
+      "summaryEn": "Anticipating how objects move under language goals is central to embodied planning. MolmoMotion formalizes goal-conditioned 3D point motion forecasting in metric world coordinates from RGB history, query points, and text instructions, releasing the 1.16M-clip MolmoMotion-1M corpus and PointMotionBench. This embodiment-agnostic 3D prior transfers cleanly to robot planning and controllable video generation, though heavy occlusion and explicit contact-force physics remain challenging.",
+      "whySelected": "NeurIPS 2026 Spotlight；以世界坐标3D点轨迹打通人类视频、机器人操作规划与可控视频生成，且开放百万级数据与代码。",
+      "sources": [
+        {
+          "label": "原文 / Full text",
+          "url": "https://arxiv.org/html/2606.18558v2"
+        },
+        {
+          "label": "正式会议身份 / Formal venue",
+          "url": "https://openreview.net/forum?id=mRzgdbaTNp"
+        },
+        {
+          "label": "项目主页 / Project page",
+          "url": "https://molmomotion.github.io/"
+        },
+        {
+          "label": "开源代码 / Code repository",
+          "url": "https://github.com/allenai/molmo-motion"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "NeurIPS 2026 Spotlight；重点看本体无关的3D物体点流先验如何赋能下游机器人操作规划。",
+          "relation": "连接3D视觉点跟踪、语言条件运动预测与机器人策略初始化。",
+          "prerequisites": [
+            "3D点跟踪基础 / 3D point tracking",
+            "多模态指令理解 / Multimodal grounding"
+          ],
+          "difficulty": "intermediate",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2606.18558",
+        "other": null
+      },
+      "publicationStatus": "accepted",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-20",
+      "verifiedAt": "2026-11-21",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": "https://github.com/allenai/molmo-motion",
+        "project": "https://molmomotion.github.io/",
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "物体表面3D点轨迹虽本体无关，但机器人实际执行时仍需下层策略或规划器将物体运动转化为无碰撞关节控制。 / Embodiment-agnostic object point trajectories still require a downstream controller to translate into collision-free robot actions.",
+        "自动标注百万级野生视频的3D点流不可避免存在深度尺度噪声与长时遮挡漂移。 / Automatically annotated 3D point trajectories from unconstrained videos contain depth-scale noise and occlusion drift."
+      ],
+      "assumptions": [
+        "任务意图可由物体上稀疏3D查询点的未来几何位移充分表征。 / Assumes task intent is well captured by future 3D trajectories of sparse query points on target objects."
+      ],
+      "evidence": [
+        {
+          "url": "https://openreview.net/forum?id=mRzgdbaTNp",
+          "claim": "OpenReview 官方页面确认 MolmoMotion 录用为 NeurIPS 2026 Spotlight。 / Official OpenReview record confirms NeurIPS 2026 Spotlight acceptance.",
+          "checkedAt": "2026-11-21"
+        },
+        {
+          "url": "https://arxiv.org/html/2606.18558v2",
+          "claim": "正文 HTML 核验作者、论文署名机构、方法结构与实验边界。 / Full-text HTML verified authors, affiliations, method, and evaluation boundaries.",
+          "checkedAt": "2026-11-21"
+        },
+        {
+          "url": "https://molmomotion.github.io/",
+          "claim": "项目主页已于本轮实测 HTTP 200 可访问；不声称完整复现实验。 / Project page verified reachable (HTTP 200); no reproduction claimed.",
+          "checkedAt": "2026-11-21"
+        },
+        {
+          "url": "https://github.com/allenai/molmo-motion",
+          "claim": "公开代码仓库已于本轮实测 HTTP 200 可访问；未运行复现。 / Public code repository verified reachable (HTTP 200); not executed.",
+          "checkedAt": "2026-11-21"
+        }
+      ],
+      "researchNotes": [
+        "正文重点核读 §2 问题形式化与架构、§3 MolmoMotion-1M 自动标注管线及 §4.2 迁移至机器人 DROID 规划实验。"
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/molmomotion-c3e9aeaa3c.png",
+          "sha256": "c3e9aeaa3c17850782943032b846aa46c1db5431fa4d1585f13c8a1367f6bb7d",
+          "width": 3051,
+          "height": 962,
+          "sourceUrl": "https://arxiv.org/html/2606.18558v2/Teaser_3.png",
+          "evidenceUrl": "https://arxiv.org/html/2606.18558v2",
+          "verifiedAt": "2026-11-21",
+          "credit": "Jianing Zhang et al. · Original paper figure",
+          "rights": "Copyright retained by the paper authors/rightsholders. Attributed editorial thumbnail extracted unmodified from the cited arXiv HTML figure; arXiv non-exclusive distribution licence is not a general reuse licence and no endorsement is implied.",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "light",
+          "altZh": "MolmoMotion 原论文图1：根据初始3D查询点、历史RGB观测与语言指令预测物体未来3D点轨迹",
+          "altEn": "MolmoMotion original Figure 1 overview of goal-conditioned 3D point trajectory forecasting from RGB history and language instructions"
+        },
+        "figureNote": "",
+        "institutions": [
+          {
+            "name": "Allen Institute for AI",
+            "institutionId": "pending-allen-institute-for-ai",
+            "institutionType": "research-institute",
+            "markType": "organization-mark",
+            "logo": {
+              "path": "assets/institutions/allen-institute-for-ai.png",
+              "sourceUrl": "https://allenai.org/favicon.ico",
+              "evidenceUrl": "https://allenai.org/",
+              "width": 48,
+              "height": 48,
+              "sha256": "98ce275aa269995a7d23cb61fbb843f738b40240c1f1bcc40266c2c2ce077dac",
+              "credit": "Allen Institute for AI official website identity asset",
+              "kind": "institution-logo",
+              "verifiedAt": "2026-11-02",
+              "background": "transparent",
+              "rights": "Official institutional identity asset; copyright and trademarks remain with owner. No blanket reuse license or endorsement asserted. Preserve complete mark, proportions and clear space. Intended only for accurate editorial identification of paper affiliation.",
+              "displayPolicy": "official-brand",
+              "altEn": "Official compact identity mark of Allen Institute for AI",
+              "altZh": "Allen Institute for AI 官方标识"
+            },
+            "authorNames": [
+              "Jianing Zhang",
+              "Chenhao Zheng",
+              "Max Argus",
+              "Rustin Soraki",
+              "Winson Han",
+              "Taira Anderson",
+              "Jiafei Duan",
+              "Zhongzheng Ren",
+              "Jieyu Zhang",
+              "Ranjay Krishna"
+            ],
+            "evidence": [
+              {
+                "url": "https://molmomotion.github.io/",
+                "claim": "核验本文作者署名机构：Allen Institute for AI（Jianing Zhang、Chenhao Zheng、Max Argus、Rustin Soraki 等）。 / Paper-specific affiliation verified: Allen Institute for AI.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "University of Washington",
+            "institutionId": "pending-university-of-washington",
+            "institutionType": "university",
+            "markType": "compact-symbol",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/uw-block-w.png",
+              "sha256": "517b9fc5f39e280e54759a49fc4cb2726bab77039b94ee2b528e71036fdebd47",
+              "width": 368,
+              "height": 247,
+              "sourceUrl": "https://cdn.uw.edu/wp-content/uploads/sites/230/2023/11/02134812/W-Logo_RegistrationMark_Purple_2685_HEX1.png",
+              "evidenceUrl": "https://cdn.uw.edu/wp-content/uploads/sites/65/2023/06/22155930/Revised-Policies-Jun23-APPROVED-MG.pdf",
+              "verifiedAt": "2026-11-02",
+              "credit": "University of Washington official purple Block W with registration mark",
+              "rights": "University of Washington trademark retained. Official June 2023 policy IV(c) permits informational publications only to the extent necessary. This small, unaltered mark identifies a paper-evidenced UW affiliation only; it is not site branding, sponsorship, co-branding, advertising, decoration or a blanket noncommercial licence. Original guidance recommends a plain white clear field, serif-height clearance and18px minimum. Current user-requested40×32px compact thumbnail retains original purple colour and registration mark; it does not assert compliance with the previous60×44px reviewed clear-field layout. Gallery placement is excluded.",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "altZh": "华盛顿大学官方紫色W标识",
+              "altEn": "University of Washington official purple Block W"
+            },
+            "authorNames": [
+              "Jianing Zhang",
+              "Chenhao Zheng",
+              "Yajun Yang",
+              "Rustin Soraki",
+              "Chun-Liang Li",
+              "Shuo Liu",
+              "Jiafei Duan",
+              "Zhongzheng Ren",
+              "Jieyu Zhang",
+              "Ranjay Krishna"
+            ],
+            "evidence": [
+              {
+                "url": "https://molmomotion.github.io/",
+                "claim": "核验本文作者署名机构：University of Washington（Jianing Zhang、Chenhao Zheng、Yajun Yang、Rustin Soraki 等）。 / Paper-specific affiliation verified: University of Washington.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "University of North Carolina at Chapel Hill",
+            "institutionId": "pending-university-of-north-carolina-at-chapel-hill",
+            "institutionType": "university",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Zhongzheng Ren"
+            ],
+            "evidence": [
+              {
+                "url": "https://molmomotion.github.io/",
+                "claim": "核验本文作者署名机构：University of North Carolina at Chapel Hill（Zhongzheng Ren）。 / Paper-specific affiliation verified: University of North Carolina at Chapel Hill.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          }
+        ],
+        "authors": []
+      },
+      "formalPublication": {
+        "type": "conference",
+        "evidenceUrl": "https://openreview.net/forum?id=mRzgdbaTNp"
+      }
+    },
+    {
+      "id": "doi-master-micro",
+      "title": "M2-ResiPolicy：融合自适应触觉与力混合控制的主微残差精细操作架构",
+      "titleEn": "Master–Micro Residual Correction With Adaptive Tactile Fusion and Force-Mixed Control for Contact-Rich Manipulation",
+      "authors": [
+        "Xingting Li",
+        "Yifan Xie",
+        "Han Liu",
+        "Wei Hou",
+        "Guangyu Chen",
+        "Shoujie Li",
+        "Wenbo Ding"
+      ],
+      "year": 2026,
+      "venue": "IEEE Robotics and Automation Letters（RA-L 2026 · Vol. 11 No. 11 · 正式发表）",
+      "tags": [
+        "触觉操作",
+        "双时间尺度残差控制",
+        "力控柔顺执行"
+      ],
+      "summary": "接触密集型精细操作同时要求长时程全局规划与高频局部抗滑响应，单一视觉扩散策略往往频率过低且盲于摩擦突变。M2-ResiPolicy提出双流主微架构：10Hz主引导策略以置信门控交叉注意力融合视触觉生成全局动作块，高频微残差模块实时修偏并由力混合柔顺控制器执行，在插拔与易碎精细操作上表现稳健。双层训练流程相对复杂，传感器标定维护成本亦较高。",
+      "summaryEn": "Contact-rich manipulation demands both global task coherence and high-frequency slip/friction reaction, which low-rate visual diffusion policies struggle to balance. M2-ResiPolicy decouples a 10 Hz Master-Guidance diffusion policy using confidence-gated visuotactile cross-attention from a reactive high-frequency Micro-Residual correction module executed via force-mixed compliant control. It excels on fine contact tasks, though staged training complexity and tactile sensor calibration remain non-trivial.",
+      "whySelected": "IEEE RA-L 2026 年 11 月期正式发表；清华/中山/南洋理工团队以双时间尺度主微残差+力混合控制扎实攻克接触密集型操作。",
+      "sources": [
+        {
+          "label": "原文 / Full text",
+          "url": "https://arxiv.org/html/2603.15152v1"
+        },
+        {
+          "label": "正式期刊 DOI / Formal journal DOI",
+          "url": "https://doi.org/10.1109/LRA.2026.3739024"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "RA-L 2026 正式期刊；重点看“10Hz全局扩散块 + 高频局部触觉残差 + 力混合柔顺控制”的三层协同设计。",
+          "relation": "直接衔接扩散策略动作分块、视触觉融合与高频柔顺力控。",
+          "prerequisites": [
+            "扩散策略 / Diffusion Policy",
+            "阻抗/导纳柔顺控制 / Compliant force control"
+          ],
+          "difficulty": "intermediate",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": "10.1109/lra.2026.3739024",
+        "arxiv": "2603.15152",
+        "other": null
+      },
+      "publicationStatus": "published",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-20",
+      "verifiedAt": "2026-11-21",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "分阶段训练主策略与微残差策略需要精细同步视触觉及力传感器数据，工程部署链路较重。 / Staged training of master and micro-residual streams requires tightly synchronized visuotactile and force sensing.",
+        "当前在特定夹爪与桌面接触密集任务上验证，尚未测试跨不同型号触觉传感器的零样本迁移。 / Validated on a specific gripper and tabletop tasks without cross-sensor zero-shot transfer testing."
+      ],
+      "assumptions": [
+        "系统配备高带宽触觉与力反馈通道，且主策略动作块与高频残差可在统一柔顺控制框架下叠加。 / Assumes high-bandwidth tactile/force sensing compatible with superimposed master chunks and micro-residuals."
+      ],
+      "evidence": [
+        {
+          "url": "https://doi.org/10.1109/LRA.2026.3739024",
+          "claim": "Crossref 官方 DOI 记录确认该论文正式发表于 IEEE RA-L Vol. 11 No. 11 (2026-11)。 / Official Crossref DOI record confirms publication in IEEE RA-L Vol. 11 No. 11 (Nov 2026).",
+          "checkedAt": "2026-11-21"
+        },
+        {
+          "url": "https://arxiv.org/html/2603.15152v1",
+          "claim": "正文 HTML 核验作者、论文署名机构、方法结构与实验边界。 / Full-text HTML verified authors, affiliations, method, and evaluation boundaries.",
+          "checkedAt": "2026-11-21"
+        }
+      ],
+      "researchNotes": [
+        "正文重点核读 §III-B 置信门控视触觉融合、§III-C 高频微残差与力混合 PBIC 执行，以及 §IV-C 消融实验。"
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/master-micro-780ace254d.png",
+          "sha256": "780ace254d519178ebea734cdeb087794676eb42a72210b32686ad9ef5e64966",
+          "width": 3114,
+          "height": 1988,
+          "sourceUrl": "https://arxiv.org/html/2603.15152v1/Fig/main_figure.png",
+          "evidenceUrl": "https://arxiv.org/html/2603.15152v1",
+          "verifiedAt": "2026-11-21",
+          "credit": "Xingting Li et al. · Original paper figure",
+          "rights": "Copyright retained by the paper authors/rightsholders. Attributed editorial thumbnail extracted unmodified from the cited arXiv HTML figure; arXiv non-exclusive distribution licence is not a general reuse licence and no endorsement is implied.",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "light",
+          "altZh": "M2-ResiPolicy 原论文图1：解耦10Hz全局主引导与高频微残差修正并通过力混合柔顺控制执行",
+          "altEn": "M2-ResiPolicy original Figure 1 decoupling 10 Hz master guidance from high-frequency micro-residual correction under force-mixed compliant control"
+        },
+        "figureNote": "",
+        "institutions": [
+          {
+            "name": "Tsinghua University",
+            "institutionId": "tsinghua",
+            "institutionType": "university",
+            "markType": "emblem",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/tsinghua-emblem.jpg",
+              "sha256": "edb1c56f1d4399ef32430f418cb179169e04955e75d95eb57c001e5b2f069ade",
+              "width": 554,
+              "height": 385,
+              "sourceUrl": "https://www.tsinghua.edu.cn/__local/C/B6/1C/5682B1124834BFE4B7BB43744CF_C7C409E3_C2FAA.pdf",
+              "evidenceUrl": "https://www.env.tsinghua.edu.cn/qinghuadaxueerjidanweibiaozhiguifanshouce-shixing.pdf",
+              "verifiedAt": "2026-10-31",
+              "credit": "Tsinghua University official emblem",
+              "rights": "官方校徽；无开放复用许可声明，保持原几何、颜色及安全空间。来源为官方章程PDF及二级单位标志规范。",
+              "displayPolicy": "official-brand",
+              "background": "light",
+              "altZh": "清华大学官方紫色校徽",
+              "altEn": "Official purple Tsinghua University emblem"
+            },
+            "authorNames": [
+              "Xingting Li",
+              "Yifan Xie",
+              "Han Liu",
+              "Wei Hou",
+              "Guangyu Chen",
+              "Wenbo Ding"
+            ],
+            "evidence": [
+              {
+                "url": "https://doi.org/10.1109/LRA.2026.3739024",
+                "claim": "核验本文作者署名机构：Tsinghua University（Xingting Li、Yifan Xie、Han Liu、Wei Hou 等）。 / Paper-specific affiliation verified: Tsinghua University.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "Nanyang Technological University",
+            "institutionId": "pending-nanyang-technological-university",
+            "institutionType": "university",
+            "markType": "emblem",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-88bb77c7989b3a5d.svg",
+              "sha256": "88bb77c7989b3a5d875f60b368179fb7f5dedcdb10b4643d121cdd57eb68d0b6",
+              "width": 260,
+              "height": 330,
+              "sourceUrl": "https://www3.ntu.edu.sg/CorpComms2/NTU%20Quick%20Brand%20Guide%202018.pdf",
+              "evidenceUrl": "https://www.ntu.edu.sg/about-us/history/coat-of-arms",
+              "verifiedAt": "2026-11-03",
+              "credit": "NTU Singapore official-source complete shield",
+              "rights": "Institutional trademark and copyright remain with their owners. No separate permission obtained, no open licence or legal clearance claimed. Use solely as a small descriptive paper-affiliation thumbnail, not endorsement; preserve the complete mark, geometry and native colors. NTU current Terms of Use requires prior written consent for its name, logo and crest. 2018 master-logo instructions require the master logo to remain unaltered and specify minimum 106px digital width and crest-based clear space. This is source verification, not a permission grant. Policy: https://www.ntu.edu.sg/legal/terms-of-use",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "南洋理工大学官方来源完整盾徽",
+              "altEn": "NTU Singapore official-source complete shield"
+            },
+            "authorNames": [
+              "Shoujie Li"
+            ],
+            "evidence": [
+              {
+                "url": "https://doi.org/10.1109/LRA.2026.3739024",
+                "claim": "核验本文作者署名机构：Nanyang Technological University（Shoujie Li）。 / Paper-specific affiliation verified: Nanyang Technological University.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          }
+        ],
+        "authors": []
+      },
+      "formalPublication": {
+        "type": "journal",
+        "evidenceUrl": "https://doi.org/10.1109/LRA.2026.3739024"
+      }
+    },
+    {
+      "id": "doi-sevi",
+      "title": "SEVI：基于证据不确定性安全评论家的真机在线安全强化学习",
+      "titleEn": "SEVI: Safe Evidential Real-World Reinforcement Learning",
+      "authors": [
+        "Shaekh Mohammad Shithil",
+        "Lantao Liu"
+      ],
+      "year": 2026,
+      "venue": "IEEE Robotics and Automation Letters（RA-L 2026 · Vol. 11 No. 12 · 正式发表）",
+      "tags": [
+        "真机强化学习",
+        "安全干预",
+        "证据不确定性"
+      ],
+      "summary": "直接在物理机器人上跑在线强化学习能攻克接触密集任务，但探索期的不安全碰撞极易损毁硬件。SEVI引入单次前向即可同时估计未来违规风险与认知不确定性的证据安全评论家：每步执行前若预测风险过高或证据支持不足，即无缝切换至离线训练的安全恢复策略，显著降低USB插拔等真机在线训练中的危险碰撞。其安全边界仍取决于离线安全标注覆盖度与阈值设定。",
+      "summaryEn": "Online real-world RL enables contact-rich manipulation directly on hardware, yet unsafe exploratory actions risk physical damage. SEVI introduces an Evidential Safety Critic that estimates both future violation risk and epistemic uncertainty in a single forward pass; before executing any task-policy action, elevated risk or low evidential support triggers an offline recovery policy, cutting unsafe contacts on real USB insertion. Safety guarantees still hinge on offline safety-label coverage and threshold tuning.",
+      "whySelected": "IEEE RA-L 2026 年 12 月期正式发表；用单次前向证据不确定性实时拦截高风险真机 RL 探索，实用价值突出。",
+      "sources": [
+        {
+          "label": "原文 / Full text",
+          "url": "https://arxiv.org/html/2610.31829v1"
+        },
+        {
+          "label": "正式期刊 DOI / Formal journal DOI",
+          "url": "https://doi.org/10.1109/LRA.2026.3746125"
+        },
+        {
+          "label": "项目主页 / Project page",
+          "url": "https://sevi-safe.github.io/"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "RA-L 2026 正式期刊；重点看证据深度学习如何同时捕捉“明确危险”与“分布外未知风险”以触发安全恢复。",
+          "relation": "连接真机在线强化学习（HIL-SERL 类范式）、分布外不确定性估计与安全恢复控制。",
+          "prerequisites": [
+            "离线/在线强化学习 / Online RL",
+            "不确定性估计基础 / Epistemic uncertainty"
+          ],
+          "difficulty": "intermediate",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": "10.1109/lra.2026.3746125",
+        "arxiv": "2610.31829",
+        "other": null
+      },
+      "publicationStatus": "published",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-20",
+      "verifiedAt": "2026-11-21",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": "https://sevi-safe.github.io/",
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "证据安全评论家和恢复策略需依赖预采集离线安全/违规标注数据进行初始化，标注规则设计影响边界严密性。 / Initializing the evidential safety critic and recovery policy depends on offline safety-labeled data and task-specific safety definitions.",
+        "阈值设置过严会频繁触发恢复而拖慢在线学习效率，过宽则会遗漏边缘碰撞风险。 / Overly conservative thresholds slow online exploration while loose thresholds risk missed collisions."
+      ],
+      "assumptions": [
+        "离线阶段可获得覆盖主要危险模式的标注轨迹，且存在可将机器人带回低风险状态的恢复策略。 / Assumes offline safety-labeled transitions and a valid recovery policy returning the robot to low-risk states."
+      ],
+      "evidence": [
+        {
+          "url": "https://doi.org/10.1109/LRA.2026.3746125",
+          "claim": "Crossref 官方 DOI 记录确认 SEVI 正式发表于 IEEE RA-L Vol. 11 No. 12 (2026-12，2026-10-22 DOI 注册)。 / Official Crossref DOI record confirms publication in IEEE RA-L Vol. 11 No. 12.",
+          "checkedAt": "2026-11-21"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.31829v1",
+          "claim": "正文 HTML 核验作者、论文署名机构、方法结构与实验边界。 / Full-text HTML verified authors, affiliations, method, and evaluation boundaries.",
+          "checkedAt": "2026-11-21"
+        },
+        {
+          "url": "https://sevi-safe.github.io/",
+          "claim": "项目主页已于本轮实测 HTTP 200 可访问；不声称完整复现实验。 / Project page verified reachable (HTTP 200); no reproduction claimed.",
+          "checkedAt": "2026-11-21"
+        }
+      ],
+      "researchNotes": [
+        "正文重点核读 §IV-A 证据安全评论家公式、§IV-B/C 不确定性门控恢复机制及 §V-D 真机 USB 插入安全在线学习曲线。"
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/sevi-addd2249a1.png",
+          "sha256": "addd2249a12ef9edbc004a0e94ee973e6a88ed01d9a9b94cf2c3f49f45c1ab45",
+          "width": 2709,
+          "height": 3268,
+          "sourceUrl": "https://arxiv.org/html/2610.31829v1/figures/teaser_compres.png",
+          "evidenceUrl": "https://arxiv.org/html/2610.31829v1",
+          "verifiedAt": "2026-11-21",
+          "credit": "Shaekh Mohammad Shithil et al. · Original paper figure",
+          "rights": "Copyright retained by the paper authors/rightsholders. Attributed editorial thumbnail extracted unmodified from the cited arXiv HTML figure; arXiv non-exclusive distribution licence is not a general reuse licence and no endorsement is implied.",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "light",
+          "altZh": "SEVI 原论文图1：真机USB插入在线强化学习中利用证据风险与不确定性触发安全恢复干预",
+          "altEn": "SEVI original Figure 1 illustrating evidential risk and uncertainty-aware recovery intervention during real-world USB insertion RL"
+        },
+        "figureNote": "",
+        "institutions": [
+          {
+            "name": "Indiana University",
+            "institutionId": "pending-indiana-university",
+            "institutionType": "university",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Shaekh Mohammad Shithil",
+              "Lantao Liu"
+            ],
+            "evidence": [
+              {
+                "url": "https://doi.org/10.1109/LRA.2026.3746125",
+                "claim": "核验本文作者署名机构：Indiana University（Shaekh Mohammad Shithil、Lantao Liu）。 / Paper-specific affiliation verified: Indiana University.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          }
+        ],
+        "authors": []
+      },
+      "formalPublication": {
+        "type": "journal",
+        "evidenceUrl": "https://doi.org/10.1109/LRA.2026.3746125"
+      }
+    },
+    {
+      "id": "doi-kr-whynot",
+      "title": "带否定 Datalog 的 Why(-Not) 溯源语义与复杂性分析",
+      "titleEn": "Why(-Not)-Provenance for Datalog with Negation",
+      "authors": [
+        "Bart Bogaerts",
+        "Marco Calautti",
+        "Andreas Pieris",
+        "Samuele Pollaci",
+        "Robbe Van den Eede"
+      ],
+      "year": 2026,
+      "venue": "KR 2026 · Main Track（正式发表 · pp. 201–210）",
+      "tags": [
+        "provenance",
+        "Datalog否定语义",
+        "可解释推理"
+      ],
+      "summary": "正Datalog的why-provenance已有充分研究，但引入否定后的溯源语义与复杂性长期空白。本文基于论证理论，将why(-not)溯源拓展至良基与稳定模型语义下的带否定Datalog，并证明两种语义下解释判定的数据复杂性均为NP-完全，与正Datalog同级而未恶化。成果填补了非单调规则可解释性的理论缺口，暂未涉及大规模求解引擎实现。",
+      "summaryEn": "While why-provenance for positive Datalog is well studied, its counterpart for Datalog with negation remained open. Building on justification theory, this paper extends why(-not)-provenance to Datalog with negation under both well-founded and stable model semantics and establishes its data complexity, proving NP-completeness in both cases—matching positive Datalog without extra blowup. It closes a key theoretical gap in non-monotonic rule explainability, without addressing large-scale engine implementation.",
+      "whySelected": "KR 2026 主会核心理论长文；直接把 why(-not)-provenance 推进到带否定的非单调 Datalog 推理，高度贴合李的溯源与知识表示主线。",
+      "sources": [
+        {
+          "label": "KR 2026 论文集页 / KR Proceedings",
+          "url": "https://proceedings.kr.org/2026/19/"
+        },
+        {
+          "label": "正式会议身份 / Formal venue",
+          "url": "https://doi.org/10.24963/kr.2026/19"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "li"
+      ],
+      "recommendations": {
+        "li": {
+          "whyRead": "必读理论补完：看论证理论如何统一定义良基与稳定模型语义下的 why(-not) 见证并证明 NP-完全紧界。",
+          "relation": "直接连接 Datalog 规则推理、why/why-not provenance 与知识库/本体可解释性。",
+          "prerequisites": [
+            "Datalog 与逻辑程序否定语义 / Datalog with negation",
+            "数据复杂性 / Data complexity"
+          ],
+          "difficulty": "advanced",
+          "readRecommendation": "deep"
+        }
+      },
+      "identity": {
+        "doi": "10.24963/kr.2026/19",
+        "arxiv": null,
+        "other": null
+      },
+      "publicationStatus": "published",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-20",
+      "verifiedAt": "2026-11-21",
+      "readDepth": "abstract",
+      "paperType": "theory",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "聚焦理论语义定义与数据复杂性边界证明，未提供面向真实知识图谱或数据库系统的原型求解器评测。 / Focuses on semantics and data-complexity characterization without a benchmarked system prototype.",
+        "结果面向命题/一阶带否定 Datalog 规则，尚未直接耦合 VKG 映射或带存在量词的 DL-Lite 规则。 / Targets Datalog with negation rather than existential DL-Lite rules or VKG mapping layers directly."
+      ],
+      "assumptions": [
+        "非单调规则程序采用标准良基语义（well-founded）或稳定模型语义（stable model）解释。 / Assumes standard well-founded or stable model semantics for Datalog with negation."
+      ],
+      "evidence": [
+        {
+          "url": "https://doi.org/10.24963/kr.2026/19",
+          "claim": "KR 2026 官方论文集与 Crossref DOI 记录确认该论文正式发表于 KR 2026 主会第 201–210 页。 / Official KR 2026 proceedings and Crossref DOI confirm publication in KR 2026 Main Track, pp. 201–210.",
+          "checkedAt": "2026-11-21"
+        },
+        {
+          "url": "https://proceedings.kr.org/2026/19/",
+          "claim": "核验官方论文集作者、机构署名与摘要。 / Verified authors, affiliations, and abstract from official proceedings page.",
+          "checkedAt": "2026-11-21"
+        }
+      ],
+      "researchNotes": [
+        "依据 KR 2026 官方论文集页与公开 PDF 核验作者、机构、摘要及主会页码（pp. 201–210）；阅读深度标注为摘要级核验。"
+      ],
+      "visuals": {
+        "mainFigure": null,
+        "figureNote": "KR 2026 理论证明论文以形式化定义与定理为主，未提取独立位图主图，遵循零伪造原则留空。 / Theoretical KR 2026 paper focused on formal semantics and complexity proofs; left blank honestly.",
+        "institutions": [
+          {
+            "name": "KU Leuven",
+            "institutionId": "pending-ku-leuven",
+            "institutionType": "university",
+            "markType": "emblem",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-e47e61bef3b532b8.png",
+              "sha256": "e47e61bef3b532b80471facc783c56b2cabdd1c457a9d9e40f36d0b7c5c7a514",
+              "width": 717,
+              "height": 928,
+              "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a4/KUL.gif",
+              "evidenceUrl": "https://commons.wikimedia.org/wiki/File:KUL.gif",
+              "verifiedAt": "2026-11-03",
+              "credit": "KU Leuven · genuine institutional mark from public source",
+              "rights": "Copyright and trademark remain with the institution. Public-source verification is not legal clearance. No separate institutional permission has been obtained or asserted. Editorial paper-affiliation identification only; no endorsement implied.",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "KU Leuven 完整真实机构标识",
+              "altEn": "KU Leuven complete compact institutional identity mark"
+            },
+            "authorNames": [
+              "Bart Bogaerts",
+              "Samuele Pollaci",
+              "Robbe Van den Eede"
+            ],
+            "evidence": [
+              {
+                "url": "https://doi.org/10.24963/kr.2026/19",
+                "claim": "核验本文作者署名机构：KU Leuven（Bart Bogaerts、Samuele Pollaci、Robbe Van den Eede）。 / Paper-specific affiliation verified: KU Leuven.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "Vrije Universiteit Brussel",
+            "institutionId": "pending-vrije-universiteit-brussel",
+            "institutionType": "university",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Bart Bogaerts",
+              "Samuele Pollaci",
+              "Robbe Van den Eede"
+            ],
+            "evidence": [
+              {
+                "url": "https://doi.org/10.24963/kr.2026/19",
+                "claim": "核验本文作者署名机构：Vrije Universiteit Brussel（Bart Bogaerts、Samuele Pollaci、Robbe Van den Eede）。 / Paper-specific affiliation verified: Vrije Universiteit Brussel.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "University of Milano",
+            "institutionId": "pending-university-of-milano",
+            "institutionType": "university",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Marco Calautti"
+            ],
+            "evidence": [
+              {
+                "url": "https://doi.org/10.24963/kr.2026/19",
+                "claim": "核验本文作者署名机构：University of Milano（Marco Calautti）。 / Paper-specific affiliation verified: University of Milano.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "University of Cyprus",
+            "institutionId": "pending-university-of-cyprus",
+            "institutionType": "university",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Andreas Pieris"
+            ],
+            "evidence": [
+              {
+                "url": "https://doi.org/10.24963/kr.2026/19",
+                "claim": "核验本文作者署名机构：University of Cyprus（Andreas Pieris）。 / Paper-specific affiliation verified: University of Cyprus.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "University of Edinburgh",
+            "institutionId": "pending-university-of-edinburgh",
+            "institutionType": "university",
+            "markType": "emblem",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-daf149498b72eeff.png",
+              "sha256": "daf149498b72eeff9f86705a3918bfbc8832902cf88cb427d79d293b19f659b5",
+              "width": 1773,
+              "height": 1773,
+              "sourceUrl": "https://apps.business-school.ed.ac.uk/pl/images/uoe-crest-colour.svg",
+              "evidenceUrl": "https://apps.business-school.ed.ac.uk/pl/patterns/02-basics-images-logos/02-basics-images-logos.rendered.html",
+              "verifiedAt": "2026-11-03",
+              "credit": "University of Edinburgh · official-source compact identity mark",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. Current university brand downloads require University login; no restricted resources were accessed and no institutional authorization or current minimum-size compliance is asserted. Policy: https://information-services.ed.ac.uk/design-system/brand",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "light",
+              "altZh": "University of Edinburgh 官方完整图形标识",
+              "altEn": "Complete official compact mark of University of Edinburgh"
+            },
+            "authorNames": [
+              "Andreas Pieris"
+            ],
+            "evidence": [
+              {
+                "url": "https://doi.org/10.24963/kr.2026/19",
+                "claim": "核验本文作者署名机构：University of Edinburgh（Andreas Pieris）。 / Paper-specific affiliation verified: University of Edinburgh.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          }
+        ],
+        "authors": []
+      },
+      "formalPublication": {
+        "type": "conference",
+        "evidenceUrl": "https://doi.org/10.24963/kr.2026/19"
+      }
+    }
+  ]
+}

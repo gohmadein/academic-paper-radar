@@ -1,0 +1,1371 @@
+{
+  "version": 2,
+  "date": "2026-11-18",
+  "title": "2026-11-18 零域论文精选",
+  "demo": false,
+  "timezone": "Asia/Shanghai",
+  "issueNote": "2026-11-18 积压补建档案（于 2026-11-21 按原真实日期核验重建，与已发布历史去重）。本期迅 3 篇 CoRL 2026 Oral + 2 篇 RA-L 正式期刊（满额）、李 1 篇 SIGMOD 2026 核心因果修复、驴 2 篇与迅共用记录，共 6 篇独立论文。",
+  "coverage": {
+    "checkedSources": [
+      "CoRL 2026 官网录用清单与 OpenReview 官方录用记录",
+      "Crossref 官方 DOI 元数据（IEEE RA-L Vol. 11 No. 10、ACM PACMMOD / SIGMOD 2026）",
+      "arXiv 官方正文 HTML、许可声明、原始图 1 与项目页 HTTP 200 核验"
+    ],
+    "limitations": [
+      "本日期为 2026-11-21 积压补建，按真实历史日期重建且不把旧文伪装为当天首发，核验日如实标注 2026-11-21。",
+      "来源仅限本轮实际访问核验的正式会议/期刊与公开全文，不宣称全量覆盖。",
+      "未取得直接可核验位图或无独立架构图的论文主图留空并逐项说明，不生成替代图。"
+    ]
+  },
+  "papers": [
+    {
+      "id": "arxiv-2602-16710",
+      "title": "EgoScale：以大规模第一视角人类数据扩展灵巧操作",
+      "titleEn": "EgoScale: Scaling Dexterous Manipulation with Diverse Egocentric Human Data",
+      "authors": [
+        "Ruijie Zheng",
+        "Dantong Niu",
+        "Yuqi Xie",
+        "Jing Wang",
+        "Mengda Xu",
+        "Yunfan Jiang",
+        "Fernando Castañeda",
+        "Fengyuan Hu",
+        "You Liang Tan",
+        "Letian Fu",
+        "Trevor Darrell",
+        "Furong Huang",
+        "Yuke Zhu",
+        "Danfei Xu",
+        "Linxi Fan"
+      ],
+      "year": 2026,
+      "venue": "CoRL 2026 · Oral（已录用 / accepted）",
+      "tags": [
+        "灵巧操作",
+        "第一视角人类数据",
+        "VLA缩放定律"
+      ],
+      "summary": "利用低成本人类视频训练高自由度灵巧操作一直是具身智能核心难题。EgoScale在20854小时带动作标注的第一视角人类视频上预训练流式VLA策略，揭示人类数据规模与验证损失的对数线性缩放定律，且该损失与真机灵巧操作表现高度相关；再经人机对齐中期训练，实现单样本与跨本体迁移。但人手标注质量与极端精密力控仍是落地门槛。",
+      "summaryEn": "Leveraging human video for high-DoF dexterous manipulation remains difficult at scale. EgoScale pretrains a flow-based VLA policy on 20,854 hours of action-labeled egocentric human video, uncovering a log-linear scaling law between human data scale and validation loss that strongly correlates with real-robot dexterous performance, followed by aligned human-robot mid-training for one-shot and cross-embodiment transfer. Hand-pose label noise and fine force control remain practical hurdles.",
+      "whySelected": "CoRL 2026 Oral；以超2万小时第一视角数据首次清晰验证人到灵巧手的缩放定律与跨本体中期对齐范式。",
+      "sources": [
+        {
+          "label": "原文 / Full text",
+          "url": "https://arxiv.org/html/2602.16710v1"
+        },
+        {
+          "label": "正式会议身份 / Formal venue",
+          "url": "https://openreview.net/forum?id=WF4X17Al2r"
+        },
+        {
+          "label": "项目主页 / Project page",
+          "url": "https://research.nvidia.com/labs/gear/egoscale/"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun",
+        "lv"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "CoRL 2026 Oral；重点看2万小时第一视角人类预训练缩放曲线与人机对齐中期训练配方。",
+          "relation": "直接连接人类视频预训练、灵巧手动作空间设计与跨本体 VLA 迁移。",
+          "prerequisites": [
+            "视觉语言动作模型 / VLA models",
+            "手部姿态重定向 / Hand pose retargeting"
+          ],
+          "difficulty": "intermediate",
+          "readRecommendation": "deep"
+        },
+        "lv": {
+          "whyRead": "P2 具身大模型与灵巧手核心线：弄清“如何把大规模人类视频转成机器人可用的动作先验”。",
+          "relation": "回答“真机遥操作数据不够怎么办”的核心问题，适合结合 MolmoB0T 的仿真路线对比。",
+          "prerequisites": [
+            "模仿学习与预训练微调 / Imitation learning and pretraining",
+            "流匹配策略基础 / Flow policy basics"
+          ],
+          "difficulty": "intermediate",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2602.16710",
+        "other": null
+      },
+      "publicationStatus": "accepted",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-18",
+      "verifiedAt": "2026-11-21",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": "https://research.nvidia.com/labs/gear/egoscale/",
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "第一视角视频缺少接触力与触觉标注，对强力控或遮挡严重的精密装配迁移受限。 / Egocentric video lacks contact-force and tactile labels, limiting transfer on force-critical or heavily occluded assembly.",
+        "大规模人手3D姿态提取本身存在噪声，且中期训练仍需少量目标本体真机对齐数据。 / Automated 3D human-hand pose extraction is noisy and mid-training still requires target-embodiment robot data."
+      ],
+      "assumptions": [
+        "人类手部运动学表征可映射到目标多指灵巧手并保留可迁移的操纵先验。 / Assumes human hand kinematics map cleanly onto target dexterous hands while preserving transferable priors."
+      ],
+      "evidence": [
+        {
+          "url": "https://openreview.net/forum?id=WF4X17Al2r",
+          "claim": "OpenReview 官方页面确认 EgoScale 录用为 CoRL 2026 Oral，且 CoRL 2026 官网录用清单一致列出。 / Official OpenReview and CoRL 2026 accepted-papers list confirm CoRL 2026 Oral acceptance.",
+          "checkedAt": "2026-11-21"
+        },
+        {
+          "url": "https://arxiv.org/html/2602.16710v1",
+          "claim": "正文 HTML 核验作者、论文署名机构、方法结构与实验边界。 / Full-text HTML verified authors, affiliations, method, and evaluation boundaries.",
+          "checkedAt": "2026-11-21"
+        },
+        {
+          "url": "https://research.nvidia.com/labs/gear/egoscale/",
+          "claim": "项目主页已于本轮实测 HTTP 200 可访问；不声称完整复现实验。 / Project page verified reachable (HTTP 200); no reproduction claimed.",
+          "checkedAt": "2026-11-21"
+        }
+      ],
+      "researchNotes": [
+        "正文重点核读 §2.1 人类手部动作空间设计、§3.3 缩放定律曲线与 §3.4–3.5 单样本及跨本体迁移实验。",
+        "驴·阅读路线：先看 §1 与 §2.1 理解人手动作表征，再精读 §3.3 缩放曲线，最后与今日另一篇 MolmoB0T 对比“人类视频 vs 大规模仿真”两条数据路线。"
+      ],
+      "visuals": {
+        "mainFigure": null,
+        "figureNote": "arXiv HTML 首页拉取图路径解析未返回直接可核验位图，遵循零伪造原则留空，可从原文或项目页查看图1。 / arXiv HTML figure path did not yield a directly verifiable raster asset; left blank honestly rather than substituting.",
+        "institutions": [
+          {
+            "name": "NVIDIA",
+            "institutionId": "pending-nvidia",
+            "institutionType": "company",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Ruijie Zheng",
+              "Dantong Niu",
+              "Yuqi Xie",
+              "Jing Wang",
+              "Mengda Xu",
+              "Yunfan Jiang",
+              "Fernando Castañeda",
+              "Fengyuan Hu",
+              "You Liang Tan",
+              "Letian Fu",
+              "Yuke Zhu",
+              "Danfei Xu",
+              "Linxi Fan"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2602.16710v1",
+                "claim": "核验本文作者署名机构：NVIDIA（Ruijie Zheng、Dantong Niu、Yuqi Xie、Jing Wang 等）。 / Paper-specific affiliation verified: NVIDIA.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "University of California, Berkeley",
+            "institutionId": "pending-university-of-california-berkeley",
+            "institutionType": "university",
+            "markType": "emblem",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-b318cdbc811c92ba.png",
+              "sha256": "b318cdbc811c92bae4bfae4ffca2116e8074db225df6838e888f5c68f41a037e",
+              "width": 200,
+              "height": 200,
+              "sourceUrl": "https://bcbp.berkeley.edu/sites/default/files/styles/width_200/public/ucbseal_300%20x%20300_0.png?itok=IeSglXI9&timestamp=1399312558",
+              "evidenceUrl": "https://bcbp.berkeley.edu/use-name-policy",
+              "verifiedAt": "2026-11-03",
+              "credit": "University of California, Berkeley · official-source compact identity mark",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. The campus policy restricts Berkeley seal use on websites and asks written authorization for uses outside listed official purposes. Current brand guidance states a 215px screen minimum, which a compact 40×32px affiliation thumbnail does not meet. No exception or approval is claimed. Policy: https://bcbp.berkeley.edu/use-name-policy",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "加州大学伯克利分校官方蓝金色完整校徽",
+              "altEn": "Complete official blue and gold University of California, Berkeley seal"
+            },
+            "authorNames": [
+              "Dantong Niu",
+              "Letian Fu",
+              "Trevor Darrell"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2602.16710v1",
+                "claim": "核验本文作者署名机构：University of California, Berkeley（Dantong Niu、Letian Fu、Trevor Darrell）。 / Paper-specific affiliation verified: University of California, Berkeley.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "University of Maryland, College Park",
+            "institutionId": "maryland-college-park",
+            "institutionType": "university",
+            "markType": "emblem",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/umd-emblem.webp",
+              "sha256": "d91ba74fdf5f9e0d91cf44ca560c8c7abd84d30c20d78981066bb99e4560fb3a",
+              "width": 1330,
+              "height": 818,
+              "sourceUrl": "https://omc-system.transforms.svdcdn.com/production/images/brand/Logos_InformalSeal.png?w=1920&h=1920&q=80&fm=webp&fit=max&dm=1788296316&s=129dbb4bff91a9e8a73666012aed1ead",
+              "evidenceUrl": "https://brand.umd.edu/visual-identity/logos",
+              "verifiedAt": "2026-10-31",
+              "credit": "University of Maryland 官方完整非正式校徽",
+              "rights": "University of Maryland官方商标；无开放复用许可声明。保留完整标识，不裁出独立地球，不修改颜色或几何；用于描述论文署名，不表示校方背书。",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "altZh": "University of Maryland 官方完整非正式校徽",
+              "altEn": "Official complete University of Maryland informal seal"
+            },
+            "authorNames": [
+              "Ruijie Zheng",
+              "Furong Huang"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2602.16710v1",
+                "claim": "核验本文作者署名机构：University of Maryland, College Park（Ruijie Zheng、Furong Huang）。 / Paper-specific affiliation verified: University of Maryland, College Park.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          }
+        ],
+        "authors": []
+      },
+      "formalPublication": {
+        "type": "conference",
+        "evidenceUrl": "https://openreview.net/forum?id=WF4X17Al2r"
+      }
+    },
+    {
+      "id": "arxiv-2603-16861",
+      "title": "MolmoB0T：大规模程序化仿真实现零样本真机操作",
+      "titleEn": "MolmoB0T: Large-Scale Simulation Enables Zero-Shot Manipulation",
+      "authors": [
+        "Abhay Deshpande",
+        "Maya Guru",
+        "Rose Hendrix",
+        "Snehal Jauhri",
+        "Ainaz Eftekhar",
+        "Rohun Tripathi",
+        "Max Argus",
+        "Jordi Salvador",
+        "Haoquan Fang",
+        "Matthew Wallingford",
+        "Wilbert Pumacay",
+        "Yejin Kim",
+        "Quinn Pfeifer",
+        "Ying-Chun Lee",
+        "Piper Wolters",
+        "Omar Rayyan",
+        "Mingtong Zhang",
+        "Jiafei Duan",
+        "Karen Farley",
+        "Winson Han",
+        "Eli Vanderbilt",
+        "Dieter Fox",
+        "Ali Farhadi",
+        "Georgia Chalvatzaki",
+        "Dhruv Shah",
+        "Ranjay Krishna"
+      ],
+      "year": 2026,
+      "venue": "CoRL 2026 · Oral（已录用 / accepted）",
+      "tags": [
+        "Sim2Real",
+        "仿真数据生成",
+        "零样本操作"
+      ],
+      "summary": "机器人学习界普遍认为仅靠仿真难以直接零样本迁移到真机。MolmoB0T开源程序化数据生成管线MolmoBot-Engine，在MolmoSpaces中合成170万条覆盖铰接物体操作与抓取放置的专家轨迹，训练的VLA策略在未见任何真机数据或微调的条件下完成静态与移动真机操作。这有力拓展了纯仿真边界，但柔性与高接触力任务仍受物理引擎精度制约。",
+      "summaryEn": "Robot learning often assumes simulation alone cannot achieve effective zero-shot sim-to-real transfer. MolmoB0T introduces the open-source MolmoBot-Engine procedural pipeline and 1.7M simulated expert trajectories in MolmoSpaces for articulated and pick-and-place manipulation, training VLA policies that transfer zero-shot to static and mobile hardware without real-world fine-tuning. This pushes pure-simulation boundaries, though deformable and high-force contact tasks remain limited by physics fidelity.",
+      "whySelected": "CoRL 2026 Oral；以170万开源程序化仿真轨迹正面挑战“纯仿真不可零样本真机迁移”的共识，是 Sim2Real 关键标杆。",
+      "sources": [
+        {
+          "label": "原文 / Full text",
+          "url": "https://arxiv.org/html/2603.16861v3"
+        },
+        {
+          "label": "正式会议身份 / Formal venue",
+          "url": "https://openreview.net/forum?id=c4Z0Y8gvnI"
+        },
+        {
+          "label": "项目主页 / Project page",
+          "url": "https://allenai.github.io/MolmoBot/"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun",
+        "lv"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "CoRL 2026 Oral；重点看程序化资产/场景多样性与专家规划器设计如何支撑零样本真机泛化。",
+          "relation": "直接对标真机遥操作数据路线，连接大规模程序化仿真、VLA 预训练与移动操作 Sim2Real。",
+          "prerequisites": [
+            "任务与运动规划 / TAMP basics",
+            "Sim2Real 域随机化 / Sim2Real randomization"
+          ],
+          "difficulty": "intermediate",
+          "readRecommendation": "deep"
+        },
+        "lv": {
+          "whyRead": "P1 仿真与 Sim2Real 必读线：系统了解程序化仿真引擎如何批量生成百万级专家轨迹并零样本上真机。",
+          "relation": "与同日 EgoScale（人类视频路线）形成鲜明对比，帮助建立“仿真数据缩放”全局视角。",
+          "prerequisites": [
+            "机器人仿真基础 / Robot simulation basics",
+            "行为克隆 / Behavior cloning"
+          ],
+          "difficulty": "beginner",
+          "readRecommendation": "deep"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2603.16861",
+        "other": null
+      },
+      "publicationStatus": "accepted",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-18",
+      "verifiedAt": "2026-11-21",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": "https://allenai.github.io/MolmoBot/",
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "任务集中于刚体抓取放置与常见铰接物体开关，对布料等柔性体及紧密插装接触的仿真保真度有限。 / Focuses on rigid pick-and-place and articulated objects; physics fidelity limits deformable or tight-clearance insertion.",
+        "零样本性能高度依赖渲染多样化与专家规划器覆盖度，新技能扩展仍需编写对应任务模板。 / Zero-shot transfer relies on rendering diversity and planner coverage; adding novel skills still needs procedural task templates."
+      ],
+      "assumptions": [
+        "目标真机视觉与刚体运动学分布可被程序化场景资产与域随机化充分覆盖。 / Assumes real-world visual and rigid-body kinematics fall within procedural asset and randomization coverage."
+      ],
+      "evidence": [
+        {
+          "url": "https://openreview.net/forum?id=c4Z0Y8gvnI",
+          "claim": "OpenReview 官方页面确认 MolmoB0T 录用为 CoRL 2026 Oral。 / Official OpenReview record confirms CoRL 2026 Oral acceptance.",
+          "checkedAt": "2026-11-21"
+        },
+        {
+          "url": "https://arxiv.org/html/2603.16861v3",
+          "claim": "正文 HTML 核验作者、论文署名机构、方法结构与实验边界。 / Full-text HTML verified authors, affiliations, method, and evaluation boundaries.",
+          "checkedAt": "2026-11-21"
+        },
+        {
+          "url": "https://allenai.github.io/MolmoBot/",
+          "claim": "项目主页已于本轮实测 HTTP 200 可访问；不声称完整复现实验。 / Project page verified reachable (HTTP 200); no reproduction claimed.",
+          "checkedAt": "2026-11-21"
+        }
+      ],
+      "researchNotes": [
+        "正文重点核读 §3 MolmoBot-Engine 程序化生成管线、§4 三类策略架构对比与 §5.1 零样本真机评测结果。",
+        "驴·阅读路线：先看图1与 §3 搞清“程序化资产+专家规划器”怎样自动产数据，再读 §5.1 零样本真机和 §5.3 数据规模消融。"
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/molmob0t-80e5a8fdac.png",
+          "sha256": "80e5a8fdac795d2f3dec6934ca8341348c18d30861a94f32f65523b68725b095",
+          "width": 2037,
+          "height": 924,
+          "sourceUrl": "https://arxiv.org/html/2603.16861v3/MolmoBotDataGen_10.png",
+          "evidenceUrl": "https://arxiv.org/html/2603.16861v3",
+          "verifiedAt": "2026-11-21",
+          "credit": "Abhay Deshpande et al. · Original paper figure",
+          "rights": "Copyright retained by the paper authors/rightsholders. Attributed editorial thumbnail extracted unmodified from the cited arXiv HTML figure; arXiv non-exclusive distribution licence is not a general reuse licence and no endorsement is implied.",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "light",
+          "altZh": "MolmoB0T 原论文图1：利用大规模多样化仿真数据实现抓取放置与开门等任务零样本真机迁移",
+          "altEn": "MolmoB0T original Figure 1 showing zero-shot sim-to-real transfer across pick-and-place and door opening using diverse simulation data"
+        },
+        "figureNote": "",
+        "institutions": [
+          {
+            "name": "Allen Institute for AI",
+            "institutionId": "pending-allen-institute-for-ai",
+            "institutionType": "research-institute",
+            "markType": "organization-mark",
+            "logo": {
+              "path": "assets/institutions/allen-institute-for-ai.png",
+              "sourceUrl": "https://allenai.org/favicon.ico",
+              "evidenceUrl": "https://allenai.org/",
+              "width": 48,
+              "height": 48,
+              "sha256": "98ce275aa269995a7d23cb61fbb843f738b40240c1f1bcc40266c2c2ce077dac",
+              "credit": "Allen Institute for AI official website identity asset",
+              "kind": "institution-logo",
+              "verifiedAt": "2026-11-02",
+              "background": "transparent",
+              "rights": "Official institutional identity asset; copyright and trademarks remain with owner. No blanket reuse license or endorsement asserted. Preserve complete mark, proportions and clear space. Intended only for accurate editorial identification of paper affiliation.",
+              "displayPolicy": "official-brand",
+              "altEn": "Official compact identity mark of Allen Institute for AI",
+              "altZh": "Allen Institute for AI 官方标识"
+            },
+            "authorNames": [
+              "Abhay Deshpande",
+              "Maya Guru",
+              "Rose Hendrix",
+              "Snehal Jauhri",
+              "Ainaz Eftekhar",
+              "Rohun Tripathi",
+              "Max Argus",
+              "Jordi Salvador",
+              "Haoquan Fang",
+              "Matthew Wallingford",
+              "Wilbert Pumacay",
+              "Yejin Kim",
+              "Piper Wolters",
+              "Jiafei Duan",
+              "Karen Farley",
+              "Winson Han",
+              "Eli Vanderbilt",
+              "Dieter Fox",
+              "Ali Farhadi",
+              "Ranjay Krishna"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2603.16861v3",
+                "claim": "核验本文作者署名机构：Allen Institute for AI（Abhay Deshpande、Maya Guru、Rose Hendrix、Snehal Jauhri 等）。 / Paper-specific affiliation verified: Allen Institute for AI.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "University of Washington",
+            "institutionId": "pending-university-of-washington",
+            "institutionType": "university",
+            "markType": "compact-symbol",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/uw-block-w.png",
+              "sha256": "517b9fc5f39e280e54759a49fc4cb2726bab77039b94ee2b528e71036fdebd47",
+              "width": 368,
+              "height": 247,
+              "sourceUrl": "https://cdn.uw.edu/wp-content/uploads/sites/230/2023/11/02134812/W-Logo_RegistrationMark_Purple_2685_HEX1.png",
+              "evidenceUrl": "https://cdn.uw.edu/wp-content/uploads/sites/65/2023/06/22155930/Revised-Policies-Jun23-APPROVED-MG.pdf",
+              "verifiedAt": "2026-11-02",
+              "credit": "University of Washington official purple Block W with registration mark",
+              "rights": "University of Washington trademark retained. Official June 2023 policy IV(c) permits informational publications only to the extent necessary. This small, unaltered mark identifies a paper-evidenced UW affiliation only; it is not site branding, sponsorship, co-branding, advertising, decoration or a blanket noncommercial licence. Original guidance recommends a plain white clear field, serif-height clearance and18px minimum. Current user-requested40×32px compact thumbnail retains original purple colour and registration mark; it does not assert compliance with the previous60×44px reviewed clear-field layout. Gallery placement is excluded.",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "altZh": "华盛顿大学官方紫色W标识",
+              "altEn": "University of Washington official purple Block W"
+            },
+            "authorNames": [
+              "Ainaz Eftekhar",
+              "Haoquan Fang",
+              "Quinn Pfeifer",
+              "Ying-Chun Lee",
+              "Jiafei Duan",
+              "Dieter Fox",
+              "Ali Farhadi",
+              "Ranjay Krishna"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2603.16861v3",
+                "claim": "核验本文作者署名机构：University of Washington（Ainaz Eftekhar、Haoquan Fang、Quinn Pfeifer、Ying-Chun Lee 等）。 / Paper-specific affiliation verified: University of Washington.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "University of California, Los Angeles",
+            "institutionId": "pending-university-of-california-los-angeles",
+            "institutionType": "university",
+            "markType": "compact-symbol",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-b03be85d2578d855.png",
+              "sha256": "b03be85d2578d855abd9025af2b6555cfbf4b127b9557cffcb62f10c34132a5b",
+              "width": 56,
+              "height": 56,
+              "sourceUrl": "https://www.ucla.edu/img/apple-touch-icon.png",
+              "evidenceUrl": "https://www.ucla.edu/",
+              "verifiedAt": "2026-11-03",
+              "credit": "University of California, Los Angeles · official-source compact identity mark",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. UCLA Policy 110 governs campus marks; brand guidance requires approvals for external use. No approval is claimed. The UCLA letters are the university custom campus mark, not newly typeset initials. Policy: https://www.adminpolicies.ucla.edu/APP/Number/110.0",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "dark",
+              "altZh": "University of California, Los Angeles 官方完整独立图形标识",
+              "altEn": "University of California, Los Angeles complete official compact identity mark"
+            },
+            "authorNames": [
+              "Omar Rayyan"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2603.16861v3",
+                "claim": "核验本文作者署名机构：University of California, Los Angeles（Omar Rayyan）。 / Paper-specific affiliation verified: University of California, Los Angeles.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "Princeton University",
+            "institutionId": "pending-princeton-university",
+            "institutionType": "university",
+            "markType": "emblem",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-ff6693cf3f1d26cc.svg",
+              "sha256": "ff6693cf3f1d26cce3d4a75cd5a437a8e8c9d21004da251c9561f98c5299e1b1",
+              "width": 200,
+              "height": 270,
+              "sourceUrl": "https://www.cs.princeton.edu/",
+              "evidenceUrl": "https://www.cs.princeton.edu/",
+              "verifiedAt": "2026-11-03",
+              "credit": "Princeton University · official-source compact identity mark",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. Princeton trademark policies distinguish authorized institutional activity and licensing of outside uses; no licence/permission or minimum display-size compliance is claimed. Policy: https://communications.princeton.edu/guides-tools/intellectual-property",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "Princeton University 官方完整图形标识",
+              "altEn": "Complete official compact mark of Princeton University"
+            },
+            "authorNames": [
+              "Mingtong Zhang",
+              "Dhruv Shah"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2603.16861v3",
+                "claim": "核验本文作者署名机构：Princeton University（Mingtong Zhang、Dhruv Shah）。 / Paper-specific affiliation verified: Princeton University.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "TU Darmstadt",
+            "institutionId": "pending-tu-darmstadt",
+            "institutionType": "university",
+            "markType": "emblem",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-0b11ff36f08c2409.svg",
+              "sha256": "0b11ff36f08c2409efe9f464bd8b34cbc9ce4a1234d2bbdae35931e4767648b5",
+              "width": 680,
+              "height": 810,
+              "sourceUrl": "https://www.tu-darmstadt.de/media/resources/images_1/tu_logo_web_h120.svg",
+              "evidenceUrl": "https://www.tu-darmstadt.de/",
+              "verifiedAt": "2026-11-03",
+              "credit": "TU Darmstadt · source-verified institutional symbol",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. Official brand rules require the combined Athena head, three-line wordmark and protection zone. This isolated symbol is source-verified but not claimed to satisfy those lockup rules or have independent-use permission. Policy: https://www.intern.tu-darmstadt.de/arbeitsmittel/corporate_design_vorlagen/",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "TU Darmstadt 完整校徽或图形标志",
+              "altEn": "Complete institutional symbol of TU Darmstadt"
+            },
+            "authorNames": [
+              "Georgia Chalvatzaki"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2603.16861v3",
+                "claim": "核验本文作者署名机构：TU Darmstadt（Georgia Chalvatzaki）。 / Paper-specific affiliation verified: TU Darmstadt.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          }
+        ],
+        "authors": []
+      },
+      "formalPublication": {
+        "type": "conference",
+        "evidenceUrl": "https://openreview.net/forum?id=c4Z0Y8gvnI"
+      }
+    },
+    {
+      "id": "arxiv-2606-11092",
+      "title": "RoboNaldo：基于动作引导课程强化学习的人形机器人精准射门",
+      "titleEn": "RoboNaldo: Accurate, Stable and Powerful Humanoid Soccer Shooting via Motion-Guided Curriculum Reinforcement Learning",
+      "authors": [
+        "Yichao Zhong",
+        "Yidan Lu",
+        "Yuhang Lu",
+        "Tianyang Tang",
+        "Haoguang Mai",
+        "Yixuan Pan",
+        "Tianyu Li",
+        "Li Chen",
+        "Jingbo Wang",
+        "Zhongyu Li",
+        "Peng Lu",
+        "Hongyang Li"
+      ],
+      "year": 2026,
+      "venue": "CoRL 2026 · Oral（已录用 / accepted）",
+      "tags": [
+        "人形机器人",
+        "课程强化学习",
+        "高冲量全身控制"
+      ],
+      "summary": "人形机器人高速踢球要求兼具全身平衡、高冲量击球与落点精度：纯动作跟踪难以适配变化的球位，纯任务奖励又极难从零探索出有效动作。RoboNaldo用单条人类踢球参考作为脚手架，通过三阶段课程强化学习逐步把优化重心从动作模仿转向任意球与运动球射门，并成功真机部署。该方法对高动态交互很有启发，但强对抗防撞与多步带球协同仍待拓展。",
+      "summaryEn": "Humanoid soccer shooting demands whole-body balance, high-impulse contact, and target accuracy: pure motion tracking struggles with varied ball states while task RL struggles to explore valid kicks. RoboNaldo uses a single human kick reference as a scaffold in a three-stage curriculum RL pipeline that progressively shifts toward stationary and moving-ball shooting, deployed on real humanoid hardware. While inspiring for dynamic interaction, multi-step dribbling and opponent contact remain open.",
+      "whySelected": "CoRL 2026 Oral；以单条人类先验结合三阶段课程 RL 攻克人形高冲量全身击球真机控制，是运动控制精良案例。",
+      "sources": [
+        {
+          "label": "原文 / Full text",
+          "url": "https://arxiv.org/html/2606.11092v3"
+        },
+        {
+          "label": "正式会议身份 / Formal venue",
+          "url": "https://openreview.net/forum?id=WBGnJHRIso"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "CoRL 2026 Oral；重点看如何从动作跟踪先验平滑退火过渡到高冲量任务奖励优化。",
+          "relation": "连接人形全身运动跟踪、课程 RL 奖励塑形与动态接触 Sim2Real 部署。",
+          "prerequisites": [
+            "人形运动跟踪 / Humanoid motion tracking",
+            "课程强化学习 / Curriculum RL"
+          ],
+          "difficulty": "intermediate",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": null,
+        "arxiv": "2606.11092",
+        "other": null
+      },
+      "publicationStatus": "accepted",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-18",
+      "verifiedAt": "2026-11-21",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "聚焦单次射门动作控制，尚未集成复杂比赛中的长距离高速带球、多人对抗与即时战术规划。 / Targets single-shot kicking rather than long-horizon dribbling, opponent collision avoidance, or tactical planning.",
+        "真机运动球拦截性能依赖外部或机载视觉对球速与轨迹的低延迟感知精度。 / Real-world moving-ball interception depends on low-latency ball pose and velocity perception."
+      ],
+      "assumptions": [
+        "可获取一条重定向后的人类踢球参考轨迹，且球体位置与速度状态在控制闭环中可估计。 / Assumes one retargeted human kicking reference and real-time ball state estimation."
+      ],
+      "evidence": [
+        {
+          "url": "https://openreview.net/forum?id=WBGnJHRIso",
+          "claim": "OpenReview 官方页面确认 RoboNaldo 录用为 CoRL 2026 Oral。 / Official OpenReview record confirms CoRL 2026 Oral acceptance.",
+          "checkedAt": "2026-11-21"
+        },
+        {
+          "url": "https://arxiv.org/html/2606.11092v3",
+          "claim": "正文 HTML 核验作者、论文署名机构、方法结构与实验边界。 / Full-text HTML verified authors, affiliations, method, and evaluation boundaries.",
+          "checkedAt": "2026-11-21"
+        }
+      ],
+      "researchNotes": [
+        "正文重点核读 §3.2 三阶段课程退火机制、§3.3 奖励设计与 §5 真机硬件感知及射门精度测试。"
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/robonaldo-a2f450ccec.png",
+          "sha256": "a2f450ccec19f436a83ee137112facacb8dea966b12eabc2bd5a02250f6f624a",
+          "width": 1320,
+          "height": 1020,
+          "sourceUrl": "https://arxiv.org/html/2606.11092v3/pipeline.png",
+          "evidenceUrl": "https://arxiv.org/html/2606.11092v3",
+          "verifiedAt": "2026-11-21",
+          "credit": "Yichao Zhong et al. · Original paper figure",
+          "rights": "Copyright retained by the paper authors/rightsholders. Attributed editorial thumbnail extracted unmodified from the cited arXiv HTML figure; arXiv non-exclusive distribution licence is not a general reuse licence and no endorsement is implied.",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "light",
+          "altZh": "RoboNaldo 原论文图2：从动作跟踪先验到任意球与运动球射门的三阶段课程强化学习框架",
+          "altEn": "RoboNaldo original Figure 2 showing the three-stage motion-guided curriculum reinforcement learning pipeline for humanoid shooting"
+        },
+        "figureNote": "",
+        "institutions": [
+          {
+            "name": "The University of Hong Kong",
+            "institutionId": "pending-the-university-of-hong-kong",
+            "institutionType": "university",
+            "markType": "emblem",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-4f85ae033c34de96.svg",
+              "sha256": "4f85ae033c34de965b4a18ae3f84821eccece2d17394f36747982ff6293745d1",
+              "width": 308,
+              "height": 336,
+              "sourceUrl": "https://www.hku.hk/adobe/dynamicmedia/deliver/dm-aid--afc8d43c-587a-43f0-b93c-26f8bd397e0e/logo-hku.svg",
+              "evidenceUrl": "https://www.hku.hk/tc/about-hku/university-identity/basic-specifications",
+              "verifiedAt": "2026-11-03",
+              "credit": "The University of Hong Kong · official complete mark",
+              "rights": "Official institutional mark; trademark/copyright retained by its owner. Public-source verification is not a blanket reuse licence or separate permission. For factual non-commercial paper-affiliation identification only, not endorsement. Preserve the complete mark, its native colours, aspect ratio and clear space; review linked university guidance.",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "altZh": "香港大学官方彩色盾形校徽",
+              "altEn": "The University of Hong Kong complete official full-color shield"
+            },
+            "authorNames": [
+              "Yichao Zhong",
+              "Yidan Lu",
+              "Jingbo Wang",
+              "Zhongyu Li",
+              "Peng Lu",
+              "Hongyang Li"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2606.11092v3",
+                "claim": "核验本文作者署名机构：The University of Hong Kong（Yichao Zhong、Yidan Lu、Jingbo Wang、Zhongyu Li 等）。 / Paper-specific affiliation verified: The University of Hong Kong.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "The Chinese University of Hong Kong",
+            "institutionId": "pending-the-chinese-university-of-hong-kong",
+            "institutionType": "university",
+            "markType": "emblem",
+            "logo": {
+              "path": "assets/institutions/the-chinese-university-of-hong-kong.png",
+              "sourceUrl": "https://www.cuhk.edu.hk/english/images/fav-icons/favicon-96x96.png",
+              "evidenceUrl": "https://www.cuhk.edu.hk/english/index.html",
+              "width": 96,
+              "height": 96,
+              "sha256": "c60a96bb7e742ed0dfb58b379b27f73ea54f96ee3788c9c722f6f18dd40a0ca6",
+              "credit": "The Chinese University of Hong Kong official compact crest",
+              "kind": "institution-logo",
+              "verifiedAt": "2026-11-02",
+              "background": "transparent",
+              "rights": "Official crest; copyright and trademark remain with CUHK. No blanket reuse license asserted. Accurate editorial affiliation identification only, no endorsement. Commercial-promotion usage requires approval under https://kto.cuhk.edu.hk/en/about/guidelines-use-of-university-name .",
+              "displayPolicy": "official-brand",
+              "altEn": "Official CUHK crest",
+              "altZh": "香港中文大学官方校徽"
+            },
+            "authorNames": [
+              "Jingbo Wang",
+              "Zhongyu Li"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2606.11092v3",
+                "claim": "核验本文作者署名机构：The Chinese University of Hong Kong（Jingbo Wang、Zhongyu Li）。 / Paper-specific affiliation verified: The Chinese University of Hong Kong.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "Archon Robotics",
+            "institutionId": "pending-archon-robotics",
+            "institutionType": "company",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Yixuan Pan",
+              "Tianyu Li",
+              "Hongyang Li"
+            ],
+            "evidence": [
+              {
+                "url": "https://arxiv.org/html/2606.11092v3",
+                "claim": "核验本文作者署名机构：Archon Robotics（Yixuan Pan、Tianyu Li、Hongyang Li）。 / Paper-specific affiliation verified: Archon Robotics.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          }
+        ],
+        "authors": []
+      },
+      "formalPublication": {
+        "type": "conference",
+        "evidenceUrl": "https://openreview.net/forum?id=WBGnJHRIso"
+      }
+    },
+    {
+      "id": "doi-cast",
+      "title": "CAST：用反事实语言标注提升视觉语言动作模型的指令遵循能力",
+      "titleEn": "CAST: Counterfactual Labels Improve Instruction Following in Vision-Language-Action Models",
+      "authors": [
+        "Catherine Glossop",
+        "William Chen",
+        "Arjun Bhorkar",
+        "Dhruv Shah",
+        "Sergey Levine"
+      ],
+      "year": 2026,
+      "venue": "IEEE Robotics and Automation Letters（RA-L 2026 · Vol. 11 No. 10 · 正式发表）",
+      "tags": [
+        "VLA",
+        "反事实数据增强",
+        "指令遵循"
+      ],
+      "summary": "现有VLA模型在相似观测下常忽视细粒度语言指令，根源在于机器人数据集中语言接地多样性不足。CAST将已有轨迹切分为原子决策点，利用视觉语言模型自动生成“若换条路线或目标该怎么说”的反事实语言标注并增强训练，在真实导航与操作任务上显著提升细粒度指令遵循率。该数据增强轻量易复用，但反事实标签本身受限于VLM幻觉与轨迹覆盖面。",
+      "summaryEn": "Current VLA models often ignore fine-grained instructions under similar observations because robot datasets lack semantic language diversity. CAST segments trajectories into atomic decision points and queries VLMs to synthesize counterfactual language labels describing alternative actions or goals, significantly boosting fine-grained instruction following in real navigation and manipulation. While lightweight and reusable, label fidelity remains bounded by VLM hallucinations and underlying trajectory coverage.",
+      "whySelected": "IEEE RA-L 2026 年 10 月正式期刊论文；通过反事实 VLM 重标注低成本修复 VLA“只看图不听指令”的顽疾。",
+      "sources": [
+        {
+          "label": "原文 / Full text",
+          "url": "https://arxiv.org/html/2508.13446v2"
+        },
+        {
+          "label": "正式期刊 DOI / Formal journal DOI",
+          "url": "https://doi.org/10.1109/LRA.2026.3726383"
+        },
+        {
+          "label": "项目主页 / Project page",
+          "url": "https://cast-vla.github.io/"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "RA-L 2026 正式期刊；重点看决策点切分与反事实语言重标如何低成本改善 VLA 语言接地。",
+          "relation": "直接针对 VLA 数据瓶颈，连接离线轨迹重标注、语言条件策略与导航/操作泛化。",
+          "prerequisites": [
+            "视觉语言动作模型 / VLA models",
+            "多模态提示与重标注 / VLM relabeling"
+          ],
+          "difficulty": "beginner",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": "10.1109/lra.2026.3726383",
+        "arxiv": "2508.13446",
+        "other": null
+      },
+      "publicationStatus": "published",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-18",
+      "verifiedAt": "2026-11-21",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": "https://cast-vla.github.io/",
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "反事实标注质量依赖所用 VLM 的空间与语义理解能力，复杂三维遮挡场景下可能引入错误标签。 / Counterfactual label accuracy depends on the VLM’s spatial understanding and may inject noise in cluttered 3D scenes.",
+        "仅能增强已有轨迹覆盖的行为模式，无法凭空合成数据集中从未出现过的物理新技能。 / Augments language grounding over existing trajectories without synthesizing novel physical skills absent from data."
+      ],
+      "assumptions": [
+        "离线机器人轨迹可切分为具语义意义的原子决策段，且 VLM 能据此辨别备选指令差异。 / Assumes trajectories decompose into semantic decision segments distinguishable by a VLM."
+      ],
+      "evidence": [
+        {
+          "url": "https://doi.org/10.1109/LRA.2026.3726383",
+          "claim": "Crossref 官方 DOI 记录确认 CAST 正式发表于 IEEE RA-L Vol. 11 No. 10 (2026-10)。 / Official Crossref DOI record confirms publication in IEEE RA-L Vol. 11 No. 10 (Oct 2026).",
+          "checkedAt": "2026-11-21"
+        },
+        {
+          "url": "https://arxiv.org/html/2508.13446v2",
+          "claim": "正文 HTML 核验作者、论文署名机构、方法结构与实验边界。 / Full-text HTML verified authors, affiliations, method, and evaluation boundaries.",
+          "checkedAt": "2026-11-21"
+        },
+        {
+          "url": "https://cast-vla.github.io/",
+          "claim": "项目主页已于本轮实测 HTTP 200 可访问；不声称完整复现实验。 / Project page verified reachable (HTTP 200); no reproduction claimed.",
+          "checkedAt": "2026-11-21"
+        }
+      ],
+      "researchNotes": [
+        "正文重点核读 §IV 反事实增强原理与数据集构建，以及 §VI-B/C 导航与操作指令遵循评测。",
+        "注：正文亦列出 GitHub 仓库链接，本轮实测仅项目页 cast-vla.github.io 返回 200，未通过校验的代码链接不列入 links。"
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/cast-9cf308e879.png",
+          "sha256": "9cf308e87940c49350f4a75ad3a203687da6fdcd8146af740e6594fcbd75d4f5",
+          "width": 2012,
+          "height": 440,
+          "sourceUrl": "https://arxiv.org/html/2508.13446v2/method.png",
+          "evidenceUrl": "https://arxiv.org/html/2508.13446v2",
+          "verifiedAt": "2026-11-21",
+          "credit": "Catherine Glossop et al. · Original paper figure",
+          "rights": "Paper distributed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), verified from arXiv license link. Authors retain copyright. Original figure used unmodified as scholarly preview.",
+          "displayPolicy": "open-license",
+          "background": "light",
+          "altZh": "CAST 原论文图2：切分轨迹原子决策点并借助VLM生成反事实语言标注的整体管线",
+          "altEn": "CAST original Figure 2 illustrating atomic trajectory segmentation and VLM counterfactual label augmentation"
+        },
+        "figureNote": "",
+        "institutions": [
+          {
+            "name": "University of California, Berkeley",
+            "institutionId": "pending-university-of-california-berkeley",
+            "institutionType": "university",
+            "markType": "emblem",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-b318cdbc811c92ba.png",
+              "sha256": "b318cdbc811c92bae4bfae4ffca2116e8074db225df6838e888f5c68f41a037e",
+              "width": 200,
+              "height": 200,
+              "sourceUrl": "https://bcbp.berkeley.edu/sites/default/files/styles/width_200/public/ucbseal_300%20x%20300_0.png?itok=IeSglXI9&timestamp=1399312558",
+              "evidenceUrl": "https://bcbp.berkeley.edu/use-name-policy",
+              "verifiedAt": "2026-11-03",
+              "credit": "University of California, Berkeley · official-source compact identity mark",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. The campus policy restricts Berkeley seal use on websites and asks written authorization for uses outside listed official purposes. Current brand guidance states a 215px screen minimum, which a compact 40×32px affiliation thumbnail does not meet. No exception or approval is claimed. Policy: https://bcbp.berkeley.edu/use-name-policy",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "加州大学伯克利分校官方蓝金色完整校徽",
+              "altEn": "Complete official blue and gold University of California, Berkeley seal"
+            },
+            "authorNames": [
+              "Catherine Glossop",
+              "William Chen",
+              "Arjun Bhorkar",
+              "Sergey Levine"
+            ],
+            "evidence": [
+              {
+                "url": "https://doi.org/10.1109/LRA.2026.3726383",
+                "claim": "核验本文作者署名机构：University of California, Berkeley（Catherine Glossop、William Chen、Arjun Bhorkar、Sergey Levine）。 / Paper-specific affiliation verified: University of California, Berkeley.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "Princeton University",
+            "institutionId": "pending-princeton-university",
+            "institutionType": "university",
+            "markType": "emblem",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-ff6693cf3f1d26cc.svg",
+              "sha256": "ff6693cf3f1d26cce3d4a75cd5a437a8e8c9d21004da251c9561f98c5299e1b1",
+              "width": 200,
+              "height": 270,
+              "sourceUrl": "https://www.cs.princeton.edu/",
+              "evidenceUrl": "https://www.cs.princeton.edu/",
+              "verifiedAt": "2026-11-03",
+              "credit": "Princeton University · official-source compact identity mark",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. Princeton trademark policies distinguish authorized institutional activity and licensing of outside uses; no licence/permission or minimum display-size compliance is claimed. Policy: https://communications.princeton.edu/guides-tools/intellectual-property",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "Princeton University 官方完整图形标识",
+              "altEn": "Complete official compact mark of Princeton University"
+            },
+            "authorNames": [
+              "Dhruv Shah"
+            ],
+            "evidence": [
+              {
+                "url": "https://doi.org/10.1109/LRA.2026.3726383",
+                "claim": "核验本文作者署名机构：Princeton University（Dhruv Shah）。 / Paper-specific affiliation verified: Princeton University.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          }
+        ],
+        "authors": []
+      },
+      "formalPublication": {
+        "type": "journal",
+        "evidenceUrl": "https://doi.org/10.1109/LRA.2026.3726383"
+      }
+    },
+    {
+      "id": "doi-grounding-rag-vlm",
+      "title": "RADAR：基于检索增强视觉语言模型的机器人泛化数据溯源评测",
+      "titleEn": "Grounding Robot Generalization in Training Data via Retrieval-Augmented VLMs",
+      "authors": [
+        "Jensen Gao",
+        "Dorsa Sadigh",
+        "Sandy Huang",
+        "Dhruv Shah"
+      ],
+      "year": 2026,
+      "venue": "IEEE Robotics and Automation Letters（RA-L 2026 · Vol. 11 No. 10 · 正式发表）",
+      "tags": [
+        "机器人评测",
+        "泛化分析",
+        "检索增强VLM"
+      ],
+      "summary": "机器人论文常宣称策略泛化到“全新场景”，却很少核查测试任务与海量训练数据到底有多接近。RADAR先用通用策略嵌入检索与评测场景最相近的训练样本，再由视觉语言模型对比分析测试与训练间在物体、视角或语言上的真实分布偏移，输出可解释泛化维度报告。该方法为评测把关提供了实用工具，但其结论仍依赖嵌入检索召回与VLM判别准确性。",
+      "summaryEn": "Robotics papers frequently claim generalization to novel setups without measuring proximity to large training corpora. RADAR retrieves nearest training examples using generalist policy embeddings and prompts VLMs to compare test tasks against retrieved data, producing interpretable analyses of exact generalization axes. It provides a practical auditing lens for robotics evaluation, though conclusions depend on embedding retrieval recall and VLM judgment accuracy.",
+      "whySelected": "IEEE RA-L 2026 年 10 月正式期刊论文；用检索增强 VLM 量化“测试集相对训练集到底新在哪里”，直击泛化声明失真痛点。",
+      "sources": [
+        {
+          "label": "原文 / Full text",
+          "url": "https://arxiv.org/html/2603.11426v3"
+        },
+        {
+          "label": "正式期刊 DOI / Formal journal DOI",
+          "url": "https://doi.org/10.1109/LRA.2026.3726331"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "xun"
+      ],
+      "recommendations": {
+        "xun": {
+          "whyRead": "RA-L 2026 正式期刊；建议结合基准审计类工作一起看，厘清何为真泛化与近邻记忆。",
+          "relation": "服务机器人大模型评测透明化，连接策略表征检索与数据集分布偏移审计。",
+          "prerequisites": [
+            "向量检索 / Embedding retrieval",
+            "视觉语言模型 / Vision-language models"
+          ],
+          "difficulty": "beginner",
+          "readRecommendation": "read"
+        }
+      },
+      "identity": {
+        "doi": "10.1109/lra.2026.3726331",
+        "arxiv": "2603.11426",
+        "other": null
+      },
+      "publicationStatus": "published",
+      "publicationDate": null,
+      "discoveredDate": "2026-11-18",
+      "verifiedAt": "2026-11-21",
+      "readDepth": "fulltext",
+      "paperType": "empirical",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "若策略嵌入未能召回真正相似的训练样本，第二阶段 VLM 可能会高估测试任务的新颖程度。 / Missed nearest neighbors in policy-embedding retrieval can cause the VLM stage to overestimate task novelty.",
+        "主要基于视觉与语言观测比较，未直接度量动力学、摩擦或低层动作轨迹的分布差异。 / Compares visual-language observations rather than low-level dynamics, friction, or action-trajectory shifts."
+      ],
+      "assumptions": [
+        "被评测策略的完整训练数据集可访问，且视觉语言特征足以刻画主要泛化维度。 / Assumes full access to policy training data and that visual-language cues capture key generalization axes."
+      ],
+      "evidence": [
+        {
+          "url": "https://doi.org/10.1109/LRA.2026.3726331",
+          "claim": "Crossref 官方 DOI 记录确认该论文正式发表于 IEEE RA-L Vol. 11 No. 10 (2026-10)。 / Official Crossref DOI record confirms publication in IEEE RA-L Vol. 11 No. 10 (Oct 2026).",
+          "checkedAt": "2026-11-21"
+        },
+        {
+          "url": "https://arxiv.org/html/2603.11426v3",
+          "claim": "正文 HTML 核验作者、论文署名机构、方法结构与实验边界。 / Full-text HTML verified authors, affiliations, method, and evaluation boundaries.",
+          "checkedAt": "2026-11-21"
+        }
+      ],
+      "researchNotes": [
+        "正文重点核读 §IV 两阶段检索+VLM泛化归因管线与 §VI 大规模机器人数据集案例审计。"
+      ],
+      "visuals": {
+        "mainFigure": {
+          "kind": "figure",
+          "path": "assets/papers/grounding-rag-vlm-1f507bc7f6.png",
+          "sha256": "1f507bc7f6a5fd17d9a61343f565171a12396f2c653e87221aa669e2e3fba548",
+          "width": 2047,
+          "height": 667,
+          "sourceUrl": "https://arxiv.org/html/2603.11426v3/radar_main_fig.png",
+          "evidenceUrl": "https://arxiv.org/html/2603.11426v3",
+          "verifiedAt": "2026-11-21",
+          "credit": "Jensen Gao et al. · Original paper figure",
+          "rights": "Copyright retained by the paper authors/rightsholders. Attributed editorial thumbnail extracted unmodified from the cited arXiv HTML figure; arXiv non-exclusive distribution licence is not a general reuse licence and no endorsement is implied.",
+          "displayPolicy": "attributed-thumbnail",
+          "background": "light",
+          "altZh": "RADAR 原论文图1：通过策略嵌入检索训练近邻并由VLM输出可解释泛化分析的两阶段管线",
+          "altEn": "RADAR original Figure 1 outlining embedding-based training-data retrieval and VLM generalization analysis"
+        },
+        "figureNote": "",
+        "institutions": [
+          {
+            "name": "Stanford University",
+            "institutionId": "pending-stanford-university",
+            "institutionType": "university",
+            "markType": "compact-symbol",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-2ceebac173ad7d21.png",
+              "sha256": "2ceebac173ad7d219be7f061661b6d9118efe9080e696b0add9a563e4cfd8294",
+              "width": 400,
+              "height": 400,
+              "sourceUrl": "https://identity.stanford.edu/wp-content/uploads/sites/3/2020/07/block-s-right.png",
+              "evidenceUrl": "https://identity.stanford.edu/visual-identity/stanford-logos/block-s/",
+              "verifiedAt": "2026-11-03",
+              "credit": "Stanford University · official complete mark",
+              "rights": "Official institutional mark; trademark/copyright retained by its owner. Public-source verification is not a blanket reuse licence or separate permission. For factual non-commercial paper-affiliation identification only, not endorsement. Preserve the complete mark, its native colours, aspect ratio and clear space; review linked university guidance.",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "altZh": "斯坦福大学官方红色 S 与绿树符号",
+              "altEn": "Stanford University official Block S with Tree"
+            },
+            "authorNames": [
+              "Jensen Gao",
+              "Dorsa Sadigh"
+            ],
+            "evidence": [
+              {
+                "url": "https://doi.org/10.1109/LRA.2026.3726331",
+                "claim": "核验本文作者署名机构：Stanford University（Jensen Gao、Dorsa Sadigh）。 / Paper-specific affiliation verified: Stanford University.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "DeepMind",
+            "institutionId": "pending-deepmind",
+            "institutionType": "company",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Sandy Huang",
+              "Dhruv Shah"
+            ],
+            "evidence": [
+              {
+                "url": "https://doi.org/10.1109/LRA.2026.3726331",
+                "claim": "核验本文作者署名机构：DeepMind（Sandy Huang、Dhruv Shah）。 / Paper-specific affiliation verified: DeepMind.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          }
+        ],
+        "authors": []
+      },
+      "formalPublication": {
+        "type": "journal",
+        "evidenceUrl": "https://doi.org/10.1109/LRA.2026.3726331"
+      }
+    },
+    {
+      "id": "doi-stress-causal",
+      "title": "SubCure：通过基数修复对观测数据因果结论进行压力测试",
+      "titleEn": "Stress-Testing Causal Claims via Cardinality Repairs",
+      "authors": [
+        "Yarden Gabbay",
+        "Haoquan Guan",
+        "Shaull Almagor",
+        "El Kindi Rezig",
+        "Brit Youngmann",
+        "Babak Salimi"
+      ],
+      "year": 2026,
+      "venue": "SIGMOD 2026 / PACMMOD Vol. 4 No. 1（正式发表）",
+      "tags": [
+        "数据库修复",
+        "因果稳健性",
+        "基数修复"
+      ],
+      "summary": "基于观测数据的因果推断结论往往对少量脏数据或异常子群体极其脆弱。本文提出SubCure框架，将因果稳健性审计形式化为基数修复问题：给定因果查询与目标效应区间，寻找需删除的最小元组集或模式子集以改变平均处理效应，并给出线性回归与逆概率加权的增量ATE更新算法。该方法把数据库修复直接引入因果审计，但聚焦删行型修复且依赖预设因果图假设。",
+      "summaryEn": "Causal conclusions from observational data can be fragile to minor data errors or small subpopulations. This paper introduces SubCure, framing causal robustness auditing as cardinality repair: given a causal query and target effect range, it finds a minimal set of tuples or patterns whose removal shifts the estimated ATE, backed by incremental ATE updates for linear regression and IPW. It bridges database repair and causal auditing, though it focuses on deletion repairs under fixed causal assumptions.",
+      "whySelected": "SIGMOD 2026 / PACMMOD 核心工作；把数据库基数修复与增量更新直接用于因果推断稳健性审计，与李的修复与因果主线高度贴合。",
+      "sources": [
+        {
+          "label": "原文 / Full text",
+          "url": "https://arxiv.org/html/2512.02491v2"
+        },
+        {
+          "label": "正式会议身份 / Formal venue",
+          "url": "https://doi.org/10.1145/3786700"
+        }
+      ],
+      "demo": false,
+      "profiles": [
+        "li"
+      ],
+      "recommendations": {
+        "li": {
+          "whyRead": "直接把 database cardinality repair 与因果责任审计打通，增量更新推导清晰实用。",
+          "relation": "连接数据库最小修复、因果解释（causality/responsibility）与查询结果敏感性分析。",
+          "prerequisites": [
+            "数据库修复基础 / Database repairs",
+            "平均处理效应估计 / ATE estimation (OLS/IPW)"
+          ],
+          "difficulty": "intermediate",
+          "readRecommendation": "deep"
+        }
+      },
+      "identity": {
+        "doi": "10.1145/3786700",
+        "arxiv": "2512.02491",
+        "other": null
+      },
+      "publicationStatus": "published",
+      "publicationDate": "2026-04-02",
+      "discoveredDate": "2026-11-18",
+      "verifiedAt": "2026-11-21",
+      "readDepth": "fulltext",
+      "paperType": "system",
+      "classic": false,
+      "novelty": "older-discovery",
+      "updateNote": "",
+      "links": {
+        "code": null,
+        "project": null,
+        "video": null,
+        "data": null
+      },
+      "limits": [
+        "仅考虑删除元组或子群体的子集修复，未涵盖属性值修改或插入类修复操作。 / Considers deletion-based tuple/pattern repairs rather than value-update or insertion repairs.",
+        "增量 ATE 更新推导面向线性回归与 IPW 估计器，对非线性或非参数因果估计器尚未给出精确闭式加速。 / Incremental ATE formulas target linear regression and IPW rather than arbitrary nonlinear causal estimators."
+      ],
+      "assumptions": [
+        "观测数据满足标准因果识别前提（如无未观测混杂），且用户提供明确的目标效应阈值。 / Assumes standard causal identifiability (e.g., ignorability) and a user-specified target effect interval."
+      ],
+      "evidence": [
+        {
+          "url": "https://doi.org/10.1145/3786700",
+          "claim": "ACM PACMMOD (SIGMOD 2026) 官方 DOI 记录确认发表日期为 2026-04-02。 / Official ACM PACMMOD DOI record confirms publication on 2026-04-02.",
+          "checkedAt": "2026-11-21"
+        },
+        {
+          "url": "https://arxiv.org/html/2512.02491v2",
+          "claim": "正文 HTML 核验作者、论文署名机构、方法结构与实验边界。 / Full-text HTML verified authors, affiliations, method, and evaluation boundaries.",
+          "checkedAt": "2026-11-21"
+        }
+      ],
+      "researchNotes": [
+        "正文重点核读 §4 基数修复问题定义、§5 元组/模式移除算法与 §6 OLS/IPW 增量更新复杂度分析。",
+        "无架构图提取：arXiv HTML 版本中无直接可核验架构主图，按规范诚实留空。"
+      ],
+      "visuals": {
+        "mainFigure": null,
+        "figureNote": "arXiv HTML 正文未提取到适合缩略展示的独立架构主图，遵循零伪造原则留空，完整图表见原论文。 / No standalone architectural main figure extracted from arXiv HTML; left blank honestly.",
+        "institutions": [
+          {
+            "name": "Technion – Israel Institute of Technology",
+            "institutionId": "pending-technion-israel-institute-of-technology",
+            "institutionType": "university",
+            "markType": "none",
+            "logo": null,
+            "authorNames": [
+              "Yarden Gabbay",
+              "Shaull Almagor",
+              "Brit Youngmann"
+            ],
+            "evidence": [
+              {
+                "url": "https://doi.org/10.1145/3786700",
+                "claim": "核验本文作者署名机构：Technion – Israel Institute of Technology（Yarden Gabbay、Shaull Almagor、Brit Youngmann）。 / Paper-specific affiliation verified: Technion – Israel Institute of Technology.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "University of California San Diego",
+            "institutionId": "uc-san-diego",
+            "institutionType": "university",
+            "markType": "emblem",
+            "logo": {
+              "path": "assets/institutions/ucsd-seal.svg",
+              "sourceUrl": "https://brand.ucsd.edu/_images/logos-and-brand-elements/additional-campus-logos/ucsd-seal.svg",
+              "evidenceUrl": "https://brand.ucsd.edu/logos/uc-san-diego-seal/index.html",
+              "rights": "Official UC San Diego academic seal. Current institutional policy reserves it for formal academic/ceremonial contexts, lists websites and communications collateral as prohibited general uses, and requires prior approval for exceptions via University Communications (trademarks@ucsd.edu). Download and identity verification do not establish permission. Provided as exact descriptive editorial affiliation asset; no endorsement or open license claimed. Policy: https://brand.ucsd.edu/logos/uc-san-diego-seal/index.html",
+              "kind": "institution-logo",
+              "verifiedAt": "2026-10-31",
+              "displayPolicy": "official-brand",
+              "background": "transparent",
+              "credit": "University of California San Diego official academic seal",
+              "altEn": "Official UC San Diego academic seal",
+              "altZh": "加州大学圣地亚哥分校官方学术校徽",
+              "width": 350,
+              "height": 350,
+              "sha256": "4c6653786f082aede19f69292f4104d5343e31b1b9940156f09d7fb8ff5dd76e"
+            },
+            "authorNames": [
+              "Haoquan Guan",
+              "Babak Salimi"
+            ],
+            "evidence": [
+              {
+                "url": "https://doi.org/10.1145/3786700",
+                "claim": "核验本文作者署名机构：University of California San Diego（Haoquan Guan、Babak Salimi）。 / Paper-specific affiliation verified: University of California San Diego.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          },
+          {
+            "name": "University of Utah",
+            "institutionId": "pending-university-of-utah",
+            "institutionType": "university",
+            "markType": "compact-symbol",
+            "logo": {
+              "kind": "institution-logo",
+              "path": "assets/institutions/compact-9e2983a57957f05e.svg",
+              "sha256": "9e2983a57957f05ea6be4e901785bad326fdd9fd82ad3f2c02b71ca2fe247fab",
+              "width": 425,
+              "height": 400,
+              "sourceUrl": "https://templates.utah.edu/_main-v3-1/images/template/university-of-utah-logo.svg",
+              "evidenceUrl": "https://www.utah.edu/",
+              "verifiedAt": "2026-11-03",
+              "credit": "University of Utah · official-source compact identity mark",
+              "rights": "Copyright and trademark remain with the institution. Source and identity verification is not permission or legal clearance. No separate institutional permission or open reuse licence has been obtained or asserted. Editorial paper-affiliation identification only; no partnership or endorsement implied. Current university use confirmed on homepage; earlier official adoption article remains an evidence/policy reference but returned 403 in this pass. No access bypass, licence or brand-compliance claim. Policy: https://attheu.utah.edu/community/six-questions-and-answers-about-the-us-new-logo/",
+              "displayPolicy": "attributed-thumbnail",
+              "background": "transparent",
+              "altZh": "University of Utah 官方完整图形标识",
+              "altEn": "Complete official compact mark of University of Utah"
+            },
+            "authorNames": [
+              "El Kindi Rezig"
+            ],
+            "evidence": [
+              {
+                "url": "https://doi.org/10.1145/3786700",
+                "claim": "核验本文作者署名机构：University of Utah（El Kindi Rezig）。 / Paper-specific affiliation verified: University of Utah.",
+                "checkedAt": "2026-11-21"
+              }
+            ],
+            "note": "依据本文署名页或官方出版记录核验；若机构库已有已核验标识则自动复用，否则仅保留文字名称。 / Verified from paper affiliation block or official metadata; reuses verified mark if present."
+          }
+        ],
+        "authors": []
+      },
+      "formalPublication": {
+        "type": "conference",
+        "evidenceUrl": "https://doi.org/10.1145/3786700"
+      }
+    }
+  ]
+}

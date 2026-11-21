@@ -997,6 +997,75 @@
       "evidenceUrls": [
         "https://web.cs.ucdavis.edu/~green/papers/pods07.pdf"
       ]
+    },
+    "arxiv-2602-04215": {
+      "locationIds": [
+        "harvard"
+      ],
+      "unresolvedInstitutionIds": [
+        "pending-stanford-university"
+      ],
+      "evidenceUrls": [
+        "https://arxiv.org/html/2602.04215v2"
+      ]
+    },
+    "arxiv-2604-06589": {
+      "locationIds": [
+        "tsinghua"
+      ],
+      "unresolvedInstitutionIds": [
+        "pending-jiangxing-intelligence-guizhou-technology-inc",
+        "pending-peking-university",
+        "pending-stanford-university",
+        "pending-sun-yat-sen-university"
+      ],
+      "evidenceUrls": [
+        "https://arxiv.org/html/2604.06589v2"
+      ]
+    },
+    "arxiv-2602-16710": {
+      "locationIds": [
+        "maryland-college-park"
+      ],
+      "unresolvedInstitutionIds": [
+        "pending-nvidia",
+        "pending-university-of-california-berkeley"
+      ],
+      "evidenceUrls": [
+        "https://arxiv.org/html/2602.16710v1"
+      ]
+    },
+    "doi-stress-causal": {
+      "locationIds": [
+        "uc-san-diego"
+      ],
+      "unresolvedInstitutionIds": [
+        "pending-technion-israel-institute-of-technology",
+        "pending-university-of-utah"
+      ],
+      "evidenceUrls": [
+        "https://doi.org/10.1145/3786700"
+      ]
+    },
+    "doi-master-micro": {
+      "locationIds": [
+        "tsinghua"
+      ],
+      "unresolvedInstitutionIds": [
+        "pending-nanyang-technological-university"
+      ],
+      "evidenceUrls": [
+        "https://doi.org/10.1109/LRA.2026.3739024"
+      ]
+    },
+    "arxiv-2608-15285": {
+      "locationIds": [
+        "tsinghua"
+      ],
+      "unresolvedInstitutionIds": [],
+      "evidenceUrls": [
+        "https://arxiv.org/html/2608.15285v1"
+      ]
     }
   },
   "unresolvedInstitutions": {

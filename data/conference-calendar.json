@@ -1,229 +1,229 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-16",
+  "checkedAt": "2026-11-21",
   "scope": "按三个方向各自关注名单核验；共享会议复用记录，日期冲突、未公布或暂不可核验项保留明确状态。",
   "coverage": [
     {
       "sourceId": "CoRL",
       "edition": 2026,
       "status": "verified",
-      "checkedAt": "2026-11-16",
+      "checkedAt": "2026-11-21",
       "sourceUrls": [
         "https://www.corl.org/"
       ],
-      "note": "11/16官网仍为2026届，Austin 11/9–12及JW Marriott Austin、Hilton Austin、Bass Hall三场地确认；会期已结束，所查官网未见2027公告。"
+      "note": "11/21官网仍为2026届，Austin 11/9–12及JW Marriott Austin、Hilton Austin、Bass Hall三场地确认；会期已结束，所查官网未见2027公告。"
     },
     {
       "sourceId": "RSS",
       "edition": 2027,
       "status": "verified",
-      "checkedAt": "2026-11-16",
+      "checkedAt": "2026-11-21",
       "sourceUrls": [
         "https://roboticsconference.org/attending/travel/",
         "https://roboticsconference.org/information/cfp/"
       ],
-      "note": "11/16 CFP与Venue确认12/4阶段一6页扩展摘要、受邀4/16阶段二、4/19补充、5/14定稿均23:59 AoE；Athens 7/6–11，MAICC与Harokopio University双场地不变。"
+      "note": "11/21 CFP与Venue确认12/4阶段一6页扩展摘要、受邀4/16阶段二、4/19补充、5/14定稿均23:59 AoE；Athens 7/6–11，MAICC与Harokopio University双场地不变。"
     },
     {
       "sourceId": "ICRA",
       "edition": 2027,
-      "status": "verified",
-      "checkedAt": "2026-11-16",
+      "status": "unavailable",
+      "checkedAt": "2026-11-21",
       "sourceUrls": [
         "https://2027.ieee-icra.org/",
         "https://2027.ieee-icra.org/contribute/call-for-icra-2027-papers-now-accepting-submissions/",
         "https://2027.ieee-icra.org/contribute/call-for-workshop-and-tutorial/"
       ],
-      "note": "11/16主页及CFP确认Seoul Coex 5/24–28；已录用期刊转入12/31无时分，workshop完整提案11/2更新行无时区时分；普通论文与提案均已截止。"
+      "note": "11/21复核时2027.ieee-icra.org返回HTTP 403反爬校验，暂不可直接核验；保留11/16已核验的Seoul Coex 5/24–28会期、12/31期刊转入及已截止提案事件与原核验日期。"
     },
     {
       "sourceId": "IROS",
       "edition": 2027,
-      "status": "conflict",
-      "checkedAt": "2026-11-16",
+      "status": "verified",
+      "checkedAt": "2026-11-21",
       "sourceUrls": [
-        "https://www.ieee-ras.org/event/2027-ieee-rsj-international-conference-on-intelligent-robots-and-systems-iros-70525/",
-        "https://ras.papercept.net/conferences/scripts/requestassistancepanel.pl",
-        "https://2027.ieee-iros.org/"
+        "https://2027.ieee-iros.org/",
+        "https://www.ieee-ras.org/event/2027-ieee-rsj-international-conference-on-intelligent-robots-and-systems-iros-70525/"
       ],
-      "note": "11/16 RAS确认9/27–10/1、Fortezza da Basso及3/1论文截止（时区时分未知）。2027官网重定向2023旧站；PaperCept restricted URL不可访问，历史9/25–30差异未解决，不生成会期倒计时；保留独立确证的投稿节点。"
+      "note": "11/21官方2027网站（2027.ieee-iros.org）已正式上线，明确确认会期2027-09-27–10-01及地点Fortezza da Basso, Florence, Italy，与11/16 RAS官方日历一致，此前旧站重定向与9/25–30差异解除，新增会期节点；今日RAS页遇403验证，3/1论文投稿截止保留11/16核验记录（时区时分未公布）。"
     },
     {
       "sourceId": "NeurIPS",
       "edition": 2026,
       "status": "verified",
-      "checkedAt": "2026-11-16",
+      "checkedAt": "2026-11-21",
       "sourceUrls": [
         "https://neurips.cc/Conferences/2026/Dates",
         "https://neurips.cc/Conferences/2026/VenueInformation"
       ],
-      "note": "11/16 Dates及VenueInformation确认悉尼12/6–12、Atlanta及Paris 12/9–13，ICC Sydney、Georgia World Congress Center、Palais des Congrès de Paris。已录用论文海报操作期限不当主会新稿投稿。"
+      "note": "11/21 Dates及VenueInformation确认悉尼12/6–12、Atlanta及Paris 12/9–13，ICC Sydney、Georgia World Congress Center、Palais des Congrès de Paris。已录用论文海报操作期限不当主会新稿投稿。"
     },
     {
       "sourceId": "ICLR",
       "edition": 2027,
       "status": "verified",
-      "checkedAt": "2026-11-16",
+      "checkedAt": "2026-11-21",
       "sourceUrls": [
         "https://iclr.cc/Conferences/2027/Dates",
         "https://iclr.cc/Conferences/2027/CallForWorkshops",
         "https://iclr.cc/Conferences/2027/CallForPapers"
       ],
-      "note": "11/16 Dates确认4/26–28主会、4/29–30 workshops；CFP摘要9/18与全文9/25已结束。workshop正文仍误写2026，San Francisco可确认、场馆未公布。"
+      "note": "11/21 Dates确认4/26–28主会、4/29–30 workshops；CFP摘要9/18与全文9/25已结束。workshop正文仍误写2026，San Francisco可确认、场馆未公布。"
     },
     {
       "sourceId": "ICML",
       "edition": 2027,
       "status": "verified",
-      "checkedAt": "2026-11-16",
+      "checkedAt": "2026-11-21",
       "sourceUrls": [
         "https://icml.cc/",
         "https://icml.cc/Conferences/2027/Dates",
         "https://icml.cc/Conferences/2027/CallForPapers"
       ],
-      "note": "11/16完整CFP明确摘要2027-01-14与全文01-22均11:59 PM AoE，保持instant精度；主页仍写CFP即将公布，是滞后文案。会期7/31–8/6、Rio de Janeiro Riocentro确认。"
+      "note": "11/21完整CFP明确摘要2027-01-14与全文01-22均11:59 PM AoE，保持instant精度；主页仍写CFP即将公布，是滞后文案。会期7/31–8/6、Rio de Janeiro Riocentro确认。"
     },
     {
       "sourceId": "CVPR",
       "edition": 2027,
-      "status": "verified",
-      "checkedAt": "2026-11-16",
+      "status": "conflict",
+      "checkedAt": "2026-11-21",
       "sourceUrls": [
+        "https://cvpr.thecvf.com/Conferences/2027",
         "https://cvpr.thecvf.com/Conferences/2027/Dates",
+        "https://cvpr.thecvf.com/Conferences/2027/ExpoSchedule",
         "https://cvpr.thecvf.com/Conferences/2027/CallForPapers",
-        "https://cvpr.thecvf.com/Conferences/2027/CallForWorkshops",
-        "https://cvpr.thecvf.com/Conferences/2026/News/Best_Papers"
+        "https://cvpr.thecvf.com/Conferences/2027/CallForWorkshops"
       ],
-      "note": "11/16 CFP登记11/10仅列AoE，保留11/15校正后的date精度；全文11/16与补充11/23仍明示23:59 AoE。workshop提案11/4仅AoE日期。2027 Dates会期6/20–25；场馆沿用已核验Seattle Convention Center，官方2026新闻已复访，不采用旧新闻不同会期。"
+      "note": "11/21核查发现会期末日冲突（会期末日待核）：CVPR 2027官网首页与Dates页均改为6/20–24（Workshops/Tutorials 6/20–21、主会6/22–24），ExpoSchedule确认Seattle Convention Center且6/25仅上午拆展（8:00–Noon），而此前核验及IEEE CS目录仍列6/20–25；移出会期倒计时。CFP确认补充材料截止11/23 23:59 AoE（北京时间11/24 19:59），其余投稿节点不变。"
     },
     {
       "sourceId": "ICCV",
       "edition": 2027,
       "status": "conflict",
-      "checkedAt": "2026-11-16",
+      "checkedAt": "2026-11-21",
       "sourceUrls": [
         "https://iccv.thecvf.com/Conferences/2027/Dates",
         "https://iccv.thecvf.com/"
       ],
-      "note": "11/16 Dates与首页标题仍10/3–7，Venue正文仍10/2–8；HKCEC地点一致但会期冲突未解，不生成会期倒计时；所查页面未公布主会投稿日期。"
+      "note": "11/21 Dates与首页标题仍10/3–7，Venue正文仍10/2–8；HKCEC地点一致但会期冲突未解，不生成会期倒计时；所查页面未公布主会投稿日期。"
     },
     {
       "sourceId": "ECCV",
       "edition": 2028,
       "status": "unpublished",
-      "checkedAt": "2026-11-16",
+      "checkedAt": "2026-11-21",
       "sourceUrls": [
         "https://eccv.ecva.net/",
         "https://www.ecva.net/"
       ],
-      "note": "11/16 ECCV官网仍为2026届，ECVA页内无2028匹配；所查页面未公布2028具体会期、地点、CFP，不推算，不宣称全网不存在。"
+      "note": "11/21 ECCV官网仍为2026届，ECVA页内无2028匹配；所查页面未公布2028具体会期、地点、CFP，不推算，不宣称全网不存在。"
     },
     {
       "sourceId": "3DV",
       "edition": 2027,
       "status": "verified",
-      "checkedAt": "2026-11-16",
+      "checkedAt": "2026-11-21",
       "sourceUrls": [
         "https://3dvconf.github.io/2027/",
         "https://3dvconf.github.io/2027/author-instructions/"
       ],
-      "note": "11/16主页确认Thessaloniki Concert Hall M2、2027-04-06–09；作者页仍列2026-08-28已截止，12/2为通知不是投稿。"
+      "note": "11/21主页确认Thessaloniki Concert Hall M2、2027-04-06–09；作者页仍列2026-08-28已截止，12/2为通知不是投稿。"
     },
     {
       "sourceId": "Humanoids",
       "edition": 2026,
       "status": "conflict",
-      "checkedAt": "2026-11-16",
+      "checkedAt": "2026-11-21",
       "sourceUrls": [
         "https://www.ieee-ras.org/event/2026-ieee-ras-25th-international-conference-on-humanoid-robots-humanoids-68892/",
         "https://humanoids.exhibitprospectus.com/",
         "https://2026.ieee-humanoids.org/"
       ],
-      "note": "11/16 RAS仍12/7–9，主办prospectus仍12/6–9（12/6公众活动、12/7workshops、12/8–9主会）；Santa Clara Convention Center一致。根站返回10个月前模板缓存，不作为新确认；保留冲突，不采用RAS误列2025投稿。"
+      "note": "11/21主办prospectus（humanoids.exhibitprospectus.com）返回200，仍确认12/6–9及Santa Clara Convention Center；RAS页面今日遇403校验。此前RAS（12/7–9）与主办（12/6–9）会期差异未解除，保持冲突状态且不生成会期倒计时。"
     },
     {
       "sourceId": "ICAPS",
       "edition": 2027,
       "status": "verified",
-      "checkedAt": "2026-11-16",
+      "checkedAt": "2026-11-21",
       "sourceUrls": [
         "https://icaps27.icaps-conference.org/calls/cfp/",
         "https://icaps27.icaps-conference.org/"
       ],
-      "note": "11/16 CFP确认Columbia SC 6/27–7/2，摘要12/7、全文12/14均23:59 UTC-12，主会与Planning Under a Different Name同期限；具体场馆未公布。"
+      "note": "11/21 CFP确认Columbia SC 6/27–7/2，摘要12/7、全文12/14均23:59 UTC-12，主会与Planning Under a Different Name同期限；具体场馆未公布。"
     },
     {
       "sourceId": "SIGGRAPH",
       "edition": 2027,
       "status": "verified",
-      "checkedAt": "2026-11-16",
+      "checkedAt": "2026-11-21",
       "sourceUrls": [
         "https://s2027.siggraph.org/program/technical-papers/",
         "https://s2027.siggraph.org/",
         "https://s2027.siggraph.org/general-conference-information/"
       ],
-      "note": "11/16 Technical Papers具体页仍列1/21表单/冲突、1/28论文、1/29上传，均22:00 GMT；主页8/8–12及通用会议信息页Anaheim Convention Center确认，具体提交规则仍coming soon。"
+      "note": "11/21 Technical Papers具体页仍列1/21表单/冲突、1/28论文、1/29上传，均22:00 GMT；主页8/8–12及通用会议信息页Anaheim Convention Center确认，具体提交规则仍coming soon。"
     },
     {
       "sourceId": "SIGMOD",
       "edition": 2027,
       "status": "verified",
-      "checkedAt": "2026-11-16",
+      "checkedAt": "2026-11-21",
       "sourceUrls": [
         "https://2027.sigmodconf.hosting.acm.org/calls_papers_sigmod_research.shtml",
         "https://2027.sigmod.org/accomodations.shtml"
       ],
-      "note": "11/16研究CFP及住宿页确认2027-06-13–18 Huntington Beach，Hyatt Regency Huntington Beach Resort and Spa。四轮新稿全文均2026年1/17、4/17、7/17、10/17，已截止；11/19修订不是新稿投稿。"
+      "note": "11/21研究CFP及住宿页确认2027-06-13–18 Huntington Beach，Hyatt Regency Huntington Beach Resort and Spa。四轮新稿全文均2026年1/17、4/17、7/17、10/17，已截止；11/19修订不是新稿投稿。"
     },
     {
       "sourceId": "PODS",
       "edition": 2027,
       "status": "verified",
-      "checkedAt": "2026-11-16",
+      "checkedAt": "2026-11-21",
       "sourceUrls": [
         "https://2027.sigmodconf.hosting.acm.org/calls_papers_pods_research.shtml",
         "https://2027.sigmod.org/accomodations.shtml"
       ],
-      "note": "11/16 CFP及住宿页确认第二轮2026-12-03摘要、12-10全文均23:59 AoE；2027-06-13–18 Huntington Beach，Hyatt Regency Huntington Beach Resort and Spa。"
+      "note": "11/21 CFP及住宿页确认第二轮2026-12-03摘要、12-10全文均23:59 AoE；2027-06-13–18 Huntington Beach，Hyatt Regency Huntington Beach Resort and Spa。"
     },
     {
       "sourceId": "VLDB",
       "edition": 2027,
       "status": "verified",
-      "checkedAt": "2026-11-16",
+      "checkedAt": "2026-11-21",
       "sourceUrls": [
         "https://www.vldb.org/2027/important-dates.html",
         "https://www.vldb.org/2027/venue.html"
       ],
-      "note": "11/16重要日期和Venue确认Athens 2027-08-23–27、InterContinental Athenaeum Athens；每月25日摘要、次月1日全文至2027年3月，均17:00 PT，保持既有轮次ID。"
+      "note": "11/21重要日期和Venue确认Athens 2027-08-23–27、InterContinental Athenaeum Athens；每月25日摘要、次月1日全文至2027年3月，均17:00 PT，保持既有轮次ID。"
     },
     {
       "sourceId": "ICDE",
       "edition": 2027,
       "status": "verified",
-      "checkedAt": "2026-11-16",
+      "checkedAt": "2026-11-21",
       "sourceUrls": [
         "https://icde2027.github.io/important-dates.html",
         "https://icde2027.github.io/index.html"
       ],
-      "note": "11/16重要日期及首页确认Copenhagen 5/17–21，研究第二轮11/11 17:00 Pacific Time已截止；首页仍写open，不当延期。不把其他轨道混为研究全文，场馆未确认。"
+      "note": "11/21重要日期及首页确认Copenhagen 5/17–21，研究第二轮11/11 17:00 Pacific Time已截止；首页仍写open，不当延期。不把其他轨道混为研究全文，场馆未确认。"
     },
     {
       "sourceId": "EDBT",
       "edition": 2027,
       "status": "verified",
-      "checkedAt": "2026-11-16",
+      "checkedAt": "2026-11-21",
       "sourceUrls": [
         "https://edbt.org/",
         "https://edbticdt2027.github.io/"
       ],
-      "note": "11/16协会确认Lille 4/6–9及三轮2026-02-04、06-10、10-07均已截止；联会仅返回页头，场馆未核实。"
+      "note": "11/21协会确认Lille 4/6–9及三轮2026-02-04、06-10、10-07均已截止；联会仅返回页头，场馆未核实。"
     },
     {
       "sourceId": "ICDT",
       "edition": 2027,
       "status": "conflict",
-      "checkedAt": "2026-11-16",
+      "checkedAt": "2026-11-21",
       "sourceUrls": [
         "https://edbticdt2027.github.io/?contents=ICDT_CFP.html",
         "https://edbticdt2027.github.io/",
@@ -231,61 +231,61 @@
         "https://edbticdt2027.github.io/?contents=main.html",
         "https://edbticdt2027.github.io/?contents=important_dates.html"
       ],
-      "note": "11/16联会及CFP查询URL只返回4/6–9、Lille页头，独立ICDT_CFP.html不可访问；官方CFP搜索索引（上周缓存）仍列4/6–8，main和重要日期索引（今日）列4/6–9，冲突未解。索引列摘要/全文2026-03-03/10及09-03/10已结束；不生成会期倒计时或推算新投稿。"
+      "note": "11/21联会及CFP查询URL只返回4/6–9、Lille页头，独立ICDT_CFP.html不可访问；官方CFP搜索索引（上周缓存）仍列4/6–8，main和重要日期索引（今日）列4/6–9，冲突未解。索引列摘要/全文2026-03-03/10及09-03/10已结束；不生成会期倒计时或推算新投稿。"
     },
     {
       "sourceId": "ISWC",
       "edition": 2027,
       "status": "unpublished",
-      "checkedAt": "2026-11-16",
+      "checkedAt": "2026-11-21",
       "sourceUrls": [
         "https://swsa.semanticweb.org/conferences/"
       ],
-      "note": "11/16 SWSA仍列2027年10/11月窗口、地点待公布；无具体会期与主会投稿日，不生成猜测日期。"
+      "note": "11/21 SWSA仍列2027年10/11月窗口、地点待公布；无具体会期与主会投稿日，不生成猜测日期。"
     },
     {
       "sourceId": "ESWC",
       "edition": 2027,
       "status": "verified",
-      "checkedAt": "2026-11-16",
+      "checkedAt": "2026-11-21",
       "sourceUrls": [
         "https://2027.eswc-conferences.org/important-dates/",
         "https://2027.eswc-conferences.org/attending/venue/",
         "https://2027.eswc-conferences.org/calls/papers-research-track/"
       ],
-      "note": "11/16重要日期、Venue及研究CFP确认Limassol St. Raphael Resort & Marina 5/23–27，摘要12/10与全文12/17均23:59 AoE；ISWC重投路径不当通用主会截止。"
+      "note": "11/21重要日期、Venue及研究CFP确认Limassol St. Raphael Resort & Marina 5/23–27，摘要12/10与全文12/17均23:59 AoE；ISWC重投路径不当通用主会截止。"
     },
     {
       "sourceId": "KR",
       "edition": 2027,
       "status": "verified",
-      "checkedAt": "2026-11-16",
+      "checkedAt": "2026-11-21",
       "sourceUrls": [
         "https://kr.org/KR2027/"
       ],
-      "note": "11/16 2027届页确认Buenos Aires主会9/21–24及workshops 9/18–20，场馆及主会CFP未见公布，不猜测。"
+      "note": "11/21 2027届页确认Buenos Aires主会9/21–24及workshops 9/18–20，场馆及主会CFP未见公布，不猜测。"
     },
     {
       "sourceId": "AAAI",
       "edition": 2027,
-      "status": "verified",
-      "checkedAt": "2026-11-16",
+      "status": "unavailable",
+      "checkedAt": "2026-11-21",
       "sourceUrls": [
         "https://aaai.org/conference/aaai/aaai-27/",
         "https://aaai.org/conference/aaai/aaai-27/main-technical-track-call/",
         "https://aaai.org/conference/aaai/aaai-27/aaai-27-registration/"
       ],
-      "note": "11/16主页及主会CFP可读，确认Montréal 2027-02-16–23，7/21摘要、7/28全文均23:59 UTC-12已结束。注册页403，未复核场馆；保留此前确认Palais des congrès及原事件核验日期，不将该失败记为成功。"
+      "note": "11/21复核时aaai.org返回HTTP 403反爬校验，暂不可直接核验；保留此前确认的Montréal Palais des congrès 2027-02-16–23会期事件及原核验日期，不将访问失败记为成功。"
     },
     {
       "sourceId": "IJCAI",
       "edition": 2027,
       "status": "verified",
-      "checkedAt": "2026-11-16",
+      "checkedAt": "2026-11-21",
       "sourceUrls": [
         "https://2027.ijcai.org/ijcai-2027-call-for-papers-main-track/"
       ],
-      "note": "11/16主会CFP确认摘要1/4、全文1/11均23:59 AoE；京都8/7–13与横琴卫星8/15–17分列，具体场馆未见公布。"
+      "note": "11/21主会CFP确认摘要1/4、全文1/11均23:59 AoE；京都8/7–13与横琴卫星8/15–17分列，具体场馆未见公布。"
     }
   ],
   "events": [
@@ -325,7 +325,7 @@
       "timeZone": "Etc/GMT+12",
       "deadlineAt": null,
       "sourceUrl": "https://cvpr.thecvf.com/Conferences/2027/CallForWorkshops",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Seattle",
         "country": "USA",
@@ -349,7 +349,7 @@
       "timeZone": null,
       "deadlineAt": null,
       "sourceUrl": "https://www.corl.org/",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Austin",
         "country": "United States",
@@ -373,7 +373,7 @@
       "timeZone": "Etc/GMT+12",
       "deadlineAt": null,
       "sourceUrl": "https://cvpr.thecvf.com/Conferences/2027/CallForPapers",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Seattle",
         "country": "USA",
@@ -397,7 +397,7 @@
       "timeZone": "Etc/GMT+12",
       "deadlineAt": "2026-11-16T23:59:00-12:00",
       "sourceUrl": "https://cvpr.thecvf.com/Conferences/2027/CallForPapers",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Seattle",
         "country": "USA",
@@ -421,7 +421,7 @@
       "timeZone": "Etc/GMT+12",
       "deadlineAt": "2026-11-23T23:59:00-12:00",
       "sourceUrl": "https://cvpr.thecvf.com/Conferences/2027/CallForPapers",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Seattle",
         "country": "USA",
@@ -445,7 +445,7 @@
       "timeZone": "Etc/GMT+12",
       "deadlineAt": "2026-12-04T23:59:00-12:00",
       "sourceUrl": "https://roboticsconference.org/information/cfp/",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Athens",
         "country": "Greece",
@@ -469,7 +469,7 @@
       "timeZone": null,
       "deadlineAt": null,
       "sourceUrl": "https://neurips.cc/Conferences/2026/Dates",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Sydney",
         "country": "Australia",
@@ -493,7 +493,7 @@
       "timeZone": "Etc/GMT+12",
       "deadlineAt": "2026-12-07T23:59:00-12:00",
       "sourceUrl": "https://icaps27.icaps-conference.org/calls/cfp/",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Columbia, South Carolina",
         "country": "United States",
@@ -517,7 +517,7 @@
       "timeZone": null,
       "deadlineAt": null,
       "sourceUrl": "https://neurips.cc/Conferences/2026/Dates",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Atlanta",
         "country": "United States",
@@ -541,7 +541,7 @@
       "timeZone": null,
       "deadlineAt": null,
       "sourceUrl": "https://neurips.cc/Conferences/2026/Dates",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Paris",
         "country": "France",
@@ -565,7 +565,7 @@
       "timeZone": "Etc/GMT+12",
       "deadlineAt": "2026-12-14T23:59:00-12:00",
       "sourceUrl": "https://icaps27.icaps-conference.org/calls/cfp/",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Columbia, South Carolina",
         "country": "United States",
@@ -613,7 +613,7 @@
       "timeZone": "UTC",
       "deadlineAt": "2027-01-21T22:00:00+00:00",
       "sourceUrl": "https://s2027.siggraph.org/program/technical-papers/",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Anaheim, California",
         "country": "United States",
@@ -637,7 +637,7 @@
       "timeZone": "UTC",
       "deadlineAt": "2027-01-28T22:00:00+00:00",
       "sourceUrl": "https://s2027.siggraph.org/program/technical-papers/",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Anaheim, California",
         "country": "United States",
@@ -661,7 +661,7 @@
       "timeZone": "UTC",
       "deadlineAt": "2027-01-29T22:00:00+00:00",
       "sourceUrl": "https://s2027.siggraph.org/program/technical-papers/",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Anaheim, California",
         "country": "United States",
@@ -709,7 +709,7 @@
       "timeZone": null,
       "deadlineAt": null,
       "sourceUrl": "https://3dvconf.github.io/2027/",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Thessaloniki",
         "country": "Greece",
@@ -733,7 +733,7 @@
       "timeZone": "Etc/GMT+12",
       "deadlineAt": "2027-04-16T23:59:00-12:00",
       "sourceUrl": "https://roboticsconference.org/information/cfp/",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Athens",
         "country": "Greece",
@@ -757,7 +757,7 @@
       "timeZone": "Etc/GMT+12",
       "deadlineAt": "2027-04-19T23:59:00-12:00",
       "sourceUrl": "https://roboticsconference.org/information/cfp/",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Athens",
         "country": "Greece",
@@ -781,7 +781,7 @@
       "timeZone": null,
       "deadlineAt": null,
       "sourceUrl": "https://iclr.cc/Conferences/2027",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "San Francisco",
         "country": "United States",
@@ -805,7 +805,7 @@
       "timeZone": "Etc/GMT+12",
       "deadlineAt": "2027-05-14T23:59:00-12:00",
       "sourceUrl": "https://roboticsconference.org/information/cfp/",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Athens",
         "country": "Greece",
@@ -842,30 +842,6 @@
       "track": "main"
     },
     {
-      "id": "cvpr-2027-conference",
-      "sourceId": "CVPR",
-      "conference": "CVPR",
-      "name": "CVPR 2027 · 会议（含 Workshops/Tutorials）",
-      "type": "conference",
-      "startDate": "2027-06-20",
-      "endDate": "2027-06-25",
-      "precision": "date",
-      "timeZone": null,
-      "deadlineAt": null,
-      "sourceUrl": "https://cvpr.thecvf.com/Conferences/2027/Dates",
-      "verifiedAt": "2026-11-16",
-      "place": {
-        "city": "Seattle",
-        "country": "USA",
-        "venue": "Seattle Convention Center",
-        "sourceUrl": "https://cvpr.thecvf.com/Conferences/2026/News/Best_Papers"
-      },
-      "deadlineKind": null,
-      "note": "",
-      "timeZoneLabel": null,
-      "track": "main"
-    },
-    {
       "id": "icaps-2027-conference",
       "sourceId": "ICAPS",
       "conference": "ICAPS",
@@ -877,7 +853,7 @@
       "timeZone": null,
       "deadlineAt": null,
       "sourceUrl": "https://icaps27.icaps-conference.org/",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Columbia, South Carolina",
         "country": "United States",
@@ -901,7 +877,7 @@
       "timeZone": null,
       "deadlineAt": null,
       "sourceUrl": "https://roboticsconference.org/information/cfp/",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Athens",
         "country": "Greece",
@@ -925,7 +901,7 @@
       "timeZone": null,
       "deadlineAt": null,
       "sourceUrl": "https://s2027.siggraph.org/",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Anaheim, California",
         "country": "United States",
@@ -949,7 +925,7 @@
       "timeZone": null,
       "deadlineAt": null,
       "sourceUrl": "https://2027.sigmodconf.hosting.acm.org/calls_papers_sigmod_research.shtml",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Huntington Beach",
         "country": "United States",
@@ -971,7 +947,7 @@
       "timeZone": null,
       "deadlineAt": null,
       "sourceUrl": "https://2027.sigmodconf.hosting.acm.org/calls_papers_pods_research.shtml",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Huntington Beach",
         "country": "United States",
@@ -993,7 +969,7 @@
       "timeZone": null,
       "deadlineAt": null,
       "sourceUrl": "https://www.vldb.org/2027/important-dates.html",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Athens",
         "country": "Greece",
@@ -1014,7 +990,7 @@
       "timeZone": null,
       "deadlineAt": null,
       "sourceUrl": "https://icde2027.github.io/important-dates.html",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Copenhagen",
         "country": "Denmark",
@@ -1035,7 +1011,7 @@
       "timeZone": null,
       "deadlineAt": null,
       "sourceUrl": "https://edbt.org/",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Lille",
         "country": "France",
@@ -1057,7 +1033,7 @@
       "timeZone": null,
       "deadlineAt": null,
       "sourceUrl": "https://2027.eswc-conferences.org/important-dates/",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Limassol",
         "country": "Cyprus",
@@ -1101,7 +1077,7 @@
       "timeZone": null,
       "deadlineAt": null,
       "sourceUrl": "https://2027.ijcai.org/ijcai-2027-call-for-papers-main-track/",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Kyoto",
         "country": "Japan",
@@ -1122,7 +1098,7 @@
       "timeZone": "Etc/GMT+12",
       "deadlineAt": "2026-12-03T23:59:00-12:00",
       "sourceUrl": "https://2027.sigmodconf.hosting.acm.org/calls_papers_pods_research.shtml",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Huntington Beach",
         "country": "United States",
@@ -1145,7 +1121,7 @@
       "timeZone": "Etc/GMT+12",
       "deadlineAt": "2026-12-10T23:59:00-12:00",
       "sourceUrl": "https://2027.sigmodconf.hosting.acm.org/calls_papers_pods_research.shtml",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Huntington Beach",
         "country": "United States",
@@ -1168,7 +1144,7 @@
       "timeZone": "Etc/GMT+12",
       "deadlineAt": "2026-12-10T23:59:00-12:00",
       "sourceUrl": "https://2027.eswc-conferences.org/important-dates/",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Limassol",
         "country": "Cyprus",
@@ -1191,7 +1167,7 @@
       "timeZone": "Etc/GMT+12",
       "deadlineAt": "2026-12-17T23:59:00-12:00",
       "sourceUrl": "https://2027.eswc-conferences.org/important-dates/",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Limassol",
         "country": "Cyprus",
@@ -1214,7 +1190,7 @@
       "timeZone": "Etc/GMT+12",
       "deadlineAt": "2027-01-04T23:59:00-12:00",
       "sourceUrl": "https://2027.ijcai.org/ijcai-2027-call-for-papers-main-track/",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Kyoto",
         "country": "Japan",
@@ -1237,7 +1213,7 @@
       "timeZone": "Etc/GMT+12",
       "deadlineAt": "2027-01-11T23:59:00-12:00",
       "sourceUrl": "https://2027.ijcai.org/ijcai-2027-call-for-papers-main-track/",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Kyoto",
         "country": "Japan",
@@ -1260,7 +1236,7 @@
       "timeZone": "America/Los_Angeles",
       "deadlineAt": "2026-11-11T17:00:00-08:00",
       "sourceUrl": "https://icde2027.github.io/important-dates.html",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Copenhagen",
         "country": "Denmark",
@@ -1283,7 +1259,7 @@
       "timeZone": "America/Los_Angeles",
       "deadlineAt": "2026-11-25T17:00:00-08:00",
       "sourceUrl": "https://www.vldb.org/2027/important-dates.html",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Athens",
         "country": "Greece",
@@ -1306,7 +1282,7 @@
       "timeZone": "America/Los_Angeles",
       "deadlineAt": "2026-12-01T17:00:00-08:00",
       "sourceUrl": "https://www.vldb.org/2027/important-dates.html",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Athens",
         "country": "Greece",
@@ -1329,7 +1305,7 @@
       "timeZone": "America/Los_Angeles",
       "deadlineAt": "2026-12-25T17:00:00-08:00",
       "sourceUrl": "https://www.vldb.org/2027/important-dates.html",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Athens",
         "country": "Greece",
@@ -1352,7 +1328,7 @@
       "timeZone": "America/Los_Angeles",
       "deadlineAt": "2027-01-01T17:00:00-08:00",
       "sourceUrl": "https://www.vldb.org/2027/important-dates.html",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Athens",
         "country": "Greece",
@@ -1375,7 +1351,7 @@
       "timeZone": "America/Los_Angeles",
       "deadlineAt": "2027-01-25T17:00:00-08:00",
       "sourceUrl": "https://www.vldb.org/2027/important-dates.html",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Athens",
         "country": "Greece",
@@ -1398,7 +1374,7 @@
       "timeZone": "America/Los_Angeles",
       "deadlineAt": "2027-02-01T17:00:00-08:00",
       "sourceUrl": "https://www.vldb.org/2027/important-dates.html",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Athens",
         "country": "Greece",
@@ -1421,7 +1397,7 @@
       "timeZone": "America/Los_Angeles",
       "deadlineAt": "2027-02-25T17:00:00-08:00",
       "sourceUrl": "https://www.vldb.org/2027/important-dates.html",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Athens",
         "country": "Greece",
@@ -1444,7 +1420,7 @@
       "timeZone": "America/Los_Angeles",
       "deadlineAt": "2027-03-01T17:00:00-08:00",
       "sourceUrl": "https://www.vldb.org/2027/important-dates.html",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Athens",
         "country": "Greece",
@@ -1467,7 +1443,7 @@
       "timeZone": null,
       "deadlineAt": null,
       "sourceUrl": "https://2027.ijcai.org/ijcai-2027-call-for-papers-main-track/",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Hengqin",
         "country": "China",
@@ -1489,7 +1465,7 @@
       "timeZone": null,
       "deadlineAt": null,
       "sourceUrl": "https://kr.org/KR2027/",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Buenos Aires",
         "country": "Argentina",
@@ -1511,7 +1487,7 @@
       "timeZone": null,
       "deadlineAt": null,
       "sourceUrl": "https://kr.org/KR2027/",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Buenos Aires",
         "country": "Argentina",
@@ -1533,7 +1509,7 @@
       "timeZone": null,
       "deadlineAt": null,
       "sourceUrl": "https://icml.cc/Conferences/2027/Dates",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Rio de Janeiro",
         "country": "Brazil",
@@ -1557,7 +1533,7 @@
       "timeZone": "Etc/GMT+12",
       "deadlineAt": "2027-01-14T23:59:00-12:00",
       "sourceUrl": "https://icml.cc/Conferences/2027/CallForPapers",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Rio de Janeiro",
         "country": "Brazil",
@@ -1581,7 +1557,7 @@
       "timeZone": "Etc/GMT+12",
       "deadlineAt": "2027-01-22T23:59:00-12:00",
       "sourceUrl": "https://icml.cc/Conferences/2027/CallForPapers",
-      "verifiedAt": "2026-11-16",
+      "verifiedAt": "2026-11-21",
       "place": {
         "city": "Rio de Janeiro",
         "country": "Brazil",
@@ -1592,6 +1568,28 @@
       "note": "完整CFP现明确23:59 AoE；Dates日期一致，主页仍写CFP即将公布，采用具体CFP。",
       "timeZoneLabel": "AoE (UTC−12)",
       "track": "main"
+    },
+    {
+      "id": "iros-2027-conference",
+      "sourceId": "IROS",
+      "conference": "IROS",
+      "name": "IROS 2027 · 会议日期",
+      "type": "conference",
+      "track": "main",
+      "startDate": "2027-09-27",
+      "endDate": "2027-10-01",
+      "precision": "date",
+      "timeZone": "Europe/Rome",
+      "timeZoneLabel": "当地日期",
+      "place": {
+        "city": "Florence",
+        "country": "Italy",
+        "venue": "Fortezza da Basso",
+        "sourceUrl": "https://2027.ieee-iros.org/"
+      },
+      "sourceUrl": "https://2027.ieee-iros.org/",
+      "verifiedAt": "2026-11-21",
+      "note": "IROS 2027官方网站（2027.ieee-iros.org）与11/16 RAS官方日历均确认2027年9月27日–10月1日于意大利佛罗伦萨Fortezza da Basso举行。"
     }
   ],
   "profileSources": {
